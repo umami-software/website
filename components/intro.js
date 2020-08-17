@@ -52,7 +52,7 @@ export default function Intro() {
       <h2 className="row justify-content-center">own your website analytics</h2>
       <div className="row justify-content-center pb-5">
         <Link href="/docs"><a className="button">Learn more</a></Link>
-        <Link href="https://app.umami.is/share/ISgW2qz8/flightphp.com"><a className="button-alt">Live demo</a></Link>
+        <Link href="https://stats.umami.is/share/ISgW2qz8/flightphp.com"><a className="button-alt">Live demo</a></Link>
       </div>
       <div className="row">
         <div className="col">
