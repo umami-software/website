@@ -13,6 +13,14 @@ export default function Layout({ title, children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap"
           rel="stylesheet"
         />
+        {typeof window !== 'undefined' && (
+          <script
+            async
+            defer
+            data-website-id="d0059975-b79a-4f83-8926-ed731475fded"
+            src="https://stats.umami.is/umami.js"
+          />
+        )}
       </Head>
       <Header />
       <main className="container">{children}</main>
