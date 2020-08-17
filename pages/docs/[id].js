@@ -7,10 +7,10 @@ export default function DocsPage({ content }) {
   return (
     <Layout>
       <div className="row">
-        <div className="col-3">
+        <div className="col-12 col-lg-3">
           <Menu />
         </div>
-        <div className="docs col-9" dangerouslySetInnerHTML={{ __html: content.contentHtml }} />
+        <div className="docs col-12 col-lg-9" dangerouslySetInnerHTML={{ __html: content.contentHtml }} />
       </div>
     </Layout>
   );

@@ -23,7 +23,10 @@ export default function Intro() {
   });
 
   useEffect(() => {
-    let timeout = setInterval(() => setTick(state => document.hasFocus() ? state + 1 : state), 2000);
+    let timeout = setInterval(
+      () => setTick(state => (document.hasFocus() ? state + 1 : state)),
+      2000,
+    );
 
     return () => {
       clearInterval(timeout);
@@ -51,8 +54,12 @@ export default function Intro() {
       </h1>
       <h2 className="row justify-content-center">own your website analytics</h2>
       <div className="row justify-content-center pb-5">
-        <Link href="/docs"><a className="button">Learn more</a></Link>
-        <Link href="https://stats.umami.is/share/ISgW2qz8/flightphp.com"><a className="button-alt">Live demo</a></Link>
+        <Link href="/docs">
+          <a className="button umami--click--learn-more-button">Learn more</a>
+        </Link>
+        <Link href="https://stats.umami.is/share/ISgW2qz8/flightphp.com">
+          <a className="button-alt umami--click--live-demo-button">Live demo</a>
+        </Link>
       </div>
       <div className="row">
         <div className="col">

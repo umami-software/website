@@ -6,7 +6,7 @@
 git clone https://github.com/mikecao/umami.git
 ```
 
-### Go into your repo folder
+### Go into the repo folder
 
 ```
 cd umami

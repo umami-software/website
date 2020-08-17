@@ -38,5 +38,5 @@ are needed because Umami does not use cookies.
 
 ## Open-source
 
-Umami is open-source and licensed under the MIT license. Ths source code is availabe on 
+Umami is open-source and licensed under the MIT license. The source code is availabe on 
 [Github](https://github.com/mikecao/umami).

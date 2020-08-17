@@ -51,11 +51,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 100px;
 }
 
 header .icon {
   width: 2rem;
   height: 2rem;
+}
+
+footer {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
 }
 
 pre {
@@ -110,6 +119,7 @@ li {
 
 .button {
   font-size: 1.4rem;
+  font-weight: 600;
   padding: 0.5rem 1rem;
   color: #fff !important;
   text-decoration: none;
@@ -125,6 +135,7 @@ li {
 
 .button-alt {
   font-size: 1.4rem;
+  font-weight: 600;
   padding: 0.5rem 1rem;
   color: #2c2c2c !important;
   text-decoration: none;
@@ -146,5 +157,6 @@ li {
 
 .docs img {
   display: block;
+  max-width: 100%;
   margin: 2rem auto;
 }

@@ -13,7 +13,7 @@ export default function Layout({ title, children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap"
           rel="stylesheet"
         />
-        {typeof window !== 'undefined' && (
+        {typeof window !== 'undefined' && process.env.NODE_ENV !== 'development' && (
           <script
             async
             defer

@@ -17,4 +17,4 @@ The **Name** field can be whatever you want. Usually it's the same as the domain
 The **Domain** field is the actual domain of your website. It is used to filter out your own website
 from the list of referrers in your metrics.
 
-The **Enable share URL** checkbox means you want to share your website stats via a private URL.
+The **Enable share URL** checkbox means you want to share your website stats via a unique URL.
