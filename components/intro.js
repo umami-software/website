@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
 import { useTransition, animated } from 'react-spring';
 import Logo from 'assets/logo.svg';
 
@@ -11,23 +12,23 @@ const words = [
 ];
 
 export default function Intro() {
-  const [word, setWord] = useState(words[0]);
-  const transitions = useTransition([word], item => item.text, {
+  const [tick, setTick] = useState(0);
+
+  const items = useMemo(() => words[tick % words.length], [tick]);
+
+  const transitions = useTransition(items, item => item.text, {
     from: item => ({ color: item.color, opacity: 0, transform: 'translate3d(0,-40px,0)' }),
     enter: item => ({ color: item.color, opacity: 1, transform: 'translate3d(0,0px,0)' }),
     leave: item => ({ color: item.color, opacity: 0, transform: 'translate3d(0,40px,0)' }),
   });
 
   useEffect(() => {
-    let timeout = setTimeout(() => {
-      const index = words.indexOf(word);
-      setWord(index < words.length - 1 ? words[index + 1] : words[0]);
-    }, 2000);
+    let timeout = setInterval(() => setTick(state => document.hasFocus() ? state + 1 : state), 2000);
 
     return () => {
-      clearTimeout(timeout);
-    }
-  }, [word]);
+      clearInterval(timeout);
+    };
+  }, []);
 
   return (
     <div className="intro">
@@ -48,10 +49,14 @@ export default function Intro() {
           ))}
         </div>
       </h1>
-      <h2 className="row justify-content-center">website analytics made easy</h2>
+      <h2 className="row justify-content-center">own your website analytics</h2>
+      <div className="row justify-content-center pb-5">
+        <Link href="/docs"><a className="button">Learn more</a></Link>
+        <Link href="https://app.umami.is/share/ISgW2qz8/flightphp.com"><a className="button-alt">Live demo</a></Link>
+      </div>
       <div className="row">
         <div className="col">
-          <img src="/intro.png" />
+          <img src="/intro.jpg" />
         </div>
       </div>
     </div>

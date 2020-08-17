@@ -1,0 +1,20 @@
+# Add an account
+
+Umami allows you to create separate accounts so that you can host data for friends or clients.
+
+Log into Umami as the administrator and click on **Settings** in the header.
+
+<img src="/header.png" />
+
+Then navigate to **Accounts** and click on the **Add account** button.
+
+<img src="/add-account.png" />
+
+Fill out the form details and click the **Save** button.
+
+<img src="/add-account-form.png" />
+
+The new account will have it's own dashboard and websites separate from the **admin** account.
+
+Only the **admin** is able to create, modify and delete accounts. The new account will not have access
+to the **Accounts** tab.
