@@ -33,8 +33,7 @@ If you want to share your stats publicly, you can do so with a uniquely generate
 
 ## Privacy-focused
 
-Umami does not collect any personally identifiable information so it is GDPR and CCPA compliant. No cookie notices
-are needed because Umami does not use cookies.
+Umami does not collect any personally identifiable information and anonymizes all data collected.
 
 ## Open-source
 
