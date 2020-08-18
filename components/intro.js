@@ -57,7 +57,7 @@ export default function Intro() {
         <Link href="/docs">
           <a className="button umami--click--learn-more-button">Learn more</a>
         </Link>
-        <Link href="https://stats.umami.is/share/ISgW2qz8/flightphp.com">
+        <Link href="https://app.umami.is/share/ISgW2qz8/flightphp.com">
           <a className="button-alt umami--click--live-demo-button">Live demo</a>
         </Link>
       </div>
