@@ -8,7 +8,7 @@ are coming from. Everything is displayed on a single, easy to browse page.
 ## Unlimited websites
 
 Umami is able to track an unlimited number of websites from a single installation. You can even track subdomains and
-invididual URLs.
+individual URLs.
 
 ## Bypass ad-blockers
 
@@ -37,5 +37,5 @@ Umami does not collect any personally identifiable information and anonymizes al
 
 ## Open-source
 
-Umami is open-source and licensed under the MIT license. The source code is availabe on 
+Umami is open-source and licensed under the MIT license. The source code is available on 
 [Github](https://github.com/mikecao/umami).
