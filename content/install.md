@@ -1,20 +1,15 @@
 # Installation
 
-### Get the source code
+### Requirements
+
+- A server with Node.js 10.13 or newer
+- A database (MySQL or Postgresql)
+
+### Get the source code and install packages
 
 ```
 git clone https://github.com/mikecao/umami.git
-```
-
-### Go into the repo folder
-
-```
 cd umami
-```
-
-### Install packages
-
-```
 npm install
 ```
 
@@ -35,6 +30,8 @@ For Postgresql:
 psql -h hostname -U username -d databasename -f sql/schema.postgresql.sql
 ```
 
+This will also create a default login account with username **admin** and password **umami**.
+
 ### Configure umami
 
 Create an `.env` file with the following
@@ -51,7 +48,7 @@ postgresql://username:mypassword@localhost:5432/mydb
 mysql://username:mypassword@localhost:3306/mydb
 ```
 
-The `HASH_SALT` is used to generate unique session values for your installation.
+The `HASH_SALT` is used to generate unique values for your installation.
 
 ### Generate database client
 
@@ -68,6 +65,7 @@ For Postgresql:
 ```
 npm run build-postgresql-client
 ```
+
 
 ### Create a production build
 

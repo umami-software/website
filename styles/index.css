@@ -73,7 +73,7 @@ pre {
   border-radius: 0.4rem;
 }
 
-li {
+.menu li {
   list-style: none;
   font-weight: 600;
 }
@@ -152,7 +152,6 @@ li {
 .header-link {
   color: inherit !important;
   text-decoration: none;
-
 }
 
 .docs img {
