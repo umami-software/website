@@ -10,7 +10,7 @@ In this setup you would have the database and web server running on the same mac
 a dedicated web server like [Nginx](https://www.nginx.com/) or [Apache](https://httpd.apache.org/) and proxy requests to Umami.
 
 For personal use, you can start with a single $5 a month cloud server from [DigitalOcean](https://m.do.co/c/c9ebc1c0928d) and scale
-up as needed.
+up as needed. You can use this [link](https://m.do.co/c/c9ebc1c0928d) to get a $100 credit for the first 60 days.
 
 ## Separate database and web server
 
@@ -35,7 +35,7 @@ Here a couple helpful resources for getting started.
 
 ### Managed databases
 
-A managed database is where the host provides you with a running databases that you don't have to install or maintain. There are many
+A managed database is where the host provides you with a running database that you don't have to install or maintain. Here are some
 providers for managed databases.
 
 - [DigitalOcean](https://www.digitalocean.com/products/managed-databases/)
