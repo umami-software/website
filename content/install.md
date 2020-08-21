@@ -1,5 +1,7 @@
 # Installation
 
+## Installation from source
+
 ### Requirements
 
 - A server with Node.js 10.13 or newer
@@ -30,7 +32,7 @@ For Postgresql:
 psql -h hostname -U username -d databasename -f sql/schema.postgresql.sql
 ```
 
-This will also create a default login account with username **admin** and password **umami**.
+This will also create a login account with username **admin** and password **umami**.
 
 ### Configure umami
 
@@ -50,24 +52,7 @@ mysql://username:mypassword@localhost:3306/mydb
 
 The `HASH_SALT` is used to generate unique values for your installation.
 
-### Generate database client
-
-Depending on your database type, run the appropriate script.
-
-For MySQL:
-
-```
-npm run build-mysql-client
-```
-
-For Postgresql:
-
-```
-npm run build-postgresql-client
-```
-
-
-### Create a production build
+### Build the application
 
 ```
 npm run build
@@ -82,3 +67,11 @@ npm start
 By default this will launch the application on `http://localhost:3000`. You will need to either 
 [proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) requests from your web server
 or change the [port](https://nextjs.org/docs/api-reference/cli#production) to serve the application directly.
+
+## Installation with Docker
+
+To build the umami container and start up a Postgres database, run:
+
+```
+docker-compose up
+```

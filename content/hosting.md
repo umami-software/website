@@ -32,6 +32,13 @@ Here a couple helpful resources for getting started.
 - [How to install Postgresql on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
 - [How to install MySQL on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04)
 
+### App hosting
+
+Here are a couple app hosting providers that are fully capable of running Umami. You will still need a database running elsewhere.
+
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [Render](https://render.com/)
 
 ### Managed databases
 
@@ -39,15 +46,9 @@ A managed database is where the host provides you with a running database that y
 providers for managed databases.
 
 - [DigitalOcean](https://www.digitalocean.com/products/managed-databases/)
+- [Scaleway (EU)](https://www.scaleway.com/en/database/)
 - [Amazon Web Services](https://aws.amazon.com/products/databases/)
 - [Google Cloud SQL](https://cloud.google.com/sql/)
 - [Microsoft Azure](https://azure.microsoft.com/en-us/services/#databases)
 - [Render](https://render.com/pricing#databases)
-
-### Web hosting
-
-Here are a couple web hosting providers that are fully capable of hosting Umami.
-
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-- [Render](https://render.com/)
+- [Compose](https://www.compose.com/databases)
