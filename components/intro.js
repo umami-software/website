@@ -46,7 +46,7 @@ export default function Intro() {
         </div>
         <div className="col-12 col-md-6">
           {transitions.map(({ item, props, key }) => (
-            <animated.div className="animated-word pl-5 pl-md-0" key={key} style={props}>
+            <animated.div className="animated-word" key={key} style={props}>
               {item.text}
             </animated.div>
           ))}
@@ -62,7 +62,7 @@ export default function Intro() {
         </Link>
       </div>
       <div className="row">
-        <div className="col">
+        <div className="intro-screenshot col">
           <img src="/intro.jpg" />
         </div>
       </div>
