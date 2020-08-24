@@ -31,6 +31,10 @@ own websites on their own dashboard.
 
 If you want to share your stats publicly, you can do so with a uniquely generated URL.
 
+## Mobile-friendly
+
+The Umami interface has been optimized for mobile so you can view your stats from anywhere.
+
 ## Privacy-focused
 
 Umami does not collect any personally identifiable information and anonymizes all data collected.

@@ -5,8 +5,16 @@ import Github from 'assets/github.svg';
 export default function Header() {
   return (
     <header className="container">
-      <h1><Link href="/"><a className="header-link">umami</a></Link></h1>
-      <a href="https://github.com/mikecao/umami"><Github className="icon" /></a>
+      <h1>
+        <Link href="/">
+          <a className="header-link">umami</a>
+        </Link>
+      </h1>
+      <div className="umami--onclick--github-button">
+        <a href="https://github.com/mikecao/umami">
+          <Github className="icon" />
+        </a>
+      </div>
     </header>
   );
 }
