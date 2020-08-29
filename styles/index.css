@@ -75,6 +75,8 @@ pre {
   background: #fff;
   padding: 1rem;
   border-radius: 0.4rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 pre code {
