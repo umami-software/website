@@ -67,10 +67,24 @@ footer {
   min-height: 100px;
 }
 
+footer a {
+  color: #2c2c2c !important;
+}
+
 pre {
   background: #fff;
   padding: 1rem;
   border-radius: 0.4rem;
+}
+
+pre code {
+  background: transparent;
+}
+
+code {
+  background: #eee;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .menu li {

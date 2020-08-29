@@ -21,7 +21,7 @@ export default function Menu() {
       <ul>
         <li>
           <Link href="/docs/install">
-            <a>Installation</a>
+            <a>Install</a>
           </Link>
         </li>
         <li>
@@ -49,12 +49,27 @@ export default function Menu() {
             <a>Enable share URL</a>
           </Link>
         </li>
+        <li>
+          <Link href="/docs/track-events">
+            <a>Track events</a>
+          </Link>
+        </li>
       </ul>
       <h3>Guides</h3>
       <ul>
         <li>
           <Link href="/docs/hosting">
             <a>Hosting</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/docs/running-on-digitalocean">
+            <a>Running on DigitalOcean</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/docs/running-on-vercel">
+            <a>Running on Vercel</a>
           </Link>
         </li>
       </ul>
