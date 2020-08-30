@@ -38,7 +38,62 @@ To run with PM2:
 ```
 npm install pm2 -g
 cd umami
-pm2 start npm --name umami -- start 
+pm2 start npm --name umami -- start
+```
+
+you can also run umami as Systemd service in Ubuntu
+
+```
+cd /etc/systemd/system
+sudo nano umami.service
+```
+
+Replace `<user>` with the name of your user who will own this directory or if simply run as root then remove the line `User=<user>`
+
+```
+[Unit]
+Description=Start umami - Umami is a simple, fast, website analytics alternative to Google Analytics
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+User=<user>
+WorkingDirectory=/var/www/umami
+ExecStart=/bin/bash /var/www/umami/start.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+```
+
+- `CTRL + X` & Enter to save the Service file Configuration
+- Create a Bash file for start the App this bash script for systemd service start
+
+```
+cd /var/www/ummai
+touch start.sh
+```
+
+```
+#!/bin/bash
+
+npm start
+```
+
+- Start the Systemd service and Run the App forever
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable umami
+sudo systemctl start umami
+```
+
+- Check the service status
+
+```
+sudo systemctl status umami
 ```
 
 ## Proxying with Nginx
@@ -49,14 +104,38 @@ The follow config will send all requests from `umami.yourdomain.com` to your loc
 
 ```
 server {
+
+  listen 80;
+  listen [::]:80;
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
+
   server_name umami.yourdomain.com;
 
+    if ($scheme = http) {
+       return 301 https://$server_name$request_uri;
+   }
+
   location / {
-    proxy_pass http://localhost:3000;
+    proxy_pass http://127.0.0.1:3000;
     proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header Host $host;
+    proxy_set_header Host $http_host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_hide_header X-powered-by;
   }
+
+  client_max_body_size 70m;
+
+  ## install SSL via Certbot - https://certbot.eff.org/
+
+  ssl_certificate /etc/letsencrypt/live/umami.yourdomain.com/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/umami.yourdomain.com/privkey.pem;
+  include /etc/letsencrypt/options-ssl-nginx.conf;
+  ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+  add_header Strict-Transport-Security max-age=63072000;
+  add_header X-XSS-Protection "1; mode=block";
+
 }
 ```
 
