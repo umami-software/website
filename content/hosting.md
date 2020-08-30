@@ -28,6 +28,7 @@ A managed database is where the host provides you with a running database that y
 providers for managed databases.
 
 - [DigitalOcean](https://www.digitalocean.com/products/managed-databases/)
+- [Hetzner (EU)](https://www.hetzner.com/cloud)
 - [Scaleway (EU)](https://www.scaleway.com/en/database/)
 - [Amazon Web Services](https://aws.amazon.com/products/databases/)
 - [Google Cloud SQL](https://cloud.google.com/sql/)

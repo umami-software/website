@@ -9,11 +9,13 @@ For personal use, you can start with a single $5 a month cloud server
 and scale up as needed. You can use this [link](https://m.do.co/c/c9ebc1c0928d)
 to get a $100 credit for the first 60 days.
 
+Note, these steps can be repeated on any cloud hosting provider that offers Ubuntu.
+
 ## Install Ubuntu
 
 - [Initial server setup with Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
 
-## Install a database
+## Install Postgresql
 
 - [How to install Postgresql on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
 

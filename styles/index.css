@@ -81,6 +81,7 @@ pre {
 
 pre code {
   background: transparent;
+  padding: 0;
 }
 
 code {
