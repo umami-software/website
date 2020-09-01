@@ -18,10 +18,6 @@ Umami is hosted by you under your own domain so you can reliably avoid ad-blocke
 
 The tracking script is tiny (less than 6kb) and supports legacy browsers like IE.
 
-## Data ownership
-
-Since Umami is self-hosted you own all the data. No need to hand your data to a third party to be exploited.
-
 ## Multiple accounts
 
 Umami can be used to host data for friends or clients. Just create a separate account and they can start tracking their
@@ -34,6 +30,10 @@ If you want to share your stats publicly, you can do so with a uniquely generate
 ## Mobile-friendly
 
 The Umami interface has been optimized for mobile so you can view your stats from anywhere.
+
+## Data ownership
+
+Since Umami is self-hosted you own all the data. No need to hand your data to a third party to be exploited.
 
 ## Privacy-focused
 
