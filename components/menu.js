@@ -14,6 +14,7 @@ const menu = {
     ['Add an account', '/docs/add-an-account'],
     ['Enable share URL', '/docs/enable-share-url'],
     ['Track events', '/docs/track-events'],
+    ['Update umami', '/docs/updates'],
   ],
   Guides: [
     ['Hosting', '/docs/hosting'],
