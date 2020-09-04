@@ -21,6 +21,7 @@ const menu = {
     ['Hosting', '/docs/hosting'],
     ['Running on DigitalOcean', '/docs/running-on-digitalocean'],
     ['Running on Vercel', '/docs/running-on-vercel'],
+    ['Useful links', '/docs/useful-links'],
   ],
 };
 
