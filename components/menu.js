@@ -5,6 +5,7 @@ const menu = {
   Introduction: [
     ['About', '/docs/about'],
     ['Features', '/docs/features'],
+    ['FAQ', '/docs/faq'],
   ],
   'Getting started': [
     ['Install', '/docs/install'],
@@ -14,7 +15,7 @@ const menu = {
     ['Add an account', '/docs/add-an-account'],
     ['Enable share URL', '/docs/enable-share-url'],
     ['Track events', '/docs/track-events'],
-    ['Update umami', '/docs/updates'],
+    ['Updates', '/docs/updates'],
   ],
   Guides: [
     ['Hosting', '/docs/hosting'],
