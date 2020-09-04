@@ -47,7 +47,7 @@ pm2 start npm --name umami -- start
 
 With Umami now running, you can proxy requests to a domain or subdomain from Nginx to Umami.
 
-The follow config will send all requests from `umami.yourdomain.com` to your local Umami instance.
+The following config will send all requests from `umami.yourdomain.com` to your local Umami instance.
 
 ```
 server {
