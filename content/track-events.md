@@ -26,7 +26,7 @@ So your button element would now look like this:
 <button id="signup-button" class="button umami--click--signup-button">Sign up</button>
 ```
 
-When the user clicks on this button, Umami will record an event called `signup-button`.
+When the user clicks on this button, Umami will record an event named `signup-button` with an event type of `click`.
 
 The event can be any [Javascript event](https://developer.mozilla.org/en-US/docs/Web/Events) that can be 
 applied to an element.
@@ -43,6 +43,8 @@ const button = document.getElementById('signup-button');
 
 button.onclick = () => umami('Signup button click');
 ```
+
+In this case, Umami will record an event named `Signup button click` with an event type of `custom`.
 
 
 ## View events

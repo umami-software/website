@@ -11,4 +11,4 @@ No, Umami does not use any cookies in the tracking code.
 
 ### 3. Does Umami work on a single page application (SPA)?
 
-Yes, Umami works seamlessly between SPAs and a normal websites.
+Yes, Umami works seamlessly between SPAs and normal websites.
