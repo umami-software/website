@@ -14,7 +14,7 @@ Fill out the form details and click the **Save** button.
 
 <img src="/add-account-form.png" />
 
-The new account will have it's own dashboard and websites separate from the **admin** account.
+The new account will have its own dashboard and websites separate from the **admin** account.
 
 Only the **admin** is able to create, modify and delete accounts. The new account will not have access
 to the **Accounts** tab.
