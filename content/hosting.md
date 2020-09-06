@@ -13,7 +13,7 @@ You can view the [Running on DigitalOcean](/docs/running-on-digitalocean) guide 
 
 ## Separate database and web server
 
-In this setup you have a database running on it's own machine that allows remote connections. Your web server is running on a different
+In this setup you have a database running on its own machine that allows remote connections. Your web server is running on a different
 machine with Umami installed and connects to the database remotely to store and retrieve data.
 
 ## App hosting
