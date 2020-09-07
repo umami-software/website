@@ -14,6 +14,6 @@ can also check out the **Managed databases** section under [Hosting](/docs/hosti
 1. Enter [https://github.com/mikecao/umami](https://github.com/mikecao/umami) as the Git repository.
 This will fork the project on your Github account.
 1. Add the required environment variables `DATABASE_URL` and `HASH_SALT`. These values are defined in the
-**Configure umami** step from [Install](/docs/login).
+**Configure umami** step from [Install](/docs/install).
 1. Deploy and visit your application at `<deploy-id>.vercel.app`.
 1. Follow the **Getting started** guide starting from the [Login](/docs/login) step.
