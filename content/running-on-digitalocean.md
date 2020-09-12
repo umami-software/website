@@ -1,7 +1,7 @@
 # Running on DigitalOcean
 
 [DigitalOcean](https://m.do.co/c/c9ebc1c0928d) is an affordable cloud hosting provider that will let you host
-your own Umami setup. In this setup we are going to install
+your own Umami setup. In this setup guide we are going to install
 [Ubuntu](https://ubuntu.com/), a [Postgresql](https://www.postgresql.org/) database,
 an [Nginx](https://www.nginx.com/) webserver, [Node.js](https://nodejs.org/) and Umami.
 

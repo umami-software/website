@@ -2,10 +2,13 @@
 
 ## Umami technology stack
 
+- [React](https://reactjs.org/) - UI framework
 - [Next.js](https://nextjs.org/) - React framework
 - [Prisma.io](https://www.prisma.io/) - Modern database access toolkit
-- [Redux](https://redux.js.org/) - A predictable state container for JS apps
 - [Chart.js](https://www.chartjs.org/) - Simple yet flexible JavaScript charting for designers & developers
+- [Redux](https://redux.js.org/) - A predictable state container for JS apps
+- [Formik](https://formik.org/) - React forms management
+- [react-spring](https://www.react-spring.io/) - React animation library
 
 ## Server setup
 
