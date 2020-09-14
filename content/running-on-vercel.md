@@ -16,7 +16,3 @@ can also check out the **Managed databases** section under [Hosting](/docs/hosti
 **Configure umami** step from [Install](/docs/install).
 5. Deploy and visit your application at `<deploy-id>.vercel.app`.
 6. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
-
-
-
-
