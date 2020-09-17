@@ -31,3 +31,4 @@
 
 - [How I Wrote Umami in 30 days](https://medium.com/@caozilla/how-i-wrote-umami-in-30-days-a290372b80e4)
 - [Self-hosted analytics with umami on Vercel](https://dev.to/vvo/self-hosted-analytics-with-umami-on-vercel-55ma)
+- [Degoogling Your Analytics With Umami and Forge in 10 Minutes](https://releasecandidate.dev/degoogling-your-analytics-with-umami-and-forge-in-10-minutes)
