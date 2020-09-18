@@ -42,10 +42,11 @@ CSS method, you can do:
 const button = document.getElementById('signup-button');
 
 button.onclick = () => umami('Signup button click');
-```
+``` 
 
 In this case, Umami will record an event named `Signup button click` with an event type of `custom`.
 
+If you want to use your own event type instead of `custom`, see [Tracker functions](/docs/tracker-functions).
 
 ## View events
 

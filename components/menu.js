@@ -17,6 +17,10 @@ const menu = {
     ['Track events', '/docs/track-events'],
     ['Updates', '/docs/updates'],
   ],
+  Advanced: [
+    ['Tracker configuration', '/docs/tracker-config'],
+    ['Tracker functions', '/docs/tracker-functions'],
+  ],
   Guides: [
     ['Hosting', '/docs/hosting'],
     ['Running on DigitalOcean', '/docs/running-on-digitalocean'],
