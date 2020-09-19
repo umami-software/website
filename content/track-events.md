@@ -1,7 +1,7 @@
 # Track events
 
 Besides pageviews, Umami is also able to track events that occur on your website. There are two ways to record
-events in Umami, using **CSS classes** or **programatically**.
+events in Umami, using **CSS classes** or using **Javascript**.
 
 ## Using CSS classes
 
@@ -33,9 +33,9 @@ applied to an element.
 
 Note: be careful not to attach to any events that fire continuously like `scroll` and `drag`. 
 
-## Programatically
+## Using Javascript
 
-You can also record events manually using the `window.umami` method. To accomplish the same thing as the above
+You can also record events manually using the `window.umami` object. To accomplish the same thing as the above
 CSS method, you can do:
 
 ```
