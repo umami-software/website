@@ -26,3 +26,6 @@ Here is the original [en-US.json](https://raw.githubusercontent.com/mikecao/umam
 And here is it translated into German, [de-DE.json](https://raw.githubusercontent.com/mikecao/umami/master/lang/de-DE.json).
 
 ### 4. Finally, submit a pull request on [Github](https://github.com/mikecao/umami)
+
+If you are not familiar with using git, you can simply create an [issue](https://github.com/mikecao/umami/issues) on Github
+and paste your `.json` file contents and someone will merge it.
