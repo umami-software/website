@@ -16,6 +16,7 @@ const menu = {
     ['Enable share URL', '/docs/enable-share-url'],
     ['Track events', '/docs/track-events'],
     ['Updates', '/docs/updates'],
+    ['Languages', '/docs/languages'],
   ],
   Advanced: [
     ['Tracker configuration', '/docs/tracker-config'],
