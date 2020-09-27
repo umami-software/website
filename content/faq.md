@@ -13,7 +13,7 @@ No, Umami does not use any cookies in the tracking code.
 
 Yes, Umami works seamlessly between SPAs and normal websites.
 
-### 4. Can Umami records events such as button clicks?
+### 4. Can Umami record events such as button clicks?
 
 Yes, please see [Track Events](/docs/track-events) under **Getting Started**.
 
