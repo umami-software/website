@@ -21,7 +21,7 @@ proper ISO language code.
 
 ### 3. Translate the strings in the `.json` file
 
-Here is the original [en-US.json](https://raw.githubusercontent.com/mikecao/umami/master/lang/en-US.json) file.
+For example, here is the original English translation, [en-US.json](https://raw.githubusercontent.com/mikecao/umami/master/lang/en-US.json).
 
 And here is it translated into German, [de-DE.json](https://raw.githubusercontent.com/mikecao/umami/master/lang/de-DE.json).
 
