@@ -13,7 +13,7 @@
 ## Integrations
 
 - [Umami Analytics Plugin for VuePress](https://github.com/spekulatius/vuepress-plugin-umami)
-- [Umami Analytics Plugin for Gatsby](https://github.com/phiilu/gatsby-plugin-umami)
+- [Umami Analytics Plugin for Gatsby](https://www.gatsbyjs.com/plugins/gatsby-plugin-umami/)
 
 ## External articles
 
