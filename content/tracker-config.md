@@ -32,8 +32,7 @@ Usage:
 
 ## data-do-not-track
 
-A visitor can indicate they don't want to be tracked by changing a setting in their browser. You can configure
-Umami to respect the visitor's **Do Not Track** setting. 
+You can configure Umami to respect the visitor's **Do Not Track** setting. 
 
 
 Usage:
@@ -42,5 +41,21 @@ Usage:
   src="http://mywebsite/umami.js"
   data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
   data-do-not-track="true"
+></script>
+```
+
+## data-cache
+
+If you get a lot of pageviews from the same user, for example in a forum website, you can cache some data to 
+improve the performance of the tracking script.
+
+*Note: This will use session storage so you may need to inform your users.*
+
+Usage:
+```
+<script async defer
+  src="http://mywebsite/umami.js"
+  data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
+  data-cache="true"
 ></script>
 ```
