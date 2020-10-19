@@ -16,10 +16,10 @@ Note, these steps can be repeated on any cloud hosting provider that offers Ubun
 
 - [Initial server setup with Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
 
-## Install Your Preferred Database Engine (Postgresql or MySQL)
+## Install database (Postgresql or MySQL)
 
 - [How to install Postgresql on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
-- [How to install MySQL on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
+- [How to install MySQL on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04)
 
 ## Install Nginx
 
@@ -65,31 +65,9 @@ server {
 }
 ```
 
-## Adding an SSL certificate
+## Adding an SSL certificate (optional)
 
-[Let's Encrypt](https://letsencrypt.org/) is a recognized CA providing free certificates. It also has an automated tool to install, configure and renew certificates.   
-
-Note: before you begin this step, make sure your Droplet is publicly routable on the Internet. DigitalOcean is not a DNS registrar so you will have to register and point your DNS to your Droplet instance.
-
-Certbot's [website](https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx) provides instructions for different platforms and webservers, but to install on Ubuntu 20 and Nginx: 
-
-```
-sudo snap install core; sudo snap refresh core
-sudo snap install --classic certbot
-sudo certbot --nginx
-```
-
-After these steps your site should be accessible over HTTPS. Certbot also adds a cron to auto-renew your certificates which you can test with
-
-```
-sudo certbot renew --dry-run
-```
-
-The task can be seen in the system timers
-
-```
-systemctl list-timers
-```
+- [How To Secure Nginx with Let's Encrypt on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04)
 
 ## Finish
 
