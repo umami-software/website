@@ -10,8 +10,8 @@ export default function Header() {
           <a className="header-link">umami</a>
         </Link>
       </h1>
-      <div className="umami--click--github-button">
-        <a href="https://github.com/mikecao/umami">
+      <div>
+        <a href="https://github.com/mikecao/umami" className="umami--click--github-button">
           <Github className="icon" />
         </a>
       </div>
