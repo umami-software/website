@@ -3,7 +3,7 @@
 The Umami tracker exposes some functions that you can call on your website if you want
 more control over your tracking.
 
-## umami(*event_value*)
+### umami(*event_value*)
 
 Sends an event with an event type of `custom`.
 
@@ -12,7 +12,7 @@ Usage:
 umami('Signup button click');
 ```
 
-## umami.trackEvent(*event_value*, *event_type*, [*url*], [*website_id*])
+### umami.trackEvent(*event_value*, *event_type*, [*url*], [*website_id*])
 
 Tracks an event with a custom event type.
 
@@ -24,7 +24,7 @@ umami.trackEvent('Signup button click', 'signup', '/home', '94db1cb1-74f4-4a40-a
 The **url** and **website_id** values are optional. They will default to the page url and `data-website-id`
 defined by the script.
 
-## umami.trackView(*url*, [*referrer*], [*website_id*])
+### umami.trackView(*url*, [*referrer*], [*website_id*])
 
 Tracks a page view.
 

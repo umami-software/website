@@ -2,7 +2,7 @@
 
 The Umami tracker provides several properties that allow you to configure its behavior.
 
-## data-host-url
+### data-host-url
 
 By default, Umami will send data to wherever the script is located. You can override this to send data
 to another location.
@@ -16,7 +16,7 @@ Usage:
 ></script>
 ```
 
-## data-auto-track
+### data-auto-track
 
 By default, Umami tracks all pageviews and events for you automatically. You can disable this behavior and
 track events yourself using the [tracker functions](/docs/tracker-functions).
@@ -30,7 +30,7 @@ Usage:
 ></script>
 ```
 
-## data-do-not-track
+### data-do-not-track
 
 You can configure Umami to respect the visitor's **Do Not Track** setting. 
 
@@ -44,7 +44,7 @@ Usage:
 ></script>
 ```
 
-## data-cache
+### data-cache
 
 If you get a lot of pageviews from the same user, for example in a forum website, you can cache some data to 
 improve the performance of the tracking script.

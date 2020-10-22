@@ -21,6 +21,7 @@ const menu = {
   Advanced: [
     ['Tracker configuration', '/docs/tracker-config'],
     ['Tracker functions', '/docs/tracker-functions'],
+    ['Environment variables', '/docs/environment-variables'],
   ],
   Guides: [
     ['Hosting', '/docs/hosting'],
