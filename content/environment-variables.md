@@ -15,7 +15,8 @@ This will redirect all requests from `http` to `https` in the Umami application.
 
 If you are running in development mode, this will log database queries to the console for debugging.
 
-### HOSTNAME and PORT
+### HOSTNAME = &lt;hostname&gt;
+### PORT = &lt;port number&gt;
 
 If you are running on an environment which requires you to bind to a specific hostname or port, such as Heroku, you can add
 these variables and start your app with `npm run start-env` instead of `npm start`.
