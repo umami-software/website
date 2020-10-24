@@ -9,11 +9,10 @@ can also check out the **Managed databases** section under [Hosting](/docs/hosti
 
 ## Setup
 
-1. Create an account on [Vercel](https://vercel.com/).
-1. From the dashboard page click **Import Project**.
-1. Enter [https://github.com/mikecao/umami](https://github.com/mikecao/umami) as the Git repository.
-This will fork the project on your Github account.
-1. Add the required environment variables `DATABASE_URL` and `HASH_SALT`. These values are defined in the
-**Configure umami** step from [Install](/docs/login).
-1. Deploy and visit your application at `<deploy-id>.vercel.app`.
-1. Follow the **Getting started** guide starting from the [Login](/docs/login) step.
+1. Fork the [https://github.com/mikecao/umami](https://github.com/mikecao/umami) project to your GitHub account.
+2. Create an account on [Vercel](https://vercel.com/). 
+3. From the dashboard page click **Import Project** then specify the URL to your fork of the project on GitHub.
+4. Add the required environment variables `DATABASE_URL` and `HASH_SALT`. These values are defined in the
+**Configure umami** step from [Install](/docs/install).
+5. Deploy and visit your application at `<deploy-id>.vercel.app`.
+6. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.

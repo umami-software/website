@@ -16,11 +16,18 @@ const menu = {
     ['Enable share URL', '/docs/enable-share-url'],
     ['Track events', '/docs/track-events'],
     ['Updates', '/docs/updates'],
+    ['Languages', '/docs/languages'],
+  ],
+  Advanced: [
+    ['Tracker configuration', '/docs/tracker-config'],
+    ['Tracker functions', '/docs/tracker-functions'],
+    ['Environment variables', '/docs/environment-variables'],
   ],
   Guides: [
     ['Hosting', '/docs/hosting'],
     ['Running on DigitalOcean', '/docs/running-on-digitalocean'],
     ['Running on Vercel', '/docs/running-on-vercel'],
+    ['Running on Heroku', '/docs/running-on-heroku'],
     ['Useful links', '/docs/useful-links'],
   ],
 };

@@ -16,7 +16,7 @@ Umami is hosted by you under your own domain so you can reliably avoid ad-blocke
 
 ## Light-weight
 
-The tracking script is tiny (less than 6kb) and supports legacy browsers like IE.
+The tracking script is tiny (only 2KB) and supports legacy browsers like IE.
 
 ## Multiple accounts
 

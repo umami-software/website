@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="container">
       <div>
-        &copy; <a href="https://www.mikecao.com">Mike Cao</a>
+        &copy; <a href="https://mikecao.com">Mike Cao</a>
       </div>
       <div>Made in San Francisco</div>
       <div>
