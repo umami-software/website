@@ -28,6 +28,7 @@ You don't need to have a database set up before this setup guide.
 ### Build and Deploy
 
 1. Under the **Settings > Config Vars** section, set the `HASH_SALT` environment variable. Read the [Install](/docs/install) section for information about the `HASH_SALT` environment variable.
+1. Also in **Settings > Config Vars**, set `HOSTNAME` to `0.0.0.0`. This tells Umami to bind to all interfaces, not just localhost. If this is missing Heroku can't tell the app is started.
 1. With the environment variables and database set up, click the **Deploy > Manual Deploy > Deploy Branch** button.
 1. Once the build has finished, the website should be live. Follow the **Open app** button at the top of the dashboard to view it.
 1. Follow the **Getting started** guide starting from the [Login](/docs/login) step.
