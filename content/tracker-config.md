@@ -59,3 +59,16 @@ Usage:
   data-cache="true"
 ></script>
 ```
+
+### data-domains
+
+If you want the tracker to only run on specific domains, you can add them to your tracker script. This is a comma delimited list of domain names. Helps if you are working in a staging/development environment.
+
+Usage:
+```
+<script async defer
+  src="http://mywebsite/umami.js"
+  data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
+  data-domains="mywebsite.com,mywebsite2.com"
+></script>
+```
