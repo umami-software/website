@@ -6,7 +6,7 @@ Umami supports the display of different languages. Simply click the globe icon i
 
 ## Contributing
 
-If you would like to contribute a lanuage translation to the project, please follow these steps.
+If you would like to contribute a language translation to the project, please follow these steps.
 
 ### 1. Checkout the repo
 

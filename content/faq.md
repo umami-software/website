@@ -19,4 +19,4 @@ Yes, please see [Track Events](/docs/track-events) under **Getting Started**.
 
 ### 5. Where can I go for help if I have problems or want to request a feature?
 
-Please file an [issue](https://github.com/mikecao/umami/issues) on Gitub.
+Please file an [issue](https://github.com/mikecao/umami/issues) on GitHub.
