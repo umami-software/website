@@ -2,6 +2,8 @@
 
 [Qovery](https://qovery.com) is a fully-managed cloud platform that runs on your AWS, GCP, Azure and Digital Ocean account where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
 
+Qovery include the following features:
+
 - Continuous, automatic builds & deploys from GitHub, Bitbucket, and GitLab.
 - Automatic SSL certificates through [Let's Encrypt](https://letsencrypt.org).
 - Free managed PostgreSQL instance.
@@ -19,29 +21,31 @@ Visit the [Qovery dashboard](https://console.qovery.com) to create an account if
 
 ### 2. Create a project
 
-Click on the create a project button and give a name to your project.
+Click on "Create a new project" and give a name to your project. 
 
-Click on next.
+Click on "Next".
 
-### 3. Add your Umami app
+### 3. Add an application
 
-Click on the create an application button and select your Github or Gitlab repository where your Umami app is located.
+Click on "Create an application" then choose "I have an application" and select your GitHub or GitLab repository where your Hugo site is located.
 
-Click on next.
+Click on "Next".
+
+Skip adding services for static website.
 
 ### 4. Add a PostgreSQL database
 
-Click on add a PostgreSQL database.
+Select "PostgreSQL" among the services.
 
 Select the version.
 
 Give a name to your PostgreSQL databse.
 
-Click on next.
+Click on "Next".
 
 ### 5. Add a storage
 
-Click on add a Storage.
+Select "Storage" among the services.
 
 Give a name to your storage.
 
@@ -51,13 +55,11 @@ Select the size.
 
 Give a mount point.
 
-### Deploy
+### 6. Deploy
 
-Click on the Deploy button. Your app should be deployed: you can see the status in real time by clicking on Deployment logs.
+Click on "Deploy".
 
-## Continuous deploys
-
-Now that Qovery is connected to your repo, it will **automatically build and publish your site** any time you push to GitHub.
+Your app should be deployed: you can see the status in real time by clicking on deployment logs.
 
 ## Custom domains
 
