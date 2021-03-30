@@ -19,4 +19,6 @@ Yes, please see [Track Events](/docs/track-events) under **Getting Started**.
 
 ### 5. Where can I go for help if I have problems or want to request a feature?
 
-Please file an [issue](https://github.com/mikecao/umami/issues) on GitHub.
+For general discussions and troubleshooting you can use the [discussions](https://github.com/mikecao/umami/discussions) on Github. 
+
+For bug reports and feature requests, please file an [issue](https://github.com/mikecao/umami/issues) on GitHub.
