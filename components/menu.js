@@ -37,7 +37,7 @@ export default function Menu() {
   return (
     <div className="menu">
       {Object.keys(menu).map(key => (
-        <>
+        <React.Fragment key={key}>
           <h3>{key}</h3>
           <ul>
             {menu[key].map(([text, url]) => (
@@ -48,7 +48,7 @@ export default function Menu() {
               </li>
             ))}
           </ul>
-        </>
+        </React.Fragment>
       ))}
     </div>
   );
