@@ -9,7 +9,7 @@ All data is returned as JSON.
 ## `POST /api/auth/login`
 
 First you need to get a _token_ in order to make API requests. You need to make a
-`POST` request to the `/api/auth/login` endpoint with the following payload:
+`POST` request to the `/api/auth/login` endpoint with the following data:
 
 ```json
 {
@@ -130,19 +130,19 @@ Gets metrics for a given time range.
 ## `POST /api/collect`
 
 To register a `pageview` or `event`, you need to send a `POST` to `/api/collect` with
-the following payload:
+the following data:
 
 ```
 {
-  payload: {
-    website: "your-website-id",
-    url: "/",
-    referrer: "",
-    hostname: "your-hostname",
-    language: "en-US",
-    screen: "1920x1080",
-  },
-  type: "pageview"
+    payload: {
+        website: "your-website-id",
+        url: "/",
+        referrer: "",
+        hostname: "your-hostname",
+        language: "en-US",
+        screen: "1920x1080",
+    },
+    type: "pageview"
 }
 ```
 
@@ -150,14 +150,14 @@ For events you would send:
 
 ```
 {
-  payload: {
-      website: "your-website-id",
-      url: "/",
-      event_type: "click",
-      event_value: "signup-button",
-      hostname: "your-hostname",
-      language: "en-US",
-      screen: "1920x1080"
+    payload: {
+        website: "your-website-id",
+        url: "/",
+        event_type: "click",
+        event_value: "signup-button",
+        hostname: "your-hostname",
+        language: "en-US",
+        screen: "1920x1080"
     },
     type: "event"
 }
