@@ -26,6 +26,7 @@ const menu = {
   ],
   Guides: [
     ['Hosting', '/docs/hosting'],
+    ['Running on Railway', '/docs/running-on-railway'],
     ['Running on DigitalOcean', '/docs/running-on-digitalocean'],
     ['Running on Vercel', '/docs/running-on-vercel'],
     ['Running on Heroku', '/docs/running-on-heroku'],
