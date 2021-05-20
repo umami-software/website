@@ -4,6 +4,7 @@
 
 - [React](https://reactjs.org/) - UI framework
 - [Next.js](https://nextjs.org/) - React framework
+- [NuxtJS](https://nuxtjs.org/) - Vue framework
 - [Prisma.io](https://www.prisma.io/) - Modern database access toolkit
 - [Chart.js](https://www.chartjs.org/) - Simple yet flexible JavaScript charting for designers & developers
 - [Redux](https://redux.js.org/) - A predictable state container for JS apps
@@ -14,6 +15,7 @@
 
 - [Umami Analytics Plugin for VuePress](https://github.com/spekulatius/vuepress-plugin-umami)
 - [Umami Analytics Plugin for Gatsby](https://www.gatsbyjs.com/plugins/gatsby-plugin-umami/)
+- [Umami Analytics Module for Nuxt.js](https://github.com/joe-pritchard/nuxt-umami-module)
 
 ## External articles
 
