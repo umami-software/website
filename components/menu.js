@@ -31,6 +31,7 @@ const menu = {
     ['Running on Heroku', '/docs/running-on-heroku'],
     ['Running on Railway', '/docs/running-on-railway'],
     ['Running on Qovery', '/docs/running-on-qovery'],
+    ['Running on CapRover', '/docs/running-on-caprover'],
     ['Useful links', '/docs/useful-links'],
   ],
 };
