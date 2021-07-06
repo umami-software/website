@@ -1,0 +1,40 @@
+# Running on Koyeb
+
+[Koyeb](https://www.koyeb.com) is a developer-friendly serverless platform to deploy apps globally. The platform lets you seamlessly run Docker containers, web apps, and APIs with git-based deployment, native autoscaling, free SSL, a global edge network, and built-in service mesh and discovery.
+
+## Setup
+
+In this guide, you need to have a PostgreSQL database server running and accepting remote connections. If you do not already have a database, you can check out the **Managed database** section under [Hosting](/docs/hosting).
+
+>You will need to set up the database tables by following the **Create database tables** section of the [Install](/docs/install) docs.
+
+To deploy Umami, we use the [Koyeb CLI](https://github.com/koyeb/koyeb-cli), you can also perform the setup using the [Koyeb control panel](https://app.koyeb.com).
+
+### Create Koyeb Secrets
+
+Create two Koyeb secrets to securely store your `DATABASE_URL` and the `HASH_SALT`. In the terminal execute the following command:
+
+```sh
+$ koyeb secret create umami-database-url
+Enter your secret: postgres://<user>:<password>@<host>:<port>/<db-name>?sslmode=require
+
+$ openssl rand -hex 32 | koyeb secret create umami-hash-salt --value-from-stdin
+```
+
+### Deploy Umami
+
+Once you’ve created the secrets, you can deploy Umami. In your terminal run the following command to create a new Koyeb App and deploy the Umami service:
+
+```sh
+koyeb app init umami --docker ghcr.io/mikecao/umami:postgresql-latest --ports 3000:http --routes /:3000 --env DATABASE_URL=@umami-database-url --env HASH_SALT=@umami-hash-salt
+```
+
+Your Umami service is being deployed. To retrieve the Umami URL run:
+
+```
+$ koyeb app get umami
+ID                                  	NAME     	DOMAINS                         	UPDATED AT
+30de8301-05b1-4131-a842-28e608900000	umami   	umami-<YOUR_KOYEB_ORG>.koyeb.app	2021-07-06 11:58:01.143967 +0000 UTC
+```
+
+Open the URL to access umami and follow the **Getting started** guide starting from the [Login](/docs/login) step.
