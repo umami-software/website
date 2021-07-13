@@ -1,70 +1,65 @@
 # Running on Qovery
 
-[Qovery](https://qovery.com) is a fully-managed cloud platform that runs on your AWS, GCP, Azure and Digital Ocean account where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
+[Qovery](https://www.qovery.com) is a fully-managed cloud platform that runs on your AWS, Digital Ocean and Scaleway account where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
 
-Qovery include the following features:
-
-- Continuous, automatic builds & deploys from GitHub, Bitbucket, and GitLab.
-- Automatic SSL certificates through [Let's Encrypt](https://letsencrypt.org).
-- Free managed PostgreSQL instance.
-- Free SSD storage.
-- Unlimited collaborators.
-- Unlimited [custom domains](https://docs.qovery.com/guides/getting-started/setting-custom-domain/).
+Qovery provides **free hosting** for individual developers and include the following features:
+* Continuous, automatic builds & deploys from GitHub and GitLab.
+* Automatic SSL certificates through [Let's Encrypt](https://letsencrypt.org).
+* Free managed PostgreSQL.
+* Free SSD storage.
+* Unlimited collaborators.
+* Unlimited [custom domains](https://hub.qovery.com/docs/using-qovery/configuration/application/#domains).
 
 ## Setup
-
-Follow the procedure below to set up a Umami on Qovery:
-
-### 1. Create a Qovery account.
-
-Visit the [Qovery dashboard](https://console.qovery.com) to create an account if you don't already have one.
+### 1. Create a Qovery Account
+Visit the [Qovery dashboard](https://start.qovery.com) to create an account if you don't already have one.
 
 ### 2. Create a project
+* Click on **Create project** and give a name to your project.
+* Click on **Next**.
 
-Click on "Create a new project" and give a name to your project. 
+![Create a project](https://hub.qovery.com/img/heroku/heroku-2.png)
 
-Click on "Next".
+### 3. Create a new environment
+* Click on **Create environment** and give a name (e.g. staging, production).
 
-### 3. Add an application
+![Create a new environment](https://hub.qovery.com/img/heroku/heroku-3.png)
 
-Click on "Create an application" then choose "I have an application" and select your GitHub or GitLab repository where your Hugo site is located.
+### 4. Add your Umami app
+* Click on **Create an application**, give a name and select your GitHub or GitLab repository where your Umami app is located.
+* Define the main branch name and the root application path.
+* Click on **Create**.
 
-Click on "Next".
+![Add your application](https://hub.qovery.com/img/rust/rust.png)
 
-Skip adding services for static website.
+After the application is created:
 
-### 4. Add a PostgreSQL database
+* Navigate to your application **Settings**
+* Select **Port**
+* Add port used by your Umami application
 
-Select "PostgreSQL" among the services.
+### 5. Deploy a database
+Create and deploy a new database PostgreSQL database
 
-Select the version.
+To learn how to do it, you can [follow this guide](https://hub.qovery.com/guides/getting-started/create-a-database)
 
-Give a name to your PostgreSQL databse.
+### 6. Add storage
+To add storage, go to your application **Settings**:
 
-Click on "Next".
+![Add storage](https://hub.qovery.com/img/add-storage.png)
 
-### 5. Add a storage
 
-Select "Storage" among the services.
+### 7. Setup your Umami configuration
+To use PostgreSQL provided by Qovery, you can use the built-in secrets and environment variables. You can read more about environment variables and secrets in our [configuration section](https://hub.qovery.com/docs/using-qovery/configuration/environment-variable/).
 
-Give a name to your storage.
+### 8. Deploy the app on Qovery
+All you have to do now is to navigate to your application and click on **Deploy**
 
-Select the storage type between Slow HDD, HDD, SSD, and Fast SSD. (SSD is recommended).
+![Deploy the app](https://hub.qovery.com/img/heroku/heroku-1.png)
 
-Select the size.
+That's it. Watch the status and wait till the app is deployed.
 
-Give a mount point.
-
-### 6. Deploy
-
-Click on "Deploy".
-
-Your app should be deployed: you can see the status in real time by clicking on deployment logs.
-
-## Custom domains
-
-Add your own domains to your site easily using Qovery's [custom domains](https://docs.qovery.com/guides/getting-started/setting-custom-domain/) guide.
+To open the application in your browser, click on **Action** and **Open** in your application overview
 
 ## Support
-
 Chat with Qovery developers on [Discord](https://discord.qovery.com) if you need help.
