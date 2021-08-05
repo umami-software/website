@@ -15,6 +15,7 @@
 - [Umami Analytics Plugin for VuePress](https://github.com/spekulatius/vuepress-plugin-umami)
 - [Umami Analytics Plugin for Gatsby](https://www.gatsbyjs.com/plugins/gatsby-plugin-umami/)
 - [Umami Analytics Module for Nuxt.js](https://github.com/joe-pritchard/nuxt-umami-module)
+- [Umami Plugin for Craft CMS](https://github.com/stenvdb/craft-umami)
 
 ## External articles
 
