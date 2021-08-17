@@ -4,7 +4,7 @@
 your own Umami setup. In this setup guide we are going to install
 [Ubuntu](https://ubuntu.com/), a [Postgresql](https://www.postgresql.org/) or [MySQL](https://www.mysql.com/) database,
 an [Nginx](https://www.nginx.com/) webserver, [Node.js](https://nodejs.org/) and Umami.
-DigitalOcean also has a NodeJS Droplet template that comes with Node.js, Ubuntu and Nginx which can get you started quicker. 
+DigitalOcean also has a [NodeJS droplet build](https://marketplace.digitalocean.com/apps/nodejs) that comes with Node.js, Ubuntu and Nginx which can get you started quicker. 
 
 For personal use, you can start with a single $5 a month cloud server 
 and scale up as needed. You can use this [link](https://m.do.co/c/c9ebc1c0928d)
