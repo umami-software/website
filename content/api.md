@@ -4,6 +4,8 @@ Umami allows you to pull data directly by calling the API endpoints.
 The endpoints are available at `http://<your-umami>/api`.
 All data is returned as JSON.
 
+Any operation you can do thorugh the Umami admin panel is available in the API, but it might not yet be documented.
+
 ## Authentication
 
 ## `POST /api/auth/login`
@@ -31,6 +33,62 @@ The cookie name is `umami.auth`. Your request header should look something like 
 
 ```
 Cookie: umami.auth=eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
+```
+
+## Websites
+
+Operations around Websites that Umami is tracking.
+
+## `POST /api/website`
+
+Creates a website.
+
+**Parameters**
+
+- `domain`: (string) The full domain of the tracked website
+- `name`: (string) The name of the website in Umami
+- `enable_share_url`: (boolean) Enables a public URL for the stats for this Website
+- `public`: (boolean) false by default
+
+**Sample response**
+
+```
+{
+    website_id: 4,
+    website_uuid: "51f73213-3f01-4343-a135-25496a3ffd31",
+    user_id: 2,
+    name: "Umami",
+    domain: "umami.is",
+    share_id: "8PWex1pa",
+    "created_at":"2021-07-26T17:17:52.846Z"
+}
+```
+
+## `GET /api/websites`
+
+Returns all tracked websites.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```
+[
+    {
+        website_id: 4,
+        website_uuid: "51f73213-3f01-4343-a135-25496a3ffd31",
+        user_id: 2,
+        name: "Umami",
+        domain: "umami.is",
+        share_id: "8PWex1pa",
+        "created_at":"2021-07-26T17:17:52.846Z"
+    },
+    {
+        ...
+    }
+]
 ```
 
 ## Getting stats
