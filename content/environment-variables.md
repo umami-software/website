@@ -20,3 +20,7 @@ If you are running in development mode, this will log database queries to the co
 
 If you are running on an environment which requires you to bind to a specific hostname or port, such as Heroku, you can add
 these variables and start your app with `npm run start-env` instead of `npm start`.
+
+### BASE_PATH = &lt;path&gt;
+
+If you want to host Umami under a subdirectory of domain. 
