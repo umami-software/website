@@ -7,7 +7,8 @@
 Heroku provides a free hosting service which works with Umami as well as databases through add-ons.
 You don't need to have a database set up before this setup guide.
 
-## Setup
+## Setup [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mikecao/umami)
+_Automate all steps using the button above_
 
 ### Website
 
