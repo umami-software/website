@@ -39,8 +39,8 @@ This will also create a login account with username **admin** and password **uma
 Create an `.env` file with the following
 
 ```
-DATABASE_URL=(connection url)
-HASH_SALT=(any random string)
+DATABASE_URL=connection url
+HASH_SALT=any random string
 ```
 
 The connection url is in the following format:

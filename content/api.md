@@ -224,7 +224,6 @@ For events you would send:
 Note, for `/api/collect` requests you do not need to send the `umami.auth`
 authentication cookie.
 
-Additionally, to send a request `/api/collect` programtically, ie from
-your application's backend it is likely that Umami will think that the
-request is coming from a bot. A workaround is to clear the `User-Agent`
-HTTP header to properly register the `pageview` or `event`.
+Also, you need to send a proper `User-Agent` HTTP header or
+your request won't be registered.
+
