@@ -24,3 +24,8 @@ these variables and start your app with `npm run start-env` instead of `npm star
 ### BASE_PATH = &lt;path&gt;
 
 If you want to host Umami under a subdirectory of domain. 
+
+### CLIENT_IP_HEADER = &lt;header name&gt;
+
+HTTP header to check for the client's IP address. This is useful when you're
+behind a proxy that uses non-standard headers.
