@@ -3,7 +3,7 @@
 [Vercel](https://vercel.com/) is the company behind the framework [Next.js](https://nextjs.org/) which is used by Umami.
 They also provide a free hosting service which is ideal for Next.js applications.
 
-In this setup, you already have a database server running and accepting remote connections. If you don't already have a
+In this setup, you should already have a database server running and accepting remote connections. If you don't already have a
 database, you can follow the [Running on DigitalOcean](/docs/running-on-digitalocean) guide to get a database up and running. You
 can also check out the **Managed databases** section under [Hosting](/docs/hosting).
 
