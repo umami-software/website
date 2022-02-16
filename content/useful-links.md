@@ -17,6 +17,7 @@
 - [Umami Analytics Module for Nuxt.js](https://github.com/joe-pritchard/nuxt-umami-module)
 - [Umami Plugin for Craft CMS](https://github.com/stenvdb/craft-umami)
 - [Umami API for PHP Laravel](https://github.com/atm-code/laravel-umami)
+- [Umami Plugin for Docusaurus](https://github.com/PatelN123/docusaurus-plugin-umami)
 
 ## External articles
 
