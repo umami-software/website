@@ -29,3 +29,15 @@ If you want to host Umami under a subdirectory of domain.
 
 HTTP header to check for the client's IP address. This is useful when you're
 behind a proxy that uses non-standard headers.
+
+### DISABLE_LOGIN = 1
+
+Disables the login page for the application.
+
+### REMOVE_TRAILING_SLASH = 1
+
+Removes the trailing slash from all incoming urls.
+
+### TRACKER_SCRIPT_NAME = &lt;scipt name&gt;
+
+Allow you to assign a custom name to the tracker script. The default it `umami`. If you update this, be sure to update the tracking code on your website to the new name.
