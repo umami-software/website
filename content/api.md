@@ -28,7 +28,7 @@ If successful you should get a response like the following:
 }
 ```
 
-Save the token value and send an `Authentication` header with all your data requests with the value `Bearer <token>`. Your request header should look something like this:
+Save the token value and send an `Authorization` header with all your data requests with the value `Bearer <token>`. Your request header should look something like this:
 
 ```http request
 Authorization: Bearer eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
