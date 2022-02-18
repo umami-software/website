@@ -28,6 +28,22 @@ If successful you should get a response like the following:
 }
 ```
 
+Save the token value and send an `Authentication` header with all your data requests with the value `Bearer <token>`. Your request header should look something like this:
+
+```http request
+Authorization: Bearer eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
+```
+
+For example, with `curl` it would look like this:
+
+```shell
+curl https://yoursever/api/websites
+   -H "Accept: application/json"
+   -H "Authorization: Bearer <token>"
+```
+
+Prior to v1.26.0, Umami used cookies. If using an older version, you would do the following instead:
+
 Save the token value and pass it as a _cookie_ with all your data requests.
 The cookie name is `umami.auth`. Your request header should look something like this:
 
@@ -221,8 +237,8 @@ For events you would send:
 }
 ```
 
-Note, for `/api/collect` requests you do not need to send the `umami.auth`
-authentication cookie.
+Note, for `/api/collect` requests you do not need to send an 
+authentication token.
 
 Also, you need to send a proper `User-Agent` HTTP header or
 your request won't be registered.
