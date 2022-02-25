@@ -40,4 +40,4 @@ Removes the trailing slash from all incoming urls.
 
 ### TRACKER_SCRIPT_NAME = &lt;scipt name&gt;
 
-Allow you to assign a custom name to the tracker script. The default it `umami`. If you update this, be sure to update the tracking code on your website to the new name.
+Allow you to assign a custom name to the tracker script. The default is `umami`. If you update this, be sure to update the tracking code on your website to the new name.
