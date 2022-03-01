@@ -28,6 +28,7 @@ const menu = {
     ['Hosting', '/docs/hosting'],
     ['Running on DigitalOcean', '/docs/running-on-digitalocean'],
     ['Running on Vercel', '/docs/running-on-vercel'],
+    ['Running on Netlify', '/docs/running-on-netlify'],
     ['Running on Heroku', '/docs/running-on-heroku'],
     ['Running on Railway', '/docs/running-on-railway'],
     ['Running on Qovery', '/docs/running-on-qovery'],
