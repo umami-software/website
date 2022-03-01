@@ -36,3 +36,4 @@ providers for managed databases.
 - [Google Cloud SQL](https://cloud.google.com/sql/)
 - [Microsoft Azure](https://azure.microsoft.com/en-us/services/#databases)
 - [Render](https://render.com/pricing#databases)
+- [Heroku](https://www.heroku.com/postgres)
