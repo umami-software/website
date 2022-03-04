@@ -25,6 +25,8 @@ that the app could connect to. Here are a few app hosting providers that can hos
 - [Netlify](https://www.netlify.com/)
 - [Render](https://render.com/)
 
+For the deployment, the build command is `npm run build` and the publish directory is `.next`.
+
 ## Managed databases
 
 A managed database is where the host provides you with a running database that you don't have to install or maintain. Here are some
