@@ -19,11 +19,12 @@ machine with Umami installed and connects to the database remotely to store and 
 ## App hosting
 
 In this setup, you would have an app hosting provider host the Umami app for you. You would still need a database running elsewhere
-that the app could connect to. Here are a few app hosting providers that can host Umami. Vercel and Netlify both have a free tier available.
+that the app could connect to. Here are a few app hosting providers that can host Umami. Vercel, Netlify, and Railway both have a free tier available.
 
 - [Vercel](https://vercel.com/)
 - [Netlify](https://www.netlify.com/)
 - [Render](https://render.com/)
+- [Railway](https://railway.up/)
 
 For the deployment, the build command is `npm run build` and the publish directory is `.next`.
 
@@ -39,3 +40,4 @@ providers for managed databases.
 - [Microsoft Azure](https://azure.microsoft.com/en-us/services/#databases)
 - [Render](https://render.com/pricing#databases)
 - [Heroku](https://www.heroku.com/postgres)
+- [Railway](https://docs.railway.app/databases/postgresql/)
