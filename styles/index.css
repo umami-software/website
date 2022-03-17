@@ -59,6 +59,10 @@ header .icon {
   height: 2rem;
 }
 
+header .links a + a {
+  margin-left: 20px;
+}
+
 footer {
   font-size: 0.9rem;
   display: flex;

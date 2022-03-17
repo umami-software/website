@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../../components/layout';
-import Menu from '../../components/menu';
+import Layout from 'components/layout';
+import Menu from 'components/menu';
 import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
 
 export default function DocsPage({ content }) {

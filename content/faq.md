@@ -22,3 +22,5 @@ Yes, please see [Track Events](/docs/track-events) under **Getting Started**.
 For general discussions and troubleshooting you can use the [discussions](https://github.com/mikecao/umami/discussions) on Github. 
 
 For bug reports and feature requests, please file an [issue](https://github.com/mikecao/umami/issues) on GitHub.
+
+For the most fun, join the Umami community on [Discord](https://discord.gg/4dz4zcXYrQ)!
