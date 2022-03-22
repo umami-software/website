@@ -38,6 +38,6 @@ Disables the login page for the application.
 
 Removes the trailing slash from all incoming urls.
 
-### TRACKER_SCRIPT_NAME = &lt;scipt name&gt;
+### TRACKER_SCRIPT_NAME = &lt;script name&gt;
 
 Allow you to assign a custom name to the tracker script. The default is `umami`. If you update this, be sure to update the tracking code on your website to the new name.
