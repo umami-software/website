@@ -23,7 +23,7 @@ these variables and start your app with `npm run start-env` instead of `npm star
 
 ### BASE_PATH = &lt;path&gt;
 
-If you want to host Umami under a subdirectory of domain. 
+If you want to host Umami under a subdirectory. 
 
 ### CLIENT_IP_HEADER = &lt;header name&gt;
 
