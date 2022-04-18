@@ -14,6 +14,10 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <img
+          referrerPolicy="no-referrer-when-downgrade"
+          src="https://static.scarf.sh/a.png?x-pxid=40923c13-147d-4033-b602-1d4b2b5c34cd"
+        />
       </body>
     </Html>
   );
