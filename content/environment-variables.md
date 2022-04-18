@@ -41,3 +41,7 @@ Removes the trailing slash from all incoming urls.
 ### TRACKER_SCRIPT_NAME = &lt;script name&gt;
 
 Allow you to assign a custom name to the tracker script. The default is `umami`. If you update this, be sure to update the tracking code on your website to the new name.
+
+### DISABLE_TELEMETRY = 1
+
+Disable collection of completely anonymous telemetry data during installation.
