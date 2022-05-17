@@ -41,3 +41,4 @@ providers for managed databases.
 - [Render](https://render.com/pricing#databases)
 - [Heroku](https://www.heroku.com/postgres)
 - [Railway](https://docs.railway.app/databases/postgresql/)
+- [Supabase](https://supabase.com/database)
