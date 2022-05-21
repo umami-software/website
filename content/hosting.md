@@ -42,3 +42,4 @@ providers for managed databases.
 - [Heroku](https://www.heroku.com/postgres)
 - [Railway](https://docs.railway.app/databases/postgresql/)
 - [Supabase](https://supabase.com/database)
+- [PlanetScale](https://planetscale.com/)

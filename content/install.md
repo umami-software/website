@@ -18,6 +18,7 @@ npm install
 ### Create database tables
 
 Umami supports [MySQL](https://www.mysql.com/) and [Postgresql](https://www.postgresql.org/).
+For [PlanetScale](https://planetscale.com) please see [Running on PlanetScale](/docs/running-on-planetscale).
 Create a database for your Umami installation and install the tables with the included scripts.
 
 For MySQL:
