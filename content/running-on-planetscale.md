@@ -30,4 +30,3 @@ You can try add a connection timeout query parameter on your `DATABASE_URL`:
 ```
 DATABASE_URL=mysql://username:password@host/umami-db?sslaccept=strict&connect_timeout=300
 ```
-
