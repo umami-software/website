@@ -16,3 +16,18 @@ HASH_SALT=any-random-string
 6. Create the tables by running the following command on the root of the project: `pscale shell umami-db main < sql/schema.mysql.sql`.
 7. You should now be able to build and start Umami (`npm run build` followed by `npm start`).
 6. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
+
+## Troubleshooting
+
+If are getting an error like the following example:
+
+```
+PrismaClientInitializationError: Can't reach database server at `host.aws-region.psdb.cloud`:`3306`
+```
+
+You can try add a connection timeout query parameter on your `DATABASE_URL`:
+
+```
+DATABASE_URL=mysql://username:password@host/umami-db?sslaccept=strict&connect_timeout=300
+```
+
