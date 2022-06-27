@@ -31,7 +31,7 @@ After selecting Umami from the CapRover One-Click Apps you'll be prompted with a
 
 - `App Name` is the display name for your Umami instance in CapRover
 - `PostgreSQL Version` can be any PostgreSQL version available on [PostgreSQL - Docker Hub](https://hub.docker.com/_/postgres). The default value has successfully been tested to work with Umami.
-- `CapRover Umami Version` refers to the CapRover Umami package found on [Github](https://github.com/tschannik/caprover-umami). CapRover Umami ensures the correct setup of Umami on CapRover by pulling a PostgreSQL build of Umami and some checks to prevent whiping your data on restart or updates. Please have a look at the supported versions.
+- `CapRover Umami Version` refers to the CapRover Umami package found on [caprover-umami Docker Hub](https://hub.docker.com/r/tschannik/caprover-umami/tags). CapRover Umami ensures the correct setup of Umami on CapRover by pulling a PostgreSQL build of Umami and some checks to prevent whiping your data on restart or updates. Please have a look at the supported versions.
 - `Potgress Database password` provides the used password for your PostgreSQL database. There will always be a default value ready for you.
 - Optional: `Arguments for 'PostgreSQL initdb'` you can also provide arguments for PostgreSQL initdb like for example `--data-checksums`
 
