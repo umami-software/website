@@ -1,0 +1,11 @@
+# Install on YunoHost
+
+[YunoHost](https://yunohost.org 'YunoHost') provides a simple and accessible solution to self-host many applications.
+
+## Setup
+
+1. You are required to have a YunoHost server up and running
+2. Click on the button below
+3. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password
+
+[![Install on YunoHost](https://user-images.githubusercontent.com/42862428/139559471-9495f1e9-e7a4-49f1-9a4b-675ddcc510a2.png 'Install on YunoHost')](https://install-app.yunohost.org/?app=umami)
