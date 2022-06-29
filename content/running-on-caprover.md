@@ -23,7 +23,7 @@ If you don't have an existing CapRover instance check out their docs at [CapRove
 ### 2. Create app from template
 
 Click on the "Apps" section of your CapRover instance.
-Now select "One-Click Apps/Databases" and search for Umami you will find 3 option (`umami_postgresql`|`umami_mysql`|`mysql_only`).
+Now select "One-Click Apps/Databases" and search for Umami you will find 3 option (`umami_postgresql`|`umami_mysql`|`umami_only`).
 
 `umami_postgresql` will create umami with postgresql database.
 
