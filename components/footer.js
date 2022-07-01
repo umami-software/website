@@ -1,15 +1,53 @@
-import React from 'react';
+import Link from 'next/link';
+import classNames from 'classnames';
+import Logo from 'assets/logo.svg';
+import styles from './Footer.module.css';
+
+const data = [
+  { title: 'Product', items: [{ text: 'Umami', href: '/' }] },
+  {
+    title: 'Resources',
+    items: [
+      { text: 'Docs', href: '/docs' },
+      { text: 'Guides', href: '/guides' },
+      { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
+    ],
+  },
+  {
+    title: 'Community',
+    items: [
+      { text: 'Get Involved', href: '/community' },
+      { text: 'GitHub', href: 'https://github.com/umami-software/umami' },
+      { text: 'Discord', href: 'https://discord.gg/4dz4zcXYrQ' },
+    ],
+  },
+  {
+    title: 'Company',
+    items: [
+      { text: 'About', href: '/about' },
+      { text: 'Blog', href: '/blog' },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="container">
-      <div>
-        &copy; <a href="https://mikecao.com">Mike Cao</a>
+    <footer className={classNames('container', styles.footer)}>
+      <div className={classNames('col', styles.col)}>
+        <div className={styles.logo}>
+          <Logo />
+          umami
+        </div>
+        <div className={styles.copy}>&copy; 2022 Umami Software, Inc.</div>
       </div>
-      <div>Made in San Francisco</div>
-      <div>
-        <a href="https://github.com/mikecao/umami.is">Contribute to this website</a>
-      </div>
+      {data.map(({ title, items }) => (
+        <div className={classNames('col', styles.col)}>
+          <h1>{title}</h1>
+          {items.map(({ text, href }) => (
+            <Link href={href}>{text}</Link>
+          ))}
+        </div>
+      ))}
     </footer>
   );
 }

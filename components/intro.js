@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import { useTransition, animated } from 'react-spring';
-import Logo from 'assets/logo.svg';
+import styles from './Intro.module.css';
 
 const words = [
   { text: 'simple', color: '#2680eb' },
@@ -12,61 +10,25 @@ const words = [
 ];
 
 export default function Intro() {
-  const [tick, setTick] = useState(0);
-
-  const items = useMemo(() => words[tick % words.length], [tick]);
-
-  const transitions = useTransition(items, item => item.text, {
-    from: item => ({ color: item.color, opacity: 0, transform: 'translate3d(0,-40px,0)' }),
-    enter: item => ({ color: item.color, opacity: 1, transform: 'translate3d(0,0px,0)' }),
-    leave: item => ({ color: item.color, opacity: 0, transform: 'translate3d(0,40px,0)' }),
-  });
-
-  useEffect(() => {
-    let timeout = setInterval(
-      () => setTick(state => (document.hasFocus() ? state + 1 : state)),
-      2000,
-    );
-
-    return () => {
-      clearInterval(timeout);
-    };
-  }, []);
-
   return (
-    <div className="intro">
-      <div className="row justify-content-center">
-        <Logo className="logo" />
-      </div>
-      <h1 className="row title">
-        <div className="col-12 col-md-6">
-          <div className="row justify-content-center justify-content-md-end">
-            umami<span>is</span>
-          </div>
-        </div>
-        <div className="col-12 col-md-6">
-          {transitions.map(({ item, props, key }) => (
-            <animated.div className="animated-word" key={key} style={props}>
-              {item.text}
-            </animated.div>
-          ))}
-        </div>
-      </h1>
-      <h2 className="row justify-content-center">own your website analytics</h2>
-      <div className="row justify-content-center pb-5">
+    <div className={styles.intro}>
+      <h1>Own your website analytics</h1>
+      <h2>
+        <span>Umami is an </span>
+        <b>
+          <Link href="https://github.com/umami-software/umami">open-source</Link>
+        </b>
+        ,<b>privacy-focused</b> alternative to Google Analytics
+      </h2>
+      <div className={styles.buttons}>
         <Link href="/docs">
-          <a className="button umami--click--learn-more-button">Learn more</a>
+          <a className="button umami--click--get-started-button">Get started</a>
         </Link>
         <Link href="https://app.umami.is/share/8rmHaheU/umami.is">
           <a className="button-alt umami--click--live-demo-button" target="_blank">
             Live demo
           </a>
         </Link>
-      </div>
-      <div className="row">
-        <div className="intro-screenshot col">
-          <img src="/intro.jpg" />
-        </div>
       </div>
     </div>
   );
