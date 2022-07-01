@@ -35,6 +35,7 @@ const menu = {
     ['Running on CapRover', '/docs/running-on-caprover'],
     ['Running on Koyeb', '/docs/running-on-koyeb'],
     ['Running on PlanetScale', '/docs/running-on-planetscale'],
+    ['Running on Supabase', '/docs/running-on-supabase'],
     ['Useful links', '/docs/useful-links'],
   ],
 };
