@@ -1,17 +1,17 @@
 .header {
   display: flex;
-  height: 80px;
+  min-height: 80px;
   gap: 10px;
 }
 
 .header svg {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 }
 
 .title {
   display: flex;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -30,9 +30,11 @@
 .links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: center;
+  gap: 48px;
   padding-left: 30px;
   flex: 1;
+  font-weight: 600;
 }
 
 .buttons {

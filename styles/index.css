@@ -9,8 +9,8 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  color: #2c2c2c;
-  background: #fafafa;
+  color: var(--gray900);
+  background: var(--gray50);
 }
 
 *,

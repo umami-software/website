@@ -41,10 +41,12 @@ export default function Footer() {
         <div className={styles.copy}>&copy; 2022 Umami Software, Inc.</div>
       </div>
       {data.map(({ title, items }) => (
-        <div className={classNames('col', styles.col)}>
+        <div key={title} className={classNames('col', styles.col)}>
           <h1>{title}</h1>
           {items.map(({ text, href }) => (
-            <Link href={href}>{text}</Link>
+            <Link key={text} href={href}>
+              {text}
+            </Link>
           ))}
         </div>
       ))}

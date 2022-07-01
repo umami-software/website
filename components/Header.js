@@ -18,8 +18,9 @@ export default function Header() {
       </div>
       <div className={styles.links}>
         <Link href="#">Product</Link>
-        <Link href="#">Community</Link>
-        <Link href="#">Pricing</Link>
+        <Link href="/docs">Docs</Link>
+        <Link href="/community">Community</Link>
+        <Link href="/pricing">Pricing</Link>
       </div>
       <div className={styles.buttons}>
         <Button variant="action">Get Started</Button>
