@@ -45,7 +45,7 @@ export default function Footer() {
             <h1>{title}</h1>
             {items.map(({ text, href }) => (
               <Link key={text} href={href}>
-                {text}
+                <a target={href.startsWith('http') ? '_blank' : null}>{text}</a>
               </Link>
             ))}
           </div>
