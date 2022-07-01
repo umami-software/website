@@ -6,10 +6,11 @@
 
 1. Create a project on Supabase with a given name in a region close to where you will be hosting your Umami project.
 2. Get the database connection string from the **Settings > Database** page, then scroll to the bottom for the **Connection Pooling** section and copy the **Connection string**. It should look something like this: `postgres://postgres:[YOUR-PASSWORD]@host:6543/postgres`
-3. Add `DATABASE_URL` and `HASH_SALT` (any random string) to you `.env` file:
+3. **Important:** add `?pgbouncer=true` to the connection string you just copied.
+4. Add `DATABASE_URL` and `HASH_SALT` (any random string) to your `.env` file:
 
 ```
-DATABASE_URL=postgres://postgres:[YOUR-PASSWORD]@host:6543/postgres
+DATABASE_URL=postgres://postgres:[YOUR-PASSWORD]@host:6543/postgres?pgbouncer=true
 HASH_SALT=any-random-string
 ```
 
