@@ -35,13 +35,12 @@ select {
 a,
 a:active,
 a:visited {
-  color: var(--gray800);
+  color: var(--gray900);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--gray900);
-  text-decoration: none;
+  color: var(--primary400);
 }
 
 main {
