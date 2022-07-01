@@ -21,10 +21,6 @@ If you are running in development mode, this will log database queries to the co
 If you are running on an environment which requires you to bind to a specific hostname or port, such as Heroku, you can add
 these variables and start your app with `npm run start-env` instead of `npm start`.
 
-### BASE_PATH = &lt;path&gt;
-
-If you want to host Umami under a subdirectory. 
-
 ### CLIENT_IP_HEADER = &lt;header name&gt;
 
 HTTP header to check for the client's IP address. This is useful when you're
@@ -45,3 +41,15 @@ Allow you to assign a custom name to the tracker script. The default is `umami`.
 ### DISABLE_TELEMETRY = 1
 
 Disable collection of completely anonymous telemetry data during installation.
+
+## When building a custom image
+
+Required docker build arguments.
+
+### BASE_PATH = &lt;path&gt; 
+
+`(optional)` If you want to host Umami under a subdirectory. Only used to prefix URLs at frontend. May need to use reverse proxy to remove BASE_PATH prefix and pass modified URL to umami
+
+### DATABASE_TYPE = postgresql | mysql
+
+`(required)` The type of the DB to be used.
