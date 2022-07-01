@@ -1,0 +1,57 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.intro h1 {
+  font-size: 96px;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--gray800);
+  text-align: center;
+  max-width: 800px;
+}
+
+.intro h2 a {
+  color: var(--primary400);
+}
+
+.intro h2 a:hover {
+  color: var(--primary600);
+}
+
+.intro h2 b {
+  margin: 0 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.buttons a {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px;
+  color: var(--gray50);
+  background: var(--primary400);
+  border-radius: 8px;
+}
+
+.buttons a:first-child:hover {
+  background: var(--primary600);
+}
+
+.buttons a:last-child {
+  color: var(--gray800);
+  background: var(--gray200);
+}

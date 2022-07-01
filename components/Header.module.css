@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  height: 80px;
+  gap: 10px;
+}
+
+.header svg {
+  width: 28px;
+  height: 28px;
+}
+
+.title {
+  display: flex;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.title a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #000;
+}
+
+.title a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-left: 30px;
+  flex: 1;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

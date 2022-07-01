@@ -1,11 +1,7 @@
 import React from 'react';
-import Layout from 'components/layout';
-import Intro from 'components/intro';
+import Layout from 'components/Layout';
+import Intro from 'components/Intro';
 
 export default function DefaultPage() {
-  return (
-    <Layout>
-      <Intro />
-    </Layout>
-  );
+  return <Intro />;
 }
