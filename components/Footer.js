@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import classNames from 'classnames';
-import Logo from 'assets/logo.svg';
 import styles from './Footer.module.css';
+import React from 'react';
+import CompanyLogo from './CompanyLogo';
 
 const data = [
   { title: 'Product', items: [{ text: 'Umami', href: '/' }] },
@@ -11,6 +12,7 @@ const data = [
       { text: 'Docs', href: '/docs' },
       { text: 'Guides', href: '/guides' },
       { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
+      { text: 'API Reference', href: '/docs/api' },
     ],
   },
   {
@@ -26,6 +28,7 @@ const data = [
     items: [
       { text: 'About', href: '/about' },
       { text: 'Blog', href: '/blog' },
+      { text: 'Contact', href: '/contact' },
     ],
   },
 ];
@@ -33,23 +36,24 @@ const data = [
 export default function Footer() {
   return (
     <footer className={classNames('container', styles.footer)}>
-      <div className={classNames('col', styles.col)}>
-        <div className={styles.logo}>
-          <Logo />
-          umami
+      <div className="row">
+        <div className={classNames('col', styles.col)}>
+          <CompanyLogo />
         </div>
+        {data.map(({ title, items }) => (
+          <div key={title} className={classNames('col', styles.col, styles.links)}>
+            <h1>{title}</h1>
+            {items.map(({ text, href }) => (
+              <Link key={text} href={href}>
+                {text}
+              </Link>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div className="row">
         <div className={styles.copy}>&copy; 2022 Umami Software, Inc.</div>
       </div>
-      {data.map(({ title, items }) => (
-        <div key={title} className={classNames('col', styles.col)}>
-          <h1>{title}</h1>
-          {items.map(({ text, href }) => (
-            <Link key={text} href={href}>
-              {text}
-            </Link>
-          ))}
-        </div>
-      ))}
     </footer>
   );
 }

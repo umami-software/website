@@ -15,18 +15,6 @@
   font-weight: 600;
 }
 
-.title a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #000;
-}
-
-.title a:hover {
-  color: #000;
-  text-decoration: none;
-}
-
 .links {
   display: flex;
   align-items: center;

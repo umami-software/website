@@ -1,21 +1,18 @@
 import React from 'react';
-import Layout from 'components/Layout';
 import Menu from 'components/Menu';
 import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
 
 export default function DocsPage({ content }) {
   return (
-    <Layout>
-      <div className="row">
-        <div className="col-12 col-lg-3">
-          <Menu />
-        </div>
-        <div
-          className="docs col-12 col-lg-9"
-          dangerouslySetInnerHTML={{ __html: content.contentHtml }}
-        />
+    <div className="row">
+      <div className="col-12 col-lg-3">
+        <Menu />
       </div>
-    </Layout>
+      <div
+        className="docs col-12 col-lg-9"
+        dangerouslySetInnerHTML={{ __html: content.contentHtml }}
+      />
+    </div>
   );
 }
 

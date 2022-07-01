@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .intro h1 {
   font-size: 96px;
   line-height: 0.9;
@@ -27,10 +28,6 @@
   color: var(--primary600);
 }
 
-.intro h2 b {
-  margin: 0 10px;
-}
-
 .buttons {
   display: flex;
   justify-content: center;
@@ -41,7 +38,7 @@
 .buttons a {
   font-size: 22px;
   font-weight: 600;
-  padding: 20px;
+  padding: 0.6rem 1.2rem;
   color: var(--gray50);
   background: var(--primary400);
   border-radius: 8px;
@@ -54,4 +51,8 @@
 .buttons a:last-child {
   color: var(--gray800);
   background: var(--gray200);
+}
+
+.buttons a:last-child:hover {
+  background: var(--gray300);
 }
