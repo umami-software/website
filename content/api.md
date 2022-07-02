@@ -128,12 +128,18 @@ GET (with Authorization header) from url : `https://umami.mydomain.com/api/websi
 
 ```
 {
-    bounces: 23
-    pageviews: 113
-    totaltime: 2087
-    uniques: 36
+  pageviews: { value: 5, change: 5 },
+  uniques: { value: 1, change: 1 },
+  bounces: { value: 0, change: 0 },
+  totaltime: { value: 4, change: 4 }
 }
 ```
+
+- `pageviews`: Pages hits
+- `uniques`: Number of unique visitor
+- `bounces`: Number of returning visitor
+- `totaltime` : ??
+
 
 ## `GET /api/website/{id}/pageviews`
 
