@@ -1,8 +1,8 @@
 import React from 'react';
+import { Button } from 'react-basics';
 import Link from 'next/link';
 import styles from './Header.module.css';
 import classNames from 'classnames';
-import Button from './common/Button';
 import CompanyLogo from './CompanyLogo';
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
         <Link href="/pricing">Pricing</Link>
       </div>
       <div className={styles.buttons}>
-        <Button variant="action">Get Started</Button>
+        <Button variant="primary">Get Started</Button>
       </div>
     </header>
   );

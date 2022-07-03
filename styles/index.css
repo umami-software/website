@@ -26,12 +26,6 @@ body {
   height: 100%;
 }
 
-button,
-input,
-select {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
 a,
 a:active,
 a:visited {

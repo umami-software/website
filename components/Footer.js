@@ -11,8 +11,8 @@ const data = [
     items: [
       { text: 'Docs', href: '/docs' },
       { text: 'Guides', href: '/guides' },
-      { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
       { text: 'API Reference', href: '/docs/api' },
+      { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
     ],
   },
   {

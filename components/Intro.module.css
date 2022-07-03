@@ -34,25 +34,3 @@
   gap: 20px;
   padding: 24px 0;
 }
-
-.buttons a {
-  font-size: 22px;
-  font-weight: 600;
-  padding: 0.6rem 1.2rem;
-  color: var(--gray50);
-  background: var(--primary400);
-  border-radius: 8px;
-}
-
-.buttons a:first-child:hover {
-  background: var(--primary600);
-}
-
-.buttons a:last-child {
-  color: var(--gray800);
-  background: var(--gray200);
-}
-
-.buttons a:last-child:hover {
-  background: var(--gray300);
-}
