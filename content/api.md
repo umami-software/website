@@ -117,21 +117,29 @@ stats endpoints require sending a `GET` request with the `umami.auth` authentica
 
 Gets summarized website statistics.
 
-**Parameters**
+**Query Parameters**
 
-- `start_at`: Timestamp of starting date
-- `end_at`: Timestamp of end date
+- `start_at`: Timestamp (in ms) of starting date
+- `end_at`: Timestamp (in ms) of end date
 
-**Sample response**
+**Sample example**
+
+GET (with Authorization header) from url : `https://umami.mydomain.com/api/website/1/stats?start_at=1656679719687&end_at=1656766119687`
 
 ```
 {
-    bounces: 23
-    pageviews: 113
-    totaltime: 2087
-    uniques: 36
+  pageviews: { value: 5, change: 5 },
+  uniques: { value: 1, change: 1 },
+  bounces: { value: 0, change: 0 },
+  totaltime: { value: 4, change: 4 }
 }
 ```
+
+- `pageviews`: Pages hits
+- `uniques`: Number of unique visitor
+- `bounces`: Number of returning visitor
+- `totaltime` : Time spent on the website
+
 
 ## `GET /api/website/{id}/pageviews`
 
@@ -139,8 +147,8 @@ Gets pageviews within a given time range.
 
 **Parameters**
 
-- `start_at`: Timestamp of starting date
-- `end_at`: Timestamp of end date
+- `start_at`: Timestamp (in ms) of starting date
+- `end_at`: Timestamp (in ms) of end date
 - `unit`: Time unit (year | month | hour | day)
 - `tz`: Timezone (ex. America/Los_Angeles)
 
@@ -165,8 +173,8 @@ Gets events within a given time range.
 
 **Parameters**
 
-- `start_at`: Timestamp of starting date
-- `end_at`: Timestamp of end date
+- `start_at`: Timestamp (in ms) of starting date
+- `end_at`: Timestamp (in ms) of end date
 - `unit`: Time unit (year | month | hour | day)
 - `tz`: Timezone (ex. America/Los_Angeles)
 
@@ -185,8 +193,8 @@ Gets metrics for a given time range.
 
 **Parameters**
 
-- `start_at`: Timestamp of starting date
-- `end_at`: Timestamp of end date
+- `start_at`: Timestamp (in ms) of starting date
+- `end_at`: Timestamp (in ms) of end date
 - `type`: Metrics type (url | referrer | browser | os | device | country | event)
 
 **Sample response**
