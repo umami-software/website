@@ -138,7 +138,7 @@ GET (with Authorization header) from url : `https://umami.mydomain.com/api/websi
 - `pageviews`: Pages hits
 - `uniques`: Number of unique visitor
 - `bounces`: Number of returning visitor
-- `totaltime` : ??
+- `totaltime` : Time spent on the website
 
 
 ## `GET /api/website/{id}/pageviews`
