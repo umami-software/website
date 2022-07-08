@@ -25,6 +25,7 @@
     "classnames": "^2.2.6",
     "next": "^12.1.0",
     "react": "^17.0.2",
+    "react-basics": "^0.4.0",
     "react-dom": "^17.0.2",
     "react-spring": "^8.0.27",
     "react-tooltip": "^4.2.21",

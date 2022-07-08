@@ -1,0 +1,9 @@
+.form {
+  display: flex;
+  gap: 12px;
+  padding: 24px 0;
+}
+
+.input {
+  width: 100%;
+}

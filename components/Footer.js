@@ -5,12 +5,19 @@ import React from 'react';
 import CompanyLogo from './CompanyLogo';
 
 const data = [
-  { title: 'Product', items: [{ text: 'Umami', href: '/' }] },
+  {
+    title: 'Product',
+    items: [
+      { text: 'Features', href: '/features' },
+      { text: 'Cloud', href: '/cloud' },
+      { text: 'Pricing', href: '/pricing' },
+    ],
+  },
   {
     title: 'Resources',
     items: [
       { text: 'Docs', href: '/docs' },
-      { text: 'Guides', href: '/guides' },
+      { text: 'Guides', href: '/docs/guides' },
       { text: 'API Reference', href: '/docs/api' },
       { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
     ],
