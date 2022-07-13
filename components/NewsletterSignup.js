@@ -8,13 +8,13 @@ export default function NewsletterSignup() {
 
   return (
     <div className={classNames('row', styles.newsletter)}>
-      <div className={classNames('col-12 col-md-7', styles.text)}>
+      <div className={classNames('col-12 col-lg-7', styles.text)}>
         <h1>Don't miss out</h1>
         <p>
           Join the Umami newsletter to stay up to date on the latest news, features and updates.
         </p>
       </div>
-      <div className={classNames('col-12 col-md-5', styles.form)}>
+      <div className={classNames('col-12 col-lg-5', styles.form)}>
         <TextField
           className={styles.input}
           name="email"

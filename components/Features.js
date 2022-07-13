@@ -35,17 +35,20 @@ export default function Features() {
         <p>
           Umami helps you stay compliant with ever changing data privacy laws. All data collected is
           anonymized, making it impossible to identify any individual user. Rest assured knowing
-          that your data is completely in your hands.
+          that your data is securely in your hands.
         </p>
       </Block>
       <Block title="Simple analytics" icon={<Analytics />}>
         <p>
-          Umami is easy to use and understand. Umami collects only the metrics you care about and
-          everything fits on a single page.
+          Umami is easy to use and understand without needing to run complicated reports. Umami
+          collects only the metrics you care about and everything fits on a single page.
         </p>
       </Block>
       <Block title="Open source" icon={<OpenSource />}>
-        <p>Umami is dedicated to open-source development.</p>
+        <p>
+          Umami is dedicated to open source development. Place your confidence in a product that is
+          fully transparent, battle-tested by millions and community supported.
+        </p>
       </Block>
     </section>
   );

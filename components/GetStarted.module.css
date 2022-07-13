@@ -19,3 +19,23 @@
   gap: 20px;
   padding: 24px 0;
 }
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  animation: draw 10s linear infinite;
+  height: 400px;
+  fill: none;
+  stroke: #2680eb;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 600;
+  }
+}
