@@ -1,0 +1,21 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin: 60px 0;
+}
+
+.banner h1 {
+  font-size: 60px;
+  line-height: 64px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px 0;
+}

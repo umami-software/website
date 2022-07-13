@@ -1,20 +1,15 @@
 .footer {
   font-size: 14px;
-  padding: 36px 0;
+  padding: 36px;
   margin-top: 36px;
   border-top: 1px solid var(--gray300);
-}
-
-.col {
-  flex: 1;
-  height: 300px;
 }
 
 .col h1 {
   font-size: 14px;
 }
 
-.col:first-child {
+.logo {
   padding-top: 10px;
 }
 
@@ -25,4 +20,6 @@
 
 .copy {
   font-size: 12px;
+  padding: 12px;
+  margin-top: 60px;
 }

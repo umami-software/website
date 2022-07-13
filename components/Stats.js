@@ -11,7 +11,7 @@ export default function Stats() {
   return (
     <div className={classNames('row', styles.stats)}>
       {stats.map(({ name, value }) => (
-        <div key={name} className="col-4">
+        <div key={name} className={classNames('col-12 col-lg-4', styles.stat)}>
           <div className={styles.value}>{value}</div>
           <div className={styles.name}>{name}</div>
         </div>

@@ -1,19 +1,10 @@
-import Link from 'next/link';
 import { Button } from 'react-basics';
-import styles from './Intro.module.css';
+import styles from './GetStarted.module.css';
 
-export default function Intro() {
+export default function GetStarted() {
   return (
-    <div className={styles.intro}>
-      <h1>Own your website analytics</h1>
-      <h2>
-        <span>Umami is an </span>
-        <b>
-          <Link href="https://github.com/umami-software/umami">open source</Link>
-        </b>
-        , <b>privacy-focused</b>
-        <div>alternative to Google Analytics</div>
-      </h2>
+    <div className={styles.banner}>
+      <h1>Are you ready for better analytics?</h1>
       <div className={styles.buttons}>
         <a href="/docs" className="button umami--click--get-started-button">
           <Button size="large" variant="primary">

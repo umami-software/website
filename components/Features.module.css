@@ -1,0 +1,40 @@
+.features {
+  margin: 60px 0;
+}
+
+.features h1 {
+  font-size: 60px;
+  line-height: 64px;
+}
+
+.features p {
+  font-size: 18px;
+}
+
+.block {
+  display: flex;
+  margin: 80px 0;
+}
+
+.block:nth-child(even) .content {
+  order: 3 !important;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+}
+
+.icon svg:nth-child(2) {
+  fill: #a8ccf7;
+  margin: 10px 0 0 10px;
+  position: absolute;
+  z-index: 0;
+}

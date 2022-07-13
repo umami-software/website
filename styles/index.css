@@ -46,21 +46,3 @@ main {
   max-width: 100%;
   margin: 2rem auto;
 }
-
-@media only screen and (max-width: 768px) {
-  .intro .animated-word {
-    right: 0;
-    text-align: center;
-  }
-
-  .intro-screenshot {
-    background-image: url('/intro.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-  }
-
-  .intro-screenshot img {
-    display: none;
-  }
-}
