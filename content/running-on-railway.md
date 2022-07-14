@@ -17,7 +17,7 @@ You will be asked to add the `HASH_SALT` enviroment variable which is a random s
 ### Create database tables
 
 - Once you've deployed your project, clone it locally using Git.
-- Use the [Railway CLI](https://docs.railway.app/cli/quick-start) to link your local setup to your Railway project by running `railway link`.
+- Use the [Railway CLI](https://docs.railway.app/develop/cli) to link your local setup to your Railway project by running `railway link`.
 - Use `railway run psql -h hostname -U username -d databasename -f sql/schema.postgresql.sql`
   - You can view your `hostname`, `username`, and `databasename` using `railway variables` or from your project dashboard
   - This command installs all the tables with the required scripts and creates a login account with the username `admin` and password `umami`

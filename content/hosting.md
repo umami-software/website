@@ -24,7 +24,7 @@ that the app could connect to. Here are a few app hosting providers that can hos
 - [Vercel](https://vercel.com/)
 - [Netlify](https://www.netlify.com/)
 - [Render](https://render.com/)
-- [Railway](https://railway.up/)
+- [Railway](https://railway.app/)
 
 For the deployment, the build command is `npm run build` and the publish directory is `.next`.
 
