@@ -9,17 +9,23 @@ git pull
 Then install any new or updated dependencies:
 
 ```
-npm install
+yarn install
 ```
 
 Rebuild the project:
 
 ```
-npm run build
+yarn build
+```
+
+Update database tables
+
+```
+yarn update-db
 ```
 
 Finally, start the application:
 
 ```
-npm run start
+yarn start
 ```
