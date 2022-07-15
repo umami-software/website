@@ -60,6 +60,20 @@ By default this will launch the application on `http://localhost:3000`. You will
 [proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) requests from your web server
 or change the [port](https://nextjs.org/docs/api-reference/cli#production) to serve the application directly.
 
+### Running Umami
+
+You can simply run `yarn start` to start Umami, but it's highly recommended you use a process manager like [PM2](https://pm2.keymetrics.io/) which will handle restarts for you.
+
+To run with PM2:
+
+```
+yarn global add pm2
+cd umami
+pm2 start yarn --name umami -- start 
+pm2 startup
+pm2 save
+```
+
 ## Installing with Docker
 
 To build the umami container and start up a Postgres database, run:
