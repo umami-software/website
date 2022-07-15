@@ -60,7 +60,7 @@ By default this will launch the application on `http://localhost:3000`. You will
 [proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) requests from your web server
 or change the [port](https://nextjs.org/docs/api-reference/cli#production) to serve the application directly.
 
-## Running Umami
+### Running Umami
 
 You can simply run `yarn start` to start Umami, but it's highly recommended you use a process manager like [PM2](https://pm2.keymetrics.io/) which will handle restarts for you.
 
