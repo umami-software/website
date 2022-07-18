@@ -1,11 +1,9 @@
 import { Button } from 'react-basics';
-import Waves from 'assets/waves.svg';
 import styles from './GetStarted.module.css';
 
 export default function GetStarted() {
   return (
     <div className={styles.banner}>
-      <Waves className={styles.bg} />
       <h1>Are you ready for better analytics?</h1>
       <div className={styles.buttons}>
         <a href="/docs" className="button umami--click--get-started-button">

@@ -9,7 +9,9 @@ export default function Intro() {
       <h2>
         <span>Umami is an </span>
         <b>
-          <Link href="https://github.com/umami-software/umami">open source</Link>
+          <Link href="https://github.com/umami-software/umami">
+            <a target="_blank">open source</a>
+          </Link>
         </b>
         , <b>privacy-focused</b>
         <div>alternative to Google Analytics</div>
