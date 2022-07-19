@@ -71,14 +71,14 @@ const features = [
 
 export default function Features() {
   return (
-    <div className={classNames('row', styles.features)}>
+    <div className={classNames(styles.features)}>
       {features.map(({ name, description, image }) => (
-        <div key={name} className={styles.feature}>
-          <div className={classNames('col-12 col-md-8 col-lg-6', styles.text)}>
+        <div key={name} className={classNames('row', styles.feature)}>
+          <div className={classNames('col-12 col-lg-5', styles.text)}>
             <h1>{name}</h1>
             <p>{description}</p>
           </div>
-          <div className={classNames('col-12 col-md-8 col-lg-6', styles.image)}>
+          <div className={classNames('col-12 col-lg-6', styles.image)}>
             {image && <img src={image} alt={name} />}
           </div>
         </div>

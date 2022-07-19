@@ -44,10 +44,10 @@ export default function Footer() {
   return (
     <footer className={classNames('container', styles.footer)}>
       <div className="row">
-        <div className={classNames('col-12 col-sm-12 col-lg-3', styles.logo)}>
+        <div className={classNames('col-12 col-lg-3', styles.logo)}>
           <CompanyLogo />
         </div>
-        <div className="col-12 col-sm-12 col-lg-9">
+        <div className="col-12 col-lg-9">
           <div className="row">
             {data.map(({ title, items }) => (
               <div key={title} className={classNames('col-6 col-lg-3', styles.col, styles.links)}>
