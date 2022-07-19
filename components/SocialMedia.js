@@ -3,11 +3,12 @@ import GitHub from 'assets/github.svg';
 import Twitter from 'assets/twitter.svg';
 import Discord from 'assets/discord.svg';
 import styles from './SocialMedia.module.css';
+import { REPO_URL, DISCORD_URL, TWITTER_URL } from '../lib/constants';
 
 const links = [
-  { name: 'GitHub', url: 'https://github.com/umami-software', icon: <GitHub /> },
-  { name: 'Discord', url: 'https://discord.gg/4dz4zcXYrQ', icon: <Discord /> },
-  { name: 'Twitter', url: 'https://twitter.com/umami_software', icon: <Twitter /> },
+  { name: 'GitHub', url: REPO_URL, icon: <GitHub /> },
+  { name: 'Discord', url: DISCORD_URL, icon: <Discord /> },
+  { name: 'Twitter', url: TWITTER_URL, icon: <Twitter /> },
 ];
 
 export default function SocialMedia() {
