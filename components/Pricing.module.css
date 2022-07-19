@@ -1,0 +1,66 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.tier {
+  min-width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+  background: var(--gray75);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.title svg {
+  opacity: 0.5;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 3em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 42px;
+  line-height: 2em;
+  font-weight: 700;
+}
+
+.cloud {
+  color: var(--gray50);
+  min-width: 500px;
+  background: var(--blue400);
+}
+
+.cloud svg {
+  fill: var(--gray50);
+}
+
+.beta {
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background: #eaf4ff;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}

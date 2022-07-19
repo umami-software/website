@@ -42,12 +42,17 @@ main {
 }
 
 svg {
-  width: 16px;
-  height: 16px;
+  width: 2rem;
+  height: 2rem;
 }
 
 button {
   cursor: pointer;
+}
+
+article header {
+  font-size: 48px;
+  text-align: center;
 }
 
 .docs img {

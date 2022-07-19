@@ -12,7 +12,7 @@ export default function Header() {
         <CompanyLogo />
       </div>
       <div className={styles.links}>
-        <Link href="#">Product</Link>
+        <Link href="/features">Product</Link>
         <Link href="/docs">Docs</Link>
         <Link href="/community">Community</Link>
         <Link href="/pricing">Pricing</Link>
