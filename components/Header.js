@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button } from 'react-basics';
 import Link from 'next/link';
-import styles from './Header.module.css';
 import classNames from 'classnames';
+import { REPO_URL } from 'lib/constants';
+import GitHub from 'assets/github.svg';
 import CompanyLogo from './CompanyLogo';
+import styles from './Header.module.css';
 
 export default function Header() {
   return (
@@ -18,7 +19,11 @@ export default function Header() {
         <Link href="/pricing">Pricing</Link>
       </div>
       <div className={styles.buttons}>
-        <Button variant="primary">Get Started</Button>
+        <Link href={REPO_URL}>
+          <a target="_blank">
+            <GitHub />
+          </a>
+        </Link>
       </div>
     </header>
   );

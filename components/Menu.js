@@ -29,17 +29,18 @@ const menu = {
     ['Running on Netlify', '/docs/running-on-netlify'],
     ['Running on Heroku', '/docs/running-on-heroku'],
     ['Running on Railway', '/docs/running-on-railway'],
+    ['Running on Supabase', '/docs/running-on-supabase'],
+    ['Running on PlanetScale', '/docs/running-on-planetscale'],
     ['Running on Qovery', '/docs/running-on-qovery'],
     ['Running on CapRover', '/docs/running-on-caprover'],
     ['Running on Koyeb', '/docs/running-on-koyeb'],
-    ['Running on PlanetScale', '/docs/running-on-planetscale'],
-    ['Running on Supabase', '/docs/running-on-supabase'],
   ],
 };
 
 export default function Menu() {
   return (
     <div className="menu">
+      <h2>Documentation</h2>
       {Object.keys(menu).map(key => (
         <React.Fragment key={key}>
           <h3>{key}</h3>

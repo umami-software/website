@@ -64,6 +64,14 @@ article header p {
   margin-bottom: 60px;
 }
 
+pre {
+  background: var(--gray100);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 .docs img {
   display: block;
   max-width: 100%;
