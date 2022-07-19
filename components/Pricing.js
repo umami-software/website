@@ -9,9 +9,9 @@ import BetaSignup from './BetaSignup';
 
 export default function Pricing() {
   return (
-    <div className={styles.pricing}>
+    <div className={classNames('container', styles.pricing)}>
       <div className="row justify-content-center">
-        <div className={classNames('col-12 col-md-4', styles.tier)}>
+        <div className={classNames('col-12 col-lg-6 offset-xl-2 col-xl-4', styles.tier)}>
           <div className={styles.title}>
             <Tools /> Umami Open Source
           </div>
@@ -42,7 +42,7 @@ export default function Pricing() {
             </Link>
           </div>
         </div>
-        <div className={classNames('col-12 col-md-4', styles.tier, styles.cloud)}>
+        <div className={classNames('col-12 col-lg-6 col-xl-4', styles.tier, styles.cloud)}>
           <div className={styles.title}>
             <Cloud /> Umami Cloud
           </div>
