@@ -10,10 +10,10 @@
 }
 
 .tier {
-  min-width: 500px;
   padding: 30px;
   border-radius: 10px;
   background: var(--gray75);
+  flex: 1;
 }
 
 .title {
@@ -43,7 +43,6 @@
 
 .cloud {
   color: var(--gray50);
-  min-width: 500px;
   background: var(--blue400);
 }
 
