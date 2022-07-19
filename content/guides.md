@@ -1,0 +1,3 @@
+# Guides
+
+There are many different ways you can setup and run Umami. Follow any of our guides to find your ideal setup.

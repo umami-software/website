@@ -1,0 +1,25 @@
+.footer {
+  font-size: 14px;
+  padding: 36px;
+  margin-top: 36px;
+  border-top: 1px solid var(--gray300);
+}
+
+.col h1 {
+  font-size: 14px;
+}
+
+.logo {
+  padding-top: 10px;
+}
+
+.links a {
+  display: block;
+  margin: 10px 0;
+}
+
+.copy {
+  font-size: 12px;
+  padding: 12px;
+  margin-top: 60px;
+}

@@ -1,0 +1,43 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.features h1 {
+  font-size: 48px;
+}
+
+.features p {
+  font-size: 18px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  background: var(--gray50);
+  min-height: 600px;
+}
+
+.feature:not(:first-child):after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  top: -100px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.text {
+  padding: 0 20px;
+}
+
+.image img {
+  max-width: 600px;
+  height: auto;
+  margin: 60px 0;
+}

@@ -1,11 +1,27 @@
 import React from 'react';
-import Layout from 'components/layout';
-import Intro from 'components/intro';
+import Intro from 'components/Intro';
+import Statements from 'components/Statements';
+import Stats from 'components/Stats';
+import NewsletterSignup from 'components/NewsletterSignup';
+import GetStarted from 'components/GetStarted';
+import Splash from '../components/Splash';
 
-export default function DefaultPage() {
+export default function IndexPage() {
   return (
-    <Layout>
-      <Intro />
-    </Layout>
+    <>
+      <div className="container">
+        <Intro />
+      </div>
+      <Splash />
+      <div className="container">
+        <Statements />
+        <Stats />
+      </div>
+      <Splash />
+      <div className="container">
+        <GetStarted />
+        <NewsletterSignup />
+      </div>
+    </>
   );
 }

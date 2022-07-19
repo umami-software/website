@@ -1,0 +1,14 @@
+.links {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.links svg {
+  width: 20px;
+  height: 20px;
+}
+
+.links svg:hover {
+  fill: #2680eb;
+}

@@ -1,11 +1,10 @@
 import React from 'react';
-import Layout from 'components/layout';
-import Menu from 'components/menu';
+import Menu from 'components/Menu';
 import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
 
 export default function DocsPage({ content }) {
   return (
-    <Layout>
+    <div className="container docs">
       <div className="row">
         <div className="col-12 col-lg-3">
           <Menu />
@@ -15,7 +14,7 @@ export default function DocsPage({ content }) {
           dangerouslySetInnerHTML={{ __html: content.contentHtml }}
         />
       </div>
-    </Layout>
+    </div>
   );
 }
 

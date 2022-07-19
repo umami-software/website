@@ -1,4 +1,4 @@
-# Features
+# Statements
 
 ## Simple analytics
 
