@@ -1,0 +1,38 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray50);
+  overflow: auto;
+}
+
+.items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.item {
+  font-size: 32px;
+}
+
+.item + .item {
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  padding: 0 30px;
+}

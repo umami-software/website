@@ -30,3 +30,13 @@
   align-items: center;
   justify-content: flex-end;
 }
+
+@media only screen and (max-width: 992px) {
+  .title {
+    flex: 1;
+  }
+  .links,
+  .buttons {
+    display: none;
+  }
+}

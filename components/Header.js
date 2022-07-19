@@ -1,10 +1,11 @@
-import React from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { REPO_URL } from 'lib/constants';
-import GitHub from 'assets/github.svg';
 import CompanyLogo from './CompanyLogo';
+import GitHub from 'assets/github.svg';
+
 import styles from './Header.module.css';
+import HamburgerButton from './HamburgerButton';
 
 export default function Header() {
   return (
@@ -25,6 +26,7 @@ export default function Header() {
           </a>
         </Link>
       </div>
+      <HamburgerButton />
     </header>
   );
 }
