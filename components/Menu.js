@@ -4,7 +4,7 @@ import Link from 'next/link';
 const menu = {
   Introduction: [
     ['About', '/docs/about'],
-    ['Features', '/docs/features'],
+    ['Statements', '/docs/features'],
     ['FAQ', '/docs/faq'],
   ],
   'Getting started': [

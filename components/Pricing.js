@@ -49,7 +49,7 @@ export default function Pricing() {
             <div className={styles.title}>
               <Cloud /> Umami Cloud
             </div>
-            <div className={styles.description}>managed-hosting</div>
+            <div className={styles.description}>managed hosting</div>
             <div className={styles.price}>Coming Soon</div>
           </div>
           <ul>

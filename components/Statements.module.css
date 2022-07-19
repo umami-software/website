@@ -1,13 +1,15 @@
-.features {
+.statements {
   margin: 60px 0;
+  background: #fff;
+  z-index: 1;
 }
 
-.features h1 {
+.statements h1 {
   font-size: 48px;
   line-height: 0.9;
 }
 
-.features p {
+.statements p {
   font-size: 18px;
 }
 
@@ -37,4 +39,10 @@
   margin: 10px 0 0 10px;
   position: absolute;
   z-index: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .statements h1 {
+    text-align: center;
+  }
 }

@@ -31,6 +31,7 @@
     "react": "^18.2.0",
     "react-basics": "^0.4.0",
     "react-dom": "^18.2.0",
+    "react-scroll-parallax": "^3.2.0",
     "react-spring": "^8.0.27",
     "react-tooltip": "^4.2.21",
     "remark": "^12.0.1",

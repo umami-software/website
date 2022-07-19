@@ -1,4 +1,4 @@
-import styles from './Features.module.css';
+import styles from './Statements.module.css';
 import classNames from 'classnames';
 import Lock from 'assets/lock.svg';
 import Shield from 'assets/shield.svg';
@@ -8,11 +8,21 @@ import OpenSource from 'assets/open-source.svg';
 const Block = ({ title, icon, children }) => {
   return (
     <div className={classNames('row', styles.block)}>
-      <div className={classNames('col-12 col-sm-10 col-lg-8 order-1 order-lg-0', styles.content)}>
+      <div
+        className={classNames(
+          'col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-8 order-1 order-lg-0',
+          styles.content,
+        )}
+      >
         <h1>{title}</h1>
         {children}
       </div>
-      <div className={classNames('col-12 col-sm-10 col-lg-4 order-0 order-lg-1', styles.icon)}>
+      <div
+        className={classNames(
+          'col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 order-0 order-lg-1',
+          styles.icon,
+        )}
+      >
         {icon}
         {icon}
       </div>
@@ -20,9 +30,9 @@ const Block = ({ title, icon, children }) => {
   );
 };
 
-export default function Features() {
+export default function Statements() {
   return (
-    <section className={styles.features}>
+    <section className={classNames('container', styles.statements)}>
       <Block title="Respect data privacy" icon={<Lock />}>
         <p>
           Umami lets you to gather the data you need while respecting the privacy of your users.
@@ -47,7 +57,7 @@ export default function Features() {
       <Block title="Open source" icon={<OpenSource />}>
         <p>
           Umami is dedicated to open source development. Place your confidence in a product that is
-          fully transparent, battle-tested by millions and community supported.
+          fully transparent, battle-tested and community supported.
         </p>
       </Block>
     </section>

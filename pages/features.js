@@ -1,7 +1,9 @@
 export default function FeaturesPage() {
   return (
-    <article>
-      <h1>Features</h1>
+    <article className="container">
+      <header>
+        <h1>Features</h1>
+      </header>
     </article>
   );
 }

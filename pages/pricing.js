@@ -2,7 +2,7 @@ import Pricing from 'components/Pricing';
 
 export default function PricingPage() {
   return (
-    <article>
+    <article className="container">
       <header>
         <h1>Pricing</h1>
       </header>

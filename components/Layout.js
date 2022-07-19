@@ -10,7 +10,7 @@ export default function Layout({ title, children }) {
         <title>{title ? `umami - ${title}` : 'umami'}</title>
       </Head>
       <Header />
-      <main className="container">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );

@@ -7,12 +7,12 @@ import CompanyLogo from './CompanyLogo';
 
 export default function Header() {
   return (
-    <header className={classNames(styles.header, 'container')}>
+    <header className={classNames('container', styles.header)}>
       <div className={styles.title}>
         <CompanyLogo />
       </div>
       <div className={styles.links}>
-        <Link href="/features">Product</Link>
+        <Link href="/features">Features</Link>
         <Link href="/docs">Docs</Link>
         <Link href="/community">Community</Link>
         <Link href="/pricing">Pricing</Link>

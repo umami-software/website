@@ -9,7 +9,7 @@ const data = [
   {
     title: 'Product',
     items: [
-      { text: 'Features', href: '/features' },
+      { text: 'Statements', href: '/features' },
       { text: 'Pricing', href: '/pricing' },
     ],
   },

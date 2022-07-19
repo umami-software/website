@@ -4,14 +4,16 @@ import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
 
 export default function DocsPage({ content }) {
   return (
-    <div className="row">
-      <div className="col-12 col-lg-3">
-        <Menu />
+    <div className="container">
+      <div className="row">
+        <div className="col-12 col-lg-3">
+          <Menu />
+        </div>
+        <div
+          className="docs col-12 col-lg-9"
+          dangerouslySetInnerHTML={{ __html: content.contentHtml }}
+        />
       </div>
-      <div
-        className="docs col-12 col-lg-9"
-        dangerouslySetInnerHTML={{ __html: content.contentHtml }}
-      />
     </div>
   );
 }
