@@ -11,7 +11,7 @@ export default function Pricing() {
   return (
     <div className={classNames('container', styles.pricing)}>
       <div className="row justify-content-center">
-        <div className={classNames('col-12 col-lg-6 offset-xl-2 col-xl-4', styles.tier)}>
+        <div className={classNames('col-12 col-lg-6 col-xl-4', styles.tier)}>
           <div className={styles.title}>
             <Tools /> Umami Open Source
           </div>
