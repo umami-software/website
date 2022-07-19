@@ -14,13 +14,14 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--gray75);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
-  min-height: 300px;
+  min-height: 360px;
+  margin-bottom: 30px;
 }
 
 .block h2 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   display: flex;
   gap: 10px;
