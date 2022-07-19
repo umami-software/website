@@ -30,6 +30,10 @@
   color: var(--primary600);
 }
 
+.intro h2 b {
+  color: var(--gray800);
+}
+
 .buttons {
   display: flex;
   justify-content: center;

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 const stats = [
   { name: 'Downloads', value: '4M+' },
-  { name: 'Github stars', value: '12K+' },
+  { name: 'GitHub stars', value: '12K+' },
   { name: 'Contributors', value: '100+' },
 ];
 

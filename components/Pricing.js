@@ -14,7 +14,7 @@ export default function Pricing() {
         <div className={classNames('col-4', styles.tier)}>
           <div className={styles.header}>
             <div className={styles.title}>
-              <Tools /> Open source
+              <Tools /> Umami Open Source
             </div>
             <div className={styles.description}>self-hosted</div>
             <div className={styles.price}>Free</div>

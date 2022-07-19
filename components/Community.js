@@ -32,14 +32,6 @@ const items = [
 export default function Community() {
   return (
     <div className={classNames('container', styles.community)}>
-      <div className="row">
-        <div className="offset-2 col-8">
-          <h1>
-            Come join the Umami community of fellow developers, website owners, marketers and data
-            explorers. Get help with issues, discuss ideas and share your feedback.
-          </h1>
-        </div>
-      </div>
       <div className="row justify-content-evenly">
         {items.map(({ name, description, url, icon }) => (
           <div

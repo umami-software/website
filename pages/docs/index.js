@@ -5,7 +5,7 @@ export default function DocsIndexPage() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/docs/about');
+    router.replace('/docs/getting-started');
   }, []);
 
   return null;

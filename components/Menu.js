@@ -2,12 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 const menu = {
-  Introduction: [
-    ['About', '/docs/about'],
-    ['Statements', '/docs/features'],
-    ['FAQ', '/docs/faq'],
-  ],
-  'Getting started': [
+  Basics: [
+    ['Getting started', '/docs/getting-started'],
     ['Install', '/docs/install'],
     ['Login', '/docs/login'],
     ['Add a website', '/docs/add-a-website'],
@@ -17,6 +13,8 @@ const menu = {
     ['Track events', '/docs/track-events'],
     ['Updates', '/docs/updates'],
     ['Languages', '/docs/languages'],
+    ['FAQ', '/docs/faq'],
+    ['Useful links', '/docs/useful-links'],
   ],
   Advanced: [
     ['Tracker configuration', '/docs/tracker-config'],
@@ -36,7 +34,6 @@ const menu = {
     ['Running on Koyeb', '/docs/running-on-koyeb'],
     ['Running on PlanetScale', '/docs/running-on-planetscale'],
     ['Running on Supabase', '/docs/running-on-supabase'],
-    ['Useful links', '/docs/useful-links'],
   ],
 };
 

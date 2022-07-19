@@ -57,3 +57,19 @@ article header {
   font-size: 48px;
   text-align: center;
 }
+
+article header p {
+  font-size: 18px;
+  padding: 0 20px;
+  margin-bottom: 60px;
+}
+
+.docs img {
+  display: block;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.docs .menu li {
+  list-style: none;
+}
