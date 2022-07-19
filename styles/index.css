@@ -86,6 +86,10 @@ pre {
   color: #2680eb;
 }
 
+.docs article h1 {
+  font-size: 36px;
+}
+
 body button {
   font-family: inherit;
 }
