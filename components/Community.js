@@ -44,7 +44,9 @@ export default function Community() {
             <p>{description}</p>
             <Link href={url}>
               <a target="_blank">
-                <Button variant="primary">Explore</Button>
+                <Button variant="primary" className={`umami--click--community-${name}`}>
+                  Explore
+                </Button>
               </a>
             </Link>
           </div>

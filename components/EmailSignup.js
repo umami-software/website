@@ -46,7 +46,11 @@ export default function EmailSignup({
                 onChange={setEmail}
                 placeholder="your@email.com"
               />
-              <Button variant="primary" onClick={handleClick}>
+              <Button
+                variant="primary"
+                className={`umami--signup--email-${type}`}
+                onClick={handleClick}
+              >
                 {buttonText}
               </Button>
             </div>

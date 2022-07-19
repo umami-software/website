@@ -23,3 +23,9 @@
   padding: 12px;
   margin-top: 60px;
 }
+
+.social {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}

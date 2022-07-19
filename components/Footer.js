@@ -46,7 +46,6 @@ export default function Footer() {
       <div className="row">
         <div className={classNames('col-12 col-sm-12 col-lg-3', styles.logo)}>
           <CompanyLogo />
-          <SocialMedia />
         </div>
         <div className="col-12 col-sm-12 col-lg-9">
           <div className="row">
@@ -64,7 +63,10 @@ export default function Footer() {
         </div>
       </div>
       <div className="row">
-        <div className={styles.copy}>&copy; 2022 Umami Software, Inc.</div>
+        <div className={classNames('col-6', styles.copy)}>&copy; 2022 Umami Software, Inc.</div>
+        <div className={classNames('col-6', styles.social)}>
+          <SocialMedia />
+        </div>
       </div>
     </footer>
   );

@@ -12,13 +12,11 @@ export default function Pricing() {
     <div className={styles.pricing}>
       <div className="row justify-content-center">
         <div className={classNames('col-4', styles.tier)}>
-          <div className={styles.header}>
-            <div className={styles.title}>
-              <Tools /> Umami Open Source
-            </div>
-            <div className={styles.description}>self-hosted</div>
-            <div className={styles.price}>Free</div>
+          <div className={styles.title}>
+            <Tools /> Umami Open Source
           </div>
+          <div className={styles.description}>self-hosted</div>
+          <div className={styles.price}>Free</div>
           <ul>
             <li>
               <Checkmark /> Unlimited websites
@@ -45,13 +43,11 @@ export default function Pricing() {
           </div>
         </div>
         <div className={classNames('col-4', styles.tier, styles.cloud)}>
-          <div className={styles.header}>
-            <div className={styles.title}>
-              <Cloud /> Umami Cloud
-            </div>
-            <div className={styles.description}>managed hosting</div>
-            <div className={styles.price}>Coming Soon</div>
+          <div className={styles.title}>
+            <Cloud /> Umami Cloud
           </div>
+          <div className={styles.description}>managed hosting</div>
+          <div className={styles.price}>Coming Soon</div>
           <ul>
             <li>
               <Checkmark /> Unlimited websites
