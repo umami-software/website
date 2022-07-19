@@ -42,6 +42,11 @@ const features = [
     image: '/feature-accounts.png',
   },
   {
+    name: 'Dark mode',
+    description: 'Dark mode included. Choose your favorite theme for Umami.',
+    image: '/feature-dark-mode.png',
+  },
+  {
     name: 'Mobile-friendly',
     description:
       'The Umami interface has been optimized for mobile so you can view your stats from anywhere.',
