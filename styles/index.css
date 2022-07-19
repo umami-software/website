@@ -81,3 +81,7 @@ pre {
 .docs .menu li {
   list-style: none;
 }
+
+.docs article a {
+  color: #2680eb;
+}

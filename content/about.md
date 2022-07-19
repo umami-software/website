@@ -1,7 +1,8 @@
 # About
 
-Umami is a simple, easy to use, self-hosted web analytics solution. The goal is to provide you with a friendlier, privacy-focused
-alternative to Google Analytics and a free, open-sourced alternative to paid solutions. Umami collects only the metrics you care
-about and everything fits on a single page. You can view a live demo [here](https://app.umami.is/share/ISgW2qz8/flightphp.com).
+## What is Umami?
+
+Umami is an open source, privacy-focused alternative to Google Analytics.
+Umami provides you with a powerful web analytics solution that does not violate the privacy of your users. Additionally, when you self-host Umami you are in complete control of your data.
 
 <img src="/about-screenshot.png">

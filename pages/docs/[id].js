@@ -9,10 +9,9 @@ export default function DocsPage({ content }) {
         <div className="col-12 col-lg-3">
           <Menu />
         </div>
-        <div
-          className="docs col-12 col-lg-9"
-          dangerouslySetInnerHTML={{ __html: content.contentHtml }}
-        />
+        <div className="docs col-12 col-lg-9">
+          <article dangerouslySetInnerHTML={{ __html: content.contentHtml }} />
+        </div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 const menu = {
   Basics: [
+    ['About', '/docs/about'],
     ['Getting started', '/docs/getting-started'],
     ['Install', '/docs/install'],
     ['Login', '/docs/login'],
