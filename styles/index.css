@@ -85,3 +85,7 @@ pre {
 .docs article a {
   color: #2680eb;
 }
+
+body button {
+  font-family: inherit;
+}
