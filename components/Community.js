@@ -34,10 +34,7 @@ export default function Community() {
     <div className={classNames('container', styles.community)}>
       <div className="row justify-content-evenly">
         {items.map(({ name, description, url, icon }) => (
-          <div
-            key={name}
-            className={classNames('offset-1 col-10 offset-md-0 col-md-5 col-xl-3', styles.block)}
-          >
+          <div key={name} className={classNames('col-10 col-md-5 col-xl-3', styles.block)}>
             <h2>
               {icon} {name}
             </h2>

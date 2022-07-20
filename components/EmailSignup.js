@@ -33,11 +33,11 @@ export default function EmailSignup({
   return (
     <div className="container">
       <div className={classNames('row align-items-center', styles.form)}>
-        <div className="col-sm-12 col-lg-6">
+        <div className="col-sm-12 col-lg-7">
           <h1>{title}</h1>
           <p>{children}</p>
         </div>
-        <div className="col-sm-12 offset-lg-1 col-lg-5 justify-content-center">
+        <div className="col-sm-12 col-lg-5">
           {!submitted && (
             <div className={styles.input}>
               <TextField

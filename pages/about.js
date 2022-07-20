@@ -4,8 +4,8 @@ export default function About() {
       <header>
         <h1>Company</h1>
       </header>
-      <div className="row">
-        <div className="offset-2 col-8">
+      <div className="row justify-content-center">
+        <div className="col-8">
           <h1>Values</h1>
           <p>
             Umami was founded with the belief that users should be empowered by the software they

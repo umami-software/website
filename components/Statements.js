@@ -7,22 +7,12 @@ import OpenSource from 'assets/open-source.svg';
 
 const Block = ({ title, icon, children }) => {
   return (
-    <div className={classNames('row', styles.block)}>
-      <div
-        className={classNames(
-          'col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-8 order-1 order-lg-0',
-          styles.content,
-        )}
-      >
+    <div className={classNames('row justify-content-center', styles.block)}>
+      <div className={classNames('col-12 col-sm-10 col-lg-8 order-1 order-lg-0', styles.content)}>
         <h1>{title}</h1>
         {children}
       </div>
-      <div
-        className={classNames(
-          'col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 order-0 order-lg-1',
-          styles.icon,
-        )}
-      >
+      <div className={classNames('col-12 col-sm-10 col-lg-4 order-0 order-lg-1', styles.icon)}>
         {icon}
         {icon}
       </div>
