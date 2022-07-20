@@ -36,6 +36,8 @@ const data = [
     items: [
       { text: 'About', href: '/about' },
       { text: 'Contact', href: '/contact' },
+      { text: 'Privacy', href: '/privacy' },
+      { text: 'Terms', href: '/terms' },
     ],
   },
 ];

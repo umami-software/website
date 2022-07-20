@@ -24,6 +24,12 @@
   margin-top: 60px;
 }
 
+.legal {
+  font-size: 12px;
+  display: flex;
+  gap: 10px;
+}
+
 .social {
   display: flex;
   align-items: flex-end;

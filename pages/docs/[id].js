@@ -4,7 +4,7 @@ import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
 
 export default function DocsPage({ content }) {
   return (
-    <div className="container docs">
+    <div className="container markdown">
       <div className="row">
         <div className="col-12 col-lg-3">
           <Menu />

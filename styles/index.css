@@ -72,24 +72,24 @@ pre {
   word-wrap: break-word;
 }
 
-.docs img {
+menu li {
+  list-style: none;
+}
+
+body button {
+  font-family: inherit;
+}
+
+.markdown img {
   display: block;
   max-width: 100%;
   margin: 2rem auto;
 }
 
-.docs .menu li {
-  list-style: none;
-}
-
-.docs article a {
+.markdown article a {
   color: #2680eb;
 }
 
-.docs article h1 {
+.markdown article h1 {
   font-size: 36px;
-}
-
-body button {
-  font-family: inherit;
 }
