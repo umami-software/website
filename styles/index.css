@@ -74,6 +74,10 @@ pre {
   word-wrap: break-word;
 }
 
+menu ul {
+  padding: 0;
+}
+
 menu li {
   list-style: none;
 }
