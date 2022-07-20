@@ -5,7 +5,7 @@ const features = [
   {
     name: 'Simple analytics',
     description:
-      'Umami measures just the important metrics that you care about: pageviews, devices used, and where your visitors are coming from. Everything is displayed on a single, easy to browse page.',
+      'Umami measures just the important metrics that you care about and everything is displayed on a single, easy to browse page.',
     image: '/feature-website-stats.png',
   },
   {
@@ -14,14 +14,21 @@ const features = [
     image: '/feature-session-stats.png',
   },
   {
+    name: 'Custom events',
+    description:
+      'Track more than just pageviews. Capture any event on your website like button clicks and form entries.',
+    image: '/feature-events.png',
+  },
+  {
     name: 'Powerful filters',
-    description: 'Dive deeper into your data using easy to apply filters.',
+    description:
+      'Dive deeper into your data using easy to apply filters. Segment your users any metric such as browser, OS, and country.',
     image: '/feature-filters.png',
   },
   {
     name: 'Realtime data',
     description:
-      'Get a realtime view of your current website traffic. Actively see the exact pages your visitors are hitting.',
+      'Get a realtime view of your current website traffic. See the exact pages where your visitors are landing.',
     image: '/feature-realtime.png',
   },
   {
@@ -40,11 +47,6 @@ const features = [
     description:
       'Umami can be used to host data for friends or clients. Just create a separate account and they can start tracking their own websites on their own dashboard.',
     image: '/feature-accounts.png',
-  },
-  {
-    name: 'Dark mode',
-    description: 'Dark mode included. Choose your favorite theme for Umami.',
-    image: '/feature-dark-mode.png',
   },
   {
     name: 'Mobile-friendly',
@@ -66,6 +68,11 @@ const features = [
     name: 'Share data',
     description:
       'If you want to share your stats publicly, you can do so with a uniquely generated URL.',
+  },
+  {
+    name: 'Dark mode',
+    description: 'Dark mode included. Choose your favorite theme for Umami.',
+    image: '/feature-dark-mode.png',
   },
 ];
 
