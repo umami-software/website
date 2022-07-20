@@ -53,7 +53,7 @@ button {
   cursor: pointer;
 }
 
-article header {
+article header h1 {
   font-size: 48px;
   text-align: center;
 }
@@ -62,6 +62,7 @@ article header p {
   font-size: 18px;
   padding: 0 20px;
   margin-bottom: 60px;
+  text-align: center;
 }
 
 pre {
@@ -92,4 +93,10 @@ body button {
 
 .markdown article h1 {
   font-size: 36px;
+}
+
+@media only screen and (max-width: 768px) {
+  article header h1 {
+    font-size: 2em;
+  }
 }

@@ -3,6 +3,11 @@
   padding: 36px;
   margin-top: 36px;
   border-top: 1px solid var(--gray300);
+  background: var(--gray75);
+}
+
+.col {
+  margin-bottom: 20px;
 }
 
 .col h1 {
@@ -19,19 +24,15 @@
 }
 
 .copy {
+  display: flex;
+  align-items: center;
+  gap: 30px;
   font-size: 12px;
-  padding: 12px;
-  margin-top: 60px;
+  padding: 20px 0;
 }
 
 .legal {
   font-size: 12px;
   display: flex;
   gap: 10px;
-}
-
-.social {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
 }

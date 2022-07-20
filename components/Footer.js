@@ -44,30 +44,30 @@ const data = [
 
 export default function Footer() {
   return (
-    <footer className={classNames('container', styles.footer)}>
-      <div className="row">
-        <div className={classNames('col-12 col-lg-3', styles.logo)}>
-          <CompanyLogo />
-        </div>
-        <div className="col-12 col-lg-9">
-          <div className="row">
-            {data.map(({ title, items }) => (
-              <div key={title} className={classNames('col-6 col-lg-3', styles.col, styles.links)}>
-                <h1>{title}</h1>
-                {items.map(({ text, href }) => (
-                  <Link key={text} href={href}>
-                    <a target={href.startsWith('http') ? '_blank' : null}>{text}</a>
-                  </Link>
-                ))}
-              </div>
-            ))}
+    <footer className={styles.footer}>
+      <div className="container">
+        <div className="row">
+          <div className={classNames('col-12 col-lg-3', styles.logo)}>
+            <CompanyLogo />
+          </div>
+          <div className="col-12 col-lg-9">
+            <div className="row">
+              {data.map(({ title, items }) => (
+                <div key={title} className={classNames('col-6 col-lg-3', styles.col, styles.links)}>
+                  <h1>{title}</h1>
+                  {items.map(({ text, href }) => (
+                    <Link key={text} href={href}>
+                      <a target={href.startsWith('http') ? '_blank' : null}>{text}</a>
+                    </Link>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="row">
-        <div className={classNames('col-6', styles.copy)}>&copy; 2022 Umami Software, Inc.</div>
-        <div className={classNames('col-6', styles.social)}>
-          <SocialMedia />
+        <SocialMedia />
+        <div className={styles.copy}>
+          <div>&copy; 2022 Umami Software, Inc.</div>
         </div>
       </div>
     </footer>

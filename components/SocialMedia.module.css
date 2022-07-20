@@ -1,9 +1,11 @@
 .links {
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 
 .links svg {
+  display: block;
   width: 20px;
   height: 20px;
 }

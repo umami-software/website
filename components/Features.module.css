@@ -6,6 +6,7 @@
 
 .features h1 {
   font-size: 48px;
+  line-height: 1em;
 }
 
 .features p {
@@ -40,4 +41,10 @@
   max-width: 100%;
   height: auto;
   margin: 60px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .feature h1 {
+    font-size: 2rem;
+  }
 }
