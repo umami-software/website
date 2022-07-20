@@ -34,7 +34,7 @@ const features = [
   {
     name: 'Multi-language',
     description:
-      'Umami has been translated into many different languages by the very active community.',
+      'Umami has been translated into many different languages by the very active open source community.',
     image: '/feature-languages.png',
   },
   {
