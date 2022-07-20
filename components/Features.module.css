@@ -18,7 +18,7 @@
   align-items: center;
   gap: 20px;
   position: sticky;
-  top: 0;
+  top: 80px;
   background: var(--gray50);
   min-height: 600px;
 }

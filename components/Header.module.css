@@ -1,7 +1,15 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--gray50);
   display: flex;
-  min-height: 80px;
+  margin-top: 10px;
+  height: 70px;
   gap: 10px;
+  z-index: 100;
+  border-radius: 20px;
 }
 
 .header svg {

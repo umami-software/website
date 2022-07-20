@@ -42,6 +42,7 @@ a:hover {
 main {
   flex: 1;
   position: relative;
+  margin-top: 80px;
 }
 
 svg {
