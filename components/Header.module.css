@@ -7,7 +7,6 @@
   display: flex;
   margin-top: 10px;
   height: 70px;
-  gap: 10px;
   z-index: 100;
   border-radius: 20px;
 }
@@ -28,7 +27,6 @@
   align-items: center;
   justify-content: center;
   gap: 48px;
-  padding-left: 30px;
   flex: 1;
   font-weight: 600;
 }
