@@ -79,7 +79,7 @@ At Company, we strive to apply the same data rights to all customers, regardless
 
 Many of these rights can be exercised by signing in and updating your account information.
 
-If you have questions about exercising these rights or need assistance, please contact us at [support@umami.is](mailto:mailto:support@umami.is). If an authorized agent is corresponding on your behalf, we will need written consent with a signature from the account holder before proceeding.
+If you have questions about exercising these rights or need assistance, please contact us at [support@umami.is](mailto:support@umami.is). If an authorized agent is corresponding on your behalf, we will need written consent with a signature from the account holder before proceeding.
 
 If you are in the EU or UK, you can contact your data protection authority to file a complaint or learn more about local privacy laws.
 
