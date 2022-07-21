@@ -1,7 +1,16 @@
 # Environment variables
 
-Besides the required `DATABASE_URL` and `HASH_SALT` variables in your `.env` file, 
-you can configure Umami with some additional variables.
+You can configure Umami with the use of environment variables. They go into the same `.env` file as your `DATABASE_URL`.
+
+---
+
+## Runtime variables
+
+Runtime variables are recognized when Umami is running. You can set your environment variables prior to starting the application.
+
+### DATABASE_URL = &lt;connection string&gt;
+
+Connection string for your database. This is the only required variable.
 
 ### IGNORE_IP = &lt;ip addresses&gt;
 
@@ -26,30 +35,42 @@ these variables and start your app with `npm run start-env` instead of `npm star
 HTTP header to check for the client's IP address. This is useful when you're
 behind a proxy that uses non-standard headers.
 
-### DISABLE_LOGIN = 1
-
-Disables the login page for the application.
-
 ### REMOVE_TRAILING_SLASH = 1
 
 Removes the trailing slash from all incoming urls.
 
 ### TRACKER_SCRIPT_NAME = &lt;script name&gt;
 
-Allow you to assign a custom name to the tracker script. The default is `umami`. If you update this, be sure to update the tracking code on your website to the new name.
+Allows you to assign a custom name to the tracker script different from the default `umami`. This is to help you avoid some ad-blockers.
 
-### DISABLE_TELEMETRY = 1
+Note: If you update this, be sure to update the tracking code on your website to the new name.
 
-Disable collection of completely anonymous telemetry data during installation.
+---
 
-## When building a custom image
+## Build time variables
 
-Required docker build arguments.
+Build time variables are only recognized during the build process. This also includes building custom Docker images. You need to set your environment variables prior to building the application.
 
-### BASE_PATH = &lt;path&gt; 
+### BASE_PATH = &lt;path&gt;
 
-`(optional)` If you want to host Umami under a subdirectory. Only used to prefix URLs at frontend. May need to use reverse proxy to remove BASE_PATH prefix and pass modified URL to umami
+If you want to host Umami under a subdirectory. Only used to prefix URLs at frontend. May need to use reverse proxy to remove BASE_PATH prefix and pass modified URL to Umami
+
+### COLLECT_API_ENDPOINT = /api/x
+
+Allows you to send metrics to a different location than the default `/api/collect`. This is to help you avoid some ad-blockers.
 
 ### DATABASE_TYPE = postgresql | mysql
 
-`(required)` The type of the DB to be used.
+The type of DB to be used. Note this is only required for the Docker build.
+
+### DISABLE_UPDATES = 1
+
+Disables the check for new versions of Umami.
+
+### DISABLE_LOGIN = 1
+
+Disables the login page for the application.
+
+### DISABLE_TELEMETRY = 1
+
+Umami collects completely anonymous telemetry data in order help improve the application. You can set this variable if you don't want to participate.

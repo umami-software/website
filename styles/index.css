@@ -74,6 +74,15 @@ pre {
   word-wrap: break-word;
 }
 
+code {
+  background: var(--gray100);
+  padding: 2px 4px;
+  border-radius: 2px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-weight: 600;
+}
+
 menu ul {
   padding: 0;
 }
