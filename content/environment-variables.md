@@ -53,7 +53,7 @@ Build time variables are only recognized during the build process. This also inc
 
 ### BASE_PATH = &lt;path&gt;
 
-If you want to host Umami under a subdirectory. Only used to prefix URLs at frontend. May need to use reverse proxy to remove BASE_PATH prefix and pass modified URL to Umami
+If you want to host Umami under a subdirectory. You may need to update your reverse proxy settings to correctly handle the BASE_PATH prefix.
 
 ### COLLECT_API_ENDPOINT = /api/x
 
@@ -61,7 +61,7 @@ Allows you to send metrics to a different location than the default `/api/collec
 
 ### DATABASE_TYPE = postgresql | mysql
 
-The type of DB to be used. Note this is only required for the Docker build.
+The type of DB to be used. This is only required for the Docker build.
 
 ### DISABLE_UPDATES = 1
 

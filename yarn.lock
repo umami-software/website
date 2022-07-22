@@ -4136,10 +4136,10 @@ quick-lru@^4.0.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-4.0.1.tgz#5b8878f113a58217848c6482026c73e1ba57727f"
   integrity sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==
 
-react-basics@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/react-basics/-/react-basics-0.4.0.tgz#32591a727818da290184f71d5aae489f38eba5e6"
-  integrity sha512-m0IuVCdoaQ336zaOxy7KfU87dlV1Ovkp/R/vDGyPDY+rbZg0tPWXMzriumzXo+wrNtlRvEsXFdIpYTWsYy/Ejg==
+react-basics@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/react-basics/-/react-basics-0.4.1.tgz#f2605930802a22b85da3e5ae7ce4952f45cbe9cb"
+  integrity sha512-49pdiLnNyYOvCgJeJEiepxg1X2Ki0DlVnYJvVXQKWoBk7UBtYXHEG1MC8CT6uiLB4duu4tKHwiNvgE1NMULwSw==
   dependencies:
     classnames "^2.3.1"
     react "^17.0.2"
