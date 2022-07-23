@@ -45,6 +45,10 @@ Allows you to assign a custom name to the tracker script different from the defa
 
 Note: If you update this, be sure to update the tracking code on your website to the new name.
 
+### HASH_SALT = &lt;random string&gt;
+
+A random string used to generate unique values.
+
 ---
 
 ## Build time variables
@@ -59,7 +63,7 @@ If you want to host Umami under a subdirectory. You may need to update your reve
 
 Allows you to send metrics to a different location than the default `/api/collect`. This is to help you avoid some ad-blockers.
 
-### DATABASE_TYPE = postgresql | mysql
+### DATABASE_TYPE = &lt;postgresql | mysql&gt;
 
 The type of DB to be used. This is only required for the Docker build.
 
@@ -73,4 +77,4 @@ Disables the login page for the application.
 
 ### DISABLE_TELEMETRY = 1
 
-Umami collects completely anonymous telemetry data in order help improve the application. You can set this variable if you don't want to participate.
+Umami collects completely anonymous telemetry data in order help improve the application. You can choose to disable this if you don't want to participate.
