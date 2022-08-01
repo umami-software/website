@@ -18,7 +18,7 @@ const menu = {
     ['Useful links', '/docs/useful-links'],
   ],
   Advanced: [
-    ['Tracker configuration', '/docs/tracker-config'],
+    ['Tracker configuration', '/docs/tracker-configuration'],
     ['Tracker functions', '/docs/tracker-functions'],
     ['Environment variables', '/docs/environment-variables'],
     ['API', '/docs/api'],

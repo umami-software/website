@@ -61,7 +61,7 @@ If you want to host Umami under a subdirectory. You may need to update your reve
 
 ### COLLECT_API_ENDPOINT = /api/x
 
-Allows you to send metrics to a different location than the default `/api/collect`. This is to help you avoid some ad-blockers.
+Allows you to send metrics to a location different than the default `/api/collect`. This is to help you avoid some ad-blockers.
 
 ### DATABASE_TYPE = &lt;postgresql | mysql&gt;
 
