@@ -4,7 +4,7 @@ Umami is a self-hosted web analytics solution. There are many different ways to 
 
 If you want to install directly from the source code or build your own docker images, you can jump directly to the [Install](/docs/install) section.
 
-If you want pre-built docker images for you database, you can pull directly from our registry:
+If you want pre-built docker images for your database, you can pull directly from our registry:
 
 ### PostgreSQL
 
