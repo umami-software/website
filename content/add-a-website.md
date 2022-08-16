@@ -2,15 +2,15 @@
 
 Log into Umami and click on **Settings** in the header.
 
-<img src="/header.png" />
+<img src="/images/header.png" />
 
 Then navigate to **Websites** and click on the **Add website** button.
 
-<img src="/add-website.png" />
+<img src="/images/add-website.png" />
 
 Fill out the form details and click the **Save** button.
 
-<img src="/add-website-form.png" />
+<img src="/images/add-website-form.png" />
 
 The **Name** field can be whatever you want. Usually it's the same as the domain name.
 

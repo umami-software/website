@@ -52,4 +52,4 @@ If you want to use your own event type instead of `custom`, see [Tracker functio
 
 Once your events are recorded, they will be available on your website **Details** page.
 
-<img src="/events.png" />
+<img src="/images/events.png" />

@@ -4,12 +4,12 @@ Your Umami installation will create a default administrator account with the use
 
 The first thing you will want to do is log in and change your password.
 
-<img src="/login.png" />
+<img src="/images/login.png" />
 
 Once logged in click on **Settings** in the header.
 
-<img src="/header.png" />
+<img src="/images/header.png" />
 
 Then navigate to **Profile** and click the **Change password** button.
 
-<img src="/change-password.png" />
+<img src="/images/change-password.png" />

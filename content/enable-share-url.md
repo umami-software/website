@@ -6,20 +6,20 @@ through a uniquely generated URL.
 
 Log into Umami and click on **Settings** in the header.
 
-<img src="/header.png" />
+<img src="/images/header.png" />
 
 Then navigate to **Websites** and click on the **Edit** button next to your website.
 
-<img src="/edit-website.png" />
+<img src="/images/edit-website.png" />
 
 Check the **Enable share URL** checkbox and click **Save**.
 
-<img src="/edit-website-form.png" />
+<img src="/images/edit-website-form.png" />
 
 Then click the **Share URL** button next to your website.
 
-<img src="/share-url.png" />
+<img src="/images/share-url.png" />
 
 The form that pops up will show you the URL.
 
-<img src="/share-url-form.png" />
+<img src="/images/share-url-form.png" />

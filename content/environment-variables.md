@@ -45,6 +45,22 @@ Allows you to assign a custom name to the tracker script different from the defa
 
 Note: If you update this, be sure to update the tracking code on your website to the new name.
 
+### COLLECT_API_ENDPOINT = /api/x
+
+Allows you to send metrics to a location different than the default `/api/collect`. This is to help you avoid some ad-blockers.
+
+### DISABLE_UPDATES = 1
+
+Disables the check for new versions of Umami.
+
+### DISABLE_LOGIN = 1
+
+Disables the login page for the application.
+
+### DISABLE_TELEMETRY = 1
+
+Umami collects completely anonymous telemetry data in order help improve the application. You can choose to disable this if you don't want to participate.
+
 ### HASH_SALT = &lt;random string&gt;
 
 A random string used to generate unique values.
@@ -59,22 +75,8 @@ Build time variables are only recognized during the build process. This also inc
 
 If you want to host Umami under a subdirectory. You may need to update your reverse proxy settings to correctly handle the BASE_PATH prefix.
 
-### COLLECT_API_ENDPOINT = /api/x
-
-Allows you to send metrics to a location different than the default `/api/collect`. This is to help you avoid some ad-blockers.
 
 ### DATABASE_TYPE = &lt;postgresql | mysql&gt;
 
 The type of DB to be used. This is only required for the Docker build.
 
-### DISABLE_UPDATES = 1
-
-Disables the check for new versions of Umami.
-
-### DISABLE_LOGIN = 1
-
-Disables the login page for the application.
-
-### DISABLE_TELEMETRY = 1
-
-Umami collects completely anonymous telemetry data in order help improve the application. You can choose to disable this if you don't want to participate.

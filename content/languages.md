@@ -2,7 +2,7 @@
 
 Umami supports the display of different languages. Simply click the globe icon in the header to change your language.
 
-<img src="/languages.png">
+<img src="/images/languages.png">
 
 ## Contributing
 
@@ -21,11 +21,11 @@ proper ISO language code.
 
 ### 3. Translate the strings in the `.json` file
 
-For example, here is the original English translation, [en-US.json](https://raw.githubusercontent.com/mikecao/umami/master/lang/en-US.json).
+For example, here is the original English translation, [en-US.json](https://raw.githubusercontent.com/umami-software/umami/master/lang/en-US.json).
 
-And here is it translated into German, [de-DE.json](https://raw.githubusercontent.com/mikecao/umami/master/lang/de-DE.json).
+And here is it translated into German, [de-DE.json](https://raw.githubusercontent.com/umami-software/umami/master/lang/de-DE.json).
 
-### 4. Finally, submit a pull request on [Github](https://github.com/mikecao/umami)
+### 4. Finally, submit a pull request on [Github](https://github.com/umami-software/umami)
 
-If you are not familiar with using git, you can simply create an [issue](https://github.com/mikecao/umami/issues) on Github
+If you are not familiar with using git, you can simply create an [issue](https://github.com/umami-software/umami/issues) on Github
 and paste your `.json` file contents and someone will merge it.

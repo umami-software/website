@@ -4,15 +4,15 @@ Umami allows you to create separate accounts so that you can host data for frien
 
 Log into Umami as the administrator and click on **Settings** in the header.
 
-<img src="/header.png" />
+<img src="/images/header.png" />
 
 Then navigate to **Accounts** and click on the **Add account** button.
 
-<img src="/add-account.png" />
+<img src="/images/add-account.png" />
 
 Fill out the form details and click the **Save** button.
 
-<img src="/add-account-form.png" />
+<img src="/images/add-account-form.png" />
 
 The new account will have its own dashboard and websites separate from the **admin** account.
 
