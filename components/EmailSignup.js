@@ -15,19 +15,21 @@ export default function EmailSignup({
   const [submitted, setSubmitted] = useState(false);
 
   const handleClick = async () => {
-    await fetch('https://telemetry.umami.is/api/signup', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type,
-        email,
-      }),
-    });
+    if (email) {
+      await fetch('https://telemetry.umami.is/api/signup', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type,
+          email,
+        }),
+      });
 
-    setSubmitted(true);
+      setSubmitted(true);
+    }
   };
 
   return (
