@@ -42,4 +42,4 @@ Umami does not collect any personally identifiable information and anonymizes al
 ## Open-source
 
 Umami is open-source and licensed under the MIT license. The source code is available on 
-[Github](https://github.com/mikecao/umami).
+[Github](https://github.com/umami-software/umami).

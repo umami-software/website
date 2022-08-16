@@ -7,12 +7,12 @@
 Heroku provides a free hosting service which works with Umami as well as databases through add-ons.
 You don't need to have a database set up before this setup guide.
 
-## Setup [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mikecao/umami)
+## Setup [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/umami-software/umami)
 _Automate all steps using the button above_
 
 ### Website
 
-1. Fork a copy of the [umami repository](https://github.com/mikecao/umami).
+1. Fork a copy of the [umami repository](https://github.com/umami-software/umami).
 1. Create an account on [Heroku](https://heroku.com/).
 1. From the dashboard page click **New > Create new app**.
 1. Choose an **App name** and then click **Create app**.

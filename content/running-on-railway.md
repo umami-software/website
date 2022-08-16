@@ -36,7 +36,7 @@ The previously described method is the quickest and easiest way to get Umami up 
 
 ### Set up Railway project
 
-- Fork the [Umami repository](https://github.com/mikecao/umami).
+- Fork the [Umami repository](https://github.com/umami-software/umami).
 - Create an account on [Railway](https://railway.app/) connected to Github.
 - If you wish, you can give Railway permission only to your Umami fork repository when linking your Github account.
 - From the dashboard page click **New Project > Deploy from repo**.

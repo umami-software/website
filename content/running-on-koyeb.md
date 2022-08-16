@@ -26,7 +26,7 @@ $ openssl rand -hex 32 | koyeb secret create umami-hash-salt --value-from-stdin
 Once you’ve created the secrets, you can deploy Umami. In your terminal run the following command to create a new Koyeb App and deploy the Umami service:
 
 ```sh
-koyeb app init umami --docker ghcr.io/mikecao/umami:postgresql-latest --ports 3000:http --routes /:3000 --env DATABASE_URL=@umami-database-url --env HASH_SALT=@umami-hash-salt
+koyeb app init umami --docker ghcr.io/umami-software/umami:postgresql-latest --ports 3000:http --routes /:3000 --env DATABASE_URL=@umami-database-url --env HASH_SALT=@umami-hash-salt
 ```
 
 Your Umami service is being deployed. To retrieve the Umami URL run:

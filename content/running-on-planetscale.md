@@ -4,7 +4,7 @@
 
 ## Setup
 
-1. Fork the [https://github.com/mikecao/umami](https://github.com/mikecao/umami) project to your GitHub account.
+1. Fork the [https://github.com/umami-software/umami](https://github.com/umami-software/umami) project to your GitHub account.
 2. Create a database on PlanetScale called `umami-db` and get its connection string (Hint: select "Prisma" from the "Connect with" menu). It should look something like this: `mysql://username:password@host/umami-db?sslaccept=strict`
 3. Add `DATABASE_URL` and `HASH_SALT` (any random string) to you `.env` file:
 ```

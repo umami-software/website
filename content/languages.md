@@ -11,7 +11,7 @@ If you would like to contribute a language translation to the project, please fo
 ### 1. Checkout the repo
 
 ```
-git clone https://github.com/mikecao/umami.git
+git clone https://github.com/umami-software/umami.git
 ```
 
 ### 2. Create a language `.json` file
