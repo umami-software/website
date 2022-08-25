@@ -14,15 +14,8 @@ Click the button above to deploy your self-hosted version of the Umami website a
 
 You will be asked to add the `HASH_SALT` enviroment variable which is a random string used to generate unique values for your installation.
 
-### Create database tables
-
-- Once you've deployed your project, clone it locally using Git.
-- Use the [Railway CLI](https://docs.railway.app/develop/cli) to link your local setup to your Railway project by running `railway link`.
-- Use `railway run psql -h hostname -U username -d databasename -f sql/schema.postgresql.sql`
-  - You can view your `hostname`, `username`, and `databasename` using `railway variables` or from your project dashboard
-  - This command installs all the tables with the required scripts and creates a login account with the username `admin` and password `umami`
-- You should now be able to visit your Umami dashboard and set up sites that you want to track analytics for
-  - You can find the URL in your project dashboard which you can visit by running `railway open`
+You should now be able to visit your Umami dashboard and set up sites that you want to track analytics for
+You can find the URL in your project dashboard which you can visit by running `railway open`
 
 ### Notes
 
@@ -40,16 +33,19 @@ The previously described method is the quickest and easiest way to get Umami up 
 - Create an account on [Railway](https://railway.app/) connected to Github.
 - If you wish, you can give Railway permission only to your Umami fork repository when linking your Github account.
 - From the dashboard page click **New Project > Deploy from repo**.
-- Choose your forked Umami repository and select the **master** branch, click **Deploy**.
+- Choose your forked Umami repository and select the **master** branch
+- Click **Variables** and add `HASH_SALT`, set its value to a random string (this is a random string used to generate unique values for your installation). Click **Add**.
+- Add a second variable called `PORT`, set its value to a valid port number (eg: `3000`). Click **Add**.
+- Add a third variable called `DATABASE_TYPE`, set its value to `postgres`. Click **Add**.
+- Add a fouth variable called `HOSTNAME`, set its value to `${{ RAILWAY_STATIC_URL }}`. Click **Add**.
+- Click **Deploy**.
 
-This initial deploy will succeed, but attempting to open the app will show "Bad Gateway" until you follow the rest of these steps.
+This initial deploy will fail until you follow the rest of these steps.
 
 ### Database and Deploy
 
-- Click **Add Plugin** and select **Add PostgreSQL Plugin**
-- Click **Variables** and add `HASH_SALT`, set its value to a random string (this is a random string used to generate unique values for your installation). Click **Add**.
-- Add a second variable called `PORT`, set its value to a valid port number (eg: `3000`). Click **Add**.
+- Close the settings sidebar and click **New**, click **Database** and select **Add PostgreSQL**
 
-Adding the variables should trigger a re-deploy, and clicking the app link should get you to the login page of your Umami instance. 
+Adding the database should trigger a re-deploy, and clicking the app link should get you to the login page of your Umami instance. 
 
 Follow the remaining instructions above from [Create database tables](#create-database-tables) to finish setting up your Umami instance on Railway.
