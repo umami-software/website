@@ -9,13 +9,13 @@ If you want pre-built docker images for your database, you can pull directly fro
 ### PostgreSQL
 
 ```shell
-docker pull docker.umami.dev/umami-software/umami:postgresql-latest
+docker pull docker.umami.is/umami-software/umami:postgresql-latest
 ```
 
 ### MySQL
 
 ```shell
-docker pull docker.umami.dev/umami-software/umami:mysql-latest
+docker pull docker.umami.is/umami-software/umami:mysql-latest
 ```
 
 ## Hosting
