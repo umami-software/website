@@ -1,5 +1,7 @@
 # Getting updates
 
+## Source code
+
 In order to get the latest updates, first pull the changes from the git repository:
 
 ```
@@ -18,14 +20,16 @@ Rebuild the project:
 yarn build
 ```
 
-Update database tables
-
-```
-yarn update-db
-```
-
 Finally, start the application:
 
 ```
 yarn start
+```
+
+## Docker
+
+For Docker, simply pull the latest image for your database configuration:
+
+```shell
+docker pull docker.umami.is/umami-software/umami:mysql-latest
 ```
