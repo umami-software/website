@@ -4,7 +4,7 @@ import classNames from 'classnames';
 const stats = [
   { name: 'Downloads', value: '4M+' },
   { name: 'GitHub stars', value: '12K+' },
-  { name: 'Contributors', value: '100+' },
+  { name: 'Contributors', value: '150+' },
 ];
 
 export default function Stats() {
