@@ -1,11 +1,10 @@
 .header {
   position: fixed;
-  top: 0;
+  top: 10px;
   left: 0;
   right: 0;
   background: var(--gray50);
   display: flex;
-  margin-top: 10px;
   height: 70px;
   z-index: 100;
   border-radius: 20px;

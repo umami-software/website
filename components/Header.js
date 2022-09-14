@@ -11,6 +11,25 @@ import GitHub from 'assets/github.svg';
 // Styles
 import styles from 'components/Header.module.css';
 
+const LINKS = [
+  {
+    href: '/features',
+    children: 'Features',
+  },
+  {
+    href: '/docs',
+    children: 'Docs',
+  },
+  {
+    href: '/community',
+    children: 'Community',
+  },
+  {
+    href: '/pricing',
+    children: 'Pricing',
+  },
+]
+
 export default function Header() {
   return (
     <header>
@@ -19,10 +38,7 @@ export default function Header() {
           <CompanyLogo />
         </section>
         <nav className={styles.links}>
-          <Link href="/features">Features</Link>
-          <Link href="/docs">Docs</Link>
-          <Link href="/community">Community</Link>
-          <Link href="/pricing">Pricing</Link>
+          {LINKS.map((link) => <Link key={link.children} {...link} />)}
         </nav>
         <section className={styles.buttons}>
           <Link href={REPO_URL}>
