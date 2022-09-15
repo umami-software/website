@@ -8,7 +8,7 @@ Railway provides a free hosting services which allows you to deploy Umami and se
 
 ### Website and Database
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/umami)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/umami-analytics)
 
 Click the button above to deploy your self-hosted version of the Umami website along with an automagically provisioned PostgreSQL database.
 
