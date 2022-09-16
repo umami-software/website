@@ -1,9 +1,9 @@
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Layout from 'components/Layout';
+import 'react-basics/dist/esm/index.css';
 import 'styles/variables.css';
 import 'styles/bootstrap-grid.css';
 import 'styles/index.css';
-import 'react-basics/dist/react-basics.css';
 
 export default function App({ Component, pageProps }) {
   return (

@@ -27,7 +27,7 @@ There are also many services that will run Umami. See the **Guides** section in 
 
 A fast way to get up and running is to use Railway
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/umami)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/umami-analytics)
 
 See [Running on Railway](https://umami.is/docs/running-on-railway) to get started.
 
