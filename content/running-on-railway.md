@@ -12,7 +12,7 @@ Railway provides a free hosting services which allows you to deploy Umami and se
 
 Click the button above to deploy your self-hosted version of the Umami website along with an automagically provisioned PostgreSQL database.
 
-You will be asked to add the `HASH_SALT` enviroment variable which is a random string used to generate unique values for your installation.
+You will be asked to add the `HASH_SALT` environment variable which is a random string used to generate unique values for your installation.
 
 ### Create database tables
 
