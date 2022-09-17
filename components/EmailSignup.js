@@ -32,6 +32,10 @@ export default function EmailSignup({
     }
   };
 
+  const handleChange = e => {
+    setEmail(e.target.value);
+  };
+
   return (
     <div className="container">
       <div className={classNames('row align-items-center', styles.form)}>
@@ -45,7 +49,7 @@ export default function EmailSignup({
               <TextField
                 name="email"
                 value={email}
-                onChange={setEmail}
+                onChange={handleChange}
                 placeholder="your@email.com"
               />
               <Button
