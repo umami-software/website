@@ -1,3 +1,13 @@
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+    // If you use `MDXProvider`, uncomment the following line.
+    // providerImportSource: "@mdx-js/react",
+  },
+});
+
 const headers = [
   {
     key: 'X-DNS-Prefetch-Control',
@@ -9,7 +19,7 @@ const headers = [
   },
 ];
 
-module.exports = {
+module.exports = withMDX({
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -27,4 +37,5 @@ module.exports = {
       },
     ];
   },
-};
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+});
