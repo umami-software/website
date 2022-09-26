@@ -228,7 +228,23 @@ the following data:
 }
 ```
 
-For events you would send:
+For events, from v1.37 onwards, you would send:
+
+```
+{
+    payload: {
+        website: "your-website-id",
+        url: "/",
+        event_name: "click-signup-button",
+        hostname: "your-hostname",
+        language: "en-US",
+        screen: "1920x1080"
+    },
+    type: "event"
+}
+```
+
+Prior to v1.37, the `event_name` was separated into two different fields: `event_type` and `event_value`:
 
 ```
 {
