@@ -24,7 +24,9 @@ _Automate all steps using the button above_
 1. Navigate to the **Resources** tab and click on the **Find more add-ons** button.
 1. Search for **Heroku Postgres** and follow its instructions to install the add-on.
 1. The add-on will set the `DATABASE_URL` automatically; you should not have to manually set it.
-1. You will need to set up the database tables by following the **Create database tables** section of the [Install](/docs/install) docs. You can find temporary connection details by following the **Resources > Heroku Postgres > Settings > Database Credentials** path.
+1. You will need to set up the database tables by following the **Create database tables** section of the [Install](/docs/install) docs. 
+You can find temporary connection details by following the **Resources > Heroku Postgres > Settings > Database Credentials** path. 
+To run commands found in the docs click **More > Run Console**.
 
 ### Build and Deploy
 
