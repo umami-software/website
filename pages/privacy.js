@@ -1,22 +1,18 @@
-import { CONTENT_DIR, getHtmlContent } from '../lib/content';
 import React from 'react';
+import dynamic from 'next/dynamic';
 
-export default function Privacy({ content }) {
+export default function Privacy() {
+
+  const Page = dynamic(import('../content/privacy-policy.mdx'));
+
   return (
     <article className="container markdown">
       <header>
         <h1>Privacy Policy</h1>
       </header>
-      <article dangerouslySetInnerHTML={{ __html: content.contentHtml }} />
+      <article>
+        <Page />
+      </article>
     </article>
   );
-}
-
-export async function getStaticProps() {
-  const content = await getHtmlContent(CONTENT_DIR, 'privacy-policy');
-  return {
-    props: {
-      content,
-    },
-  };
 }
