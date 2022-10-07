@@ -2,8 +2,12 @@ import React from 'react';
 import Menu from 'components/Menu';
 import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 
 export default function DocsPage({ content }) {
+
+  const Page = dynamic(import(`content/${content.id}.mdx`)); // mdx file is imported dynamically
+
   const contentTitle = React.useMemo(() => {
     const contentArray = content.contentHtml.split('\n');
     const h1 = contentArray.find(line => line.includes('<h1>'));
@@ -31,7 +35,9 @@ export default function DocsPage({ content }) {
           <Menu />
         </div>
         <div className="docs col-12 col-lg-9">
-          <article dangerouslySetInnerHTML={{ __html: content.contentHtml }} />
+          <article>
+            <Page/>
+          </article>
         </div>
       </div>
     </div>
