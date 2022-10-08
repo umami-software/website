@@ -5,7 +5,7 @@
 Railway provides a free hosting services which allows you to deploy Umami and set up a PostgreSQL database so you can have your self-hosted version at the click of a button.
 
 ## Setup Website and Database
-<hr>
+
 ### Railway Button (Recommended)
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/umami-analytics)
@@ -17,7 +17,6 @@ You will be asked to add the `HASH_SALT` environment variable which is a random 
 You should now be able to visit your Umami dashboard and set up sites that you want to track analytics for.
 
 You can find the URL in your project dashboard which you can visit by running `railway open`
-<hr>
 
 ## Running on Railway from a forked repository
 
@@ -42,20 +41,20 @@ This initial deploy will fail until you follow the rest of these steps.
 
 - Close the settings sidebar and click **New**, click **Database** and select **Add PostgreSQL**
 
-Adding the database should trigger a re-deploy, and clicking the app link should get you to the login page of your Umami instance. 
+Adding the database should trigger a re-deploy, and clicking the app link should get you to the login page of your Umami instance.
 
 Follow the remaining instructions above from [Create database tables](#create-database-tables) to finish setting up your Umami instance on Railway.
 
 ### Troubleshooting
 
-If Railway states `Your project has no deploys` within your dashboard. 
+If Railway states `Your project has no deploys` within your dashboard.
 
 1. Select `Set up your project locally` in the bottom left hand corner.
 
 2. Within the `umami` root directory follow the instructions within the pop up.
   - Login to your Railway account with `railway login`
   - Link your project with `railway link`
-  - Open your project dashboard with `railway open` 
+  - Open your project dashboard with `railway open`
   - Upload and deploy your project with `railway up`
 
 3. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
