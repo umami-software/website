@@ -11,13 +11,37 @@
 DATABASE_URL=mysql://username:password@host/umami-db?sslaccept=strict
 HASH_SALT=any-random-string
 ```
-4. Open `schema.mysql.sql` and delete all lines starting with `foreign key` and make sure to delete the dangling commas.
+4. Open `schema.mysql.sql` and delete all lines after `-- AddForeignKey`. See example below.
+<Details>
+<Summary>Example</Summary>
+
+```
+-- AddForeignKey
+ALTER TABLE `event` ADD CONSTRAINT `event_ibfk_2` FOREIGN KEY (`session_id`) REFERENCES `session`(`session_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE `event` ADD CONSTRAINT `event_ibfk_1` FOREIGN KEY (`website_id`) REFERENCES `website`(`website_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE `pageview` ADD CONSTRAINT `pageview_ibfk_2` FOREIGN KEY (`session_id`) REFERENCES `session`(`session_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE `pageview` ADD CONSTRAINT `pageview_ibfk_1` FOREIGN KEY (`website_id`) REFERENCES `website`(`website_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE `session` ADD CONSTRAINT `session_ibfk_1` FOREIGN KEY (`website_id`) REFERENCES `website`(`website_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE `website` ADD CONSTRAINT `website_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `account`(`user_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+```
+</Details><br>
+
 5. Download the [PlanetScale CLI](https://github.com/planetscale/cli/releases) and authenticate with `pscale auth login`.
 6. Create the tables by running the following command on the root of the project: `pscale shell umami-db main < sql/schema.mysql.sql`.
 7. You should now be able to build and start Umami (`npm run build` followed by `npm start`).
 6. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
 
-## Troubleshooting
+### Troubleshooting
 
 If are getting an error like the following example:
 
