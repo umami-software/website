@@ -1,22 +1,18 @@
-import { CONTENT_DIR, getHtmlContent } from 'lib/content';
 import React from 'react';
+import dynamic from 'next/dynamic';
 
-export default function Terms({ content }) {
+export default function Terms() {
+
+  const Page = dynamic(import('content/terms-of-service.mdx'));
+
   return (
     <article className="container markdown">
       <header>
         <h1>Terms of Service</h1>
       </header>
-      <article dangerouslySetInnerHTML={{ __html: content.contentHtml }} />
+      <article >
+        <Page />
+      </article>
     </article>
   );
-}
-
-export async function getStaticProps() {
-  const content = await getHtmlContent(CONTENT_DIR, 'terms-of-service');
-  return {
-    props: {
-      content,
-    },
-  };
 }
