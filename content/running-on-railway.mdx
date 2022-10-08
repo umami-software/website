@@ -4,9 +4,9 @@
 
 Railway provides a free hosting services which allows you to deploy Umami and set up a PostgreSQL database so you can have your self-hosted version at the click of a button.
 
-## Setup
-
-### Website and Database
+## Setup Website and Database
+<hr>
+### Railway Button (Recommended)
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/umami-analytics)
 
@@ -14,14 +14,10 @@ Click the button above to deploy your self-hosted version of the Umami website a
 
 You will be asked to add the `HASH_SALT` environment variable which is a random string used to generate unique values for your installation.
 
-You should now be able to visit your Umami dashboard and set up sites that you want to track analytics for
+You should now be able to visit your Umami dashboard and set up sites that you want to track analytics for.
+
 You can find the URL in your project dashboard which you can visit by running `railway open`
-
-### Notes
-
-- Make sure you [change your password](https://umami.is/docs/login) after you log in for the first time
-- Read more about [adding a website](https://umami.is/docs/add-a-website) and [collecting data](https://umami.is/docs/collect-data) here
-- [Here](https://umami-0ce3be-production.up.railway.app/share/QFjN7Inl/LTV) is a link to a shared dashboard hosted on Railway
+<hr>
 
 ## Running on Railway from a forked repository
 
@@ -49,3 +45,21 @@ This initial deploy will fail until you follow the rest of these steps.
 Adding the database should trigger a re-deploy, and clicking the app link should get you to the login page of your Umami instance. 
 
 Follow the remaining instructions above from [Create database tables](#create-database-tables) to finish setting up your Umami instance on Railway.
+
+### Troubleshooting
+
+If Railway states `Your project has no deploys` within your dashboard. 
+
+1. Select `Set up your project locally` in the bottom left hand corner.
+
+2. Within the `umami` root directory follow the instructions within the pop up.
+  - Login to your Railway account with `railway login`
+  - Link your project with `railway link`
+  - Open your project dashboard with `railway open` 
+  - Upload and deploy your project with `railway up`
+
+3. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
+
+### Notes
+
+- Read more about [adding a website](https://umami.is/docs/add-a-website) and [collecting data](https://umami.is/docs/collect-data) here

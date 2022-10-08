@@ -9,3 +9,7 @@ From the form that pops up, copy the code and insert it into the `<head>` sectio
 <img src="/images/tracking-code-form.png" />
 
 Then visit your website and data should immediately appear in your Umami dashboard.
+
+### Troubleshooting
+
+- If your site was built with [Next.js](https://nextjs.org/), Insert the above code block using the [next/script](https://nextjs.org/docs/basic-features/script#usage) component within your `index.js/tsx` file.
