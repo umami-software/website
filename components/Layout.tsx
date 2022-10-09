@@ -3,7 +3,13 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 
-export default function Layout({ title, children }) {
+//Interface for Props
+interface Props {
+  title?: string;
+  children: React.ReactNode;
+}
+
+export default function Layout({ title, children }: Props) {
   return (
     <>
       <Head>
