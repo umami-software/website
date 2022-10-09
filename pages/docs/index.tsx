@@ -8,5 +8,5 @@ export default function DocsIndexPage() {
     router.replace('/docs/getting-started');
   }, []);
 
-  return null;
+  return;
 }
