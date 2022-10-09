@@ -4,7 +4,15 @@ import { Button } from 'react-basics';
 import XMark from 'assets/xmark.svg';
 import styles from './MobileMenu.module.css';
 
-export default function MobileMenu({ items = [], onClose }) {
+interface Props {
+  items: {
+    label: string;
+    value: string;
+  }[];
+  onClose: () => void;
+}
+
+export default function MobileMenu({ items = [], onClose }: Props) {
   return (
     <div className={classNames(styles.menu)}>
       <div className={styles.header}>

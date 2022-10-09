@@ -1,8 +1,16 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button, TextField } from 'react-basics';
 import classNames from 'classnames';
 import CheckCircle from 'assets/check-circle.svg';
 import styles from './EmailSignup.module.css';
+
+interface Props {
+  type: string;
+  title: string;
+  buttonText?: string;
+  successText?: string;
+  children: React.ReactNode;
+}
 
 export default function EmailSignup({
   title,
@@ -10,7 +18,7 @@ export default function EmailSignup({
   type,
   buttonText = 'Subscribe',
   successText = 'Thanks!',
-}) {
+}: Props) {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -32,7 +40,7 @@ export default function EmailSignup({
     }
   };
 
-  const handleChange = e => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
 

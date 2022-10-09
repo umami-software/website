@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 
-//Interface for Props
 interface Props {
   title?: string;
   children: React.ReactNode;
