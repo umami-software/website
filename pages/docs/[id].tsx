@@ -3,6 +3,7 @@ import Menu from 'components/Menu';
 import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
 export default function DocsPage({ content }: { content: { id: string; contentHtml: string } }) {
   const Page = dynamic(import(`content/${content.id}.mdx`)); // mdx file is imported dynamically
@@ -43,19 +44,19 @@ export default function DocsPage({ content }: { content: { id: string; contentHt
   );
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPathIds(CONTENT_DIR);
   return {
     paths,
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }: { params: { id: string } }) => {
   const content = await getHtmlContent(CONTENT_DIR, params.id);
   return {
     props: {
       content,
     },
   };
-}
+};
