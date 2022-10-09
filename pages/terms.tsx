@@ -1,7 +1,8 @@
 import React from 'react';
+import { NextPage } from 'next';
 import Page from 'content/terms-of-service.mdx';
 
-export default function Terms() {
+const Terms: NextPage = () => {
   return (
     <article className="container markdown">
       <header>
@@ -12,4 +13,6 @@ export default function Terms() {
       </article>
     </article>
   );
-}
+};
+
+export default Terms;

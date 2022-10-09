@@ -1,12 +1,15 @@
+import { NextPage } from 'next';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-export default function DocsIndexPage() {
+const DocsIndexPage: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
     router.replace('/docs/getting-started');
   }, []);
 
-  return;
-}
+  return null;
+};
+
+export default DocsIndexPage;

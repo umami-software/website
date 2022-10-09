@@ -1,11 +1,12 @@
 import React from 'react';
+import { NextPage } from 'next';
 import Menu from 'components/Menu';
 import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
-export default function DocsPage({ content }: { content: { id: string; contentHtml: string } }) {
+const DocsPage: NextPage = ({ content }: { content: { id: string; contentHtml: string } }) => {
   const Page = dynamic(import(`content/${content.id}.mdx`)); // mdx file is imported dynamically
 
   const contentTitle = React.useMemo(() => {
@@ -42,7 +43,7 @@ export default function DocsPage({ content }: { content: { id: string; contentHt
       </div>
     </div>
   );
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPathIds(CONTENT_DIR);
@@ -60,3 +61,5 @@ export const getStaticProps: GetStaticProps = async ({ params }: { params: { id:
     },
   };
 };
+
+export default DocsPage;

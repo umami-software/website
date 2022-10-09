@@ -1,6 +1,7 @@
+import { NextPage } from 'next';
 import Pricing from 'components/Pricing';
 
-export default function PricingPage() {
+const PricingPage: NextPage = () => {
   return (
     <article className="container">
       <header>
@@ -9,4 +10,6 @@ export default function PricingPage() {
       <Pricing />
     </article>
   );
-}
+};
+
+export default PricingPage;

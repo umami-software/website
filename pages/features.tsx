@@ -1,6 +1,7 @@
+import { NextPage } from 'next';
 import Features from 'components/Features';
 
-export default function FeaturesPage() {
+const FeaturesPage: NextPage = () => {
   return (
     <article className="container">
       <header>
@@ -13,4 +14,6 @@ export default function FeaturesPage() {
       <Features />
     </article>
   );
-}
+};
+
+export default FeaturesPage;
