@@ -1,10 +1,7 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
+import Page from "content/privacy-policy.mdx";
 
 export default function Privacy() {
-
-  const Page = dynamic(import('../content/privacy-policy.mdx'));
-
   return (
     <article className="container markdown">
       <header>
