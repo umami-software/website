@@ -1,12 +1,13 @@
 import React from 'react';
+import { NextPage } from 'next';
 import Intro from 'components/Intro';
 import Statements from 'components/Statements';
 import Stats from 'components/Stats';
 import NewsletterSignup from 'components/NewsletterSignup';
 import GetStarted from 'components/GetStarted';
-import Splash from '../components/Splash';
+import Splash from 'components/Splash';
 
-export default function IndexPage() {
+const IndexPage: NextPage = () => {
   return (
     <>
       <div className="container">
@@ -24,4 +25,6 @@ export default function IndexPage() {
       </div>
     </>
   );
-}
+};
+
+export default IndexPage;

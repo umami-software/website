@@ -3,7 +3,11 @@ import Link from 'next/link';
 import Logo from 'assets/logo.svg';
 import styles from './CompanyLogo.module.css';
 
-export default function CompanyLogo({ className }) {
+interface Props {
+  className?: string;
+}
+
+export default function CompanyLogo({ className }: Props) {
   return (
     <Link href="/">
       <a className={classNames(styles.logo, className)}>

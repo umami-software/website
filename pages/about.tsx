@@ -1,4 +1,6 @@
-export default function About() {
+import { NextPage } from 'next';
+
+const About: NextPage = () => {
   return (
     <article className="container">
       <header>
@@ -27,4 +29,6 @@ export default function About() {
       </div>
     </article>
   );
-}
+};
+
+export default About;

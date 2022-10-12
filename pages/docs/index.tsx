@@ -1,7 +1,8 @@
+import { NextPage } from 'next';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-export default function DocsIndexPage() {
+const DocsIndexPage: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
@@ -9,4 +10,6 @@ export default function DocsIndexPage() {
   }, []);
 
   return null;
-}
+};
+
+export default DocsIndexPage;
