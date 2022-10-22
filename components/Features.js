@@ -22,7 +22,7 @@ const features = [
   {
     name: 'Powerful filters',
     description:
-      'Dive deeper into your data using easy to apply filters. Segment your users any metric such as browser, OS, and country.',
+      'Dive deeper into your data using easy to apply filters. Segment your users by any metric such as browser, OS, and country.',
     image: '/images/feature-filters.png',
   },
   {
