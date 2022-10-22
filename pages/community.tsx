@@ -1,6 +1,7 @@
+import { NextPage } from 'next';
 import Community from 'components/Community';
 
-export default function CommunityPage() {
+const CommunityPage: NextPage = () => {
   return (
     <article className="container">
       <header>
@@ -14,4 +15,6 @@ export default function CommunityPage() {
       <Community />
     </article>
   );
-}
+};
+
+export default CommunityPage;

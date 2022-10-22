@@ -1,11 +1,12 @@
 import React from 'react';
+import { NextPage } from 'next';
 import Menu from 'components/Menu';
 import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
-export default function DocsPage({ content }) {
-
+const DocsPage: NextPage = ({ content }: { content: { id: string; contentHtml: string } }) => {
   const Page = dynamic(import(`content/${content.id}.mdx`)); // mdx file is imported dynamically
 
   const contentTitle = React.useMemo(() => {
@@ -24,11 +25,11 @@ export default function DocsPage({ content }) {
 
   return (
     <div className="container markdown">
-      {contentTitle ? (
+      {contentTitle && (
         <Head>
           <title>{`umami - ${contentTitle}`}</title>
         </Head>
-      ) : null}
+      )}
 
       <div className="row">
         <div className="col-12 col-lg-3">
@@ -36,27 +37,29 @@ export default function DocsPage({ content }) {
         </div>
         <div className="docs col-12 col-lg-9">
           <article>
-            <Page/>
+            <Page />
           </article>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPathIds(CONTENT_DIR);
   return {
     paths,
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }: { params: { id: string } }) => {
   const content = await getHtmlContent(CONTENT_DIR, params.id);
   return {
     props: {
       content,
     },
   };
-}
+};
+
+export default DocsPage;

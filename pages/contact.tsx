@@ -1,6 +1,7 @@
+import { NextPage } from 'next';
 import Link from 'next/link';
 
-export default function ContactPage() {
+const ContactPage: NextPage = () => {
   return (
     <article className="container">
       <header>
@@ -12,4 +13,6 @@ export default function ContactPage() {
       </header>
     </article>
   );
-}
+};
+
+export default ContactPage;

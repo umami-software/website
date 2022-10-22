@@ -1,10 +1,8 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
+import { NextPage } from 'next';
+import Page from 'content/privacy-policy.mdx';
 
-export default function Privacy() {
-
-  const Page = dynamic(import('../content/privacy-policy.mdx'));
-
+const Privacy: NextPage = () => {
   return (
     <article className="container markdown">
       <header>
@@ -15,4 +13,6 @@ export default function Privacy() {
       </article>
     </article>
   );
-}
+};
+
+export default Privacy;
