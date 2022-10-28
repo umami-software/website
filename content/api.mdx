@@ -70,13 +70,13 @@ Creates a website.
 
 ```
 {
-    website_id: 4,
-    website_uuid: "51f73213-3f01-4343-a135-25496a3ffd31",
-    user_id: 2,
+    id: 4,
+    websiteUuid: "51f73213-3f01-4343-a135-25496a3ffd31",
+    userId: 2,
     name: "Umami",
     domain: "umami.is",
-    share_id: "8PWex1pa",
-    "created_at":"2021-07-26T17:17:52.846Z"
+    shareId: "8PWex1pa",
+    createdAt: "2021-07-26T17:17:52.846Z"
 }
 ```
 
@@ -93,19 +93,21 @@ None
 ```
 [
     {
-        website_id: 4,
-        website_uuid: "51f73213-3f01-4343-a135-25496a3ffd31",
-        user_id: 2,
+        id: 4,
+        websiteUuid: "51f73213-3f01-4343-a135-25496a3ffd31",
+        userId: 2,
         name: "Umami",
         domain: "umami.is",
-        share_id: "8PWex1pa",
-        "created_at":"2021-07-26T17:17:52.846Z"
+        shareId: "8PWex1pa",
+        createdAt: "2021-07-26T17:17:52.846Z"
     },
     {
         ...
     }
 ]
 ```
+
+Prior to v1.39 some fields had a different name. If using an old version, use `website_id` instead of `id`, and rewrite the other fields in snake case (for example `share_id` instead of `shareId`).
 
 ## Getting stats
 
