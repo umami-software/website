@@ -21,7 +21,13 @@ const menu = {
     ['Tracker configuration', '/docs/tracker-configuration'],
     ['Tracker functions', '/docs/tracker-functions'],
     ['Environment variables', '/docs/environment-variables'],
-    ['API', '/docs/api'],
+  ],
+  API: [
+    ['Getting started', '/docs/api'],
+    ['Authentication', '/docs/api-authentication'],
+    ['Websites', '/docs/api-websites'],
+    ['Getting Stats', '/docs/api-getting-stats'],
+    ['Sending Stats', '/docs/api-sending-stats'],
   ],
   Guides: [
     ['Hosting', '/docs/hosting'],

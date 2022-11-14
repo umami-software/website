@@ -1,0 +1,99 @@
+## Getting stats
+
+There are several endpoints your can call to get stats for your website. All the
+stats endpoints require sending a `GET` request with the `umami.auth` authentication cookie.
+
+
+## `GET /api/website/{id}/stats`
+
+Gets summarized website statistics.
+
+**Query Parameters**
+
+- `start_at`: Timestamp (in ms) of starting date
+- `end_at`: Timestamp (in ms) of end date
+
+**Sample example**
+
+GET (with Authorization header) from url : `https://umami.mydomain.com/api/website/1/stats?start_at=1656679719687&end_at=1656766119687`
+
+```
+{
+  pageviews: { value: 5, change: 5 },
+  uniques: { value: 1, change: 1 },
+  bounces: { value: 0, change: 0 },
+  totaltime: { value: 4, change: 4 }
+}
+```
+
+- `pageviews`: Pages hits
+- `uniques`: Number of unique visitor
+- `bounces`: Number of returning visitor
+- `totaltime` : Time spent on the website
+
+
+## `GET /api/website/{id}/pageviews`
+
+Gets pageviews within a given time range.
+
+**Parameters**
+
+- `start_at`: Timestamp (in ms) of starting date
+- `end_at`: Timestamp (in ms) of end date
+- `unit`: Time unit (year | month | hour | day)
+- `tz`: Timezone (ex. America/Los_Angeles)
+
+**Sample response**
+
+```
+{
+    pageviews: [
+        {t: "2020-04-20 01:00:00", y: 3},
+        {t: "2020-04-20 02:00:00", y: 7}
+    ],
+    sessions: [
+        {t: "2020-04-20 01:00:00", y: 2},
+        {t: "2020-04-20 02:00:00", y: 4}
+    ]
+}
+```
+
+## `GET /api/website/{id}/events`
+
+Gets events within a given time range.
+
+**Parameters**
+
+- `start_at`: Timestamp (in ms) of starting date
+- `end_at`: Timestamp (in ms) of end date
+- `unit`: Time unit (year | month | hour | day)
+- `tz`: Timezone (ex. America/Los_Angeles)
+
+**Sample response**
+
+```
+[
+    {x: "download-button", t: "2020-04-20 02:00:00", y: 2},
+    {x: "signup-button", t: "2020-04-20 02:00:00", y: 1}
+]
+```
+
+## `GET /api/website/{id}/metrics`
+
+Gets metrics for a given time range.
+
+**Parameters**
+
+- `start_at`: Timestamp (in ms) of starting date
+- `end_at`: Timestamp (in ms) of end date
+- `type`: Metrics type (url | referrer | browser | os | device | country | event)
+
+**Sample response**
+
+```
+[
+    {x: "/", y: 46}
+    {x: "/docs", y: 17}
+    {x: "/download", y: 14}
+]
+```

@@ -1,0 +1,59 @@
+## Sending stats
+
+## `POST /api/collect`
+
+To register a `pageview` or `event`, you need to send a `POST` to `/api/collect` with
+the following data:
+
+```
+{
+    payload: {
+        website: "your-website-id",
+        url: "/",
+        referrer: "",
+        hostname: "your-hostname",
+        language: "en-US",
+        screen: "1920x1080",
+    },
+    type: "pageview"
+}
+```
+
+For events, from v1.37 onwards, you would send:
+
+```
+{
+    payload: {
+        website: "your-website-id",
+        url: "/",
+        event_name: "click-signup-button",
+        hostname: "your-hostname",
+        language: "en-US",
+        screen: "1920x1080"
+    },
+    type: "event"
+}
+```
+
+Prior to v1.37, the `event_name` was separated into two different fields: `event_type` and `event_value`:
+
+```
+{
+    payload: {
+        website: "your-website-id",
+        url: "/",
+        event_type: "click",
+        event_value: "signup-button",
+        hostname: "your-hostname",
+        language: "en-US",
+        screen: "1920x1080"
+    },
+    type: "event"
+}
+```
+
+Note, for `/api/collect` requests you do not need to send an
+authentication token.
+
+Also, you need to send a proper `User-Agent` HTTP header or
+your request won't be registered.
