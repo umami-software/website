@@ -67,7 +67,20 @@ export default function Pricing() {
           </ul>
         </div>
       </div>
-      <BetaSignup />
+      <div className={styles.signup}>
+        <h2>Umami Cloud BETA</h2>
+        <p>Umami Cloud is currently running an open BETA program.</p>
+        <p>
+          You can try out all the features for <b>free</b> before we launch.
+        </p>
+        <div className={styles.button}>
+          <Link href="https://cloud.umami.is/signup">
+            <a className="button umami--click--cloud-beta-button" target="_blank">
+              <Button variant="primary">Sign up</Button>
+            </a>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
