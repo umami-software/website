@@ -5,7 +5,6 @@ import Tools from 'assets/tools.svg';
 import Cloud from 'assets/cloud.svg';
 import styles from './Pricing.module.css';
 import Link from 'next/link';
-import BetaSignup from './BetaSignup';
 
 export default function Pricing() {
   return (
