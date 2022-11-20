@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, Container, Column, TextField } from 'react-basics';
-import classNames from 'classnames';
 import CheckCircle from 'assets/check-circle.svg';
 import styles from './EmailSignup.module.css';
 

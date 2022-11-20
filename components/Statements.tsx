@@ -1,5 +1,4 @@
 import styles from './Statements.module.css';
-import classNames from 'classnames';
 import Lock from 'assets/lock.svg';
 import Shield from 'assets/shield.svg';
 import Analytics from 'assets/analytics.svg';

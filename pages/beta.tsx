@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import BetaSignup from '../components/BetaSignup';
 import Link from 'next/link';
 import { Button, Flexbox } from 'react-basics';
 

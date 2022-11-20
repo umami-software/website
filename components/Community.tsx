@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { Button, Container, Column } from 'react-basics';
 import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
