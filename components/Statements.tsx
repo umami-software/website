@@ -8,26 +8,20 @@ import { Container, Column } from 'react-basics';
 const Block = ({ title, icon, children }) => {
   return (
     <Container className={styles.block}>
-      {breakpoint => {
-        return (
-          <>
-            <Column size={6} xs={12} sm={12} className={styles.content}>
-              <h1>{title}</h1>
-              {children}
-            </Column>
-            <Column
-              size={6}
-              xs={12}
-              sm={12}
-              order={{ xs: -1, sm: -1, md: 0, lg: 0, xl: 0 }}
-              className={styles.icon}
-            >
-              {icon}
-              {icon}
-            </Column>
-          </>
-        );
-      }}
+      <Column size={6} xs={12} sm={12} className={styles.content}>
+        <h1>{title}</h1>
+        {children}
+      </Column>
+      <Column
+        size={6}
+        xs={12}
+        sm={12}
+        order={{ xs: -1, sm: -1, md: 0, lg: 0, xl: 0 }}
+        className={styles.icon}
+      >
+        {icon}
+        {icon}
+      </Column>
     </Container>
   );
 };
