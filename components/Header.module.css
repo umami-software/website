@@ -9,6 +9,13 @@
   height: 70px;
   z-index: 100;
   border-radius: 20px;
+  padding: 0 20px;
+}
+
+.header > * {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
 }
 
 .header svg {
@@ -22,7 +29,7 @@
   font-weight: 600;
 }
 
-.links {
+.header .links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,18 +38,12 @@
   font-weight: 600;
 }
 
-.buttons {
+.header .buttons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-@media only screen and (max-width: 992px) {
-  .title {
-    flex: 1;
-  }
-  .links,
-  .buttons {
-    display: none;
-  }
+.header .menu {
+  justify-content: flex-end;
 }

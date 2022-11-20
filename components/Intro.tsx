@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { Button } from 'react-basics';
+import { Button, Container, Column } from 'react-basics';
 import styles from './Intro.module.css';
 
 export default function Intro() {
   return (
-    <div className={styles.intro}>
-      <div className={styles.content}>
+    <Container className={styles.intro}>
+      <Column className={styles.content}>
         <h1>Own your website analytics</h1>
         <h2>
           <span>Umami is an </span>
@@ -19,7 +19,7 @@ export default function Intro() {
         </h2>
         <div className={styles.buttons}>
           <a href="/docs" className="button umami--click--get-started-button">
-            <Button size="large" variant="primary">
+            <Button size="lg" variant="primary">
               Get Started
             </Button>
           </a>
@@ -29,10 +29,10 @@ export default function Intro() {
             target="_blank"
             rel="noreferrer"
           >
-            <Button size="large">Live Demo</Button>
+            <Button size="lg">Live Demo</Button>
           </a>
         </div>
-      </div>
-    </div>
+      </Column>
+    </Container>
   );
 }

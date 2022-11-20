@@ -1,34 +1,35 @@
+import { Container, Column } from 'react-basics';
 import Link from 'next/link';
-import classNames from 'classnames';
 import { REPO_URL } from 'lib/constants';
 import CompanyLogo from './CompanyLogo';
-import GitHub from 'assets/github.svg';
-
-import styles from './Header.module.css';
 import HamburgerButton from './HamburgerButton';
+import GitHub from 'assets/github.svg';
+import styles from './Header.module.css';
 
 export default function Header() {
   return (
     <header>
-      <div className={classNames('container', styles.header)}>
-        <div className={styles.title}>
+      <Container className={styles.header}>
+        <Column size={4} xs={10} sm={10} md={6} className={styles.title}>
           <CompanyLogo />
-        </div>
-        <div className={styles.links}>
+        </Column>
+        <Column size={4} xs={0} sm={0} md={0} className={styles.links}>
           <Link href="/features">Features</Link>
           <Link href="/docs">Docs</Link>
           <Link href="/community">Community</Link>
           <Link href="/pricing">Pricing</Link>
-        </div>
-        <div className={styles.buttons}>
+        </Column>
+        <Column size={4} xs={0} sm={0} md={0} className={styles.buttons}>
           <Link href={REPO_URL}>
             <a target="_blank">
               <GitHub />
             </a>
           </Link>
-        </div>
-        <HamburgerButton />
-      </div>
+        </Column>
+        <Column size={0} xs={2} sm={2} md={6} className={styles.menu}>
+          <HamburgerButton />
+        </Column>
+      </Container>
     </header>
   );
 }

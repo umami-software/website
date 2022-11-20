@@ -1,4 +1,4 @@
-.form {
+.container {
   padding: 30px;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -7,6 +7,7 @@
   box-shadow: 4px 4px 4px var(--gray300);
 }
 
+.form,
 .input {
   display: flex;
   gap: 10px;

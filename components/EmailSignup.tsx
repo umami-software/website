@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, TextField } from 'react-basics';
+import { Button, Container, Column, TextField } from 'react-basics';
 import classNames from 'classnames';
 import CheckCircle from 'assets/check-circle.svg';
 import styles from './EmailSignup.module.css';
@@ -45,38 +45,36 @@ export default function EmailSignup({
   };
 
   return (
-    <div className="container">
-      <div className={classNames('row align-items-center', styles.form)}>
-        <div className="col-sm-12 col-lg-7">
-          <h1>{title}</h1>
-          <p>{children}</p>
-        </div>
-        <div className="col-sm-12 col-lg-5">
-          {!submitted && (
-            <div className={styles.input}>
-              <TextField
-                name="email"
-                value={email}
-                onChange={handleChange}
-                placeholder="your@email.com"
-              />
-              <Button
-                variant="primary"
-                className={`umami--signup--email-${type}`}
-                onClick={handleClick}
-              >
-                {buttonText}
-              </Button>
-            </div>
-          )}
-          {submitted && (
-            <div className={styles.confirm}>
-              <CheckCircle />
-              <span>{successText}</span>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
+    <Container className={styles.container}>
+      <Column size={8} xs={12} sm={12} md={12}>
+        <h1>{title}</h1>
+        <p>{children}</p>
+      </Column>
+      <Column size={4} xs={12} sm={12} md={12} className={styles.form}>
+        {!submitted && (
+          <div className={styles.input}>
+            <TextField
+              name="email"
+              value={email}
+              onChange={handleChange}
+              placeholder="your@email.com"
+            />
+            <Button
+              variant="primary"
+              className={`umami--signup--email-${type}`}
+              onClick={handleClick}
+            >
+              {buttonText}
+            </Button>
+          </div>
+        )}
+        {submitted && (
+          <div className={styles.confirm}>
+            <CheckCircle />
+            <span>{successText}</span>
+          </div>
+        )}
+      </Column>
+    </Container>
   );
 }

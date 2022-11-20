@@ -8,6 +8,7 @@
   padding: 30px;
   border-radius: 10px;
   background: var(--gray75);
+  margin: 0 auto;
 }
 
 .title {
@@ -63,5 +64,5 @@
   border: 1px solid var(--gray300);
   border-radius: 10px;
   padding: 30px;
-  width: 600px;
+  box-shadow: 4px 4px 4px var(--gray300);
 }

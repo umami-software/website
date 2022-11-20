@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Button } from 'react-basics';
+import { Button, Container, Column } from 'react-basics';
 import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
 import Twitter from 'assets/twitter.svg';
@@ -31,10 +31,10 @@ const items = [
 
 export default function Community() {
   return (
-    <div className={classNames('container', styles.community)}>
-      <div className="row justify-content-evenly">
-        {items.map(({ name, description, url, icon }) => (
-          <div key={name} className={classNames('col-10 col-md-5 col-xl-3', styles.block)}>
+    <Container className={styles.community}>
+      {items.map(({ name, description, url, icon }) => (
+        <Column key={name} xs={12} sm={12} md={6} lg={4} xl={4}>
+          <div className={styles.block}>
             <h2>
               {icon} {name}
             </h2>
@@ -47,8 +47,8 @@ export default function Community() {
               </a>
             </Link>
           </div>
-        ))}
-      </div>
-    </div>
+        </Column>
+      ))}
+    </Container>
   );
 }

@@ -1,9 +1,10 @@
+import React from 'react';
+import { Container, Column } from 'react-basics';
 import Link from 'next/link';
 import classNames from 'classnames';
-import styles from './Footer.module.css';
-import React from 'react';
 import CompanyLogo from './CompanyLogo';
 import SocialMedia from './SocialMedia';
+import styles from './Footer.module.css';
 
 const data = [
   {
@@ -45,31 +46,29 @@ const data = [
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className="container">
-        <div className="row">
-          <div className={classNames('col-12 col-lg-3', styles.logo)}>
-            <CompanyLogo />
+      <Container>
+        <Column className={styles.logo} xs={12} sm={12} md={12}>
+          <CompanyLogo />
+        </Column>
+        {data.map(({ title, items }) => (
+          <Column key={title} xs={6} sm={6} md={3} className={classNames(styles.col, styles.links)}>
+            <h1>{title}</h1>
+            {items.map(({ text, href }) => (
+              <Link key={text} href={href}>
+                <a target={href.startsWith('http') ? '_blank' : null}>{text}</a>
+              </Link>
+            ))}
+          </Column>
+        ))}
+      </Container>
+      <Container>
+        <Column>
+          <SocialMedia />
+          <div className={styles.copy}>
+            <div>&copy; 2022 Umami Software, Inc.</div>
           </div>
-          <div className="col-12 col-lg-9">
-            <div className="row">
-              {data.map(({ title, items }) => (
-                <div key={title} className={classNames('col-6 col-lg-3', styles.col, styles.links)}>
-                  <h1>{title}</h1>
-                  {items.map(({ text, href }) => (
-                    <Link key={text} href={href}>
-                      <a target={href.startsWith('http') ? '_blank' : null}>{text}</a>
-                    </Link>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <SocialMedia />
-        <div className={styles.copy}>
-          <div>&copy; 2022 Umami Software, Inc.</div>
-        </div>
-      </div>
+        </Column>
+      </Container>
     </footer>
   );
 }

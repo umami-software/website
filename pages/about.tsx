@@ -1,13 +1,14 @@
 import { NextPage } from 'next';
+import { Column, Container } from 'react-basics';
 
 const About: NextPage = () => {
   return (
-    <article className="container">
-      <header>
-        <h1>Company</h1>
-      </header>
-      <div className="row justify-content-center">
-        <div className="col-8">
+    <Container center>
+      <Column size={8}>
+        <article>
+          <header>
+            <h1>Company</h1>
+          </header>
           <h1>Values</h1>
           <p>
             Umami was founded with the belief that users should be empowered by the software they
@@ -25,9 +26,9 @@ const About: NextPage = () => {
             to open source.
           </p>
           <p>They get along most of the time.</p>
-        </div>
-      </div>
-    </article>
+        </article>
+      </Column>
+    </Container>
   );
 };
 

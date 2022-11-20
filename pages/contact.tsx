@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const ContactPage: NextPage = () => {
   return (
-    <article className="container">
+    <article>
       <header>
         <h1>Contact</h1>
         <p>We would love to hear from you!</p>

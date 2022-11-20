@@ -1,5 +1,5 @@
+import { Container, Column } from 'react-basics';
 import styles from './Stats.module.css';
-import classNames from 'classnames';
 
 const stats = [
   { name: 'Downloads', value: '4M+' },
@@ -9,13 +9,13 @@ const stats = [
 
 export default function Stats() {
   return (
-    <div className={classNames('row', styles.stats)}>
+    <Container className={styles.stats}>
       {stats.map(({ name, value }) => (
-        <div key={name} className={classNames('col-12 col-lg-4', styles.stat)}>
+        <Column key={name} size={4} xs={12} sm={12} md={12} className={styles.stat}>
           <div className={styles.value}>{value}</div>
           <div className={styles.name}>{name}</div>
-        </div>
+        </Column>
       ))}
-    </div>
+    </Container>
   );
 }

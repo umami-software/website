@@ -4,25 +4,38 @@ import Lock from 'assets/lock.svg';
 import Shield from 'assets/shield.svg';
 import Analytics from 'assets/analytics.svg';
 import OpenSource from 'assets/open-source.svg';
+import { Container, Column } from 'react-basics';
 
 const Block = ({ title, icon, children }) => {
   return (
-    <div className={classNames('row justify-content-center', styles.block)}>
-      <div className={classNames('col-12 col-sm-10 col-lg-8 order-1 order-lg-0', styles.content)}>
-        <h1>{title}</h1>
-        {children}
-      </div>
-      <div className={classNames('col-12 col-sm-10 col-lg-4 order-0 order-lg-1', styles.icon)}>
-        {icon}
-        {icon}
-      </div>
-    </div>
+    <Container className={styles.block}>
+      {breakpoint => {
+        return (
+          <>
+            <Column size={6} xs={12} sm={12} className={styles.content}>
+              <h1>{title}</h1>
+              {children}
+            </Column>
+            <Column
+              size={6}
+              xs={12}
+              sm={12}
+              order={{ xs: -1, sm: -1, md: 0, lg: 0, xl: 0 }}
+              className={styles.icon}
+            >
+              {icon}
+              {icon}
+            </Column>
+          </>
+        );
+      }}
+    </Container>
   );
 };
 
 export default function Statements() {
   return (
-    <section className={classNames('container', styles.statements)}>
+    <section className={styles.statements}>
       <Block title="Respect data privacy" icon={<Lock />}>
         <p>
           Umami lets you to gather the data you need while respecting the privacy of your users.

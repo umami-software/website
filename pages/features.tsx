@@ -3,7 +3,7 @@ import Features from 'components/Features';
 
 const FeaturesPage: NextPage = () => {
   return (
-    <article className="container">
+    <article>
       <header>
         <h1>Features</h1>
         <p>

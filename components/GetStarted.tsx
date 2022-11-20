@@ -7,7 +7,7 @@ export default function GetStarted() {
       <h1>Are you ready for better analytics?</h1>
       <div className={styles.buttons}>
         <a href="/docs" className="button umami--click--get-started-button">
-          <Button size="large" variant="primary">
+          <Button size="lg" variant="primary">
             Get Started
           </Button>
         </a>
@@ -17,7 +17,7 @@ export default function GetStarted() {
           target="_blank"
           rel="noreferrer"
         >
-          <Button size="large">Live Demo</Button>
+          <Button size="lg">Live Demo</Button>
         </a>
       </div>
     </div>

@@ -3,7 +3,7 @@ import Pricing from 'components/Pricing';
 
 const PricingPage: NextPage = () => {
   return (
-    <article className="container">
+    <article>
       <header>
         <h1>Pricing</h1>
       </header>

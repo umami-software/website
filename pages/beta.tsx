@@ -1,16 +1,24 @@
 import { NextPage } from 'next';
 import BetaSignup from '../components/BetaSignup';
+import Link from 'next/link';
+import { Button, Flexbox } from 'react-basics';
 
 const BetaPage: NextPage = () => {
   return (
-    <article className="container">
-      <header>
-        <h1>
-          Cloud <sub style={{ fontSize: 24 }}>BETA</sub>
-        </h1>
-      </header>
-      <BetaSignup />
-    </article>
+    <Flexbox justifyContent="center">
+      <article>
+        <header>
+          <h1>
+            Cloud <sub style={{ fontSize: 24 }}>BETA</sub>
+          </h1>
+        </header>
+        <Link href="https://cloud.umami.is/signup">
+          <a className="button umami--click--cloud-beta-button" target="_blank">
+            <Button variant="primary">Sign up for Umami Cloud</Button>
+          </a>
+        </Link>
+      </article>
+    </Flexbox>
   );
 };
 

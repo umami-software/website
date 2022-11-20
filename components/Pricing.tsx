@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Button } from 'react-basics';
+import { Button, Container, Column } from 'react-basics';
 import Checkmark from 'assets/checkmark.svg';
 import Tools from 'assets/tools.svg';
 import Cloud from 'assets/cloud.svg';
@@ -8,9 +8,9 @@ import Link from 'next/link';
 
 export default function Pricing() {
   return (
-    <div className={classNames('container', styles.pricing)}>
-      <div className="row justify-content-center">
-        <div className={classNames('col-12 col-lg-6 col-xl-4', styles.tier)}>
+    <>
+      <Container className={styles.pricing}>
+        <Column xs={12} sm={12} size={6} className={classNames(styles.tier)}>
           <div className={styles.title}>
             <Tools /> Umami Open Source
           </div>
@@ -40,8 +40,8 @@ export default function Pricing() {
               </a>
             </Link>
           </div>
-        </div>
-        <div className={classNames('col-12 col-lg-6 col-xl-4', styles.tier, styles.cloud)}>
+        </Column>
+        <Column xs={12} sm={12} size={6} className={classNames(styles.tier, styles.cloud)}>
           <div className={styles.title}>
             <Cloud /> Umami Cloud
           </div>
@@ -64,22 +64,24 @@ export default function Pricing() {
               <Checkmark /> Dedicated support
             </li>
           </ul>
-        </div>
-      </div>
-      <div className={styles.signup}>
-        <h2>Umami Cloud BETA</h2>
-        <p>Umami Cloud is currently running an open BETA program.</p>
-        <p>
-          You can try out all the features for <b>free</b> before we launch.
-        </p>
-        <div className={styles.button}>
-          <Link href="https://cloud.umami.is/signup">
-            <a className="button umami--click--cloud-beta-button" target="_blank">
-              <Button variant="primary">Sign up</Button>
-            </a>
-          </Link>
-        </div>
-      </div>
-    </div>
+        </Column>
+      </Container>
+      <Container center>
+        <Column className={styles.signup} size={6} xs={12} sm={12} md={8}>
+          <h2>Umami Cloud BETA</h2>
+          <p>Umami Cloud is currently running an open BETA program.</p>
+          <p>
+            You can try out all the features for <b>free</b> before we launch.
+          </p>
+          <div className={styles.button}>
+            <Link href="https://cloud.umami.is/signup">
+              <a className="button umami--click--cloud-beta-button" target="_blank">
+                <Button variant="primary">Sign up for Umami Cloud</Button>
+              </a>
+            </Link>
+          </div>
+        </Column>
+      </Container>
+    </>
   );
 }

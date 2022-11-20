@@ -3,7 +3,7 @@ import Community from 'components/Community';
 
 const CommunityPage: NextPage = () => {
   return (
-    <article className="container">
+    <article>
       <header>
         <h1>Community</h1>
         <p>
