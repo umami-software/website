@@ -16,9 +16,9 @@
     "lint": "next lint --quiet"
   },
   "lint-staged": {
-    "**/*.js": [
-      "eslint --fix",
-      "prettier --write"
+    "**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint"
     ],
     "**/*.css": [
       "stylelint --fix",
