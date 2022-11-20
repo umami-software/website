@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Column } from 'react-basics';
+import { Row, Column } from 'react-basics';
 import { NextPage } from 'next';
 import Menu from 'components/Menu';
 import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
@@ -25,7 +25,7 @@ const DocsPage: NextPage = ({ content }: { content: { id: string; contentHtml: s
   }, [content.contentHtml]);
 
   return (
-    <Container className="markdown">
+    <Row className="markdown">
       {contentTitle && (
         <Head>
           <title>{`umami - ${contentTitle}`}</title>
@@ -40,7 +40,7 @@ const DocsPage: NextPage = ({ content }: { content: { id: string; contentHtml: s
           <Page />
         </article>
       </Column>
-    </Container>
+    </Row>
   );
 };
 

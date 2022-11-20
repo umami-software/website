@@ -1,4 +1,4 @@
-import { Container, Column } from 'react-basics';
+import { Row, Column } from 'react-basics';
 import styles from './Stats.module.css';
 
 const stats = [
@@ -9,13 +9,13 @@ const stats = [
 
 export default function Stats() {
   return (
-    <Container className={styles.stats}>
+    <Row className={styles.stats}>
       {stats.map(({ name, value }) => (
         <Column key={name} size={4} xs={12} sm={12} md={12} className={styles.stat}>
           <div className={styles.value}>{value}</div>
           <div className={styles.name}>{name}</div>
         </Column>
       ))}
-    </Container>
+    </Row>
   );
 }

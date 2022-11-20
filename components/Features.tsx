@@ -1,6 +1,6 @@
 import styles from './Features.module.css';
 import classNames from 'classnames';
-import { Container, Column } from 'react-basics';
+import { Row, Column } from 'react-basics';
 
 const features = [
   {
@@ -81,15 +81,13 @@ export default function Features() {
   return (
     <div className={classNames(styles.features)}>
       {features.map(({ name, description, image }) => (
-        <Container key={name} className={classNames('row', styles.feature)}>
-          <Column className={classNames('col-12 col-lg-5', styles.text)}>
+        <Row key={name} className={classNames('row', styles.feature)}>
+          <Column className={styles.text}>
             <h1>{name}</h1>
             <p>{description}</p>
           </Column>
-          <Column className={classNames('col-12 col-lg-6', styles.image)}>
-            {image && <img src={image} alt={name} />}
-          </Column>
-        </Container>
+          <Column className={styles.image}>{image && <img src={image} alt={name} />}</Column>
+        </Row>
       ))}
     </div>
   );

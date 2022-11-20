@@ -3,11 +3,11 @@ import Lock from 'assets/lock.svg';
 import Shield from 'assets/shield.svg';
 import Analytics from 'assets/analytics.svg';
 import OpenSource from 'assets/open-source.svg';
-import { Container, Column } from 'react-basics';
+import { Row, Column } from 'react-basics';
 
 const Block = ({ title, icon, children }) => {
   return (
-    <Container className={styles.block}>
+    <Row className={styles.block}>
       <Column size={6} xs={12} sm={12} className={styles.content}>
         <h1>{title}</h1>
         {children}
@@ -22,7 +22,7 @@ const Block = ({ title, icon, children }) => {
         {icon}
         {icon}
       </Column>
-    </Container>
+    </Row>
   );
 };
 

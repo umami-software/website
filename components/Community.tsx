@@ -1,4 +1,4 @@
-import { Button, Container, Column } from 'react-basics';
+import { Button, Row, Column } from 'react-basics';
 import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
 import Twitter from 'assets/twitter.svg';
@@ -30,7 +30,7 @@ const items = [
 
 export default function Community() {
   return (
-    <Container className={styles.community}>
+    <Row className={styles.community}>
       {items.map(({ name, description, url, icon }) => (
         <Column key={name} xs={12} sm={12} md={6} lg={4} xl={4}>
           <div className={styles.block}>
@@ -48,6 +48,6 @@ export default function Community() {
           </div>
         </Column>
       ))}
-    </Container>
+    </Row>
   );
 }

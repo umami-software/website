@@ -1,9 +1,9 @@
 import { NextPage } from 'next';
-import { Column, Container } from 'react-basics';
+import { Column, Row } from 'react-basics';
 
 const About: NextPage = () => {
   return (
-    <Container center>
+    <Row justifyContent="center">
       <Column size={8}>
         <article>
           <header>
@@ -28,7 +28,7 @@ const About: NextPage = () => {
           <p>They get along most of the time.</p>
         </article>
       </Column>
-    </Container>
+    </Row>
   );
 };
 

@@ -1,0 +1,13 @@
+.row {
+  height: 300px;
+  max-height: 300px;
+}
+
+.column {
+  max-height: 300px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -50%;
+  margin-right: -50%;
+}

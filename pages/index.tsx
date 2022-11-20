@@ -6,31 +6,31 @@ import Stats from 'components/Stats';
 import NewsletterSignup from 'components/NewsletterSignup';
 import GetStarted from 'components/GetStarted';
 import Splash from 'components/Splash';
-import { Column, Container } from 'react-basics';
+import { Column, Row } from 'react-basics';
 
 const IndexPage: NextPage = () => {
   return (
     <>
-      <Container>
+      <Row>
         <Column>
           <Intro />
         </Column>
-      </Container>
+      </Row>
       <Splash />
-      <Container>
+      <Row>
         <Column>
           <Statements />
           <Stats />
         </Column>
-      </Container>
+      </Row>
       <Splash />
 
-      <Container>
+      <Row>
         <Column>
           <GetStarted />
           <NewsletterSignup />
         </Column>
-      </Container>
+      </Row>
     </>
   );
 };

@@ -3,19 +3,17 @@
   top: 0;
   left: 0;
   right: 0;
-  background: var(--gray50);
-  display: flex;
   margin-top: 10px;
-  height: 70px;
   z-index: 100;
-  border-radius: 20px;
-  padding: 0 20px;
 }
 
-.header > * {
-  display: flex;
-  flex-direction: row !important;
+.row {
+  background: var(--gray50);
   align-items: center;
+  height: 70px;
+  border-radius: 20px;
+  padding: 0 20px;
+  width: 100%;
 }
 
 .header svg {
@@ -25,12 +23,14 @@
 
 .title {
   display: flex;
+  flex-direction: row;
   font-size: 24px;
   font-weight: 600;
 }
 
 .header .links {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 48px;
@@ -40,10 +40,14 @@
 
 .header .buttons {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-end;
   justify-content: flex-end;
 }
 
 .header .menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-end;
 }

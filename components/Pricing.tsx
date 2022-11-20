@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Button, Container, Column } from 'react-basics';
+import { Button, Row, Column } from 'react-basics';
 import Checkmark from 'assets/checkmark.svg';
 import Tools from 'assets/tools.svg';
 import Cloud from 'assets/cloud.svg';
@@ -9,8 +9,8 @@ import Link from 'next/link';
 export default function Pricing() {
   return (
     <>
-      <Container className={styles.pricing}>
-        <Column xs={12} sm={12} size={6} className={classNames(styles.tier)}>
+      <Row className={styles.pricing} justifyContent="center">
+        <Column xs={12} sm={12} md={6} size={4} className={classNames(styles.tier)}>
           <div className={styles.title}>
             <Tools /> Umami Open Source
           </div>
@@ -41,7 +41,7 @@ export default function Pricing() {
             </Link>
           </div>
         </Column>
-        <Column xs={12} sm={12} size={6} className={classNames(styles.tier, styles.cloud)}>
+        <Column xs={12} sm={12} md={6} size={4} className={classNames(styles.tier, styles.cloud)}>
           <div className={styles.title}>
             <Cloud /> Umami Cloud
           </div>
@@ -65,8 +65,8 @@ export default function Pricing() {
             </li>
           </ul>
         </Column>
-      </Container>
-      <Container center>
+      </Row>
+      <Row justifyContent="center">
         <Column className={styles.signup} size={6} xs={12} sm={12} md={8}>
           <h2>Umami Cloud BETA</h2>
           <p>Umami Cloud is currently running an open BETA program.</p>
@@ -81,7 +81,7 @@ export default function Pricing() {
             </Link>
           </div>
         </Column>
-      </Container>
+      </Row>
     </>
   );
 }

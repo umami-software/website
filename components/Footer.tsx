@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Column } from 'react-basics';
+import { Row, Column, Container } from 'react-basics';
 import Link from 'next/link';
 import classNames from 'classnames';
 import CompanyLogo from './CompanyLogo';
@@ -47,27 +47,35 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Container>
-        <Column className={styles.logo} xs={12} sm={12} md={12}>
-          <CompanyLogo />
-        </Column>
-        {data.map(({ title, items }) => (
-          <Column key={title} xs={6} sm={6} md={3} className={classNames(styles.col, styles.links)}>
-            <h1>{title}</h1>
-            {items.map(({ text, href }) => (
-              <Link key={text} href={href}>
-                <a target={href.startsWith('http') ? '_blank' : null}>{text}</a>
-              </Link>
-            ))}
+        <Row>
+          <Column className={styles.logo} xs={12} sm={12} md={12}>
+            <CompanyLogo />
           </Column>
-        ))}
-      </Container>
-      <Container>
-        <Column>
-          <SocialMedia />
-          <div className={styles.copy}>
-            <div>&copy; 2022 Umami Software, Inc.</div>
-          </div>
-        </Column>
+          {data.map(({ title, items }) => (
+            <Column
+              key={title}
+              xs={6}
+              sm={6}
+              md={3}
+              className={classNames(styles.col, styles.links)}
+            >
+              <h1>{title}</h1>
+              {items.map(({ text, href }) => (
+                <Link key={text} href={href}>
+                  <a target={href.startsWith('http') ? '_blank' : null}>{text}</a>
+                </Link>
+              ))}
+            </Column>
+          ))}
+        </Row>
+        <Row>
+          <Column>
+            <SocialMedia />
+            <div className={styles.copy}>
+              <div>&copy; 2022 Umami Software, Inc.</div>
+            </div>
+          </Column>
+        </Row>
       </Container>
     </footer>
   );

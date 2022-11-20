@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { Container } from 'react-basics';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -23,7 +24,9 @@ export default function Layout({ title, children }: Props) {
         )}
       </Head>
       <Header />
-      <main>{children}</main>
+      <main>
+        <Container>{children}</Container>
+      </main>
       <Footer />
     </>
   );

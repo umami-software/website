@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Button, Container, Column } from 'react-basics';
+import { Button, Row, Column } from 'react-basics';
 import styles from './Intro.module.css';
 
 export default function Intro() {
   return (
-    <Container className={styles.intro}>
+    <Row className={styles.intro}>
       <Column className={styles.content}>
         <h1>Own your website analytics</h1>
         <h2>
@@ -33,6 +33,6 @@ export default function Intro() {
           </a>
         </div>
       </Column>
-    </Container>
+    </Row>
   );
 }

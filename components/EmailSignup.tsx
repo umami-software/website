@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, Column, TextField } from 'react-basics';
+import { Button, Row, Column, TextField } from 'react-basics';
 import CheckCircle from 'assets/check-circle.svg';
 import styles from './EmailSignup.module.css';
 
@@ -44,7 +44,7 @@ export default function EmailSignup({
   };
 
   return (
-    <Container className={styles.container}>
+    <Row className={styles.container}>
       <Column size={8} xs={12} sm={12} md={12}>
         <h1>{title}</h1>
         <p>{children}</p>
@@ -74,6 +74,6 @@ export default function EmailSignup({
           </div>
         )}
       </Column>
-    </Container>
+    </Row>
   );
 }
