@@ -35,6 +35,7 @@ const menu = {
     ['Running on Qovery', '/docs/running-on-qovery'],
     ['Running on CapRover', '/docs/running-on-caprover'],
     ['Running on Koyeb', '/docs/running-on-koyeb'],
+    ['Running on Forge', '/docs/running-on-forge'],
   ],
 };
 
