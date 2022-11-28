@@ -23,5 +23,5 @@
   "globals": {
     "React": "writable"
   },
-  "ignorePatterns": ["public/js/*.*"]
+  "ignorePatterns": ["public/**/*.*"]
 }
