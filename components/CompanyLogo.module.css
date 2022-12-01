@@ -8,5 +8,5 @@
 
 .logo,
 .logo:hover {
-  color: var(--gray900);
+  color: var(--base900);
 }

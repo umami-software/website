@@ -8,12 +8,14 @@
 }
 
 .row {
-  background: var(--gray50);
+  background: var(--base50);
   align-items: center;
   height: 70px;
   border-radius: 20px;
   padding: 0 20px;
   width: 100%;
+  border: 1px solid transparent;
+  transition: all ease-in-out 0.3s;
 }
 
 .header svg {
@@ -50,4 +52,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+}
+
+html:not([data-scroll='0']) .row {
+  transition: all ease-in-out 0.3s;
+  border: 1px solid var(--base300);
+  box-shadow: 4px 4px 4px var(--base300);
 }

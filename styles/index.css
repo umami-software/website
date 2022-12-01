@@ -9,8 +9,8 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  color: var(--gray900);
-  background: var(--gray50);
+  color: var(--base900);
+  background: var(--base50);
   position: relative;
 }
 
@@ -31,7 +31,7 @@ body {
 a,
 a:active,
 a:visited {
-  color: var(--gray900);
+  color: var(--base900);
   text-decoration: none;
 }
 
@@ -68,7 +68,7 @@ article header p {
 }
 
 pre {
-  background: var(--gray100);
+  background: var(--base100);
   padding: 1rem;
   border-radius: 0.4rem;
   white-space: pre-wrap;
@@ -76,7 +76,7 @@ pre {
 }
 
 code {
-  background: var(--gray100);
+  background: var(--base100);
   padding: 2px 4px;
   border-radius: 2px;
   white-space: pre-wrap;

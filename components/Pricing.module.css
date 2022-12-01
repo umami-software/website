@@ -7,7 +7,7 @@
 .tier {
   padding: 30px;
   border-radius: 10px;
-  background: var(--gray75);
+  background: var(--base75);
   margin: 0 auto;
 }
 
@@ -37,12 +37,12 @@
 }
 
 .cloud {
-  color: var(--gray50);
-  background: var(--blue400);
+  color: var(--base50);
+  background: var(--blue800);
 }
 
 .cloud svg {
-  fill: var(--gray50);
+  fill: var(--base50);
 }
 
 .beta {
@@ -61,8 +61,8 @@
 
 .signup {
   margin: 30px auto;
-  border: 1px solid var(--gray300);
+  border: 1px solid var(--base300);
   border-radius: 10px;
   padding: 30px;
-  box-shadow: 4px 4px 4px var(--gray300);
+  box-shadow: 4px 4px 4px var(--base300);
 }

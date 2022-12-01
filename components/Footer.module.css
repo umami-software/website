@@ -2,8 +2,8 @@
   font-size: 14px;
   padding: 36px;
   margin-top: 36px;
-  border-top: 1px solid var(--gray300);
-  background: var(--gray75);
+  border-top: 1px solid var(--base300);
+  background: var(--base75);
 }
 
 .col {

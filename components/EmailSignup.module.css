@@ -3,8 +3,8 @@
   margin-top: 60px;
   margin-bottom: 60px;
   border-radius: 10px;
-  border: 1px solid var(--gray300);
-  box-shadow: 4px 4px 4px var(--gray300);
+  border: 1px solid var(--base300);
+  box-shadow: 4px 4px 4px var(--base300);
 }
 
 .form,

@@ -1,4 +1,4 @@
-import { Row, Column, Container } from 'react-basics';
+import { Row, Column, Container, useScroll } from 'react-basics';
 import Link from 'next/link';
 import { REPO_URL } from 'lib/constants';
 import CompanyLogo from './CompanyLogo';
@@ -7,6 +7,8 @@ import GitHub from 'assets/github.svg';
 import styles from './Header.module.css';
 
 export default function Header() {
+  useScroll();
+
   return (
     <header className={styles.header}>
       <Container>
