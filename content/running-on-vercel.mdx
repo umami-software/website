@@ -18,3 +18,30 @@ _Automate steps 1-5 using the button above_
 **Configure umami** step from [Install](/docs/install).
 5. Deploy and visit your application at `<deploy-id>.vercel.app`.
 6. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
+
+### Proxy Umami Analytics via Vercel
+Optionally, you can proxy Umami Analytics to serve Umami Analytics from your main domain. This is also useful for bypassing ad-blocker when using [Umami Cloud](https://umami.is/pricing).
+
+See Vercel's [rewrites docs](https://vercel.com/docs/project-configuration).
+
+In the root of your project, add the `vercel.json` file with the following contents:
+```
+{
+  "rewrites": [
+    {
+      "source": "/stats/:match*",
+      "destination": "https://analytics.umami.is/:match*"
+    }
+  ]
+}
+```
+
+The tracking code script tag should use `/stats/script.js` as `src` value:
+```
+<script
+    async
+    defer
+    src="/stats/script.js"
+    data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
+></script>
+```
