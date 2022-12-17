@@ -13,23 +13,23 @@ export default function Header() {
     <header className={styles.header}>
       <Container>
         <Row className={styles.row}>
-          <Column size={4} xs={10} sm={10} md={6} className={styles.title}>
+          <Column defaultSize={4} xs={10} sm={10} md={6} className={styles.title}>
             <CompanyLogo />
           </Column>
-          <Column size={4} xs={0} sm={0} md={0} className={styles.links}>
+          <Column defaultSize={4} xs={0} sm={0} md={0} className={styles.links}>
             <Link href="/features">Features</Link>
             <Link href="/docs">Docs</Link>
             <Link href="/community">Community</Link>
             <Link href="/pricing">Pricing</Link>
           </Column>
-          <Column size={4} xs={0} sm={0} md={0} className={styles.buttons}>
+          <Column xs={0} sm={0} md={0} className={styles.buttons}>
             <Link href={REPO_URL}>
               <a target="_blank">
                 <GitHub />
               </a>
             </Link>
           </Column>
-          <Column size={0} xs={2} sm={2} md={6} className={styles.menu}>
+          <Column defaultSize={0} xs={2} sm={2} md={6} className={styles.menu}>
             <HamburgerButton />
           </Column>
         </Row>

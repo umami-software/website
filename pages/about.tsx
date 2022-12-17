@@ -4,7 +4,7 @@ import { Column, Row } from 'react-basics';
 const About: NextPage = () => {
   return (
     <Row justifyContent="center">
-      <Column size={8}>
+      <Column defaultSize={8}>
         <article>
           <header>
             <h1>Company</h1>

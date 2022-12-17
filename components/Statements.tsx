@@ -8,15 +8,15 @@ import { Row, Column } from 'react-basics';
 const Block = ({ title, icon, children }) => {
   return (
     <Row className={styles.block}>
-      <Column size={6} xs={12} sm={12} className={styles.content}>
+      <Column defaultSize={6} xs={12} sm={12} className={styles.content}>
         <h1>{title}</h1>
         {children}
       </Column>
       <Column
-        size={6}
+        defaultSize={6}
         xs={12}
         sm={12}
-        order={{ xs: -1, sm: -1, md: 0, lg: 0, xl: 0 }}
+        ordering={{ xs: -1, sm: -1, md: 0, lg: 0, xl: 0 }}
         className={styles.icon}
       >
         {icon}

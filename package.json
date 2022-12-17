@@ -34,7 +34,7 @@
     "classnames": "^2.2.6",
     "next": "^12.2.1",
     "react": "^18.2.0",
-    "react-basics": "0.33.0",
+    "react-basics": "0.37.0",
     "react-dom": "^18.2.0",
     "react-scroll-parallax": "^3.2.0",
     "react-spring": "^8.0.27",

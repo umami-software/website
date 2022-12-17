@@ -10,7 +10,7 @@ export default function Pricing() {
   return (
     <>
       <Row className={styles.pricing} justifyContent="center">
-        <Column xs={12} sm={12} md={6} size={4} className={classNames(styles.tier)}>
+        <Column xs={12} sm={12} md={6} defaultSize={4} className={classNames(styles.tier)}>
           <div className={styles.title}>
             <Tools /> Umami Open Source
           </div>
@@ -41,7 +41,13 @@ export default function Pricing() {
             </Link>
           </div>
         </Column>
-        <Column xs={12} sm={12} md={6} size={4} className={classNames(styles.tier, styles.cloud)}>
+        <Column
+          xs={12}
+          sm={12}
+          md={6}
+          defaultSize={4}
+          className={classNames(styles.tier, styles.cloud)}
+        >
           <div className={styles.title}>
             <Cloud /> Umami Cloud
           </div>
@@ -67,7 +73,7 @@ export default function Pricing() {
         </Column>
       </Row>
       <Row justifyContent="center">
-        <Column className={styles.signup} size={6} xs={12} sm={12} md={8}>
+        <Column className={styles.signup} defaultSize={6} xs={12} sm={12} md={8}>
           <h2>Umami Cloud BETA</h2>
           <p>Umami Cloud is currently running an open BETA program.</p>
           <p>

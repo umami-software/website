@@ -45,11 +45,11 @@ export default function EmailSignup({
 
   return (
     <Row className={styles.container}>
-      <Column size={8} xs={12} sm={12} md={12}>
+      <Column defaultSize={8} xs={12} sm={12} md={12}>
         <h1>{title}</h1>
         <p>{children}</p>
       </Column>
-      <Column size={4} xs={12} sm={12} md={12} className={styles.form}>
+      <Column defaultSize={4} xs={12} sm={12} md={12} className={styles.form}>
         {!submitted && (
           <div className={styles.input}>
             <TextField

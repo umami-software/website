@@ -11,7 +11,7 @@ export default function Stats() {
   return (
     <Row className={styles.stats}>
       {stats.map(({ name, value }) => (
-        <Column key={name} size={4} xs={12} sm={12} md={12} className={styles.stat}>
+        <Column key={name} defaultSize={4} xs={12} sm={12} md={12} className={styles.stat}>
           <div className={styles.value}>{value}</div>
           <div className={styles.name}>{name}</div>
         </Column>

@@ -8,7 +8,6 @@
 }
 
 .row {
-  background: var(--base50);
   align-items: center;
   height: 70px;
   border-radius: 20px;
@@ -56,6 +55,7 @@
 
 html:not([data-scroll='0']) .row {
   transition: all ease-in-out 0.3s;
+  backdrop-filter: blur(20px);
   border: 1px solid var(--base300);
-  box-shadow: 4px 4px 4px var(--base300);
+  box-shadow: 2px 2px 4px var(--base300);
 }

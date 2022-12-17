@@ -32,10 +32,10 @@ const DocsPage: NextPage = ({ content }: { content: { id: string; contentHtml: s
         </Head>
       )}
 
-      <Column size={3} xs={12} sm={12} md={12}>
+      <Column defaultSize={3} xs={12} sm={12} md={12}>
         <Menu />
       </Column>
-      <Column size={9} xs={12} sm={12} md={12}>
+      <Column defaultSize={9} xs={12} sm={12} md={12}>
         <article style={{ padding: '0 20px' }}>
           <Page />
         </article>
