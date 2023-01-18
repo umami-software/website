@@ -55,7 +55,7 @@ Cookie: umami.auth=eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
 
 Operations around Websites that Umami is tracking.
 
-## `POST /api/website`
+## `POST /api/websites`
 
 Creates a website.
 
@@ -115,7 +115,7 @@ There are several endpoints your can call to get stats for your website. All the
 stats endpoints require sending a `GET` request with the `umami.auth` authentication cookie.
 
 
-## `GET /api/website/{id}/stats`
+## `GET /api/websites/{id}/stats`
 
 Gets summarized website statistics.
 
@@ -126,7 +126,7 @@ Gets summarized website statistics.
 
 **Sample example**
 
-GET (with Authorization header) from url : `https://umami.mydomain.com/api/website/1/stats?start_at=1656679719687&end_at=1656766119687`
+GET (with Authorization header) from url : `https://umami.mydomain.com/api/websites/1/stats?start_at=1656679719687&end_at=1656766119687`
 
 ```
 {
@@ -143,7 +143,7 @@ GET (with Authorization header) from url : `https://umami.mydomain.com/api/websi
 - `totaltime` : Time spent on the website
 
 
-## `GET /api/website/{id}/pageviews`
+## `GET /api/websites/{id}/pageviews`
 
 Gets pageviews within a given time range.
 
@@ -169,7 +169,7 @@ Gets pageviews within a given time range.
 }
 ```
 
-## `GET /api/website/{id}/events`
+## `GET /api/websites/{id}/events`
 
 Gets events within a given time range.
 
@@ -189,7 +189,7 @@ Gets events within a given time range.
 ]
 ```
 
-## `GET /api/website/{id}/metrics`
+## `GET /api/websites/{id}/metrics`
 
 Gets metrics for a given time range.
 
