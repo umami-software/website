@@ -72,7 +72,7 @@ export default function Footer() {
           <Column>
             <SocialMedia />
             <div className={styles.copy}>
-              <div>&copy; 2022 Umami Software, Inc.</div>
+              <div>&copy; 2023 Umami Software, Inc.</div>
             </div>
           </Column>
         </Row>
