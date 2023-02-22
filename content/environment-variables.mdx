@@ -16,6 +16,10 @@ Connection string for your database. This is the only required variable.
 
 You can provide a comma-delimited list of IP address to exclude from data collection.
 
+### IGNORE_HOSTNAME = &lt;hostname&gt;
+
+This will do a DNS lookup on a hostname and the resulting IP address will be ignored. This can be a comma delimited list of hostnames.
+
 ### FORCE_SSL = 1
 
 This will redirect all requests from `http` to `https` in the Umami application. Note, this does not apply to the tracking script.
