@@ -1,8 +1,16 @@
+const rehypePrettyCode = require('rehype-pretty-code');
+
+const rehypePrettyCodeOptions = {
+  // prepacked themes from shiki
+  // Themes list - https://github.com/shikijs/shiki/blob/main/docs/themes.md
+  theme: 'one-dark-pro',
+};
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],
-    rehypePlugins: [],
+    rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
