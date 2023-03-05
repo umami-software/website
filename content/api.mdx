@@ -4,7 +4,7 @@ Umami allows you to pull data directly by calling the API endpoints.
 The endpoints are available at `http://<your-umami>/api`.
 All data is returned as JSON.
 
-Any operation you can do thorugh the Umami admin panel is available in the API, but it might not yet be documented.
+Any operation you can do through the Umami admin panel is available in the API, but it might not yet be documented.
 
 ## Authentication
 
@@ -55,7 +55,7 @@ Cookie: umami.auth=eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
 
 Operations around Websites that Umami is tracking.
 
-## `POST /api/website`
+## `POST /api/websites`
 
 Creates a website.
 
@@ -112,10 +112,10 @@ Prior to v1.39 some fields had a different name. If using an old version, use `w
 ## Getting stats
 
 There are several endpoints your can call to get stats for your website. All the
-stats endpoints require sending a `GET` request with the `umami.auth` authentication cookie.
+stats endpoints require sending a `GET` request with the `Bearer <token>` (post v1.26.0) or `umami.auth` authentication cookie.
 
 
-## `GET /api/website/{id}/stats`
+## `GET /api/websites/{websiteUuid}/stats`
 
 Gets summarized website statistics.
 
@@ -126,7 +126,7 @@ Gets summarized website statistics.
 
 **Sample example**
 
-GET (with Authorization header) from url : `https://umami.mydomain.com/api/website/1/stats?start_at=1656679719687&end_at=1656766119687`
+GET (with Authorization header) from url : `https://umami.mydomain.com/api/websites/1/stats?start_at=1656679719687&end_at=1656766119687`
 
 ```
 {
@@ -143,7 +143,7 @@ GET (with Authorization header) from url : `https://umami.mydomain.com/api/websi
 - `totaltime` : Time spent on the website
 
 
-## `GET /api/website/{id}/pageviews`
+## `GET /api/websites/{websiteUuid}/pageviews`
 
 Gets pageviews within a given time range.
 
@@ -169,7 +169,7 @@ Gets pageviews within a given time range.
 }
 ```
 
-## `GET /api/website/{id}/events`
+## `GET /api/websites/{websiteUuid}/events`
 
 Gets events within a given time range.
 
@@ -189,7 +189,7 @@ Gets events within a given time range.
 ]
 ```
 
-## `GET /api/website/{id}/metrics`
+## `GET /api/websites/{websiteUuid}/metrics`
 
 Gets metrics for a given time range.
 
@@ -268,4 +268,3 @@ authentication token.
 
 Also, you need to send a proper `User-Agent` HTTP header or
 your request won't be registered.
-
