@@ -28,7 +28,7 @@ const DocsPage: NextPage = ({ content }: { content: { id: string; contentHtml: s
     <Row className="markdown">
       {contentTitle && (
         <Head>
-          <title>{`umami - ${contentTitle}`}</title>
+          <title>{`${contentTitle} | umami`}</title>
         </Head>
       )}
 

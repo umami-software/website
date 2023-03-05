@@ -34,11 +34,10 @@
     "classnames": "^2.2.6",
     "next": "^12.2.1",
     "react": "^18.2.0",
-    "react-basics": "0.37.0",
+    "react-basics": "0.70.0",
     "react-dom": "^18.2.0",
     "react-scroll-parallax": "^3.2.0",
     "react-spring": "^8.0.27",
-    "react-tooltip": "^4.2.21",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
     "typescript": "^4.8.4"

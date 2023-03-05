@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Layout from 'components/Layout';
-import 'react-basics/dist/esm/styles.css';
+import 'react-basics/dist/styles.css';
 import 'styles/variables.css';
 import 'styles/index.css';
 
