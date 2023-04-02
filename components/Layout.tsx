@@ -17,10 +17,8 @@ export default function Layout({ title, children }: Props) {
         {typeof window !== 'undefined' && process.env.NODE_ENV === 'production' && (
           <script
             async
-            defer
             data-website-id="d0059975-b79a-4f83-8926-ed731475fded"
-            data-host-url="https://app.umami.is"
-            src="/js/script.js"
+            src="https://app.umami.is/script.js"
           />
         )}
       </Head>
