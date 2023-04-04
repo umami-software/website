@@ -60,7 +60,7 @@ export default function EmailSignup({
             />
             <Button
               variant="primary"
-              className={`umami--signup--email-${type}`}
+              data-umami-event={`signup-email-${type}`}
               onClick={handleClick}
             >
               {buttonText}

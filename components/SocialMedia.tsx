@@ -16,7 +16,7 @@ export default function SocialMedia() {
     <div className={styles.links}>
       {links.map(({ name, url, icon }) => (
         <Link key={url} href={url}>
-          <a target="_blank" title={name} className={`umami--click--social-${name}`}>
+          <a target="_blank" title={name} data-umami-event={`social-${name}`}>
             {icon}
           </a>
         </Link>

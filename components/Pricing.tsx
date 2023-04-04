@@ -81,7 +81,7 @@ export default function Pricing() {
           </p>
           <div className={styles.button}>
             <Link href="https://cloud.umami.is/signup">
-              <a className="button umami--click--cloud-beta-button" target="_blank">
+              <a className="button" data-umami-event="cloud-beta-button" target="_blank">
                 <Button variant="primary">Sign up for Umami Cloud</Button>
               </a>
             </Link>
