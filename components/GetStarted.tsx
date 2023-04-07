@@ -12,7 +12,7 @@ export default function GetStarted() {
           </Button>
         </a>
         <a
-          href="https://app.umami.is/share/8rmHaheU/umami.is"
+          href="https://analytics.umami.is/share/LGazGOecbDtaIwDr/umami.is"
           className="button-alt"
           data-umami-event="live-demo-button"
           target="_blank"
