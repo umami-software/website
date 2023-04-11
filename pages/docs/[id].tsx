@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 const DocsPage: NextPage = ({ content }: { content: { id: string; contentHtml: string } }) => {
-  const Page = dynamic(import(`content/${content.id}.mdx`)); // mdx file is imported dynamically
+  const Page = dynamic(import(`content/v2/${content.id}.mdx`)); // mdx file is imported dynamically
 
   const contentTitle = React.useMemo(() => {
     const contentArray = content.contentHtml.split('\n');

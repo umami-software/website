@@ -6,7 +6,7 @@ const DocsIndexPage: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/docs/getting-started');
+    router.replace('docs/getting-started');
   }, []);
 
   return null;

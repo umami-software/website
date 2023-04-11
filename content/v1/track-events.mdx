@@ -28,10 +28,10 @@ So your button element would now look like this:
 
 When the user clicks on this button, Umami will record an event named `signup-button` with an event type of `click`.
 
-The event can be any [Javascript event](https://developer.mozilla.org/en-US/docs/Web/Events) that can be 
+The event can be any [Javascript event](https://developer.mozilla.org/en-US/docs/Web/Events) that can be
 applied to an element.
 
-Note: be careful not to attach to any events that fire continuously like `scroll` and `drag`. 
+Note: be careful not to attach to any events that fire continuously like `scroll` and `drag`.
 
 ## Using Javascript
 
@@ -42,7 +42,7 @@ CSS method, you can do:
 const button = document.getElementById('signup-button');
 
 button.onclick = () => umami('Signup button click');
-``` 
+```
 
 In this case, Umami will record an event named `Signup button click` with an event type of `custom`.
 
@@ -52,4 +52,4 @@ If you want to use your own event type instead of `custom`, see [Tracker functio
 
 Once your events are recorded, they will be available on your website **Details** page.
 
-<img src="/images/events.png" />
+<img src="/images/v1/events.png" />

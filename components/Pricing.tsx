@@ -34,7 +34,7 @@ export default function Pricing() {
             </li>
           </ul>
           <div className={styles.button}>
-            <Link href="/docs/getting-started">
+            <Link href="docs/getting-started">
               <a>
                 <Button variant="secondary">Get Started</Button>
               </a>

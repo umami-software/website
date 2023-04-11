@@ -1,0 +1,86 @@
+# Environment variables
+
+You can configure Umami with the use of environment variables. They go into the same `.env` file as your `DATABASE_URL`.
+
+---
+
+## Runtime variables
+
+Runtime variables are recognized when Umami is running. You can set your environment variables prior to starting the application.
+
+### DATABASE_URL = &lt;connection string&gt;
+
+Connection string for your database. This is the only required variable.
+
+### IGNORE_IP = &lt;ip addresses&gt;
+
+You can provide a comma-delimited list of IP address to exclude from data collection.
+
+### IGNORE_HOSTNAME = &lt;hostname&gt;
+
+This will do a DNS lookup on a hostname and the resulting IP address will be ignored. This can be a comma delimited list of hostnames.
+
+### FORCE_SSL = 1
+
+This will redirect all requests from `http` to `https` in the Umami application. Note, this does not apply to the tracking script.
+
+### LOG_QUERY = 1
+
+If you are running in development mode, this will log database queries to the console for debugging.
+
+### HOSTNAME = &lt;hostname&gt;
+### PORT = &lt;port number&gt;
+
+If you are running on an environment which requires you to bind to a specific hostname or port, such as Heroku, you can add
+these variables and start your app with `npm run start-env` instead of `npm start`.
+
+### CLIENT_IP_HEADER = &lt;header name&gt;
+
+HTTP header to check for the client's IP address. This is useful when you're
+behind a proxy that uses non-standard headers.
+
+### REMOVE_TRAILING_SLASH = 1
+
+Removes the trailing slash from all incoming urls.
+
+### TRACKER_SCRIPT_NAME = &lt;script name&gt;
+
+Allows you to assign a custom name to the tracker script different from the default `umami`. This is to help you avoid some ad-blockers.
+
+Note: If you update this, be sure to update the tracking code on your website to the new name.
+
+### COLLECT_API_ENDPOINT = /api/x
+
+Allows you to send metrics to a location different than the default `/api/collect`. This is to help you avoid some ad-blockers.
+
+### DISABLE_UPDATES = 1
+
+Disables the check for new versions of Umami.
+
+### DISABLE_LOGIN = 1
+
+Disables the login page for the application.
+
+### DISABLE_TELEMETRY = 1
+
+Umami collects completely anonymous telemetry data in order help improve the application. You can choose to disable this if you don't want to participate.
+
+### HASH_SALT = &lt;random string&gt;
+
+A random string used to generate unique values.
+
+---
+
+## Build time variables
+
+Build time variables are only recognized during the build process. This also includes building custom Docker images. You need to set your environment variables prior to building the application.
+
+### BASE_PATH = &lt;path&gt;
+
+If you want to host Umami under a subdirectory. You may need to update your reverse proxy settings to correctly handle the BASE_PATH prefix.
+
+
+### DATABASE_TYPE = &lt;postgresql | mysql&gt;
+
+The type of DB to be used. This is only required for the Docker build.
+

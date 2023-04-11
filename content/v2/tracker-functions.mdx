@@ -1,0 +1,32 @@
+# Tracker functions
+
+The Umami tracker exposes some functions that you can call on your website if you want
+more control over your tracking.
+
+### umami.track(_event_name_, [*event_data*])
+
+Tracks an event with a given name.
+
+Usage:
+
+```
+umami.track('Signup button click');
+```
+
+You can optionally pass along **event_data** with the data-umami-event-\* annotation.
+
+The **url** and **website_id** values are optional. They will default to the page url and `data-website-id`
+defined by the script.
+
+### umami.trackView(_url_, [*referrer*], [*website_id*])
+
+Tracks a page view.
+
+Usage:
+
+```
+umami.trackView('/home', 'https://www.google.com', '94db1cb1-74f4-4a40-ad6c-962362670409');
+```
+
+The **referrer** and **website_id** values are optional. They will default to the page referrer and `data-website-id`
+defined by the script.
