@@ -3,7 +3,7 @@
 Besides pageviews, Umami is also able to track events that occur on your website. There are two ways to record
 events in Umami, using the **data-umami-event** property or using **Javascript**.
 
-## Using CSS classes
+## Using data-umami-event
 
 To enable events, simply add a special data property to the element you want to track.
 
@@ -26,6 +26,18 @@ So your button element would now look like this:
 ```
 
 When the user clicks on this button, Umami will record an event named `Signup button`.
+
+You can optionally pass along **event_data** with the **data-umami-event-\*** annotation.
+
+```
+data-umami-event="Cart form"
+data-umami-event-name="umami"
+data-umami-event-id="123"
+```
+
+The additonal properties will result in `{ name: 'umami', id: '123' }` being recorded with the `Cart form` event name.
+
+Event data cannot be sent without an event name.
 
 ## Using Javascript
 

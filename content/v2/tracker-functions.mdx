@@ -1,32 +1,51 @@
 # Tracker functions
 
-The Umami tracker exposes some functions that you can call on your website if you want
+The Umami tracker exposes a function that you can call on your website if you want
 more control over your tracking.
 
-### umami.track(_event_name_, [*event_data*])
-
-Tracks an event with a given name.
-
-Usage:
-
 ```
-umami.track('Signup button click');
+umami.track(_event_name_, [*event_data*])
 ```
 
-You can optionally pass along **event_data** with the data-umami-event-\* annotation.
-
-The **url** and **website_id** values are optional. They will default to the page url and `data-website-id`
-defined by the script.
-
-### umami.trackView(_url_, [*referrer*], [*website_id*])
+### Pageview
 
 Tracks a page view.
 
-Usage:
-
 ```
-umami.trackView('/home', 'https://www.google.com', '94db1cb1-74f4-4a40-ad6c-962362670409');
+umami.track();
 ```
 
-The **referrer** and **website_id** values are optional. They will default to the page referrer and `data-website-id`
-defined by the script.
+### Event
+
+Tracks an event with a given name.
+
+```
+umami.track('Signup button');
+```
+
+### Event Data
+
+Tracks an event with dynamic data.
+
+```
+umami.track('Signup button', { data: { name: 'umami', id: 123 }});
+```
+
+Dynamic data must be placed within the `data` property. Unrecognized properties placed outside of the `data` property will be ignored.
+
+Properties already collected by the tracker can be overriden.
+
+```
+umami.track('Signup button', { language: 'javascript' });
+```
+
+Properties automatically collected by the tracker include `hostname`, `language`, `referrer`, `screen`, `title`, `url`, and `website`.
+
+### Event Data Limits
+
+Event Data can work with any JSON data. There are a few rules in place to maintain performance.
+
+- Numbers have a max precision of 4.
+- Strings have a max length of 500.
+- Arrays are converted to a String, with the same max length of 500.
+- Dynamic objects have a max length of 50 properties. Arrays are considered 1 property.
