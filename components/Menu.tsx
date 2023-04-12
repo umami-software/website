@@ -24,6 +24,7 @@ const menu = {
     ['API', '/docs/api'],
   ],
   Guides: [
+    ['Migrating V1 to V2', '/docs/migrate-v1-v2'],
     ['Hosting', '/docs/hosting'],
     ['Running on DigitalOcean', '/docs/running-on-digitalocean'],
     ['Running on Vercel', '/docs/running-on-vercel'],
