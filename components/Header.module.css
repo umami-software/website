@@ -3,7 +3,9 @@
   top: 0;
   left: 0;
   right: 0;
-  margin-top: 10px;
+  height: 70px;
+  border-bottom: 1px solid var(--base50);
+  backdrop-filter: blur(20px);
   z-index: 100;
 }
 
@@ -55,9 +57,7 @@
   justify-content: flex-end;
 }
 
-html:not([data-scroll='0']) .row {
-  transition: all ease-in-out 0.3s;
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--base300);
-  box-shadow: 2px 2px 4px var(--base300);
+html:not([data-scroll='0']) .header {
+  transition: all linear 0.6s;
+  border-bottom: 1px solid var(--base300);
 }
