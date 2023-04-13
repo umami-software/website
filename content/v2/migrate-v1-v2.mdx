@@ -24,11 +24,10 @@ mysql://username:mypassword@localhost:3306/mydb
 
 ### Usage
 
-- Backup your target database prior to use. Potential data loss may occur if the migration is interupted.
-- For users with larger datasets (5M+), the migration may take while.
-- Due to the complexity of migrating a json column and not knowing the data structures being stored, the script will not be migrating event data into V2.
+- Backup your target database prior to use. Potential data loss may occur if the migration is interrupted.
+- For users with larger datasets (5M+), the migration may take while. Please plan accordingly.
+- Due to the complexity of migrating a json column and not knowing the data structures being stored, the script will not be migrating event data into V2. The script will retain the V1 `event_data` table if populated.
 
 ```shell
 npx @umami/migrate-v1-v2
 ```
-
