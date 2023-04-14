@@ -12,6 +12,7 @@ const menu = {
     ['Add an account', '/docs/add-an-account'],
     ['Enable share URL', '/docs/enable-share-url'],
     ['Track events', '/docs/track-events'],
+    ['Teams', '/docs/teams'],
     ['Updates', '/docs/updates'],
     ['Languages', '/docs/languages'],
     ['FAQ', '/docs/faq'],
