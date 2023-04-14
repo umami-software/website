@@ -84,7 +84,7 @@
 
 .features table {
   width: 100%;
-  margin: 60px 0;
+  margin: 100px 0;
 }
 
 .features tr {
@@ -104,4 +104,9 @@
 
 .features td:first-child {
   justify-content: flex-start;
+}
+
+.features .header {
+  height: 100px;
+  border: 0;
 }

@@ -7,6 +7,13 @@ import Link from 'next/link';
 
 const features = [
   {
+    label: 'Data',
+    items: [
+      ['Ingest (included)', '10K', '100K', '1M', '50M'],
+      ['Overage', '', '$0.00005 / event', '$0.00004 / event', '$0.00003 / event'],
+    ],
+  },
+  {
     label: 'Analytics',
     items: [
       ['Websites', 'Limited', true, true, true],
@@ -31,10 +38,10 @@ const features = [
   {
     label: 'Reports',
     items: [
-      ['Insights', true, true, true, true],
-      ['Flows', true, true, true, true],
-      ['Funnels', true, true, true, true],
-      ['Retention', true, true, true, true],
+      ['Insights', false, true, true, true],
+      ['Flows', false, true, true, true],
+      ['Funnels', false, true, true, true],
+      ['Retention', false, true, true, true],
       ['Cohorts', false, true, true, true],
     ],
   },
@@ -67,7 +74,7 @@ const features = [
 export default function Pricing() {
   return (
     <>
-      <Row className={styles.pricing} justifyContent="center">
+      <Row className={styles.pricing}>
         <Column className={classNames(styles.tier)}>
           <div className={styles.title}>Hobby</div>
           <div className={styles.description}>Up to 10K monthly events</div>
@@ -181,39 +188,47 @@ export default function Pricing() {
       <Row className={styles.features}>
         <Column>
           <table>
-            <tr>
-              <th></th>
-              <th>Hobby</th>
-              <th>Basic</th>
-              <th>Business</th>
-              <th>Enterprise</th>
-            </tr>
-            {features.map(({ label, items }) => {
-              return (
-                <Fragment key={label}>
-                  <h3>{label}</h3>
-                  {items.map((item, index) => {
-                    return (
-                      <tr key={index}>
-                        {item.map(data => {
-                          return (
-                            <td key={data}>
-                              {data === true ? (
-                                <Icon size="xl">
-                                  <Checkmark />
-                                </Icon>
-                              ) : (
-                                data
-                              )}
-                            </td>
-                          );
-                        })}
-                      </tr>
-                    );
-                  })}
-                </Fragment>
-              );
-            })}
+            <thead>
+              <tr>
+                <th></th>
+                <th>Hobby</th>
+                <th>Basic</th>
+                <th>Business</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              {features.map(({ label, items }) => {
+                return (
+                  <Fragment key={label}>
+                    <tr>
+                      <td className={styles.header}>
+                        <h2>{label}</h2>
+                      </td>
+                    </tr>
+                    {items.map((item, index) => {
+                      return (
+                        <tr key={index}>
+                          {item.map((data, x) => {
+                            return (
+                              <td key={x}>
+                                {data === true ? (
+                                  <Icon size="xl">
+                                    <Checkmark />
+                                  </Icon>
+                                ) : (
+                                  data
+                                )}
+                              </td>
+                            );
+                          })}
+                        </tr>
+                      );
+                    })}
+                  </Fragment>
+                );
+              })}
+            </tbody>
           </table>
         </Column>
       </Row>
