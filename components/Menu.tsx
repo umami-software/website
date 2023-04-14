@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
-import v1 from 'content/v1/menu.json';
-import v2 from 'content/v2/menu.json';
-import styles from './Menu.module.css';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
+import v1 from 'components/menu.v1.json';
+import v2 from 'components/menu.v2.json';
+import styles from './Menu.module.css';
 
 const versions = { v1, v2 };
 
