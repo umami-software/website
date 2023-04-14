@@ -2,10 +2,13 @@ import React from 'react';
 import { Row, Column } from 'react-basics';
 import { NextPage } from 'next';
 import Menu from 'components/Menu';
-import { getAllPathIds, getHtmlContent, CONTENT_DIR } from 'lib/content';
+import { getAllPathIds, getHtmlContent } from 'lib/content';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import path from 'path';
+
+const CONTENT_DIR = path.join(process.cwd(), 'content/v2');
 
 const DocsPage: NextPage = ({ content }: { content: { id: string; contentHtml: string } }) => {
   const Page = dynamic(import(`content/v2/${content.id}.mdx`)); // mdx file is imported dynamically

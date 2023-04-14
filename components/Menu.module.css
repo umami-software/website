@@ -1,0 +1,21 @@
+.menu {
+  font-size: 14px;
+}
+
+.selected {
+  font-weight: 700;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 4px 20px;
+  border-left: 1px solid var(--base300);
+}
+
+.item:hover {
+  border-left: 1px solid var(--primary400);
+}

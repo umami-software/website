@@ -1,0 +1,137 @@
+[
+  {
+    "label": "Basics",
+    "items": [
+      {
+        "label": "About",
+        "url": "/docs/about"
+      },
+      {
+        "label": "Getting started",
+        "url": "/docs/getting-started"
+      },
+      {
+        "label": "Install",
+        "url": "/docs/install"
+      },
+      {
+        "label": "Login",
+        "url": "/docs/login"
+      },
+      {
+        "label": "Add a website",
+        "url": "/docs/add-a-website"
+      },
+      {
+        "label": "Collect data",
+        "url": "/docs/collect-data"
+      },
+      {
+        "label": "Add an account",
+        "url": "/docs/add-an-account"
+      },
+      {
+        "label": "Enable share URL",
+        "url": "/docs/enable-share-url"
+      },
+      {
+        "label": "Track events",
+        "url": "/docs/track-events"
+      },
+      {
+        "label": "Updates",
+        "url": "/docs/updates"
+      },
+      {
+        "label": "Languages",
+        "url": "/docs/languages"
+      },
+      {
+        "label": "FAQ",
+        "url": "/docs/faq"
+      },
+      {
+        "label": "Useful links",
+        "url": "/docs/useful-links"
+      }
+    ]
+  },
+  {
+    "label": "Advanced",
+    "items": [
+      {
+        "label": "Tracker configuration",
+        "url": "/docs/tracker-configuration"
+      },
+      {
+        "label": "Tracker functions",
+        "url": "/docs/tracker-functions"
+      },
+      {
+        "label": "Environment variables",
+        "url": "/docs/environment-variables"
+      },
+      {
+        "label": "API",
+        "url": "/docs/api"
+      }
+    ]
+  },
+  {
+    "label": "Guides",
+    "items": [
+      {
+        "label": "Migrating V1 to V2",
+        "url": "/docs/migrate-v1-v2"
+      },
+      {
+        "label": "Hosting",
+        "url": "/docs/hosting"
+      },
+      {
+        "label": "Running on DigitalOcean",
+        "url": "/docs/running-on-digitalocean"
+      },
+      {
+        "label": "Running on Vercel",
+        "url": "/docs/running-on-vercel"
+      },
+      {
+        "label": "Running on Netlify",
+        "url": "/docs/running-on-netlify"
+      },
+      {
+        "label": "Running on Heroku",
+        "url": "/docs/running-on-heroku"
+      },
+      {
+        "label": "Running on Railway",
+        "url": "/docs/running-on-railway"
+      },
+      {
+        "label": "Running on Supabase",
+        "url": "/docs/running-on-supabase"
+      },
+      {
+        "label": "Running on PlanetScale",
+        "url": "/docs/running-on-planetscale"
+      },
+      {
+        "label": "Running on Qovery",
+        "url": "/docs/running-on-qovery"
+      },
+      {
+        "label": "Running on CapRover",
+        "url": "/docs/running-on-caprover"
+      },
+      {
+        "label": "Running on Koyeb",
+        "url": "/docs/running-on-koyeb"
+      },
+      {
+        "label": "Running on Forge",
+        "url": "/docs/running-on-forge"
+      }
+    ]
+  }
+]

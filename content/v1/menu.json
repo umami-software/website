@@ -1,0 +1,137 @@
+[
+  {
+    "label": "Basics",
+    "items": [
+      {
+        "label": "About",
+        "url": "/docs/v1/about"
+      },
+      {
+        "label": "Getting started",
+        "url": "/docs/v1/getting-started"
+      },
+      {
+        "label": "Install",
+        "url": "/docs/v1/install"
+      },
+      {
+        "label": "Login",
+        "url": "/docs/v1/login"
+      },
+      {
+        "label": "Add a website",
+        "url": "/docs/v1/add-a-website"
+      },
+      {
+        "label": "Collect data",
+        "url": "/docs/v1/collect-data"
+      },
+      {
+        "label": "Add an account",
+        "url": "/docs/v1/add-an-account"
+      },
+      {
+        "label": "Enable share URL",
+        "url": "/docs/v1/enable-share-url"
+      },
+      {
+        "label": "Track events",
+        "url": "/docs/v1/track-events"
+      },
+      {
+        "label": "Updates",
+        "url": "/docs/v1/updates"
+      },
+      {
+        "label": "Languages",
+        "url": "/docs/v1/languages"
+      },
+      {
+        "label": "FAQ",
+        "url": "/docs/v1/faq"
+      },
+      {
+        "label": "Useful links",
+        "url": "/docs/v1/useful-links"
+      }
+    ]
+  },
+  {
+    "label": "Advanced",
+    "items": [
+      {
+        "label": "Tracker configuration",
+        "url": "/docs/v1/tracker-configuration"
+      },
+      {
+        "label": "Tracker functions",
+        "url": "/docs/v1/tracker-functions"
+      },
+      {
+        "label": "Environment variables",
+        "url": "/docs/v1/environment-variables"
+      },
+      {
+        "label": "API",
+        "url": "/docs/v1/api"
+      }
+    ]
+  },
+  {
+    "label": "Guides",
+    "items": [
+      {
+        "label": "Migrating V1 to V2",
+        "url": "/docs/v1/migrate-v1-v2"
+      },
+      {
+        "label": "Hosting",
+        "url": "/docs/v1/hosting"
+      },
+      {
+        "label": "Running on DigitalOcean",
+        "url": "/docs/v1/running-on-digitalocean"
+      },
+      {
+        "label": "Running on Vercel",
+        "url": "/docs/v1/running-on-vercel"
+      },
+      {
+        "label": "Running on Netlify",
+        "url": "/docs/v1/running-on-netlify"
+      },
+      {
+        "label": "Running on Heroku",
+        "url": "/docs/v1/running-on-heroku"
+      },
+      {
+        "label": "Running on Railway",
+        "url": "/docs/v1/running-on-railway"
+      },
+      {
+        "label": "Running on Supabase",
+        "url": "/docs/v1/running-on-supabase"
+      },
+      {
+        "label": "Running on PlanetScale",
+        "url": "/docs/v1/running-on-planetscale"
+      },
+      {
+        "label": "Running on Qovery",
+        "url": "/docs/v1/running-on-qovery"
+      },
+      {
+        "label": "Running on CapRover",
+        "url": "/docs/v1/running-on-caprover"
+      },
+      {
+        "label": "Running on Koyeb",
+        "url": "/docs/v1/running-on-koyeb"
+      },
+      {
+        "label": "Running on Forge",
+        "url": "/docs/v1/running-on-forge"
+      }
+    ]
+  }
+]

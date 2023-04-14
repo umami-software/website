@@ -20,6 +20,7 @@ const headers = [
 ];
 
 module.exports = withMDX({
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -37,5 +38,10 @@ module.exports = withMDX({
       },
     ];
   },
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  async rewrites() {
+    return [
+      { source: '/docs/v1/:path*', destination: '/docs/v1/:path*' },
+      { source: '/docs/:path*', destination: '/docs/v2/:path*' },
+    ];
+  },
 });
