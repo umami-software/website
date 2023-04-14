@@ -1,18 +1,10 @@
-# Migrating V1 to v2
+# Migrating V1 to V2
 
-Script for migrating data from Umami v1 to v2.
+Script for migrating data from Umami V1 to V2.
 
-### Getting started
+### Requirements
 
-Please backup your target database prior to use.
-
-### Get the source code and install packages
-
-```
-git clone https://github.com/umami-software/migrate-v1-v2.git
-cd migrate-v1-v2
-yarn install
-```
+- Database schema must be in sync with the latest V1 Umami repo. The script will query the prisma migrations table to ensure the latest migrations have been ran.
 
 ### Configure umami
 
@@ -31,6 +23,10 @@ mysql://username:mypassword@localhost:3306/mydb
 ```
 
 ### Usage
+
+- Backup your target database prior to use. Potential data loss may occur if the migration is interrupted.
+- For users with larger datasets (5M+), the migration may take while. Please plan accordingly.
+- Due to the complexity of migrating a json column and not knowing the data structures being stored, the script will not be migrating event data into V2. The script will retain the V1 `event_data` table if populated.
 
 ```shell
 npx @umami/migrate-v1-v2

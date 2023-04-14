@@ -1,0 +1,151 @@
+# Websites
+
+Operations around Website management and statistics.
+
+**Endpoints**
+
+```
+POST /api/websites
+GET /api/websites
+POST /api/websites/{websiteId}
+GET /api/websites/{websiteId}
+DELETE /api/websites/{websiteId}
+POST /api/websites/{websiteId}/reset
+```
+
+## `POST /api/websites`
+
+Creates a website.
+
+**Parameters**
+
+- `domain`: (string) The full domain of the tracked website.
+- `name`: (string) The name of the website in Umami.
+- `shareId`: (optional boolean) A unique string to enable a share url. Set `null` to unshare.
+
+**Sample response**
+
+```
+{
+    id: 4,
+    websiteUuid: "51f73213-3f01-4343-a135-25496a3ffd31",
+    websiteId: 2,
+    name: "Umami",
+    domain: "umami.is",
+    shareId: "8PWex1pa",
+    createdAt: "2021-07-26T17:17:52.846Z"
+}
+```
+
+## `GET /api/websites`
+
+Returns all tracked websites.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+[
+  {
+    "id": "02d89813-7a72-41e1-87f0-8d668f85008b",
+    "name": "My Website",
+    "domain": "mywebsite.com",
+    "shareId": null,
+    "resetAt": null,
+    "websiteId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+    "createdAt": "2023-04-10T23:06:44.250Z",
+    "updatedAt": null,
+    "deletedAt": null
+  },
+  { .... }
+]
+```
+
+---
+
+## `GET /api/websites/{websiteId}`
+
+Gets a website by Id.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+{
+  "id": "02d89813-7a72-41e1-87f0-8d668f85008b",
+  "name": "My Website",
+  "domain": "mywebsite.com",
+  "shareId": null,
+  "resetAt": null,
+  "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+  "createdAt": "2023-04-10T23:06:44.250Z",
+  "updatedAt": null,
+  "deletedAt": null
+}
+```
+
+---
+
+## `POST /api/websites/{websiteId}`
+
+Updates a website.
+
+**Parameters**
+
+- `name`: (optional string) The name of the website in Umami.
+- `domain`: (optional string) The full domain of the tracked website.
+- `shareId`: (optional boolean) A unique string to enable a share url. Set `null` to unshare.
+
+**Sample response**
+
+```json
+{
+  "id": "02d89813-7a72-41e1-87f0-8d668f85008b",
+  "name": "My Website",
+  "domain": "mywebsite.com",
+  "shareId": null,
+  "resetAt": null,
+  "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+  "createdAt": "2023-04-10T23:06:44.250Z",
+  "updatedAt": null,
+  "deletedAt": null
+}
+```
+
+---
+
+## `DELETE /api/websites/{websiteId}`
+
+Deletes a website.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```
+ok
+```
+
+---
+
+## `POST /api/websites/{websiteId}/reset`
+
+Resets a website by removing all data related to the website.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+ok
+```
