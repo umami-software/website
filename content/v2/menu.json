@@ -74,7 +74,12 @@
       {
         "label": "Environment variables",
         "url": "/docs/environment-variables"
-      },
+      }
+    ]
+  },
+  {
+    "label": "Reference",
+    "items": [
       {
         "label": "API",
         "url": "/docs/api"
