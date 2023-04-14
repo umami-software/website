@@ -25,7 +25,7 @@ const menu = {
     ['API', '/docs/api'],
     ['Authentication', '/docs/authentication'],
     ['Users', '/docs/users'],
-    ['Teams', '/docs/teams'],
+    ['Teams', '/docs/teams-api'],
     ['Websites', '/docs/websites'],
     ['Website Data', '/docs/website-data'],
     ['Send', '/docs/send'],
