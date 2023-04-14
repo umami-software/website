@@ -1,0 +1,59 @@
+## `POST /api/collect`
+
+To register an `event`, you need to send a `POST` to `/api/send` with
+the following data:
+
+## `POST /api/send`
+
+**Parameters**
+
+-- `payload`
+
+- `hostname`: Name of host.
+- `language`: (string) Language of visitor (ex. "en-US")
+- `referrer`: (string) Name of referrer.
+- `screen`: (string) Screen resolution (ex. "1920x1080")
+- `title`: (string) Name of Page Title.
+- `url`: (string) Name of URL.
+- `website`: (string) Website Id.
+
+-- `type`: (string) `event` is currently the only type available.
+
+**Sample payload**
+
+```
+{
+    payload: {
+        hostname: "your-hostname",
+        language: "en-US",
+        referrer: "",
+        screen: "1920x1080",
+        title: "dashboard"
+        url: "/",
+        website: "your-website-id",
+    },
+    type: "event"
+}
+```
+
+For events, from v1.37 onwards, you would send:
+
+```
+{
+    payload: {
+        website: "your-website-id",
+        url: "/",
+        event_name: "click-signup-button",
+        hostname: "your-hostname",
+        language: "en-US",
+        screen: "1920x1080"
+    },
+    type: "event"
+}
+```
+
+Note, for `/api/send` requests you do not need to send an
+authentication token.
+
+Also, you need to send a proper `User-Agent` HTTP header or
+your request won't be registered.

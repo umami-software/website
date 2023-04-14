@@ -22,6 +22,12 @@ const menu = {
     ['Tracker functions', '/docs/tracker-functions'],
     ['Environment variables', '/docs/environment-variables'],
     ['API', '/docs/api'],
+    ['Authentication', '/docs/authentication'],
+    ['Users', '/docs/users'],
+    ['Teams', '/docs/teams'],
+    ['Websites', '/docs/websites'],
+    ['Website Data', '/docs/website-data'],
+    ['Send', '/docs/send'],
   ],
   Guides: [
     ['Migrating V1 to V2', '/docs/migrate-v1-v2'],

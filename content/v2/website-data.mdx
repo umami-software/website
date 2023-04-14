@@ -1,0 +1,187 @@
+# Website Data
+
+Operations around Website statistics.
+
+**Endpoints**
+
+```
+GET /api/websites/{websiteId}/active
+GET /api/websites/{websiteId}/events
+GET /api/websites/{websiteId}/pageviews
+GET /api/websites/{websiteId}/metrics
+GET /api/websites/{websiteId}/stats
+```
+
+---
+
+## `GET /api/websites/{websiteId}/active`
+
+Gets summarized website statistics.
+
+**Parameters**
+
+None
+
+**Sample example**
+
+GET from url : `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?start_at=1656679719687&end_at=1656766119687`
+
+```
+{
+  x: 5
+}
+```
+
+- `x`: Nuber of unique visitors within the last 5 minutes
+
+---
+
+## `GET /api/websites/{websiteId}/events`
+
+Gets events within a given time range.
+
+**Parameters**
+
+- `start_at`: Timestamp (in ms) of starting date.
+- `end_at`: Timestamp (in ms) of end date.
+- `unit`: (optional) Time unit (year | month | hour | day).
+- `timezone`: (optional) Timezone (ex. America/Los_Angeles).
+- `url`: (optional) Name of URL.
+- `eventName`: (optional) Name of event collected.
+
+**Sample response**
+
+URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/metrics?type=event&startAt=1681362000000&endAt=1681448399999&url=%2Fdocs%2Fgetting-started`
+
+```json
+[
+  { "x": "live-demo-button", "t": "2023-04-12 22:00:00", "y": 1 },
+  { "x": "get-started-button", "t": "2023-04-12 22:00:00", "y": 5 },
+  { "x": "get-started-button", "t": "2023-04-12 23:00:00", "y": 4 },
+  { "x": "live-demo-button", "t": "2023-04-12 23:00:00", "y": 4 },
+  { "x": "social-Discord", "t": "2023-04-13 00:00:00", "y": 1 }
+]
+```
+
+- `x`: Event name.
+- `t`: Timestamp grouping.
+- `y`: Number of events.
+
+---
+
+## `GET /api/websites/{websiteId}/pageviews`
+
+Gets pageviews within a given time range.
+
+**Parameters**
+
+- `start_at`: Timestamp (in ms) of starting date.
+- `end_at`: Timestamp (in ms) of end date.
+- `unit`: (optional) Time unit (year | month | hour | day).
+- `timezone`: (optional) Timezone (ex. America/Los_Angeles).
+- `url`: (optional) Name of URL.
+- `referrer`: (optional) Name of referrer.
+- `pageTitle`: (optional) Name of page title.
+- `os`: (optional) Name of operating system.
+- `browser`: (optional) Name of browser.
+- `device`: (optional) Name of device (ex. Mobile)
+- `country`: (optional) Name of country.
+- `subdivision1`: (optional)
+- `subdivision2`: (optional)
+- `city`: (optional) Name of city.
+
+**Sample response**
+
+```
+{
+    pageviews: [
+        {t: "2020-04-20 01:00:00", y: 3},
+        {t: "2020-04-20 02:00:00", y: 7}
+    ],
+    sessions: [
+        {t: "2020-04-20 01:00:00", y: 2},
+        {t: "2020-04-20 02:00:00", y: 4}
+    ]
+}
+```
+
+- `t`: Timestamp grouping.
+- `y`: Number of visitors.
+
+---
+
+## `GET /api/websites/{websiteId}/stats`
+
+Gets summarized website statistics.
+
+**Query Parameters**
+
+- `start_at`: Timestamp (in ms) of starting date.
+- `end_at`: Timestamp (in ms) of end date.
+- `unit`: (optional) Time unit (year | month | hour | day).
+- `timezone`: (optional) Timezone (ex. America/Los_Angeles).
+- `url`: (optional) Name of URL.
+- `referrer`: (optional) Name of referrer.
+- `pageTitle`: (optional) Name of page title.
+- `os`: (optional) Name of operating system.
+- `browser`: (optional) Name of browser.
+- `device`: (optional) Name of device (ex. Mobile)
+- `country`: (optional) Name of country.
+- `subdivision1`: (optional)
+- `subdivision2`: (optional)
+- `city`: (optional) Name of city.
+
+**Sample example**
+
+URL: `https://umami.mydomain.com/api/websites/1/stats?start_at=1656679719687&end_at=1656766119687`
+
+```
+{
+  pageviews: { value: 5, change: 5 },
+  uniques: { value: 1, change: 1 },
+  bounces: { value: 0, change: 0 },
+  totaltime: { value: 4, change: 4 }
+}
+```
+
+- `pageviews`: Pages hits
+- `uniques`: Number of unique visitor
+- `bounces`: Number of returning visitor
+- `totaltime` : Time spent on the website
+
+---
+
+## `GET /api/websites/{websiteId}/metrics`
+
+Gets metrics for a given time range.
+
+**Parameters**
+
+- `start_at`: Timestamp (in ms) of starting date.
+- `end_at`: Timestamp (in ms) of end date.
+- `type`: Metrics type (url | referrer | browser | os | device | country | event).
+- `unit`: (optional) Time unit (year | month | hour | day).
+- `timezone`: (optional) Timezone (ex. America/Los_Angeles).
+- `url`: (optional) Name of URL.
+- `referrer`: (optional) Name of referrer.
+- `pageTitle`: (optional) Name of page title.
+- `os`: (optional) Name of operating system.
+- `browser`: (optional) Name of browser.
+- `device`: (optional) Name of device (ex. Mobile)
+- `country`: (optional) Name of country.
+- `subdivision1`: (optional)
+- `subdivision2`: (optional)
+- `city`: (optional) Name of city.
+
+**Sample response**
+
+```
+[
+    {x: "/", y: 46}
+    {x: "/docs", y: 17}
+    {x: "/download", y: 14}
+]
+```
+
+- `x`: Unique value, depending on metric type (url | referrer | browser | os | device | country | event).
+- `y`: Number of visitors.
