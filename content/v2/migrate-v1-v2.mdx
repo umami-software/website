@@ -35,3 +35,7 @@ DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
 ```shell
 npx @umami/migrate-v1-v2
 ```
+
+### Troubleshooting
+
+- If your `DATABASE_URL` is localhost and the migration can't connect to the database, try changing to IP address example: `127.0.0.1`.
