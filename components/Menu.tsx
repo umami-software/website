@@ -20,13 +20,13 @@ export default function Menu() {
           <h3>{label}</h3>
           <div className={styles.items}>
             {items.map(({ label: text, url }) => (
-              <div key={url} className={styles.item}>
-                <Link
-                  href={url}
-                  className={classNames({ [styles.selected]: url.endsWith(query.id as string) })}
-                >
-                  <a>{text}</a>
-                </Link>
+              <div
+                key={url}
+                className={classNames(styles.item, {
+                  [styles.selected]: url.endsWith(query.id as string),
+                })}
+              >
+                <Link href={url}>{text}</Link>
               </div>
             ))}
           </div>

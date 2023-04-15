@@ -19,8 +19,16 @@ const headers = [
   },
 ];
 
-module.exports = withMDX({
+const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  reactStrictMode: true,
+  output: 'standalone',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -44,4 +52,6 @@ module.exports = withMDX({
       { source: '/docs/:path*', destination: '/docs/v2/:path*' },
     ];
   },
-});
+};
+
+module.exports = withMDX(nextConfig);

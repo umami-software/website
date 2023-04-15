@@ -94,9 +94,7 @@ export default function Pricing() {
           </ul>
           <div className={styles.button}>
             <Link href="/pricing">
-              <a>
-                <Button variant="secondary">Get Started</Button>
-              </a>
+              <Button variant="secondary">Get Started</Button>
             </Link>
           </div>
         </Column>
@@ -122,9 +120,7 @@ export default function Pricing() {
           </ul>
           <div className={styles.button}>
             <Link href="/pricing">
-              <a>
-                <Button variant="secondary">Get Started</Button>
-              </a>
+              <Button variant="secondary">Get Started</Button>
             </Link>
           </div>
         </Column>
@@ -150,9 +146,7 @@ export default function Pricing() {
           </ul>
           <div className={styles.button}>
             <Link href="/pricing">
-              <a>
-                <Button variant="secondary">Get Started</Button>
-              </a>
+              <Button variant="secondary">Get Started</Button>
             </Link>
           </div>
         </Column>
@@ -178,9 +172,7 @@ export default function Pricing() {
           </ul>
           <div className={styles.button}>
             <Link href="/pricing">
-              <a>
-                <Button variant="secondary">Contact Us</Button>
-              </a>
+              <Button variant="secondary">Contact Us</Button>
             </Link>
           </div>
         </Column>

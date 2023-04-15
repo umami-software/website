@@ -38,12 +38,10 @@ export default function Community() {
               {icon} {name}
             </h2>
             <p>{description}</p>
-            <Link href={url}>
-              <a target="_blank">
-                <Button variant="primary" data-umami-event={`community-${name}`}>
-                  Explore
-                </Button>
-              </a>
+            <Link href={url} target="_blank">
+              <Button variant="primary" data-umami-event={`community-${name}`}>
+                Explore
+              </Button>
             </Link>
           </div>
         </Column>

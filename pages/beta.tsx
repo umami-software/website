@@ -11,10 +11,13 @@ const BetaPage: NextPage = () => {
             Cloud <sub style={{ fontSize: 24 }}>BETA</sub>
           </h1>
         </header>
-        <Link href="https://cloud.umami.is/signup">
-          <a className="button" data-umami-event="cloud-beta-button" target="_blank">
-            <Button variant="primary">Sign up for Umami Cloud</Button>
-          </a>
+        <Link
+          href="https://cloud.umami.is/signup"
+          className="button"
+          data-umami-event="cloud-beta-button"
+          target="_blank"
+        >
+          <Button variant="primary">Sign up for Umami Cloud</Button>
         </Link>
       </article>
     </Flexbox>

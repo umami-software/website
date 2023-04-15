@@ -1,9 +1,7 @@
 .menu {
   font-size: 14px;
-}
-
-.selected {
-  font-weight: 700;
+  position: sticky;
+  top: 70px;
 }
 
 .items {
@@ -17,5 +15,10 @@
 }
 
 .item:hover {
+  border-left: 1px solid var(--primary400);
+}
+
+.item.selected {
+  font-weight: 700;
   border-left: 1px solid var(--primary400);
 }

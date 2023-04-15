@@ -1,25 +1,29 @@
-# Migrating V1 to V2
+# Migrating v1 to v2
 
-Script for migrating data from Umami V1 to V2.
+Umami v2 introduces a number of breaking changes. Some hightlights of v2 include:
+
+* A redesigned schema
+
+## Data migration
 
 ### Requirements
 
-- Database schema must be in sync with the latest V1 Umami repo. The script will query the prisma migrations table to ensure the latest migrations have been ran.
+- Database schema must be in sync with the latest v1 Umami repo. The script will query the prisma migrations table to ensure the latest migrations have been ran.
 
 ### Configure umami
 
 Create an `.env` file with the following
 
 ```
-DATABASE_URL=(connection url)
+DATABASE_URL={connection url}
 ```
 
 The connection url is in the following format:
 
 ```
-postgresql://username:mypassword@localhost:5432/mydb
+DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
 
-mysql://username:mypassword@localhost:3306/mydb
+DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
 ```
 
 ### Usage
