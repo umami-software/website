@@ -28,8 +28,6 @@ Disables login page.
 
 Enables the internal test page, `{host}/console`. Admin access is required. Users can manually fire pageviews and events to their websites.
 
-### SKIP_DB_CHECK
-
 ### APP_SECRET = &lt;random string&gt;
 
 A random string used to generate unique values.
@@ -49,9 +47,9 @@ behind a proxy that uses non-standard headers.
 
 Connection string for using clickhouse as your analytics database. Only required if you are running a clickhouse database. Running a database through `DATABASE_URL` is still required.
 
-### COLLECT_API_ENDPOINT = /api/x
+### COLLECT_API_ENDPOINT = &lt;API endpoint&gt;
 
-Allows you to send metrics to a location different than the default `/api/collect`. This is to help you avoid some ad-blockers.
+Allows you to send metrics to a location different than the default `/api/send`. This is to help you avoid some ad-blockers.
 
 ### DATABASE_URL = &lt;connection string&gt;
 
@@ -110,7 +108,7 @@ Removes the trailing slash from all incoming urls.
 
 ### TRACKER_SCRIPT_NAME = &lt;script name&gt;
 
-Allows you to assign a custom name to the tracker script different from the default `umami`. This is to help you avoid some ad-blockers.
+Allows you to assign a custom name to the tracker script different from the default `script`. This is to help you avoid some ad-blockers.
 
 Note: If you update this, be sure to update the tracking code on your website to the new name.
 
@@ -127,3 +125,7 @@ If you want to host Umami under a subdirectory. You may need to update your reve
 ### DATABASE_TYPE = &lt;postgresql | mysql&gt;
 
 The type of DB to be used. This is only required for the Docker build.
+
+### SKIP_DB_CHECK
+
+Skips the `check-db` step in the build process. Used for Docker builds.

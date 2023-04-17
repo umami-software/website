@@ -4,7 +4,7 @@
 
 ### Requirements
 
-- A server with Node.js version 14 or newer
+- A server with [Node.js](https://nodejs.org/) version 14.3 or newer
 - A database. Umami supports [MySQL](https://www.mysql.com/) (minimum v5.7) and [Postgresql](https://www.postgresql.org/) (minimum v12.14) databases.
 
 ### Install Yarn
@@ -26,15 +26,15 @@ yarn install
 Create an `.env` file with the following
 
 ```
-DATABASE_URL=(connection url)
+DATABASE_URL={connection url}
 ```
 
 The connection url is in the following format:
 
 ```
-postgresql://username:mypassword@localhost:5432/mydb
+DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
 
-mysql://username:mypassword@localhost:3306/mydb
+DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
 ```
 
 ### Build the application
@@ -43,7 +43,8 @@ mysql://username:mypassword@localhost:3306/mydb
 yarn build
 ```
 
-This will also create a login account with username **admin** and password **umami**.
+The first time the build is run, it will create all the required database tables in your database.
+It will also create a login account with username **admin** and password **umami**.
 
 ### Start the application
 
@@ -71,13 +72,15 @@ pm2 save
 
 ## Installing with Docker
 
-To build the umami container and start up a Postgres database, run:
+Umami ships with a docker compose that contains the application and a Postgresql database.
+
+To build the docker container and start up with a Postgres database, run:
 
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
-Alternatively, to pull just the Umami Docker image with PostgreSQL support:
+Alternatively, if you want to use prebuilt images, you can pull the Umami Docker image with PostgreSQL support:
 
 ```bash
 docker pull docker.umami.dev/umami-software/umami:postgresql-latest

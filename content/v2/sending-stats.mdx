@@ -1,3 +1,5 @@
+# Sending stats
+
 ## `POST /api/collect`
 
 To register an `event`, you need to send a `POST` to `/api/send` with
@@ -7,7 +9,7 @@ the following data:
 
 **Parameters**
 
--- `payload`
+`payload`
 
 - `hostname`: Name of host.
 - `language`: (string) Language of visitor (ex. "en-US")
@@ -17,7 +19,7 @@ the following data:
 - `url`: (string) Name of URL.
 - `website`: (string) Website Id.
 
--- `type`: (string) `event` is currently the only type available.
+`type`: (string) `event` is currently the only type available.
 
 **Sample payload**
 

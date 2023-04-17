@@ -1,10 +1,16 @@
 # Migrating v1 to v2
 
-Umami v2 introduces a number of breaking changes. Some hightlights of v2 include:
+Umami v2 introduces a redesigned schema and a number of breaking changes.
 
-* A redesigned schema
+- The API endpoints have changed including new ones being added. See [API](/docs/api) for more information.
+- The tracker no longer uses CSS class names to trigger events. It now uses HTML data attributes. See [Track events](/docs/track-events) for more information.
+- The methods on the global `umami` Javascript object have changed. There is now a single `.track()` method and a new way to send event data.
+See [Tracker functions](/docs/tracker-functions) for more information.
 
 ## Data migration
+
+Due to the schema changes, your data in your v1 database needs to be converted into v2.
+To assist with the migration we created a script `@umami/migrate-v1-v2` that will migrate all of your data for you.
 
 ### Requirements
 
@@ -12,30 +18,25 @@ Umami v2 introduces a number of breaking changes. Some hightlights of v2 include
 
 ### Configure umami
 
-Create an `.env` file with the following
+Ensure you have an `.env` file with the following variable defined:
 
 ```
 DATABASE_URL={connection url}
 ```
 
-The connection url is in the following format:
-
-```
-DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
-
-DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
-```
-
 ### Usage
-
-- Backup your target database prior to use. Potential data loss may occur if the migration is interrupted.
-- For users with larger datasets (5M+), the migration may take while. Please plan accordingly.
-- Due to the complexity of migrating a json column and not knowing the data structures being stored, the script will not be migrating event data into V2. The script will retain the V1 `event_data` table if populated.
 
 ```shell
 npx @umami/migrate-v1-v2
 ```
 
+#### Important
+- Backup your target database prior to use. Potential data loss may occur if the migration is interrupted.
+- For users with larger datasets (5M+), the migration may take while. Please plan accordingly.
+- The script will NOT migrate any event data into v2.
+- The script will ask you if you want to drop your v1 tables after the migration is complete.
+- If an `event_data` table is found populated with data, it will be renamed to `v1_event_data` but not dropped.
+
 ### Troubleshooting
 
-- If your `DATABASE_URL` is localhost and the migration can't connect to the database, try changing to IP address example: `127.0.0.1`.
+- If your `DATABASE_URL` is localhost and the migration can't connect to the database, try changing to an IP address, for example: `127.0.0.1`.

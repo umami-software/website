@@ -1,4 +1,4 @@
-# Website Data
+# Website statistics
 
 Operations around Website statistics.
 
@@ -16,7 +16,7 @@ GET /api/websites/{websiteId}/stats
 
 ## `GET /api/websites/{websiteId}/active`
 
-Gets summarized website statistics.
+Gets the number of active users on a website.
 
 **Parameters**
 
@@ -24,7 +24,7 @@ None
 
 **Sample example**
 
-GET from url : `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?start_at=1656679719687&end_at=1656766119687`
+GET from url : `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?startAt=1656679719687&endAt=1656766119687`
 
 ```
 {
@@ -42,8 +42,8 @@ Gets events within a given time range.
 
 **Parameters**
 
-- `start_at`: Timestamp (in ms) of starting date.
-- `end_at`: Timestamp (in ms) of end date.
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
 - `unit`: (optional) Time unit (year | month | hour | day).
 - `timezone`: (optional) Timezone (ex. America/Los_Angeles).
 - `url`: (optional) Name of URL.
@@ -64,7 +64,7 @@ URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b
 ```
 
 - `x`: Event name.
-- `t`: Timestamp grouping.
+- `t`: Timestamp.
 - `y`: Number of events.
 
 ---
@@ -75,8 +75,8 @@ Gets pageviews within a given time range.
 
 **Parameters**
 
-- `start_at`: Timestamp (in ms) of starting date.
-- `end_at`: Timestamp (in ms) of end date.
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
 - `unit`: (optional) Time unit (year | month | hour | day).
 - `timezone`: (optional) Timezone (ex. America/Los_Angeles).
 - `url`: (optional) Name of URL.
@@ -86,8 +86,7 @@ Gets pageviews within a given time range.
 - `browser`: (optional) Name of browser.
 - `device`: (optional) Name of device (ex. Mobile)
 - `country`: (optional) Name of country.
-- `subdivision1`: (optional)
-- `subdivision2`: (optional)
+- `region`: (optional) Name of region/state/province.
 - `city`: (optional) Name of city.
 
 **Sample response**
@@ -95,17 +94,17 @@ Gets pageviews within a given time range.
 ```
 {
     pageviews: [
-        {t: "2020-04-20 01:00:00", y: 3},
-        {t: "2020-04-20 02:00:00", y: 7}
+        {x: "2020-04-20 01:00:00", y: 3},
+        {x: "2020-04-20 02:00:00", y: 7}
     ],
     sessions: [
-        {t: "2020-04-20 01:00:00", y: 2},
-        {t: "2020-04-20 02:00:00", y: 4}
+        {x: "2020-04-20 01:00:00", y: 2},
+        {x: "2020-04-20 02:00:00", y: 4}
     ]
 }
 ```
 
-- `t`: Timestamp grouping.
+- `x`: Timestamp.
 - `y`: Number of visitors.
 
 ---
@@ -116,8 +115,8 @@ Gets summarized website statistics.
 
 **Query Parameters**
 
-- `start_at`: Timestamp (in ms) of starting date.
-- `end_at`: Timestamp (in ms) of end date.
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
 - `unit`: (optional) Time unit (year | month | hour | day).
 - `timezone`: (optional) Timezone (ex. America/Los_Angeles).
 - `url`: (optional) Name of URL.
@@ -127,13 +126,12 @@ Gets summarized website statistics.
 - `browser`: (optional) Name of browser.
 - `device`: (optional) Name of device (ex. Mobile)
 - `country`: (optional) Name of country.
-- `subdivision1`: (optional)
-- `subdivision2`: (optional)
+- `region`: (optional) Name of region/state/province.
 - `city`: (optional) Name of city.
 
 **Sample example**
 
-URL: `https://umami.mydomain.com/api/websites/1/stats?start_at=1656679719687&end_at=1656766119687`
+URL: `https://umami.mydomain.com/api/websites/1/stats?startAt=1656679719687&endAt=1656766119687`
 
 ```
 {
@@ -157,8 +155,8 @@ Gets metrics for a given time range.
 
 **Parameters**
 
-- `start_at`: Timestamp (in ms) of starting date.
-- `end_at`: Timestamp (in ms) of end date.
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
 - `type`: Metrics type (url | referrer | browser | os | device | country | event).
 - `unit`: (optional) Time unit (year | month | hour | day).
 - `timezone`: (optional) Timezone (ex. America/Los_Angeles).
@@ -169,8 +167,7 @@ Gets metrics for a given time range.
 - `browser`: (optional) Name of browser.
 - `device`: (optional) Name of device (ex. Mobile)
 - `country`: (optional) Name of country.
-- `subdivision1`: (optional)
-- `subdivision2`: (optional)
+- `region`: (optional) Name of region/state/province.
 - `city`: (optional) Name of city.
 
 **Sample response**

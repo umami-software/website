@@ -15,7 +15,7 @@
 }
 
 .item:hover {
-  border-left: 1px solid var(--primary400);
+  border-left: 1px solid var(--base600);
 }
 
 .item.selected {

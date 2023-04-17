@@ -1,9 +1,9 @@
 # Track events
 
 Besides pageviews, Umami is also able to track events that occur on your website. There are two ways to record
-events in Umami, using the **data-umami-event** property or using **Javascript**.
+events in Umami, using the **data attributes** property or using **Javascript**.
 
-## Using data-umami-event
+## Using data attributes
 
 To enable events, simply add a special data property to the element you want to track.
 
@@ -35,7 +35,7 @@ data-umami-event-name="umami"
 data-umami-event-id="123"
 ```
 
-The additonal properties will result in `{ name: 'umami', id: '123' }` being recorded with the `Cart form` event name.
+The additonal properties will result in `{ name: 'umami', id: '123' }` being recorded with the `Signup button` name.
 
 Event data cannot be sent without an event name.
 
@@ -47,7 +47,7 @@ data-\* method, you can do:
 ```
 const button = document.getElementById('signup-button');
 
-button.onclick = () => umami.trackEvent('Signup button');
+button.onclick = () => umami.track('Signup button');
 ```
 
 In this case, Umami will record an event named `Signup button`.

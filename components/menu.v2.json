@@ -1,11 +1,24 @@
 [
   {
-    "label": "Basics",
+    "label": "General",
     "items": [
       {
         "label": "About",
         "url": "/docs/about"
       },
+      {
+        "label": "FAQ",
+        "url": "/docs/faq"
+      },
+      {
+        "label": "Useful links",
+        "url": "/docs/useful-links"
+      }
+    ]
+  },
+  {
+    "label": "Getting started",
+    "items": [
       {
         "label": "Getting started",
         "url": "/docs/getting-started"
@@ -25,10 +38,15 @@
       {
         "label": "Collect data",
         "url": "/docs/collect-data"
-      },
+      }
+    ]
+  },
+  {
+    "label": "Basics",
+    "items": [
       {
-        "label": "Add an account",
-        "url": "/docs/add-an-account"
+        "label": "Add a user",
+        "url": "/docs/add-a-user"
       },
       {
         "label": "Enable share URL",
@@ -49,14 +67,6 @@
       {
         "label": "Languages",
         "url": "/docs/languages"
-      },
-      {
-        "label": "FAQ",
-        "url": "/docs/faq"
-      },
-      {
-        "label": "Useful links",
-        "url": "/docs/useful-links"
       }
     ]
   },
@@ -90,23 +100,23 @@
       },
       {
         "label": "Users",
-        "url": "/docs/users"
+        "url": "/docs/users-api"
       },
       {
         "label": "Teams",
-        "url": "/docs/teams"
+        "url": "/docs/teams-api"
       },
       {
         "label": "Websites",
-        "url": "/docs/websites"
+        "url": "/docs/websites-api"
       },
       {
-        "label": "Website Data",
-        "url": "/docs/website-data"
+        "label": "Website stats",
+        "url": "/docs/website-stats"
       },
       {
         "label": "Sending stats",
-        "url": "/docs/send"
+        "url": "/docs/sending-stats"
       }
     ]
   },

@@ -107,6 +107,10 @@ body button {
   font-family: inherit;
 }
 
+pre code {
+  padding: 0;
+}
+
 .markdown img {
   display: block;
   max-width: 100%;
