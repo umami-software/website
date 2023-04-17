@@ -23,7 +23,7 @@ export default function Menu() {
               <div
                 key={url}
                 className={classNames(styles.item, {
-                  [styles.selected]: url.endsWith(query.id as string),
+                  [styles.selected]: url.split('/').splice(-1)[0] === query.id,
                 })}
               >
                 <Link href={url}>{text}</Link>

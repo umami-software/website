@@ -1,35 +1,30 @@
-import Beta from '../../pages/beta';
-
-# Getting started with Umami
-
-Umami is a self-hosted web analytics solution. There are many different ways to run Umami.
-
-If you want to install directly from the source code or build your own docker images, you can jump directly to the [Install](/docs/install) section.
+# Getting started
 
 <div style={{padding:30,margin: '30px 0',borderRadius:8,background:'#e8f6ff'}}>
   ## Cloud
 
-Get started right now! Umami is currently running an open beta of its new cloud platform.
+  Get started right now! Umami is currently running an open beta of its new cloud platform.
 
-You can sign up for free at <a href="https://cloud.umami.is">https://cloud.umami.is</a>
-
+  You can sign up for free at <a href="https://cloud.umami.is">https://cloud.umami.is</a>
 </div>
 
-## Docker
+## Quickstart
 
-If you want pre-built docker images for your database, you can pull directly from our registry:
+Umami is an open-source, self-hosted web analytics solution. To get up and running you will need to:
 
-### PostgreSQL
+- **[Install the application](/docs/install)**
+- **[Log into application](/docs/login)**
+- **[Add a website](/docs/add-a-website)**
+- **[Get the tracking code for a website](/docs/collect-data)**
+- **Paste the tracking code into your website HTML**
 
-```shell
-docker pull docker.umami.dev/umami-software/umami:postgresql-latest
-```
+## Installation
 
-### MySQL
+There are several different ways to install Umami.
 
-```shell
-docker pull docker.umami.dev/umami-software/umami:mysql-latest
-```
+- **Installing from source**: Get the code from [GitHub](https://github.com/umami-software/umami) and build the application yourself. See [Install](/docs/install).
+- **Using Docker compose**: Build your own docker container using `docker compose`. See [Install](/docs/install).
+- **Using a Docker image**: Download a pre-built Docker image. See [Install](/docs/install).
 
 ## Hosting
 
@@ -37,8 +32,3 @@ If you are unfamiliar with running your own servers, check out the [Hosting](/do
 
 There are also many services that will run Umami. See the **Guides** section in the navigation menu.
 
-A fast way to get up and running is to use Railway
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/umami-analytics)
-
-See [Running on Railway](/docs/running-on-railway) to get started.
