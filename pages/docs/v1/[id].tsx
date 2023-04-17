@@ -1,4 +1,3 @@
-import React from 'react';
 import { Row, Column } from 'react-basics';
 import { NextPage } from 'next';
 import Menu from 'components/Menu';
@@ -10,28 +9,20 @@ import path from 'path';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content/v1');
 
-const DocsPage: NextPage = ({ content }: { content: { id: string; contentHtml: string } }) => {
-  const Page = dynamic(import(`content/v1/${content.id}.mdx`)); // mdx file is imported dynamically
+const DocsPage: NextPage = ({
+  content,
+}: {
+  content: { id: string; title: string; html: string };
+}) => {
+  const { id, title } = content;
 
-  const contentTitle = React.useMemo(() => {
-    const contentArray = content.contentHtml.split('\n');
-    const h1 = contentArray.find(line => line.includes('<h1>'));
-
-    if (h1) {
-      // this regex removes the HTML tags from the content title
-      // <h1>About</h1> will become -> About
-      // see https://regexr.com/6r9cc
-      return h1.replace(/<\/?[^>]+(>|$)/g, '');
-    }
-
-    return null;
-  }, [content.contentHtml]);
+  const Page = dynamic(import(`content/v1/${id}.mdx`));
 
   return (
     <Row className="markdown">
-      {contentTitle && (
+      {title && (
         <Head>
-          <title>{`${contentTitle} | umami`}</title>
+          <title>{`${title} | umami`}</title>
         </Head>
       )}
       <Column defaultSize={3} xs={12} sm={12} md={12}>
