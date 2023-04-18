@@ -33,11 +33,10 @@ export default function Header() {
             <Link href={REPO_URL} target="_blank">
               <GitHub />
             </Link>
-          </Column>
-          <Column className={styles.menu}>
             <ThemeSwitch />
           </Column>
           <Column defaultSize={0} xs={2} sm={2} md={6} className={styles.menu}>
+            <ThemeSwitch />
             <HamburgerButton />
           </Column>
         </Row>

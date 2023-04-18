@@ -64,7 +64,7 @@
 }
 
 html:not([data-scroll="0"]) .header {
-  transition: all linear 0.6s;
+  transition: border linear 0.6s;
   border-bottom: 1px solid var(--base300);
 }
 
