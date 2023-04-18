@@ -42,7 +42,7 @@
   padding: 24px 0;
 }
 
-@media (prefers-color-scheme: dark) {
+:global(html.dark) {
   .intro h2 b:nth-child(3) {
     color: var(--dark600);
   }

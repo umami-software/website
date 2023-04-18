@@ -1,10 +1,11 @@
-import { Row, Column, Container, useScroll } from 'react-basics';
-import Link from 'next/link';
-import { REPO_URL } from 'lib/constants';
-import CompanyLogo from './CompanyLogo';
-import HamburgerButton from './HamburgerButton';
-import GitHub from 'assets/github.svg';
-import styles from './Header.module.css';
+import { Row, Column, Container, useScroll } from "react-basics";
+import { ThemeSwitch } from "./theme-switch/ThemeSwitch";
+import Link from "next/link";
+import { REPO_URL } from "lib/constants";
+import CompanyLogo from "./CompanyLogo";
+import HamburgerButton from "./HamburgerButton";
+import GitHub from "assets/github.svg";
+import styles from "./Header.module.scss";
 
 export default function Header() {
   useScroll();
@@ -13,7 +14,13 @@ export default function Header() {
     <header className={styles.header}>
       <Container>
         <Row className={styles.row}>
-          <Column defaultSize={4} xs={10} sm={10} md={6} className={styles.title}>
+          <Column
+            defaultSize={4}
+            xs={10}
+            sm={10}
+            md={6}
+            className={styles.title}
+          >
             <CompanyLogo />
           </Column>
           <Column defaultSize={4} xs={0} sm={0} md={0} className={styles.links}>
@@ -26,6 +33,9 @@ export default function Header() {
             <Link href={REPO_URL} target="_blank">
               <GitHub />
             </Link>
+          </Column>
+          <Column className={styles.menu}>
+            <ThemeSwitch />
           </Column>
           <Column defaultSize={0} xs={2} sm={2} md={6} className={styles.menu}>
             <HamburgerButton />

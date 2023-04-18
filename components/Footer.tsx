@@ -1,44 +1,47 @@
-import React from 'react';
-import { Row, Column, Container } from 'react-basics';
-import Link from 'next/link';
-import classNames from 'classnames';
-import CompanyLogo from './CompanyLogo';
-import SocialMedia from './SocialMedia';
-import styles from './Footer.module.css';
+import React from "react";
+import { Row, Column, Container } from "react-basics";
+import Link from "next/link";
+import classNames from "classnames";
+import CompanyLogo from "./CompanyLogo";
+import SocialMedia from "./SocialMedia";
+import styles from "./Footer.module.scss";
 
 const data = [
   {
-    title: 'Product',
+    title: "Product",
     items: [
-      { text: 'Features', href: '/features' },
-      { text: 'Pricing', href: '/pricing' },
+      { text: "Features", href: "/features" },
+      { text: "Pricing", href: "/pricing" },
     ],
   },
   {
-    title: 'Resources',
+    title: "Resources",
     items: [
-      { text: 'Docs', href: '/docs' },
-      { text: 'Guides', href: '/docs/guides' },
-      { text: 'API Reference', href: '/docs/api' },
-      { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
+      { text: "Docs", href: "/docs" },
+      { text: "Guides", href: "/docs/guides" },
+      { text: "API Reference", href: "/docs/api" },
+      {
+        text: "Release Notes",
+        href: "https://github.com/umami-software/umami/releases",
+      },
     ],
   },
   {
-    title: 'Community',
+    title: "Community",
     items: [
-      { text: 'Get Involved', href: '/community' },
-      { text: 'GitHub', href: 'https://github.com/umami-software/umami' },
-      { text: 'Discord', href: 'https://discord.gg/4dz4zcXYrQ' },
-      { text: 'Twitter', href: 'https://twitter.com/umami_software' },
+      { text: "Get Involved", href: "/community" },
+      { text: "GitHub", href: "https://github.com/umami-software/umami" },
+      { text: "Discord", href: "https://discord.gg/4dz4zcXYrQ" },
+      { text: "Twitter", href: "https://twitter.com/umami_software" },
     ],
   },
   {
-    title: 'Company',
+    title: "Company",
     items: [
-      { text: 'About', href: '/about' },
-      { text: 'Contact', href: '/contact' },
-      { text: 'Privacy', href: '/privacy' },
-      { text: 'Terms', href: '/terms' },
+      { text: "About", href: "/about" },
+      { text: "Contact", href: "/contact" },
+      { text: "Privacy", href: "/privacy" },
+      { text: "Terms", href: "/terms" },
     ],
   },
 ];
@@ -61,7 +64,11 @@ export default function Footer() {
             >
               <h1>{title}</h1>
               {items.map(({ text, href }) => (
-                <Link key={text} href={href} target={href.startsWith('http') ? '_blank' : null}>
+                <Link
+                  key={text}
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : null}
+                >
                   {text}
                 </Link>
               ))}

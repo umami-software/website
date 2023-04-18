@@ -20,7 +20,7 @@
   padding: 24px 0;
 }
 
-@media (prefers-color-scheme: dark) {
+:global(html.dark) {
   .buttons .button {
     background: var(--dark150);
   }

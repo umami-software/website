@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button, Row, Column } from "react-basics";
-import styles from "./Intro.module.css";
+import styles from "./Intro.module.scss";
 
 export default function Intro() {
   return (

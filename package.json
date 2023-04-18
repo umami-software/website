@@ -43,6 +43,7 @@
     "react-spring": "^8.0.27",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
+    "sass": "^1.62.0",
     "typescript": "^4.8.4"
   },
   "devDependencies": {

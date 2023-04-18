@@ -1,0 +1,13 @@
+.button {
+  align-self: center !important;
+}
+
+:global(html.dark) {
+  .button {
+    fill: var(--base900);
+  }
+
+  .button:hover {
+    background: var(--dark100) !important;
+  }
+}

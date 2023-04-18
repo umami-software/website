@@ -48,7 +48,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+:global(html.dark) {
   .statements {
     background: var(--base50);
   }

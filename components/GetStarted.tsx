@@ -1,5 +1,5 @@
 import { Button } from "react-basics";
-import styles from "./GetStarted.module.css";
+import styles from "./GetStarted.module.scss";
 
 export default function GetStarted() {
   return (

@@ -17,6 +17,11 @@
   width: 100%;
   border: 1px solid transparent;
   transition: all ease-in-out 0.3s;
+
+  .buttons a {
+    height: 24px;
+    overflow: hidden;
+  }
 }
 
 .header svg {
@@ -63,7 +68,7 @@ html:not([data-scroll="0"]) .header {
   border-bottom: 1px solid var(--base300);
 }
 
-@media (prefers-color-scheme: dark) {
+:global(html.dark) {
   .header {
     background: rgb(var(--base50-rgb), 0.9);
   }
@@ -74,11 +79,9 @@ html:not([data-scroll="0"]) .header {
 
   .row .buttons a {
     fill: var(--base900);
-    height: 24px;
-    overflow: hidden;
   }
+}
 
-  html:not([data-scroll="0"]) .header {
-    border-color: var(--border);
-  }
+:global(html:not([data-scroll="0"]).dark) .header {
+  border-color: var(--border);
 }

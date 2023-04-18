@@ -14,7 +14,7 @@
   fill: #2680eb;
 }
 
-@media (prefers-color-scheme: dark) {
+:global(html.dark) {
   .links svg {
     fill: var(--base900);
   }

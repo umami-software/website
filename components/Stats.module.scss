@@ -22,7 +22,7 @@
   font-size: 24px;
 }
 
-@media (prefers-color-scheme: dark) {
+:global(html.dark) {
   .stats {
     background: #1b1d1e;
   }
