@@ -1,72 +1,78 @@
-import { Fragment } from 'react';
-import classNames from 'classnames';
-import { Button, Row, Column, Icon } from 'react-basics';
-import Checkmark from 'assets/checkmark.svg';
-import styles from './Pricing.module.css';
-import Link from 'next/link';
+import { Fragment } from "react";
+import classNames from "classnames";
+import { Button, Row, Column, Icon } from "react-basics";
+import Checkmark from "assets/checkmark.svg";
+import styles from "./Pricing.module.scss";
+import Link from "next/link";
 
 const features = [
   {
-    label: 'Data',
+    label: "Data",
     items: [
-      ['Ingest (included)', '10K', '100K', '1M', '50M'],
-      ['Overage', '', '$0.00005 / event', '$0.00004 / event', '$0.00003 / event'],
+      ["Ingest (included)", "10K", "100K", "1M", "50M"],
+      [
+        "Overage",
+        "",
+        "$0.00005 / event",
+        "$0.00004 / event",
+        "$0.00003 / event",
+      ],
     ],
   },
   {
-    label: 'Analytics',
+    label: "Analytics",
     items: [
-      ['Websites', 'Limited', true, true, true],
-      ['Teams', false, true, true, true],
-      ['Events', true, true, true, true],
-      ['Custom data', true, true, true, true],
-      ['Segments', false, true, true, true],
-      ['Goals', false, true, true, true],
+      ["Websites", "Limited", true, true, true],
+      ["Teams", false, true, true, true],
+      ["Events", true, true, true, true],
+      ["Custom data", true, true, true, true],
+      ["Segments", false, true, true, true],
+      ["Goals", false, true, true, true],
     ],
   },
   {
-    label: 'Advanced analysis',
+    label: "Advanced analysis",
     items: [
-      ['API access', false, true, true, true],
-      ['A/B testing', false, true, true, true],
-      ['Heatmaps', false, false, true, true],
-      ['Session recording', false, false, true, true],
-      ['White label', false, false, true, true],
-      ['Forms', false, false, true, true],
+      ["API access", false, true, true, true],
+      ["A/B testing", false, true, true, true],
+      ["Heatmaps", false, false, true, true],
+      ["Session recording", false, false, true, true],
+      ["White label", false, false, true, true],
+      ["Forms", false, false, true, true],
     ],
   },
   {
-    label: 'Reports',
+    label: "Reports",
     items: [
-      ['Insights', false, true, true, true],
-      ['Flows', false, true, true, true],
-      ['Funnels', false, true, true, true],
-      ['Retention', false, true, true, true],
-      ['Cohorts', false, true, true, true],
+      ["Insights", false, true, true, true],
+      ["Flows", false, true, true, true],
+      ["Funnels", false, true, true, true],
+      ["Retention", false, true, true, true],
+      ["Cohorts", false, true, true, true],
     ],
   },
   {
-    label: 'Monitoring',
+    label: "Monitoring",
     items: [
-      ['Realtime events', true, true, true, true],
-      ['Custom dashboards', false, true, true, true],
-      ['Email alerts', false, false, true, true],
+      ["Realtime events", true, true, true, true],
+      ["Custom dashboards", false, true, true, true],
+      ["Email alerts", false, false, true, true],
     ],
   },
   {
-    label: 'Security',
+    label: "Security",
     items: [
-      ['Two-factor authentication', false, false, true, true],
-      ['Access controls', false, false, false, true],
-      ['SAML (SSO)', false, false, false, true],
+      ["Two-factor authentication", false, false, true, true],
+      ["Access controls", false, false, false, true],
+      ["SAML (SSO)", false, false, false, true],
     ],
   },
   {
-    label: 'Support',
+    label: "Support",
     items: [
-      ['Email support', false, true, true, true],
-      ['Dedicated support', false, false, true, true],
-      ['Support SLAs', false, false, false, true],
+      ["Email support", false, true, true, true],
+      ["Dedicated support", false, false, true, true],
+      ["Support SLAs", false, false, false, true],
     ],
   },
 ];

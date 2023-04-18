@@ -53,7 +53,11 @@
     background: var(--base50);
   }
 
-  .statements svg {
-    fill: var(--primary700);
+  .statements svg:nth-child(1) {
+    fill: var(--primary500);
+  }
+
+  .statements svg:nth-child(2) {
+    fill: var(--blue1200);
   }
 }

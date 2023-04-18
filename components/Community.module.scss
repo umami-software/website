@@ -33,3 +33,14 @@
 .block p {
   flex: 1;
 }
+
+:global(html.dark) {
+  .block {
+    background: var(--dark75) !important;
+    border: var(--border);
+
+    svg {
+      fill: var(--base900);
+    }
+  }
+}

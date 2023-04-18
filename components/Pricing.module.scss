@@ -110,3 +110,33 @@
   height: 100px;
   border: 0;
 }
+
+:global(html.dark) {
+  .tier:first-child {
+    background: var(--dark100);
+
+    svg {
+      fill: var(--base900);
+    }
+
+    button {
+      border-color: var(--border);
+    }
+
+    button:hover {
+      background: var(--dark50);
+    }
+  }
+
+  .tier:nth-child(2) {
+    color: #fff;
+    svg {
+      fill: #fff;
+    }
+  }
+
+  .signup {
+    border-color: var(--border);
+    box-shadow: none;
+  }
+}
