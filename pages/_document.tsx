@@ -7,13 +7,6 @@ class Document extends NextDocument {
       <Html data-scroll="0">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          {typeof window !== 'undefined' && process.env.NODE_ENV === 'production' && (
-            <script
-              async
-              data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
-              src="https://analytics.umami.is/script.js"
-            />
-          )}
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
