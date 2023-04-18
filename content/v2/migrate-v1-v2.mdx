@@ -27,6 +27,10 @@ To assist with the migration we created a script `@umami/migrate-v1-v2` that wil
 - The script will ask you if you want to drop your v1 tables after the migration is complete.
 - If an `event_data` table is found populated with data, it will be renamed to `v1_event_data` but not dropped.
 
+### Troubleshooting
+
+- If your `DATABASE_URL` is localhost and the migration can't connect to the database, try changing to an IP address, for example: `127.0.0.1`.
+
 ## Running migration
 
 There are two ways to run the migration script.
@@ -66,6 +70,17 @@ DATABASE_URL={connection url}
 yarn start
 ```
 
-### Troubleshooting
+## Docker migration
 
-- If your `DATABASE_URL` is localhost and the migration can't connect to the database, try changing to an IP address, for example: `127.0.0.1`.
+Go into your running docker container. Please use your real container name. You can find the name by the output of `docker ps`.
+
+```shell
+docker exec -ti -u 0 <app container name> sh
+```
+
+Run the migration script
+
+```shell
+yarn add @umami/migrate-v1-v2
+npx @umami/migrate-v1-v2
+```
