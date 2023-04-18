@@ -85,7 +85,7 @@ pre {
 }
 
 code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 14px;
   font-weight: 400;
   background: var(--base100);

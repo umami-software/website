@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { Button, Row, Column } from 'react-basics';
-import styles from './Intro.module.css';
+import Link from "next/link";
+import { Button, Row, Column } from "react-basics";
+import styles from "./Intro.module.css";
 
 export default function Intro() {
   return (
@@ -10,7 +10,10 @@ export default function Intro() {
         <h2>
           <span>Umami is an </span>
           <b>
-            <Link href="https://github.com/umami-software/umami" target="_blank">
+            <Link
+              href="https://github.com/umami-software/umami"
+              target="_blank"
+            >
               open source
             </Link>
           </b>
@@ -18,7 +21,11 @@ export default function Intro() {
           <div>alternative to Google Analytics</div>
         </h2>
         <div className={styles.buttons}>
-          <a href="/docs" className="button" data-umami-event="get-started-button">
+          <a
+            href="/docs"
+            className="button"
+            data-umami-event="get-started-button"
+          >
             <Button size="lg" variant="primary">
               Get Started
             </Button>
@@ -30,7 +37,9 @@ export default function Intro() {
             target="_blank"
             rel="noreferrer"
           >
-            <Button size="lg">Live Demo</Button>
+            <Button size="lg" className={styles.button}>
+              Live Demo
+            </Button>
           </a>
         </div>
       </Column>

@@ -13,3 +13,9 @@
 .links svg:hover {
   fill: #2680eb;
 }
+
+@media (prefers-color-scheme: dark) {
+  .links svg {
+    fill: var(--base900);
+  }
+}

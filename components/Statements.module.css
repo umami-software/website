@@ -47,3 +47,13 @@
     text-align: center;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .statements {
+    background: var(--base50);
+  }
+
+  .statements svg {
+    fill: var(--primary700);
+  }
+}
