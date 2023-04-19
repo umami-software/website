@@ -5,8 +5,8 @@ Umami v2 introduces a redesigned schema and a number of breaking changes.
 ## Breaking changes
 
 - The API endpoints have changed including new ones being added. See [API](/docs/api) for more information.
-- The tracker script has been renamed to `script.js` from `umami.js`.
-- The collect api endpoint has been renamed to `/api/send` from `/api/collect`.
+- The tracker script has been renamed from `umami.js` to `script.js`.
+- The collect api endpoint has been renamed from `/api/collect` to `/api/send`.
 - The tracker no longer uses CSS class names to trigger events. It now uses HTML data attributes. See [Track events](/docs/track-events) for more information.
 - The methods on the global `umami` Javascript object have changed. There is now a single `.track()` method and a new way to send event data.
 See [Tracker functions](/docs/tracker-functions) for more information.
