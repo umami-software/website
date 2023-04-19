@@ -41,8 +41,7 @@ Make sure your application is already built. If not run `yarn build` first.
 
 ```shell
 cd umami
-yarn add @umami/migrate-v1-v2
-npx @umami/migrate-v1-v2
+npx @umami/migrate-v1-v2@latest
 ```
 
 ### 2. Running standalone
@@ -72,7 +71,7 @@ yarn start
 
 ## Docker migration
 
-Go into your running docker container. Please use your real container name. You can find the name by the output of `docker ps`.
+Go into your running docker container. You can find the name by the output of `docker ps`.
 
 ```shell
 docker exec -ti -u 0 <app container name> sh
@@ -81,10 +80,9 @@ docker exec -ti -u 0 <app container name> sh
 Run the migration script
 
 ```shell
-yarn add @umami/migrate-v1-v2
-npx @umami/migrate-v1-v2
+npx @umami/migrate-v1-v2@latest
 ```
 
-When the migration is run successfully, it should like like this:
+When the migration is run successfully, it should like this:
 
 <img src="/images/v2/migrate-v1-v2.png" />
