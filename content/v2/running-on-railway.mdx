@@ -36,7 +36,9 @@ This initial deploy will fail until you follow the rest of these steps.
 
 ### Database and Deploy
 
-- Close the settings sidebar and click **New**, click **Database** and select **Add PostgreSQL**
+- Close the settings sidebar and click **New**, click **Database** and select **Add PostgreSQL**.
+- On the dashboard, select your Umami service, go to the **Variables** tab and click **New Variable**.
+- Click **Add Reference** and select the `DATABASE_URL` variable from your Postgres database. Click **Add**.
 
 Adding the database should trigger a re-deploy, and clicking the app link should get you to the login page of your Umami instance.
 
