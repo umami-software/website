@@ -4,17 +4,17 @@
 
 ## Setup
 
-1. Fork the [https://github.com/umami-software/umami](https://github.com/umami-software/umami) project to your GitHub account and pull it into your machine.
+1. Follow [Install](https://umami.is/docs/install) documentation up to "Configure umami" section.
 2. Create a database on [PlanetScale](https://app.planetscale.com/) called `umami-db` and copy the `DATABASE_URL` string from "Connect" > "Connect with Prisma" > ".env" tab.
 3. Add the `DATABASE_URL` to your `.env` file:
 
-    ```properties
+    ```
     DATABASE_URL=mysql://username:password@host/umami-db?sslaccept=strict
     ```
 
-4. Run `npm install` and then `npm run build-db && npm run update-db`.
+4. Run `yarn run build-db && yarn run update-db`
 5. Visit the `umami-db` dashboard and make sure the Tables are created and then promote it to production if you want.
-6. You should now be able to build and start Umami (`npm run build` followed by `npm start`).
+6. You should now be able to build and start Umami (`yarn build` followed by `yarn start`).
 7. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
 
 ### Troubleshooting
