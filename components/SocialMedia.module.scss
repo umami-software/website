@@ -13,3 +13,9 @@
 .links svg:hover {
   fill: #2680eb;
 }
+
+:global(html.dark) {
+  .links svg {
+    fill: var(--base900);
+  }
+}

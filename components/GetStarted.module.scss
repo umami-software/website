@@ -19,3 +19,13 @@
   gap: 20px;
   padding: 24px 0;
 }
+
+:global(html.dark) {
+  .buttons .button {
+    background: var(--dark150);
+  }
+
+  .buttons .button:hover {
+    background: var(--dark200);
+  }
+}

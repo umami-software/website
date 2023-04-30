@@ -3,4 +3,13 @@
   --primary500: var(--blue900);
   --primary600: var(--blue1000);
   --primary700: var(--blue1100);
+  --bg-blue: #e8f6ff;
+}
+
+html.dark {
+  --base50: #181a1b;
+  --base50-rgb: 24, 26, 27;
+  --base900: #ccc8c1;
+  --border: #303336;
+  --bg-blue: #273a4e;
 }

@@ -36,3 +36,10 @@
   display: flex;
   gap: 10px;
 }
+
+:global(html.dark) {
+  .footer {
+    border-color: var(--border);
+    background: #1b1d1e;
+  }
+}

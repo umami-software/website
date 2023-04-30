@@ -85,7 +85,7 @@ pre {
 }
 
 code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 14px;
   font-weight: 400;
   background: var(--base100);
@@ -115,6 +115,8 @@ pre code {
   display: block;
   max-width: 100%;
   margin: 2rem auto;
+
+  border-radius: 8px;
 }
 
 .markdown article a {
@@ -129,4 +131,8 @@ pre code {
   article header h1 {
     font-size: 2em;
   }
+}
+
+html.dark :is(pre, code) {
+  background: var(--dark75);
 }

@@ -3,6 +3,8 @@
   padding: 40px;
   background-color: #fafafa;
   border-radius: 10px;
+
+  margin-bottom: 3rem;
 }
 
 .stat {
@@ -18,4 +20,14 @@
 
 .name {
   font-size: 24px;
+}
+
+:global(html.dark) {
+  .stats {
+    background: #1b1d1e;
+  }
+
+  .stat .value {
+    text-shadow: 5px 5px 1px #004294;
+  }
 }

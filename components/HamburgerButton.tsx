@@ -1,30 +1,30 @@
-import { useState } from 'react';
-import { Button } from 'react-basics';
-import MobileMenu from './MobileMenu';
-import XMark from 'assets/xmark.svg';
-import Bars from 'assets/bars.svg';
-import styles from './HamburgerButton.module.css';
+import { useState } from "react";
+import { Button } from "react-basics";
+import MobileMenu from "./MobileMenu";
+import XMark from "assets/xmark.svg";
+import Bars from "assets/bars.svg";
+import styles from "./HamburgerButton.module.scss";
 
 const menuItems = [
   {
-    label: 'Home',
-    value: '/',
+    label: "Home",
+    value: "/",
   },
   {
-    label: 'Features',
-    value: '/features',
+    label: "Features",
+    value: "/features",
   },
   {
-    label: 'Docs',
-    value: '/docs',
+    label: "Docs",
+    value: "/docs",
   },
   {
-    label: 'Community',
-    value: '/community',
+    label: "Community",
+    value: "/community",
   },
   {
-    label: 'Pricing',
-    value: '/pricing',
+    label: "Pricing",
+    value: "/pricing",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function HamburgerButton() {
   const [active, setActive] = useState(false);
 
   function handleClick() {
-    setActive(state => !state);
+    setActive((state) => !state);
   }
 
   function handleClose() {

@@ -1,0 +1,16 @@
+button.button {
+  border: 0;
+  background: transparent;
+  fill: var(--base900);
+
+  padding: 0;
+  margin: 0 1rem;
+
+  transform: translateY(0.25rem);
+}
+
+@media (max-width: 992px) {
+  button.button {
+    transform: translateY(0.1rem);
+  }
+}

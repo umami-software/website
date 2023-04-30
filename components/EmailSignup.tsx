@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Row, Column, TextField } from 'react-basics';
 import CheckCircle from 'assets/check-circle.svg';
-import styles from './EmailSignup.module.css';
+import styles from './EmailSignup.module.scss';
 
 interface Props {
   type: string;

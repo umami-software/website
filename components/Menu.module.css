@@ -18,7 +18,21 @@
   border-left: 1px solid var(--base600);
 }
 
-.item.selected {
+.item.selected,
+:global(html.dark) .item.selected {
   font-weight: 700;
   border-left: 1px solid var(--primary400);
+}
+
+:global(html.dark) .item {
+  border-color: var(--base700);
+}
+
+:global(html.dark) .item:hover {
+  border-left: 1px solid var(--base400);
+}
+
+.item,
+.item a {
+  transition: all 0.3s ease;
 }

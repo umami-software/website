@@ -47,3 +47,17 @@
     text-align: center;
   }
 }
+
+:global(html.dark) {
+  .statements {
+    background: var(--base50);
+  }
+
+  .statements svg:nth-child(1) {
+    fill: var(--base900);
+  }
+
+  .statements svg:nth-child(2) {
+    fill: var(--blue1200);
+  }
+}

@@ -1,28 +1,29 @@
-import { Button, Row, Column } from 'react-basics';
-import GitHub from 'assets/github.svg';
-import Discord from 'assets/discord.svg';
-import Twitter from 'assets/twitter.svg';
-import styles from './Community.module.css';
-import { REPO_URL, DISCORD_URL, TWITTER_URL } from '../lib/constants';
-import Link from 'next/link';
+import { Button, Row, Column } from "react-basics";
+import GitHub from "assets/github.svg";
+import Discord from "assets/discord.svg";
+import Twitter from "assets/twitter.svg";
+import styles from "./Community.module.scss";
+import { REPO_URL, DISCORD_URL, TWITTER_URL } from "../lib/constants";
+import Link from "next/link";
 
 const items = [
   {
-    name: 'GitHub',
+    name: "GitHub",
     description:
-      'Check out the Umami source code, report issues, request features and join discussions.',
+      "Check out the Umami source code, report issues, request features and join discussions.",
     url: REPO_URL,
     icon: <GitHub />,
   },
   {
-    name: 'Discord',
-    description: "Chat directly with developers and other users in Umami's Discord channel.",
+    name: "Discord",
+    description:
+      "Chat directly with developers and other users in Umami's Discord channel.",
     url: DISCORD_URL,
     icon: <Discord />,
   },
   {
-    name: 'Twitter',
-    description: 'Follow us on Twitter for the latest news and updates.',
+    name: "Twitter",
+    description: "Follow us on Twitter for the latest news and updates.",
     url: TWITTER_URL,
     icon: <Twitter />,
   },

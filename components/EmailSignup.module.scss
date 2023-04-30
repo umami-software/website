@@ -25,3 +25,10 @@
 .confirm svg {
   fill: var(--green400);
 }
+
+:global(html.dark) {
+  .container {
+    border-color: var(--border);
+    box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
+  }
+}
