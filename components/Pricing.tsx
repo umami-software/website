@@ -52,7 +52,9 @@ const questions = [
   },
   {
     question: 'How will I be billed?',
-    answer: `Billing occurs on a monthly basis. If you upgraded to a paid plan via a trial, your first invoice will arrive around 14 days after your trial ends.`,
+    answer: `Billing occurs on a monthly basis. 
+    The invoice will include the base monthly rate plus any charges for additional usage beyond the plan's included events.
+    If you upgraded to a paid plan via a trial, your first invoice will arrive after your trial period ends.`,
   },
   {
     question: 'How is usage measured?',
