@@ -16,6 +16,9 @@
 }
 
 .tier {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 30px;
   border-radius: 10px;
   background: var(--base75);
@@ -40,9 +43,9 @@
 }
 
 .description {
-  font-size: 16px;
-  line-height: 3em;
+  font-size: 14px;
   font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .price b {
@@ -72,6 +75,10 @@
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+}
+
+.button button {
+  font-weight: 700;
 }
 
 .signup {
@@ -109,4 +116,42 @@
 .features .header {
   height: 100px;
   border: 0;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq h1 {
+  text-align: center;
+}
+
+.questions {
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--base300);
+}
+
+.question {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 20px;
+}
+
+.answer {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  border-radius: 4px;
+  background: var(--base75);
+  line-height: 1.6rem;
 }

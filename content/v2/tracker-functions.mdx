@@ -1,13 +1,18 @@
 # Tracker functions
 
 The Umami tracker exposes a function that you can call on your website if you want
-more control over your tracking.
+more control over your tracking. By default everything is automatically collected, but you can
+disable this using `data-auto-track="false"` and sending the data yourself.
+See [Tracker configuration](/docs/tracker-configuration).
 
+## Functions
 ```
+umami.track([payload]);
+
 umami.track(event_name, [event_data])
 ```
 
-### Pageview
+## Pageviews
 
 Tracks a page view.
 
@@ -15,37 +20,63 @@ Tracks a page view.
 umami.track();
 ```
 
-### Event
+By default the tracker automatically collects the following properties:
+
+- `hostname`: Hostname of server
+- `language`: Browser language
+- `referrer`: Page referrer
+- `screen`: Screen dimensions (eg. 1920x1080)
+- `title`: Page title
+- `url`: Page url
+- `website`: Website ID (required)
+
+If you wish to send your own custom payload, pass in an object to the function:
+
+```
+umami.track({ website: 'e676c9b4-11e4-4ef1-a4d7-87001773e9f2', url: '/home', title: 'Home page' });
+```
+
+The above will only send the properties `website`, `url` and `title`. If you want to include existing properties, pass in a function:
+
+```
+umami.track(props => ({ ...props, url: '/home', title: 'Home page' }));
+```
+
+## Events
 
 Tracks an event with a given name.
 
 ```
-umami.track('Signup button');
+umami.track('signup-button');
 ```
 
-### Event Data
+## Event Data
 
 Tracks an event with dynamic data.
 
 ```
-umami.track('Signup button', { data: { name: 'umami', id: 123 }});
+umami.track('signup-button', { name: 'newsletter', id: 123 });
 ```
 
-Dynamic data must be placed within the `data` property. Unrecognized properties placed outside of the `data` property will be ignored.
-
-Properties already collected by the tracker can be overriden.
+When tracking events, the default properties are included in the payload.
+This is equivalent to running:
 
 ```
-umami.track('Signup button', { language: 'fr-FR' });
+umami.track(props => ({
+  ...props,
+  name: 'signup-button',
+  data: {
+    name: 'newsletter',
+    id: 123
+  }
+}));
 ```
 
-Properties automatically collected by the tracker include `hostname`, `language`, `referrer`, `screen`, `title`, `url`, and `website`.
-
-### Event Data Limits
+## Event Data Limits
 
 Event Data can work with any JSON data. There are a few rules in place to maintain performance.
 
 - Numbers have a max precision of 4.
 - Strings have a max length of 500.
 - Arrays are converted to a String, with the same max length of 500.
-- Dynamic objects have a max length of 50 properties. Arrays are considered 1 property.
+- Objects have a max of 50 properties. Arrays are considered 1 property.

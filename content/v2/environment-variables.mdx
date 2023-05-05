@@ -8,7 +8,7 @@ You can configure Umami with the use of environment variables. They go into the 
 
 Runtime variables are recognized when Umami is running. You can set your environment variables prior to starting the application.
 
-### CLOUD_MODE
+### CLOUD_MODE = 1
 
 Disables `users`, `teams`, and `websites` settings page.
 
@@ -16,15 +16,15 @@ Disables `users`, `teams`, and `websites` settings page.
 
 How many seconds a CORS preflight should last. Default is 24 hours.
 
-### DISABLE_BOT_CHECK = false
+### DISABLE_BOT_CHECK = 1
 
-Enables tracking bots for event collection.
+By default bots are excluded from statitics. This disables checking for bots.
 
-### DISABLE_LOGIN
+### DISABLE_LOGIN = 1
 
-Disables login page.
+Disables the login page.
 
-### ENABLE_TEST_CONSOLE
+### ENABLE_TEST_CONSOLE = 1
 
 Enables the internal test page, `{host}/console`. Admin access is required. Users can manually fire pageviews and events to their websites.
 
@@ -71,8 +71,6 @@ Disables the login page for the application.
 
 Umami collects completely anonymous telemetry data in order help improve the application. You can choose to disable this if you don't want to participate.
 
-### FORCE_SSL = 1
-
 ### HOSTNAME = &lt;hostname&gt;
 
 This will redirect all requests from `http` to `https` in the Umami application. Note, this does not apply to the tracking script.
@@ -89,7 +87,7 @@ This will do a DNS lookup on a hostname and the resulting IP address will be ign
 
 Connection string for your kafka database.
 
-### KAFKA_BROKER
+### KAFKA_BROKER = &lt;string&gt;
 
 List of your Kafka Brokers. Multiple brokers are deliniated by commas.
 
@@ -108,9 +106,9 @@ Removes the trailing slash from all incoming urls.
 
 ### TRACKER_SCRIPT_NAME = &lt;script name&gt;
 
-Allows you to assign a custom name to the tracker script different from the default `script`. This is to help you avoid some ad-blockers.
+Allows you to assign a custom name to the tracker script different from the default `script.js`. This is to help you avoid some ad-blockers.
 
-Note: If you update this, be sure to update the tracking code on your website to the new name.
+Note: You do not need the `.js` extension. It can be any path you choose.
 
 ---
 
@@ -125,6 +123,10 @@ If you want to host Umami under a subdirectory. You may need to update your reve
 ### DATABASE_TYPE = &lt;postgresql | mysql&gt;
 
 The type of DB to be used. This is only required for the Docker build.
+
+### FORCE_SSL = 1
+
+This will send a HTTP `Strict-Transport-Security` response header with all requests. See [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security).
 
 ### SKIP_DB_CHECK
 
