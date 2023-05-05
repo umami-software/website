@@ -111,6 +111,7 @@
 
 .features td:first-child {
   justify-content: flex-start;
+  min-width: 80px;
 }
 
 .features .header {
@@ -154,4 +155,14 @@
   border-radius: 4px;
   background: var(--base75);
   line-height: 1.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    font-size: 14px;
+  }
+
+  .features tbody tr:nth-child(3) td {
+    height: 100px;
+  }
 }
