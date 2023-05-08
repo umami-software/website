@@ -51,6 +51,7 @@ const nextConfig = {
       { source: '/docs/v1', destination: '/docs/v1/getting-started' },
       { source: '/docs/v1/:path*', destination: '/docs/v1/:path*' },
       { source: '/docs/:path*', destination: '/docs/v2/:path*' },
+      { source: '/a/:path*', destination: 'https://analytics.umami.is/:path*' },
     ];
   },
 };

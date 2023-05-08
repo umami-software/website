@@ -10,7 +10,7 @@ To enable events, simply add a special data property to the element you want to 
 For example, you might have a button with the following code:
 
 ```
-<button id="signup-button" class="button">Sign up</button>
+<button id="signup-button">Sign up</button>
 ```
 
 Add a data property with the following format:
@@ -30,12 +30,12 @@ When the user clicks on this button, Umami will record an event named `Signup bu
 You can optionally pass along **event_data** with the **data-umami-event-\*** annotation.
 
 ```
-data-umami-event="Cart form"
-data-umami-event-name="umami"
+data-umami-event="Signup button"
+data-umami-event-email="bob@aol.com"
 data-umami-event-id="123"
 ```
 
-The additonal properties will result in `{ name: 'umami', id: '123' }` being recorded with the `Signup button` name.
+The additonal properties will result in `{ email: 'bob@aol.com', id: '123' }` being recorded with the `Signup button` name.
 
 Event data cannot be sent without an event name. 
 

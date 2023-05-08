@@ -15,11 +15,7 @@ export default function Layout({ title, children }: Props) {
       <Head>
         <title>{title ? `umami - ${title}` : 'umami'}</title>
         {typeof window !== 'undefined' && process.env.NODE_ENV === 'production' && (
-          <script
-            async
-            data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
-            src="https://analytics.umami.is/script.js"
-          />
+          <script async data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41" src="/a/script.js" />
         )}
       </Head>
       <Header />
