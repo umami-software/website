@@ -32,20 +32,10 @@ Enables the internal test page, `{host}/console`. Admin access is required. User
 
 A random string used to generate unique values.
 
-### CA_CERT = &lt;ca cert in string format&gt;
-
-### CLIENT_KEY = &lt;client key in string format&gt;
-
-### CLIENT_CERT = &lt;client cert in string format&gt;
-
 ### CLIENT_IP_HEADER = &lt;header name&gt;
 
 HTTP header to check for the client's IP address. This is useful when you're
 behind a proxy that uses non-standard headers.
-
-### CLICKHOUSE_URL = &lt;connection string&gt;
-
-Connection string for using clickhouse as your analytics database. Only required if you are running a clickhouse database. Running a database through `DATABASE_URL` is still required.
 
 ### COLLECT_API_ENDPOINT = &lt;API endpoint&gt;
 
@@ -72,8 +62,10 @@ Disables the login page for the application.
 Umami collects completely anonymous telemetry data in order help improve the application. You can choose to disable this if you don't want to participate.
 
 ### HOSTNAME = &lt;hostname&gt;
+### PORT = &lt;port number&gt;
 
-This will redirect all requests from `http` to `https` in the Umami application. Note, this does not apply to the tracking script.
+If you are running on an environment which requires you to bind to a specific hostname or port, such as Heroku, you can add
+these variables and start your app with `npm run start-env` instead of `npm start`.
 
 ### IGNORE_IP = &lt;ip addresses&gt;
 
@@ -83,22 +75,9 @@ You can provide a comma-delimited list of IP address to exclude from data collec
 
 This will do a DNS lookup on a hostname and the resulting IP address will be ignored. This can be a comma delimited list of hostnames.
 
-### KAFKA_URL = &lt;connection string&gt;
-
-Connection string for your kafka database.
-
-### KAFKA_BROKER = &lt;string&gt;
-
-List of your Kafka Brokers. Multiple brokers are deliniated by commas.
-
 ### LOG_QUERY = 1
 
 If you are running in development mode, this will log database queries to the console for debugging.
-
-### PORT = &lt;port number&gt;
-
-If you are running on an environment which requires you to bind to a specific hostname or port, such as Heroku, you can add
-these variables and start your app with `npm run start-env` instead of `npm start`.
 
 ### REMOVE_TRAILING_SLASH = 1
 
