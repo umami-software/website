@@ -16,21 +16,27 @@ the following data:
 - `title`: (string) Page title.
 - `url`: (string) Page URL.
 - `website`: (string) Website ID.
+- `name`: (string) Name of the event.
+- `data`: (object)(optional) Additional data for the event.
 
 `type`: (string) `event` is currently the only type available.
 
 **Sample payload**
 
-```
+```js
 {
     payload: {
         hostname: "your-hostname",
         language: "en-US",
         referrer: "",
         screen: "1920x1080",
-        title: "dashboard"
+        title: "dashboard",
         url: "/",
         website: "your-website-id",
+        name: "event-name",
+        data: {
+            foo: "bar"
+        }
     },
     type: "event"
 }
@@ -41,3 +47,23 @@ authentication token.
 
 Also, you need to send a proper `User-Agent` HTTP header or
 your request won't be registered.
+
+**Programmatically**
+
+You can generate most of these values programmatically with JavaScript using the browser APIs. For example:
+
+```js
+{
+    payload: {
+        hostname: window.location.hostname,
+        language: navigator.language,
+        referrer: document.referrer,
+        screen: `${window.screen.width}x${window.screen.height}`,
+        title: document.title,
+        url: window.location.pathname,
+        website: "your-website-id",
+        name: "event-name",
+    },
+    type: "event"
+}
+```
