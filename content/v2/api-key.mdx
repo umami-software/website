@@ -10,12 +10,23 @@ You can access your Umami Cloud data by querying the following address.
 
 Just pass in your API key via a customer header `x-umami-api-key`
 
+## Using your key with API Client
+
+Set the following requirement variables to have the API client use your API key.
+
+```
+UMAMI_API_KEY={Your API key}
+UMAMI_API_CLIENT_ENDPOINT=https://api.umami.is/v1/
+```
+
+More details on using the API client can be found in [API client](/docs/api-client).
+
 ## Not Allowed
 
 The following API routes are not made available using your API key.
 
 ```
-/user
-/user/{id}
-/user/{id}/password
+/me/password
+/users
+/users/*
 ```

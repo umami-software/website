@@ -52,9 +52,43 @@ data?: T;
 error?: any;
 ```
 
-### API Client functions
+### API Client function mapping
 
-Coming soon...
+```
+getMe() : GET /me
+updateMyPassword(data) : POST /me/password
+getMyWebsites() : GET /me/websites
+getTeams() : GET /teams
+createTeam(data) : POST / teams
+joinTeam(data) : POST /teams/join
+getTeam(id) : GET /teams/{id}
+updateTeam(id) : POST /teams/{id}
+deleteTeam(id) : DEL /teams/{id}
+getTeamUsers(id) : GET /teams/{id}/users
+deleteTeamUser(teamId, userId): DEL /teams/{teamId}/users/{userId}
+getTeamWebsites(id) : GET /teams/{id}/websites
+createTeamWebsites(id, data) : GET /teams/{id}/websites
+deleteTeamWebsite(teamId, websiteId) : DEL /teams/{teamId}/websites/{websiteId}
+getUsers() : GET /users
+createUser(data) : POST /users
+getUser(id) : GET /users/{id}
+updateUser(id, data) : POST /users/{id}
+deleteUser(id) : DEL /users/{id}
+getUserWebsites(id) : GET /users/{id}/websites
+getUserUsage(id, data) : GET /users/{id}/usage
+getWebsites() : GET /websites
+createWebsite(data) : POST /websites
+getWebsite(id) : GET /websites/{id}
+updateWebsite(id, data) : POST /websites/{id}
+deleteWebsite(id) : DEL /websites/{id}
+getWebsiteActive(id) : GET / websites/{id}/active
+getWebsiteEventData(id, data) : GET / websites/{id}/eventdata
+getWebsiteEvents(id, data) : GET / websites/{id}/events
+getWebsiteMetrics(id, data) : GET / websites/{id}/metrics
+getWebsitePageviews(id, data) : GET / websites/{id}/pageviews
+resetWebsite(id) : GET / websites/{id}/reset
+getWebsiteStats(id, data) : GET / websites/{id}/stats
+```
 
 ### Environment Variables
 
@@ -72,4 +106,4 @@ The endpoint of your Umami API. `example: https://{yoursever}/api/`
 
 #### UMAMI_API_KEY = &lt;API Key string&gt;
 
-A 32char string provided by Umami Cloud.
+A unique string provided by Umami Cloud.
