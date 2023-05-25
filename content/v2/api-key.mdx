@@ -1,0 +1,21 @@
+# API Key
+
+All API routes in the reference section are avaiable in Umami Cloud using an API key, with the exception of some routes listed in the `Not Allowed` section.
+
+## Using your key
+
+You can access your Umami Cloud data by querying the following address.
+
+`https://api.umami.is/v1/`
+
+Just pass in your API key via a customer header `x-umami-api-key`
+
+## Not Allowed
+
+The following API routes are not made available using your API key.
+
+```
+/user
+/user/{id}
+/user/{id}/password
+```
