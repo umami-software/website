@@ -9,7 +9,8 @@ Umami v2 introduces a redesigned schema and a number of breaking changes.
 - The collect api endpoint has been renamed from `/api/collect` to `/api/send`.
 - The tracker no longer uses CSS class names to trigger events. It now uses HTML data attributes. See [Track events](/docs/track-events) for more information.
 - The methods on the global `umami` Javascript object have changed. There is now a single `.track()` method and a new way to send event data.
-See [Tracker functions](/docs/tracker-functions) for more information.
+  See [Tracker functions](/docs/tracker-functions) for more information.
+- The `TRACKER_SCRIPT_NAME` environment variable no longer appends the `.js` extension to the script name. See [Environment variables](/docs/environment-variables) for more information.
 
 ## Data migration
 
@@ -21,6 +22,7 @@ To assist with the migration we created a script `@umami/migrate-v1-v2` that wil
 - Database schema must be in sync with the latest v1 version (v1.4.0). The script will query the prisma migrations table to ensure the latest migrations have been ran.
 
 ### Important
+
 - Backup your target database prior to use. Potential data loss may occur if the migration is interrupted.
 - For users with larger datasets (5M+), the migration may take while. Please plan accordingly.
 - The script will NOT migrate any event data into v2.

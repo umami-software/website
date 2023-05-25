@@ -37,7 +37,9 @@ data-umami-event-id="123"
 
 The additonal properties will result in `{ email: 'bob@aol.com', id: '123' }` being recorded with the `Signup button` name.
 
-Event data cannot be sent without an event name.
+Event data cannot be sent without an event name. 
+
+All event data will be saved as a string using this method. If you want to save event data as numeric, dates, booleans, etc. use the Javascript method below.
 
 ## Using Javascript
 

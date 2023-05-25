@@ -9,7 +9,7 @@ const features = [
   {
     label: 'Data',
     items: [
-      ['Ingest (included)', '10K', '100K', '1M', '50M'],
+      ['Ingest (included)', '10K', '100K', '1M', 'Custom'],
       ['Overage', '', '$5 per additional 100K events', '$20 per additional 500K events', 'Custom'],
     ],
   },
