@@ -134,6 +134,10 @@
       {
         "label": "API key",
         "url": "/docs/api-key"
+      },
+      {
+        "label": "Import data",
+        "url": "/docs/import-data"
       }
     ]
   },

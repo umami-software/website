@@ -1,0 +1,144 @@
+# Import Data
+
+Umami allows you to import your data to Umami Cloud. The import handles a single website at a time.
+If you have a large number of websites to import please contact [support@umami.is](mailto:support@umami.is).
+
+## Generating the import file
+
+The import file is in csv format with headers and quotes. The columns must be in the format and order below.
+There will be guides below to import your data from a self-hosted version of Umami to Umami Cloud for PostgreSQL and MySQL.
+The import will accept data from outside systems as long as the format is followed and the non-optional columns are populated.
+
+### Format
+
+**Website Event**
+
+- `website_id`: (uuid) Website key identifier.
+- `session_id`: (uuid) Session key identifier.
+- `event_id`: (uuid) Event key identifier.
+- `hostname`: (string)(optional) Name of host.
+- `browser`: (string)(optional) Name of browser.
+- `os`: (string)(optional) Name of operating system.
+- `device`: (string)(optional) Name of device (ex. Mobile)
+- `screen`: (string)(optional) Screen resolution (ex. "1920x1080")
+- `language`: (string)(optional) Language of visitor (ex. "en-US")
+- `country`: (string)(optional) Name of country.
+- `subdivision1`: (string)(optional) Name of first level region/state/province.
+- `subdivision2`: (string)(optional) Name of second level region/state/province.
+- `city`: (string)(optional) Name of city.
+- `url_path`: (string) Name of URL path.
+- `url_query`: (string)(optional) Name of URL query parameter.
+- `referrer_path`: (string)(optional) Name of referrer path.
+- `referrer_query`: (string)(optional) Name of referrer query parameter.
+- `referrer_domain`: (string)(optional) Name of eferrer domain.
+- `page_title`: (string)(optional) Name of page title.
+- `event_type`: (int) 1.Pageview 2.Custom event.
+- `event_name`: (string)(optional) Name of event.
+- `created_at`: (datetime) Timestamp of created date in UTC.
+
+**Event data**
+
+- `website_id`: (uuid) Website key identifier.
+- `session_id`: (uuid) Session key identifier.
+- `event_id`: (uuid) Event key identifier.
+- `url_path`: (string) Name of URL path.
+- `event_name`: (string) Name of event.
+- `event_key`: (string) Name of event key.
+- `string_value`: (string) Event key value in string format.
+- `number_value`: (decimal) Event key value in number format.
+- `date_value`: (string) Event key value in date format.
+- `data_type`: (int) 1.String 2.Number 3.Boolean 4.Date 5.Array
+- `created_at`: (datetime) Timestamp of created date in UTC.
+
+### PostgreSQL
+
+You will be leveraging PostgreSQL's [\copy](https://www.postgresql.org/docs/current/sql-copy.html) command.
+To use this command, you will need access to the [psql](https://www.postgresql.org/docs/current/app-psql.html) terminal.
+
+```shell
+psql -h <hostname or ip address> -p <port number of remote machine> -d <database> -U <username>
+```
+
+`\copy` does not support multi-line SQL statements. To bypass this you will need to create a view before using the command.
+If using a schema other than `public`, you will need to identify the schema in the statement below (ex. `<schema>.website_event`).
+
+**Website Event**
+
+```shell
+CREATE VIEW website_event_import AS
+SELECT we.website_id,
+    we.session_id,
+    we.event_id,
+    s.hostname,
+    s.browser,
+    s.os,
+    s.device,
+    s.screen,
+    s.language,
+    s.country,
+    s.subdivision1,
+    s.subdivision2,
+    s.city,
+    we.url_path,
+    we.url_query,
+    we.referrer_path,
+    we.referrer_query,
+    we.referrer_domain,
+    we.page_title,
+    we.event_type,
+    we.event_name,
+    TO_CHAR(we.created_at, 'YYYY-MM-DD HH24:MI:SS') created_at
+ FROM website_event we
+ JOIN session s
+ ON s.session_id = we.session_id;
+```
+
+You can now use the `\copy` psql command. Replace `website id` and `filepath` in the command below.
+The `website id` can be found by navigating to **Websites** and clicking on the **Edit** button on the self-hosted Umami instance.
+
+```shell
+\COPY (SELECT * FROM website_event_import WHERE website_id = '<website id>') TO '<filepath>.csv' WITH (FORMAT CSV, HEADER TRUE, FORCE_QUOTE *)
+```
+
+**Event data**
+
+Same instructions as **Website Event**, but you will need to create its own view.
+
+```shell
+CREATE VIEW event_data_import AS
+SELECT we.website_id,
+    we.session_id,
+    we.event_id,
+    we.url_path,
+    we.event_name,
+    ed.event_key,
+    ed.string_value,
+    ed.number_value,
+    TO_CHAR(ed.date_value, 'YYYY-MM-DD HH24:MI:SS') date_value,
+    ed.data_type,
+    TO_CHAR(we.created_at, 'YYYY-MM-DD HH24:MI:SS') created_at
+FROM event_data ed
+JOIN website_event we
+ON we.event_id = ed.website_event_id;
+```
+
+Copy command
+
+```shell
+\COPY (SELECT * FROM event_data_import WHERE website_id = '<website id>') TO '<filepath>.csv' WITH (FORMAT CSV, HEADER TRUE, FORCE_QUOTE *)
+```
+
+## Importing data to Umami Cloud
+
+Log into Umami and navigate to **Import** and click on the **Import Data** button.
+
+<img src="/images/v2/import-data.png" />
+
+Fill out the form details and click the **Import** button.
+
+<img src="/images/v2/import-form.png" />
+
+A loading spinner will show until the file is completely imported. This may take a while for larger datasets.
+When the import is complete, it should like below.
+
+<img src="/images/v2/import-form-complete.png" />
