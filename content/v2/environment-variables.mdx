@@ -103,6 +103,10 @@ If you are not sure about the correct URL or path to access the script, you can 
 
 Build time variables are only recognized during the build process. This also includes building custom Docker images. You need to set your environment variables prior to building the application.
 
+### ALLOWED_FRAME_URLS = &lt;urls&gt;
+
+A space-delimited list of urls allowed to host the application in an iframe.
+
 ### BASE_PATH = &lt;path&gt;
 
 If you want to host Umami under a subdirectory. You may need to update your reverse proxy settings to correctly handle the BASE_PATH prefix.
@@ -115,6 +119,6 @@ The type of DB to be used. This is only required for the Docker build.
 
 This will send a HTTP `Strict-Transport-Security` response header with all requests. See [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security).
 
-### SKIP_DB_CHECK
+### SKIP_DB_CHECK = 1
 
 Skips the `check-db` step in the build process. Used for Docker builds.
