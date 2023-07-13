@@ -1,41 +1,96 @@
 import { Fragment, useState } from 'react';
-import classNames from 'classnames';
-import { Button, Row, Column, Icon, Icons } from 'react-basics';
+import { Button, Row, Column, Icon, Icons, RadioGroup, Radio } from 'react-basics';
 import Checkmark from 'assets/checkmark.svg';
 import Link from 'next/link';
 import styles from './Pricing.module.css';
+import classNames from 'classnames';
+
+const plans = [
+  {
+    name: 'Hobby',
+    price: <strong>Free</strong>,
+    description: 'Up to 10K monthly events',
+    features: ['Up to 3 websites', '1 year data retention', 'Community support'],
+    url: '',
+    button: 'Get started',
+  },
+  {
+    name: 'Pro',
+    price: (
+      <>
+        From <strong>$9</strong> / month
+      </>
+    ),
+    description: 'Up to 100M monthly events',
+    features: [
+      'Unlimited websites',
+      'Unlimited team members',
+      '7 year data retention',
+      'Community support',
+    ],
+    url: 'https://cloud.umami.is/signup',
+    button: 'Try 14-day free trial',
+  },
+  {
+    name: 'Enterprise',
+    price: <strong>Custom</strong>,
+    description: 'Tailored for your business',
+    features: [
+      'Unlimited websites',
+      'Unlimited team members',
+      'Custom data retention',
+      'Onboarding support',
+      'Desginated support engineer',
+    ],
+    url: 'mailto:sales@umami.is?subject=Umami Cloud enterprise pricing',
+    button: 'Contact us',
+  },
+];
+
+const tiers = [
+  { price: 9, events: '100K' },
+  { price: 19, events: '250K' },
+  { price: 29, events: '500K' },
+  { price: 49, events: '1M' },
+  { price: 99, events: '2.5M' },
+  { price: 199, events: '5M' },
+  { price: 399, events: '10M' },
+  { price: 899, events: '25M' },
+  { price: 1699, events: '50M' },
+  { price: 2999, events: '100M' },
+  { price: 0, events: '100M+' },
+];
 
 const features = [
   {
     label: 'Data',
-    items: [
-      ['Ingest (included)', '10K', '100K', '1M', 'Custom'],
-      ['Overage', '', '$5 per additional 100K events', '$20 per additional 500K events', 'Custom'],
-    ],
+    items: [['Ingest (included)', '10K', '100K to 100M', 'Custom']],
   },
   {
     label: 'Analytics',
     items: [
-      ['Websites', 'Up to 3', 'Up to 50', 'Unlimited', 'Unlimited'],
-      ['Teams', false, true, true, true],
-      ['Custom events', true, true, true, true],
-      ['Custom data', true, true, true, true],
-      ['API access', false, true, true, true],
+      ['Websites', 'Up to 3', 'Unlimited', 'Unlimited'],
+      ['Teams', false, true, true],
+      ['Custom events', true, true, true],
+      ['Custom data', true, true, true],
+      ['API access', false, true, true],
     ],
   },
   {
     label: 'Monitoring',
     items: [
-      ['Realtime events', true, true, true, true],
-      ['Custom dashboards', true, true, true, true],
-      ['Email alerts', false, false, true, true],
+      ['Realtime events', true, true, true],
+      ['Custom dashboards', true, true, true],
+      ['Email alerts', false, false, true],
     ],
   },
   {
     label: 'Support',
     items: [
-      ['Email support', false, true, true, true],
-      ['Dedicated support', false, false, false, true],
+      ['Email support', false, true, true],
+      ['Uptime SLA', false, false, true],
+      ['Onboarding support', false, false, true],
+      ['Designated support engineer', false, false, true],
     ],
   },
 ];
@@ -52,8 +107,7 @@ const questions = [
   },
   {
     question: 'How will I be billed?',
-    answer: `Billing occurs on a monthly basis. 
-    The invoice will include the base monthly rate plus any charges for additional usage beyond the plan's included events.
+    answer: `Billing occurs on either a monthly or annual basis. 
     If you upgraded to a paid plan via a trial, your first invoice will arrive after your trial period ends.`,
   },
   {
@@ -72,194 +126,187 @@ const questions = [
 ];
 
 export default function Pricing() {
-  const signupURL = 'https://cloud.umami.is/signup';
-
+  // @ts-ignore
   return (
     <>
-      <Row className={styles.pricing}>
-        <Column className={classNames(styles.tier)}>
-          <div>
-            <div className={styles.title}>Hobby</div>
-            <div className={styles.price}>
-              <b>Free</b>
-            </div>
-            <div className={styles.description}>Up to 10K monthly events</div>
-            <ul>
-              <li>
-                <Checkmark /> Up to 3 websites
-              </li>
-              <li>
-                <Checkmark /> 6 month data retention
-              </li>
-              <li>
-                <Checkmark /> Community support
-              </li>
-            </ul>
-          </div>
-          <div className={styles.button}>
-            <Link href={signupURL}>
-              <Button variant="secondary">Get Started</Button>
-            </Link>
-          </div>
-        </Column>
-        <Column className={classNames(styles.tier)}>
-          <div>
-            <div className={styles.title}>Basic</div>
-            <div className={styles.price}>
-              <b>$9</b> / month
-              <div></div>
-            </div>
-            <div className={styles.description}>
-              100K monthly events included
-              <br />
-              $5 per additional 100K events
-            </div>
-            <ul>
-              <li>
-                <Checkmark /> Up to 50 websites
-              </li>
-              <li>
-                <Checkmark /> Unlimited team members
-              </li>
-              <li>
-                <Checkmark /> 2 year data retention
-              </li>
-              <li>
-                <Checkmark /> Email support
-              </li>
-            </ul>
-          </div>
-          <div className={styles.button}>
-            <Link href={signupURL}>
-              <Button variant="secondary">Try 14-day free trial</Button>
-            </Link>
-          </div>
-        </Column>
-        <Column className={classNames(styles.tier)}>
-          <div>
-            <div className={styles.title}>Business</div>
-            <div className={styles.price}>
-              <b>$49</b> / month
-            </div>
-            <div className={styles.description}>
-              1M monthly events included
-              <br />
-              $20 per additional 500K events
-            </div>
-            <ul>
-              <li>
-                <Checkmark /> Unlimited websites
-              </li>
-              <li>
-                <Checkmark /> Unlimited team members
-              </li>
-              <li>
-                <Checkmark /> 7 year data retention
-              </li>
-              <li>
-                <Checkmark /> Email support
-              </li>
-            </ul>
-          </div>
-          <div className={styles.button}>
-            <Link href={signupURL}>
-              <Button variant="secondary">Try 14-day free trial</Button>
-            </Link>
-          </div>
-        </Column>
-        <Column className={classNames(styles.tier, styles.cloud)}>
-          <div>
-            <div className={styles.title}>Enterprise</div>
-            <div className={styles.price}>
-              <b>Custom</b>
-            </div>
-            <div className={styles.description}>Tailored for your business</div>
-            <ul>
-              <li>
-                <Checkmark /> Unlimited websites
-              </li>
-              <li>
-                <Checkmark /> Unlimited team members
-              </li>
-              <li>
-                <Checkmark /> Custom data retention
-              </li>
-              <li>
-                <Checkmark /> Dedicated support
-              </li>
-            </ul>
-          </div>
-          <div className={styles.button}>
-            <a href="mailto:sales@umami.is?subject=Umami Cloud enterprise pricing">
-              <Button variant="secondary">Contact Us</Button>
-            </a>
-          </div>
-        </Column>
-      </Row>
-      <Row className={styles.features}>
-        <Column>
-          <table>
-            <thead>
-              <tr>
-                <th></th>
-                <th>Hobby</th>
-                <th>Basic</th>
-                <th>Business</th>
-                <th>Enterprise</th>
-              </tr>
-            </thead>
-            <tbody>
-              {features.map(({ label, items }) => {
-                return (
-                  <Fragment key={label}>
-                    <tr>
-                      <td className={styles.header}>
-                        <h2>{label}</h2>
-                      </td>
-                    </tr>
-                    {items.map((item, index) => {
-                      return (
-                        <tr key={index}>
-                          {item.map((data, x) => {
-                            return (
-                              <td key={x}>
-                                {data === true ? (
-                                  <Icon size="xl">
-                                    <Checkmark />
-                                  </Icon>
-                                ) : (
-                                  data
-                                )}
-                              </td>
-                            );
-                          })}
-                        </tr>
-                      );
-                    })}
-                  </Fragment>
-                );
-              })}
-            </tbody>
-          </table>
-        </Column>
-      </Row>
-      <Row>
-        <Column className={styles.faq}>
-          <h1>Frequently Asked Questions</h1>
-          <div className={styles.questions}>
-            {questions.map(({ question, answer }) => {
-              return (
-                <Question key={question} question={question}>
-                  {answer}
-                </Question>
-              );
-            })}
-          </div>
-        </Column>
-      </Row>
+      <Plans />+
+      <PricingCalculator />
+      <Features />
+      <Faq />
     </>
   );
 }
+
+const Plans = () => {
+  return (
+    <Row className={styles.pricing}>
+      {plans.map(({ name, price, description, features, url, button }) => {
+        return (
+          <Column key={name} className={styles.tier}>
+            <div>
+              <div className={styles.title}>{name}</div>
+              <div className={styles.price}>{price}</div>
+              <div className={styles.description}>{description}</div>
+              <ul>
+                {features.map((feat, index) => {
+                  return (
+                    <li key={index}>
+                      <Checkmark /> {feat}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className={styles.button}>
+              <Link href={url}>
+                <Button variant="secondary">{button}</Button>
+              </Link>
+            </div>
+          </Column>
+        );
+      })}
+    </Row>
+  );
+};
+
+const PricingCalculator = () => {
+  const [tier, setTier] = useState(0);
+  const [billing, setBilling] = useState('Monthly');
+  const selected = tiers[tier];
+
+  const handleBillingSelect = value => {
+    setBilling(value);
+  };
+
+  const handleTierSelect = value => {
+    setTier(value);
+  };
+
+  return (
+    <Row>
+      <Column>
+        <div className={styles.calculator}>
+          <h1>Pro plan pricing</h1>
+          <div className={styles.toggle}>
+            <RadioGroup
+              name="billing"
+              items={['Monthly', 'Annual']}
+              selectedKey={billing}
+              onSelect={handleBillingSelect}
+              layout="horizontal"
+            >
+              {item => <Radio key={item}>{item}</Radio>}
+            </RadioGroup>
+          </div>
+          <div className={styles.slider}>
+            <input
+              className={styles.range}
+              type="range"
+              min="0"
+              max={tiers.length - 1}
+              value={tier}
+              onChange={e => handleTierSelect(e.target.value)}
+            />
+            <div className={styles.ticks}>
+              {tiers.map(({ events }, index) => (
+                <div
+                  key={index}
+                  className={classNames(styles.tick, { [styles.selected]: +tier === index })}
+                  onClick={() => handleTierSelect(index)}
+                >
+                  {events}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className={styles.result}>
+            <div className={styles.events}>
+              <strong>{selected.events}</strong> events / month
+            </div>
+            <div className={styles.price}>
+              <strong>
+                {selected.price > 0
+                  ? `$${(selected.price * (billing === 'Annual' ? 10 : 1)).toLocaleString()}`
+                  : 'Contact us'}
+              </strong>
+              {selected.price > 0 && <span> / month</span>}
+            </div>
+          </div>
+        </div>
+      </Column>
+    </Row>
+  );
+};
+
+const Features = () => {
+  return (
+    <Row className={styles.features}>
+      <Column>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Hobby</th>
+              <th>Pro</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            {features.map(({ label, items }) => {
+              return (
+                <Fragment key={label}>
+                  <tr>
+                    <td className={styles.header}>
+                      <h2>{label}</h2>
+                    </td>
+                  </tr>
+                  {items.map((item, index) => {
+                    return (
+                      <tr key={index}>
+                        {item.map((data, x) => {
+                          return (
+                            <td key={x}>
+                              {data === true ? (
+                                <Icon size="xl">
+                                  <Checkmark />
+                                </Icon>
+                              ) : (
+                                data
+                              )}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    );
+                  })}
+                </Fragment>
+              );
+            })}
+          </tbody>
+        </table>
+      </Column>
+    </Row>
+  );
+};
+
+const Faq = () => {
+  return (
+    <Row>
+      <Column className={styles.faq}>
+        <h1>Frequently Asked Questions</h1>
+        <div className={styles.questions}>
+          {questions.map(({ question, answer }) => {
+            return (
+              <Question key={question} question={question}>
+                {answer}
+              </Question>
+            );
+          })}
+        </div>
+      </Column>
+    </Row>
+  );
+};
 
 const Question = ({ question, children }) => {
   const [expanded, setExpanded] = useState(false);

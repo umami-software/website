@@ -5157,15 +5157,13 @@ quick-lru@^4.0.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-4.0.1.tgz#5b8878f113a58217848c6482026c73e1ba57727f"
   integrity sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==
 
-react-basics@0.70.0:
-  version "0.70.0"
-  resolved "https://registry.yarnpkg.com/react-basics/-/react-basics-0.70.0.tgz#6a70bc2aef848d8dd1e2a6d46169cde8ffa7eccb"
-  integrity sha512-ImlTuBD3OtCQycJBwT4zoQYinmgkZDFv4fzi8CbEhaXWg/4Ea+KH0DKjOslLHAkRPtHUQpLXQGKXLXxLzEgkJQ==
+react-basics@0.91.0:
+  version "0.91.0"
+  resolved "https://registry.yarnpkg.com/react-basics/-/react-basics-0.91.0.tgz#2970529a22a455ec73a1be884eb93a109c9dafc0"
+  integrity sha512-vP8LYWiFwA+eguMEuHvHct4Jl5R/2GUjWc1tMujDG0CsAAUGhx68tAJr0K3gBrWjmpJrTPVfX8SdBNKSDAjQsw==
   dependencies:
     classnames "^2.3.1"
     date-fns "^2.29.3"
-    react "^18.2.0"
-    react-dom "^18.2.0"
     react-hook-form "^7.34.2"
     react-spring "^9.5.5"
     react-window "^1.8.6"
