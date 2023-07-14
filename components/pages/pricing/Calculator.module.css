@@ -1,0 +1,102 @@
+.calculator {
+  border: 1px solid var(--base400);
+  border-radius: 10px;
+  padding: 40px 60px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.calculator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+  z-index: -1;
+  background-image: url('/images/bg-white-lines.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.calculator strong {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.input {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.slider {
+  max-width: 640px;
+  margin: 40px auto 20px;
+}
+
+.range {
+  display: block;
+  width: 600px;
+  margin: auto;
+}
+
+.ticks {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.tick {
+  width: calc(600px / 11);
+  text-align: center;
+  cursor: pointer;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.price {
+  text-align: right;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.select {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.select > div {
+  display: block;
+}
+
+.dropdown {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    display: none;
+  }
+  .select {
+    display: block;
+  }
+  .price {
+    text-align: left;
+  }
+}
