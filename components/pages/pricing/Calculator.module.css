@@ -27,9 +27,11 @@
   font-weight: 700;
 }
 
-.input {
+.body {
   max-width: 640px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .slider {
@@ -52,7 +54,7 @@
 }
 
 .tick {
-  width: calc(600px / 11);
+  width: calc(600px / 9);
   text-align: center;
   cursor: pointer;
 }
@@ -79,12 +81,14 @@
   text-align: right;
 }
 
-.toggle {
-  display: flex;
+.billing {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   gap: 100px;
   font-weight: bold;
   position: relative;
+  margin: auto;
 }
 
 .radio {
@@ -93,12 +97,13 @@
 
 .tag {
   position: absolute;
-  right: 0;
+  left: 105%;
   padding: 4px 8px;
   color: var(--green800);
   background: var(--green100);
   border: 1px solid var(--green400);
   border-radius: var(--border-radius);
+  white-space: nowrap;
 }
 
 .select {
@@ -115,13 +120,19 @@
 }
 
 @media screen and (max-width: 768px) {
+  .price {
+    text-align: left;
+  }
+  .billing {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .slider {
     display: none;
   }
   .select {
     display: block;
-  }
-  .price {
-    text-align: left;
   }
 }

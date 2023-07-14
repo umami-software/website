@@ -13,8 +13,7 @@ const tiers = [
   { price: 399, events: '10M' },
   { price: 899, events: '25M' },
   { price: 1699, events: '50M' },
-  { price: 2999, events: '100M' },
-  { price: 0, events: '100M+' },
+  { price: 0, events: '50M+' },
 ];
 
 export default function Calculator() {
@@ -35,9 +34,9 @@ export default function Calculator() {
 
   return (
     <div className={styles.calculator}>
-      <div className={styles.input}>
+      <div className={styles.body}>
         <h1>Pro plan pricing</h1>
-        <div className={styles.toggle}>
+        <div className={styles.billing}>
           <RadioGroup
             className={styles.radio}
             name="billing"
