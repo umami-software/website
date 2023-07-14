@@ -14,10 +14,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: -1;
   background-image: url('/images/bg-white-lines.jpg');
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -61,9 +61,18 @@
   font-weight: bold;
 }
 
+.strike {
+  color: var(--base600);
+  font-size: 36px;
+  font-weight: 700;
+  text-decoration: line-through rgba(255, 0, 0, 0.5);
+  margin-right: 16px;
+}
+
 .result {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  white-space: nowrap;
 }
 
 .price {
@@ -73,7 +82,23 @@
 .toggle {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 100px;
+  font-weight: bold;
+  position: relative;
+}
+
+.radio {
+  gap: 30px;
+}
+
+.tag {
+  position: absolute;
+  right: 0;
+  padding: 4px 8px;
+  color: var(--green800);
+  background: var(--green100);
+  border: 1px solid var(--green400);
+  border-radius: var(--border-radius);
 }
 
 .select {

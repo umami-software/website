@@ -39,6 +39,7 @@ export default function Calculator() {
         <h1>Pro plan pricing</h1>
         <div className={styles.toggle}>
           <RadioGroup
+            className={styles.radio}
             name="billing"
             items={['Monthly', 'Annual']}
             selectedKey={billing}
@@ -49,6 +50,7 @@ export default function Calculator() {
               return <Radio key={item}>{item}</Radio>;
             }}
           </RadioGroup>
+          {isAnnual && <div className={styles.tag}>20% savings</div>}
         </div>
         <div className={styles.slider}>
           <input
@@ -87,9 +89,12 @@ export default function Calculator() {
             <strong>{selected.events}</strong> events / month
           </div>
           <div className={styles.price}>
+            {isAnnual && selected.price > 0 && (
+              <span className={styles.strike}>{`$${(selected.price * 12).toLocaleString()}`}</span>
+            )}
             <strong>
               {selected.price > 0
-                ? `$${(selected.price * (isAnnual ? 10 : 1)).toLocaleString()}`
+                ? `$${Math.floor(selected.price * (isAnnual ? 12 * 0.8 : 1)).toLocaleString()}`
                 : 'Contact us'}
             </strong>
             {selected.price > 0 && <span>{` / ${isAnnual ? 'year' : 'month'}`}</span>}
