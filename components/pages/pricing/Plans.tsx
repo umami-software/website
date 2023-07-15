@@ -6,7 +6,11 @@ import styles from './Plans.module.css';
 const plans = [
   {
     name: 'Hobby',
-    price: <strong>Free</strong>,
+    price: (
+      <>
+        <strong>$0</strong> / month
+      </>
+    ),
     description: 'Up to 10K monthly events',
     features: ['Up to 3 websites', '1 year data retention', 'Community support'],
     url: '',
