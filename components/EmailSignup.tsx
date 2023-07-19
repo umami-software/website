@@ -23,7 +23,7 @@ export default function EmailSignup({
 
   const handleClick = async () => {
     if (email) {
-      await fetch('https://telemetry.umami.is/api/signup', {
+      await fetch('https://api.umami.is/v1/emails', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
