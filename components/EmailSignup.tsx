@@ -23,7 +23,7 @@ export default function EmailSignup({
 
   const handleClick = async () => {
     if (email) {
-      await fetch('https://api.umami.is/v1/emails', {
+      await fetch('https://api.umami.is/v1/emails/signup', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
