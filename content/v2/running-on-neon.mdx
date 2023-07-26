@@ -1,17 +1,17 @@
 # Running on Neon
 
-[Neon](https://neon.tech/) is a fully-managed Postgres service.
+[Neon](https://neon.tech/) is a fully-managed serverless Postgres service.
 
 ## Setup
 
 1. Create a project on Neon with a given name in a region close to where you will be hosting your Umami project.
-2. Get the database connection string with pooled connection enabled. It should look something like this: `postgres://user:passwd@endpoint-pooler.region.aws.neon.build/neondb`
+    * You can also create a Neon project with the Neon CLI: `npx neonctl projects create`. The connection string will be printed to the console.
+2. Get the database connection string with pooled connection enabled. It should look something like this: `postgres://user:passwd@endpoint-pooler.region.aws.neon.build/neondb`.
+    * You can also get the connection string with Neon CLI: `npx neonctl connection-string --project-id <project-id> --pooled`.
 3. **Important:** add `?pgbouncer=true&connect_timeout=10` to the connection string you just copied.
 4. Add `DATABASE_URL` to your `.env` file:
-
-```
-DATABASE_URL=postgres://user:passwd@endpoint-pooler.region.aws.neon.build/neondb?pgbouncer=true&connect_timeout=10
-```
-
+    ```
+    DATABASE_URL=postgres://user:passwd@endpoint-pooler.region.aws.neon.build/neondb?pgbouncer=true&connect_timeout=10
+    ```
 5. You should now be able to check the database connection and update the schema (`yarn run build-db && yarn run update-db`). 
 6. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
