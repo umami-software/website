@@ -161,7 +161,7 @@
         "url": "/docs/running-on-vercel"
       },
       {
-        "label": "Running on Neon",
+        "label": "Running on Neon Postgres",
         "url": "/docs/running-on-neon"
       },
       {
