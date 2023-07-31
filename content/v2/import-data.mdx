@@ -30,7 +30,7 @@ There will be guides below to import your data from a self-hosted version of Uma
 - `url_query`: (string)(optional) Name of URL query parameter.
 - `referrer_path`: (string)(optional) Name of referrer path.
 - `referrer_query`: (string)(optional) Name of referrer query parameter.
-- `referrer_domain`: (string)(optional) Name of eferrer domain.
+- `referrer_domain`: (string)(optional) Name of referrer domain.
 - `page_title`: (string)(optional) Name of page title.
 - `event_type`: (int) 1.Pageview 2.Custom event.
 - `event_name`: (string)(optional) Name of event.
@@ -140,7 +140,7 @@ mysql --host=localhost --user=myname --password=password mydb
 - The file is created on the server host, so you must have the FILE privilege to use this syntax.
 - Alternatively, if the MySQL client software is installed on the remote host,
   you can use a client command such as mysql -e "SELECT ..." > file_name to generate the file on that host.
-- You will need to generate views first for reusabilty.
+- You will need to generate views first for reusability.
 
 Find the correct directory to place the csv. This will be the `OUTFILE` filepath.
 
