@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import Pricing from 'components/Pricing';
+import Pricing from 'components/pages/pricing/Pricing';
 
 const PricingPage: NextPage = () => {
   return (

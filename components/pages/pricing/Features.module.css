@@ -1,0 +1,40 @@
+.features table {
+  width: 100%;
+  margin: 100px 0;
+}
+
+.features tr {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--base400);
+}
+
+.features th,
+.features td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 25%;
+  min-height: 50px;
+}
+
+.features td:first-child {
+  justify-content: flex-start;
+  min-width: 80px;
+  text-overflow: ellipsis;
+}
+
+.features .header {
+  height: 100px;
+  border: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    font-size: 14px;
+  }
+
+  .features td {
+    padding: 20px 0;
+  }
+}

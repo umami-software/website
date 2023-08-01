@@ -6,7 +6,7 @@
   height: 70px;
   border-bottom: 1px solid var(--base50);
   backdrop-filter: blur(16px);
-  z-index: 100;
+  z-index: 1000;
 }
 
 .row {
