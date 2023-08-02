@@ -161,6 +161,10 @@
         "url": "/docs/running-on-vercel"
       },
       {
+        "label": "Running on Neon Postgres",
+        "url": "/docs/running-on-neon"
+      },
+      {
         "label": "Running on Netlify",
         "url": "/docs/running-on-netlify"
       },
