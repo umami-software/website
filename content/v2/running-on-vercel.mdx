@@ -16,7 +16,7 @@ _Automate steps 1-5 using the button above_
 2. Create an account on [Vercel](https://vercel.com/). 
 3. From the dashboard page click **Import Project** then specify the URL to your fork of the project on GitHub.
 4. Add the required environment variables `DATABASE_URL` to your Vercel project. These values are defined in the
-**Configure umami** step from [Install](/docs/install). You can also create a Vercel Postgres database at this point.
+**Configure Umami** step from [Install](/docs/install). You can also create a Vercel Postgres database at this point.
   * You should use `POSTGRES_PRISMA_URL` for umami, which is in the form of `postgres://user:passwd@endpoint-pooler.postgres.vercel-storage.com/verceldb?pgbouncer=true&connect_timeout=10`.
   * The environment variable used for the database URL can be changed in the `db/postgresql/prisma.schema` file.
 5. Deploy and visit your application at `<deploy-id>.vercel.app`.
