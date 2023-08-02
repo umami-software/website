@@ -2,7 +2,7 @@
 
 This is the repository of the [Umami](https://umami.is) website built using [Next.js](https://nextjs.org/).
 
-![Thumbnail](./assets/website_mockup.png)
+![Thumbnail](./assets/website_screenshot.png)
 
 ## About 
 Umami is a simple, easy to use, self-hosted web analytics solution. The goal is to provide you with a friendlier, privacy-focused alternative to Google Analytics and a free, open-sourced alternative to paid solutions. Umami collects only the metrics you care about and everything fits on a single page.
