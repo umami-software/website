@@ -42,7 +42,7 @@ const plans = [
       'Unlimited team members',
       'Custom data retention',
       'Onboarding support',
-      'Desginated support engineer',
+      'Designated support engineer',
     ],
     url: 'mailto:sales@umami.is?subject=Umami Cloud enterprise pricing',
     button: 'Contact us',
