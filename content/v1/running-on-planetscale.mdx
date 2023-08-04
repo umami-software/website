@@ -7,14 +7,16 @@
 1. Fork the [https://github.com/umami-software/umami](https://github.com/umami-software/umami) project to your GitHub account.
 2. Create a database on PlanetScale called `umami-db` and get its connection string (Hint: select "Prisma" from the "Connect with" menu). It should look something like this: `mysql://username:password@host/umami-db?sslaccept=strict`.
 3. Add `DATABASE_URL` and `SKIP_DB_CHECK` to your `.env` file:
+
 ```
 DATABASE_URL=mysql://username:password@host/umami-db?sslaccept=strict
 SKIP_DB_CHECK=1
 ```
+
 5. Download the [PlanetScale CLI](https://github.com/planetscale/cli/releases) and authenticate with `pscale auth login`.
 6. Create the tables by running the following command on the root of the project: `pscale shell umami-db main < sql/schema.mysql.sql`.
 7. You should now be able to build and start Umami (`yarn build` followed by `yarn start`).
-6. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
+8. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
 
 ### Troubleshooting
 

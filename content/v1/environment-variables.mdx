@@ -29,6 +29,7 @@ This will redirect all requests from `http` to `https` in the Umami application.
 If you are running in development mode, this will log database queries to the console for debugging.
 
 ### HOSTNAME = &lt;hostname&gt;
+
 ### PORT = &lt;port number&gt;
 
 If you are running on an environment which requires you to bind to a specific hostname or port, such as Heroku, you can add
@@ -75,8 +76,6 @@ Build time variables are only recognized during the build process. This also inc
 
 If you want to host Umami under a subdirectory. You may need to update your reverse proxy settings to correctly handle the BASE_PATH prefix.
 
-
 ### DATABASE_TYPE = &lt;postgresql | mysql&gt;
 
 The type of DB to be used. This is only required for the Docker build.
-

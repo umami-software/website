@@ -6,10 +6,11 @@ disable this using `data-auto-track="false"` and sending the data yourself.
 See [Tracker configuration](/docs/tracker-configuration).
 
 ## Functions
+
 ```js
 umami.track([payload]);
 
-umami.track(event_name, [event_data])
+umami.track(event_name, [event_data]);
 ```
 
 ## Pageviews
@@ -67,8 +68,8 @@ umami.track(props => ({
   name: 'signup-button',
   data: {
     name: 'newsletter',
-    id: 123
-  }
+    id: 123,
+  },
 }));
 ```
 

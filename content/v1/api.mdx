@@ -92,19 +92,19 @@ None
 
 ```js
 [
-    {
-        id: 4,
-        websiteUuid: "51f73213-3f01-4343-a135-25496a3ffd31",
-        userId: 2,
-        name: "Umami",
-        domain: "umami.is",
-        shareId: "8PWex1pa",
-        createdAt: "2021-07-26T17:17:52.846Z"
-    },
-    {
-        // ...
-    }
-]
+  {
+    id: 4,
+    websiteUuid: '51f73213-3f01-4343-a135-25496a3ffd31',
+    userId: 2,
+    name: 'Umami',
+    domain: 'umami.is',
+    shareId: '8PWex1pa',
+    createdAt: '2021-07-26T17:17:52.846Z',
+  },
+  {
+    // ...
+  },
+];
 ```
 
 Prior to v1.39 some fields had a different name. If using an old version, use `website_id` instead of `id`, and rewrite the other fields in snake case (for example `share_id` instead of `shareId`).
@@ -113,7 +113,6 @@ Prior to v1.39 some fields had a different name. If using an old version, use `w
 
 There are several endpoints your can call to get stats for your website. All the
 stats endpoints require sending a `GET` request with the `Bearer <token>` (post v1.26.0) or `umami.auth` authentication cookie.
-
 
 ## `GET /api/websites/{websiteUuid}/stats`
 
@@ -141,7 +140,6 @@ GET (with Authorization header) from url: `https://umami.mydomain.com/api/websit
 - `uniques`: Number of unique visitor
 - `bounces`: Number of returning visitor
 - `totaltime`: Time spent on the website
-
 
 ## `GET /api/websites/{websiteUuid}/pageviews`
 
@@ -184,9 +182,9 @@ Gets events within a given time range.
 
 ```js
 [
-    {x: "download-button", t: "2020-04-20 02:00:00", y: 2},
-    {x: "signup-button", t: "2020-04-20 02:00:00", y: 1}
-]
+  { x: 'download-button', t: '2020-04-20 02:00:00', y: 2 },
+  { x: 'signup-button', t: '2020-04-20 02:00:00', y: 1 },
+];
 ```
 
 ## `GET /api/websites/{websiteUuid}/metrics`
@@ -263,7 +261,7 @@ Prior to v1.37, the `event_name` was separated into two different fields: `event
 }
 ```
 
-Note, for `/api/collect` requests you do not need to send an 
+Note, for `/api/collect` requests you do not need to send an
 authentication token.
 
 Also, you need to send a proper `User-Agent` HTTP header or
