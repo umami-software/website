@@ -24,9 +24,9 @@ None
 
 **Sample example**
 
-GET from url : `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?startAt=1656679719687&endAt=1656766119687`
+GET from url: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?startAt=1656679719687&endAt=1656766119687`
 
-```
+```js
 {
   x: 5
 }
@@ -91,7 +91,7 @@ Gets pageviews within a given time range.
 
 **Sample response**
 
-```
+```js
 {
     pageviews: [
         {x: "2020-04-20 01:00:00", y: 3},
@@ -131,7 +131,7 @@ Gets summarized website statistics.
 
 URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?startAt=1656679719687&endAt=1656766119687`
 
-```
+```js
 {
   pageviews: { value: 5, change: 5 },
   uniques: { value: 1, change: 1 },
@@ -170,7 +170,7 @@ Gets metrics for a given time range.
 
 **Sample response**
 
-```
+```js
 [
     {x: "/", y: 46}
     {x: "/docs", y: 17}

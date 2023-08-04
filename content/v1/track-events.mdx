@@ -10,7 +10,7 @@ special CSS class to the element you want to track.
 
 For example, you might have a button with the following code:
 
-```
+```html
 <button id="signup-button" class="button">Sign up</button>
 ```
 
@@ -22,7 +22,7 @@ umami--<event>--<event-name>
 
 So your button element would now look like this:
 
-```
+```html
 <button id="signup-button" class="button umami--click--signup-button">Sign up</button>
 ```
 
@@ -38,7 +38,7 @@ Note: be careful not to attach to any events that fire continuously like `scroll
 You can also record events manually using the `window.umami` object. To accomplish the same thing as the above
 CSS method, you can do:
 
-```
+```js
 const button = document.getElementById('signup-button');
 
 button.onclick = () => umami('Signup button click');

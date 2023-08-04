@@ -9,7 +9,7 @@ To enable events, simply add a special data property to the element you want to 
 
 For example, you might have a button with the following code:
 
-```
+```html
 <button id="signup-button">Sign up</button>
 ```
 
@@ -21,7 +21,7 @@ data-umami-event="{event-name}"
 
 So your button element would now look like this:
 
-```
+```html
 <button id="signup-button" data-umami-event="Signup button">Sign up</button>
 ```
 
@@ -46,7 +46,7 @@ All event data will be saved as a string using this method. If you want to save 
 You can also record events manually using the `window.umami` object. To accomplish the same thing as the above
 data-\* method, you can do:
 
-```
+```js
 const button = document.getElementById('signup-button');
 
 button.onclick = () => umami.track('Signup button');

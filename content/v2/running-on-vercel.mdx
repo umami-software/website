@@ -28,7 +28,7 @@ Optionally, you can proxy Umami Analytics to serve Umami Analytics from your mai
 See Vercel's [rewrites docs](https://vercel.com/docs/project-configuration).
 
 In the root of your project, add the `vercel.json` file with the following contents:
-```
+```json
 {
   "rewrites": [
     {
@@ -40,7 +40,7 @@ In the root of your project, add the `vercel.json` file with the following conte
 ```
 
 The tracking code script tag should use `/stats/script.js` as `src` value:
-```
+```html
 <script
     async
     defer

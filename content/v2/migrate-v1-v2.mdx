@@ -42,7 +42,7 @@ There are two ways to run the migration script.
 Use this method if you have terminal access to your application folder.
 Make sure your application is already built. If not run `yarn build` first.
 
-```shell
+```sh
 cd umami
 npx @umami/migrate-v1-v2@latest
 ```
@@ -53,7 +53,7 @@ Use this method if you don't have access to your application folder like when de
 
 ### Install
 
-```shell
+```sh
 git clone https://github.com/umami-software/migrate-v1-v2.git
 cd migrate-v1-v2
 yarn install
@@ -70,7 +70,7 @@ DATABASE_URL={connection url}
 
 ### Run
 
-```shell
+```sh
 yarn start
 ```
 
@@ -78,13 +78,13 @@ yarn start
 
 Go into your running Docker container. You can find the name by the output of `docker ps`.
 
-```shell
+```sh
 docker exec -ti -u 0 <app container name> sh
 ```
 
 Run the migration script.
 
-```shell
+```sh
 npx @umami/migrate-v1-v2@latest
 ```
 

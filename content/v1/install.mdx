@@ -9,13 +9,13 @@
 
 ### Install Yarn
 
-```
+```sh
 npm install -g yarn
 ```
 
 ### Get the source code and install packages
 
-```
+```sh
 git clone https://github.com/umami-software/umami.git
 cd umami
 yarn install
@@ -38,7 +38,7 @@ mysql://username:mypassword@localhost:3306/mydb
 
 ### Build the application
 
-```bash
+```sh
 yarn build
 ```
 
@@ -46,7 +46,7 @@ This will also create a login account with username **admin** and password **uma
 
 ### Start the application
 
-```bash
+```sh
 yarn start
 ```
 
@@ -60,7 +60,7 @@ You can simply run `yarn start` to start Umami, but it's highly recommended you 
 
 To run with PM2:
 
-```
+```sh
 yarn global add pm2
 cd umami
 pm2 start yarn --name umami -- start
@@ -72,18 +72,18 @@ pm2 save
 
 To build the Umami container and start up a PostgreSQL database, run:
 
-```bash
+```sh
 docker-compose up
 ```
 
 Alternatively, to pull just the Umami Docker image with PostgreSQL support:
 
-```bash
+```sh
 docker pull docker.umami.dev/umami-software/umami:postgresql-latest
 ```
 
 Or with MySQL support:
 
-```bash
+```sh
 docker pull docker.umami.dev/umami-software/umami:mysql-latest
 ```

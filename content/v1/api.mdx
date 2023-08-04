@@ -36,7 +36,7 @@ Authorization: Bearer eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
 
 For example, with `curl` it would look like this:
 
-```shell
+```sh
 curl https://yoursever/api/websites
    -H "Accept: application/json"
    -H "Authorization: Bearer <token>"
@@ -47,7 +47,7 @@ Prior to v1.26.0, Umami used cookies. If using an older version, you would do th
 Save the token value and pass it as a _cookie_ with all your data requests.
 The cookie name is `umami.auth`. Your request header should look something like this:
 
-```
+```http request
 Cookie: umami.auth=eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
 ```
 
@@ -68,7 +68,7 @@ Creates a website.
 
 **Sample response**
 
-```
+```js
 {
     id: 4,
     websiteUuid: "51f73213-3f01-4343-a135-25496a3ffd31",
@@ -90,7 +90,7 @@ None
 
 **Sample response**
 
-```
+```js
 [
     {
         id: 4,
@@ -102,7 +102,7 @@ None
         createdAt: "2021-07-26T17:17:52.846Z"
     },
     {
-        ...
+        // ...
     }
 ]
 ```
@@ -126,9 +126,9 @@ Gets summarized website statistics.
 
 **Sample example**
 
-GET (with Authorization header) from url : `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?start_at=1656679719687&end_at=1656766119687`
+GET (with Authorization header) from url: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?start_at=1656679719687&end_at=1656766119687`
 
-```
+```js
 {
   pageviews: { value: 5, change: 5 },
   uniques: { value: 1, change: 1 },
@@ -140,7 +140,7 @@ GET (with Authorization header) from url : `https://umami.mydomain.com/api/websi
 - `pageviews`: Pages hits
 - `uniques`: Number of unique visitor
 - `bounces`: Number of returning visitor
-- `totaltime` : Time spent on the website
+- `totaltime`: Time spent on the website
 
 
 ## `GET /api/websites/{websiteUuid}/pageviews`
@@ -156,7 +156,7 @@ Gets pageviews within a given time range.
 
 **Sample response**
 
-```
+```js
 {
     pageviews: [
         {t: "2020-04-20 01:00:00", y: 3},
@@ -182,7 +182,7 @@ Gets events within a given time range.
 
 **Sample response**
 
-```
+```js
 [
     {x: "download-button", t: "2020-04-20 02:00:00", y: 2},
     {x: "signup-button", t: "2020-04-20 02:00:00", y: 1}
@@ -201,7 +201,7 @@ Gets metrics for a given time range.
 
 **Sample response**
 
-```
+```js
 [
     {x: "/", y: 46}
     {x: "/docs", y: 17}
@@ -216,7 +216,7 @@ Gets metrics for a given time range.
 To register a `pageview` or `event`, you need to send a `POST` to `/api/collect` with
 the following data:
 
-```
+```js
 {
     payload: {
         website: "your-website-id",
@@ -232,7 +232,7 @@ the following data:
 
 For events, from v1.37 onwards, you would send:
 
-```
+```js
 {
     payload: {
         website: "your-website-id",
@@ -248,7 +248,7 @@ For events, from v1.37 onwards, you would send:
 
 Prior to v1.37, the `event_name` was separated into two different fields: `event_type` and `event_value`:
 
-```
+```js
 {
     payload: {
         website: "your-website-id",

@@ -22,7 +22,7 @@ If you have a Forge Account and a connected server bucket, you can easily set up
     - Uncheck **Install Composer Dependencies**
     - Click **Install Repository**
 4. Update the deployment script and add:
-```
+```sh
 yarn install
 yarn build
 ```
@@ -43,7 +43,7 @@ Remove these lines, since we don't have artisan or use php:
 DATABASE_URL=mysql://user:password@localhost:3306/dbname
 ```
 7. Perform the initial project setup, via SSH:
-```
+```sh
     yarn install
     yarn update-db
     yarn build
