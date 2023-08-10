@@ -3,7 +3,7 @@
 [Forge](https://forge.laravel.com/) is a paid server management services, tailored to hosting Laravel apps on Server Providers like DigitalOcean,
 Linode, Vultr, Amazon, Hetzner and more.
 
-If you have a Forge Account and a connected server bucket, you can easily set up an umami installation.
+If you have a Forge Account and a connected server bucket, you can easily set up an Umami installation.
 
 ## Prerequisites
 
@@ -11,56 +11,63 @@ If you have a Forge Account and a connected server bucket, you can easily set up
 
 ## Setup
 
-1. Select your desired  Server in Forge.
+1. Select your desired Server in Forge.
 2. Go to **Sites** > **New Site**
-    - Enter the domain name
-    - Project Type: Static HTML
-    - Check **Create Database**, enter a Database Name
-    - Click **Add**
+   - Enter the domain name
+   - Project Type: Static HTML
+   - Check **Create Database**, enter a Database Name
+   - Click **Add**
 3. To install the Repository, fork the [https://github.com/umami-software/umami](https://github.com/umami-software/umami) project to your GitHub account or install from the official repository.
-    - Enter the Repository path: `umami-software/umami`
-    - Uncheck **Install Composer Dependencies**
-    - Click **Install Repository**
-4. Update the deployment script and add:
-```
-yarn install
-yarn build
-```
-after the `git pull origin $FORGE_SITE_BRANCH` command.
+   - Enter the Repository path: `umami-software/umami`
+   - Uncheck **Install Composer Dependencies**
+   - Click **Install Repository**
+4. Update the deployment script and add the following after the `git pull origin $FORGE_SITE_BRANCH` command.
 
-Remove these lines, since we don't have artisan or use php:
-    ```
-    ( flock -w 10 9 || exit 1
-        echo 'Restarting FPM...'; sudo -S service $FORGE_PHP_FPM reload ) 9>/tmp/fpmlock
+   ```sh
+   yarn install
+   yarn build
+   ```
 
-    if [ -f artisan ]; then
-        $FORGE_PHP artisan migrate --force
-    fi
-    ```
+   Remove these lines, since we don't have artisan or use php:
+
+   ```sh
+   ( flock -w 10 9 || exit 1
+   echo 'Restarting FPM...'; sudo -S service $FORGE_PHP_FPM reload ) 9>/tmp/fpmlock
+
+   if [ -f artisan ]; then
+       $FORGE_PHP artisan migrate --force
+   fi
+   ```
+
 5. In Forge, go to your Server page, click **Database** and add a user to the just created database.
 6. Create the database-connection string and add it to your `.env` file:
-```
-DATABASE_URL=mysql://user:password@localhost:3306/dbname
-```
+
+   ```
+   DATABASE_URL=mysql://user:password@localhost:3306/dbname
+   ```
+
 7. Perform the initial project setup, via SSH:
-```
-    yarn install
-    yarn update-db
-    yarn build
-```
+
+   ```sh
+   yarn install
+   yarn update-db
+   yarn build
+   ```
+
 8. Go to your Umami-Site and click on **SSL** in the left menu and add an SSL-Certificate.
-9. Click **Edit files** > **Edit Nginx Configuration** and add:
-```
-    location / {
-        proxy_pass http://localhost:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-```
-before the favicon.
+9. Click **Edit files** > **Edit Nginx Configuration** and add the following before the favicon.
+
+   ```
+   location / {
+       proxy_pass http://localhost:3000;
+       proxy_http_version 1.1;
+       proxy_set_header Upgrade $http_upgrade;
+       proxy_set_header Connection 'upgrade';
+       proxy_set_header Host $host;
+       proxy_cache_bypass $http_upgrade;
+   }
+   ```
+
 This configuration will route the traffic to the node-server that Umami runs on.
 
 10. In Forge, go to your Server page, click **Daemons** and add **New Daemon** to keep the Umami Node-Server up and running.

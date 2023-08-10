@@ -2,7 +2,7 @@
 
 ### Overview
 
-Umami API Client is built in typescript and contains functions to call every API endpoint available Umami.
+Umami API Client is built in TypeScript and contains functions to call every API endpoint available Umami.
 
 ### Requirements
 
@@ -10,7 +10,7 @@ Umami API Client is built in typescript and contains functions to call every API
 
 ### Install Yarn
 
-```
+```sh
 npm install @umami/api-client
 ```
 
@@ -37,7 +37,7 @@ More details on accessing Umami Cloud can be found under [API key](/docs/api-key
 
 Import the configured api-client and query using the available class methods.
 
-```
+```js
 import { client } from '@umami/api-client';
 
 const { ok, data, status, error } = await client.getWebsites();

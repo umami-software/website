@@ -9,23 +9,26 @@ or the [Running on PlanetScale](/docs/running-on-planetscale) guide to get a dat
 You can also check out the **Managed databases** section under [Hosting](/docs/hosting).
 
 ## Setup [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fmikecao%2Fumami&env=DATABASE_URL&envDescription=These%20values%20are%20defined%20in%20the%20configure%20Umami%20step%20from%20Install&envLink=https%3A%2F%2Fumami.is%2Fdocs%2Finstall&project-name=umami&repo-name=umami)
+
 _Automate steps 1-5 using the button above_
 
 1. Fork the [https://github.com/umami-software/umami](https://github.com/umami-software/umami) project to your GitHub account.
-2. Create an account on [Vercel](https://vercel.com/). 
+2. Create an account on [Vercel](https://vercel.com/).
 3. From the dashboard page click **Import Project** then specify the URL to your fork of the project on GitHub.
 4. Add the required environment variables `DATABASE_URL` to your Vercel project. These values are defined in the
-**Configure umami** step from [Install](/docs/install).
+   **Configure Umami** step from [Install](/docs/install).
 5. Deploy and visit your application at `<deploy-id>.vercel.app`.
 6. Follow the **Getting started** guide starting from the [Login](/docs/login) step and be sure to change the default password.
 
 ### Proxy Umami Analytics via Vercel
+
 Optionally, you can proxy Umami Analytics to serve Umami Analytics from your main domain. This is also useful for bypassing ad-blocker when using [Umami Cloud](https://umami.is/pricing).
 
 See Vercel's [rewrites docs](https://vercel.com/docs/project-configuration).
 
 In the root of your project, add the `vercel.json` file with the following contents:
-```
+
+```json
 {
   "rewrites": [
     {
@@ -37,11 +40,12 @@ In the root of your project, add the `vercel.json` file with the following conte
 ```
 
 The tracking code script tag should use `/stats/script.js` as `src` value:
-```
+
+```html
 <script
-    async
-    defer
-    src="/stats/script.js"
-    data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
+  async
+  defer
+  src="/stats/script.js"
+  data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
 ></script>
 ```

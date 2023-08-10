@@ -24,15 +24,15 @@ None
 
 **Sample example**
 
-GET from url : `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?startAt=1656679719687&endAt=1656766119687`
+GET from url: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?startAt=1656679719687&endAt=1656766119687`
 
-```
+```js
 {
-  x: 5
+  x: 5;
 }
 ```
 
-- `x`: Nuber of unique visitors within the last 5 minutes
+- `x`: Number of unique visitors within the last 5 minutes
 
 ---
 
@@ -91,7 +91,7 @@ Gets pageviews within a given time range.
 
 **Sample response**
 
-```
+```js
 {
     pageviews: [
         {x: "2020-04-20 01:00:00", y: 3},
@@ -131,7 +131,7 @@ Gets summarized website statistics.
 
 URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?startAt=1656679719687&endAt=1656766119687`
 
-```
+```js
 {
   pageviews: { value: 5, change: 5 },
   uniques: { value: 1, change: 1 },
@@ -141,9 +141,9 @@ URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b
 ```
 
 - `pageviews`: Pages hits
-- `uniques`: Number of unique visitor
-- `bounces`: Number of returning visitor
-- `totaltime` : Time spent on the website
+- `uniques`: Number of unique visitors
+- `bounces`: Number of returning visitors
+- `totaltime`: Time spent on the website
 
 ---
 
@@ -170,7 +170,7 @@ Gets metrics for a given time range.
 
 **Sample response**
 
-```
+```js
 [
     {x: "/", y: 46}
     {x: "/docs", y: 17}

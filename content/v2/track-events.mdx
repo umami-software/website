@@ -1,7 +1,7 @@
 # Track events
 
 Besides pageviews, Umami is also able to track events that occur on your website. There are two ways to record
-events in Umami, using the **data attributes** property or using **Javascript**.
+events in Umami, using the **data attributes** property or using **JavaScript**.
 
 ## Using data attributes
 
@@ -9,7 +9,7 @@ To enable events, simply add a special data property to the element you want to 
 
 For example, you might have a button with the following code:
 
-```
+```html
 <button id="signup-button">Sign up</button>
 ```
 
@@ -21,7 +21,7 @@ data-umami-event="{event-name}"
 
 So your button element would now look like this:
 
-```
+```html
 <button id="signup-button" data-umami-event="Signup button">Sign up</button>
 ```
 
@@ -35,18 +35,18 @@ data-umami-event-email="bob@aol.com"
 data-umami-event-id="123"
 ```
 
-The additonal properties will result in `{ email: 'bob@aol.com', id: '123' }` being recorded with the `Signup button` name.
+The additional properties will result in `{ email: 'bob@aol.com', id: '123' }` being recorded with the `Signup button` name.
 
-Event data cannot be sent without an event name. 
+Event data cannot be sent without an event name.
 
-All event data will be saved as a string using this method. If you want to save event data as numeric, dates, booleans, etc. use the Javascript method below.
+All event data will be saved as a string using this method. If you want to save event data as numeric, dates, booleans, etc. use the JavaScript method below.
 
-## Using Javascript
+## Using JavaScript
 
 You can also record events manually using the `window.umami` object. To accomplish the same thing as the above
 data-\* method, you can do:
 
-```
+```js
 const button = document.getElementById('signup-button');
 
 button.onclick = () => umami.track('Signup button');

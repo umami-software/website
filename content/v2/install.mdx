@@ -4,24 +4,24 @@
 
 ### Requirements
 
-- A server with [Node.js](https://nodejs.org/) version 14.18 or newer
-- A database. Umami supports [MySQL](https://www.mysql.com/) (minimum v5.7) and [Postgresql](https://www.postgresql.org/) (minimum v12.14) databases.
+- A server with [Node.js](https://nodejs.org/) version 14.18 or newer.
+- A database. Umami supports [MySQL](https://www.mysql.com/) (minimum v5.7) and [PostgreSQL](https://www.postgresql.org/) (minimum v12.14) databases.
 
 ### Install Yarn
 
-```
+```sh
 npm install -g yarn
 ```
 
 ### Get the source code and install packages
 
-```
+```sh
 git clone https://github.com/umami-software/umami.git
 cd umami
 yarn install
 ```
 
-### Configure umami
+### Configure Umami
 
 Create an `.env` file with the following
 
@@ -39,7 +39,7 @@ DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
 
 ### Build the application
 
-```bash
+```sh
 yarn build
 ```
 
@@ -48,7 +48,7 @@ It will also create a login account with username **admin** and password **umami
 
 ### Start the application
 
-```bash
+```sh
 yarn start
 ```
 
@@ -62,7 +62,7 @@ You can simply run `yarn start` to start Umami, but it's highly recommended you 
 
 To run with PM2:
 
-```
+```sh
 yarn global add pm2
 cd umami
 pm2 start yarn --name umami -- start
@@ -72,22 +72,22 @@ pm2 save
 
 ## Installing with Docker
 
-Umami ships with a docker compose that contains the application and a Postgresql database.
+Umami ships with a docker compose that contains the application and a PostgreSQL database.
 
-To build the docker container and start up with a Postgres database, run:
+To build the Docker container and start up with a Postgres database, run:
 
-```bash
+```sh
 docker-compose up -d
 ```
 
 Alternatively, if you want to use prebuilt images, you can pull the Umami Docker image with PostgreSQL support:
 
-```bash
+```sh
 docker pull docker.umami.dev/umami-software/umami:postgresql-latest
 ```
 
 Or with MySQL support:
 
-```bash
+```sh
 docker pull docker.umami.dev/umami-software/umami:mysql-latest
 ```

@@ -8,9 +8,9 @@
 2. Create a database on [PlanetScale](https://app.planetscale.com/) called `umami-db` and copy the `DATABASE_URL` string from "Connect" > "Connect with Prisma" > ".env" tab.
 3. Add the `DATABASE_URL` to your `.env` file:
 
-    ```
-    DATABASE_URL=mysql://username:password@host/umami-db?sslaccept=strict
-    ```
+   ```
+   DATABASE_URL=mysql://username:password@host/umami-db?sslaccept=strict
+   ```
 
 4. Run `yarn run build-db && yarn run update-db`
 5. Visit the `umami-db` dashboard and make sure the Tables are created and then promote it to production if you want.

@@ -8,8 +8,11 @@ By default, Umami will send data to wherever the script is located. You can over
 to another location.
 
 Usage:
-```
-<script async defer
+
+```html
+<script
+  async
+  defer
   src="http://mywebsite.com/umami.js"
   data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
   data-host-url="http://stats.mywebsite.com"
@@ -22,8 +25,11 @@ By default, Umami tracks all pageviews and events for you automatically. You can
 track events yourself using the [tracker functions](/docs/tracker-functions).
 
 Usage:
-```
-<script async defer
+
+```html
+<script
+  async
+  defer
   src="http://mywebsite.com/umami.js"
   data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
   data-auto-track="false"
@@ -32,12 +38,14 @@ Usage:
 
 ### data-do-not-track
 
-You can configure Umami to respect the visitor's **Do Not Track** setting. 
-
+You can configure Umami to respect the visitor's **Do Not Track** setting.
 
 Usage:
-```
-<script async defer
+
+```html
+<script
+  async
+  defer
   src="http://mywebsite.com/umami.js"
   data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
   data-do-not-track="true"
@@ -46,14 +54,17 @@ Usage:
 
 ### data-cache
 
-If you get a lot of pageviews from the same user, for example in a forum website, you can cache some data to 
+If you get a lot of pageviews from the same user, for example in a forum website, you can cache some data to
 improve the performance of the tracking script.
 
-*Note: This will use session storage so you may need to inform your users.*
+_Note: This will use session storage so you may need to inform your users._
 
 Usage:
-```
-<script async defer
+
+```html
+<script
+  async
+  defer
   src="http://mywebsite.com/umami.js"
   data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
   data-cache="true"
@@ -65,8 +76,11 @@ Usage:
 If you want the tracker to only run on specific domains, you can add them to your tracker script. This is a comma delimited list of domain names. Helps if you are working in a staging/development environment.
 
 Usage:
-```
-<script async defer
+
+```html
+<script
+  async
+  defer
   src="http://mywebsite.com/umami.js"
   data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
   data-domains="mywebsite.com,mywebsite2.com"
@@ -78,12 +92,13 @@ Usage:
 Google Tag Manager will strip the attributes from the tracker, so you can bypass this by using the format below.
 
 Usage:
-```
+
+```html
 <script>
-  (function() {
-    var el = document.createElement("script");
-    el.setAttribute("src", "http://mywebsite.com/umami.js");
-    el.setAttribute("data-website-id", "94db1cb1-74f4-4a40-ad6c-962362670409");
+  (function () {
+    var el = document.createElement('script');
+    el.setAttribute('src', 'http://mywebsite.com/umami.js');
+    el.setAttribute('data-website-id', '94db1cb1-74f4-4a40-ad6c-962362670409');
     document.body.appendChild(el);
   })();
 </script>

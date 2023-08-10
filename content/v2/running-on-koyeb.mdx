@@ -6,7 +6,7 @@
 
 In this guide, you need to have a PostgreSQL database server running and accepting remote connections. If you do not already have a database, you can check out the **Managed database** section under [Hosting](/docs/hosting).
 
->You will need to set up the database tables by following the **Create database tables** section of the [Install](/docs/install) docs.
+> You will need to set up the database tables by following the **Create database tables** section of the [Install](/docs/install) docs.
 
 To deploy Umami, we use the [Koyeb CLI](https://github.com/koyeb/koyeb-cli), you can also perform the setup using the [Koyeb control panel](https://app.koyeb.com).
 
@@ -31,10 +31,10 @@ koyeb app init umami --docker ghcr.io/umami-software/umami:postgresql-latest --p
 
 Your Umami service is being deployed. To retrieve the Umami URL run:
 
-```
+```sh
 $ koyeb app get umami
 ID                                  	NAME     	DOMAINS                         	UPDATED AT
 30de8301-05b1-4131-a842-28e608900000	umami   	umami-<YOUR_KOYEB_ORG>.koyeb.app	2021-07-06 11:58:01.143967 +0000 UTC
 ```
 
-Open the URL to access umami and follow the **Getting started** guide starting from the [Login](/docs/login) step.
+Open the URL to access Umami and follow the **Getting started** guide starting from the [Login](/docs/login) step.
