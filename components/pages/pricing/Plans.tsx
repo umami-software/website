@@ -13,7 +13,7 @@ const plans = [
     ),
     description: 'Up to 10K monthly events',
     features: ['Up to 3 websites', '1 year data retention', 'Community support'],
-    url: '',
+    url: 'https://cloud.umami.is/signup',
     button: 'Get started',
   },
   {
