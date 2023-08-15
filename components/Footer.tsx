@@ -29,7 +29,7 @@ const data = [
       { text: 'Get Involved', href: '/community' },
       { text: 'GitHub', href: 'https://github.com/umami-software/umami' },
       { text: 'Discord', href: 'https://discord.gg/4dz4zcXYrQ' },
-      { text: 'X', href: 'https://x.com/umami_software' },
+      { text: 'X (Formerly Twitter)', href: 'https://x.com/umami_software' },
     ],
   },
   {
