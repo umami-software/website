@@ -1,9 +1,9 @@
 import { Button, Row, Column } from 'react-basics';
 import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
-import Twitter from 'assets/twitter.svg';
+import X from 'assets/x.svg';
 import styles from './Community.module.css';
-import { REPO_URL, DISCORD_URL, TWITTER_URL } from '../lib/constants';
+import { REPO_URL, DISCORD_URL, X_URL } from '../lib/constants';
 import Link from 'next/link';
 
 const items = [
@@ -21,10 +21,10 @@ const items = [
     icon: <Discord />,
   },
   {
-    name: 'Twitter',
-    description: 'Follow us on Twitter for the latest news and updates.',
-    url: TWITTER_URL,
-    icon: <Twitter />,
+    name: 'X',
+    description: 'Follow us on X for the latest news and updates.',
+    url: X_URL,
+    icon: <X />,
   },
 ];
 
