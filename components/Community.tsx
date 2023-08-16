@@ -22,7 +22,7 @@ const items = [
   },
   {
     name: 'X',
-    description: 'Follow us on X (Formerly Twitter) for the latest news and updates.',
+    description: 'Follow us on X (formerly Twitter) for the latest news and updates.',
     url: X_URL,
     icon: <X />,
   },
