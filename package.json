@@ -10,7 +10,7 @@
     "url": "https://github.com/umami-software/website.git"
   },
   "scripts": {
-    "dev": "next dev -p 5001",
+    "dev": "next dev -p 5000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --quiet"
@@ -36,7 +36,7 @@
     "classnames": "^2.2.6",
     "next": "^13.3.0",
     "react": "^18.2.0",
-    "react-basics": "0.91.0",
+    "react-basics": "0.98.0",
     "react-dom": "^18.2.0",
     "react-scroll-parallax": "^3.2.0",
     "react-spring": "^8.0.27",
