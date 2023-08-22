@@ -1,11 +1,11 @@
 import React from 'react';
 import { NextPage } from 'next';
-import Intro from 'components/Intro';
-import Statements from 'components/Statements';
-import Stats from 'components/Stats';
-import NewsletterSignup from 'components/NewsletterSignup';
-import GetStarted from 'components/GetStarted';
-import Splash from 'components/Splash';
+import Intro from 'components/pages/home/Intro';
+import Statements from 'components/pages/home/Statements';
+import Stats from 'components/pages/home/Stats';
+import NewsletterSignup from 'components/common/NewsletterSignup';
+import GetStarted from 'components/pages/home/GetStarted';
+import Splash from 'components/common/Splash';
 import { Column, Row } from 'react-basics';
 
 const IndexPage: NextPage = () => {

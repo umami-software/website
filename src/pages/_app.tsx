@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import Layout from 'components/Layout';
+import Layout from 'components/layout/Layout';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/jetbrains-mono/400.css';

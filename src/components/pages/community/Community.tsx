@@ -3,7 +3,7 @@ import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
 import Twitter from 'assets/twitter.svg';
 import styles from './Community.module.css';
-import { REPO_URL, DISCORD_URL, TWITTER_URL } from '../lib/constants';
+import { REPO_URL, DISCORD_URL, TWITTER_URL } from '../../../lib/constants';
 import Link from 'next/link';
 
 const items = [

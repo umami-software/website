@@ -18,7 +18,7 @@ export default function Intro() {
           <div>alternative to Google Analytics</div>
         </h2>
         <div className={styles.buttons}>
-          <a href="/docs" className="button" data-umami-event="get-started-button">
+          <a href="/src/pages/docs" className="button" data-umami-event="get-started-button">
             <Button size="lg" variant="primary">
               Get Started
             </Button>

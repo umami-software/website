@@ -3,7 +3,7 @@ import GitHub from 'assets/github.svg';
 import Twitter from 'assets/twitter.svg';
 import Discord from 'assets/discord.svg';
 import styles from './SocialMedia.module.css';
-import { REPO_URL, DISCORD_URL, TWITTER_URL } from '../lib/constants';
+import { REPO_URL, DISCORD_URL, TWITTER_URL } from '../../lib/constants';
 
 const links = [
   { name: 'GitHub', url: REPO_URL, icon: <GitHub /> },

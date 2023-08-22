@@ -1,8 +1,8 @@
 import { Row, Column, Container, useScroll } from 'react-basics';
 import Link from 'next/link';
 import { REPO_URL } from 'lib/constants';
-import CompanyLogo from './CompanyLogo';
-import HamburgerButton from './HamburgerButton';
+import CompanyLogo from 'components/common/CompanyLogo';
+import HamburgerButton from 'components/common/HamburgerButton';
 import GitHub from 'assets/github.svg';
 import styles from './Header.module.css';
 

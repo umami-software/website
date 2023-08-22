@@ -2,8 +2,8 @@ import React from 'react';
 import { Row, Column, Container } from 'react-basics';
 import Link from 'next/link';
 import classNames from 'classnames';
-import CompanyLogo from './CompanyLogo';
-import SocialMedia from './SocialMedia';
+import CompanyLogo from '../common/CompanyLogo';
+import SocialMedia from '../common/SocialMedia';
 import styles from './Footer.module.css';
 
 const data = [

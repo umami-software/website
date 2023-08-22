@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import Features from 'components/Features';
+import Features from 'components/pages/features/Features';
 
 const FeaturesPage: NextPage = () => {
   return (

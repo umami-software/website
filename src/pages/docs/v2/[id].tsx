@@ -1,13 +1,13 @@
 import { Row, Column } from 'react-basics';
 import { NextPage } from 'next';
-import Menu from 'components/Menu';
+import Menu from 'components/pages/docs/Menu';
 import { getAllPathIds, getHtmlContent } from 'lib/content';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import path from 'path';
 
-const CONTENT_DIR = path.join(process.cwd(), 'content/v2');
+const CONTENT_DIR = path.join(process.cwd(), 'src/content/v2');
 
 const DocsPage: NextPage = ({
   content,

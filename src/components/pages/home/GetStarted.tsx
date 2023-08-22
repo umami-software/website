@@ -6,7 +6,7 @@ export default function GetStarted() {
     <div className={styles.banner}>
       <h1>Are you ready for better analytics?</h1>
       <div className={styles.buttons}>
-        <a href="/docs" className="button" data-umami-event="get-started-button">
+        <a href="/src/pages/docs" className="button" data-umami-event="get-started-button">
           <Button size="lg" variant="primary">
             Get Started
           </Button>
