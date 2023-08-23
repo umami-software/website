@@ -1,7 +1,7 @@
 const rehypePrettyCode = require('rehype-pretty-code');
 
 const rehypePrettyCodeOptions = {
-  theme: 'one-dark-pro',
+  theme: 'github-light',
 };
 
 const withMDX = require('@next/mdx')({
