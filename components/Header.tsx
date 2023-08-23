@@ -23,10 +23,8 @@ export default function Header() {
             <Link href="/pricing">Pricing</Link>
           </Column>
           <Column xs={0} sm={0} md={0} className={styles.buttons}>
-            <Link href={REPO_URL}>
-              <a target="_blank">
-                <GitHub />
-              </a>
+            <Link href={REPO_URL} target="_blank">
+              <GitHub />
             </Link>
           </Column>
           <Column defaultSize={0} xs={2} sm={2} md={6} className={styles.menu}>

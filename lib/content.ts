@@ -1,22 +1,25 @@
 import fs from 'fs';
 import path from 'path';
 import remark from 'remark';
-import html from 'remark-html';
-
-export const CONTENT_DIR = path.join(process.cwd(), 'content');
+import remarkHtml from 'remark-html';
 
 export async function getHtmlContent(dir: string, id: string) {
   const fullPath = path.join(dir, `${id}.mdx`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   const processedContent = await remark()
-    .use(html as any, { sanitize: true })
+    .use(remarkHtml as any, { sanitize: true })
     .process(fileContents); // ! sanitize: true is important => protect against XSS attacks
-  const contentHtml = processedContent.toString();
+  const html = processedContent.toString();
+
+  const contentArray = html.split('\n');
+  const h1 = contentArray.find(line => line.includes('<h1>'));
+  const title = h1?.replace(/<\/?[^>]+(>|$)/g, '');
 
   return {
     id,
-    contentHtml,
+    title,
+    html,
   };
 }
 

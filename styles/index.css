@@ -45,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 20px 0;
+  margin: 20px 0;
 }
 
 main {
@@ -85,12 +85,14 @@ pre {
 }
 
 code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
   background: var(--base100);
   padding: 2px 4px;
   border-radius: 2px;
   white-space: pre-wrap;
   word-wrap: break-word;
-  font-weight: 600;
 }
 
 menu ul {
@@ -103,6 +105,10 @@ menu li {
 
 body button {
   font-family: inherit;
+}
+
+pre code {
+  padding: 0;
 }
 
 .markdown img {
@@ -119,7 +125,7 @@ body button {
   font-size: 36px;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   article header h1 {
     font-size: 2em;
   }

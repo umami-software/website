@@ -9,11 +9,9 @@ interface Props {
 
 export default function CompanyLogo({ className }: Props) {
   return (
-    <Link href="/">
-      <a className={classNames(styles.logo, className)}>
-        <Logo />
-        <div>umami</div>
-      </a>
-    </Link>
+    <div className={classNames(styles.logo, className)}>
+      <Logo />
+      <Link href="/">umami</Link>
+    </div>
   );
 }

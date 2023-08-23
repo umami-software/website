@@ -3,8 +3,10 @@
   top: 0;
   left: 0;
   right: 0;
-  margin-top: 10px;
-  z-index: 100;
+  height: 70px;
+  border-bottom: 1px solid var(--base50);
+  backdrop-filter: blur(16px);
+  z-index: 1000;
 }
 
 .row {
@@ -37,6 +39,8 @@
   gap: 48px;
   flex: 1;
   font-weight: 600;
+  z-index: 3;
+  text-shadow: 1px 1px 0 #fff;
 }
 
 .header .buttons {
@@ -44,6 +48,7 @@
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-end;
+  z-index: 2;
 }
 
 .header .menu {
@@ -53,9 +58,7 @@
   justify-content: flex-end;
 }
 
-html:not([data-scroll='0']) .row {
-  transition: all ease-in-out 0.3s;
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--base300);
-  box-shadow: 2px 2px 4px var(--base300);
+html:not([data-scroll='0']) .header {
+  transition: all linear 0.6s;
+  border-bottom: 1px solid var(--base300);
 }

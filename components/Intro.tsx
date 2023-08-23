@@ -10,22 +10,23 @@ export default function Intro() {
         <h2>
           <span>Umami is an </span>
           <b>
-            <Link href="https://github.com/umami-software/umami">
-              <a target="_blank">open source</a>
+            <Link href="https://github.com/umami-software/umami" target="_blank">
+              open source
             </Link>
           </b>
           , <b>privacy-focused</b>
           <div>alternative to Google Analytics</div>
         </h2>
         <div className={styles.buttons}>
-          <a href="/docs" className="button umami--click--get-started-button">
+          <a href="/docs" className="button" data-umami-event="get-started-button">
             <Button size="lg" variant="primary">
               Get Started
             </Button>
           </a>
           <a
-            href="https://app.umami.is/share/8rmHaheU/umami.is"
-            className="button-alt umami--click--live-demo-button"
+            href="https://analytics.umami.is/share/LGazGOecbDtaIwDr/umami.is"
+            className="button-alt"
+            data-umami-event="live-demo-button"
             target="_blank"
             rel="noreferrer"
           >

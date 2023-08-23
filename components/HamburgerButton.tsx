@@ -7,6 +7,10 @@ import styles from './HamburgerButton.module.css';
 
 const menuItems = [
   {
+    label: 'Home',
+    value: '/',
+  },
+  {
     label: 'Features',
     value: '/features',
   },

@@ -1,8 +1,6 @@
 const rehypePrettyCode = require('rehype-pretty-code');
 
 const rehypePrettyCodeOptions = {
-  // prepacked themes from shiki
-  // Themes list - https://github.com/shikijs/shiki/blob/main/docs/themes.md
   theme: 'one-dark-pro',
 };
 
@@ -27,7 +25,16 @@ const headers = [
   },
 ];
 
-module.exports = withMDX({
+const nextConfig = {
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  reactStrictMode: true,
+  output: 'standalone',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -45,5 +52,14 @@ module.exports = withMDX({
       },
     ];
   },
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-});
+  async rewrites() {
+    return [
+      { source: '/docs/v1', destination: '/docs/v1/getting-started' },
+      { source: '/docs/v1/:path*', destination: '/docs/v1/:path*' },
+      { source: '/docs/:path*', destination: '/docs/v2/:path*' },
+      { source: '/a/:path*', destination: 'https://analytics.umami.is/:path*' },
+    ];
+  },
+};
+
+module.exports = withMDX(nextConfig);

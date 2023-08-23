@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import { Container } from 'react-basics';
+import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -13,15 +13,9 @@ export default function Layout({ title, children }: Props) {
   return (
     <>
       <Head>
-        <title>{title ? `umami - ${title}` : 'umami'}</title>
+        <title>{title ? `${title} | umami` : 'umami'}</title>
         {typeof window !== 'undefined' && process.env.NODE_ENV === 'production' && (
-          <script
-            async
-            defer
-            data-website-id="d0059975-b79a-4f83-8926-ed731475fded"
-            data-host-url="https://app.umami.is"
-            src="/js/script.js"
-          />
+          <script async data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41" src="/a/script.js" />
         )}
       </Head>
       <Header />

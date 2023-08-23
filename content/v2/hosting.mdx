@@ -1,0 +1,45 @@
+# Hosting
+
+There are many ways you can get Umami up and running.
+All you need is a database (either [MySQL](https://www.mysql.com/) or [PostgreSQL](https://www.postgresql.org/))
+and server that can run [Node.js](https://nodejs.org/) (14.18 or newer).
+
+## Single server
+
+In this setup you would have the database and web server running on the same machine. You can optionally run Umami behind
+a dedicated web server like [Nginx](https://www.nginx.com/) or [Apache](https://httpd.apache.org/) and proxy requests to Umami.
+
+You can view the [Running on DigitalOcean](/docs/running-on-digitalocean) guide to learn how to set up a server.
+
+## Separate database and web server
+
+In this setup you have a database running on its own machine that allows remote connections. Your web server is running on a different
+machine with Umami installed and connects to the database remotely to store and retrieve data.
+
+## App hosting
+
+In this setup, you would have an app hosting provider host the Umami app for you. You would still need a database running elsewhere
+that the app could connect to. Here are a few app hosting providers that can host Umami. Vercel, Netlify, and Railway both have a free tier available.
+
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [Render](https://render.com/)
+- [Railway](https://railway.app/)
+
+For the deployment, the build command is `npm run build` and the publish directory is `.next`.
+
+## Managed databases
+
+A managed database is where the host provides you with a running database that you don't have to install or maintain. Here are some
+providers for managed databases.
+
+- [DigitalOcean](https://www.digitalocean.com/products/managed-databases/)
+- [Scaleway (EU)](https://www.scaleway.com/en/database/)
+- [Amazon Web Services](https://aws.amazon.com/products/databases/)
+- [Google Cloud SQL](https://cloud.google.com/sql/)
+- [Microsoft Azure](https://azure.microsoft.com/en-us/services/#databases)
+- [Render](https://render.com/pricing#databases)
+- [Heroku](https://www.heroku.com/postgres)
+- [Railway](https://docs.railway.app/databases/postgresql/)
+- [Supabase](https://supabase.com/database)
+- [PlanetScale](https://planetscale.com/)

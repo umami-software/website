@@ -23,7 +23,7 @@ export default function EmailSignup({
 
   const handleClick = async () => {
     if (email) {
-      await fetch('https://telemetry.umami.is/api/signup', {
+      await fetch('https://api.umami.is/v1/emails/signup', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -60,7 +60,7 @@ export default function EmailSignup({
             />
             <Button
               variant="primary"
-              className={`umami--signup--email-${type}`}
+              data-umami-event={`signup-email-${type}`}
               onClick={handleClick}
             >
               {buttonText}

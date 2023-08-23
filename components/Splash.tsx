@@ -9,7 +9,7 @@ export default function Splash() {
         <ParallaxBanner
           layers={[
             {
-              image: '/images/intro.jpg',
+              image: '/images/v1/intro.jpg',
               speed: -20,
             },
           ]}

@@ -1,11 +1,11 @@
 .menu {
   position: fixed;
-  top: 0;
+  top: 70px;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   background-color: var(--base50);
@@ -16,23 +16,13 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 20px;
   width: 100%;
+  margin-top: 40px;
 }
 
 .item {
   font-size: 32px;
-}
-
-.item + .item {
-  margin-top: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100px;
-  padding: 0 30px;
+  line-height: 64px;
 }

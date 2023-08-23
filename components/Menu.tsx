@@ -1,60 +1,35 @@
 import React from 'react';
+import classNames from 'classnames';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
+import v1 from 'components/menu.v1.json';
+import v2 from 'components/menu.v2.json';
+import styles from './Menu.module.css';
 
-const menu = {
-  Basics: [
-    ['About', '/docs/about'],
-    ['Getting started', '/docs/getting-started'],
-    ['Install', '/docs/install'],
-    ['Login', '/docs/login'],
-    ['Add a website', '/docs/add-a-website'],
-    ['Collect data', '/docs/collect-data'],
-    ['Add an account', '/docs/add-an-account'],
-    ['Enable share URL', '/docs/enable-share-url'],
-    ['Track events', '/docs/track-events'],
-    ['Updates', '/docs/updates'],
-    ['Languages', '/docs/languages'],
-    ['FAQ', '/docs/faq'],
-    ['Useful links', '/docs/useful-links'],
-  ],
-  Advanced: [
-    ['Tracker configuration', '/docs/tracker-configuration'],
-    ['Tracker functions', '/docs/tracker-functions'],
-    ['Environment variables', '/docs/environment-variables'],
-    ['API', '/docs/api'],
-  ],
-  Guides: [
-    ['Hosting', '/docs/hosting'],
-    ['Running on DigitalOcean', '/docs/running-on-digitalocean'],
-    ['Running on Vercel', '/docs/running-on-vercel'],
-    ['Running on Netlify', '/docs/running-on-netlify'],
-    ['Running on Heroku', '/docs/running-on-heroku'],
-    ['Running on Railway', '/docs/running-on-railway'],
-    ['Running on Supabase', '/docs/running-on-supabase'],
-    ['Running on PlanetScale', '/docs/running-on-planetscale'],
-    ['Running on Qovery', '/docs/running-on-qovery'],
-    ['Running on CapRover', '/docs/running-on-caprover'],
-    ['Running on Koyeb', '/docs/running-on-koyeb'],
-    ['Running on Forge', '/docs/running-on-forge'],
-  ],
-};
+const versions = { v1, v2 };
 
 export default function Menu() {
+  const { pathname, query } = useRouter();
+  const menu = versions[pathname.includes('v2') ? 'v2' : 'v1'];
+
   return (
-    <menu className="menu">
+    <menu className={styles.menu}>
       <h2>Documentation</h2>
-      {Object.keys(menu).map(key => (
-        <React.Fragment key={key}>
-          <h3>{key}</h3>
-          <ul>
-            {menu[key].map(([text, url]) => (
-              <li key={url}>
-                <Link href={url}>
-                  <a>{text}</a>
-                </Link>
-              </li>
+      {menu.map(({ label, items }) => (
+        <React.Fragment key={label}>
+          <h3>{label}</h3>
+          <div className={styles.items}>
+            {items.map(({ label: text, url }) => (
+              <div
+                key={url}
+                className={classNames(styles.item, {
+                  [styles.selected]: url.split('/').splice(-1)[0] === query.id,
+                })}
+              >
+                <Link href={url}>{text}</Link>
+              </div>
             ))}
-          </ul>
+          </div>
         </React.Fragment>
       ))}
     </menu>

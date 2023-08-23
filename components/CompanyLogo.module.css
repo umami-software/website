@@ -6,7 +6,7 @@
   font-weight: 600;
 }
 
-.logo,
-.logo:hover {
+.logo a,
+.logo a:hover {
   color: var(--base900);
 }

@@ -1,0 +1,341 @@
+# Teams
+
+Operations around Team management.
+
+**Endpoints**
+
+```
+POST /api/teams
+GET /api/teams
+POST /api/teams/join
+POST /api/teams/{teamId}
+GET /api/teams/{teamId}
+DELETE /api/teams/{teamId}
+POST /api/teams/{teamId}/users
+GET /api/teams/{teamId}/users
+DELETE /api/teams/{teamId}/users/{userId}
+POST /api/teams/{teamId}/websites
+GET /api/teams/{teamId}/websites
+DELETE /api/teams/{teamId}/websites/{userId}
+```
+
+---
+
+## `POST /api/teams`
+
+Creates a team.
+
+**Parameters**
+
+- `name`: (string) The team's name.
+
+**Sample response**
+
+```json
+[
+  {
+    "accessCode": "xxwtoY8pzKjDIUQi",
+    "createdAt": "2023-04-13T20:22:55.756Z",
+    "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+    "name": "My Team",
+    "updatedAt": null
+  },
+  {
+    "createdAt": "2023-04-13T20:22:55.756Z",
+    "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
+    "role": "team-owner",
+    "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+    "updatedAt": null,
+    "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
+  }
+]
+```
+
+---
+
+## `GET /api/teams`
+
+Returns all teams.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+[
+  {
+    "accessCode": "xxwtoY8pzKjDIUQi",
+    "createdAt": "2023-04-13T20:22:55.756Z",
+    "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+    "name": "My Team",
+    "teamUser": [
+      {
+        "createdAt": "2023-04-13T20:22:55.756Z",
+        "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
+        "role": "team-owner",
+        "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+        "updatedAt": null,
+        "user": { "id": "1a457e1a-121a-11ee-be56-0242ac120002", "username": "admin" },
+        "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
+      },
+      { .... }
+    ],
+  },
+  { .... }
+]
+```
+
+---
+
+## `POST /api/teams/join`
+
+Join a team.
+
+**Parameters**
+
+- `accessCode`: (string) The team's access code.
+
+**Sample response**
+
+```json
+[
+  {
+    "accessCode": "xxwtoY8pzKjDIUQi",
+    "createdAt": "2023-04-13T20:22:55.756Z",
+    "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+    "name": "My Team",
+    "teamUser": [
+      {
+        "createdAt": "2023-04-13T20:22:55.756Z",
+        "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
+        "role": "team-owner",
+        "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+        "updatedAt": null,
+        "user": { "id": "1a457e1a-121a-11ee-be56-0242ac120002", "username": "admin" },
+        "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
+      },
+      { .... }
+    ],
+  },
+  { .... }
+]
+```
+
+---
+
+## `GET /api/teams/{teamId}`
+
+Get a team.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+{
+  "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+  "name": "My Team2",
+  "accessCode": "LCh5C6SyoHCFcxaJ",
+  "createdAt": "2023-04-13T20:22:55.756Z",
+  "updatedAt": "2023-04-13T20:59:10.335Z"
+}
+```
+
+---
+
+## `POST /api/teams/{teamId}`
+
+Update a team.
+
+**Parameters**
+
+- `name`: (optional string) The team's name.
+- `accessCode`: (optional string) The team's access code.
+
+**Sample response**
+
+```json
+{
+  "accessCode": "xxwtoY8pzKjDIUQi",
+  "createdAt": "2023-04-13T20:22:55.756Z",
+  "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+  "name": "My Team",
+  "updatedAt": null
+}
+```
+
+---
+
+## `DELETE /api/teams/{teamId}`
+
+Delete a team.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```
+ok
+```
+
+---
+
+## `GET /api/teams/{teamId}/users`
+
+Get all users that belong to a team.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+[
+  {
+    "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
+    "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+    "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
+    "role": "team-owner",
+    "createdAt": "2023-04-13T20:22:55.756Z",
+    "updatedAt": null,
+    "user": {
+        "id": "1a457e1a-121a-11ee-be56-0242ac120002",
+        "username": "admin"
+    }
+  },
+  { .... }
+]
+```
+
+---
+
+## `POST /api/teams/{teamId}/users`
+
+Add a user to a team.
+
+**Parameters**
+
+- `websiteIds`: (optional string array) The list of website IDs to be added.
+
+**Sample response**
+
+```json
+{
+  "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
+  "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+  "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
+  "role": "team-owner",
+  "createdAt": "2023-04-13T20:22:55.756Z",
+  "updatedAt": null
+}
+```
+
+---
+
+## `DELETE /api/teams/{teamId}/users/{userId}`
+
+Remove a website from a team.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+ok
+```
+
+---
+
+## `GET /api/teams/{teamId}/websites`
+
+Get all websites that belong to a team.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+[
+  {
+    "createdAt": "2023-04-13T21:22:26.209Z",
+    "id": "fe24ff20-07bb-41a7-9950-b80d83ecfaeb",
+    "team": {
+      "accessCode": "LCh5C6SyoHCFcxaJ",
+      "createdAt": "2023-04-13T20:22:55.756Z",
+      "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+      "name": "My Team2",
+      "teamUser": {
+        "createdAt": "2023-04-13T20:22:55.756Z",
+        "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
+        "role": "team-owner"
+      },
+      "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+      "updatedAt": null,
+      "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
+    },
+    "updatedAt": "2023-04-13T20:59:10.335Z",
+    "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+    "website": {
+      "createdAt": "2023-04-10T23:06:44.250Z",
+      "deletedAt": null,
+      "domain": "mywebsite.com",
+      "id": "02d89813-7a72-41e1-87f0-8d668f85008b",
+      "name": "My Website",
+      "resetAt": null,
+      "shareId": null,
+      "updatedAt": null,
+      "user": { "id": "1a457e1a-121a-11ee-be56-0242ac120002", "username": "admin" }
+    },
+    "id": "1a457e1a-121a-11ee-be56-0242ac120002",
+    "username": "admin",
+    "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
+    "websiteId": "02d89813-7a72-41e1-87f0-8d668f85008b"
+  },
+  { .... }
+]
+```
+
+---
+
+## `POST /api/teams/{teamId}/websites`
+
+Add a website to a team.
+
+**Parameters**
+
+- `websiteIds`: (optional string array) The list of website IDs to be added.
+
+**Sample response**
+
+```json
+[
+  "02d89813-7a72-41e1-87f0-8d668f85008b", ...
+]
+```
+
+---
+
+## `DELETE /api/teams/{teamId}/websites/{websiteId}`
+
+Remove a website from a team.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+ok
+```

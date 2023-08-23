@@ -1,0 +1,147 @@
+# Users
+
+Operations around User management.
+
+**Endpoints**
+
+```
+POST /api/users
+GET /api/users
+POST /api/users/{userId}
+GET /api/users/{userId}
+DELETE /api/users/{userId}
+GET /api/users/{userId}/websites
+```
+
+---
+
+## `POST /api/users`
+
+Creates a user.
+
+**Parameters**
+
+- `username`: (string) The user's username.
+- `password`: (string) The user's password.
+- `role`: (boolean) Determines user access, `admin` or `user`.
+
+**Sample response**
+
+```json
+{
+  "id": "1a457e1a-121a-11ee-be56-0242ac120002",
+  "username": "umami",
+  "role": "admin",
+  "createdAt": "2023-04-13T20:22:55.756Z"
+}
+```
+
+---
+
+## `GET /api/users`
+
+Returns all users. Admin access is required.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```
+[
+  {
+    "id:" "1a457e1a-121a-11ee-be56-0242ac120002",
+    "username": "umami",
+    "role": "admin",
+    "createdAt": "2023-04-13T20:22:55.756Z"
+  }
+]
+```
+
+---
+
+## `GET /api/users/{userId}`
+
+Gets a user by ID.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+{
+  "id": "1a457e1a-121a-11ee-be56-0242ac120002",
+  "username": "umami",
+  "role": "admin"
+}
+```
+
+---
+
+## `POST /api/users/{userId}`
+
+Updates a user.
+
+**Parameters**
+
+- `username`: (optional string) The user's username.
+- `password`: (optional string) The user's password.
+- `role`: (optional string) Determines user access, `admin` or `user`.
+
+**Sample response**
+
+```json
+{
+  "id": "1a457e1a-121a-11ee-be56-0242ac120002",
+  "username": "umami",
+  "role": "admin",
+  "createdAt": "2023-04-13T20:22:55.756Z"
+}
+```
+
+---
+
+## `DELETE /api/users/{userId}`
+
+Deletes a user.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```
+ok
+```
+
+---
+
+## `GET /api/users/{userId}/websites`
+
+Gets all websites that belong to a user.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+[
+  {
+    "id": "02d89813-7a72-41e1-87f0-8d668f85008b",
+    "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
+    "domain": "mywebsite.com",
+    "name": "My Website",
+    "shareId": null,
+    "createdAt": "2023-04-10T23:06:44.250Z",
+    "deletedAt": null,
+    "resetAt": null,
+    "updatedAt": null
+  }
+]
+```

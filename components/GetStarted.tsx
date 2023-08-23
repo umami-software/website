@@ -6,14 +6,15 @@ export default function GetStarted() {
     <div className={styles.banner}>
       <h1>Are you ready for better analytics?</h1>
       <div className={styles.buttons}>
-        <a href="/docs" className="button umami--click--get-started-button">
+        <a href="/docs" className="button" data-umami-event="get-started-button">
           <Button size="lg" variant="primary">
             Get Started
           </Button>
         </a>
         <a
-          href="https://app.umami.is/share/8rmHaheU/umami.is"
-          className="button-alt umami--click--live-demo-button"
+          href="https://analytics.umami.is/share/LGazGOecbDtaIwDr/umami.is"
+          className="button-alt"
+          data-umami-event="live-demo-button"
           target="_blank"
           rel="noreferrer"
         >

@@ -1,0 +1,93 @@
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.plans ul {
+  margin: 0;
+  padding: 0;
+}
+
+.plans li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.plans strong {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 10px;
+  background: var(--base75);
+  margin: 0 auto;
+  border: 1px solid var(--primary400);
+  width: 100%;
+}
+
+.plan:first-child {
+  border: 0;
+}
+
+.plan:last-child {
+  color: var(--base50);
+  background: var(--blue800);
+}
+
+.plan:last-child svg {
+  fill: var(--base50);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.title svg {
+  opacity: 0.5;
+}
+
+.description {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.price {
+  line-height: 4rem;
+}
+
+.beta {
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background: #eaf4ff;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.button button {
+  font-weight: 700;
+}
+
+.signup {
+  margin: 30px auto;
+  border: 1px solid var(--base300);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 4px 4px 4px var(--base300);
+}

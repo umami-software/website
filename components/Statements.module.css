@@ -42,7 +42,7 @@
   z-index: 0;
 }
 
-@media only screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .statements h1 {
     text-align: center;
   }

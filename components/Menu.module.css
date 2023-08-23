@@ -1,0 +1,24 @@
+.menu {
+  font-size: 14px;
+  position: sticky;
+  top: 70px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 4px 20px;
+  border-left: 1px solid var(--base300);
+}
+
+.item:hover {
+  border-left: 1px solid var(--base600);
+}
+
+.item.selected {
+  font-weight: 700;
+  border-left: 1px solid var(--primary400);
+}
