@@ -1,0 +1,38 @@
+.docs {
+  display: flex;
+  color: var(--base800);
+}
+
+.docs h1 {
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.docs h2 {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.docs img {
+  display: block;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.nav {
+  min-width: 320px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 2px;
+}
+
+.links a {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}

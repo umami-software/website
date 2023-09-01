@@ -9,6 +9,23 @@ import TextBlock from 'components/layout/TextBlock';
 
 const statements = [
   {
+    title: 'Simple analytics',
+    description: `
+    Umami is easy to use and understand without needing to run complicated reports. Umami
+    collects only the metrics you care about.
+    `,
+    image: <Analytics />,
+  },
+  {
+    title: 'Own your data',
+    description: `
+    Umami helps you stay compliant with ever changing data privacy laws. All data collected
+    is anonymized, making it impossible to identify any individual user. Rest assured
+    knowing that your data is securely in your own hands.
+    `,
+    image: <Shield />,
+  },
+  {
     title: 'Respect data privacy',
     description: `
     Umami lets you to gather the data you need while respecting the privacy of your users.
@@ -16,23 +33,6 @@ const statements = [
     users across websites, and is GDPR compliant.
     `,
     image: <Lock />,
-  },
-  {
-    title: 'Own your data',
-    description: `
-    Umami helps you stay compliant with ever changing data privacy laws. All data collected
-    is anonymized, making it impossible to identify any individual user. Rest assured
-    knowing that your data is securely in your hands.
-    `,
-    image: <Shield />,
-  },
-  {
-    title: 'Simple analytics',
-    description: `
-    Umami is easy to use and understand without needing to run complicated reports. Umami
-    collects only the metrics you care about and everything fits on a single page.
-    `,
-    image: <Analytics />,
   },
   {
     title: 'Open source',
@@ -49,7 +49,7 @@ export default function Statements() {
     <section className={styles.statements}>
       {statements.map(({ title, description, image }) => {
         return (
-          <ImageBlock className={styles.item}>
+          <ImageBlock key={title} className={styles.item}>
             <TextBlock>
               <h1>{title}</h1>
               <p>{description}</p>

@@ -2,7 +2,7 @@
 import Plans from '../../pricing/Plans';
 import Calculator from '../../pricing/Calculator';
 import Features from '../../pricing/Features';
-import Faq from '../../pricing/Faq';
+import Questions from '../../pricing/Questions';
 
 export default function PricingPage() {
   return (
@@ -10,7 +10,7 @@ export default function PricingPage() {
       <Plans />
       <Calculator />
       <Features />
-      <Faq />
+      <Questions />
     </>
   );
 }

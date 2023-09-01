@@ -2,7 +2,7 @@
 import Plans from './Plans';
 import Calculator from './Calculator';
 import Features from './Features';
-import Faq from './Faq';
+import Questions from './Questions';
 import PageHeader from 'components/layout/PageHeader';
 
 export default function PricingPage() {
@@ -17,7 +17,7 @@ export default function PricingPage() {
       <Plans />
       <Calculator />
       <Features />
-      <Faq />
+      <Questions />
     </>
   );
 }

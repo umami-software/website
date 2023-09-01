@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { Button } from 'react-basics';
 import styles from './Hero.module.css';
 import LinkButton from 'components/common/LinkButton';
 

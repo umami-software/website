@@ -1,6 +1,6 @@
 'use client';
 import { Icon, Icons } from 'react-basics';
-import styles from './Faq.module.css';
+import styles from './Questions.module.css';
 import { useState } from 'react';
 
 const questions = [
@@ -33,7 +33,7 @@ const questions = [
   },
 ];
 
-export default function Faq() {
+export default function Questions() {
   return (
     <div className={styles.faq}>
       <h1>Frequently Asked Questions</h1>

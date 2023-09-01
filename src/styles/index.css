@@ -1,6 +1,10 @@
 html,
 body {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
@@ -89,24 +93,4 @@ body button {
 
 pre code {
   padding: 0;
-}
-
-.docs {
-  color: var(--base800);
-}
-
-.docs h1 {
-  font-weight: 800;
-  letter-spacing: -2px;
-}
-
-.docs h2 {
-  font-weight: 800;
-  letter-spacing: -1px;
-}
-
-.docs img {
-  display: block;
-  max-width: 100%;
-  margin: 2rem auto;
 }
