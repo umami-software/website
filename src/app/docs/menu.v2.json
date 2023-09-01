@@ -119,6 +119,10 @@
         "url": "/docs/sending-stats"
       },
       {
+        "label": "Event Data",
+        "url": "/docs/event-data"
+      },
+      {
         "label": "API Client",
         "url": "/docs/api-client"
       }
