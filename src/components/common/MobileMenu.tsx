@@ -1,3 +1,4 @@
+'use client';
 import { createPortal } from 'react-dom';
 import classNames from 'classnames';
 import Link from 'next/link';

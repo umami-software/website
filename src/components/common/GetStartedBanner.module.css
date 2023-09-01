@@ -1,0 +1,26 @@
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  margin: 60px 0;
+  background: var(--blue100);
+  border-radius: 16px;
+  flex-wrap: wrap;
+}
+
+.banner h1 {
+  font-size: max(32px, min(5vw, 48px));
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px 0;
+}

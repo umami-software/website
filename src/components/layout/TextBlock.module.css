@@ -1,0 +1,12 @@
+.text h1 {
+  font-size: max(32px, min(5vw, 48px));
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.text p {
+  color: var(--base700);
+  font-size: max(14px, min(2vw, 16px));
+  font-weight: 400;
+}

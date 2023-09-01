@@ -1,3 +1,4 @@
+'use client';
 import classNames from 'classnames';
 import Link from 'next/link';
 import Logo from 'assets/logo.svg';

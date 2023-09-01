@@ -1,0 +1,144 @@
+.calculator {
+  border: 1px solid var(--base400);
+  border-radius: 10px;
+  padding: 40px 60px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.calculator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  z-index: -1;
+  background-image: url('/images/bg-white-lines.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.calculator h1 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.calculator strong {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.body {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  max-width: 640px;
+  margin: 40px auto 20px;
+}
+
+.range {
+  display: block;
+  width: 600px;
+  margin: auto;
+}
+
+.ticks {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.tick {
+  width: calc(600px / 9);
+  text-align: center;
+  cursor: pointer;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.strike {
+  color: var(--base600);
+  font-size: 36px;
+  font-weight: 700;
+  text-decoration: line-through rgba(255, 0, 0, 0.5);
+  margin-right: 16px;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  white-space: nowrap;
+}
+
+.price {
+  text-align: right;
+}
+
+.billing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  font-weight: bold;
+  position: relative;
+  margin: auto;
+}
+
+.radio {
+  gap: 30px;
+}
+
+.tag {
+  position: absolute;
+  left: 105%;
+  padding: 4px 8px;
+  color: var(--green800);
+  background: var(--green100);
+  border: 1px solid var(--green400);
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+}
+
+.select {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.select > div {
+  display: block;
+}
+
+.dropdown {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .price {
+    text-align: left;
+  }
+  .billing {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .slider {
+    display: none;
+  }
+  .select {
+    display: block;
+  }
+}

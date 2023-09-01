@@ -1,0 +1,27 @@
+.banner {
+  color: var(--light100);
+  background-image: url('/images/bg-cloud-banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+
+.banner h1 {
+  font-size: 24px;
+  margin: 0 0 30px 0;
+}
+
+.banner p {
+  font-size: 16px;
+}
+
+.banner a,
+.banner a:visited {
+  color: var(--light50);
+}
+
+.banner a:hover {
+  color: var(--primary400);
+}

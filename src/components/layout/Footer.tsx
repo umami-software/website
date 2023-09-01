@@ -1,9 +1,9 @@
-import React from 'react';
+'use client';
 import { Row, Column, Container } from 'react-basics';
 import Link from 'next/link';
 import classNames from 'classnames';
-import CompanyLogo from '../common/CompanyLogo';
-import SocialMedia from '../common/SocialMedia';
+import CompanyLogo from 'components/common/CompanyLogo';
+import SocialMedia from 'components/common/SocialMedia';
 import styles from './Footer.module.css';
 
 const data = [
@@ -61,7 +61,11 @@ export default function Footer() {
             >
               <h1>{title}</h1>
               {items.map(({ text, href }) => (
-                <Link key={text} href={href} target={href.startsWith('http') ? '_blank' : null}>
+                <Link
+                  key={text}
+                  href={href}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                >
                   {text}
                 </Link>
               ))}

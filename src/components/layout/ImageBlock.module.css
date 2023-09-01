@@ -1,0 +1,24 @@
+.block {
+  display: flex;
+  align-items: center;
+  position: sticky;
+}
+
+.block > * {
+  flex-basis: 50%;
+}
+
+.block img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .block {
+    flex-wrap: wrap;
+  }
+
+  .block > * {
+    flex-basis: 100%;
+  }
+}

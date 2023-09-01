@@ -1,8 +1,10 @@
-import { Row, Column, Container, useScroll } from 'react-basics';
+'use client';
+import { Container, Text, useScroll } from 'react-basics';
 import Link from 'next/link';
-import { REPO_URL } from 'lib/constants';
 import CompanyLogo from 'components/common/CompanyLogo';
 import HamburgerButton from 'components/common/HamburgerButton';
+import LinkButton from 'components/common/LinkButton';
+import { REPO_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';
 import styles from './Header.module.css';
 
@@ -12,25 +14,34 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Container>
-        <Row className={styles.row}>
-          <Column defaultSize={4} xs={10} sm={10} md={6} className={styles.title}>
+        <div className={styles.row}>
+          <div className={styles.title}>
             <CompanyLogo />
-          </Column>
-          <Column defaultSize={4} xs={0} sm={0} md={0} className={styles.links}>
+          </div>
+          <div className={styles.links}>
             <Link href="/features">Features</Link>
             <Link href="/docs">Docs</Link>
             <Link href="/community">Community</Link>
             <Link href="/pricing">Pricing</Link>
-          </Column>
-          <Column xs={0} sm={0} md={0} className={styles.buttons}>
-            <Link href={REPO_URL} target="_blank">
-              <GitHub />
+          </div>
+          <div className={styles.buttons}>
+            <div className={styles.github}>
+              <Link href={REPO_URL} target="_blank">
+                <GitHub />
+                <Text>16.8k</Text>
+              </Link>
+            </div>
+            <Link href="https://cloud.umami.is/login" className={styles.signin}>
+              Sign in
             </Link>
-          </Column>
-          <Column defaultSize={0} xs={2} sm={2} md={6} className={styles.menu}>
+            <LinkButton href="https://cloud.umami.is/signup" variant="primary">
+              Get started
+            </LinkButton>
+          </div>
+          <div className={styles.menu}>
             <HamburgerButton />
-          </Column>
-        </Row>
+          </div>
+        </div>
       </Container>
     </header>
   );

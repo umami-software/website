@@ -5,12 +5,17 @@
   right: 0;
   height: 70px;
   border-bottom: 1px solid var(--base50);
-  backdrop-filter: blur(16px);
+  backdrop-filter: saturate(180%) blur(12px);
+  background: rgba(255,255,255,0.75);
   z-index: 1000;
 }
 
 .row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   height: 70px;
   border-radius: 20px;
   padding: 0 20px;
@@ -20,45 +25,88 @@
 }
 
 .header svg {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 
 .title {
+  position: absolute;
+  left: 0;
   display: flex;
   flex-direction: row;
   font-size: 24px;
   font-weight: 600;
 }
 
-.header .links {
+.links {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 48px;
   flex: 1;
-  font-weight: 600;
-  z-index: 3;
+  font-weight: 700;
   text-shadow: 1px 1px 0 #fff;
+  margin: 0 auto;
 }
 
-.header .buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-end;
-  z-index: 2;
-}
-
-.header .menu {
+.buttons {
+  position: absolute;
+  right: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  gap: 30px;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+}
+
+.github a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
 }
 
 html:not([data-scroll='0']) .header {
   transition: all linear 0.6s;
   border-bottom: 1px solid var(--base300);
+}
+
+@media screen and (max-width: 1200px) {
+  .github {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .signin {
+    display: none;
+  }
+
+  .links {
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    justify-content: space-between;
+  }
+
+  .links, .buttons {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
 }

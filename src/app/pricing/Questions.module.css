@@ -1,0 +1,37 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.faq h1 {
+  text-align: center;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.answer {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  border-radius: 4px;
+  background: var(--base75);
+  line-height: 1.6rem;
+}
+
+.icon {
+  margin-right: 20px;
+}

@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.header h1 {
+  font-size: max(48px, min(5vw, 64px));
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  text-align: center;
+}
+
+.header p {
+  color: var(--base700);
+  font-size: max(14px, min(2vw, 16px));
+  font-weight: 400;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 700px;
+}
+
+.header p strong {
+  color: var(--base900);
+}

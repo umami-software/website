@@ -12,20 +12,14 @@ body {
   color: var(--base900);
   background: var(--base50);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-#__next {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  position: relative;
 }
 
 a,
@@ -39,18 +33,18 @@ a:hover {
   color: var(--primary400);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 20px 0;
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
 }
 
 main {
   flex: 1;
-  margin-top: 80px;
 }
 
 svg {
@@ -60,20 +54,6 @@ svg {
 
 button {
   cursor: pointer;
-}
-
-article header {
-  text-align: center;
-}
-
-article header h1 {
-  font-size: 48px;
-}
-
-article header p {
-  font-size: 18px;
-  padding: 0 20px;
-  margin-bottom: 60px;
 }
 
 pre {
@@ -111,22 +91,22 @@ pre code {
   padding: 0;
 }
 
-.markdown img {
+.docs {
+  color: var(--base800);
+}
+
+.docs h1 {
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.docs h2 {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.docs img {
   display: block;
   max-width: 100%;
   margin: 2rem auto;
-}
-
-.markdown article a {
-  color: #2680eb;
-}
-
-.markdown article h1 {
-  font-size: 36px;
-}
-
-@media screen and (max-width: 768px) {
-  article header h1 {
-    font-size: 2em;
-  }
 }
