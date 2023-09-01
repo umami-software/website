@@ -26,9 +26,9 @@
     "strictNullChecks": true,
     "baseUrl": "./src",
     "paths": {
+      "app/*": ["./app/*"],
       "assets/*": ["./assets/*"],
       "components/*": ["./components/*"],
-      "content/*": ["./content/*"],
       "lib/*": ["./lib/*"],
       "styles/*": ["./styles/*"]
     }

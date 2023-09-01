@@ -11,7 +11,7 @@ const versions = { v1, v2 };
 export default function Menu() {
   const pathname = usePathname();
   const query = useParams();
-  const menu = versions[pathname.includes('v1') ? 'v1' : 'v2'];
+  const menu = versions[pathname.includes('/v1/') ? 'v1' : 'v2'];
 
   return (
     <menu className={styles.menu}>

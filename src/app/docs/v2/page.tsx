@@ -1,8 +1,8 @@
 'use client';
-import Plans from '../../pricing/Plans';
-import Calculator from '../../pricing/Calculator';
-import Features from '../../pricing/Features';
-import Questions from '../../pricing/Questions';
+import Plans from 'app/pricing/Plans';
+import Calculator from 'app/pricing/Calculator';
+import Features from 'app/pricing/Features';
+import Questions from 'app/pricing/Questions';
 
 export default function PricingPage() {
   return (
