@@ -31,11 +31,19 @@ export default function Header() {
                 <Text>16.8k</Text>
               </Link>
             </div>
-            <Link href="https://cloud.umami.is/login" className={styles.signin}>
-              Sign in
+            <Link
+              href="https://cloud.umami.is/login?ref=header"
+              className={styles.login}
+              data-umami-event="login-button-header"
+            >
+              Log in
             </Link>
-            <LinkButton href="https://cloud.umami.is/signup" variant="primary">
-              Get started
+            <LinkButton
+              href="https://cloud.umami.is/signup?ref=header"
+              variant="primary"
+              data-umami-event="signup-button-header"
+            >
+              Sign up
             </LinkButton>
           </div>
           <div className={styles.menu}>

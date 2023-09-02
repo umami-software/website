@@ -12,12 +12,12 @@ export default function Hero() {
         </p>
         <div className={styles.buttons}>
           <LinkButton
-            href="https://cloud.umami.is/signup"
+            href="https://cloud.umami.is/signup?ref=hero"
             data-umami-event="get-started-button"
             variant="primary"
             size="lg"
           >
-            Start free trial
+            Get started
           </LinkButton>
           <LinkButton
             href="https://analytics.umami.is/share/LGazGOecbDtaIwDr/umami.is"

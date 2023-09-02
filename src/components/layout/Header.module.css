@@ -6,7 +6,7 @@
   height: 70px;
   border-bottom: 1px solid var(--base50);
   backdrop-filter: saturate(180%) blur(12px);
-  background: rgba(255,255,255,0.75);
+  background: rgba(255, 255, 255, 0.75);
   z-index: 1000;
 }
 
@@ -76,6 +76,10 @@
   font-weight: 700;
 }
 
+.login {
+  font-weight: 700;
+}
+
 html:not([data-scroll='0']) .header {
   transition: all linear 0.6s;
   border-bottom: 1px solid var(--base300);
@@ -88,7 +92,7 @@ html:not([data-scroll='0']) .header {
 }
 
 @media screen and (max-width: 992px) {
-  .signin {
+  .login {
     display: none;
   }
 
@@ -102,7 +106,8 @@ html:not([data-scroll='0']) .header {
     justify-content: space-between;
   }
 
-  .links, .buttons {
+  .links,
+  .buttons {
     display: none;
   }
 
