@@ -4,7 +4,7 @@ import Link from 'next/link';
 import CompanyLogo from 'components/common/CompanyLogo';
 import HamburgerButton from 'components/common/HamburgerButton';
 import LinkButton from 'components/common/LinkButton';
-import { REPO_URL } from 'lib/constants';
+import { GITHUB_STARS, REPO_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';
 import styles from './Header.module.css';
 
@@ -25,12 +25,10 @@ export default function Header() {
             <Link href="/pricing">Pricing</Link>
           </div>
           <div className={styles.buttons}>
-            <div className={styles.github}>
-              <Link href={REPO_URL} target="_blank">
-                <GitHub />
-                <Text>16.8k</Text>
-              </Link>
-            </div>
+            <Link href={REPO_URL} target="_blank" className={styles.github}>
+              <GitHub />
+              <Text>{GITHUB_STARS}</Text>
+            </Link>
             <Link
               href="https://cloud.umami.is/login?ref=header"
               className={styles.login}

@@ -68,15 +68,20 @@
   align-items: center;
 }
 
-.github a {
+.github {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: var(--font-size-sm);
+  font-size: 14px;
   font-weight: 700;
 }
 
+.github:hover svg {
+  fill: var(--primary400);
+}
+
 .login {
+  font-size: 14px;
   font-weight: 700;
 }
 

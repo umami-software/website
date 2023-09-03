@@ -2,6 +2,7 @@
 import ImageBlock from 'components/layout/ImageBlock';
 import styles from './Features.module.css';
 import TextBlock from 'components/layout/TextBlock';
+import GetStartedBanner from 'components/common/GetStartedBanner';
 
 const features = [
   {
@@ -80,16 +81,21 @@ const features = [
 
 export default function Features() {
   return (
-    <section className={styles.features}>
-      {features.map(({ name, description, image }) => (
-        <ImageBlock key={name} className={styles.feature}>
-          <TextBlock>
-            <h1>{name}</h1>
-            <p>{description}</p>
-          </TextBlock>
-          <div className={styles.image}>{image && <img src={image} alt={name} />}</div>
-        </ImageBlock>
-      ))}
-    </section>
+    <article>
+      <section className={styles.features}>
+        {features.map(({ name, description, image }) => (
+          <ImageBlock key={name} className={styles.feature}>
+            <TextBlock>
+              <h1>{name}</h1>
+              <p>{description}</p>
+            </TextBlock>
+            <div className={styles.image}>{image && <img src={image} alt={name} />}</div>
+          </ImageBlock>
+        ))}
+      </section>
+      <section>
+        <GetStartedBanner />
+      </section>
+    </article>
   );
 }

@@ -2,7 +2,7 @@
 import { Column, Row } from 'react-basics';
 import Hero from './Hero';
 import Statements from './Statements';
-import Stats from 'components/common/Stats';
+import Stats from 'components/common/GitHubStats';
 import GetStartedBanner from 'components/common/GetStartedBanner';
 import NewsletterSignup from 'components/common/NewsletterSignup';
 import React from 'react';
