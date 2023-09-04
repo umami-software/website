@@ -85,11 +85,17 @@
   font-weight: 700;
 }
 
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
 .menu {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   margin-top: 10px;
-  min-width: 600px;
   background: var(--base50);
   padding: 20px;
   border: 1px solid var(--border-color);
@@ -110,16 +116,27 @@
 }
 
 .menu header {
+  margin-left: 16px;
   font-size: 12px;
   font-weight: 700;
+  margin-bottom: 10px;
   text-transform: uppercase;
   color: var(--base900);
+}
+
+.menu a {
+  padding: 8px 16px;
+}
+
+.menu a:hover {
+  color: var(--base900);
+  background: var(--base75);
+  border-radius: var(--border-radius);
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   font-weight: 400;
 }
 

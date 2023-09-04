@@ -10,7 +10,7 @@ export default function Deploy() {
   return (
     <section>
       <SectionHeader>
-        <h1>Get started</h1>
+        <h1>Deploy in minutes</h1>
         <p>Choose the solution that is right for you.</p>
       </SectionHeader>
       <div className={styles.items}>

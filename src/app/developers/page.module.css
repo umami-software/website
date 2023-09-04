@@ -1,0 +1,4 @@
+.container {
+  display: grid;
+  gap: 80px;
+}

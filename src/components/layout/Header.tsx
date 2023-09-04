@@ -1,5 +1,5 @@
 'use client';
-import { Container, Popup, PopupTrigger, Text, useScroll } from 'react-basics';
+import { Container, Popup, PopupTrigger, Text, useScroll, Icon, Icons } from 'react-basics';
 import Link from 'next/link';
 import CompanyLogo from 'components/common/CompanyLogo';
 import HamburgerButton from 'components/common/HamburgerButton';
@@ -20,7 +20,12 @@ export default function Header() {
           </div>
           <nav className={styles.links}>
             <PopupTrigger action="hover">
-              <Text>Product</Text>
+              <div className={styles.dropdown}>
+                <Text>Product</Text>
+                <Icon>
+                  <Icons.ChevronDown />
+                </Icon>
+              </div>
               <Popup>{close => <ProductMenu onClose={close} />}</Popup>
             </PopupTrigger>
             <Link href="/docs">Docs</Link>

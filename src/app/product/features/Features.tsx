@@ -68,9 +68,9 @@ const features = [
       'The tracking script is tiny (only 2KB) and loads lightning fast. It will never slow down your site.',
   },
   {
-    name: 'Share data',
+    name: 'Easily share data',
     description:
-      'If you want to share your stats publicly, you can do so with a uniquely generated URL.',
+      'You can easily share your stats with others through a secure, uniquely generated URL.',
   },
   {
     name: 'Dark mode',

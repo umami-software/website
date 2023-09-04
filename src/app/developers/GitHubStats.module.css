@@ -12,14 +12,14 @@
 }
 
 .value {
-  font-size: 72px;
-  line-height: 80px;
+  font-size: max(48px, min(5vw, 64px));
   font-weight: 900;
   text-shadow: 5px 5px 1px #a8ccf7;
 }
 
 .label {
-  font-size: 24px;
+  color: var(--base700);
+  font-size: max(16px, min(2vw, 24px));
 }
 
 @media screen and (max-width: 992px) {

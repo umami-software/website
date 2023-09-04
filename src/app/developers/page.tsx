@@ -1,11 +1,13 @@
+'use client';
 import PageHeader from 'components/layout/PageHeader';
 import Community from './Community';
 import Deloy from './Deploy';
 import GitHubStats from 'app/developers/GitHubStats';
+import styles from './page.module.css';
 
 export default function DevelopersPage() {
   return (
-    <article>
+    <article className={styles.container}>
       <PageHeader>
         <h1>Developers</h1>
         <p>
