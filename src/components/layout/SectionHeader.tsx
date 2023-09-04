@@ -1,8 +1,8 @@
-import classNames from 'classnames';
-import styles from './TextBlock.module.css';
 import { HTMLAttributes, ReactNode } from 'react';
+import classNames from 'classnames';
+import styles from './SectionHeader.module.css';
 
-export default function TextBlock({
+export default function SectionHeader({
   children,
   className,
   ...props
@@ -11,7 +11,7 @@ export default function TextBlock({
   className?: string;
 } & HTMLAttributes<HTMLDivElement>) {
   return (
-    <div {...props} className={classNames(styles.text, className)}>
+    <div {...props} className={classNames(styles.header, className)}>
       {children}
     </div>
   );

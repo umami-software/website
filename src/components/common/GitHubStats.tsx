@@ -2,19 +2,19 @@
 import styles from './GitHubStats.module.css';
 import { GITHUB_STARS, GITHUB_CONTRIBUTORS, GITHUB_DOWNLOADS } from 'lib/constants';
 
-const gitHubStats = [
-  { name: 'Downloads', value: GITHUB_DOWNLOADS },
-  { name: 'GitHub stars', value: GITHUB_STARS },
-  { name: 'Contributors', value: GITHUB_CONTRIBUTORS },
+const stats = [
+  { label: 'Downloads', value: GITHUB_DOWNLOADS },
+  { label: 'GitHub stars', value: GITHUB_STARS },
+  { label: 'Contributors', value: GITHUB_CONTRIBUTORS },
 ];
 
-export default function Stats() {
+export default function GitHubStats() {
   return (
     <div className={styles.stats}>
-      {gitHubStats.map(({ name, value }) => (
-        <div key={name} className={styles.stat}>
-          <div className={styles.value}>{value}</div>
-          <div className={styles.name}>{name}</div>
+      {stats.map(({ label, value }) => (
+        <div key={label} className={styles.stat}>
+          <div className={styles.value}>{value}+</div>
+          <div className={styles.label}>{label}</div>
         </div>
       ))}
     </div>

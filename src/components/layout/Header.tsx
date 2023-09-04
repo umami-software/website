@@ -18,12 +18,12 @@ export default function Header() {
           <div className={styles.title}>
             <CompanyLogo />
           </div>
-          <div className={styles.links}>
-            <Link href="/features">Features</Link>
+          <nav className={styles.links}>
+            <Link href="/product/features">Features</Link>
             <Link href="/docs">Docs</Link>
-            <Link href="/community">Community</Link>
+            <Link href="/developers">Developers</Link>
             <Link href="/pricing">Pricing</Link>
-          </div>
+          </nav>
           <div className={styles.buttons}>
             <Link href={REPO_URL} target="_blank" className={styles.github}>
               <GitHub />
@@ -44,7 +44,7 @@ export default function Header() {
               Sign up
             </LinkButton>
           </div>
-          <div className={styles.menu}>
+          <div className={styles.hamburger}>
             <HamburgerButton />
           </div>
         </div>

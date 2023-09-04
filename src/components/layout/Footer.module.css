@@ -1,21 +1,28 @@
 .footer {
   font-size: 14px;
-  padding: 36px;
-  margin-top: 36px;
+  padding: 40px 0;
   border-top: 1px solid var(--base300);
   background: var(--base75);
+  margin-top: 60px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .col {
   margin-bottom: 20px;
 }
 
-.col h1 {
+.col header {
   font-size: 14px;
+  font-weight: 700;
 }
 
 .logo {
   padding-top: 10px;
+  min-height: 50px;
 }
 
 .links a {
@@ -23,16 +30,41 @@
   margin: 5px 0;
 }
 
+.bottom {
+  grid-area: 3 / 1 / 4;
+}
+
 .copy {
   display: flex;
   align-items: center;
   gap: 30px;
   font-size: 12px;
-  padding: 20px 0;
+  margin-top: 20px;
 }
 
 .legal {
   font-size: 12px;
   display: flex;
   gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    grid-area: 1 / 1 / 2 / 5;
+  }
+
+  .columns {
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .logo {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

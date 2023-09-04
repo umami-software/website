@@ -1,11 +1,11 @@
 'use client';
-import { Button, Row, Column } from 'react-basics';
+import LinkButton from 'components/common/LinkButton';
+import SectionHeader from 'components/layout/SectionHeader';
+import { REPO_URL, DISCORD_URL, TWITTER_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
 import Twitter from 'assets/twitter.svg';
 import styles from './Community.module.css';
-import { REPO_URL, DISCORD_URL, TWITTER_URL } from 'lib/constants';
-import Link from 'next/link';
 
 const items = [
   {
@@ -31,22 +31,24 @@ const items = [
 
 export default function Community() {
   return (
-    <Row className={styles.community}>
-      {items.map(({ name, description, url, icon }) => (
-        <Column key={name} xs={12} sm={12} md={6} lg={4} xl={4}>
-          <div className={styles.block}>
-            <h2>
+    <section>
+      <SectionHeader>
+        <h1>Community</h1>
+        <p>Get help with issues, discuss ideas and share your feedback.</p>
+      </SectionHeader>
+      <div className={styles.items}>
+        {items.map(({ name, description, url, icon }) => (
+          <div key={name} className={styles.item}>
+            <header>
               {icon} {name}
-            </h2>
+            </header>
             <p>{description}</p>
-            <Link href={url} target="_blank">
-              <Button variant="primary" data-umami-event={`community-${name}`}>
-                Explore
-              </Button>
-            </Link>
+            <LinkButton href={url} target="_blank" data-umami-event={`community-${name}`}>
+              Explore
+            </LinkButton>
           </div>
-        </Column>
-      ))}
-    </Row>
+        ))}
+      </div>
+    </section>
   );
 }

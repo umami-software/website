@@ -24,7 +24,7 @@ const plans = [
         From <strong>$9</strong> / month
       </>
     ),
-    description: 'Between 100K-50M monthly events',
+    description: '100K — 50M monthly events',
     features: [
       'Unlimited websites',
       'Unlimited team members',

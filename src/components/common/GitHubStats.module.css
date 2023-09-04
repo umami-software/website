@@ -1,8 +1,6 @@
 .stats {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   padding: 40px;
   background-color: var(--base75);
@@ -11,7 +9,6 @@
 
 .stat {
   text-align: center;
-  margin: 48px 0;
 }
 
 .value {
@@ -21,6 +18,12 @@
   text-shadow: 5px 5px 1px #a8ccf7;
 }
 
-.name {
+.label {
   font-size: 24px;
+}
+
+@media screen and (max-width: 992px) {
+  .stats {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }

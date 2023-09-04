@@ -28,7 +28,7 @@
   border-radius: 10px;
   background: var(--base75);
   margin: 0 auto;
-  border: 1px solid var(--primary400);
+  border: 2px solid var(--primary400);
   width: 100%;
 }
 

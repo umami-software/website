@@ -8,20 +8,16 @@ import styles from './HamburgerButton.module.css';
 
 const menuItems = [
   {
-    label: 'Home',
-    value: '/',
-  },
-  {
-    label: 'Features',
-    value: '/features',
+    label: 'Product',
+    value: '/product/features',
   },
   {
     label: 'Docs',
     value: '/docs',
   },
   {
-    label: 'Community',
-    value: '/community',
+    label: 'Developers',
+    value: '/developers',
   },
   {
     label: 'Pricing',

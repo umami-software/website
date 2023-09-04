@@ -1,5 +1,5 @@
 'use client';
-import { Row, Column, Container } from 'react-basics';
+import { Container } from 'react-basics';
 import Link from 'next/link';
 import classNames from 'classnames';
 import CompanyLogo from 'components/common/CompanyLogo';
@@ -47,19 +47,13 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Container>
-        <Row>
-          <Column className={styles.logo} xs={12} sm={12} md={12}>
+        <div className={styles.columns}>
+          <div className={classNames(styles.col, styles.logo)}>
             <CompanyLogo />
-          </Column>
+          </div>
           {data.map(({ title, items }) => (
-            <Column
-              key={title}
-              xs={6}
-              sm={6}
-              md={3}
-              className={classNames(styles.col, styles.links)}
-            >
-              <h1>{title}</h1>
+            <div key={title} className={classNames(styles.col, styles.links)}>
+              <header>{title}</header>
               {items.map(({ text, href }) => (
                 <Link
                   key={text}
@@ -69,17 +63,15 @@ export default function Footer() {
                   {text}
                 </Link>
               ))}
-            </Column>
-          ))}
-        </Row>
-        <Row>
-          <Column>
-            <SocialMedia />
-            <div className={styles.copy}>
-              <div>&copy; 2023 Umami Software, Inc.</div>
             </div>
-          </Column>
-        </Row>
+          ))}
+        </div>
+        <div className={styles.bottom}>
+          <SocialMedia />
+          <div className={styles.copy}>
+            <div>&copy; 2023 Umami Software, Inc.</div>
+          </div>
+        </div>
       </Container>
     </footer>
   );

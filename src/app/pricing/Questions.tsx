@@ -1,7 +1,8 @@
 'use client';
-import { Icon, Icons } from 'react-basics';
-import styles from './Questions.module.css';
 import { useState } from 'react';
+import { Icon, Icons } from 'react-basics';
+import SectionHeader from 'components/layout/SectionHeader';
+import styles from './Questions.module.css';
 
 const questions = [
   {
@@ -35,8 +36,10 @@ const questions = [
 
 export default function Questions() {
   return (
-    <div className={styles.faq}>
-      <h1>Frequently Asked Questions</h1>
+    <>
+      <SectionHeader>
+        <h1>Frequently asked questions</h1>
+      </SectionHeader>
       <div className={styles.questions}>
         {questions.map(({ question, answer }) => {
           return (
@@ -46,7 +49,7 @@ export default function Questions() {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
 

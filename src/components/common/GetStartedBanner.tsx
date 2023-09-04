@@ -4,7 +4,7 @@ import LinkButton from 'components/common/LinkButton';
 export default function GetStartedBanner() {
   return (
     <div className={styles.banner}>
-      <h1>Are you ready for better analytics?</h1>
+      <div className={styles.text}>Are you ready for better analytics?</div>
       <div className={styles.buttons}>
         <LinkButton
           href="http://cloud.umami.is/signup?ref=get-started-banner"

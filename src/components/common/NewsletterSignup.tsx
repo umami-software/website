@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Button, Column, Row, TextField } from 'react-basics';
+import { Button, TextField } from 'react-basics';
 import TextBlock from 'components/layout/TextBlock';
 import CheckCircle from 'assets/check-circle.svg';
 import styles from './NewsletterSignup.module.css';
@@ -32,16 +32,16 @@ export default function NewsletterSignup() {
   };
 
   return (
-    <Row className={styles.container}>
-      <Column defaultSize={8} xs={12} sm={12} md={12}>
+    <div className={styles.container}>
+      <div>
         <TextBlock>
           <h1>Don't miss out!</h1>
           <p>
             Join the Umami newsletter to stay up to date on the latest news, features and updates.
           </p>
         </TextBlock>
-      </Column>
-      <Column defaultSize={4} xs={12} sm={12} md={12} className={styles.form}>
+      </div>
+      <div className={styles.form}>
         {!submitted && (
           <div className={styles.input}>
             <TextField
@@ -61,7 +61,7 @@ export default function NewsletterSignup() {
             <span>Thank you!</span>
           </div>
         )}
-      </Column>
-    </Row>
+      </div>
+    </div>
   );
 }

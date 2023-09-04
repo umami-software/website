@@ -1,19 +1,8 @@
-.faq {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 60px;
-}
-
-.faq h1 {
-  text-align: center;
-}
-
 .questions {
   display: flex;
   flex-direction: column;
+  width: 900px;
+  margin: 0 auto 60px;
 }
 
 .question {
