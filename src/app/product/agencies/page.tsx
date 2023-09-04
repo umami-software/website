@@ -34,7 +34,7 @@ export default function AgenciesPage() {
             <TextBlock>
               <h1>Maximize value, minimize time</h1>
               <p>
-                Umami helps you onboard clients quickly and reduces time-tovalue, protecting agency
+                Umami helps you onboard clients quickly and reduces time-to-value, protecting agency
                 margins. Implement Umami in just a few clicks and get key metrics and insights in a
                 single page. Shareable links and reports save costly time configuring, leaving you
                 more time for clients.

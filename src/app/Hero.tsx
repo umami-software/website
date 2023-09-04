@@ -1,6 +1,7 @@
 import styles from './Hero.module.css';
 import LinkButton from 'components/common/LinkButton';
 import TextBlock from 'components/layout/TextBlock';
+import { CLOUD_URL } from 'lib/constants';
 
 export default function Hero() {
   return (
@@ -14,7 +15,7 @@ export default function Hero() {
       </TextBlock>
       <div className={styles.buttons}>
         <LinkButton
-          href="https://cloud.umami.is/signup?ref=hero"
+          href={`${CLOUD_URL}/signup?ref=hero`}
           data-umami-event="get-started-button"
           variant="primary"
           size="lg"

@@ -3,6 +3,7 @@ import { Button } from 'react-basics';
 import Checkmark from 'assets/checkmark.svg';
 import Link from 'next/link';
 import styles from './Plans.module.css';
+import { CLOUD_URL } from 'lib/constants';
 
 const plans = [
   {
@@ -14,7 +15,7 @@ const plans = [
     ),
     description: 'Up to 10K monthly events',
     features: ['Up to 3 websites', '1 year data retention', 'Community support'],
-    url: 'https://cloud.umami.is/signup',
+    url: `${CLOUD_URL}/signup?ref=pricing&plan=hobby`,
     button: 'Get started',
   },
   {
@@ -31,7 +32,7 @@ const plans = [
       '7 year data retention',
       'Email support',
     ],
-    url: 'https://cloud.umami.is/signup',
+    url: `${CLOUD_URL}/signup?ref=pricing&plan=pro`,
     button: 'Try 14-day free trial',
   },
   {

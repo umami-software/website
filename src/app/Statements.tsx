@@ -3,7 +3,6 @@ import styles from './Statements.module.css';
 import Lock from 'assets/lock.svg';
 import Shield from 'assets/shield.svg';
 import Analytics from 'assets/analytics.svg';
-import OpenSource from 'assets/open-source.svg';
 import ImageBlock from 'components/layout/ImageBlock';
 import TextBlock from 'components/layout/TextBlock';
 
@@ -33,14 +32,6 @@ const statements = [
     users across websites, and is GDPR compliant.
     `,
     image: <Lock />,
-  },
-  {
-    title: 'Open source',
-    description: `
-    Umami is dedicated to open source development. Place your confidence in a product that
-    is fully transparent, battle-tested and community supported.
-    `,
-    image: <OpenSource />,
   },
 ];
 

@@ -1,4 +1,5 @@
 import styles from './CloudBanner.module.css';
+import { CLOUD_URL } from 'lib/constants';
 
 export default function CloudBanner() {
   return (
@@ -9,7 +10,7 @@ export default function CloudBanner() {
       </p>
       <p>
         You can sign up for free at{' '}
-        <a href="https://cloud.umami.is/signup?ref=docs">
+        <a href={`${CLOUD_URL}/signup?ref=docs`}>
           <strong>cloud.umami.is</strong>
         </a>
         .

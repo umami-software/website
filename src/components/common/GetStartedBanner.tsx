@@ -1,5 +1,6 @@
 import styles from './GetStartedBanner.module.css';
 import LinkButton from 'components/common/LinkButton';
+import { CLOUD_URL } from 'lib/constants';
 
 export default function GetStartedBanner() {
   return (
@@ -7,7 +8,7 @@ export default function GetStartedBanner() {
       <div className={styles.text}>Are you ready for better analytics?</div>
       <div className={styles.buttons}>
         <LinkButton
-          href="http://cloud.umami.is/signup?ref=get-started-banner"
+          href={`${CLOUD_URL}/signup?ref=get-started-banner`}
           data-umami-event="get-started-banner-button"
           variant="primary"
           size="lg"

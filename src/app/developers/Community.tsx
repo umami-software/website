@@ -43,7 +43,12 @@ export default function Community() {
               {icon} {name}
             </header>
             <p>{description}</p>
-            <LinkButton href={url} target="_blank" data-umami-event={`community-${name}`}>
+            <LinkButton
+              href={url}
+              target="_blank"
+              variant="secondary"
+              data-umami-event={`community-${name}`}
+            >
               Explore
             </LinkButton>
           </div>

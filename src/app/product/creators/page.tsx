@@ -2,9 +2,9 @@
 import ImageBlock from 'components/layout/ImageBlock';
 import TextBlock from 'components/layout/TextBlock';
 import GetStartedBanner from 'components/common/GetStartedBanner';
-import styles from './page.module.css';
 import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
+import styles from './page.module.css';
 
 export default function AgenciesPage() {
   return (
@@ -13,19 +13,17 @@ export default function AgenciesPage() {
         <ImageBlock className={styles.header}>
           <TextBlock size="xl" align="center">
             <h1>
-              Everything busy <span className={styles.highlight}>marketers</span> need and nothing
-              you don’t.
+              Get quick, easy insights that <span className={styles.highlight}>creators</span> need.
             </h1>
             <p>
-              Umami is a simple to use, privacy-focused alternative to Google Analytics that
-              delivers your key website metrics and insights in an easy-to-understand interface
-              without distraction.
+              Umami is a simple to use, privacy-focused alternative to Google Analytics that lets
+              you know measure the engagement and stickyness of your website.
             </p>
-            <LinkButton href={`${CLOUD_URL}/signup?ref=marketers`} size="lg" variant="primary">
+            <LinkButton href={`${CLOUD_URL}/signup?ref=creators`} size="lg" variant="primary">
               Start free trial
             </LinkButton>
           </TextBlock>
-          <img src="/images/marketing.jpg" alt="" className={styles.image} />
+          <img src="/images/creators.jpg" alt="" className={styles.image} />
         </ImageBlock>
       </section>
       <section>
@@ -60,7 +58,7 @@ export default function AgenciesPage() {
               </p>
             </TextBlock>
           </div>
-          <img src="/images/v2/screenshot.png" alt="" />
+          <img src="/images/v2/screenshot.png" />
         </ImageBlock>
       </section>
       <GetStartedBanner />

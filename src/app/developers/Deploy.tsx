@@ -4,6 +4,7 @@ import LinkButton from 'components/common/LinkButton';
 import Code from 'assets/code.svg';
 import Cloud from 'assets/cloud.svg';
 import styles from './Deploy.module.css';
+import { CLOUD_URL } from 'lib/constants';
 
 export default function Deploy() {
   return (
@@ -25,7 +26,7 @@ export default function Deploy() {
           <Cloud />
           <header>Umami Cloud</header>
           <p>High performance, fully managed Umami service.</p>
-          <LinkButton href="https://cloud.umami.is/signup?ref=developers" variant="primary">
+          <LinkButton href={`${CLOUD_URL}/signup?ref=developers`} variant="primary">
             Start free trial
           </LinkButton>
         </div>
