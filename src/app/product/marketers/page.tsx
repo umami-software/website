@@ -52,6 +52,13 @@ export default function AgenciesPage() {
                 metric such as browser, OS, and country.
               </p>
             </TextBlock>
+            <TextBlock>
+              <h1>Intuitive reporting</h1>
+              <p>
+                Easy out-of-the-box reporting delivers insights quickly in a couple clicks.
+                Understand website performance and visitor behavior at a glance.
+              </p>
+            </TextBlock>
           </div>
           <img src="/images/v2/screenshot.png" width="50" />
         </ImageBlock>
