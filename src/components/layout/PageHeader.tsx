@@ -1,18 +1,22 @@
-import { HTMLAttributes, ReactNode } from 'react';
-import classNames from 'classnames';
 import styles from './PageHeader.module.css';
+import TextBlock, { TextBlockProps } from 'components/layout/TextBlock';
+import classNames from 'classnames';
 
 export default function PageHeader({
   children,
   className,
+  size = 'lg',
+  align = 'center',
   ...props
-}: {
-  children: ReactNode;
-  className?: string;
-} & HTMLAttributes<HTMLDivElement>) {
+}: TextBlockProps) {
   return (
-    <header {...props} className={classNames(styles.header, className)}>
+    <TextBlock
+      {...props}
+      className={classNames(styles.header, className)}
+      size={size}
+      align={align}
+    >
       {children}
-    </header>
+    </TextBlock>
   );
 }

@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  gap: 80px;
+}
+
+.highlight {
+  color: #2680eb;
+}
+
+.header {
+  margin-top: 60px;
+  gap: 30px;
+}
+
+.header img {
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
+  transform: rotate(-6deg);
+}
+
+.header a {
+  display: inline-block;
+}
+
+.body > div {
+  display: grid;
+  gap: 60px;
+}
+
+.body img {
+  max-width: 500px;
+}

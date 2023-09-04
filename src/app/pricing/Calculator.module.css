@@ -7,7 +7,7 @@
   z-index: 1;
 }
 
-.calculator::before {
+.calculator:before {
   content: '';
   position: absolute;
   top: 0;

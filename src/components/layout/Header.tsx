@@ -1,5 +1,5 @@
 'use client';
-import { Container, Text, useScroll } from 'react-basics';
+import { Container, Popup, PopupTrigger, Text, useScroll } from 'react-basics';
 import Link from 'next/link';
 import CompanyLogo from 'components/common/CompanyLogo';
 import HamburgerButton from 'components/common/HamburgerButton';
@@ -19,7 +19,10 @@ export default function Header() {
             <CompanyLogo />
           </div>
           <nav className={styles.links}>
-            <Link href="/product/features">Features</Link>
+            <PopupTrigger action="hover">
+              <Text>Product</Text>
+              <Popup>{close => <ProductMenu onClose={close} />}</Popup>
+            </PopupTrigger>
             <Link href="/docs">Docs</Link>
             <Link href="/developers">Developers</Link>
             <Link href="/pricing">Pricing</Link>
@@ -52,3 +55,20 @@ export default function Header() {
     </header>
   );
 }
+
+const ProductMenu = ({ onClose }) => {
+  return (
+    <nav className={styles.menu} onClick={onClose}>
+      <div className={styles.column}>
+        <header>Analytics</header>
+        <Link href="/product/features">Features</Link>
+        <Link href="/docs/getting-started">Documentation</Link>
+      </div>
+      <div className={styles.column}>
+        <header>Use cases</header>
+        <Link href="/product/marketers">Marketers</Link>
+        <Link href="/product/agencies">Agencies</Link>
+      </div>
+    </nav>
+  );
+};

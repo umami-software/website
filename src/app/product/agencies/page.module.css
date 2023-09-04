@@ -1,0 +1,44 @@
+.container {
+  display: grid;
+  gap: 80px;
+}
+
+.highlight {
+  color: rebeccapurple !important;
+}
+
+.header {
+  margin-top: 60px;
+  gap: 30px;
+}
+
+.header img {
+  border-radius: 20px;
+  max-width: 600px;
+  margin: auto;
+  transform: rotate(6deg);
+}
+
+.header a {
+  display: inline-block;
+}
+
+.body {
+  gap: 30px;
+}
+
+.body img {
+  max-width: 500px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  gap: 10px;
+}
+
+.services > div {
+  font-size: 24px;
+  padding: 20px;
+}
