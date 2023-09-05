@@ -50,7 +50,7 @@ export default function MarketersPage() {
               you don’t.
             </h1>
             <p>
-              Umami lets you delivers your key website metrics and insights in an easy-to-understand
+              Umami lets you deliver your key website metrics and insights in an easy-to-understand
               interface without distraction.
             </p>
             <LinkButton href={`${CLOUD_URL}/signup?ref=marketers`} size="lg" variant="primary">

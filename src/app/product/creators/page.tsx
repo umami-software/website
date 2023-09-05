@@ -47,8 +47,8 @@ export default function CreatorsPage() {
               Get quick, easy insights that <span className={styles.highlight}>creators</span> need.
             </h1>
             <p>
-              Umami that lets you measure the engagement and stickyness of your website. Discover
-              what works and what doesn't.
+              Umami lets you measure the engagement and stickyness of your website. Discover what
+              works and what doesn't.
             </p>
             <LinkButton href={`${CLOUD_URL}/signup?ref=creators`} size="lg" variant="primary">
               Start free trial
