@@ -9,7 +9,7 @@ import styles from './HamburgerButton.module.css';
 const menuItems = [
   {
     label: 'Product',
-    value: '/product/features',
+    value: '/features',
   },
   {
     label: 'Docs',

@@ -18,10 +18,11 @@
 }
 
 .banner a,
+.banner a:active,
 .banner a:visited {
-  color: var(--light50);
+  color: var(--primary400);
 }
 
 .banner a:hover {
-  color: var(--primary400);
+  color: var(--primary500);
 }

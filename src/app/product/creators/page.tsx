@@ -5,8 +5,39 @@ import GetStartedBanner from 'components/common/GetStartedBanner';
 import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
 import styles from './page.module.css';
+import ScrollBlock from 'components/layout/ScrollBlock';
 
-export default function AgenciesPage() {
+const items = [
+  {
+    title: 'Simple analytics',
+    description:
+      'Umami measures just the important metrics that you care about and everything is displayed on a single, easy to browse page.',
+    image: '/images/v1/feature-website-stats.png',
+  },
+  {
+    title: 'Visitor insights',
+    description: `Get detailed breakdowns about your visitors including what browser, OS and device they used.`,
+    image: '/images/v1/feature-session-stats.png',
+  },
+  {
+    title: 'Realtime data',
+    description:
+      'Get a realtime view of your current website traffic. See the exact pages where your visitors are landing.',
+    image: '/images/v1/feature-realtime.png',
+  },
+  {
+    title: 'Unlimited websites',
+    description: `Umami is able to track an unlimited number of websites from a single installation. You can even track subdomains and individual URLs.`,
+    image: '/images/v1/feature-websites.png',
+  },
+  {
+    title: 'Bypass ad-blockers',
+    description:
+      'Umami is hosted by you under your own domain so you can reliably avoid ad-blockers unlike Google Analytics.',
+  },
+];
+
+export default function CreatorsPage() {
   return (
     <article className={styles.container}>
       <section>
@@ -16,8 +47,8 @@ export default function AgenciesPage() {
               Get quick, easy insights that <span className={styles.highlight}>creators</span> need.
             </h1>
             <p>
-              Umami is a simple to use, privacy-focused alternative to Google Analytics that lets
-              you know measure the engagement and stickyness of your website.
+              Umami that lets you measure the engagement and stickyness of your website. Discover
+              what works and what doesn't.
             </p>
             <LinkButton href={`${CLOUD_URL}/signup?ref=creators`} size="lg" variant="primary">
               Start free trial
@@ -26,41 +57,7 @@ export default function AgenciesPage() {
           <img src="/images/creators.jpg" alt="" className={styles.image} />
         </ImageBlock>
       </section>
-      <section>
-        <ImageBlock className={styles.body}>
-          <div>
-            <TextBlock>
-              <h1>Straightforward analytics</h1>
-              <p>
-                Umami measures the important metrics you care about and everything is displayed ona
-                single, easy to browse page.
-              </p>
-            </TextBlock>
-            <TextBlock>
-              <h1>Key visitor insights</h1>
-              <p>
-                Get detailed breakdowns about your visitors including what browser, OS, and device
-                they used.
-              </p>
-            </TextBlock>
-            <TextBlock>
-              <h1>Powerful filters</h1>
-              <p>
-                Dive deeper into your data using easy-to-apply filters. Segment your users by any
-                metric such as browser, OS, and country.
-              </p>
-            </TextBlock>
-            <TextBlock>
-              <h1>Intuitive reporting</h1>
-              <p>
-                Easy out-of-the-box reporting delivers insights quickly in a couple clicks.
-                Understand website performance and visitor behavior at a glance.
-              </p>
-            </TextBlock>
-          </div>
-          <img src="/images/v2/screenshot.png" />
-        </ImageBlock>
-      </section>
+      <ScrollBlock items={items} />
       <GetStartedBanner />
     </article>
   );

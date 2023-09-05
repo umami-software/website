@@ -6,7 +6,7 @@
 
 .block {
   top: 80px;
-  gap: 30px;
+  gap: 60px;
   min-height: 600px;
   background-color: var(--base50);
 }

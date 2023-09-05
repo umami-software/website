@@ -66,7 +66,7 @@ const ProductMenu = ({ onClose }) => {
     <nav className={styles.menu} onClick={onClose}>
       <div className={styles.column}>
         <header>Analytics</header>
-        <Link href="/product/features">Features</Link>
+        <Link href="/features">Features</Link>
         <Link href="/docs/getting-started">Documentation</Link>
       </div>
       <div className={styles.column}>
