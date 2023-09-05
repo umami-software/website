@@ -26,15 +26,21 @@
   border-left: 1px solid var(--base600);
 }
 
+.menu .item a,
+.menu .item a:visited,
+.menu .item a:active {
+  color: var(--base700);
+}
+
+.menu .item a:hover {
+  color: var(--primary400);
+}
+
 .item.selected {
   font-weight: 600;
   border-left: 1px solid var(--primary400);
 }
 
-.item a {
-  color: var(--base700);
-}
-
-.item.selected a {
+.menu .item.selected a {
   color: var(--primary400);
 }

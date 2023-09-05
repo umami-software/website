@@ -1,5 +1,5 @@
-import Features from './Features';
 import PageHeader from 'components/layout/PageHeader';
+import Features from './Features';
 
 export default function FeaturesPage() {
   return (

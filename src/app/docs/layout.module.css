@@ -1,5 +1,6 @@
 .docs {
-  display: flex;
+  display: grid;
+  grid-template-columns: 320px 1fr;
   color: var(--base800);
 }
 
@@ -19,20 +20,10 @@
   margin: 2rem auto;
 }
 
-.nav {
-  min-width: 320px;
+.docs a {
+  color: var(--primary400);
 }
 
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-  border-radius: 2px;
-}
-
-.links a {
-  display: block;
-  font-size: 12px;
-  font-weight: 700;
-  text-align: center;
+.docs a:hover {
+  color: var(--primary500);
 }

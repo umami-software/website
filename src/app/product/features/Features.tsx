@@ -1,10 +1,8 @@
 'use client';
-import ImageBlock from 'components/layout/ImageBlock';
-import styles from './Features.module.css';
-import TextBlock from 'components/layout/TextBlock';
+import ScrollBlock from 'components/layout/ScrollBlock';
 import GetStartedBanner from 'components/common/GetStartedBanner';
 
-const features = [
+const items = [
   {
     name: 'Simple analytics',
     description:
@@ -82,17 +80,7 @@ const features = [
 export default function Features() {
   return (
     <article>
-      <section className={styles.features}>
-        {features.map(({ name, description, image }) => (
-          <ImageBlock key={name} className={styles.feature}>
-            <TextBlock>
-              <h1>{name}</h1>
-              <p>{description}</p>
-            </TextBlock>
-            <div className={styles.image}>{image && <img src={image} alt={name} />}</div>
-          </ImageBlock>
-        ))}
-      </section>
+      <ScrollBlock items={items} />
       <section>
         <GetStartedBanner />
       </section>

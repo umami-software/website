@@ -1,17 +1,17 @@
-.features {
+.section {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.feature {
+.block {
   top: 80px;
   gap: 30px;
   min-height: 600px;
   background-color: var(--base50);
 }
 
-.feature:not(:first-child):after {
+.block:not(:first-child):after {
   content: '';
   position: absolute;
   height: 200px;
@@ -21,7 +21,7 @@
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
 }
 
-.feature img {
+.block img {
   max-width: 100%;
   margin: 40px 0;
 }
