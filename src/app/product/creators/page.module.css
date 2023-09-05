@@ -16,7 +16,7 @@
   border-radius: 20px;
   max-width: 400px;
   margin: auto;
-  transform: rotate(-4deg);
+  transform: rotate(4deg);
 }
 
 .header a {

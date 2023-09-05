@@ -70,7 +70,7 @@ const ProductMenu = ({ onClose }) => {
         <Link href="/docs/getting-started">Documentation</Link>
       </div>
       <div className={styles.column}>
-        <header>Made for</header>
+        <header>Used by</header>
         <Link href="/product/creators">Creators</Link>
         <Link href="/product/marketers">Marketers</Link>
         <Link href="/product/agencies">Agencies</Link>
