@@ -7,7 +7,7 @@
 .block {
   top: 80px;
   gap: 60px;
-  min-height: 600px;
+  min-height: 700px;
   background-color: var(--base50);
 }
 
@@ -21,7 +21,17 @@
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
 }
 
-.block img {
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
   max-width: 100%;
-  margin: 40px 0;
+}
+
+.image svg {
+  width: 160px;
+  height: 160px;
 }

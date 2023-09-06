@@ -15,8 +15,8 @@ export default function DevelopersPage() {
           that is fully transparent, secure and available to everyone.
         </p>
       </PageHeader>
-      <GitHubStats />
       <Deloy />
+      <GitHubStats />
       <Community />
     </article>
   );
