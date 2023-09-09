@@ -7,7 +7,7 @@ import styles from './Features.module.css';
 const features = [
   {
     label: 'Data',
-    items: [['Ingest (included)', '10K', '100K to 100M', 'Custom']],
+    items: [['Ingest (included)', '10K', '100K to 50M', 'Custom']],
   },
   {
     label: 'Analytics',
