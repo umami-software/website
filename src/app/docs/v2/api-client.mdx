@@ -2,7 +2,7 @@
 
 ### Overview
 
-Umami API Client is built in TypeScript and contains functions to call every API endpoint available Umami.
+Umami API Client is built in TypeScript and contains functions to call every API endpoint available in Umami.
 
 ### Requirements
 
@@ -46,10 +46,12 @@ const { ok, data, status, error } = await client.getWebsites();
 The result will come back in the following format.
 
 ```
-ok: boolean;
-status: number;
-data?: T;
-error?: any;
+{
+  ok: boolean;
+  status: number;
+  data?: T;
+  error?: any;
+}
 ```
 
 ### API Client function mapping

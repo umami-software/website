@@ -4,7 +4,13 @@
     "es2020": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier", "prettier/react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:mdx/recommended",
+    "prettier",
+    "prettier/react"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -22,5 +28,8 @@
   "globals": {
     "React": "writable"
   },
-  "ignorePatterns": ["public/**/*.*"]
+  "ignorePatterns": ["public/**/*.*"],
+  "settings": {
+    "mdx/code-blocks": false
+  }
 }
