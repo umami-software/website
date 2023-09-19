@@ -203,6 +203,10 @@
       {
         "label": "Running on Forge",
         "url": "/docs/running-on-forge"
+      },
+      {
+        "label": "Running on Fly.io",
+        "url": "/docs/running-on-fly-io"
       }
     ]
   }
