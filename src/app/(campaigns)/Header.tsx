@@ -1,8 +1,8 @@
 'use client';
 import CompanyLogo from 'components/common/CompanyLogo';
-import styles from './Header.module.css';
 import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
+import styles from './Header.module.css';
 
 export default function Header() {
   return (

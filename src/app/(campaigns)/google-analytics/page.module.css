@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  gap: 60px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.features > div {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.features ul {
+  list-style: none;
+}
