@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import Header from 'components/layout/Header';
-import Main from 'components/layout/Main';
-import Footer from 'components/layout/Footer';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';

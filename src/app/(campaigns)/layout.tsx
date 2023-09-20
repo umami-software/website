@@ -7,6 +7,9 @@ import 'react-basics/dist/styles.css';
 import 'styles/variables.css';
 import 'styles/index.css';
 import React from 'react';
+import Header from 'app/(campaigns)/Header';
+import Footer from 'app/(campaigns)/Footer';
+import styles from './layout.module.css';
 
 export default function CampaignLayout({ children }) {
   return (
@@ -34,8 +37,10 @@ export default function CampaignLayout({ children }) {
           </>
         )}
       </head>
-      <body>
+      <body className={styles.body}>
+        <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

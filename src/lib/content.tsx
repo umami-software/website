@@ -97,3 +97,11 @@ export const Blocks = {
     image: <Lock />,
   },
 };
+
+export const Features = {
+  visitors: {
+    title: 'Visitors',
+    description: '',
+    image: Blocks,
+  },
+};

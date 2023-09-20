@@ -10,3 +10,8 @@
 .logo a:hover {
   color: var(--base900);
 }
+
+.logo svg {
+  width: 16px;
+  height: 16px;
+}

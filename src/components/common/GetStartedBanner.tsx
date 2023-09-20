@@ -1,3 +1,4 @@
+'use client';
 import styles from './GetStartedBanner.module.css';
 import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
