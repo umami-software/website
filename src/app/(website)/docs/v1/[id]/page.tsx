@@ -1,6 +1,6 @@
 'use client';
 import dynamic from 'next/dynamic';
-import NotFound from 'app/not-found';
+import NotFound from 'app/(website)/not-found';
 
 async function loadContent(id) {
   return dynamic(() => import(`../${id}.mdx`).catch(() => NotFound));

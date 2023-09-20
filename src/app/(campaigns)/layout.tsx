@@ -21,7 +21,17 @@ export default function CampaignLayout({ children }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         {process.env.NODE_ENV === 'production' && (
-          <script async data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41" src="/a/script.js" />
+          <>
+            <script
+              async
+              data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
+              src="/a/script.js"
+            />
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11312352810"></script>
+            <script>
+              {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'AW-11312352810');`}
+            </script>
+          </>
         )}
       </head>
       <body>
@@ -32,5 +42,5 @@ export default function CampaignLayout({ children }) {
 }
 
 export const metadata: Metadata = {
-  title: 'umami',
+  title: 'Umami vs. Google Analytics',
 };

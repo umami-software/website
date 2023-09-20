@@ -2,7 +2,7 @@
 import PageHeader from 'components/layout/PageHeader';
 import Community from './Community';
 import Deloy from './Deploy';
-import GitHubStats from 'app/developers/GitHubStats';
+import GitHubStats from 'app/(website)/developers/GitHubStats';
 import styles from './page.module.css';
 
 export default function DevelopersPage() {
