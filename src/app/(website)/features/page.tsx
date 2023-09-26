@@ -2,9 +2,23 @@
 import PageHeader from 'components/layout/PageHeader';
 import ScrollBlock from 'components/layout/ScrollBlock';
 import GetStartedBanner from 'components/common/GetStartedBanner';
-import { Blocks } from 'lib/content';
+import { Headlines } from 'lib/content';
 
-const items = Object.keys(Blocks).map(key => Blocks[key]);
+const items = [
+  Headlines.simpleAnalytics,
+  Headlines.visitorInsights,
+  Headlines.customEvents,
+  Headlines.filters,
+  Headlines.realtimeData,
+  Headlines.multiLanguage,
+  Headlines.mobileFriendly,
+  Headlines.unlimitedWebsites,
+  Headlines.multipleAccounts,
+  Headlines.bypassAdBlockers,
+  Headlines.lightWeight,
+  Headlines.shareData,
+  Headlines.darkMode,
+];
 
 export default function FeaturesPage() {
   return (

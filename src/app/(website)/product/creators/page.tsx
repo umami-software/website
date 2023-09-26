@@ -6,14 +6,14 @@ import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
 import styles from './page.module.css';
 import ScrollBlock from 'components/layout/ScrollBlock';
-import { Blocks } from 'lib/content';
+import { Headlines } from 'lib/content';
 
 const items = [
-  Blocks.simpleAnalytics,
-  Blocks.visitorInsights,
-  Blocks.realtimeData,
-  Blocks.unlimitedWebsites,
-  Blocks.bypassAdBlockers,
+  Headlines.simpleAnalytics,
+  Headlines.visitorInsights,
+  Headlines.realtimeData,
+  Headlines.unlimitedWebsites,
+  Headlines.bypassAdBlockers,
 ];
 
 export default function CreatorsPage() {

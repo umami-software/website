@@ -5,7 +5,7 @@ import Feather from 'assets/feather.svg';
 import Share from 'assets/share.svg';
 import Lock from 'assets/lock.svg';
 
-export const Blocks = {
+export const Headlines = {
   simpleAnalytics: {
     title: 'Simple analytics',
     description:
@@ -102,6 +102,6 @@ export const Features = {
   visitors: {
     title: 'Visitors',
     description: '',
-    image: Blocks,
+    image: Headlines,
   },
 };

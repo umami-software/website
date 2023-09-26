@@ -1,7 +1,7 @@
 'use client';
 import PageHeader from 'components/layout/PageHeader';
 import TextBlock from 'components/layout/TextBlock';
-import { Blocks } from 'lib/content';
+import { Headlines } from 'lib/content';
 import ImageBlock from 'components/layout/ImageBlock';
 import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
@@ -10,7 +10,12 @@ import GetStartedBanner from 'components/common/GetStartedBanner';
 import styles from './page.module.css';
 import SectionHeader from 'components/layout/SectionHeader';
 
-const items = [Blocks.simpleAnalytics, Blocks.visitorInsights, Blocks.customEvents, Blocks.filters];
+const items = [
+  Headlines.simpleAnalytics,
+  Headlines.visitorInsights,
+  Headlines.customEvents,
+  Headlines.filters,
+];
 
 export default function GoogleAnalyticsPage() {
   return (

@@ -6,14 +6,14 @@ import styles from './page.module.css';
 import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
 import ScrollBlock from 'components/layout/ScrollBlock';
-import { Blocks } from 'lib/content';
+import { Headlines } from 'lib/content';
 
 const items = [
-  Blocks.simpleAnalytics,
-  Blocks.visitorInsights,
-  Blocks.customEvents,
-  Blocks.filters,
-  Blocks.unlimitedWebsites,
+  Headlines.simpleAnalytics,
+  Headlines.visitorInsights,
+  Headlines.customEvents,
+  Headlines.filters,
+  Headlines.unlimitedWebsites,
 ];
 
 export default function MarketersPage() {
