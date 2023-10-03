@@ -1,0 +1,172 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  border-bottom: 1px solid var(--base50);
+  backdrop-filter: saturate(180%) blur(12px);
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 1000;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  border-radius: 20px;
+  padding: 0 20px;
+  width: 100%;
+  border: 1px solid transparent;
+  transition: all ease-in-out 0.3s;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex: 1;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 #fff;
+  margin: 0 auto;
+}
+
+.buttons {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.hamburger {
+  position: absolute;
+  right: 0;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.github:hover svg {
+  fill: var(--primary400);
+}
+
+.login {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  margin-top: 10px;
+  background: var(--base50);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  color: var(--base700);
+  position: relative;
+}
+
+.menu:before {
+  content: ' ';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 20px;
+}
+
+.menu header {
+  margin-left: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: var(--base900);
+}
+
+.menu a {
+  padding: 8px 16px;
+}
+
+.menu a:hover {
+  color: var(--base900);
+  background: var(--base75);
+  border-radius: var(--border-radius);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+}
+
+html:not([data-scroll='0']) .header {
+  transition: all linear 0.6s;
+  border-bottom: 1px solid var(--base300);
+}
+
+@media screen and (max-width: 1200px) {
+  .github {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .login {
+    display: none;
+  }
+
+  .links {
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    justify-content: space-between;
+  }
+
+  .links,
+  .buttons {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

@@ -1,0 +1,29 @@
+.docs {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  color: var(--base800);
+}
+
+.docs h1 {
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.docs h2 {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.docs img {
+  display: block;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.docs a {
+  color: var(--primary400);
+}
+
+.docs a:hover {
+  color: var(--primary500);
+}

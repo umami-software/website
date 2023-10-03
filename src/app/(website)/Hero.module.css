@@ -1,0 +1,22 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.subtitle {
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px 0;
+}

@@ -1,0 +1,37 @@
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding: 40px 30px;
+  border: 1px solid var(--base300);
+  border-radius: 10px;
+  background: var(--base75);
+}
+
+.item header {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.item p {
+  color: var(--base700);
+}
+
+.item a {
+  margin: auto;
+}
+
+.item svg {
+  height: 64px;
+  width: 64px;
+  margin-bottom: 10px;
+}

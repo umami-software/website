@@ -13,9 +13,11 @@
   padding: 0 var(--size600);
   position: relative;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .button:hover {
+  color: var(--base900);
   background: var(--base200);
 }
 
@@ -41,7 +43,20 @@
   background: var(--primary500);
 }
 
-.lg {
+.button.secondary {
+  border: 1px solid var(--border-color);
+  background: var(--base50);
+}
+
+.button.secondary:hover {
+  background: var(--base75);
+}
+
+.button.secondary:active {
+  background: var(--base100);
+}
+
+.button.lg {
   font-size: var(--font-size-lg);
   padding: 0.9rem 1.5rem;
 }

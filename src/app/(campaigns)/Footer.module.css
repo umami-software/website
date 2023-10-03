@@ -1,0 +1,6 @@
+.footer {
+  font-size: 12px;
+  color: var(--font-color300);
+  text-align: center;
+  min-height: 100px;
+}

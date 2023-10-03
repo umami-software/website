@@ -9,7 +9,7 @@ export interface LinkButtonProps {
   icon?: ReactElement;
   target?: string;
   rel?: string;
-  variant?: 'primary' | 'none';
+  variant?: 'primary' | 'secondary' | 'none';
   size?: 'lg' | 'none';
   children: ReactNode;
 }

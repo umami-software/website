@@ -1,0 +1,135 @@
+# API Client
+
+### Overview
+
+Umami API Client is built in TypeScript and contains functions to call every API endpoint available in Umami.
+
+### Requirements
+
+- [Node.js](https://nodejs.org/) version 16.13 or newer
+
+### Install Yarn
+
+```sh
+npm install @umami/api-client
+```
+
+### Configure
+
+The following environment variables are required to call your own API.
+
+```
+UMAMI_API_CLIENT_USER_ID
+UMAMI_API_CLIENT_SECRET
+UMAMI_API_CLIENT_ENDPOINT
+```
+
+To access Umami Cloud, these environment variables are required.
+
+```
+UMAMI_API_KEY
+UMAMI_API_CLIENT_ENDPOINT
+```
+
+More details on accessing Umami Cloud can be found under [API key](/docs/api-key).
+
+### Usage
+
+Import the configured api-client and query using the available class methods.
+
+```js
+import { client } from '@umami/api-client';
+
+const { ok, data, status, error } = await client.getWebsites();
+```
+
+The result will come back in the following format.
+
+```
+{
+  ok: boolean;
+  status: number;
+  data?: T;
+  error?: any;
+}
+```
+
+### API Client function mapping
+
+**Me**
+
+```
+getMe() : GET /me
+updateMyPassword(data) : POST /me/password
+getMyWebsites() : GET /me/websites
+```
+
+**Users**
+
+```
+getUsers() : GET /users
+createUser(data) : POST /users
+getUser(id) : GET /users/{id}
+updateUser(id, data) : POST /users/{id}
+deleteUser(id) : DEL /users/{id}
+getUserWebsites(id) : GET /users/{id}/websites
+getUserUsage(id, data) : GET /users/{id}/usage
+```
+
+**Teams**
+
+```
+getTeams() : GET /teams
+createTeam(data) : POST /teams
+joinTeam(data) : POST /teams/join
+getTeam(id) : GET /teams/{id}
+updateTeam(id) : POST /teams/{id}
+deleteTeam(id) : DEL /teams/{id}
+getTeamUsers(id) : GET /teams/{id}/users
+deleteTeamUser(teamId, userId): DEL /teams/{teamId}/users/{userId}
+getTeamWebsites(id) : GET /teams/{id}/websites
+createTeamWebsites(id, data) : GET /teams/{id}/websites
+deleteTeamWebsite(teamId, websiteId) : DEL /teams/{teamId}/websites/{websiteId}
+```
+
+**Websites**
+
+```
+getWebsites() : GET /websites
+createWebsite(data) : POST /websites
+getWebsite(id) : GET /websites/{id}
+updateWebsite(id, data) : POST /websites/{id}
+deleteWebsite(id) : DEL /websites/{id}
+getWebsiteActive(id) : GET /websites/{id}/active
+getWebsiteEvents(id, data) : GET /websites/{id}/events
+getWebsiteMetrics(id, data) : GET /websites/{id}/metrics
+getWebsitePageviews(id, data) : GET /websites/{id}/pageviews
+resetWebsite(id) : GET /websites/{id}/reset
+getWebsiteStats(id, data) : GET /websites/{id}/stats
+```
+
+**Event Data**
+
+```
+getEventDataEvents(id, data) : GET /event-data/events
+getEventDataFields(id, data) : GET /event-data/fields
+getEventDataStats(id, data) : GET /event-data/stats
+```
+
+### Environment Variables
+
+#### UMAMI_API_CLIENT_USER_ID = &lt;user uuid&gt;
+
+The `USER_ID` of the User performing the API calls. Permission restrictions will apply based on application settings.
+
+#### UMAMI_API_CLIENT_SECRET = &lt;random string&gt;
+
+A random string used to generate unique values. This needs to match the `APP_SECRET` used in the Umami application.
+
+#### UMAMI_API_CLIENT_ENDPOINT = &lt;API endpoint&gt;
+
+The endpoint of your Umami API. `example: https://{yourserver}/api/`
+
+#### UMAMI_API_KEY = &lt;API Key string&gt;
+
+A unique string provided by Umami Cloud.

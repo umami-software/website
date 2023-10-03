@@ -1,11 +1,18 @@
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 500px;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .input {
   display: flex;
   gap: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+  }
 }

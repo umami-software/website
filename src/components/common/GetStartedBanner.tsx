@@ -1,20 +1,21 @@
-import { Button } from 'react-basics';
+'use client';
 import styles from './GetStartedBanner.module.css';
+import LinkButton from 'components/common/LinkButton';
+import { CLOUD_URL } from 'lib/constants';
 
 export default function GetStartedBanner() {
   return (
     <div className={styles.banner}>
-      <h1>Are you ready for better analytics?</h1>
+      <div className={styles.text}>Are you ready for better analytics?</div>
       <div className={styles.buttons}>
-        <a
-          href="http://cloud.umami.is/signup?ref=get-started"
-          className="button"
-          data-umami-event="get-started-button"
+        <LinkButton
+          href={`${CLOUD_URL}/signup?ref=get-started-banner`}
+          data-umami-event="get-started-banner-button"
+          variant="primary"
+          size="lg"
         >
-          <Button size="lg" variant="primary">
-            Get started
-          </Button>
-        </a>
+          Get started
+        </LinkButton>
       </div>
     </div>
   );

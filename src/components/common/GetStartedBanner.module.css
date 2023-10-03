@@ -4,14 +4,31 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-  padding: 40px;
+  padding: 60px 40px;
   margin: 60px 0;
-  background: var(--blue100);
-  border-radius: 16px;
+  border-radius: 12px;
   flex-wrap: wrap;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
 }
 
-.banner h1 {
+.banner:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+  z-index: -1;
+  background-image: url('/images/bg-get-started-banner.jpg');
+  background-size: 100% 400px;
+  background-repeat: no-repeat;
+  background-position: center top 10%;
+}
+
+.text {
   font-size: max(32px, min(5vw, 48px));
   font-weight: 800;
   letter-spacing: -0.05em;
@@ -21,6 +38,4 @@
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 24px 0;
 }

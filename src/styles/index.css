@@ -77,6 +77,11 @@ code {
   border-radius: 2px;
   white-space: pre-wrap;
   word-wrap: break-word;
+  letter-spacing: 0;
+}
+
+pre code {
+  padding: 0;
 }
 
 menu ul {
@@ -89,8 +94,4 @@ menu li {
 
 body button {
   font-family: inherit;
-}
-
-pre code {
-  padding: 0;
 }
