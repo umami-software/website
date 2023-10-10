@@ -15,7 +15,7 @@ export default function Hero() {
       </TextBlock>
       <div className={styles.buttons}>
         <LinkButton
-          href={`${CLOUD_URL}/signup?ref=hero`}
+          href="docs/getting-started"
           data-umami-event="get-started-button"
           variant="primary"
           size="lg"
