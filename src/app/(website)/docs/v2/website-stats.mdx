@@ -12,6 +12,16 @@ GET /api/websites/{websiteId}/metrics
 GET /api/websites/{websiteId}/stats
 ```
 
+**Unit Parameter**
+
+The unit parameter buckets the data returned. The unit is automatically converted to the next largest applicable time unit if the maximum is exceeded.
+
+- `minute`: Up to 60 minutes.
+- `hour`: Up to 48 hours.
+- `day`: Up to 12 months.
+- `month`: No limit.
+- `year`: No limit.
+
 ---
 
 ## `GET /api/websites/{websiteId}/active`
