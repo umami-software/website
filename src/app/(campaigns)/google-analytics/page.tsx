@@ -23,24 +23,8 @@ export default function GoogleAnalyticsPage() {
       <PageHeader>
         <h1>Tired of Google Analytics headaches?</h1>
       </PageHeader>
-      <div className={styles.features}>
-        <ul>
-          <li>✔ Direct data export</li>
-          <li>✔ Protected visitor privacy</li>
-          <li>✔ Intuitive reports</li>
-          <li>✔ Simple setup and migration</li>
-          <li>✔ Data ownership</li>
-        </ul>
-        <ul>
-          <li>✘ Direct data export</li>
-          <li>✘ Protected visitor privacy</li>
-          <li>✘ Intuitive reports</li>
-          <li>✘ Simple setup and migration</li>
-          <li>✘ Data ownership</li>
-        </ul>
-      </div>
       <ImageBlock>
-        <TextBlock style={{ width: 800 }}>
+        <TextBlock>
           <h1>If you’re dreading the GA4 migration, consider a better alternative.</h1>
           <p>
             Unlike Universal Analytics and GA4, Umami offers fast and flexible implementation,
@@ -58,6 +42,28 @@ export default function GoogleAnalyticsPage() {
           </LinkButton>
         </div>
       </ImageBlock>
+      <div className={styles.features}>
+        <div>
+          <header>Umami</header>
+          <ul>
+            <li>✔ Direct data export</li>
+            <li>✔ Protected visitor privacy</li>
+            <li>✔ Intuitive reports</li>
+            <li>✔ Simple setup and migration</li>
+            <li>✔ Data ownership</li>
+          </ul>
+        </div>
+        <div>
+          <header>Google Analytics</header>
+          <ul>
+            <li>✘ Direct data export</li>
+            <li>✘ Protected visitor privacy</li>
+            <li>✘ Intuitive reports</li>
+            <li>✘ Simple setup and migration</li>
+            <li>✘ Data ownership</li>
+          </ul>
+        </div>
+      </div>
       <SectionHeader>
         <h1>A faster, friendlier way to understand your website</h1>
       </SectionHeader>

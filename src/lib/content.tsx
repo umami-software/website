@@ -101,7 +101,10 @@ export const Headlines = {
 export const Features = {
   visitors: {
     title: 'Visitors',
-    description: '',
-    image: Headlines,
+    description: 'Understand how visitors are using your website, without invading their privacy.',
+  },
+  compliant: {
+    title: 'GDPR and CCPA compliant',
+    description: 'Understand how visitors are using your website, without invading their privacy.',
   },
 };

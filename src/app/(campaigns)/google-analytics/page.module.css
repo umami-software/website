@@ -10,14 +10,20 @@
 
 .features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.features > div {
-  width: 300px;
-  margin: 0 auto;
+.features header {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .features ul {
+  width: 300px;
+  margin: 0 auto;
   list-style: none;
 }

@@ -9,7 +9,6 @@ import '@fontsource/jetbrains-mono/400.css';
 import 'react-basics/dist/styles.css';
 import 'styles/variables.css';
 import 'styles/index.css';
-import React from 'react';
 
 export default function RootLayout({ children }) {
   return (
