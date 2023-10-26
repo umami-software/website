@@ -15,15 +15,32 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.features div {
+  border: 1px solid var(--base600);
+  border-radius: 10px;
+  padding: 20px 0;
+}
+
+.features div:first-child {
+  box-shadow: 4px 4px var(--base300);
+}
+
+.features div:last-child {
+  background: var(--base75);
+}
+
 .features header {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .features ul {
   width: 300px;
   margin: 0 auto;
   list-style: none;
+}
+
+.features li {
+  line-height: 2.5rem;
 }
