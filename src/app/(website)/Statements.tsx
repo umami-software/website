@@ -40,8 +40,8 @@ export default function Statements() {
         <TextBlock align="center">
           <h1>Umami is a simple, privacy-focused alternative to Google Analytics</h1>
           <p>
-            You deserve an analytics solution that you can trust. That won't invade your user's
-            privacy and give your complete ownership of your data.
+            You deserve an analytics solution that you can trust — that won't invade your user's
+            privacy and gives you complete ownership of your data.
           </p>
         </TextBlock>
       </div>
