@@ -2,22 +2,22 @@
 import PageHeader from 'components/layout/PageHeader';
 import ScrollBlock from 'components/layout/ScrollBlock';
 import GetStartedBanner from 'components/common/GetStartedBanner';
-import { Headlines } from 'lib/content';
+import { Blocks } from 'lib/content';
 
 const items = [
-  Headlines.simpleAnalytics,
-  Headlines.visitorInsights,
-  Headlines.customEvents,
-  Headlines.filters,
-  Headlines.realtimeData,
-  Headlines.multiLanguage,
-  Headlines.mobileFriendly,
-  Headlines.unlimitedWebsites,
-  Headlines.multipleAccounts,
-  Headlines.bypassAdBlockers,
-  Headlines.lightWeight,
-  Headlines.shareData,
-  Headlines.darkMode,
+  Blocks.simpleAnalytics,
+  Blocks.visitorInsights,
+  Blocks.customEvents,
+  Blocks.filters,
+  Blocks.realtimeData,
+  Blocks.multiLanguage,
+  Blocks.mobileFriendly,
+  Blocks.unlimitedWebsites,
+  Blocks.multipleAccounts,
+  Blocks.bypassAdBlockers,
+  Blocks.lightWeight,
+  Blocks.shareData,
+  Blocks.darkMode,
 ];
 
 export default function FeaturesPage() {

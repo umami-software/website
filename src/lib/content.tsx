@@ -5,7 +5,7 @@ import Feather from 'assets/feather.svg';
 import Share from 'assets/share.svg';
 import Lock from 'assets/lock.svg';
 
-export const Headlines = {
+export const Blocks = {
   simpleAnalytics: {
     title: 'Simple analytics',
     description:
@@ -50,31 +50,31 @@ export const Headlines = {
   unlimitedWebsites: {
     title: 'Unlimited websites',
     description: `Umami is able to track an unlimited number of websites from a single installation. You can even track subdomains and individual URLs.`,
-    image: <Infinity />,
+    icon: <Infinity />,
   },
   multipleAccounts: {
     title: 'Multiple accounts',
     description:
       'Umami can be used to host data for friends or clients. Just create a separate account and they can start tracking their own websites on their own dashboard.',
-    image: <Teams />,
+    icon: <Teams />,
   },
   bypassAdBlockers: {
     title: 'Bypass ad-blockers',
     description:
       'Umami is hosted by you under your own domain so you can reliably avoid ad-blockers unlike Google Analytics.',
-    image: <Block />,
+    icon: <Block />,
   },
   lightWeight: {
     title: 'Light-weight',
     description:
       'The tracking script is tiny (only 2KB) and loads lightning fast. It will never slow down your site.',
-    image: <Feather />,
+    icon: <Feather />,
   },
   shareData: {
     title: 'Easily share data',
     description:
       'You can easily share your stats with others through a secure, uniquely generated URL.',
-    image: <Share />,
+    icon: <Share />,
   },
   darkMode: {
     title: 'Dark mode',
@@ -94,17 +94,6 @@ export const Headlines = {
   protectClientCompliance: {
     title: 'Protect client compliance',
     description: `Umami's privacy-focused model ensures that you are respecting the privacy of your clients and their users. Umami does not collect any personal information, does not use cookies, does not track users across websites, and is GDPR compliant.`,
-    image: <Lock />,
-  },
-};
-
-export const Features = {
-  visitors: {
-    title: 'Visitors',
-    description: 'Understand how visitors are using your website, without invading their privacy.',
-  },
-  compliant: {
-    title: 'GDPR and CCPA compliant',
-    description: 'Understand how visitors are using your website, without invading their privacy.',
+    icon: <Lock />,
   },
 };

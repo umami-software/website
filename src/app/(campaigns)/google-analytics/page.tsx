@@ -1,23 +1,27 @@
 'use client';
 import PageHeader from 'components/layout/PageHeader';
 import TextBlock from 'components/layout/TextBlock';
-import { Headlines } from 'lib/content';
+import { Blocks } from 'lib/content';
 import ImageBlock from 'components/layout/ImageBlock';
 import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
 import ScrollBlock from 'components/layout/ScrollBlock';
 import GetStartedBanner from 'components/common/GetStartedBanner';
-import styles from './page.module.css';
 import SectionHeader from 'components/layout/SectionHeader';
+import useQueryString from 'components/hooks/useQueryString';
+import styles from './page.module.css';
 
 const items = [
-  Headlines.simpleAnalytics,
-  Headlines.visitorInsights,
-  Headlines.customEvents,
-  Headlines.filters,
+  Blocks.simpleAnalytics,
+  Blocks.visitorInsights,
+  Blocks.customEvents,
+  Blocks.filters,
+  Blocks.realtimeData,
 ];
 
 export default function GoogleAnalyticsPage() {
+  const query = useQueryString({ ref: 'campaign-ga' });
+
   return (
     <article className={styles.container}>
       <PageHeader>
@@ -37,7 +41,7 @@ export default function GoogleAnalyticsPage() {
           </p>
         </TextBlock>
         <div className={styles.button}>
-          <LinkButton href={`${CLOUD_URL}/signup?ref=campaign-ga`} size="lg" variant="primary">
+          <LinkButton href={`${CLOUD_URL}/signup${query}`} size="lg" variant="primary">
             Start free trial
           </LinkButton>
         </div>

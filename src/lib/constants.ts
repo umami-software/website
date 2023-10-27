@@ -4,4 +4,4 @@ export const DISCORD_URL = 'https://discord.gg/4dz4zcXYrQ';
 export const TWITTER_URL = 'https://twitter.com/umami_software';
 export const GITHUB_STARS = '17.2k';
 export const GITHUB_CONTRIBUTORS = '200';
-export const GITHUB_DOWNLOADS = '4M';
+export const GITHUB_DOWNLOADS = '5M';

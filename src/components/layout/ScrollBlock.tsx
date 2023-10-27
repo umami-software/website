@@ -6,14 +6,15 @@ import styles from './ScrollBlock.module.css';
 export default function ScrollBlock({ items }) {
   return (
     <section className={styles.section}>
-      {items.map(({ title, description, image }) => (
+      {items.map(({ title, description, image, icon }) => (
         <ImageBlock key={title} className={styles.block}>
           <TextBlock>
             <h1>{title}</h1>
             <p>{description}</p>
           </TextBlock>
           <div className={styles.image}>
-            {typeof image === 'string' ? <img src={image} alt={title} /> : image}
+            {image && <img src={image} alt={title} />}
+            {!image && icon}
           </div>
         </ImageBlock>
       ))}

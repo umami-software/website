@@ -7,13 +7,9 @@ import styles from './page.module.css';
 import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
 import ScrollBlock from 'components/layout/ScrollBlock';
-import { Headlines } from 'lib/content';
+import { Blocks } from 'lib/content';
 
-const items = [
-  Headlines.maximizeValue,
-  Headlines.focusOnResults,
-  Headlines.protectClientCompliance,
-];
+const items = [Blocks.maximizeValue, Blocks.focusOnResults, Blocks.protectClientCompliance];
 
 export default function AgenciesPage() {
   return (
