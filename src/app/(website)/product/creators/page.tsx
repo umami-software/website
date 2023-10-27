@@ -7,6 +7,7 @@ import { CLOUD_URL } from 'lib/constants';
 import styles from './page.module.css';
 import ScrollBlock from 'components/layout/ScrollBlock';
 import { Blocks } from 'lib/content';
+import useQueryString from 'components/hooks/useQueryString';
 
 const items = [
   Blocks.simpleAnalytics,
@@ -17,6 +18,8 @@ const items = [
 ];
 
 export default function CreatorsPage() {
+  const query = useQueryString({ ref: 'creators' });
+
   return (
     <article className={styles.container}>
       <section>
@@ -29,7 +32,7 @@ export default function CreatorsPage() {
               Umami lets you measure the engagement and stickyness of your website. Discover what
               works and what doesn't.
             </p>
-            <LinkButton href={`${CLOUD_URL}/signup?ref=creators`} size="lg" variant="primary">
+            <LinkButton href={`${CLOUD_URL}/signup${query}`} size="lg" variant="primary">
               Start free trial
             </LinkButton>
           </TextBlock>

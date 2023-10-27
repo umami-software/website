@@ -7,8 +7,10 @@ import LinkButton from 'components/common/LinkButton';
 import { GITHUB_STARS, REPO_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';
 import styles from './Header.module.css';
+import useQueryString from 'components/hooks/useQueryString';
 
 export default function Header() {
+  const query = useQueryString({ ref: 'header' });
   useScroll();
 
   return (
@@ -38,14 +40,14 @@ export default function Header() {
               <Text>{GITHUB_STARS}</Text>
             </Link>
             <Link
-              href="https://cloud.umami.is/login?ref=header"
+              href={`https://cloud.umami.is/login${query}`}
               className={styles.login}
               data-umami-event="login-button-header"
             >
               Log in
             </Link>
             <LinkButton
-              href="https://cloud.umami.is/signup?ref=header"
+              href={`https://cloud.umami.is/signup${query}`}
               variant="primary"
               data-umami-event="signup-button-header"
             >

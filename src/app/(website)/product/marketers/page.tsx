@@ -7,6 +7,7 @@ import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
 import ScrollBlock from 'components/layout/ScrollBlock';
 import { Blocks } from 'lib/content';
+import useQueryString from 'components/hooks/useQueryString';
 
 const items = [
   Blocks.simpleAnalytics,
@@ -17,6 +18,8 @@ const items = [
 ];
 
 export default function MarketersPage() {
+  const query = useQueryString({ ref: 'hero' });
+
   return (
     <article className={styles.container}>
       <section>
@@ -30,7 +33,7 @@ export default function MarketersPage() {
               Umami lets you deliver your key website metrics and insights in an easy-to-understand
               interface without distraction.
             </p>
-            <LinkButton href={`${CLOUD_URL}/signup?ref=marketers`} size="lg" variant="primary">
+            <LinkButton href={`${CLOUD_URL}/signup${query}`} size="lg" variant="primary">
               Start free trial
             </LinkButton>
           </TextBlock>

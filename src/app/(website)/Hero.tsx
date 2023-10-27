@@ -2,8 +2,11 @@ import styles from './Hero.module.css';
 import LinkButton from 'components/common/LinkButton';
 import TextBlock from 'components/layout/TextBlock';
 import { CLOUD_URL } from 'lib/constants';
+import useQueryString from 'components/hooks/useQueryString';
 
 export default function Hero() {
+  const query = useQueryString({ ref: 'hero' });
+
   return (
     <div className={styles.hero}>
       <TextBlock size="xl" align="center">
@@ -15,7 +18,7 @@ export default function Hero() {
       </TextBlock>
       <div className={styles.buttons}>
         <LinkButton
-          href={`${CLOUD_URL}/signup?ref=hero`}
+          href={`${CLOUD_URL}/signup${query}`}
           data-umami-event="get-started-button"
           variant="primary"
           size="lg"

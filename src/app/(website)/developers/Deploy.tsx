@@ -5,8 +5,11 @@ import Code from 'assets/code.svg';
 import Cloud from 'assets/cloud.svg';
 import styles from './Deploy.module.css';
 import { CLOUD_URL } from 'lib/constants';
+import useQueryString from 'components/hooks/useQueryString';
 
 export default function Deploy() {
+  const query = useQueryString({ ref: 'developers' });
+
   return (
     <section>
       <SectionHeader>
@@ -26,7 +29,7 @@ export default function Deploy() {
           <Cloud />
           <header>Umami Cloud</header>
           <p>High performance, fully managed Umami service.</p>
-          <LinkButton href={`${CLOUD_URL}/signup?ref=developers`} variant="primary">
+          <LinkButton href={`${CLOUD_URL}/signup${query}`} variant="primary">
             Start free trial
           </LinkButton>
         </div>

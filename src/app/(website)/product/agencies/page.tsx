@@ -8,10 +8,13 @@ import LinkButton from 'components/common/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
 import ScrollBlock from 'components/layout/ScrollBlock';
 import { Blocks } from 'lib/content';
+import useQueryString from 'components/hooks/useQueryString';
 
 const items = [Blocks.maximizeValue, Blocks.focusOnResults, Blocks.protectClientCompliance];
 
 export default function AgenciesPage() {
+  const query = useQueryString({ ref: 'hero' });
+
   return (
     <article className={styles.container}>
       <section>
@@ -24,7 +27,7 @@ export default function AgenciesPage() {
             <p>
               Umami leaves tedious tinkering, compliance crises, and management migraines behind.
             </p>
-            <LinkButton href={`${CLOUD_URL}/signup?ref=marketers`} size="lg" variant="primary">
+            <LinkButton href={`${CLOUD_URL}/signup${query}`} size="lg" variant="primary">
               Start free trial
             </LinkButton>
           </TextBlock>
