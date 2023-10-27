@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import styles from './TextBlock.module.css';
 import { HTMLAttributes, ReactNode } from 'react';
+import styles from './TextBlock.module.css';
 
 export interface TextBlockProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;

@@ -20,3 +20,46 @@
   gap: 20px;
   padding: 24px 0;
 }
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.features > div {
+  color: var(--base700);
+  font-size: max(14px, min(2vw, 16px));
+  text-align: center;
+}
+
+.features > div:before {
+  content: '✔';
+  color: var(--font-color100);
+  margin-right: 10px;
+}
+
+.image {
+  display: block;
+  border: 10px solid var(--base100);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 10px var(--base300);
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .features {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+}

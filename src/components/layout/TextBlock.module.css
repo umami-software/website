@@ -2,7 +2,7 @@
   font-size: max(32px, min(5vw, 48px));
   font-weight: 800;
   letter-spacing: -0.05em;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .text p {
@@ -33,6 +33,11 @@
 
 .text.sm h1 {
   font-size: max(18px, min(2vw, 24px));
+}
+
+.text h2 {
+  font-size: max(18px, min(2vw, 24px));
+  letter-spacing: -0.05em;
 }
 
 .start {

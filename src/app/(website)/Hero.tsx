@@ -1,8 +1,8 @@
-import styles from './Hero.module.css';
 import LinkButton from 'components/common/LinkButton';
 import TextBlock from 'components/layout/TextBlock';
 import { CLOUD_URL } from 'lib/constants';
 import useQueryString from 'components/hooks/useQueryString';
+import styles from './Hero.module.css';
 
 export default function Hero() {
   const query = useQueryString({ ref: 'hero' });
@@ -34,6 +34,14 @@ export default function Hero() {
         >
           View demo
         </LinkButton>
+      </div>
+      <div className={styles.features}>
+        <div>No cookies used</div>
+        <div>GDPR & CCPA compliant</div>
+        <div>Open source</div>
+      </div>
+      <div className={styles.image}>
+        <img src="/images/app.jpg" />
       </div>
     </div>
   );

@@ -1,0 +1,63 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 40px 1fr;
+  padding: 20px;
+  border: 1px solid var(--base300);
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px var(--base200);
+}
+
+.pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  overflow: hidden;
+  grid-row: 1 / 2;
+}
+
+.pic img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  gap: 10px;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.username {
+  color: var(--base600);
+}
+
+.logo {
+  justify-self: flex-end;
+  align-self: end;
+}
+
+.logo svg {
+  width: 16px;
+  height: 16px;
+}
+
+.body {
+  grid-column: 2/3;
+  grid-row: 2 / 3;
+  text-align: left;
+}

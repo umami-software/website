@@ -4,12 +4,13 @@ import Block from 'assets/block.svg';
 import Feather from 'assets/feather.svg';
 import Share from 'assets/share.svg';
 import Lock from 'assets/lock.svg';
+import Code from 'assets/code.svg';
 
 export const Blocks = {
   simpleAnalytics: {
     title: 'Simple analytics',
     description:
-      'Umami measures just the important metrics that you care about and everything is displayed on a single, easy to browse page.',
+      'Umami measures just the important metrics that you care about and everything is easily accessible at just a glance.',
     image: '/images/preview-website-stats.png',
   },
   visitorInsights: {
@@ -38,7 +39,7 @@ export const Blocks = {
   multiLanguage: {
     title: 'Multi-language',
     description:
-      'Umami has been translated into many different languages by the passionate open source community.',
+      'Umami has been translated into many different languages by the passionate open-source community.',
     image: '/images/preview-languages.png',
   },
   mobileFriendly: {
@@ -49,7 +50,7 @@ export const Blocks = {
   },
   unlimitedWebsites: {
     title: 'Unlimited websites',
-    description: `Umami is able to track an unlimited number of websites from a single installation. You can even track subdomains and individual URLs.`,
+    description: `Umami is able to track an unlimited number of websites. You can even track subdomains and individual URLs.`,
     icon: <Infinity />,
   },
   multipleAccounts: {
@@ -95,5 +96,10 @@ export const Blocks = {
     title: 'Protect client compliance',
     description: `Umami's privacy-focused model ensures that you are respecting the privacy of your clients and their users. Umami does not collect any personal information, does not use cookies, does not track users across websites, and is GDPR compliant.`,
     icon: <Lock />,
+  },
+  openSource: {
+    title: 'Open source',
+    description: `Umami is dedicated to open-source development. You never need to worry about data ownership or vendor lock-in`,
+    icon: <Code />,
   },
 };

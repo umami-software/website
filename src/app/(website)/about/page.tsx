@@ -15,7 +15,7 @@ export default function AboutPage() {
           exchange.
         </p>
         <p>
-          Our mission is to bring quality, privacy-focused open source solutions to as many people
+          Our mission is to bring quality, privacy-focused open-source solutions to as many people
           as possible.
         </p>
       </TextBlock>

@@ -8,19 +8,18 @@ import TextBlock from 'components/layout/TextBlock';
 
 const statements = [
   {
-    title: 'Simple analytics',
+    title: 'Easy to use',
     description: `
-    Umami is easy to use and understand without needing to run complicated reports. Umami
-    collects only the metrics you care about.
+    Umami is easy to use and understand without needing to run complicated reports.
+    All data is available at a glance.
     `,
     image: <Analytics />,
   },
   {
     title: 'Own your data',
     description: `
-    Umami helps you stay compliant with ever changing data privacy laws. All data collected
-    is anonymized, making it impossible to identify any individual user. Rest assured
-    knowing that your data is securely in your own hands.
+    Data ownership is vitally important for maintinaing compliance with ever changing privacy laws.
+    Rest assured knowing your data is in your control.
     `,
     image: <Shield />,
   },
@@ -28,8 +27,7 @@ const statements = [
     title: 'Respect data privacy',
     description: `
     Umami lets you to gather the data you need while respecting the privacy of your users.
-    Umami does not collect any personal information, does not use cookies, does not track
-    users across websites, and is GDPR compliant.
+    All data is anonymized and no personal data is ever collected. Cookie banners not required.
     `,
     image: <Lock />,
   },
@@ -37,18 +35,29 @@ const statements = [
 
 export default function Statements() {
   return (
-    <section className={styles.statements}>
-      {statements.map(({ title, description, image }) => {
-        return (
-          <ImageBlock key={title} className={styles.item}>
-            <TextBlock>
-              <h1>{title}</h1>
-              <p>{description}</p>
-            </TextBlock>
-            <div className={styles.image}>{image}</div>
-          </ImageBlock>
-        );
-      })}
-    </section>
+    <>
+      <div className={styles.header}>
+        <TextBlock align="center">
+          <h1>Umami is a simple, privacy-focused alternative to Google Analytics</h1>
+          <p>
+            You deserve an analytics solution that you can trust. That won't invade your user's
+            privacy and give your complete ownership of your data.
+          </p>
+        </TextBlock>
+      </div>
+      <section className={styles.statements}>
+        {statements.map(({ title, description, image }) => {
+          return (
+            <ImageBlock key={title} className={styles.item}>
+              <TextBlock>
+                <h1>{title}</h1>
+                <p>{description}</p>
+              </TextBlock>
+              <div className={styles.image}>{image}</div>
+            </ImageBlock>
+          );
+        })}
+      </section>
+    </>
   );
 }

@@ -1,0 +1,38 @@
+.container {
+  border: 10px solid var(--base200);
+  border-radius: 20px;
+  display: grid;
+  gap: 30px;
+  padding: 0 30px 30px 30px;
+  background: var(--base50);
+  box-shadow: 1px 1px 10px var(--base200);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+}
+
+.step > div:first-child {
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 100%;
+  background: var(--blue100);
+  width: 60px;
+  align-self: center;
+}
+
+.step a {
+  font-weight: 700;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+}
