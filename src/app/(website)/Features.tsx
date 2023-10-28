@@ -2,6 +2,8 @@
 import PageHeader from 'components/layout/PageHeader';
 import ScrollBlock from 'components/layout/ScrollBlock';
 import { Blocks } from 'lib/content';
+import LinkButton from 'components/common/LinkButton';
+import { Flexbox, Icon, Icons, Text } from 'react-basics';
 
 const items = [
   Blocks.simpleAnalytics,
@@ -26,6 +28,14 @@ export default function Features() {
         </p>
       </PageHeader>
       <ScrollBlock items={items} />
+      <Flexbox justifyContent="center" alignItems="center">
+        <LinkButton href="/features" variant="secondary">
+          <Text>Explore more features </Text>
+          <Icon>
+            <Icons.ArrowRight />
+          </Icon>
+        </LinkButton>
+      </Flexbox>
     </section>
   );
 }

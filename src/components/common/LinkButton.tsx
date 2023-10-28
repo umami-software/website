@@ -11,6 +11,7 @@ export interface LinkButtonProps {
   rel?: string;
   variant?: 'primary' | 'secondary' | 'none';
   size?: 'lg' | 'none';
+  className?: string;
   children: ReactNode;
 }
 
@@ -21,13 +22,17 @@ export function LinkButton({
   rel,
   variant = 'none',
   size = 'none',
+  className,
   children,
   ...props
 }: LinkButtonProps) {
   return (
     <Link
       {...props}
-      className={classNames(styles.button, { [styles[variant]]: true, [styles[size]]: true })}
+      className={classNames(styles.button, className, {
+        [styles[variant]]: true,
+        [styles[size]]: true,
+      })}
       href={href}
       target={target}
       rel={rel}
