@@ -13,7 +13,7 @@
   padding: 0 var(--size600);
   position: relative;
   cursor: pointer;
-  font-size: 16px;
+  font-size: max(14px, min(2vw, 16px));
 }
 
 .button:hover {
@@ -57,6 +57,6 @@
 }
 
 .button.lg {
-  font-size: var(--font-size-lg);
+  font-size: max(14px, min(2vw, 18px));
   padding: 0.9rem 1.5rem;
 }
