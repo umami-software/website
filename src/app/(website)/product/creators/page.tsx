@@ -18,7 +18,7 @@ const items = [
 ];
 
 export default function CreatorsPage() {
-  const query = useQueryString({ ref: 'creators' });
+  const query = useQueryString({ ref: 'umami-creators' });
 
   return (
     <article className={styles.container}>

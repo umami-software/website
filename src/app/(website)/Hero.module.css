@@ -27,13 +27,17 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  margin: 40px 0;
+  margin: 60px 0;
 }
 
 .features > div {
   color: var(--base700);
-  font-size: max(14px, min(2vw, 16px));
+  font-size: max(12px, min(2vw, 14px));
+  font-weight: 600;
   text-align: center;
+  border: 1px solid var(--base300);
+  padding: 8px 16px;
+  border-radius: 4px;
 }
 
 .features > div:before {

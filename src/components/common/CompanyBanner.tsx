@@ -3,7 +3,7 @@ import { CLOUD_URL } from 'lib/constants';
 import useQueryString from 'components/hooks/useQueryString';
 
 export default function CloudBanner() {
-  const query = useQueryString({ ref: 'docs' });
+  const query = useQueryString({ ref: 'umami-docs' });
 
   return (
     <div className={styles.banner}>

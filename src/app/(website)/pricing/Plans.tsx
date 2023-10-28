@@ -7,7 +7,7 @@ import { CLOUD_URL } from 'lib/constants';
 import useQueryString from 'components/hooks/useQueryString';
 
 export default function Plans() {
-  const query = useQueryString({ ref: 'pricing' });
+  const query = useQueryString({ ref: 'umami-pricing' });
 
   const plans = [
     {

@@ -8,7 +8,7 @@ import { CLOUD_URL } from 'lib/constants';
 import useQueryString from 'components/hooks/useQueryString';
 
 export default function Deploy() {
-  const query = useQueryString({ ref: 'developers' });
+  const query = useQueryString({ ref: 'umami-developers' });
 
   return (
     <section>

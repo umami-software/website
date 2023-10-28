@@ -5,7 +5,7 @@ import useQueryString from 'components/hooks/useQueryString';
 import styles from './Hero.module.css';
 
 export default function Hero() {
-  const query = useQueryString({ ref: 'hero' });
+  const query = useQueryString({ ref: 'umami-hero' });
 
   return (
     <div className={styles.hero}>
@@ -36,7 +36,7 @@ export default function Hero() {
         </LinkButton>
       </div>
       <div className={styles.features}>
-        <div>No cookies used</div>
+        <div>No cookies</div>
         <div>GDPR & CCPA compliant</div>
         <div>Open source</div>
       </div>

@@ -8,7 +8,7 @@ import styles from './QuickStart.module.css';
 import LinkButton from 'components/common/LinkButton';
 
 export default function QuickStart() {
-  const query = useQueryString({ ref: 'quickstart' });
+  const query = useQueryString({ ref: 'umami-quickstart' });
   const url = `${CLOUD_URL}/signup${query}`;
 
   return (

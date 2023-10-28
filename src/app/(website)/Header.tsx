@@ -10,7 +10,7 @@ import styles from './Header.module.css';
 import useQueryString from 'components/hooks/useQueryString';
 
 export default function Header() {
-  const query = useQueryString({ ref: 'header' });
+  const query = useQueryString({ ref: 'umami-header' });
   useScroll();
 
   return (

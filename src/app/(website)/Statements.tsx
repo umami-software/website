@@ -1,10 +1,10 @@
 'use client';
-import styles from './Statements.module.css';
 import Lock from 'assets/lock.svg';
 import Shield from 'assets/shield.svg';
 import Analytics from 'assets/analytics.svg';
 import ImageBlock from 'components/layout/ImageBlock';
 import TextBlock from 'components/layout/TextBlock';
+import styles from './Statements.module.css';
 
 const statements = [
   {
@@ -26,7 +26,7 @@ const statements = [
   {
     title: 'Respect data privacy',
     description: `
-    Umami lets you to gather the data you need while respecting the privacy of your users.
+    Umami lets you gather the data you need while respecting the privacy of your users.
     All data is anonymized and no personal data is ever collected. Cookie banners not required.
     `,
     image: <Lock />,
@@ -49,7 +49,7 @@ export default function Statements() {
         {statements.map(({ title, description, image }) => {
           return (
             <ImageBlock key={title} className={styles.item}>
-              <TextBlock>
+              <TextBlock align="center">
                 <h1>{title}</h1>
                 <p>{description}</p>
               </TextBlock>

@@ -20,11 +20,11 @@ const items = [
 ];
 
 export default function GoogleAnalyticsPage() {
-  const query = useQueryString({ ref: 'campaign-ga' });
+  const query = useQueryString({ ref: 'umami-campaign-ga' });
 
   return (
     <article className={styles.container}>
-      <PageHeader>
+      <PageHeader className={styles.header}>
         <h1>Tired of Google Analytics headaches?</h1>
       </PageHeader>
       <ImageBlock>

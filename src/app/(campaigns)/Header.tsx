@@ -6,7 +6,7 @@ import { CLOUD_URL } from 'lib/constants';
 import styles from './Header.module.css';
 
 export default function Header() {
-  const query = useQueryString({ ref: 'campaign-ga' });
+  const query = useQueryString({ ref: 'umami-campaign-ga' });
 
   return (
     <header className={styles.header}>

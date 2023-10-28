@@ -18,7 +18,7 @@ const items = [
 ];
 
 export default function MarketersPage() {
-  const query = useQueryString({ ref: 'hero' });
+  const query = useQueryString({ ref: 'umami-marketers' });
 
   return (
     <article className={styles.container}>
