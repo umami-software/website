@@ -8,7 +8,7 @@ import classNames from 'classnames';
 const items = [
   {
     title: 'Analytics',
-    description: `Umami a fast, easy to use, and privacy-focused analytics alternative to Google Analytics.`,
+    description: `Umami collects all the metrics you care about to help you make better decisions.`,
     items: [
       {
         title: 'Visitor info',
@@ -96,32 +96,30 @@ const items = [
       {
         title: 'Retention',
         description: [
-          'Measure your website stickiness by tracking how often users return with the Retention report.',
+          'Measure your website stickiness by tracking how often visitors return with the Retention report.',
         ],
       },
       {
         title: 'Funnels',
         description: [
-          'Understand the conversion and drop-off rate of users with the Funnel report.',
+          'Understand the conversion and drop-off rate of visitors with the Funnel report.',
         ],
       },
     ],
   },
   {
     title: 'Privacy',
-    description: `Umami is a privacy-focused analytics solution helps you stay compliant with data privacy laws.`,
+    description: `Umami is private by default and helps you stay compliant with data privacy laws.`,
     items: [
       {
-        title: 'GDPR & CCPA compliant',
+        title: 'GDPR & CCPA',
         description: [
           'Umami never collects any personal information from your visitors so it is fully compliant with GDPR and CCPA.',
         ],
       },
       {
-        title: 'Anonymization ',
-        description: [
-          `Umami is private by default. All user data is anonymized to protect your visitors' privacy.`,
-        ],
+        title: 'Data anonymization ',
+        description: [`All visitor data is anonymized to protect your visitors' privacy.`],
       },
       {
         title: 'No cookies ',
@@ -130,7 +128,7 @@ const items = [
       {
         title: 'Data ownership ',
         description: [
-          `Data is always in your control with Umami. You can self-host on your own infrastructure or export your data at any time from Umami Cloud.`,
+          `Data is always in your control with Umami. You can self-host on your own infrastructure or export your data from Umami Cloud.`,
         ],
       },
     ],

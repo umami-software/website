@@ -13,7 +13,7 @@ import useQueryString from 'components/hooks/useQueryString';
 const items = [Blocks.maximizeValue, Blocks.focusOnResults, Blocks.protectClientCompliance];
 
 export default function AgenciesPage() {
-  const query = useQueryString({ ref: 'umami-hero' });
+  const query = useQueryString({ ref: 'umami-agencies' });
 
   return (
     <article className={styles.container}>
