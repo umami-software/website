@@ -36,9 +36,9 @@ None
 
 GET from url: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?startAt=1656679719687&endAt=1656766119687`
 
-```js
+```json
 {
-  x: 5;
+  "x": 5
 }
 ```
 
@@ -101,16 +101,16 @@ Gets pageviews within a given time range.
 
 **Sample response**
 
-```js
+```json
 {
-    pageviews: [
-        {x: "2020-04-20 01:00:00", y: 3},
-        {x: "2020-04-20 02:00:00", y: 7}
-    ],
-    sessions: [
-        {x: "2020-04-20 01:00:00", y: 2},
-        {x: "2020-04-20 02:00:00", y: 4}
-    ]
+  "pageviews": [
+    { "x": "2020-04-20 01:00:00", "y": 3 },
+    { "x": "2020-04-20 02:00:00", "y": 7 }
+  ],
+  "sessions": [
+    { "x": "2020-04-20 01:00:00", "y": 2 },
+    { "x": "2020-04-20 02:00:00", "y": 4 }
+  ]
 }
 ```
 
@@ -141,12 +141,12 @@ Gets summarized website statistics.
 
 URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/stats?startAt=1656679719687&endAt=1656766119687`
 
-```js
+```json
 {
-  pageviews: { value: 5, change: 5 },
-  uniques: { value: 1, change: 1 },
-  bounces: { value: 0, change: 0 },
-  totaltime: { value: 4, change: 4 }
+  "pageviews": { "value": 5, "change": 5 },
+  "uniques": { "value": 1, "change": 1 },
+  "bounces": { "value": 0, "change": 0 },
+  "totaltime": { "value": 4, "change": 4 }
 }
 ```
 
@@ -180,11 +180,11 @@ Gets metrics for a given time range.
 
 **Sample response**
 
-```js
+```json
 [
-    {x: "/", y: 46}
-    {x: "/docs", y: 17}
-    {x: "/download", y: 14}
+  { "x": "/", "y": 46 },
+  { "x": "/docs", "y": 17 },
+  { "x": "/download", "y": 14 }
 ]
 ```
 

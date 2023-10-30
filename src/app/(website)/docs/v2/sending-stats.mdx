@@ -23,22 +23,22 @@ the following data:
 
 **Sample payload**
 
-```js
+```json
 {
-    payload: {
-        hostname: "your-hostname",
-        language: "en-US",
-        referrer: "",
-        screen: "1920x1080",
-        title: "dashboard",
-        url: "/",
-        website: "your-website-id",
-        name: "event-name",
-        data: {
-            foo: "bar"
+    "payload": {
+        "hostname": "your-hostname",
+        "language": "en-US",
+        "referrer": "",
+        "screen": "1920x1080",
+        "title": "dashboard",
+        "url": "/",
+        "website": "your-website-id",
+        "name": "event-name",
+        "data": {
+            "foo": "bar"
         }
     },
-    type: "event"
+    "type": "event"
 }
 ```
 
@@ -53,7 +53,7 @@ your request won't be registered.
 You can generate most of these values programmatically with JavaScript using the browser APIs. For example:
 
 ```js
-{
+const data = {
     payload: {
         hostname: window.location.hostname,
         language: navigator.language,
@@ -61,9 +61,9 @@ You can generate most of these values programmatically with JavaScript using the
         screen: `${window.screen.width}x${window.screen.height}`,
         title: document.title,
         url: window.location.pathname,
-        website: "your-website-id",
-        name: "event-name",
+        website: 'your-website-id',
+        name: 'event-name'
     },
-    type: "event"
-}
+    type: 'event'
+};
 ```

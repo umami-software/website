@@ -79,11 +79,9 @@ None
         "updatedAt": null,
         "user": { "id": "1a457e1a-121a-11ee-be56-0242ac120002", "username": "admin" },
         "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
-      },
-      { .... }
-    ],
-  },
-  { .... }
+      }
+    ]
+  }
 ]
 ```
 
@@ -115,11 +113,9 @@ Join a team.
         "updatedAt": null,
         "user": { "id": "1a457e1a-121a-11ee-be56-0242ac120002", "username": "admin" },
         "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
-      },
-      { .... }
-    ],
-  },
-  { .... }
+      }
+    ]
+  }
 ]
 ```
 
@@ -206,11 +202,10 @@ None
     "createdAt": "2023-04-13T20:22:55.756Z",
     "updatedAt": null,
     "user": {
-        "id": "1a457e1a-121a-11ee-be56-0242ac120002",
-        "username": "admin"
+      "id": "1a457e1a-121a-11ee-be56-0242ac120002",
+      "username": "admin"
     }
-  },
-  { .... }
+  }
 ]
 ```
 
@@ -249,7 +244,7 @@ None
 
 **Sample response**
 
-```json
+```text
 ok
 ```
 
@@ -268,41 +263,45 @@ None
 ```json
 [
   {
-    "createdAt": "2023-04-13T21:22:26.209Z",
-    "id": "fe24ff20-07bb-41a7-9950-b80d83ecfaeb",
-    "team": {
-      "accessCode": "LCh5C6SyoHCFcxaJ",
-      "createdAt": "2023-04-13T20:22:55.756Z",
-      "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-      "name": "My Team2",
-      "teamUser": {
-        "createdAt": "2023-04-13T20:22:55.756Z",
-        "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
-        "role": "team-owner"
-      },
-      "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-      "updatedAt": null,
-      "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
-    },
-    "updatedAt": "2023-04-13T20:59:10.335Z",
-    "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-    "website": {
-      "createdAt": "2023-04-10T23:06:44.250Z",
-      "deletedAt": null,
-      "domain": "mywebsite.com",
-      "id": "02d89813-7a72-41e1-87f0-8d668f85008b",
-      "name": "My Website",
-      "resetAt": null,
-      "shareId": null,
-      "updatedAt": null,
-      "user": { "id": "1a457e1a-121a-11ee-be56-0242ac120002", "username": "admin" }
-    },
-    "id": "1a457e1a-121a-11ee-be56-0242ac120002",
-    "username": "admin",
-    "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
-    "websiteId": "02d89813-7a72-41e1-87f0-8d668f85008b"
-  },
-  { .... }
+    "id": "40743097-fb48-411c-98bb-efb2aa7d3946",
+    "name": "website",
+    "domain": "website.com",
+    "shareId": "C36MKJqBlRT9UQgq",
+    "resetAt": "2023-10-25T17:29:44.340Z",
+    "userId": "a36560ed-e21c-4ed9-84aa-c86654460cae",
+    "createdAt": "2022-10-07T18:58:52.435Z",
+    "updatedAt": "2022-10-25T17:29:44.410Z",
+    "deletedAt": null,
+    "teamWebsite": [
+      {
+        "id": "40743097-fb48-411c-98bb-efb2aa7d3946",
+        "teamId": "66c8f57c-dec0-46d1-b267-886833d78982",
+        "websiteId": "40723097-fb48-411c-98bb-efb2ca7d3946",
+        "createdAt": "2022-10-15T16:51:44.711Z",
+        "team": {
+          "id": "66c8f87c-dec0-46d1-b267-886833d78982",
+          "name": "Caoboys",
+          "accessCode": "4bwY3JoHUXcKUiMP",
+          "createdAt": "2022-04-03T05:50:28.601Z",
+          "updatedAt": "2022-09-06T17:08:25.585Z",
+          "teamUser": [
+            {
+              "id": "3509ece6-3f7d-4a45-8842-2c070f1138e3",
+              "teamId": "66c8f87c-dec0-46d1-b267-886833d78982",
+              "userId": "a36560ed-e21c-4ed9-84aa-c86654460cae",
+              "role": "team-owner",
+              "createdAt": "2022-04-03T05:50:28.601Z",
+              "updatedAt": null
+            }
+          ]
+        }
+      }
+    ],
+    "user": {
+      "id": "a36560ed-e21c-4ed9-84aa-c86654460cae",
+      "username": "admin@website.com"
+    }
+  }
 ]
 ```
 
@@ -320,7 +319,7 @@ Add a website to a team.
 
 ```json
 [
-  "02d89813-7a72-41e1-87f0-8d668f85008b", ...
+  "02d89813-7a72-41e1-87f0-8d668f85008b"
 ]
 ```
 
@@ -336,6 +335,6 @@ None
 
 **Sample response**
 
-```json
+```text
 ok
 ```
