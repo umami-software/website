@@ -1,6 +1,7 @@
 import remarkGfm from 'remark-gfm';
 import createMDX from '@next/mdx';
 import rehypePrettyCode from 'rehype-pretty-code';
+import path from "path";
 
 /** @type {import('rehype-pretty-code').Options} */
 const options = {
@@ -35,7 +36,7 @@ const nextConfig = {
     mdxRs: false,
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  reactStrictMode: true,
+  reactStrictMode: false,
   output: 'standalone',
   eslint: {
     ignoreDuringBuilds: true,
@@ -44,11 +45,25 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      issuer: /\.tsx$/,
-      use: ['@svgr/webpack'],
-    });
+    const fileLoaderRule = config.module.rules.find(rule => rule.test?.test?.('.svg'));
+
+    config.module.rules.push(
+      {
+        ...fileLoaderRule,
+        test: /\.svg$/i,
+        resourceQuery: /url/,
+      },
+      {
+        test: /\.svg$/i,
+        issuer: fileLoaderRule.issuer,
+        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] },
+        use: ['@svgr/webpack'],
+      },
+    );
+
+    fileLoaderRule.exclude = /\.svg$/i;
+
+    config.resolve.alias['public'] = path.resolve('./public');
 
     return config;
   },

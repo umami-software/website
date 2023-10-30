@@ -1,4 +1,4 @@
-import Infinity from 'assets/infinity.svg';
+import Infinite from 'assets/infinity.svg';
 import Teams from 'assets/teams.svg';
 import Block from 'assets/block.svg';
 import Feather from 'assets/feather.svg';
@@ -51,7 +51,7 @@ export const Blocks = {
   unlimitedWebsites: {
     title: 'Unlimited websites',
     description: `Umami is able to track an unlimited number of websites. You can even track subdomains and individual URLs.`,
-    icon: <Infinity />,
+    icon: <Infinite />,
   },
   multipleAccounts: {
     title: 'Multiple accounts',
