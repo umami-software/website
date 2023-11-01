@@ -1,12 +1,12 @@
 import remarkGfm from 'remark-gfm';
 import createMDX from '@next/mdx';
 import rehypePrettyCode from 'rehype-pretty-code';
-import path from "path";
+import path from 'path';
 
 /** @type {import('rehype-pretty-code').Options} */
 const options = {
   theme: 'github-light',
-  keepBackground: false
+  keepBackground: false,
 };
 
 const withMDX = createMDX({
@@ -74,15 +74,6 @@ const nextConfig = {
         headers,
       },
     ];
-  },
-  async redirects() {
-    return [
-      {
-        source: '/docs',
-        destination: '/docs/getting-started',
-        permanent: true,
-      },
-    ]
   },
   async rewrites() {
     return [

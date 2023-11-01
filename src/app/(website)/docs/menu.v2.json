@@ -3,8 +3,8 @@
     "label": "General",
     "items": [
       {
-        "label": "About",
-        "url": "/docs/about"
+        "label": "Introduction",
+        "url": "/docs"
       },
       {
         "label": "FAQ",
