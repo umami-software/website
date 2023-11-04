@@ -9,7 +9,7 @@ import ScrollBlock from 'components/layout/ScrollBlock';
 import GetStartedBanner from 'components/common/GetStartedBanner';
 import SectionHeader from 'components/layout/SectionHeader';
 import useQueryString from 'components/hooks/useQueryString';
-import styles from './page.module.css';
+import styles from './GoogleAnalytics.module.css';
 
 const items = [
   Blocks.simpleAnalytics,
