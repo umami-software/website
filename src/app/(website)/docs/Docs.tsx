@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import { DISCORD_URL, REPO_URL, TWITTER_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';

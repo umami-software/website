@@ -1,17 +1,13 @@
-'use client';
-import Terms from './terms-of-service.mdx';
 import PageHeader from 'components/layout/PageHeader';
-import { Suspense } from 'react';
+import Terms from './Terms';
 
 export default function TermsPage() {
   return (
     <article>
-      <Suspense>
-        <PageHeader>
-          <h1>Terms of Service</h1>
-        </PageHeader>
-        <Terms />
-      </Suspense>
+      <PageHeader>
+        <h1>Terms of Service</h1>
+      </PageHeader>
+      <Terms />
     </article>
   );
 }
