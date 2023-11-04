@@ -1,9 +1,12 @@
 import Creators from './Creators';
+import { Suspense } from 'react';
 
 export default function () {
   return (
     <article>
-      <Creators />
+      <Suspense>
+        <Creators />
+      </Suspense>
     </article>
   );
 }

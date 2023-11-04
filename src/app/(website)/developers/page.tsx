@@ -1,9 +1,12 @@
 import Developers from './Developers';
+import { Suspense } from 'react';
 
 export default function () {
   return (
     <article>
-      <Developers />
+      <Suspense>
+        <Developers />
+      </Suspense>
     </article>
   );
 }

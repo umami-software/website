@@ -1,9 +1,12 @@
 import Features from './Features';
+import { Suspense } from 'react';
 
 export default function () {
   return (
     <article>
-      <Features />
+      <Suspense>
+        <Features />
+      </Suspense>
     </article>
   );
 }

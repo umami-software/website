@@ -1,9 +1,12 @@
 import Contact from './Contact';
+import { Suspense } from 'react';
 
 export default function () {
   return (
     <article>
-      <Contact />
+      <Suspense>
+        <Contact />
+      </Suspense>
     </article>
   );
 }

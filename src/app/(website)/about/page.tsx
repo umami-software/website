@@ -1,9 +1,12 @@
 import About from './About';
+import { Suspense } from 'react';
 
 export default function AboutPage() {
   return (
     <article>
-      <About />
+      <Suspense>
+        <About />
+      </Suspense>
     </article>
   );
 }

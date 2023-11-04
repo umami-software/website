@@ -1,9 +1,12 @@
 import Agencies from './Agencies';
+import { Suspense } from 'react';
 
 export default function () {
   return (
     <article>
-      <Agencies />
+      <Suspense>
+        <Agencies />
+      </Suspense>
     </article>
   );
 }

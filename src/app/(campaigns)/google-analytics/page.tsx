@@ -1,9 +1,12 @@
 import GoogleAnalytics from './GoogleAnalytics';
+import { Suspense } from 'react';
 
 export default function () {
   return (
     <article>
-      <GoogleAnalytics />
+      <Suspense>
+        <GoogleAnalytics />
+      </Suspense>
     </article>
   );
 }
