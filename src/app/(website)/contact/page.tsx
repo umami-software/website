@@ -1,17 +1,9 @@
-'use client';
-import Link from 'next/link';
-import PageHeader from 'components/layout/PageHeader';
+import Contact from './Contact';
 
-export default function ContactPage() {
+export default function () {
   return (
     <article>
-      <PageHeader>
-        <h1>Contact</h1>
-        <p>We would love to hear from you!</p>
-        <h2>
-          <Link href="mailto:hello@umami.is">hello@umami.is</Link>
-        </h2>
-      </PageHeader>
+      <Contact />
     </article>
   );
 }

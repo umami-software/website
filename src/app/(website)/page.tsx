@@ -1,4 +1,3 @@
-'use client';
 import Hero from './Hero';
 import Statements from './Statements';
 import QuickStart from './QuickStart';

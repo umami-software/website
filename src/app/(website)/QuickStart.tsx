@@ -1,5 +1,4 @@
 'use client';
-
 import TextBlock from 'components/layout/TextBlock';
 import Link from 'next/link';
 import { CLOUD_URL } from 'lib/constants';
@@ -30,7 +29,7 @@ export default function QuickStart() {
         <div className={styles.step}>
           <div>3</div>
           <h2>View your data</h2>
-          <p>Data will start appearing on the you dashboard immediately. It's that easy.</p>
+          <p>Data will start appearing on your dashboard immediately. It's that easy.</p>
         </div>
       </div>
       <div className={styles.action}>

@@ -1,3 +1,4 @@
+'use client';
 import TextBlock from 'components/layout/TextBlock';
 import Twitter from 'assets/twitter.svg';
 import styles from './Quotes.module.css';

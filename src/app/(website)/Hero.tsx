@@ -1,3 +1,4 @@
+'use client';
 import LinkButton from 'components/common/LinkButton';
 import TextBlock from 'components/layout/TextBlock';
 import { CLOUD_URL } from 'lib/constants';

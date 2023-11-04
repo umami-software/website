@@ -1,4 +1,3 @@
-'use client';
 import Plans from './Plans';
 import Calculator from './Calculator';
 import Features from './Features';
@@ -8,7 +7,7 @@ import GetStartedBanner from 'components/common/GetStartedBanner';
 
 export default function PricingPage() {
   return (
-    <>
+    <article>
       <PageHeader>
         <h1>Pricing</h1>
         <p>
@@ -20,6 +19,6 @@ export default function PricingPage() {
       <Features />
       <Questions />
       <GetStartedBanner />
-    </>
+    </article>
   );
 }
