@@ -17,10 +17,6 @@
     "stylelint": "stylelint --fix"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint"
-    ],
     "**/*.css": [
       "stylelint --fix",
       "prettier --write"

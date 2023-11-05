@@ -19,8 +19,7 @@ export default function Menu() {
         <section key={label} className={styles.items}>
           <header>{label}</header>
           {items.map(({ label: text, url }) => {
-            console.log({ url, query });
-            const id = query?.id?.[0];
+            const id = query?.id?.[0]?.split('.')?.[0];
             return (
               <div
                 key={url}

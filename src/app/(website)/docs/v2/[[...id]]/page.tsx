@@ -10,7 +10,7 @@ export async function generateStaticParams() {
 }
 
 export default function ({ params }: { params: { id: string } }) {
-  const id = (params?.id?.[0] || 'index').split('.')[0];
+  const id = params?.id?.[0]?.split('.')?.[0] || 'index';
 
   return <PageContent id={id} />;
 }
