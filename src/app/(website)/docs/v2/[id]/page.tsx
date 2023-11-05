@@ -5,7 +5,7 @@ export async function generateStaticParams() {
   const files = await glob('../*.mdx');
 
   return files.map(file => ({
-    id: file.replace('.mdx', ''),
+    id: file.split('.')[0],
   }));
 }
 
