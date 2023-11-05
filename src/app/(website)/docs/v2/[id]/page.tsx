@@ -1,12 +1,5 @@
-import dynamic from 'next/dynamic';
-import NotFound from 'app/(website)/not-found';
+import Content from './Content';
 
-async function loadContent(id: string) {
-  return dynamic(() => import(`../${id}.mdx`).catch(() => NotFound));
-}
-
-export default async function DocsPage({ params }: { params: { id: string } }) {
-  const Page = await loadContent(params.id);
-
-  return <Page />;
+export default async function ({ params }: { params: { id: string } }) {
+  return <Content id={params.id} />;
 }
