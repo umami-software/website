@@ -19,7 +19,6 @@ export default function Menu() {
         <section key={label} className={styles.items}>
           <header>{label}</header>
           {items.map(({ label: text, url }) => {
-            console.log({ url, query });
             return (
               <div
                 key={url}

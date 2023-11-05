@@ -1,9 +1,14 @@
-'use client';
-import dynamic from 'next/dynamic';
-import NotFound from 'app/(website)/not-found';
+import { glob } from 'glob';
+import PageContent from './PageContent';
+
+export async function generateStaticParams() {
+  const files = await glob('../*.mdx');
+
+  return files.map(file => ({
+    id: file.replace('.mdx', ''),
+  }));
+}
 
 export default async function ({ params }: { params: { id: string } }) {
-  const Page = dynamic(() => import(`../${params.id}.mdx`).catch(() => NotFound));
-
-  return <Page />;
+  return <PageContent id={params.id} />;
 }
