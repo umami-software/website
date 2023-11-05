@@ -9,6 +9,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ({ params }: { params: { id: string } }) {
-  return <PageContent id={params.id} />;
+export default function ({ params }: { params: { id: string } }) {
+  return (
+    <>
+      <h1>{params.id}!</h1>
+      <PageContent id={params.id} />
+    </>
+  );
 }
