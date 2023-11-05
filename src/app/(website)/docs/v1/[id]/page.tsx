@@ -1,5 +1,9 @@
-import Content from './Content';
+'use client';
+import dynamic from 'next/dynamic';
+import NotFound from 'app/(website)/not-found';
 
 export default async function ({ params }: { params: { id: string } }) {
-  return <Content id={params.id} />;
+  const Page = dynamic(() => import(`../${params.id}.mdx`).catch(() => NotFound));
+
+  return <Page />;
 }

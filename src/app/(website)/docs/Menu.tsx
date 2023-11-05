@@ -18,16 +18,21 @@ export default function Menu() {
       {menu.map(({ label, items }) => (
         <section key={label} className={styles.items}>
           <header>{label}</header>
-          {items.map(({ label: text, url }) => (
-            <div
-              key={url}
-              className={classNames(styles.item, {
-                [styles.selected]: url.split('/').splice(-1)[0] === query.id,
-              })}
-            >
-              <Link href={url}>{text}</Link>
-            </div>
-          ))}
+          {items.map(({ label: text, url }) => {
+            console.log({ url, query });
+            return (
+              <div
+                key={url}
+                className={classNames(styles.item, {
+                  [styles.selected]:
+                    url.split('/').splice(-1)[0] === query.id ||
+                    (url === '/docs' && query.id === 'index'),
+                })}
+              >
+                <Link href={url}>{text}</Link>
+              </div>
+            );
+          })}
         </section>
       ))}
     </menu>
