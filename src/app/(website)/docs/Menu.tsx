@@ -19,13 +19,14 @@ export default function Menu() {
         <section key={label} className={styles.items}>
           <header>{label}</header>
           {items.map(({ label: text, url }) => {
+            console.log({ url, query });
+            const id = query?.id?.[0];
             return (
               <div
                 key={url}
                 className={classNames(styles.item, {
                   [styles.selected]:
-                    url.split('/').splice(-1)[0] === query.id ||
-                    (url === '/docs' && query.id === 'index'),
+                    url.split('/').splice(-1)[0] === id || (url === '/docs' && !id),
                 })}
               >
                 <Link href={url}>{text}</Link>
