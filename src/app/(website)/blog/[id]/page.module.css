@@ -27,6 +27,6 @@
 }
 
 .back {
-  color: var(--base900);
-  font-size: var(--font-size-sm);
+  display: block;
+  margin: 40px 0;
 }

@@ -16,10 +16,10 @@ export default function ({ params }: { params: { id: string } }) {
 
   return (
     <article className={styles.blog}>
+      <PageContent id={id} />
       <Link href="/blog" className={styles.back}>
         ← Back to Blog
       </Link>
-      <PageContent id={id} />
     </article>
   );
 }
