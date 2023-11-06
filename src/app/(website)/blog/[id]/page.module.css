@@ -1,0 +1,32 @@
+.blog {
+  width: 680px;
+  margin: auto;
+}
+
+.blog h1 {
+  font-size: max(48px, min(5vw, 76px));
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.blog h2 {
+  font-size: max(18px, min(2vw, 24px));
+  letter-spacing: -0.05em;
+}
+
+.blog p {
+  color: var(--base800);
+  font-size: max(14px, min(2vw, 16px));
+  font-weight: 400;
+}
+
+.blog a {
+  color: var(--blue800);
+}
+
+.back {
+  color: var(--base900);
+  font-size: var(--font-size-sm);
+}

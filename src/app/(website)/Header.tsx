@@ -32,6 +32,7 @@ export default function Header() {
             </PopupTrigger>
             <Link href="/docs">Docs</Link>
             <Link href="/developers">Developers</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="/pricing">Pricing</Link>
           </nav>
           <div className={styles.buttons}>

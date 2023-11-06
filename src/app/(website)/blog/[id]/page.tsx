@@ -1,12 +1,25 @@
-import dynamic from 'next/dynamic';
-import NotFound from 'app/(website)/not-found';
+import { glob } from 'glob';
+import PageContent from './PageContent';
+import styles from './page.module.css';
+import Link from 'next/link';
 
-async function loadContent(id: string) {
-  return dynamic(() => import(`../${id}.mdx`).catch(() => NotFound));
+export async function generateStaticParams() {
+  const files = await glob('../*.mdx');
+
+  return files.map(file => ({
+    id: file.split('.')[0],
+  }));
 }
 
-export default async function DocsPage({ params }: { params: { id: string } }) {
-  const Page = await loadContent(params.id);
+export default function ({ params }: { params: { id: string } }) {
+  const id = params?.id?.split('.')?.[0];
 
-  return <Page />;
+  return (
+    <article className={styles.blog}>
+      <Link href="/blog" className={styles.back}>
+        ← Back to Blog
+      </Link>
+      <PageContent id={id} />
+    </article>
+  );
 }

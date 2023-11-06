@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Button } from 'react-basics';
+import { Button, Icon } from 'react-basics';
 import MobileMenu from './MobileMenu';
 import XMark from 'assets/xmark.svg';
 import Bars from 'assets/bars.svg';
@@ -39,7 +39,7 @@ export default function HamburgerButton() {
   return (
     <>
       <Button variant="quiet" className={styles.button} onClick={handleClick}>
-        {active ? <XMark /> : <Bars />}
+        <Icon>{active ? <XMark /> : <Bars />}</Icon>
       </Button>
       {active && <MobileMenu items={menuItems} onClose={handleClose} />}
     </>
