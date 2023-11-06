@@ -12,10 +12,6 @@
   overflow: hidden;
 }
 
-.dropdown {
-  margin-bottom: 2rem;
-}
-
 .menu {
   scrollbar-gutter: stable;
   overflow-y: scroll;

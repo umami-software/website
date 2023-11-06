@@ -6,8 +6,6 @@ import v1 from './menu.v1.json';
 import v2 from './menu.v2.json';
 import styles from './Sidebar.module.css';
 
-import { Dropdown } from 'react-basics';
-
 const versions = { v1, v2 };
 
 export default function Sidebar() {
@@ -17,20 +15,6 @@ export default function Sidebar() {
 
   return (
     <div className={styles.sidebar}>
-      <Dropdown
-        items={[
-          {
-            label: 'Using Umami v1',
-            value: 'v1',
-          },
-          {
-            label: 'Using Umami v2',
-            value: 'v2',
-          },
-        ]}
-        name="dropdown"
-        className={styles.dropdown}
-      />
       <div className={styles.menuWrapper}>
         <nav className={styles.menu}>
           {menu.map(({ label, items }) => {
