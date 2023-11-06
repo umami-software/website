@@ -14,28 +14,30 @@ export default function Menu() {
   const menu = versions[pathname.includes('/v1') ? 'v1' : 'v2'];
 
   return (
-    <menu className={styles.menu}>
-      {menu.map(({ label, items }) => {
-        return (
-          <section key={label} className={styles.items}>
-            <header>{label}</header>
-            {items.map(({ label: text, url }) => {
-              const id = (query?.id as string)?.split('.')?.[0];
-              return (
-                <div
-                  key={url}
-                  className={classNames(styles.item, {
-                    [styles.selected]:
-                      url.split('/').splice(-1)[0] === id || (url === '/docs' && id === 'index'),
-                  })}
-                >
-                  <Link href={url}>{text}</Link>
-                </div>
-              );
-            })}
-          </section>
-        );
-      })}
-    </menu>
+    <div className={styles['menu-wrapper']}>
+      <nav className={styles.menu}>
+        {menu.map(({ label, items }) => {
+          return (
+            <section key={label} className={styles.items}>
+              <header>{label}</header>
+              {items.map(({ label: text, url }) => {
+                const id = (query?.id as string)?.split('.')?.[0];
+                return (
+                  <div
+                    key={url}
+                    className={classNames(styles.item, {
+                      [styles.selected]:
+                        url.split('/').splice(-1)[0] === id || (url === '/docs' && id === 'index'),
+                    })}
+                  >
+                    <Link href={url}>{text}</Link>
+                  </div>
+                );
+              })}
+            </section>
+          );
+        })}
+      </nav>
+    </div>
   );
 }

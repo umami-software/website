@@ -44,3 +44,17 @@
 .menu .item.selected a {
   color: var(--primary400);
 }
+
+.menu-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-right: 1rem;
+}
+
+.menu {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+}

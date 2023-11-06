@@ -5,9 +5,7 @@ import styles from './layout.module.css';
 export default function DocsLayout({ children }) {
   return (
     <section className={styles.docs}>
-      <nav className={styles.nav}>
-        <Menu />
-      </nav>
+      <Menu />
       <article>{children}</article>
     </section>
   );
