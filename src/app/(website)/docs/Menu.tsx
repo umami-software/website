@@ -21,7 +21,6 @@ export default function Menu() {
             <header>{label}</header>
             {items.map(({ label: text, url }) => {
               const id = (query?.id as string)?.split('.')?.[0];
-              console.log({ url, query });
               return (
                 <div
                   key={url}
