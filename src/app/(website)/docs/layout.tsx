@@ -1,11 +1,11 @@
 'use client';
-import Menu from './Menu';
+import Sidebar from './Sidebar';
 import styles from './layout.module.css';
 
 export default function DocsLayout({ children }) {
   return (
     <section className={styles.docs}>
-      <Menu />
+      <Sidebar />
       <article>{children}</article>
     </section>
   );
