@@ -6,7 +6,7 @@ export default function DocsLayout({ children }) {
   return (
     <section className={styles.docs}>
       <Sidebar />
-      <article>{children}</article>
+      <article className={styles.content}>{children}</article>
     </section>
   );
 }

@@ -28,3 +28,7 @@
 .docs a:hover {
   color: var(--primary500);
 }
+
+.content {
+  min-height: calc(100vh - 99px);
+}
