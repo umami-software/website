@@ -8,7 +8,6 @@ import { CLOUD_URL } from 'lib/constants';
 import ScrollBlock from 'components/layout/ScrollBlock';
 import { Blocks } from 'lib/content';
 import useQueryString from 'components/hooks/useQueryString';
-
 import styles from './Agencies.module.css';
 
 const items = [Blocks.maximizeValue, Blocks.focusOnResults, Blocks.protectClientCompliance];

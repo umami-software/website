@@ -8,13 +8,14 @@
 }
 
 .header {
-  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
 .header img {
   border-radius: 20px;
-  max-width: 540px;
+  max-width: 100%;
   margin: auto;
   transform: rotate(6deg);
 }
@@ -28,7 +29,8 @@
 }
 
 .body img {
-  max-width: 500px;
+  max-width: 100%;
+  height: auto;
 }
 
 .services {
@@ -41,4 +43,11 @@
 .services > div {
   font-size: 24px;
   padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    gap: 60px;
+    grid-template-columns: 1fr;
+  }
 }

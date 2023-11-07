@@ -9,6 +9,33 @@ import GitHub from 'assets/github.svg';
 import styles from './Header.module.css';
 import useQueryString from 'components/hooks/useQueryString';
 
+const menuItems = [
+  {
+    label: 'Home',
+    value: '/',
+  },
+  {
+    label: 'Features',
+    value: '/features',
+  },
+  {
+    label: 'Docs',
+    value: '/docs',
+  },
+  {
+    label: 'Developers',
+    value: '/developers',
+  },
+  {
+    label: 'Blog',
+    value: '/blog',
+  },
+  {
+    label: 'Pricing',
+    value: '/pricing',
+  },
+];
+
 export default function Header() {
   const query = useQueryString({ ref: 'umami-header' });
   useScroll();
@@ -37,7 +64,9 @@ export default function Header() {
           </nav>
           <div className={styles.buttons}>
             <Link href={REPO_URL} target="_blank" className={styles.github}>
-              <GitHub />
+              <Icon size="lg">
+                <GitHub />
+              </Icon>
               <Text>{GITHUB_STARS}</Text>
             </Link>
             <Link
@@ -56,7 +85,7 @@ export default function Header() {
             </LinkButton>
           </div>
           <div className={styles.hamburger}>
-            <HamburgerButton />
+            <HamburgerButton items={menuItems} />
           </div>
         </div>
       </Container>

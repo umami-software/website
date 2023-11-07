@@ -6,26 +6,7 @@ import XMark from 'assets/xmark.svg';
 import Bars from 'assets/bars.svg';
 import styles from './HamburgerButton.module.css';
 
-const menuItems = [
-  {
-    label: 'Product',
-    value: '/features',
-  },
-  {
-    label: 'Docs',
-    value: '/docs',
-  },
-  {
-    label: 'Developers',
-    value: '/developers',
-  },
-  {
-    label: 'Pricing',
-    value: '/pricing',
-  },
-];
-
-export default function HamburgerButton() {
+export default function HamburgerButton({ items }) {
   const [active, setActive] = useState(false);
 
   function handleClick() {
@@ -41,7 +22,7 @@ export default function HamburgerButton() {
       <Button variant="quiet" className={styles.button} onClick={handleClick}>
         <Icon>{active ? <XMark /> : <Bars />}</Icon>
       </Button>
-      {active && <MobileMenu items={menuItems} onClose={handleClose} />}
+      {active && <MobileMenu items={items} onClose={handleClose} />}
     </>
   );
 }

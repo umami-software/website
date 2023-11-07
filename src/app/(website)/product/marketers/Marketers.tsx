@@ -15,6 +15,8 @@ const items = [
   Blocks.customEvents,
   Blocks.filters,
   Blocks.unlimitedWebsites,
+  Blocks.realtimeData,
+  Blocks.shareData,
 ];
 
 export default function Marketers() {
