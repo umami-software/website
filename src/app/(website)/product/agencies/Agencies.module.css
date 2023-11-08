@@ -15,7 +15,7 @@
 
 .header img {
   border-radius: 20px;
-  max-width: 100%;
+  max-width: 400px;
   margin: auto;
   transform: rotate(6deg);
 }

@@ -21,12 +21,9 @@ export default function Agencies() {
         <ImageBlock className={styles.header}>
           <TextBlock size="xl" align="center">
             <h1>
-              Web analytics that let <span className={styles.highlight}>agencies</span> skip to the
-              good stuff.
+              Web analytics for results-driven <span className={styles.highlight}>agencies</span>.
             </h1>
-            <p>
-              Umami leaves tedious tinkering, compliance crises, and management migraines behind.
-            </p>
+            <p>Umami helps agencies deliver exceptional value to clients.</p>
             <LinkButton href={`${CLOUD_URL}/signup${query}`} size="lg" variant="primary">
               Start free trial
             </LinkButton>

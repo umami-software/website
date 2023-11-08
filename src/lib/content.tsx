@@ -84,7 +84,7 @@ export const Blocks = {
   },
   maximizeValue: {
     title: 'Maximize value, minimize time',
-    description: `Umami helps you onboard clients quickly and reduces time-tovalue, protecting agency margins. Implement Umami in just a few clicks and get key metrics and insights in a single page. Shareable links and reports save costly time configuring, leaving you more time for clients.`,
+    description: `Umami helps you onboard clients quickly and reduces time-to-value, protecting agency margins. Implement Umami in just a few clicks and get key metrics and insights in a single page. Shareable links and reports save costly time configuring, leaving you more time for clients.`,
     image: '/images/preview-website-stats.png',
   },
   focusOnResults: {

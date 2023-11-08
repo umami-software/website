@@ -4,10 +4,10 @@ import Link from 'next/link';
 import CompanyLogo from 'components/common/CompanyLogo';
 import HamburgerButton from 'components/common/HamburgerButton';
 import LinkButton from 'components/common/LinkButton';
+import useQueryString from 'components/hooks/useQueryString';
 import { GITHUB_STARS, REPO_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';
 import styles from './Header.module.css';
-import useQueryString from 'components/hooks/useQueryString';
 
 const menuItems = [
   {

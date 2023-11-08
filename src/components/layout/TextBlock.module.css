@@ -5,26 +5,12 @@
   line-height: 1.2;
 }
 
-.text p {
-  color: var(--base700);
-  font-size: max(14px, min(2vw, 16px));
-  font-weight: 400;
-}
-
 .text.xl h1 {
   font-size: max(48px, min(5vw, 76px));
 }
 
 .text.lg h1 {
   font-size: max(48px, min(5vw, 64px));
-}
-
-.text.xl p {
-  font-size: max(15px, min(2vw, 20px));
-}
-
-.text.lg p {
-  font-size: max(14px, min(2vw, 16px));
 }
 
 .text.md h1 {
@@ -38,6 +24,20 @@
 .text h2 {
   font-size: max(18px, min(2vw, 24px));
   letter-spacing: -0.05em;
+}
+
+.text p {
+  color: var(--base700);
+  font-size: max(14px, min(2vw, 16px));
+  font-weight: 400;
+}
+
+.text.xl p {
+  font-size: max(15px, min(2vw, 20px));
+}
+
+.text.lg p {
+  font-size: max(14px, min(2vw, 16px));
 }
 
 .start {

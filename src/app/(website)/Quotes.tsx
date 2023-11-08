@@ -61,7 +61,7 @@ const items = [
 
 export default function Quotes() {
   return (
-    <TextBlock className={styles.container} align="center">
+    <TextBlock className={styles.container} size="lg" align="center">
       <h1>People love Umami</h1>
       <div className={styles.list}>
         {items.map(({ name, username, quote }) => {
