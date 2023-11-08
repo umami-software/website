@@ -102,4 +102,9 @@ export const Blocks = {
     description: `Umami is dedicated to open-source development. You never need to worry about data ownership or vendor lock-in`,
     icon: <Code />,
   },
+  reports: {
+    title: 'Robust reports',
+    description: 'Umami has built-in reporting to help you gain deeper insights into your data.',
+    image: '/images/preview-reports.png',
+  },
 };

@@ -11,10 +11,7 @@ const items = [
   Blocks.customEvents,
   Blocks.filters,
   Blocks.realtimeData,
-  Blocks.mobileFriendly,
-  Blocks.unlimitedWebsites,
-  Blocks.lightWeight,
-  Blocks.shareData,
+  Blocks.reports,
 ];
 
 export default function Features() {
