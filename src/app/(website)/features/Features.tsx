@@ -1,9 +1,9 @@
 'use client';
+import classNames from 'classnames';
 import PageHeader from 'components/layout/PageHeader';
 import GetStartedBanner from 'components/common/GetStartedBanner';
-import styles from './Features.module.css';
 import TextBlock from 'components/layout/TextBlock';
-import classNames from 'classnames';
+import styles from './Features.module.css';
 
 const items = [
   {
