@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { glob } from 'glob';
 import PageContent from './PageContent';
 
@@ -14,3 +15,7 @@ export default function ({ params }: { params: { id: string } }) {
 
   return <PageContent id={id} />;
 }
+
+export const metadata: Metadata = {
+  title: 'Docs – umami',
+};

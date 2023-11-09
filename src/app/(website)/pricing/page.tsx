@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import PageHeader from 'components/layout/PageHeader';
 import GetStartedBanner from 'components/common/GetStartedBanner';
 import Plans from './Plans';
@@ -22,3 +23,7 @@ export default function PricingPage() {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Pricing – umami',
+};

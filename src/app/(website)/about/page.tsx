@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import About from './About';
 
 export default function AboutPage() {
@@ -7,3 +8,7 @@ export default function AboutPage() {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'About – umami',
+};

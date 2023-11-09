@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Marketers from './Marketers';
 
 export default function () {
@@ -7,3 +8,7 @@ export default function () {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'For Marketers – umami',
+};

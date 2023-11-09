@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import GetStartedBanner from 'components/common/GetStartedBanner';
 import NewsletterSignup from 'components/common/NewsletterSignup';
 import Hero from './Hero';
@@ -22,3 +23,7 @@ export default function () {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'umami',
+};

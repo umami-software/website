@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Creators from './Creators';
 
 export default function () {
@@ -7,3 +8,7 @@ export default function () {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'For Creators – umami',
+};
