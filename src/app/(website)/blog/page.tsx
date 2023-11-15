@@ -3,7 +3,7 @@ import PageHeader from 'components/layout/PageHeader';
 import Card from 'app/(website)/blog/Card';
 import styles from './page.module.css';
 
-export const blogs = [
+const blogs = [
   {
     id: 'why-privacy-matters',
     title: 'Why Privacy Matters',
