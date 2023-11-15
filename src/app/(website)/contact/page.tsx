@@ -10,5 +10,5 @@ export default function () {
 }
 
 export const metadata: Metadata = {
-  title: 'Contact – umami',
+  title: 'Contact',
 };

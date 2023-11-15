@@ -10,5 +10,5 @@ export default function () {
 }
 
 export const metadata: Metadata = {
-  title: 'For Creators – umami',
+  title: 'For Creators',
 };

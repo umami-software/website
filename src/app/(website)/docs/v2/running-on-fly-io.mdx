@@ -1,10 +1,14 @@
+export const meta = {
+  title: 'Running on Fly.io',
+};
+
 # Running on Fly.io
 
 [Fly.io](https://fly.io) turns containers into VMs that can be deployed in one or multiple regions. The `fly launch` process can automatically set up Postgres VM that in connection with your Umami app.
 
 ## Setup using Umami's pre-built container
 
-For anyone wishing to deploy Umami on Fly now, here's a simple method using  [Umami's pre-built container for postgres](https://github.com/umami-software/umami/pkgs/container/umami/123905077?tag=postgresql-latest) instead of pulling the source and modifying the Dockerfile.
+For anyone wishing to deploy Umami on Fly now, here's a simple method using [Umami's pre-built container for postgres](https://github.com/umami-software/umami/pkgs/container/umami/123905077?tag=postgresql-latest) instead of pulling the source and modifying the Dockerfile.
 
 If you don't already have `flyctl` installed, [install it](https://fly.io/docs/hands-on/install-flyctl/).
 

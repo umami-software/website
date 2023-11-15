@@ -24,6 +24,4 @@ export default function () {
   );
 }
 
-export const metadata: Metadata = {
-  title: 'umami',
-};
+export const metadata: Metadata = {};

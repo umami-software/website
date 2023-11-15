@@ -1,3 +1,7 @@
+export const meta = {
+  title: 'Sending stats',
+};
+
 # Sending stats
 
 ## `POST /api/send`
@@ -25,20 +29,20 @@ the following data:
 
 ```json
 {
-    "payload": {
-        "hostname": "your-hostname",
-        "language": "en-US",
-        "referrer": "",
-        "screen": "1920x1080",
-        "title": "dashboard",
-        "url": "/",
-        "website": "your-website-id",
-        "name": "event-name",
-        "data": {
-            "foo": "bar"
-        }
-    },
-    "type": "event"
+  "payload": {
+    "hostname": "your-hostname",
+    "language": "en-US",
+    "referrer": "",
+    "screen": "1920x1080",
+    "title": "dashboard",
+    "url": "/",
+    "website": "your-website-id",
+    "name": "event-name",
+    "data": {
+      "foo": "bar"
+    }
+  },
+  "type": "event"
 }
 ```
 
@@ -54,16 +58,16 @@ You can generate most of these values programmatically with JavaScript using the
 
 ```js
 const data = {
-    payload: {
-        hostname: window.location.hostname,
-        language: navigator.language,
-        referrer: document.referrer,
-        screen: `${window.screen.width}x${window.screen.height}`,
-        title: document.title,
-        url: window.location.pathname,
-        website: 'your-website-id',
-        name: 'event-name'
-    },
-    type: 'event'
+  payload: {
+    hostname: window.location.hostname,
+    language: navigator.language,
+    referrer: document.referrer,
+    screen: `${window.screen.width}x${window.screen.height}`,
+    title: document.title,
+    url: window.location.pathname,
+    website: 'your-website-id',
+    name: 'event-name',
+  },
+  type: 'event',
 };
 ```

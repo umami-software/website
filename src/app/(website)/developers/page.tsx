@@ -13,5 +13,5 @@ export default function () {
 }
 
 export const metadata: Metadata = {
-  title: 'Developers – umami',
+  title: 'Developers',
 };

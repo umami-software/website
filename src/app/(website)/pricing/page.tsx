@@ -25,5 +25,5 @@ export default function PricingPage() {
 }
 
 export const metadata: Metadata = {
-  title: 'Pricing – umami',
+  title: 'Pricing',
 };

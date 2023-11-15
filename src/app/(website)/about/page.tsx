@@ -10,5 +10,5 @@ export default function AboutPage() {
 }
 
 export const metadata: Metadata = {
-  title: 'About – umami',
+  title: 'About',
 };

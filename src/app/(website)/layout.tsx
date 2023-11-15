@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { Suspense } from 'react';
 import Header from './Header';
 import Main from './Main';
@@ -36,3 +37,10 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s – umami',
+    default: 'umami',
+  },
+};

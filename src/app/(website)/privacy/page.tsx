@@ -14,5 +14,5 @@ export default function PrivacyPage() {
 }
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy – umami',
+  title: 'Privacy Policy',
 };

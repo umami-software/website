@@ -3,7 +3,7 @@ import PageHeader from 'components/layout/PageHeader';
 import Card from 'app/(website)/blog/Card';
 import styles from './page.module.css';
 
-const blogs = [
+export const blogs = [
   {
     id: 'why-privacy-matters',
     title: 'Why Privacy Matters',
@@ -28,5 +28,5 @@ export default async function () {
 }
 
 export const metadata: Metadata = {
-  title: 'Blog – umami',
+  title: 'Blog',
 };

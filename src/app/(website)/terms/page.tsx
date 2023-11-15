@@ -14,5 +14,5 @@ export default function TermsPage() {
 }
 
 export const metadata: Metadata = {
-  title: 'Terms of Service – umami',
+  title: 'Terms of Service',
 };
