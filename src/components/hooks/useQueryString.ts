@@ -1,20 +1,16 @@
 import { useSearchParams } from 'next/navigation';
 
-export default function useQueryString(params: object = {}, prefix = '?') {
+export default function useQueryString(params: object = {}) {
   const searchParams = new URLSearchParams();
   const existingParams = useSearchParams();
 
-  const entries = Object.entries(params);
-
-  if (entries.length > 0) {
-    for (const [key, value] of entries) {
-      searchParams.append(key, value);
-    }
+  for (const [key, value] of Object.entries(params)) {
+    searchParams.append(key, value);
   }
 
   for (const [key, value] of existingParams.entries()) {
     searchParams.append(key, value);
   }
 
-  return `${searchParams.size ? prefix : ''}${searchParams}`;
+  return searchParams.size ? `?${searchParams}` : '';
 }
