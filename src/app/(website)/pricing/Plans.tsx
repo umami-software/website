@@ -29,7 +29,7 @@ export default function Plans() {
           From <strong>$9</strong> / month
         </>
       ),
-      description: '100K — 50M monthly events',
+      description: 'Simple usage based pricing',
       features: [
         'Unlimited websites',
         'Unlimited team members',
