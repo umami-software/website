@@ -19,7 +19,7 @@ const tiers = [
 ];
 
 export default function Calculator() {
-  const [tier, setTier] = useState(0);
+  const [tier, setTier] = useState(1);
   const [billing, setBilling] = useState('Monthly');
   const selected = tiers[tier];
   const isAnnual = billing === 'Annual';
