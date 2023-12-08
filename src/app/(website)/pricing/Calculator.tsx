@@ -32,8 +32,6 @@ export default function Calculator() {
     setTier(value);
   };
 
-  console.log('selectedKey', billing);
-
   return (
     <div className={styles.calculator}>
       <div className={styles.body}>
