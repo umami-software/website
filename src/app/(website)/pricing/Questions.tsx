@@ -26,7 +26,7 @@ const questions = [
   },
   {
     question: 'Where are your servers located?',
-    answer: `Umami Cloud servers are located in the EU and adhere to GDPR regulations.`,
+    answer: `Umami Cloud servers are located in the US and EU and adhere to GDRP and CCPA regulations.`,
   },
   {
     question: 'Can I export my data?',
