@@ -1,0 +1,29 @@
+[
+  {
+    "label": "General",
+    "items": [
+      {
+        "label": "Introduction",
+        "url": "/docs/cloud"
+      }
+    ]
+  },
+  {
+    "label": "API",
+    "items": [
+      {
+        "label": "API key",
+        "url": "/docs/cloud/api-key"
+      }
+    ]
+  },
+  {
+    "label": "Data",
+    "items": [
+      {
+        "label": "Import data",
+        "url": "/docs/cloud/import-data"
+      }
+    ]
+  }
+]

@@ -2,7 +2,7 @@
   font-size: 14px;
   position: sticky;
   top: 70px;
-  margin-top: 70px;
+  margin-right: 40px;
   color: var(--base800);
 }
 
@@ -43,4 +43,26 @@
 
 .menu .item.selected a {
   color: var(--primary400);
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--base75);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.menu .toggle a {
+  color: var(--base700);
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.toggle a.active {
+  color: var(--base900);
+  background: var(--base50);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
