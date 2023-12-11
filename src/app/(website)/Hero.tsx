@@ -11,7 +11,11 @@ export default function Hero() {
   return (
     <div className={styles.hero}>
       <TextBlock size="xl" align="center">
-        <h1>Web analytics shouldn't be complicated.</h1>
+        <h1>
+          Empowering insights.
+          <br />
+          Preserving privacy.
+        </h1>
         <p className={styles.subtitle}>
           Umami makes it easy to collect, analyze, and understand your web data &mdash; while
           maintaining <strong>visitor privacy</strong> and <strong>data ownership</strong>.
