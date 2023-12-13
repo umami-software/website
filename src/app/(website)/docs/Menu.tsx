@@ -39,7 +39,7 @@ export default function Menu() {
                   className={classNames(styles.item, {
                     [styles.selected]:
                       url.split('/').splice(-1)[0] === id ||
-                      (['/docs', '/docs/cloud'].includes(url) && id === 'index'),
+                      (['/docs', '/docs/cloud'].includes(url) && (!id || id === 'index')),
                   })}
                 >
                   <Link href={url}>{text}</Link>
