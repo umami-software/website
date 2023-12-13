@@ -23,7 +23,7 @@ export default function Menu() {
         <Link href="/docs" className={classNames({ [styles.active]: !isCloud })}>
           Open-source
         </Link>
-        <Link href="/docs/cloud" className={classNames({ [styles.active]: isCloud })}>
+        <Link href="/docs/cloud/index" className={classNames({ [styles.active]: isCloud })}>
           Cloud
         </Link>
       </div>
