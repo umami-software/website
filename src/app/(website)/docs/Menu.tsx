@@ -21,7 +21,7 @@ export default function Menu() {
     <menu className={styles.menu}>
       <div className={styles.toggle}>
         <Link href="/docs" className={classNames({ [styles.active]: !isCloud })}>
-          Developer
+          Open-source
         </Link>
         <Link href="/docs/cloud" className={classNames({ [styles.active]: isCloud })}>
           Cloud
