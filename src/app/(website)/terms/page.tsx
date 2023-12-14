@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import PageHeader from 'components/layout/PageHeader';
 import Terms from './Terms';
 
@@ -11,3 +12,7 @@ export default function TermsPage() {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+};

@@ -1,5 +1,5 @@
-import { Suspense } from 'react';
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -39,5 +39,8 @@ export default function RootLayout({ children }) {
 }
 
 export const metadata: Metadata = {
-  title: 'umami',
+  title: {
+    template: '%s – umami',
+    default: 'umami',
+  },
 };

@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import PageHeader from 'components/layout/PageHeader';
 import Privacy from './Privacy';
 
@@ -11,3 +12,7 @@ export default function PrivacyPage() {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+};

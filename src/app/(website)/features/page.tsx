@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Features from './Features';
 
 export default function () {
@@ -7,3 +8,7 @@ export default function () {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Features',
+};

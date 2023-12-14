@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import PageHeader from 'components/layout/PageHeader';
 import Card from 'app/(website)/blog/Card';
 import styles from './page.module.css';
@@ -25,3 +26,7 @@ export default async function () {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Blog',
+};
