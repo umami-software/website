@@ -14,7 +14,6 @@ export default function Menu() {
   const query = useParams();
   const isCloud = pathname.includes('/docs/cloud');
   const version = isCloud ? 'cloud' : pathname.includes('/v1') ? 'v1' : 'v2';
-  console.log({ version });
   const menu = versions[version];
 
   return (
@@ -31,7 +30,7 @@ export default function Menu() {
                   className={classNames(styles.item, {
                     [styles.selected]:
                       url.split('/').splice(-1)[0] === id ||
-                      (['/docs', '/docs/cloud'].includes(url) && (!id || id === 'index')),
+                      (['/docs', '/docs/cloud'].includes(url) && (!id || id === 'intro')),
                   })}
                 >
                   <Link href={url}>{text}</Link>
