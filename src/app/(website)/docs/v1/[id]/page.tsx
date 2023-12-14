@@ -1,11 +1,35 @@
-'use client';
-import dynamic from 'next/dynamic';
-import NotFound from 'app/(website)/not-found';
+import { Metadata } from 'next';
+import { glob } from 'glob';
+import PageContent from './PageContent';
 
-export default async function ({ params }: { params: { id: string } }) {
+type Props = {
+  params: { id: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const id = params.id;
+
+  const data = await import(`../${id}.mdx`);
+  const pageTitle = data.meta?.title ?? 'Docs';
+
+  return {
+    title: {
+      absolute: `${pageTitle} – umami (v1)`,
+      default: 'Docs – umami (v1)',
+    },
+  };
+}
+
+export async function generateStaticParams() {
+  const files = await glob('../*.mdx');
+
+  return files.map(file => ({
+    id: file.split('.')[0],
+  }));
+}
+
+export default function ({ params }: Props) {
   const id = params?.id?.split('.')?.[0];
 
-  const Page: any = dynamic(() => import(`../${id}.mdx`).catch(() => NotFound));
-
-  return <Page />;
+  return <PageContent id={id} />;
 }
