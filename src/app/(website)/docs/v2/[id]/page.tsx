@@ -9,10 +9,8 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.id;
 
-  const data = await import(`../${id}.mdx`);
-
   return {
-    title: data.meta?.title ?? 'Docs',
+    title: `${id[0].toUpperCase()}${id.slice(1).replace('-', ' ')}`,
   };
 }
 

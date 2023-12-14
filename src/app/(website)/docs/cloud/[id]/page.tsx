@@ -1,5 +1,14 @@
 import { glob } from 'glob';
 import PageContent from './PageContent';
+import { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const id = params.id;
+
+  return {
+    title: `${id[0].toUpperCase()}${id.slice(1).replace('-', ' ')}`,
+  };
+}
 
 export async function generateStaticParams() {
   const files = await glob('../*.mdx');
