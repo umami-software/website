@@ -38,7 +38,9 @@ More details on accessing Umami Cloud can be found under [API key](/docs/api-key
 Import the configured api-client and query using the available class methods.
 
 ```js
-import { client } from '@umami/api-client';
+import { getClient } from '@umami/api-client';
+
+const client = getClient();
 
 const { ok, data, status, error } = await client.getWebsites();
 ```
