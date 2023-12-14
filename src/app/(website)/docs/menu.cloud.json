@@ -5,6 +5,35 @@
       {
         "label": "Introduction",
         "url": "/docs/cloud/intro"
+      },
+      {
+        "label": "FAQ",
+        "url": "/docs/cloud/faq"
+      }
+    ]
+  },
+  {
+    "label": "Getting started",
+    "items": [
+      {
+        "label": "Getting started",
+        "url": "/docs/cloud/getting-started"
+      },
+      {
+        "label": "Sign up",
+        "url": "/docs/cloud/sign-up"
+      },
+      {
+        "label": "Login",
+        "url": "/docs/cloud/login"
+      },
+      {
+        "label": "Add a website",
+        "url": "/docs/cloud/add-a-website"
+      },
+      {
+        "label": "Collect data",
+        "url": "/docs/cloud/collect-data"
       }
     ]
   },
@@ -20,6 +49,10 @@
   {
     "label": "Data",
     "items": [
+      {
+        "label": "Export data",
+        "url": "/docs/cloud/export-data"
+      },
       {
         "label": "Import data",
         "url": "/docs/cloud/import-data"

@@ -9,7 +9,6 @@
     "type": "git",
     "url": "https://github.com/umami-software/website.git"
   },
-  "type": "module",
   "scripts": {
     "dev": "next dev -p 5000",
     "build": "next build",
