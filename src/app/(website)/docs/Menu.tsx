@@ -18,15 +18,7 @@ export default function Menu() {
   const menu = versions[version];
 
   return (
-    <menu className={styles.menu}>
-      <div className={styles.toggle}>
-        <Link href="/docs" className={classNames({ [styles.active]: !isCloud })}>
-          Open-source
-        </Link>
-        <Link href="/docs/cloud/index" className={classNames({ [styles.active]: isCloud })}>
-          Cloud
-        </Link>
-      </div>
+    <div className={styles.menu}>
       {menu.map(({ label, items }) => {
         return (
           <section key={label} className={styles.items}>
@@ -49,6 +41,6 @@ export default function Menu() {
           </section>
         );
       })}
-    </menu>
+    </div>
   );
 }

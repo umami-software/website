@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/umami-software/website.git"
   },
+  "type": "module",
   "scripts": {
     "dev": "next dev -p 5000",
     "build": "next build",
@@ -70,9 +71,9 @@
     "postcss-preset-env": "^7.4.1",
     "prettier": "^3.0.3",
     "prettier-eslint": "^13.0.0",
-    "stylelint": "^15.10.3",
-    "stylelint-config-css-modules": "^3.0.0",
+    "stylelint": "^16.0.2",
+    "stylelint-config-css-modules": "^4.3.0",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recommended": "^7.0.0"
+    "stylelint-config-recommended": "^14.0.0"
   }
 }

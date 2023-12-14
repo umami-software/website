@@ -1,14 +1,14 @@
 'use client';
-import Menu from './Menu';
+import Sidenav from './Sidenav';
 import styles from './layout.module.css';
 
 export default function DocsLayout({ children }) {
   return (
     <section className={styles.docs}>
-      <nav className={styles.nav}>
-        <Menu />
-      </nav>
-      <article>{children}</article>
+      <div className={styles.nav}>
+        <Sidenav />
+      </div>
+      <article className={styles.content}>{children}</article>
     </section>
   );
 }

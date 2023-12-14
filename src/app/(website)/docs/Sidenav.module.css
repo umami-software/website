@@ -1,0 +1,29 @@
+.sidenav {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 14px;
+  background: var(--base75);
+  height: 70px;
+  border-radius: 5px;
+}
+
+.sidenav .toggle a {
+  color: var(--base700);
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.toggle a.active {
+  color: var(--base900);
+  background: var(--base50);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
