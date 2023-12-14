@@ -6,7 +6,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   const id = params.id;
 
   return {
-    title: `${id[0].toUpperCase()}${id.slice(1).replace('-', ' ')}`,
+    title: `${id[0].toUpperCase()}${id.slice(1).replace('-', ' ')}`.replace('.prefetch', ''),
   };
 }
 
