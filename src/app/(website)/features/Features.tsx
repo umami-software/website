@@ -25,7 +25,7 @@ const items = [
       {
         title: 'Bounce rate',
         description: [
-          'See which pages keep your visitors enaged versus those they are abandoning.',
+          'See which pages keep your visitors engaged versus those they are abandoning.',
         ],
       },
       {
