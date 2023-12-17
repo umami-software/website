@@ -30,6 +30,12 @@
   color: var(--base700);
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
 }
 
 .text.xl p {
@@ -55,3 +61,5 @@
 .text strong {
   color: var(--base900);
 }
+
+
