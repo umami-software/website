@@ -38,6 +38,27 @@
     ]
   },
   {
+    "label": "Basics",
+    "items": [
+      {
+        "label": "Enable share URL",
+        "url": "/docs/cloud/enable-share-url"
+      },
+      {
+        "label": "Track events",
+        "url": "/docs/cloud/track-events"
+      },
+      {
+        "label": "Teams",
+        "url": "/docs/cloud/teams-guide"
+      },
+      {
+        "label": "Delete account",
+        "url": "/docs/cloud/delete-account"
+      }
+    ]
+  },
+  {
     "label": "API",
     "items": [
       {
