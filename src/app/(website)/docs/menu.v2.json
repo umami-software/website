@@ -71,6 +71,27 @@
     ]
   },
   {
+    "label": "Reports",
+    "items": [
+      {
+        "label": "Reports",
+        "url": "/docs/reports"
+      },
+      {
+        "label": "Insights",
+        "url": "/docs/report-insights"
+      },
+      {
+        "label": "Funnel",
+        "url": "/docs/report-funnel"
+      },
+      {
+        "label": "Retention",
+        "url": "/docs/report-retention"
+      }
+    ]
+  },
+  {
     "label": "Advanced",
     "items": [
       {

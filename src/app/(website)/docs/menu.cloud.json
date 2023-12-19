@@ -59,6 +59,27 @@
     ]
   },
   {
+    "label": "Reports",
+    "items": [
+      {
+        "label": "Reports",
+        "url": "/docs/cloud/reports"
+      },
+      {
+        "label": "Insights",
+        "url": "/docs/cloud/report-insights"
+      },
+      {
+        "label": "Funnel",
+        "url": "/docs/cloud/report-funnel"
+      },
+      {
+        "label": "Retention",
+        "url": "/docs/cloud/report-retention"
+      }
+    ]
+  },
+  {
     "label": "API",
     "items": [
       {
