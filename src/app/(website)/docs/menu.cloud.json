@@ -80,6 +80,19 @@
     ]
   },
   {
+    "label": "Billing",
+    "items": [
+      {
+        "label": "Subscription",
+        "url": "/docs/cloud/subscription"
+      },
+      {
+        "label": "Usage",
+        "url": "/docs/cloud/usage"
+      }
+    ]
+  },
+  {
     "label": "API",
     "items": [
       {
