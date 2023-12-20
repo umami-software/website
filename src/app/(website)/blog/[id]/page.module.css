@@ -1,6 +1,7 @@
 .blog {
   width: 680px;
   margin: auto;
+  min-height: calc(100vh - 70px);
 }
 
 .blog h1 {

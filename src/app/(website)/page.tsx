@@ -15,8 +15,8 @@ export default function () {
       <Hero />
       <Statements />
       <Features />
-      <Personas />
       <QuickStart />
+      <Personas />
       <Quotes />
       <GetStartedBanner />
       <NewsletterSignup />
