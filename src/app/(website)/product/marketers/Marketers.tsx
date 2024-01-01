@@ -15,6 +15,8 @@ const items = [
   Blocks.customEvents,
   Blocks.filters,
   Blocks.unlimitedWebsites,
+  Blocks.realtimeData,
+  Blocks.shareData,
 ];
 
 export default function Marketers() {
@@ -37,7 +39,7 @@ export default function Marketers() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <img src="/images/marketing.jpg" alt="" className={styles.image} />
+          <img src="/images/marketers.jpg" alt="" className={styles.image} />
         </ImageBlock>
       </section>
       <ScrollBlock items={items} />

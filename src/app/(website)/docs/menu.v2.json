@@ -71,6 +71,27 @@
     ]
   },
   {
+    "label": "Reports",
+    "items": [
+      {
+        "label": "Reports",
+        "url": "/docs/reports"
+      },
+      {
+        "label": "Insights",
+        "url": "/docs/report-insights"
+      },
+      {
+        "label": "Funnel",
+        "url": "/docs/report-funnel"
+      },
+      {
+        "label": "Retention",
+        "url": "/docs/report-retention"
+      }
+    ]
+  },
+  {
     "label": "Advanced",
     "items": [
       {
@@ -125,23 +146,6 @@
       {
         "label": "API Client",
         "url": "/docs/api-client"
-      }
-    ]
-  },
-  {
-    "label": "Cloud",
-    "items": [
-      {
-        "label": "Overview",
-        "url": "/docs/cloud-overview"
-      },
-      {
-        "label": "API key",
-        "url": "/docs/api-key"
-      },
-      {
-        "label": "Import data",
-        "url": "/docs/import-data"
       }
     ]
   },

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -27,14 +28,19 @@ export default function RootLayout({ children }) {
         )}
       </head>
       <body>
-        <Header />
-        <Main>{children}</Main>
-        <Footer />
+        <Suspense>
+          <Header />
+          <Main>{children}</Main>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );
 }
 
 export const metadata: Metadata = {
-  title: 'umami',
+  title: {
+    template: '%s – umami',
+    default: 'umami',
+  },
 };

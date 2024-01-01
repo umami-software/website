@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import styles from './Calculator.module.css';
 
 const tiers = [
+  { price: 0, events: '10K' },
   { price: 9, events: '100K' },
   { price: 19, events: '250K' },
   { price: 29, events: '500K' },
@@ -14,11 +15,11 @@ const tiers = [
   { price: 369, events: '10M' },
   { price: 899, events: '25M' },
   { price: 1699, events: '50M' },
-  { price: 0, events: '50M+' },
+  { price: null, events: '50M+' },
 ];
 
 export default function Calculator() {
-  const [tier, setTier] = useState(0);
+  const [tier, setTier] = useState(1);
   const [billing, setBilling] = useState('Monthly');
   const selected = tiers[tier];
   const isAnnual = billing === 'Annual';
@@ -30,8 +31,6 @@ export default function Calculator() {
   const handleTierSelect = value => {
     setTier(value);
   };
-
-  console.log('selectedKey', billing);
 
   return (
     <div className={styles.calculator}>
@@ -86,18 +85,18 @@ export default function Calculator() {
         </div>
         <div className={styles.result}>
           <div className={styles.events}>
-            <strong>{selected.events}</strong> events / month
+            Up to <strong>{selected.events}</strong> events / month
           </div>
           <div className={styles.price}>
-            {isAnnual && selected.price > 0 && (
+            {isAnnual && selected.price !== null && (
               <span className={styles.strike}>{`$${(selected.price * 12).toLocaleString()}`}</span>
             )}
             <strong>
-              {selected.price > 0
+              {selected.price !== null
                 ? `$${Math.floor(selected.price * (isAnnual ? 12 * 0.8 : 1)).toLocaleString()}`
                 : 'Contact us'}
             </strong>
-            {selected.price > 0 && <span>{` / ${isAnnual ? 'year' : 'month'}`}</span>}
+            {selected.price !== null && <span>{` / ${isAnnual ? 'year' : 'month'}`}</span>}
           </div>
         </div>
       </div>

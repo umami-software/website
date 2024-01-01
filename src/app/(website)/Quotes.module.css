@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  background: var(--blue100);
 }
 
 .card {
@@ -9,9 +12,9 @@
   grid-template-columns: 60px 1fr;
   grid-template-rows: 40px 1fr;
   padding: 20px;
-  border: 1px solid var(--base300);
+  background: var(--base50);
+  border: 1px solid var(--base400);
   border-radius: 10px;
-  box-shadow: 3px 3px 5px var(--base200);
   align-self: start;
 }
 

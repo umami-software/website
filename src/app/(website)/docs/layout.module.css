@@ -1,6 +1,7 @@
 .docs {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 240px 1fr;
+  column-gap: 30px;
   color: var(--base800);
 }
 
@@ -17,7 +18,8 @@
 .docs img {
   display: block;
   max-width: 100%;
-  margin: 2rem auto;
+  margin: 4rem auto;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
 }
 
 .docs a {
@@ -26,4 +28,15 @@
 
 .docs a:hover {
   color: var(--primary500);
+}
+
+.nav {
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+
+.content {
+  min-height: calc(100vh - 70px);
 }

@@ -15,6 +15,9 @@ const items = [
   Blocks.realtimeData,
   Blocks.unlimitedWebsites,
   Blocks.bypassAdBlockers,
+  Blocks.lightWeight,
+  Blocks.mobileFriendly,
+  Blocks.darkMode,
 ];
 
 export default function Creators() {

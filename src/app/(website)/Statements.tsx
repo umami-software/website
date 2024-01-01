@@ -2,7 +2,6 @@
 import Lock from 'assets/lock.svg';
 import Shield from 'assets/shield.svg';
 import Analytics from 'assets/analytics.svg';
-import ImageBlock from 'components/layout/ImageBlock';
 import TextBlock from 'components/layout/TextBlock';
 import styles from './Statements.module.css';
 
@@ -35,29 +34,30 @@ const statements = [
 
 export default function Statements() {
   return (
-    <>
+    <section className={styles.container}>
       <div className={styles.header}>
-        <TextBlock align="center">
-          <h1>Umami is a simple, privacy-focused alternative to Google Analytics</h1>
+        <TextBlock align="center" className={styles.block}>
+          <h1>Umami is a simple, fast, privacy-focused alternative to Google Analytics</h1>
           <p>
             You deserve an analytics solution that you can trust — that won't invade your user's
             privacy and gives you complete ownership of your data.
           </p>
         </TextBlock>
       </div>
-      <section className={styles.statements}>
+      <div className={styles.items}>
         {statements.map(({ title, description, image }) => {
           return (
-            <ImageBlock key={title} className={styles.item}>
-              <TextBlock align="center">
-                <h1>{title}</h1>
+            <div key={title} className={styles.item}>
+              <TextBlock size="sm" align="center">
+                <h1>
+                  <div className={styles.image}>{image}</div> {title}
+                </h1>
                 <p>{description}</p>
               </TextBlock>
-              <div className={styles.image}>{image}</div>
-            </ImageBlock>
+            </div>
           );
         })}
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

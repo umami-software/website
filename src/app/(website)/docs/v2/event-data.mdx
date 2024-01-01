@@ -1,3 +1,7 @@
+export const meta = {
+  title: 'Event Data',
+};
+
 # Event Data
 
 Operations around Event data statistics.
@@ -18,7 +22,7 @@ Gets website event and field key record counts within a given time range.
 
 **Parameters**
 
-- `website_id`: (uuid) Website key identifier.
+- `websiteId`: (uuid) Website key identifier.
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
 - `event`: (optional) Event Name filter.
@@ -44,7 +48,7 @@ Gets website field key and value record counts within a given time range.
 
 **Parameters**
 
-- `website_id`: (uuid) Website key identifier.
+- `websiteId`: (uuid) Website key identifier.
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
 
@@ -69,7 +73,7 @@ Gets summarized website events, fields, and records within a given time range.
 
 **Parameters**
 
-- `website_id`: (uuid) Website key identifier.
+- `websiteId`: (uuid) Website key identifier.
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
 

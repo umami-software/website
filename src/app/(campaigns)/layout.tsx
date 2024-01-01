@@ -6,7 +6,7 @@ import '@fontsource/jetbrains-mono/400.css';
 import 'react-basics/dist/styles.css';
 import 'styles/variables.css';
 import 'styles/index.css';
-import React from 'react';
+import React, { Suspense } from 'react';
 import Header from 'app/(campaigns)/Header';
 import Footer from 'app/(campaigns)/Footer';
 import styles from './layout.module.css';
@@ -38,9 +38,11 @@ export default function CampaignLayout({ children }) {
         )}
       </head>
       <body className={styles.body}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Suspense>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

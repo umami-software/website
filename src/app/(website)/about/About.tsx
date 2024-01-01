@@ -8,7 +8,7 @@ export default function About() {
       <PageHeader>
         <h1>Company</h1>
       </PageHeader>
-      <TextBlock style={{ width: 600, margin: 'auto' }}>
+      <TextBlock style={{ margin: 'auto' }}>
         <p>
           Umami was founded with the belief that users should be empowered by the software they use
           and should not have to give up fundamental rights like privacy and data ownership in

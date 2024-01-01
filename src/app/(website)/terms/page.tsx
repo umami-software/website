@@ -1,17 +1,18 @@
-'use client';
-import Terms from './terms-of-service.mdx';
+import { Metadata } from 'next';
 import PageHeader from 'components/layout/PageHeader';
-import { Suspense } from 'react';
+import Terms from './Terms';
 
 export default function TermsPage() {
   return (
     <article>
-      <Suspense>
-        <PageHeader>
-          <h1>Terms of Service</h1>
-        </PageHeader>
-        <Terms />
-      </Suspense>
+      <PageHeader>
+        <h1>Terms of Service</h1>
+      </PageHeader>
+      <Terms />
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+};

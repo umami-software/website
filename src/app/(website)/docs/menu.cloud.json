@@ -1,0 +1,117 @@
+[
+  {
+    "label": "General",
+    "items": [
+      {
+        "label": "Introduction",
+        "url": "/docs/cloud/intro"
+      },
+      {
+        "label": "FAQ",
+        "url": "/docs/cloud/faq"
+      }
+    ]
+  },
+  {
+    "label": "Getting started",
+    "items": [
+      {
+        "label": "Getting started",
+        "url": "/docs/cloud/getting-started"
+      },
+      {
+        "label": "Sign up",
+        "url": "/docs/cloud/sign-up"
+      },
+      {
+        "label": "Login",
+        "url": "/docs/cloud/login"
+      },
+      {
+        "label": "Add a website",
+        "url": "/docs/cloud/add-a-website"
+      },
+      {
+        "label": "Collect data",
+        "url": "/docs/cloud/collect-data"
+      }
+    ]
+  },
+  {
+    "label": "Basics",
+    "items": [
+      {
+        "label": "Enable share URL",
+        "url": "/docs/cloud/enable-share-url"
+      },
+      {
+        "label": "Track events",
+        "url": "/docs/cloud/track-events"
+      },
+      {
+        "label": "Teams",
+        "url": "/docs/cloud/teams-guide"
+      },
+      {
+        "label": "Delete account",
+        "url": "/docs/cloud/delete-account"
+      }
+    ]
+  },
+  {
+    "label": "Reports",
+    "items": [
+      {
+        "label": "Reports",
+        "url": "/docs/cloud/reports"
+      },
+      {
+        "label": "Insights",
+        "url": "/docs/cloud/report-insights"
+      },
+      {
+        "label": "Funnel",
+        "url": "/docs/cloud/report-funnel"
+      },
+      {
+        "label": "Retention",
+        "url": "/docs/cloud/report-retention"
+      }
+    ]
+  },
+  {
+    "label": "Billing",
+    "items": [
+      {
+        "label": "Subscription",
+        "url": "/docs/cloud/subscription"
+      },
+      {
+        "label": "Usage",
+        "url": "/docs/cloud/usage"
+      }
+    ]
+  },
+  {
+    "label": "API",
+    "items": [
+      {
+        "label": "API key",
+        "url": "/docs/cloud/api-key"
+      }
+    ]
+  },
+  {
+    "label": "Data",
+    "items": [
+      {
+        "label": "Export data",
+        "url": "/docs/cloud/export-data"
+      },
+      {
+        "label": "Import data",
+        "url": "/docs/cloud/import-data"
+      }
+    ]
+  }
+]

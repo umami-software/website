@@ -1,9 +1,10 @@
 .button {
   display: flex;
+  flex-direction: row;
   align-items: center;
   align-self: flex-start;
   white-space: nowrap;
-  gap: var(--size200);
+  gap: 200px;
   font-family: inherit;
   color: var(--base900);
   background: var(--base100);

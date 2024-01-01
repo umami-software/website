@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  background: var(--base75);
+  overflow: hidden;
+  padding-bottom: 60px;
+  border-radius: 20px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  gap: 60px;
+}
+
+.button {
+  font-weight: 600;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .items {
+    grid-template-columns: 1fr;
+  }
+}

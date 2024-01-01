@@ -1,0 +1,38 @@
+.heading {
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+.heading.xl {
+  font-size: max(48px, min(5vw, 76px));
+}
+
+.heading.lg {
+  font-size: max(48px, min(5vw, 64px));
+}
+
+.heading.md {
+  font-size: max(32px, min(5vw, 48px));
+}
+
+.heading.sm {
+  font-size: max(24px, min(2vw, 32px));
+}
+
+.heading.xs {
+  font-size: max(18px, min(2vw, 24px));
+}
+
+.heading.start {
+  text-align: start;
+}
+
+.heading.center {
+  text-align: center;
+}
+
+.heading.end {
+  text-align: end;
+}

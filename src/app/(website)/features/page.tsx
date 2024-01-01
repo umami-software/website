@@ -1,12 +1,14 @@
+import { Metadata } from 'next';
 import Features from './Features';
-import { Suspense } from 'react';
 
 export default function () {
   return (
     <article>
-      <Suspense>
-        <Features />
-      </Suspense>
+      <Features />
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Features',
+};

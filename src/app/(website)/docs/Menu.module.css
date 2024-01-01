@@ -1,9 +1,13 @@
 .menu {
-  font-size: 14px;
   position: sticky;
-  top: 70px;
-  margin-top: 70px;
+  height: calc(100vh - 140px);
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+  font-size: 14px;
   color: var(--base800);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
 }
 
 .menu header {
@@ -43,4 +47,32 @@
 
 .menu .item.selected a {
   color: var(--primary400);
+}
+
+.menu::-webkit-scrollbar {
+  width: 15px;
+  background: var(--base50);
+  display: none;
+}
+
+.menu:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.menu::-webkit-scrollbar-track {
+  border: 7px solid rgba(0, 0, 0, 0);
+  background-color: var(--base300);
+  background-clip: padding-box;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  border: 7px solid rgba(0, 0, 0, 0);
+  background-color: var(--base600);
+  background-clip: padding-box;
+}
+
+.menu::-webkit-scrollbar-thumb:hover {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-color: var(--base800);
+  background-clip: padding-box;
 }

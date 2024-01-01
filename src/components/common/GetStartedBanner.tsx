@@ -17,7 +17,7 @@ export default function GetStartedBanner() {
           variant="primary"
           size="lg"
         >
-          Get started
+          Try 14-day free trial
         </LinkButton>
       </div>
     </div>

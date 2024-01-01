@@ -1,25 +1,43 @@
+.container {
+  display: grid;
+  gap: 60px;
+}
+
 .header {
+  background: var(--base75);
+  border-radius: 12px;
+  padding-bottom: 30px;
+}
+
+.block {
   width: 60%;
   margin: 0 auto;
 }
 
-.statements {
+.items {
   display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 60px;
   background: #fff;
   z-index: 1;
 }
 
-.image {
+.items h1 {
   display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  display: inline-block;
   align-items: center;
   justify-content: center;
 }
 
 .image svg {
-  width: 200px;
-  height: 200px;
-  z-index: 1;
+  width: 80px;
+  height: 80px;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2));
 }
 
@@ -31,7 +49,11 @@
 }
 
 @media screen and (max-width: 992px) {
-  .header {
-    width: 100%;
+  .block {
+    width: 90%;
+  }
+
+  .items {
+    grid-template-columns: 1fr;
   }
 }

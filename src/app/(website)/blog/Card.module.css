@@ -1,0 +1,24 @@
+.card {
+  display: grid;
+  padding: 30px;
+  gap: 30px;
+  border: 1px solid var(--base300);
+  border-radius: 8px;
+}
+
+.title {
+  font-size: max(18px, min(2vw, 24px));
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.5;
+}
+
+.description {
+  color: var(--base700);
+  font-size: max(14px, min(2vw, 16px));
+  font-weight: 400;
+}
+
+.button {
+  justify-self: start;
+}

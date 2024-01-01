@@ -1,9 +1,9 @@
 'use client';
+import classNames from 'classnames';
 import PageHeader from 'components/layout/PageHeader';
 import GetStartedBanner from 'components/common/GetStartedBanner';
-import styles from './Features.module.css';
 import TextBlock from 'components/layout/TextBlock';
-import classNames from 'classnames';
+import styles from './Features.module.css';
 
 const items = [
   {
@@ -25,7 +25,7 @@ const items = [
       {
         title: 'Bounce rate',
         description: [
-          'See which pages keep your visitors enaged versus those they are abandoning.',
+          'See which pages keep your visitors engaged versus those they are abandoning.',
         ],
       },
       {

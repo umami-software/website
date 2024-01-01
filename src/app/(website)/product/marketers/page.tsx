@@ -1,12 +1,14 @@
+import { Metadata } from 'next';
 import Marketers from './Marketers';
-import { Suspense } from 'react';
 
 export default function () {
   return (
     <article>
-      <Suspense>
-        <Marketers />
-      </Suspense>
+      <Marketers />
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'For Marketers',
+};

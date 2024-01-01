@@ -1,6 +1,4 @@
 .calculator {
-  overflow: hidden;
-  border-radius: 10px;
   padding: 40px 60px;
   margin-top: 60px;
   position: relative;
@@ -20,6 +18,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top 40%;
+  border-radius: 10px;
 }
 
 .calculator h1 {
@@ -29,6 +28,7 @@
 }
 
 .calculator strong {
+  color: var(--base900);
   font-size: 36px;
   font-weight: 700;
 }
@@ -84,7 +84,14 @@
 }
 
 .price {
+  color: var(--base700);
+  font-weight: 600;
   text-align: right;
+}
+
+.events {
+  color: var(--base700);
+  font-weight: 600;
 }
 
 .billing {
