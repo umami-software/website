@@ -8,7 +8,7 @@ import NewsletterSignup from 'components/common/NewsletterSignup';
 import React, { Suspense } from 'react';
 import styles from './page.module.css';
 
-export default function Page() {
+export default function () {
   return (
     <article className={styles.container}>
       <Suspense>

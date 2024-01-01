@@ -7,11 +7,11 @@ export default function BlogPage() {
   return (
     <article>
       <Suspense>
+        <PageHeader>
+          <h1>Blog</h1>
+        </PageHeader>
         <Blog />
       </Suspense>
-      <PageHeader>
-        <h1>Blog</h1>
-      </PageHeader>
     </article>
   );
 }

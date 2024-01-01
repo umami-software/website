@@ -1,5 +1,5 @@
-import Contact from './Contact';
 import { Suspense } from 'react';
+import Contact from './Contact';
 
 export default function () {
   return (
