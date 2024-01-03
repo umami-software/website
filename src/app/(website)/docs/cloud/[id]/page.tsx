@@ -1,23 +1,23 @@
-import { glob } from 'glob';
 import { Metadata } from 'next';
-import PageContent from 'app/(website)/docs/v2/[id]/PageContent';
+import { glob } from 'glob';
+import PageContent from './PageContent';
 
 type Props = {
   params: { id: string };
 };
 
-async function getContent(id: string) {
-  return import(`../${id}.mdx`).catch(() => ({}));
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = params;
 
-  const content = await getContent(id);
+  const data = await import(`../${id}.mdx`);
+  const pageTitle = data?.meta?.title ?? 'Docs (Cloud)';
 
-  console.log({ content });
-
-  return content?.meta;
+  return {
+    title: {
+      absolute: `${pageTitle} – umami`,
+      default: 'Docs (Cloud) – umami',
+    },
+  };
 }
 
 export async function generateStaticParams() {
