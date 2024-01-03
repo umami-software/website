@@ -9,8 +9,8 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = params;
 
-  const data = await import(`../${id}.mdx`);
-  const pageTitle = data.meta?.title ?? 'Docs';
+  const data = await import(`../${id?.replace('.prefetch', '')}.mdx`).catch(() => ({}));
+  const pageTitle = data?.meta?.title ?? 'Docs';
 
   return {
     title: {
