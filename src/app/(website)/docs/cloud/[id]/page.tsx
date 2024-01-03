@@ -9,9 +9,11 @@ async function getContent(id: string) {
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = params;
 
-  const { meta } = await getContent(id);
+  const content = await getContent(id);
 
-  return meta;
+  console.log({ content });
+
+  return content?.meta;
 }
 
 export async function generateStaticParams() {
@@ -25,7 +27,9 @@ export async function generateStaticParams() {
 export default async function ({ params }: { params: { id: string } }) {
   const { id } = params;
 
-  const { default: Page } = await getContent(id);
+  const { default: Page, meta } = await getContent(id);
+
+  console.log({ Page, meta });
 
   if (!Page) {
     return <NotFound />;
