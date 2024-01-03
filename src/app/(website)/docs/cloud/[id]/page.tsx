@@ -1,5 +1,6 @@
 import { glob } from 'glob';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import NotFound from 'app/(website)/not-found';
 
 async function getContent(id: string) {
@@ -27,13 +28,9 @@ export async function generateStaticParams() {
 export default async function ({ params }: { params: { id: string } }) {
   const { id } = params;
 
-  const { default: Page, meta } = await getContent(id);
+  const Page: any = dynamic(() => import(`../${id}.mdx`).catch(() => NotFound));
 
-  console.log({ Page, meta });
-
-  if (!Page) {
-    return <NotFound />;
-  }
+  console.log({ Page });
 
   return <Page />;
 }
