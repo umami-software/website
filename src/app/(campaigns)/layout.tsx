@@ -26,7 +26,7 @@ export default function CampaignLayout({ children }) {
         {process.env.NODE_ENV === 'production' && (
           <>
             <script
-              async
+              defer
               data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
               data-domains="umami.is"
               src="/a/script.js"
