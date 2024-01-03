@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 }
 
 export default function ({ params }: Props) {
-  const { id } = params;
+  const id = params?.id?.split('.')?.[0];
 
   return <PageContent id={id} />;
 }
