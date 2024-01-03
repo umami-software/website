@@ -7,10 +7,16 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const id = params.id;
+  const { id } = params;
+
+  const data = await import(`../${id}.mdx`);
+  const pageTitle = data?.meta?.title ?? 'Docs';
 
   return {
-    title: `${id[0].toUpperCase()}${id.slice(1).replace('-', ' ')}`.replace('.prefetch', ''),
+    title: {
+      absolute: `${pageTitle} – umami`,
+      default: 'Docs – umami',
+    },
   };
 }
 
@@ -23,7 +29,7 @@ export async function generateStaticParams() {
 }
 
 export default function ({ params }: Props) {
-  const id = params?.id?.split('.')?.[0];
+  const { id } = params;
 
   return <PageContent id={id} />;
 }

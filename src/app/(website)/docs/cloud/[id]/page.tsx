@@ -1,13 +1,16 @@
 import { glob } from 'glob';
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
-import NotFound from 'app/(website)/not-found';
+import PageContent from 'app/(website)/docs/v2/[id]/PageContent';
+
+type Props = {
+  params: { id: string };
+};
 
 async function getContent(id: string) {
   return import(`../${id}.mdx`).catch(() => ({}));
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = params;
 
   const content = await getContent(id);
@@ -25,12 +28,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ({ params }: { params: { id: string } }) {
+export default function ({ params }: Props) {
   const { id } = params;
 
-  const Page: any = dynamic(() => import(`../${id}.mdx`).catch(() => NotFound));
-
-  console.log({ Page });
-
-  return <Page />;
+  return <PageContent id={id} />;
 }
