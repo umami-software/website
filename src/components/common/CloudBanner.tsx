@@ -1,3 +1,4 @@
+'use client';
 import styles from './CloudBanner.module.css';
 import { CLOUD_URL } from 'lib/constants';
 import useQueryString from 'components/hooks/useQueryString';
