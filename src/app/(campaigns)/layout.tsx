@@ -28,6 +28,7 @@ export default function CampaignLayout({ children }) {
             <script
               async
               data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
+              data-domains="umami.is"
               src="/a/script.js"
             />
             <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11312352810"></script>
