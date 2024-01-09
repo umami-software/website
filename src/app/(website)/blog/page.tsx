@@ -5,6 +5,11 @@ import styles from './page.module.css';
 
 const blogs = [
   {
+    id: 'how-we-use-prisma',
+    title: 'How we use Prisma ORM',
+    description: 'How do we support multiple databases in one project?',
+  },
+  {
     id: 'why-privacy-matters',
     title: 'Why Privacy Matters',
     description: 'Learn about how corporations are spying on your internet activity.',
