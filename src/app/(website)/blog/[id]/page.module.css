@@ -17,6 +17,10 @@
   letter-spacing: -0.05em;
 }
 
+.blog h3 {
+  font-size: max(12px, min(2vw, 14px));
+}
+
 .blog p {
   color: var(--base800);
   font-size: max(14px, min(2vw, 16px));
@@ -25,6 +29,13 @@
 
 .blog a {
   color: var(--blue800);
+}
+
+.blog img {
+  display: block;
+  max-width: 75%;
+  margin: 2rem auto;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
 }
 
 .back {
