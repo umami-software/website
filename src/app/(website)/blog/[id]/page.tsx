@@ -1,16 +1,25 @@
-import { MDXRemote } from 'next-mdx-remote/rsc';
+import { Metadata } from 'next';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import { getPost } from 'lib/blog';
+import Markdown from 'components/common/Markdown';
 import styles from './page.module.css';
 
 type Props = {
   params: { id: string };
 };
 
-function MDX({ children }) {
-  // @ts-expect-error Server Component
-  return <MDXRemote source={children as any} />;
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const { id } = params;
+
+  const post = await getPost(id);
+
+  return {
+    title: {
+      absolute: `${post?.title} – Umami`,
+      default: 'Docs – Umami',
+    },
+  };
 }
 
 export default async function ({ params }: Props) {
@@ -24,7 +33,7 @@ export default async function ({ params }: Props) {
         <div className={styles.date}>{format(new Date(post?.date as string), 'PP')}</div>
         <div className={styles.author}>Posted by {post?.author}</div>
       </div>
-      <MDX>{post?.body}</MDX>
+      <Markdown>{post?.body}</Markdown>
       <Link href="/blog" className={styles.back}>
         ← Back to Blog
       </Link>

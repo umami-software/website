@@ -1,35 +1,25 @@
 import { Metadata } from 'next';
-import { glob } from 'glob';
-import PageContent from './PageContent';
+import dynamic from 'next/dynamic';
+import NotFound from 'app/(website)/not-found';
 
-type Props = {
-  params: { id: string };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = params;
 
-  const data = await import(`../${id?.replace('.prefetch', '')}.mdx`).catch(() => ({}));
+  const data = await import(`docs/v1/${id?.replace('.prefetch', '')}.mdx`).catch(() => ({}));
   const pageTitle = data?.meta?.title ?? 'Docs';
 
   return {
     title: {
-      absolute: `${pageTitle} (v1) – Umami`,
+      absolute: `Docs: ${pageTitle} – Umami`,
       default: 'Docs (v1) – Umami',
     },
   };
 }
 
-export async function generateStaticParams() {
-  const files = await glob('../*.mdx');
+export default function ({ params }: { params: { id: string } }) {
+  const { id } = params;
 
-  return files.map(file => ({
-    id: file.split('.')[0],
-  }));
-}
+  const Page = dynamic(() => import(`docs/v1/${id}.mdx`).catch(() => NotFound));
 
-export default function ({ params }: Props) {
-  const id = params?.id?.split('.')?.[0];
-
-  return <PageContent id={id} />;
+  return <Page />;
 }
