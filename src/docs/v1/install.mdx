@@ -1,0 +1,94 @@
+---
+title: Installation
+---
+
+# Installation
+
+## Installing from source
+
+### Requirements
+
+- A server with Node.js version 14 or newer.
+- A database. Umami supports [MySQL](https://www.mysql.com/) and [PostgreSQL](https://www.postgresql.org/) databases.
+
+### Install Yarn
+
+```sh
+npm install -g yarn
+```
+
+### Get the source code and install packages
+
+```sh
+git clone https://github.com/umami-software/umami.git
+cd umami
+yarn install
+```
+
+### Configure Umami
+
+Create an `.env` file with the following
+
+```
+DATABASE_URL=(connection url)
+```
+
+The connection url is in the following format:
+
+```
+postgresql://username:mypassword@localhost:5432/mydb
+
+mysql://username:mypassword@localhost:3306/mydb
+```
+
+### Build the application
+
+```sh
+yarn build
+```
+
+This will also create a login account with username **admin** and password **umami**.
+
+### Start the application
+
+```sh
+yarn start
+```
+
+By default this will launch the application on `http://localhost:3000`. You will need to either
+[proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) requests from your web server
+or change the [port](https://nextjs.org/docs/api-reference/cli#production) to serve the application directly.
+
+### Running Umami
+
+You can simply run `yarn start` to start Umami, but it's highly recommended you use a process manager like [PM2](https://pm2.keymetrics.io/) which will handle restarts for you.
+
+To run with PM2:
+
+```sh
+yarn global add pm2
+cd umami
+pm2 start yarn --name umami -- start
+pm2 startup
+pm2 save
+```
+
+## Installing with Docker
+
+To build the Umami container and start up a PostgreSQL database, run:
+
+```sh
+docker-compose up
+```
+
+Alternatively, to pull just the Umami Docker image with PostgreSQL support:
+
+```sh
+docker pull ghcr.io/umami-software/umami:postgresql-latest
+```
+
+Or with MySQL support:
+
+```sh
+docker pull ghcr.io/umami-software/umami:mysql-latest
+```

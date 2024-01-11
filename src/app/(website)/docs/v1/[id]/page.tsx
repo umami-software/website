@@ -1,35 +1,26 @@
 import { Metadata } from 'next';
-import { glob } from 'glob';
-import PageContent from './PageContent';
+import { getDoc } from 'lib/docs';
+import Markdown from 'components/common/Markdown';
 
-type Props = {
-  params: { id: string };
-};
+const FOLDER = 'v1';
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = params;
 
-  const data = await import(`../${id?.replace('.prefetch', '')}.mdx`).catch(() => ({}));
-  const pageTitle = data?.meta?.title ?? 'Docs';
+  const doc = await getDoc(id, FOLDER);
 
   return {
     title: {
-      absolute: `${pageTitle} (v1) – umami`,
-      default: 'Docs (v1) – umami',
+      absolute: `Docs: ${doc?.title} – Umami`,
+      default: 'Docs – Umami',
     },
   };
 }
 
-export async function generateStaticParams() {
-  const files = await glob('../*.mdx');
+export default async function ({ params }: { params: { id: string } }) {
+  const { id } = params;
 
-  return files.map(file => ({
-    id: file.split('.')[0],
-  }));
-}
+  const doc = await getDoc(id, FOLDER);
 
-export default function ({ params }: Props) {
-  const id = params?.id?.split('.')?.[0];
-
-  return <PageContent id={id} />;
+  return <Markdown>{doc?.body}</Markdown>;
 }

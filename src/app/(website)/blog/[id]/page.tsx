@@ -1,35 +1,39 @@
-import { glob } from 'glob';
 import { Metadata } from 'next';
-import PageContent from './PageContent';
-import styles from './page.module.css';
+import { format } from 'date-fns';
 import Link from 'next/link';
+import { getPost } from 'lib/blog';
+import Markdown from 'components/common/Markdown';
+import styles from './page.module.css';
 
 type Props = {
   params: { id: string };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const id = params.id;
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const { id } = params;
+
+  const post = await getPost(id);
 
   return {
-    title: `${id[0].toUpperCase()}${id.slice(1).replace('-', ' ')}`.replace('.prefetch', ''),
+    title: {
+      absolute: `${post?.title} – Umami`,
+      default: 'Docs – Umami',
+    },
   };
 }
 
-export async function generateStaticParams() {
-  const files = await glob('../*.mdx');
-
-  return files.map(file => ({
-    id: file.split('.')[0],
-  }));
-}
-
-export default function ({ params }: Props) {
-  const id = params?.id?.split('.')?.[0];
+export default async function ({ params }: Props) {
+  const { id } = params;
+  const post = await getPost(id);
 
   return (
     <article className={styles.blog}>
-      <PageContent id={id} />
+      <div className={styles.title}>{post?.title}</div>
+      <div className={styles.info}>
+        <div className={styles.date}>{format(new Date(post?.date as string), 'PP')}</div>
+        <div className={styles.author}>Posted by {post?.author}</div>
+      </div>
+      <Markdown>{post?.body}</Markdown>
       <Link href="/blog" className={styles.back}>
         ← Back to Blog
       </Link>

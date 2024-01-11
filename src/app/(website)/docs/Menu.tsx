@@ -33,7 +33,9 @@ export default function Menu() {
                       (['/docs', '/docs/cloud'].includes(url) && (!id || id === 'intro')),
                   })}
                 >
-                  <Link href={url}>{text}</Link>
+                  <Link href={url} prefetch={false}>
+                    {text}
+                  </Link>
                 </div>
               );
             })}

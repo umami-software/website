@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
 
 export const metadata: Metadata = {
   title: {
-    template: '%s – umami',
-    default: 'umami',
+    template: '%s – Umami',
+    default: 'Umami',
   },
 };

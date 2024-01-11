@@ -1,22 +1,12 @@
 import { Metadata } from 'next';
+import { getPosts, Post } from 'lib/blog';
 import PageHeader from 'components/layout/PageHeader';
 import Card from 'app/(website)/blog/Card';
 import styles from './page.module.css';
 
-const blogs = [
-  {
-    id: 'how-we-use-prisma',
-    title: 'How we use Prisma ORM',
-    description: 'How do we support multiple databases in one project?',
-  },
-  {
-    id: 'why-privacy-matters',
-    title: 'Why Privacy Matters',
-    description: 'Learn about how corporations are spying on your internet activity.',
-  },
-];
-
 export default async function () {
+  const posts = await getPosts();
+
   return (
     <article>
       <PageHeader>
@@ -24,8 +14,17 @@ export default async function () {
         <p>Welcome to the Umami blog!</p>
       </PageHeader>
       <div className={styles.posts}>
-        {blogs.map(({ id, title, description }) => {
-          return <Card key={id} id={id} title={title} description={description} />;
+        {posts?.map(({ id, title, description, date, author }: Post) => {
+          return (
+            <Card
+              key={id}
+              id={id}
+              title={title}
+              description={description}
+              date={date}
+              author={author}
+            />
+          );
         })}
       </div>
     </article>
