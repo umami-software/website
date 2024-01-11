@@ -12,8 +12,9 @@
   justify-content: space-around;
   font-size: 14px;
   background: var(--base75);
-  height: 70px;
   border-radius: 5px;
+  border: 1px solid var(--base400);
+  padding: 5px;
 }
 
 .sidenav .toggle a {
