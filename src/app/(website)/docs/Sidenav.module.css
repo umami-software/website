@@ -13,8 +13,8 @@
   font-size: 14px;
   background: var(--base75);
   border-radius: 5px;
+  padding: 5px 0;
   border: 1px solid var(--base300);
-  padding: 5px;
 }
 
 .sidenav .toggle a {
