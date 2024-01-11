@@ -1,7 +1,6 @@
 .card {
   display: grid;
   padding: 30px;
-  gap: 30px;
   border: 1px solid var(--base300);
   border-radius: 8px;
 }
@@ -17,8 +16,13 @@
   color: var(--base700);
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
+  margin: 30px 0;
 }
 
 .button {
   justify-self: start;
+}
+
+.date {
+  font-size: var(--font-size-sm);
 }

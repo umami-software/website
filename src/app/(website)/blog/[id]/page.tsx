@@ -1,35 +1,30 @@
-import { glob } from 'glob';
-import { Metadata } from 'next';
-import PageContent from './PageContent';
-import styles from './page.module.css';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import { format } from 'date-fns';
 import Link from 'next/link';
+import { getPost } from 'lib/blog';
+import styles from './page.module.css';
 
 type Props = {
   params: { id: string };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const id = params.id;
-
-  return {
-    title: `${id[0].toUpperCase()}${id.slice(1).replace('-', ' ')}`.replace('.prefetch', ''),
-  };
+function MDX({ children }) {
+  // @ts-expect-error Server Component
+  return <MDXRemote source={children as any} />;
 }
 
-export async function generateStaticParams() {
-  const files = await glob('../*.mdx');
-
-  return files.map(file => ({
-    id: file.split('.')[0],
-  }));
-}
-
-export default function ({ params }: Props) {
-  const id = params?.id?.split('.')?.[0];
+export default async function ({ params }: Props) {
+  const { id } = params;
+  const post = await getPost(id);
 
   return (
     <article className={styles.blog}>
-      <PageContent id={id} />
+      <div className={styles.title}>{post?.title}</div>
+      <div className={styles.info}>
+        <div className={styles.date}>{format(new Date(post?.date as string), 'PP')}</div>
+        <div className={styles.author}>Posted by {post?.author}</div>
+      </div>
+      <MDX>{post?.body}</MDX>
       <Link href="/blog" className={styles.back}>
         ← Back to Blog
       </Link>

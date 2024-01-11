@@ -4,12 +4,13 @@
   min-height: calc(100vh - 70px);
 }
 
-.blog h1 {
+.title {
   font-size: max(48px, min(5vw, 76px));
   font-weight: 800;
   letter-spacing: -0.05em;
-  line-height: 1.5;
+  line-height: 1.2;
   text-align: center;
+  margin: 60px 0;
 }
 
 .blog h2 {
@@ -41,4 +42,21 @@
 .back {
   display: block;
   margin: 40px 0;
+}
+
+.info {
+  font-size: var(--font-size-sm);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 60px 0;
+}
+
+.date {
+  color: var(--base700);
+}
+
+.author {
+  color: var(--base700);
 }

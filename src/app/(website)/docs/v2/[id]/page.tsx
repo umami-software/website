@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: {
-      absolute: `${pageTitle} – umami`,
-      default: 'Docs – umami',
+      absolute: `${pageTitle} – Umami`,
+      default: 'Docs – Umami',
     },
   };
 }
