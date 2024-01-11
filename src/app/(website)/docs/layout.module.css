@@ -6,8 +6,10 @@
 }
 
 .docs h1 {
+  font-size: 50px;
   font-weight: 800;
   letter-spacing: -2px;
+  margin: 0 0 20px 0;
 }
 
 .docs h2 {
