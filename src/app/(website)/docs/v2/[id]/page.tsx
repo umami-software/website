@@ -1,25 +1,26 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
-import NotFound from 'app/(website)/not-found';
+import { getDoc } from 'lib/docs';
+import Markdown from 'components/common/Markdown';
+
+const FOLDER = 'v2';
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = params;
 
-  const data = await import(`docs/v2/${id?.replace('.prefetch', '')}.mdx`).catch(() => ({}));
-  const pageTitle = data?.meta?.title ?? 'Docs';
+  const doc = await getDoc(id, FOLDER);
 
   return {
     title: {
-      absolute: `Docs: ${pageTitle} – Umami`,
+      absolute: `Docs: ${doc?.title} – Umami`,
       default: 'Docs – Umami',
     },
   };
 }
 
-export default function ({ params }: { params: { id: string } }) {
+export default async function ({ params }: { params: { id: string } }) {
   const { id } = params;
 
-  const Page = dynamic(() => import(`docs/v2/${id}.mdx`).catch(() => NotFound));
+  const doc = await getDoc(id, FOLDER);
 
-  return <Page />;
+  return <Markdown>{doc?.body}</Markdown>;
 }

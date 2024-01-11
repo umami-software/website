@@ -3,17 +3,14 @@ import path from 'path';
 import fs from 'fs/promises';
 import { cache } from 'react';
 
-export interface Post {
+export interface Doc {
   id: string;
   title: string;
-  description: string;
-  date: string;
-  author: string;
   body: string;
 }
 
-export const getPosts = cache(async () => {
-  const dir = path.resolve('./src/posts');
+export const getDocs = cache(async (folder: string) => {
+  const dir = path.resolve(`./src/docs/${folder}`);
   const posts = await fs.readdir(dir);
 
   return Promise.all(
@@ -23,19 +20,15 @@ export const getPosts = cache(async () => {
         const postContent = await fs.readFile(path.resolve(dir, file), 'utf8');
         const { data, content } = matter(postContent);
 
-        if (data.published === false) {
-          return null;
-        }
-
-        return { ...data, id: file.replace('.mdx', ''), body: content } as Post;
+        return { ...data, id: file.replace('.mdx', ''), body: content } as Doc;
       }),
   );
 });
 
-export async function getPost(id: string) {
-  const posts = await getPosts();
+export async function getDoc(id: string, folder: string) {
+  const docs = await getDocs(folder);
 
-  return posts.find(post => post?.id === id);
+  return docs.find(doc => doc?.id === id);
 }
 
-export default getPosts;
+export default getDocs;
