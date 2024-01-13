@@ -14,18 +14,11 @@ export default async function () {
         <p>Welcome to the Umami blog!</p>
       </PageHeader>
       <div className={styles.posts}>
-        {posts?.map(({ id, title, description, date, author }: Post) => {
-          return (
-            <Card
-              key={id}
-              id={id}
-              title={title}
-              description={description}
-              date={date}
-              author={author}
-            />
-          );
-        })}
+        {posts
+          ?.filter(n => n)
+          ?.map(({ id, title, description, date }: Post) => {
+            return <Card key={id} id={id} title={title} description={description} date={date} />;
+          })}
       </div>
     </article>
   );
