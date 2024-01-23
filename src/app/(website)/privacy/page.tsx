@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 import PageHeader from 'components/layout/PageHeader';
-import Privacy from './Privacy';
+import Privacy from './privacy-policy.mdx';
 
 export default function PrivacyPage() {
   return (
-    <article>
+    <article className="mdx">
       <PageHeader>
         <h1>Privacy Policy</h1>
       </PageHeader>
