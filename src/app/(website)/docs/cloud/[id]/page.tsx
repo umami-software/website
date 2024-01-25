@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
   return {
     title: {
-      absolute: `Docs: ${doc?.title} – Umami`,
-      default: 'Docs – Umami',
+      absolute: `Cloud: ${doc?.title} – Umami`,
+      default: 'Cloud – Umami',
     },
   };
 }

@@ -12,7 +12,7 @@ export default function Sidenav() {
     <div className={styles.sidenav}>
       <div className={styles.toggle}>
         <a href="/docs" className={classNames({ [styles.active]: !isCloud })}>
-          Open-source
+          Self-host
         </a>
         <a href="/docs/cloud" className={classNames({ [styles.active]: isCloud })}>
           Cloud

@@ -13,7 +13,7 @@ export interface Post {
 }
 
 export const getPosts = cache(async () => {
-  const dir = path.resolve('./src/posts');
+  const dir = path.resolve('./src/content/blog');
   const posts = await fs.readdir(dir);
 
   return Promise.all(

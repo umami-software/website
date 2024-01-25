@@ -10,7 +10,7 @@ export interface Doc {
 }
 
 export const getDocs = cache(async (folder: string) => {
-  const dir = path.resolve(`./src/docs/${folder}`);
+  const dir = path.resolve(`./src/content/docs/${folder}`);
   const posts = await fs.readdir(dir);
 
   return Promise.all(
