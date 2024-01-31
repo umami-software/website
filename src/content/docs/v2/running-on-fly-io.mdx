@@ -55,7 +55,7 @@ grace_period = "1s"
 2. `fly launch` and choose to create an app with the found `fly.toml` configuration.
 3. Go through the launch steps, and choose `y` on the step to create a connected Postgres app.
 4. Choose not to deploy the app yet.
-5. `fly secrets set HASH_SALT="<any-string-minus-angle-brackets>"`, using whatever string you want to salt the hash.
+5. `fly secrets set APP_SECRET="<any-string-minus-angle-brackets>"`, using whatever string you want to salt the hash.
 6. `fly deploy` There will be errors, but let the deployment complete.
 7. `fly scale memory 512` (or higher, if needed. Umami seems to fail with less than 512 MB RAM)
 8. `fly deploy`
