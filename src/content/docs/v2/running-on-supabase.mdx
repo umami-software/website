@@ -9,11 +9,11 @@ title: Running on Supabase
 ## Setup
 
 1. Create a project on Supabase with a given name in a region close to where you will be hosting your Umami project.
-2. Get the database connection string from the **Settings > Database** page, then scroll to the bottom for the **Connection Pooling** section and copy the **Connection string**. It should look something like this: `postgres://postgres.[YOUR-PROJECT-ID]:[YOUR-PASSWORD]@[AWS-REGION].pooler.supabase.com:5432/postgres`.
+2. Get the database connection string from the **Settings > Database** page, then scroll to the bottom for the **Connection Pooling** section and copy the **Connection string** for the `Transaction` connection mode. It should look something like this: `postgres://postgres.[YOUR-PROJECT-ID]:[YOUR-PASSWORD]@[AWS-REGION].pooler.supabase.com:6543/postgres`.
 3. Add `DATABASE_URL` to your `.env` file:
 
    ```
-   DATABASE_URL=postgres://postgres.[YOUR-PROJECT-ID]:[YOUR-PASSWORD]@[AWS-REGION].pooler.supabase.com:5432/postgres
+   DATABASE_URL=postgres://postgres.[YOUR-PROJECT-ID]:[YOUR-PASSWORD]@[AWS-REGION].pooler.supabase.com:6543/postgres
    ```
 
 4. You should now be able to build and start Umami (`npm run build` followed by `npm start`).
