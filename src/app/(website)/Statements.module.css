@@ -1,6 +1,7 @@
 .container {
   display: grid;
   gap: 60px;
+  padding: 0 20px;
 }
 
 .header {
@@ -16,7 +17,7 @@
 
 .items {
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 60px;
   background: #fff;
   z-index: 1;
@@ -50,7 +51,7 @@
 
 @media screen and (max-width: 992px) {
   .block {
-    width: 90%;
+    max-width: 90%;
   }
 
   .items {

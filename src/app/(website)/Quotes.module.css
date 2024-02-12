@@ -65,3 +65,9 @@
   grid-row: 2 / 3;
   text-align: left;
 }
+
+@media screen and (max-width: 768px) {
+  .list {
+    padding: 20px;
+  }
+}
