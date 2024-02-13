@@ -1,7 +1,7 @@
 'use client';
 import PageHeader from 'components/layout/PageHeader';
 import Community from './Community';
-import Deloy from './Deploy';
+import Deploy from './Deploy';
 import GitHubStats from './GitHubStats';
 import styles from './Developers.module.css';
 
@@ -15,7 +15,7 @@ export default function Developers() {
           that is fully transparent, secure and available to everyone.
         </p>
       </PageHeader>
-      <Deloy />
+      <Deploy />
       <GitHubStats />
       <Community />
     </div>
