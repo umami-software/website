@@ -17,12 +17,14 @@ export default function GitHubStats() {
         <h1>Join the Umami developer community</h1>
       </SectionHeader>
       <div className={styles.buttons}>
-        <LinkButton href="/docs/getting-started" variant="secondary">
-          Read the docs
-        </LinkButton>
-        <LinkButton href={REPO_URL} variant="secondary">
-          View the source
-        </LinkButton>
+        <div className={styles.button}>
+          <LinkButton href="/docs/getting-started" variant="secondary">
+            Read the docs
+          </LinkButton>
+          <LinkButton href={REPO_URL} variant="secondary">
+            View the source
+          </LinkButton>
+        </div>
       </div>
       <div className={styles.stats}>
         {stats.map(({ label, value }) => (
