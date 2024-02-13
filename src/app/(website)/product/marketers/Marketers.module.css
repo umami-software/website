@@ -1,6 +1,7 @@
 .container {
   display: grid;
   gap: 80px;
+  justify-content: center;
 }
 
 .highlight {
@@ -30,4 +31,10 @@
 
 .body img {
   max-width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .header img {
+    max-width: 70vw;
+  }
 }

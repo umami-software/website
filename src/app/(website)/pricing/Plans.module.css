@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
+  justify-content: center;
 }
 
 .plans ul {
@@ -90,4 +91,10 @@
   border-radius: 10px;
   padding: 30px;
   box-shadow: 4px 4px 4px var(--base300);
+}
+
+@media screen and (max-width: 768px) {
+  .plans {
+    grid-template-columns: 1fr;
+  }
 }

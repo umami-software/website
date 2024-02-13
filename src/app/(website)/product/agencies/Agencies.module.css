@@ -1,6 +1,7 @@
 .container {
   display: grid;
   gap: 80px;
+  justify-content: center;
 }
 
 .highlight {
@@ -49,5 +50,22 @@
   .header {
     gap: 60px;
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 10px;
+  }
+
+  .header img {
+    max-width: 70vw;
+  }
+
+  .services > div {
+    font-size: 14px;
   }
 }
