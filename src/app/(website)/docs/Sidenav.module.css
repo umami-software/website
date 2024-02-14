@@ -28,3 +28,9 @@
   background: var(--base50);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 768px) {
+  .toggle {
+    font-size: 12px;
+  }
+}
