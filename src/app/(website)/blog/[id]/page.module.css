@@ -35,7 +35,7 @@
 
 .blog img {
   display: block;
-  max-width: 75%;
+  max-width: 100%;
   margin: 2rem auto;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
 }
