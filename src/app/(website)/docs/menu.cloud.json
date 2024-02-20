@@ -98,6 +98,10 @@
       {
         "label": "API key",
         "url": "/docs/cloud/api-key"
+      },
+      {
+        "label": "API Changelog",
+        "url": "/docs/cloud/api-changelog"
       }
     ]
   },
