@@ -8,9 +8,17 @@ The latest Umami API version is: [0.64.0](https://www.npmjs.com/package/@umami/a
 
 This page documents changes made to the Umami API client.
 
-### 2024-02-16
+## 2024-02-16
 
-- `GET /reports/index`: Added websiteId and teamId added as query parameters
+**Websites**
+
+- `POST /websites`: Added teamId as an optional parameter
+
+**Teams**
+
 - `/teams/[id]/websites/[websiteId]`: DEPRECATED
 - `GET /teams/[id]/users/[userId]/index`: Added new GET route
-- `POST /websites`: Added teamId as an optional parameter
+
+**Reports**
+
+- `GET /reports/index`: Added websiteId and teamId added as query parameters
