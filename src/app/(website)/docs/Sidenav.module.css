@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background: var(--base50);
 }
 
 .toggle {
@@ -29,8 +30,31 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.button {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: none;
+  height: 40px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .toggle {
     font-size: 12px;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .show {
+    display: grid;
   }
 }
