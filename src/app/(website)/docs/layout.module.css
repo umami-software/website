@@ -87,17 +87,14 @@
 @media screen and (max-width: 768px) {
   .docs {
     grid-template-columns: 1fr;
+    position: relative;
   }
 
   .nav {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
     margin: auto;
-    height: auto;
-    z-index: 100;
   }
 
   .content {

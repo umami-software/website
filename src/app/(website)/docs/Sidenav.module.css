@@ -44,6 +44,15 @@
     font-size: 12px;
   }
 
+  .sidenav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 200;
+  }
+
   .button {
     display: flex;
     align-items: center;
@@ -54,7 +63,9 @@
     display: none;
   }
 
-  .show {
+  .menu.show {
     display: grid;
+    background: var(--base50);
+    z-index: 100;
   }
 }
