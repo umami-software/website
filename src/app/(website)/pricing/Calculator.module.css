@@ -132,6 +132,15 @@
   width: 100%;
 }
 
+@media screen and (max-width: 992px) {
+  .slider {
+    display: none;
+  }
+  .select {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .price {
     text-align: left;
@@ -141,11 +150,24 @@
   }
 }
 
-@media screen and (max-width: 992px) {
-  .slider {
-    display: none;
+@media screen and (max-width: 360px) {
+  .calculator {
+    padding: 20px 30px;
   }
-  .select {
-    display: block;
+
+  .result {
+    grid-template-columns: 1fr;
+  }
+
+  .radio {
+    gap: 20px;
+  }
+
+  .events {
+    font-size: 14px;
+  }
+
+  .calculator strong {
+    font-size: 20px;
   }
 }

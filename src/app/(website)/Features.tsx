@@ -4,6 +4,7 @@ import ScrollBlock from 'components/layout/ScrollBlock';
 import { Blocks } from 'lib/content';
 import LinkButton from 'components/common/LinkButton';
 import { Flexbox, Icon, Icons, Text } from 'react-basics';
+import styles from './Features.module.css';
 
 const items = [
   Blocks.simpleAnalytics,
@@ -16,7 +17,7 @@ const items = [
 
 export default function Features() {
   return (
-    <section>
+    <section className={styles.features}>
       <PageHeader>
         <h1>All the features you need</h1>
         <p>

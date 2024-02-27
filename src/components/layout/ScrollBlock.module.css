@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 60px;
 }
 
 .block {
@@ -34,4 +35,10 @@
 .image svg {
   width: 160px;
   height: 160px;
+}
+
+@media screen and (max-width: 768px) {
+  .block {
+    min-height: 500px;
+  }
 }

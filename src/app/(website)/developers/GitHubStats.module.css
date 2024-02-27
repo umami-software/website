@@ -1,6 +1,6 @@
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 40px;
   background-color: var(--base75);
@@ -23,6 +23,11 @@
 }
 
 .buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +37,25 @@
 
 @media screen and (max-width: 992px) {
   .stats {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    flex-direction: column;
+  }
+
+  .button a {
+    margin: auto;
   }
 }
