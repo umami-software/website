@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Sidenav from './Sidenav';
+import Nav from './Nav';
 import styles from './layout.module.css';
 
 export const metadata: Metadata = {
@@ -9,9 +9,7 @@ export const metadata: Metadata = {
 export default function DocsLayout({ children }) {
   return (
     <section className={styles.docs}>
-      <div className={styles.nav}>
-        <Sidenav />
-      </div>
+      <Nav />
       <article className={styles.content}>{children}</article>
     </section>
   );

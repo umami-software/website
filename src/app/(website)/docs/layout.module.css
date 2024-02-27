@@ -34,13 +34,6 @@
   color: var(--primary500);
 }
 
-.nav {
-  position: sticky;
-  top: 80px;
-  height: calc(100vh - 100px);
-  overflow: hidden;
-}
-
 .content {
   min-height: calc(100vh - 70px);
   max-width: 100%;
@@ -69,7 +62,7 @@
   }
 
   .content {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -90,15 +83,9 @@
     position: relative;
   }
 
-  .nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: auto;
-  }
-
   .content {
     top: 60px;
     position: relative;
+    padding-bottom: 60px;
   }
 }

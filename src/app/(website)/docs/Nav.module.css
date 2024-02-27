@@ -1,5 +1,7 @@
-.sidenav {
-  position: relative;
+.nav {
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 100px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -18,7 +20,7 @@
   border: 1px solid var(--base300);
 }
 
-.sidenav .toggle a {
+.nav .toggle a {
   color: var(--base700);
   padding: 8px 16px;
   border-radius: 5px;
@@ -35,7 +37,10 @@
   font-weight: 700;
   text-transform: uppercase;
   display: none;
-  height: 40px;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -44,19 +49,16 @@
     font-size: 12px;
   }
 
-  .sidenav {
+  .nav {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     margin: auto;
-    z-index: 200;
   }
 
   .button {
     display: flex;
-    align-items: center;
-    gap: 10px;
   }
 
   .menu {

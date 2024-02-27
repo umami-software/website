@@ -4,15 +4,15 @@ import { usePathname } from 'next/navigation';
 import { Icons, Icon, Text } from 'react-basics';
 import classNames from 'classnames';
 import Menu from './Menu';
-import styles from './Sidenav.module.css';
+import styles from './Nav.module.css';
 
-export default function Sidenav() {
+export default function Nav() {
   const pathname = usePathname();
   const isCloud = pathname.includes('/docs/cloud');
   const [show, setShow] = useState(false);
 
   return (
-    <div className={styles.sidenav}>
+    <div className={styles.nav}>
       <div className={styles.button} onClick={() => setShow(!show)}>
         <Text>Menu</Text>
         <Icon>
