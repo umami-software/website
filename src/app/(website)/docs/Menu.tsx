@@ -9,7 +9,7 @@ import styles from './Menu.module.css';
 
 const versions = { v1, v2, cloud };
 
-export default function Menu() {
+export default function Menu({ onClick }: { onClick?: () => void }) {
   const pathname = usePathname();
   const query = useParams();
   const isCloud = pathname.includes('/docs/cloud');
@@ -17,7 +17,7 @@ export default function Menu() {
   const menu = versions[version];
 
   return (
-    <div className={styles.menu}>
+    <div className={styles.menu} onClick={onClick}>
       {menu.map(({ label, items }) => {
         return (
           <section key={label} className={styles.items}>
