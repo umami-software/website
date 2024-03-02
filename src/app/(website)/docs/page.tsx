@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation';
+import page from './v2/[id]/page';
 
 export default function () {
-  return redirect('/docs/intro');
+  return page({ params: { id: 'intro' } });
 }
