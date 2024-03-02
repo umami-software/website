@@ -57,7 +57,9 @@ export default function Header() {
               </div>
               <Popup>{close => <ProductMenu onClose={close} />}</Popup>
             </PopupTrigger>
-            <Link href="/docs">Docs</Link>
+            <Link href="/docs" prefetch={false}>
+              Docs
+            </Link>
             <Link href="/developers">Developers</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/pricing">Pricing</Link>
@@ -99,7 +101,9 @@ const ProductMenu = ({ onClose }) => {
       <div className={styles.column}>
         <header>Analytics</header>
         <Link href="/features">Features</Link>
-        <Link href="/docs/getting-started">Documentation</Link>
+        <Link href="/docs" prefetch={false}>
+          Documentation
+        </Link>
       </div>
       <div className={styles.column}>
         <header>Used by</header>
