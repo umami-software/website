@@ -61,7 +61,6 @@ Gets events within a given time range.
 - `unit`: Time unit (year | month | hour | day).
 - `timezone`: Timezone (ex. America/Los_Angeles).
 - `url`: (optional) Name of URL.
-- `eventName`: (optional) Name of event collected.
 
 **Sample response**
 
@@ -95,7 +94,7 @@ Gets pageviews within a given time range.
 - `timezone`: Timezone (ex. America/Los_Angeles).
 - `url`: (optional) Name of URL.
 - `referrer`: (optional) Name of referrer.
-- `pageTitle`: (optional) Name of page title.
+- `title`: (optional) Name of page title.
 - `os`: (optional) Name of operating system.
 - `browser`: (optional) Name of browser.
 - `device`: (optional) Name of device (ex. Mobile)
@@ -170,17 +169,19 @@ Gets metrics for a given time range.
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
 - `type`: Metrics type (url | referrer | browser | os | device | country | event).
-- `unit`: (optional) Time unit (year | month | hour | day).
-- `timezone`: (optional) Timezone (ex. America/Los_Angeles).
 - `url`: (optional) Name of URL.
 - `referrer`: (optional) Name of referrer.
-- `pageTitle`: (optional) Name of page title.
+- `title`: (optional) Name of page title.
+- `query`: (optional) Name of query.
 - `os`: (optional) Name of operating system.
 - `browser`: (optional) Name of browser.
 - `device`: (optional) Name of device (ex. Mobile)
 - `country`: (optional) Name of country.
 - `region`: (optional) Name of region/state/province.
 - `city`: (optional) Name of city.
+- `language`: (optional) Name of language.
+- `event`: (optional) Name of event.
+- `limit`: (optional, default 500) Number of events returned.
 
 **Sample response**
 
