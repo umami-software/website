@@ -17,10 +17,10 @@ GET /api/teams/{teamId}
 DELETE /api/teams/{teamId}
 POST /api/teams/{teamId}/users
 GET /api/teams/{teamId}/users
+GET /api/teams/{teamId}/users/{userId}
+POST /api/teams/{teamId}/users/{userId}
 DELETE /api/teams/{teamId}/users/{userId}
-POST /api/teams/{teamId}/websites
 GET /api/teams/{teamId}/websites
-DELETE /api/teams/{teamId}/websites/{userId}
 ```
 
 ---
@@ -63,7 +63,10 @@ Returns all teams.
 
 **Parameters**
 
-None
+- `query`: (optional string) Search text.
+- `page`: (optional number, default 1) Determines page.
+- `pageSize`: (optional string) Determines how many results to return.
+- `orderBy`: (optional string, default `name`) Order by column name.
 
 **Sample response**
 
@@ -192,7 +195,10 @@ Get all users that belong to a team.
 
 **Parameters**
 
-None
+- `query`: (optional string) Search text.
+- `page`: (optional number, default 1) Determines page.
+- `pageSize`: (optional string) Determines how many results to return.
+- `orderBy`: (optional string, default `name`) Order by column name.
 
 **Sample response**
 
@@ -221,7 +227,8 @@ Add a user to a team.
 
 **Parameters**
 
-- `websiteIds`: (optional string array) The list of website IDs to be added.
+- `userId`: ID of user to be added.
+- `role`: Role user will be added as (`member` or `view-only`).
 
 **Sample response**
 
@@ -238,9 +245,48 @@ Add a user to a team.
 
 ---
 
+## `GET /api/teams/{teamId}/users/{userId}`
+
+Get a user belonging to a team.
+
+**Parameters**
+
+None
+
+**Sample response**
+
+```json
+{
+  "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
+  "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
+  "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
+  "role": "team-owner",
+  "createdAt": "2023-04-13T20:22:55.756Z",
+  "updatedAt": null
+}
+```
+
+---
+
+## `POST /api/teams/{teamId}/users/{userId}`
+
+Update a user's role on a team.
+
+**Parameters**
+
+- `role`: Role user will be added as (`member` or `view-only`).
+
+**Sample response**
+
+```text
+ok
+```
+
+---
+
 ## `DELETE /api/teams/{teamId}/users/{userId}`
 
-Remove a website from a team.
+Remove a user from a team.
 
 **Parameters**
 
@@ -260,7 +306,10 @@ Get all websites that belong to a team.
 
 **Parameters**
 
-None
+- `query`: (optional string) Search text.
+- `page`: (optional number, default 1) Determines page.
+- `pageSize`: (optional string) Determines how many results to return.
+- `orderBy`: (optional string, default `name`) Order by column name.
 
 **Sample response**
 
@@ -307,36 +356,4 @@ None
     }
   }
 ]
-```
-
----
-
-## `POST /api/teams/{teamId}/websites`
-
-Add a website to a team.
-
-**Parameters**
-
-- `websiteIds`: (optional string array) The list of website IDs to be added.
-
-**Sample response**
-
-```json
-["02d89813-7a72-41e1-87f0-8d668f85008b"]
-```
-
----
-
-## `DELETE /api/teams/{teamId}/websites/{websiteId}`
-
-Remove a website from a team.
-
-**Parameters**
-
-None
-
-**Sample response**
-
-```text
-ok
 ```
