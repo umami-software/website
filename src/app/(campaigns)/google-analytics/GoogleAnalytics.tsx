@@ -17,6 +17,7 @@ const items = [
   Blocks.customEvents,
   Blocks.filters,
   Blocks.realtimeData,
+  Blocks.reports,
 ];
 
 export default function GoogleAnalytics() {
