@@ -9,38 +9,12 @@ Operations around Website management and statistics.
 **Endpoints**
 
 ```
-POST /api/websites
 GET /api/websites
-POST /api/websites/{websiteId}
+POST /api/websites
 GET /api/websites/{websiteId}
+POST /api/websites/{websiteId}
 DELETE /api/websites/{websiteId}
 POST /api/websites/{websiteId}/reset
-```
-
----
-
-## `POST /api/websites`
-
-Creates a website.
-
-**Parameters**
-
-- `domain`: (string) The full domain of the tracked website.
-- `name`: (string) The name of the website in Umami.
-- `shareId`: (optional string) A unique string to enable a share url. Set `null` to unshare.
-
-**Sample response**
-
-```json
-{
-  "id": 4,
-  "websiteUuid": "51f73213-3f01-4343-a135-25496a3ffd31",
-  "websiteId": 2,
-  "name": "Umami",
-  "domain": "umami.is",
-  "shareId": "8PWex1pa",
-  "createdAt": "2021-07-26T17:17:52.846Z"
-}
 ```
 
 ---
@@ -51,7 +25,10 @@ Returns all tracked websites.
 
 **Parameters**
 
-None
+- `query`: (optional string) Search text.
+- `page`: (optional number, default 1) Determines page.
+- `pageSize`: (optional string) Determines how many results to return.
+- `orderBy`: (optional string, default `name`) Order by column name.
 
 **Sample response**
 
@@ -69,6 +46,33 @@ None
     "deletedAt": null
   }
 ]
+```
+
+---
+
+## `POST /api/websites`
+
+Creates a website.
+
+**Parameters**
+
+- `domain`: (string) The full domain of the tracked website.
+- `name`: (string) The name of the website in Umami.
+- `shareId`: (optional string) A unique string to enable a share url. Set `null` to unshare.
+- `teamId`: (optional string) The ID of the team the website will be created under.
+
+**Sample response**
+
+```json
+{
+  "id": 4,
+  "websiteUuid": "51f73213-3f01-4343-a135-25496a3ffd31",
+  "websiteId": 2,
+  "name": "Umami",
+  "domain": "umami.is",
+  "shareId": "8PWex1pa",
+  "createdAt": "2021-07-26T17:17:52.846Z"
+}
 ```
 
 ---
