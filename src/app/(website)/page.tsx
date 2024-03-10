@@ -8,6 +8,7 @@ import Quotes from './Quotes';
 import Features from './Features';
 import Personas from './Personas';
 import styles from './page.module.css';
+import OpenSource from 'app/(website)/OpenSource';
 
 export default function () {
   return (
@@ -17,6 +18,7 @@ export default function () {
       <Features />
       <QuickStart />
       <Personas />
+      <OpenSource />
       <Quotes />
       <GetStartedBanner />
       <NewsletterSignup />

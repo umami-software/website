@@ -1,32 +1,32 @@
-.text h1 {
+.text > h1 {
   font-size: max(32px, min(5vw, 48px));
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 1.2;
 }
 
-.text.xl h1 {
+.text.xl > h1 {
   font-size: max(48px, min(5vw, 76px));
 }
 
-.text.lg h1 {
+.text.lg > h1 {
   font-size: max(48px, min(5vw, 64px));
 }
 
-.text.md h1 {
+.text.md > h1 {
   font-size: max(32px, min(5vw, 48px));
 }
 
-.text.sm h1 {
+.text.sm > h1 {
   font-size: max(18px, min(2vw, 24px));
 }
 
-.text h2 {
+.text > h2 {
   font-size: max(18px, min(2vw, 24px));
   letter-spacing: -0.05em;
 }
 
-.text p {
+.text > p {
   color: var(--base700);
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
@@ -38,12 +38,12 @@
   }
 }
 
-.text.xl p {
-  font-size: max(15px, min(2vw, 20px));
+.text.xl > p {
+  font-size: max(18px, min(2vw, 24px));
 }
 
-.text.lg p {
-  font-size: max(14px, min(2vw, 16px));
+.text.lg > p {
+  font-size: max(16px, min(2vw, 18px));
 }
 
 .start {
@@ -61,5 +61,3 @@
 .text strong {
   color: var(--base900);
 }
-
-

@@ -17,6 +17,7 @@ const items = [
   Blocks.customEvents,
   Blocks.filters,
   Blocks.realtimeData,
+  Blocks.reports,
 ];
 
 export default function GoogleAnalytics() {
@@ -25,19 +26,27 @@ export default function GoogleAnalytics() {
   return (
     <div className={styles.container}>
       <PageHeader className={styles.header}>
-        <h1>Tired of Google Analytics headaches?</h1>
+        <h1>
+          The Google Analytics Alternative
+          <br />
+          with 8 million+ downloads
+        </h1>
       </PageHeader>
       <ImageBlock>
         <TextBlock>
-          <h1>If you’re dreading the GA4 migration, consider a better alternative.</h1>
+          <h1>Frustrated by the forced GA4 conversion?</h1>
           <p>
-            Unlike Universal Analytics and GA4, Umami offers fast and flexible implementation,
-            getting you up and running in no time without digging through endless screens, submenus,
-            and support docs.
+            Umami Analytics is a website analytics platform that allows you to collect, analyze, and
+            understand your website data in a clean and simple interface. Installation and setting
+            up event tracking are a breeze. Try it free today!
           </p>
           <p>
-            Plus, Umami keeps web data between you and your customers—protecting the privacy of
-            visitors and ensuring compliance.
+            Don’t worry, you can test Umami Analytics alongside Google Analytics so you won’t lose
+            any data.
+          </p>
+          <p>
+            Plus, Umami Analytics anonymizes all data and never collects personal data, which means
+            no cookie banners are required!
           </p>
         </TextBlock>
         <div className={styles.button}>
