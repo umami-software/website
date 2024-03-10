@@ -29,7 +29,7 @@ export default function GoogleAnalytics() {
         <h1>
           The Google Analytics Alternative
           <br />
-          with 5 million+ downloads
+          with 8 million+ downloads
         </h1>
       </PageHeader>
       <ImageBlock>

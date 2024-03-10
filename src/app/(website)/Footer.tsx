@@ -12,10 +12,11 @@ const data = [
     items: [
       { text: 'Features', href: '/features' },
       { text: 'Pricing', href: '/pricing' },
+      { text: 'Cloud', href: 'https://cloud.umami.is/?ref=umami-nav-footer' },
     ],
   },
   {
-    title: 'Resources',
+    title: 'Learn',
     items: [
       { text: 'Docs', href: '/docs' },
       { text: 'Guides', href: '/docs/guides' },
@@ -24,20 +25,20 @@ const data = [
     ],
   },
   {
-    title: 'Community',
+    title: 'Resources',
     items: [
-      { text: 'Get Involved', href: '/developers' },
+      { text: 'Developers', href: '/developers' },
       { text: 'GitHub', href: 'https://github.com/umami-software/umami' },
       { text: 'Discord', href: 'https://discord.gg/4dz4zcXYrQ' },
       { text: 'Twitter', href: 'https://twitter.com/umami_software' },
     ],
   },
   {
-    title: 'Company',
+    title: 'About',
     items: [
-      { text: 'About', href: '/about' },
+      { text: 'Company', href: '/about' },
       { text: 'Blog', href: '/blog' },
-      { text: 'Contact', href: '/contact' },
+      { text: 'Contact us', href: '/contact' },
       { text: 'Privacy', href: '/privacy' },
       { text: 'Terms', href: '/terms' },
     ],

@@ -1,11 +1,11 @@
 'use client';
 import PageHeader from 'components/layout/PageHeader';
-import Community from './Community';
+import GetInvolved from './GetInvolved';
 import Deploy from './Deploy';
-import GitHubStats from './GitHubStats';
-import styles from './Developers.module.css';
+import Join from './Join';
+import styles from './DevelopersPage.module.css';
 
-export default function Developers() {
+export default function DevelopersPage() {
   return (
     <div className={styles.container}>
       <PageHeader>
@@ -15,9 +15,9 @@ export default function Developers() {
           that is fully transparent, secure and available to everyone.
         </p>
       </PageHeader>
+      <Join />
+      <GetInvolved />
       <Deploy />
-      <GitHubStats />
-      <Community />
     </div>
   );
 }

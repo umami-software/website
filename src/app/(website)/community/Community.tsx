@@ -1,6 +1,6 @@
 'use client';
 import LinkButton from 'components/common/LinkButton';
-import SectionHeader from 'components/layout/SectionHeader';
+import PageHeader from 'components/layout/PageHeader';
 import { REPO_URL, DISCORD_URL, TWITTER_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
@@ -32,10 +32,10 @@ const items = [
 export default function Community() {
   return (
     <section>
-      <SectionHeader>
+      <PageHeader>
         <h1>Community</h1>
         <p>Get help with issues, discuss ideas and share your feedback.</p>
-      </SectionHeader>
+      </PageHeader>
       <div className={styles.items}>
         {items.map(({ name, description, url, icon }) => (
           <div key={name} className={styles.item}>
