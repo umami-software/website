@@ -107,8 +107,6 @@ export default function Header() {
 }
 
 const ProductMenu = ({ onClose }) => {
-  const query = useQueryString({ ref: 'umami-nav-header' });
-
   return (
     <nav className={styles.menu} onClick={onClose}>
       <div className={styles.column}>
@@ -117,7 +115,7 @@ const ProductMenu = ({ onClose }) => {
         <Link href="/docs" prefetch={false}>
           Self-hosting
         </Link>
-        <Link href={`https://cloud.umami.is/${query}`}>Cloud</Link>
+        <Link href="/docs/cloud">Cloud</Link>
       </div>
       <div className={styles.column}>
         <header>Used by</header>

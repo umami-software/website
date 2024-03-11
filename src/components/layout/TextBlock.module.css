@@ -39,7 +39,7 @@
 }
 
 .text.xl > p {
-  font-size: max(18px, min(2vw, 24px));
+  font-size: max(18px, min(2vw, 22px));
 }
 
 .text.lg > p {
