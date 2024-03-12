@@ -4,9 +4,8 @@ import SectionHeader from 'components/layout/SectionHeader';
 import TextBlock from 'components/layout/TextBlock';
 import GetStartedBanner from 'components/common/GetStartedBanner';
 import LinkButton from 'components/common/LinkButton';
-import { CLOUD_URL } from 'lib/constants';
+import { CLOUD_URL, Blocks } from 'lib/constants';
 import ScrollBlock from 'components/layout/ScrollBlock';
-import { Blocks } from 'lib/content';
 import useQueryString from 'components/hooks/useQueryString';
 import styles from './Agencies.module.css';
 

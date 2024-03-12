@@ -28,6 +28,7 @@ const data = [
     title: 'Resources',
     items: [
       { text: 'Developers', href: '/developers' },
+      { text: 'Community', href: '/community' },
       { text: 'GitHub', href: 'https://github.com/umami-software/umami' },
       { text: 'Discord', href: 'https://discord.gg/4dz4zcXYrQ' },
       { text: 'Twitter', href: 'https://twitter.com/umami_software' },

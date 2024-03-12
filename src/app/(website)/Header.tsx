@@ -136,10 +136,6 @@ const ResourcesMenu = ({ onClose }) => {
         <Link href="/community">Community</Link>
         <Link href="/blog">Blog</Link>
       </div>
-      <div className={styles.column}>
-        <header>Support</header>
-        <Link href="/contact">Contact us</Link>
-      </div>
     </nav>
   );
 };
