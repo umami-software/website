@@ -1,6 +1,5 @@
 'use client';
 import PageHeader from 'components/layout/PageHeader';
-import GetInvolved from './GetInvolved';
 import Deploy from './Deploy';
 import Join from './Join';
 import styles from './DevelopersPage.module.css';
@@ -16,7 +15,6 @@ export default function DevelopersPage() {
         </p>
       </PageHeader>
       <Join />
-      <GetInvolved />
       <Deploy />
     </div>
   );

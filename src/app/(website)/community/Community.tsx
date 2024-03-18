@@ -1,10 +1,11 @@
 'use client';
 import LinkButton from 'components/common/LinkButton';
 import PageHeader from 'components/layout/PageHeader';
-import { REPO_URL, DISCORD_URL, TWITTER_URL } from 'lib/constants';
+import { GITHUB_URL, DISCORD_URL, TWITTER_URL, LINKEDIN_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
 import Twitter from 'assets/twitter.svg';
+import LinkedIn from 'assets/linkedin.svg';
 import styles from './Community.module.css';
 
 const items = [
@@ -12,7 +13,7 @@ const items = [
     name: 'GitHub',
     description:
       'Check out the Umami source code, report issues, request features and join discussions.',
-    url: REPO_URL,
+    url: GITHUB_URL,
     icon: <GitHub />,
   },
   {
@@ -26,6 +27,12 @@ const items = [
     description: 'Follow us on Twitter for the latest news and updates.',
     url: TWITTER_URL,
     icon: <Twitter />,
+  },
+  {
+    name: 'LinkedIn',
+    description: 'Learn about our company.',
+    url: LINKEDIN_URL,
+    icon: <LinkedIn />,
   },
 ];
 
