@@ -77,6 +77,13 @@ const nextConfig = {
   },
   async rewrites() {
     return [
+      { source: '/website-analytics', destination: '/' },
+      { source: '/analytics', destination: '/' },
+      { source: '/privacy-analytics', destination: '/' },
+      { source: '/linkedin', destination: '/' },
+      { source: '/reddit', destination: '/' },
+      { source: '/apollo', destination: '/' },
+      { source: '/apollo-ga', destination: '/google-analytics' },
       { source: '/docs/cloud', destination: '/docs/cloud/intro' },
       { source: '/docs/cloud/:path*', destination: '/docs/cloud/:path*' },
       { source: '/docs/v1', destination: '/docs/v1/getting-started' },

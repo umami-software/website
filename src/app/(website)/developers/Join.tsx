@@ -1,5 +1,5 @@
 'use client';
-import { REPO_URL } from 'lib/constants';
+import { GITHUB_URL } from 'lib/constants';
 import SectionHeader from 'components/layout/SectionHeader';
 import LinkButton from 'components/common/LinkButton';
 import GitHubStats from 'app/(website)/GitHubStats';
@@ -16,7 +16,7 @@ export default function Join() {
           <LinkButton href="/docs/getting-started" variant="secondary">
             Read the docs
           </LinkButton>
-          <LinkButton href={REPO_URL} variant="secondary">
+          <LinkButton href={GITHUB_URL} variant="secondary">
             View the source
           </LinkButton>
         </div>

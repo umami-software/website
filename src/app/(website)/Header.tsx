@@ -5,7 +5,7 @@ import CompanyLogo from 'components/common/CompanyLogo';
 import HamburgerButton from 'components/common/HamburgerButton';
 import LinkButton from 'components/common/LinkButton';
 import useQueryString from 'components/hooks/useQueryString';
-import { GITHUB_STARS, REPO_URL } from 'lib/constants';
+import { GITHUB_STARS, GITHUB_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';
 import styles from './Header.module.css';
 
@@ -76,7 +76,7 @@ export default function Header() {
             <Link href="/pricing">Pricing</Link>
           </nav>
           <div className={styles.buttons}>
-            <Link href={REPO_URL} target="_blank" className={styles.github}>
+            <Link href={GITHUB_URL} target="_blank" className={styles.github}>
               <Icon size="lg">
                 <GitHub />
               </Icon>
@@ -107,8 +107,6 @@ export default function Header() {
 }
 
 const ProductMenu = ({ onClose }) => {
-  const query = useQueryString({ ref: 'umami-nav-header' });
-
   return (
     <nav className={styles.menu} onClick={onClose}>
       <div className={styles.column}>
@@ -117,7 +115,7 @@ const ProductMenu = ({ onClose }) => {
         <Link href="/docs" prefetch={false}>
           Self-hosting
         </Link>
-        <Link href={`https://cloud.umami.is/${query}`}>Cloud</Link>
+        <Link href="/docs/cloud">Cloud</Link>
       </div>
       <div className={styles.column}>
         <header>Used by</header>
@@ -134,13 +132,9 @@ const ResourcesMenu = ({ onClose }) => {
     <nav className={styles.menu} onClick={onClose}>
       <div className={styles.column}>
         <header>Learn</header>
-        <Link href="/developers">Developers</Link>
         <Link href="/community">Community</Link>
+        <Link href="/developers">Developers</Link>
         <Link href="/blog">Blog</Link>
-      </div>
-      <div className={styles.column}>
-        <header>Support</header>
-        <Link href="/contact">Contact us</Link>
       </div>
     </nav>
   );

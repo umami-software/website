@@ -1,10 +1,9 @@
 'use client';
 import PageHeader from 'components/layout/PageHeader';
 import TextBlock from 'components/layout/TextBlock';
-import { Blocks } from 'lib/content';
 import ImageBlock from 'components/layout/ImageBlock';
 import LinkButton from 'components/common/LinkButton';
-import { CLOUD_URL } from 'lib/constants';
+import { CLOUD_URL, Blocks } from 'lib/constants';
 import ScrollBlock from 'components/layout/ScrollBlock';
 import GetStartedBanner from 'components/common/GetStartedBanner';
 import SectionHeader from 'components/layout/SectionHeader';

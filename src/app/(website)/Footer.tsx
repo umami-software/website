@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import CompanyLogo from 'components/common/CompanyLogo';
 import SocialMedia from 'components/common/SocialMedia';
 import styles from './Footer.module.css';
+import { DISCORD_URL, GITHUB_URL, LINKEDIN_URL, X_URL } from 'lib/constants';
 
 const data = [
   {
@@ -28,9 +29,10 @@ const data = [
     title: 'Resources',
     items: [
       { text: 'Developers', href: '/developers' },
-      { text: 'GitHub', href: 'https://github.com/umami-software/umami' },
-      { text: 'Discord', href: 'https://discord.gg/4dz4zcXYrQ' },
-      { text: 'X', href: 'https://twitter.com/umami_software' },
+      { text: 'Community', href: '/community' },
+      { text: 'GitHub', href: GITHUB_URL },
+      { text: 'Discord', href: DISCORD_URL },
+      { text: 'X', href: X_URL },
     ],
   },
   {
@@ -39,6 +41,7 @@ const data = [
       { text: 'Company', href: '/about' },
       { text: 'Blog', href: '/blog' },
       { text: 'Contact us', href: '/contact' },
+      { text: 'LinkedIn', href: LINKEDIN_URL },
       { text: 'Privacy', href: '/privacy' },
       { text: 'Terms', href: '/terms' },
     ],

@@ -3,13 +3,15 @@ import Link from 'next/link';
 import GitHub from 'assets/github.svg';
 import X from 'assets/x.svg';
 import Discord from 'assets/discord.svg';
+import LinkedIn from 'assets/linkedin.svg';
 import styles from './SocialMedia.module.css';
-import { REPO_URL, DISCORD_URL, X_URL } from 'lib/constants';
+import { GITHUB_URL, DISCORD_URL, X_URL, LINKEDIN_URL } from 'lib/constants';
 
 const links = [
-  { name: 'GitHub', url: REPO_URL, icon: <GitHub /> },
+  { name: 'GitHub', url: GITHUB_URL, icon: <GitHub /> },
   { name: 'Discord', url: DISCORD_URL, icon: <Discord /> },
   { name: 'X', url: X_URL, icon: <X /> },
+  { name: 'LinkedIn', url: LINKEDIN_URL, icon: <LinkedIn /> },
 ];
 
 export default function SocialMedia() {
