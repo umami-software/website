@@ -77,8 +77,9 @@ const nextConfig = {
   },
   async rewrites() {
     return [
-      { source: '/website-analytics', destination: '/' },
       { source: '/analytics', destination: '/' },
+      { source: '/website-analytics', destination: '/' },
+      { source: '/open-source-website-analytics', destination: '/' },
       { source: '/privacy-analytics', destination: '/' },
       { source: '/linkedin', destination: '/' },
       { source: '/reddit', destination: '/' },
