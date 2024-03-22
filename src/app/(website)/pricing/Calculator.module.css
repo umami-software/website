@@ -41,7 +41,7 @@
 }
 
 .slider {
-  max-width: 640px;
+  max-width: 660px;
   margin: 40px auto 20px;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .tick {
-  width: calc(600px / 9);
+  width: calc(600px / 6);
   text-align: center;
   cursor: pointer;
 }
