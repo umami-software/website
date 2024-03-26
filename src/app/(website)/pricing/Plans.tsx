@@ -33,7 +33,7 @@ export default function Plans() {
       features: [
         'Unlimited websites',
         'Unlimited team members',
-        '7 year data retention',
+        '5 year data retention',
         'Email support',
       ],
       url: `${CLOUD_URL}/signup${query}&plan=pro`,
