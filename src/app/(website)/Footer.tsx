@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import CompanyLogo from 'components/common/CompanyLogo';
 import SocialMedia from 'components/common/SocialMedia';
 import styles from './Footer.module.css';
-import { DISCORD_URL, GITHUB_URL, LINKEDIN_URL, TWITTER_URL } from 'lib/constants';
+import { DISCORD_URL, GITHUB_URL, LINKEDIN_URL, X_URL } from 'lib/constants';
 
 const data = [
   {
@@ -32,7 +32,7 @@ const data = [
       { text: 'Community', href: '/community' },
       { text: 'GitHub', href: GITHUB_URL },
       { text: 'Discord', href: DISCORD_URL },
-      { text: 'Twitter', href: TWITTER_URL },
+      { text: 'X', href: X_URL },
     ],
   },
   {
