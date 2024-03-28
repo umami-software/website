@@ -19,6 +19,7 @@ There will be guides below to import your data from a self-hosted version of Uma
 
 - `website_id`: (uuid) Website key identifier.
 - `session_id`: (uuid) Session key identifier.
+- `visit_id`: (uuid) Visit key identifier.
 - `event_id`: (uuid) Event key identifier.
 - `hostname`: (string)(optional) Name of host.
 - `browser`: (string)(optional) Name of browser.
@@ -72,6 +73,7 @@ If using a schema other than `public`, you will need to identify the schema in t
 CREATE VIEW website_event_import AS
 SELECT we.website_id,
     we.session_id,
+    we.visit_id,
     we.event_id,
     s.hostname,
     s.browser,
@@ -160,6 +162,7 @@ If this returned `/var/lib/mysql-files/` your filepath can be `/var/lib/mysql-fi
 CREATE VIEW website_event_import AS
 SELECT we.website_id,
       we.session_id,
+      we.visit_id
       we.event_id,
       COALESCE(s.hostname, '') hostname,
       COALESCE(s.browser, '') browser,
@@ -192,6 +195,7 @@ This command does not support headers, so you will have to hardcode them.
 ```sh
 SELECT 'website_id',
       'session_id',
+      'visit_id',
       'event_id',
       'hostname',
       'browser',
