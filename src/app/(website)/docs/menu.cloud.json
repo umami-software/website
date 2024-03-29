@@ -76,6 +76,10 @@
       {
         "label": "Retention",
         "url": "/docs/cloud/report-retention"
+      },
+      {
+        "label": "UTM",
+        "url": "/docs/cloud/report-utm"
       }
     ]
   },
