@@ -88,6 +88,10 @@
       {
         "label": "Retention",
         "url": "/docs/report-retention"
+      },
+      {
+        "label": "UTM",
+        "url": "/docs/report-utm"
       }
     ]
   },
