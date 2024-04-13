@@ -30,6 +30,7 @@ const features = [
   {
     label: 'Support',
     items: [
+      ['Community support', true, true, true],
       ['Email support', false, true, true],
       ['Uptime SLA', false, false, true],
       ['Onboarding support', false, false, true],
