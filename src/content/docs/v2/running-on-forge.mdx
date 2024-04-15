@@ -44,22 +44,32 @@ If you have a Forge Account and a connected server bucket, you can easily set up
    ```
 
 5. In Forge, go to your Server page, click **Database** and add a user to the just created database.
-6. Create the database-connection string and add it to your `.env` file:
-
+6. Create an .env file with the following:
    ```
-   DATABASE_URL=mysql://user:password@localhost:3306/dbname
+   DATABASE_URL={connection url}
+   ```
+   The connection url is in the following format:
+   ```
+   DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
+
+   DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
    ```
 
 7. Perform the initial project setup, via SSH:
 
    ```sh
    yarn install
-   yarn update-db
    yarn build
    ```
 
 8. Go to your Umami-Site and click on **SSL** in the left menu and add an SSL-Certificate.
-9. Click **Edit files** > **Edit Nginx Configuration** and add the following before the favicon.
+9. Click **Edit files** > **Edit Nginx Configuration** and overwrite the following block:
+   ```
+   location / {
+       try_files $uri $uri/ /index.php?$query_string;
+   }
+   ```
+   for:
 
    ```
    location / {
