@@ -4,7 +4,7 @@
   gap: 20px;
   padding: 30px;
   border-radius: 12px;
-  background: var(--blue100);
+  margin-top: 60px;
 }
 
 .card {
@@ -16,6 +16,7 @@
   border: 1px solid var(--base400);
   border-radius: 10px;
   align-self: start;
+  box-shadow: 5px 5px 0 var(--base100);
 }
 
 .pic {
@@ -66,6 +67,7 @@
   grid-column: 2/3;
   grid-row: 2/3;
   text-align: left;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 768px) {

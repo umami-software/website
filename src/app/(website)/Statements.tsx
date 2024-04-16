@@ -38,10 +38,6 @@ export default function Statements() {
       <div className={styles.header}>
         <TextBlock align="center" className={styles.block}>
           <h1>Umami is a simple, fast, privacy-focused alternative to Google Analytics</h1>
-          <p>
-            You deserve an analytics solution that you can trust — that won't invade your user's
-            privacy and gives you complete ownership of your data.
-          </p>
         </TextBlock>
       </div>
       <div className={styles.items}>

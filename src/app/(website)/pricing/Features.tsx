@@ -7,7 +7,7 @@ import styles from './Features.module.css';
 const features = [
   {
     label: 'Data',
-    items: [['Ingest (included)', '10K', '100K to 50M', 'Custom']],
+    items: [['Ingest (included)', '10K', '100K to 20M', 'Custom']],
   },
   {
     label: 'Analytics',
@@ -30,6 +30,7 @@ const features = [
   {
     label: 'Support',
     items: [
+      ['Community support', true, true, true],
       ['Email support', false, true, true],
       ['Uptime SLA', false, false, true],
       ['Onboarding support', false, false, true],

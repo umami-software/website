@@ -3,9 +3,8 @@ import ImageBlock from 'components/layout/ImageBlock';
 import TextBlock from 'components/layout/TextBlock';
 import GetStartedBanner from 'components/common/GetStartedBanner';
 import LinkButton from 'components/common/LinkButton';
-import { CLOUD_URL } from 'lib/constants';
+import { CLOUD_URL, Blocks } from 'lib/constants';
 import ScrollBlock from 'components/layout/ScrollBlock';
-import { Blocks } from 'lib/content';
 import useQueryString from 'components/hooks/useQueryString';
 import styles from './Creators.module.css';
 
@@ -33,7 +32,7 @@ export default function Creators() {
             </h1>
             <p>
               Umami lets you measure the engagement and stickyness of your website. Discover what
-              works and what doesn't.
+              works and what doesn&apos;t.
             </p>
             <LinkButton href={`${CLOUD_URL}/signup${query}`} size="lg" variant="primary">
               Start free trial

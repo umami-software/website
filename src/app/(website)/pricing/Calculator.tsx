@@ -13,9 +13,8 @@ const tiers = [
   { price: 99, events: '2.5M' },
   { price: 189, events: '5M' },
   { price: 369, events: '10M' },
-  { price: 899, events: '25M' },
-  { price: 1699, events: '50M' },
-  { price: null, events: '50M+' },
+  { price: 729, events: '20M' },
+  { price: null, events: '20M+' },
 ];
 
 export default function Calculator() {

@@ -16,7 +16,7 @@
 
 .header p {
   color: var(--base700);
-  font-size: max(14px, min(2vw, 16px));
+  font-size: max(16px, min(2vw, 18px)) !important;
   font-weight: 400;
   margin: 20px auto;
   text-align: center;

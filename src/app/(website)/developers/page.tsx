@@ -1,4 +1,4 @@
-import Developers from './Developers';
+import DevelopersPage from './DevelopersPage';
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 
@@ -6,7 +6,7 @@ export default function () {
   return (
     <article>
       <Suspense>
-        <Developers />
+        <DevelopersPage />
       </Suspense>
     </article>
   );

@@ -1,0 +1,17 @@
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(1);
+  opacity: 0.5;
+  height: 200px;
+}
+
+.logos img {
+  display: block;
+  max-width: 120px;
+  height: auto;
+  margin: auto;
+}

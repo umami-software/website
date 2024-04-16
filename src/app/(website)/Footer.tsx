@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import CompanyLogo from 'components/common/CompanyLogo';
 import SocialMedia from 'components/common/SocialMedia';
 import styles from './Footer.module.css';
+import { DISCORD_URL, GITHUB_URL, LINKEDIN_URL, X_URL } from 'lib/constants';
 
 const data = [
   {
@@ -12,10 +13,11 @@ const data = [
     items: [
       { text: 'Features', href: '/features' },
       { text: 'Pricing', href: '/pricing' },
+      { text: 'Cloud', href: 'https://cloud.umami.is/?ref=umami-nav-footer' },
     ],
   },
   {
-    title: 'Resources',
+    title: 'Learn',
     items: [
       { text: 'Docs', href: '/docs' },
       { text: 'Guides', href: '/docs/guides' },
@@ -24,7 +26,7 @@ const data = [
     ],
   },
   {
-    title: 'Community',
+    title: 'Resources',
     items: [
       { text: 'Get Involved', href: '/developers' },
       { text: 'GitHub', href: 'https://github.com/umami-software/umami' },
@@ -33,11 +35,12 @@ const data = [
     ],
   },
   {
-    title: 'Company',
+    title: 'About',
     items: [
-      { text: 'About', href: '/about' },
+      { text: 'Company', href: '/about' },
       { text: 'Blog', href: '/blog' },
-      { text: 'Contact', href: '/contact' },
+      { text: 'Contact us', href: '/contact' },
+      { text: 'LinkedIn', href: LINKEDIN_URL },
       { text: 'Privacy', href: '/privacy' },
       { text: 'Terms', href: '/terms' },
     ],

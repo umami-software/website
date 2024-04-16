@@ -7,6 +7,8 @@ import QuickStart from './QuickStart';
 import Quotes from './Quotes';
 import Features from './Features';
 import Personas from './Personas';
+import OpenSource from 'app/(website)/OpenSource';
+import Companies from 'app/(website)/Companies';
 import styles from './page.module.css';
 
 export default function () {
@@ -14,9 +16,11 @@ export default function () {
     <article className={styles.container}>
       <Hero />
       <Statements />
+      <Companies />
       <Features />
       <QuickStart />
       <Personas />
+      <OpenSource />
       <Quotes />
       <GetStartedBanner />
       <NewsletterSignup />
