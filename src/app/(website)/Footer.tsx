@@ -28,10 +28,11 @@ const data = [
   {
     title: 'Resources',
     items: [
-      { text: 'Get Involved', href: '/developers' },
-      { text: 'GitHub', href: 'https://github.com/umami-software/umami' },
-      { text: 'Discord', href: 'https://discord.gg/4dz4zcXYrQ' },
-      { text: 'X', href: 'https://twitter.com/umami_software' },
+      { text: 'Developers', href: '/developers' },
+      { text: 'Community', href: '/community' },
+      { text: 'GitHub', href: GITHUB_URL },
+      { text: 'Discord', href: DISCORD_URL },
+      { text: 'X', href: X_URL },
     ],
   },
   {
