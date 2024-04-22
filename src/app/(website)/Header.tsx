@@ -70,6 +70,7 @@ export default function Header() {
               </div>
               <Popup>{close => <ResourcesMenu onClose={close} />}</Popup>
             </PopupTrigger>
+            <Link href="/blog">Blog</Link>
             <Link href="/docs" prefetch={false}>
               Docs
             </Link>
@@ -134,7 +135,6 @@ const ResourcesMenu = ({ onClose }) => {
         <header>Learn</header>
         <Link href="/community">Community</Link>
         <Link href="/developers">Developers</Link>
-        <Link href="/blog">Blog</Link>
       </div>
     </nav>
   );
