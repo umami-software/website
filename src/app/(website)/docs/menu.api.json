@@ -1,0 +1,43 @@
+[
+  {
+    "label": "API",
+    "items": [
+      {
+        "label": "API",
+        "url": "/docs/api"
+      },
+      {
+        "label": "Authentication",
+        "url": "/docs/api/authentication"
+      },
+      {
+        "label": "Users",
+        "url": "/docs/api/users-api"
+      },
+      {
+        "label": "Teams",
+        "url": "/docs/api/teams-api"
+      },
+      {
+        "label": "Websites",
+        "url": "/docs/api/websites-api"
+      },
+      {
+        "label": "Website stats",
+        "url": "/docs/api/website-stats"
+      },
+      {
+        "label": "Sending stats",
+        "url": "/docs/api/sending-stats"
+      },
+      {
+        "label": "Event Data",
+        "url": "/docs/api/event-data"
+      },
+      {
+        "label": "API Client",
+        "url": "/docs/api/api-client"
+      }
+    ]
+  }
+]

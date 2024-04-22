@@ -5,6 +5,7 @@ import Link from 'next/link';
 import v1 from './menu.v1.json';
 import v2 from './menu.v2.json';
 import cloud from './menu.cloud.json';
+import api from './menu.api.json';
 import guides from './menu.guides.json';
 import styles from './Menu.module.css';
 
@@ -13,8 +14,11 @@ export default function Menu({ onClick }: { onClick?: () => void }) {
   const query = useParams();
 
   let menu = pathname.includes('/v1') ? v1 : v2;
+
   if (pathname.includes('/docs/cloud')) {
     menu = cloud;
+  } else if (pathname.includes('/docs/api')) {
+    menu = api;
   } else if (pathname.includes('/docs/guides')) {
     menu = guides;
   }

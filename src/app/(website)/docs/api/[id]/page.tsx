@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { getDoc } from 'lib/docs';
 import Markdown from 'components/common/Markdown';
 
-const FOLDER = 'v1';
+const FOLDER = 'api';
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = params;
@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
   return {
     title: {
-      absolute: `Docs (v1): ${doc?.title} – Umami`,
-      default: 'Docs (v1) – Umami',
+      absolute: `API: ${doc?.title} – Umami`,
+      default: 'API – Umami',
     },
   };
 }

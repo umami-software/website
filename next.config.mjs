@@ -85,6 +85,8 @@ const nextConfig = {
       { source: '/reddit', destination: '/' },
       { source: '/apollo', destination: '/' },
       { source: '/apollo-ga', destination: '/google-analytics' },
+      { source: '/docs/api', destination: '/docs/api/intro' },
+      { source: '/docs/api/:path*', destination: '/docs/api/:path*' },
       { source: '/docs/cloud', destination: '/docs/cloud/intro' },
       { source: '/docs/cloud/:path*', destination: '/docs/cloud/:path*' },
       { source: '/docs/guides', destination: '/docs/guides/intro' },

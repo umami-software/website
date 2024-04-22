@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 import { getDoc } from 'lib/docs';
 import Markdown from 'components/common/Markdown';
 
-const VERSION = 'v2';
+const FOLDER = 'v2';
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = params;
 
-  const doc = await getDoc(id, VERSION);
+  const doc = await getDoc(id, FOLDER);
 
   return {
     title: {
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 export default async function ({ params }: { params: { id: string } }) {
   const { id } = params;
 
-  const doc = await getDoc(id, VERSION);
+  const doc = await getDoc(id, FOLDER);
 
   return <Markdown>{doc?.body}</Markdown>;
 }
