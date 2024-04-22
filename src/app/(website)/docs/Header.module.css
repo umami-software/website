@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--base200);
+  height: 40px;
+}
+
+.title {
+  font-weight: 700;
+  height: 40px;
+}
+
+.header a {
+  height: 40px;
+  border-bottom: 2px solid transparent;
+}
+
+a.selected {
+  border-bottom: 2px solid var(--blue800);
+}

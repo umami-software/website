@@ -163,58 +163,6 @@
       {
         "label": "Hosting",
         "url": "/docs/hosting"
-      },
-      {
-        "label": "Running on DigitalOcean",
-        "url": "/docs/running-on-digitalocean"
-      },
-      {
-        "label": "Running on Vercel",
-        "url": "/docs/running-on-vercel"
-      },
-      {
-        "label": "Running on Neon Postgres",
-        "url": "/docs/running-on-neon"
-      },
-      {
-        "label": "Running on Netlify",
-        "url": "/docs/running-on-netlify"
-      },
-      {
-        "label": "Running on Heroku",
-        "url": "/docs/running-on-heroku"
-      },
-      {
-        "label": "Running on Railway",
-        "url": "/docs/running-on-railway"
-      },
-      {
-        "label": "Running on Supabase",
-        "url": "/docs/running-on-supabase"
-      },
-      {
-        "label": "Running on PlanetScale",
-        "url": "/docs/running-on-planetscale"
-      },
-      {
-        "label": "Running on Qovery",
-        "url": "/docs/running-on-qovery"
-      },
-      {
-        "label": "Running on CapRover",
-        "url": "/docs/running-on-caprover"
-      },
-      {
-        "label": "Running on Koyeb",
-        "url": "/docs/running-on-koyeb"
-      },
-      {
-        "label": "Running on Forge",
-        "url": "/docs/running-on-forge"
-      },
-      {
-        "label": "Running on Fly.io",
-        "url": "/docs/running-on-fly-io"
       }
     ]
   }

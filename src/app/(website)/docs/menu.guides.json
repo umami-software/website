@@ -1,0 +1,59 @@
+[
+  {
+    "label": "Hosting",
+    "items": [
+      {
+        "label": "Running on DigitalOcean",
+        "url": "/docs/guides/running-on-digitalocean"
+      },
+      {
+        "label": "Running on Vercel",
+        "url": "/docs/guides/running-on-vercel"
+      },
+      {
+        "label": "Running on Neon Postgres",
+        "url": "/docs/guides/running-on-neon"
+      },
+      {
+        "label": "Running on Netlify",
+        "url": "/docs/guides/running-on-netlify"
+      },
+      {
+        "label": "Running on Heroku",
+        "url": "/docs/guides/running-on-heroku"
+      },
+      {
+        "label": "Running on Railway",
+        "url": "/docs/guides/running-on-railway"
+      },
+      {
+        "label": "Running on Supabase",
+        "url": "/docs/guides/running-on-supabase"
+      },
+      {
+        "label": "Running on PlanetScale",
+        "url": "/docs/guides/running-on-planetscale"
+      },
+      {
+        "label": "Running on Qovery",
+        "url": "/docs/guides/running-on-qovery"
+      },
+      {
+        "label": "Running on CapRover",
+        "url": "/docs/guides/running-on-caprover"
+      },
+      {
+        "label": "Running on Koyeb",
+        "url": "/docs/guides/running-on-koyeb"
+      },
+      {
+        "label": "Running on Forge",
+        "url": "/docs/guides/running-on-forge"
+      },
+      {
+        "label": "Running on Fly.io",
+        "url": "/docs/guides/running-on-fly-io"
+      }
+    ]
+  }
+]

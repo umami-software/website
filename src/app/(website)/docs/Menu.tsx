@@ -5,16 +5,19 @@ import Link from 'next/link';
 import v1 from './menu.v1.json';
 import v2 from './menu.v2.json';
 import cloud from './menu.cloud.json';
+import guides from './menu.guides.json';
 import styles from './Menu.module.css';
-
-const versions = { v1, v2, cloud };
 
 export default function Menu({ onClick }: { onClick?: () => void }) {
   const pathname = usePathname();
   const query = useParams();
-  const isCloud = pathname.includes('/docs/cloud');
-  const version = isCloud ? 'cloud' : pathname.includes('/v1') ? 'v1' : 'v2';
-  const menu = versions[version];
+
+  let menu = pathname.includes('/v1') ? v1 : v2;
+  if (pathname.includes('/docs/cloud')) {
+    menu = cloud;
+  } else if (pathname.includes('/docs/guides')) {
+    menu = guides;
+  }
 
   return (
     <div className={styles.menu} onClick={onClick}>
