@@ -1,6 +1,4 @@
-import getContent from 'lib/content';
-
-const FOLDER = 'blog';
+import getFile from 'lib/content';
 
 export interface Post {
   id: string;
@@ -12,5 +10,5 @@ export interface Post {
 }
 
 export async function getPost(id: string) {
-  return getContent(id, FOLDER);
+  return getFile(id, 'blog');
 }

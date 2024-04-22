@@ -8,6 +8,7 @@ const links = [
   { url: '/docs', label: 'Umami' },
   { url: '/docs/cloud', label: 'Cloud' },
   { url: '/docs/api', label: 'API' },
+  { url: '/docs/reports', label: 'Reports' },
   { url: '/docs/guides', label: 'Guides' },
 ];
 
@@ -18,7 +19,7 @@ export default function Header() {
     <div className={styles.header}>
       <div className={styles.title}>Documentation</div>
       {links.map(({ url, label }) => {
-        const isSelected = pathname.match(/^\/docs\/(cloud|guides|api)/)
+        const isSelected = pathname.match(/^\/docs\/(cloud|guides|api|reports)/)
           ? pathname.startsWith(url) && url !== '/docs'
           : pathname.startsWith(url);
 

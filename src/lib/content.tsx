@@ -19,10 +19,10 @@ export const getFiles = cache(async (folder: string) => {
   );
 });
 
-export async function getContent(id: string, folder: string) {
+export async function getFile(id: string, folder: string) {
   const files = await getFiles(folder);
 
   return files.find(file => file?.id === id);
 }
 
-export default getContent;
+export default getFile;

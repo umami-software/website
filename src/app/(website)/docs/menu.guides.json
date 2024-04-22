@@ -3,6 +3,10 @@
     "label": "Hosting",
     "items": [
       {
+        "label": "Overview",
+        "url": "/docs/guides/hosting"
+      },
+      {
         "label": "Running on DigitalOcean",
         "url": "/docs/guides/running-on-digitalocean"
       },

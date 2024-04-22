@@ -1,23 +1,14 @@
 [
   {
-    "label": "General",
+    "label": "Get started",
     "items": [
       {
-        "label": "Introduction",
-        "url": "/docs/cloud/intro"
+        "label": "Overview",
+        "url": "/docs/cloud"
       },
       {
-        "label": "FAQ",
-        "url": "/docs/cloud/faq"
-      }
-    ]
-  },
-  {
-    "label": "Getting started",
-    "items": [
-      {
-        "label": "Getting started",
-        "url": "/docs/cloud/getting-started"
+        "label": "Quickstart",
+        "url": "/docs/cloud/quickstart"
       },
       {
         "label": "Sign up",

@@ -4,21 +4,21 @@ title: API Client
 
 # API Client
 
-### Overview
+## Overview
 
 Umami API Client is built in TypeScript and contains functions to call every API endpoint available in Umami.
 
-### Requirements
+## Requirements
 
 - [Node.js](https://nodejs.org/) version 18.17 or newer
 
-### Install Yarn
+## Install Yarn
 
 ```sh
 npm install @umami/api-client
 ```
 
-### Configure
+## Configure
 
 The following environment variables are required to call your own API.
 
@@ -37,7 +37,7 @@ UMAMI_API_CLIENT_ENDPOINT
 
 More details on accessing Umami Cloud can be found under [API key](/docs/cloud/api-key).
 
-### Usage
+## Usage
 
 Import the configured api-client and query using the available class methods.
 
@@ -60,9 +60,9 @@ The result will come back in the following format.
 }
 ```
 
-### API Client function mapping
+## API Client function mapping
 
-**Me**
+### Me
 
 ```
 getMe() : GET /me
@@ -70,7 +70,7 @@ updateMyPassword(data) : POST /me/password
 getMyWebsites() : GET /me/websites
 ```
 
-**Users**
+### Users
 
 ```
 getUsers() : GET /users
@@ -82,7 +82,7 @@ getUserWebsites(id) : GET /users/{id}/websites
 getUserUsage(id, data) : GET /users/{id}/usage
 ```
 
-**Teams**
+### Teams
 
 ```
 getTeams() : GET /teams
@@ -98,7 +98,7 @@ createTeamWebsites(id, data) : GET /teams/{id}/websites
 deleteTeamWebsite(teamId, websiteId) : DEL /teams/{teamId}/websites/{websiteId}
 ```
 
-**Websites**
+### Websites
 
 ```
 getWebsites() : GET /websites
@@ -114,7 +114,7 @@ resetWebsite(id) : GET /websites/{id}/reset
 getWebsiteStats(id, data) : GET /websites/{id}/stats
 ```
 
-**Event Data**
+### Event Data
 
 ```
 getEventDataEvents(id, data) : GET /event-data/events
@@ -122,7 +122,7 @@ getEventDataFields(id, data) : GET /event-data/fields
 getEventDataStats(id, data) : GET /event-data/stats
 ```
 
-### Environment Variables
+## Environment Variables
 
 #### UMAMI_API_CLIENT_USER_ID = &lt;user uuid&gt;
 

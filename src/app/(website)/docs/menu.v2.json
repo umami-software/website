@@ -1,27 +1,14 @@
 [
   {
-    "label": "General",
+    "label": "Get started",
     "items": [
       {
-        "label": "Introduction",
+        "label": "Overview",
         "url": "/docs"
       },
       {
-        "label": "FAQ",
-        "url": "/docs/faq"
-      },
-      {
-        "label": "Useful links",
-        "url": "/docs/useful-links"
-      }
-    ]
-  },
-  {
-    "label": "Getting started",
-    "items": [
-      {
-        "label": "Getting started",
-        "url": "/docs/getting-started"
+        "label": "Quickstart",
+        "url": "/docs/quickstart"
       },
       {
         "label": "Install",
@@ -71,31 +58,6 @@
     ]
   },
   {
-    "label": "Reports",
-    "items": [
-      {
-        "label": "Reports",
-        "url": "/docs/reports"
-      },
-      {
-        "label": "Insights",
-        "url": "/docs/report-insights"
-      },
-      {
-        "label": "Funnel",
-        "url": "/docs/report-funnel"
-      },
-      {
-        "label": "Retention",
-        "url": "/docs/report-retention"
-      },
-      {
-        "label": "UTM",
-        "url": "/docs/report-utm"
-      }
-    ]
-  },
-  {
     "label": "Advanced",
     "items": [
       {
@@ -113,56 +75,15 @@
     ]
   },
   {
-    "label": "API",
+    "label": "Reference",
     "items": [
       {
-        "label": "API",
-        "url": "/docs/api"
+        "label": "Integrations",
+        "url": "/docs/integrations"
       },
-      {
-        "label": "Authentication",
-        "url": "/docs/authentication"
-      },
-      {
-        "label": "Users",
-        "url": "/docs/users-api"
-      },
-      {
-        "label": "Teams",
-        "url": "/docs/teams-api"
-      },
-      {
-        "label": "Websites",
-        "url": "/docs/websites-api"
-      },
-      {
-        "label": "Website stats",
-        "url": "/docs/website-stats"
-      },
-      {
-        "label": "Sending stats",
-        "url": "/docs/sending-stats"
-      },
-      {
-        "label": "Event Data",
-        "url": "/docs/event-data"
-      },
-      {
-        "label": "API Client",
-        "url": "/docs/api-client"
-      }
-    ]
-  },
-  {
-    "label": "Guides",
-    "items": [
       {
         "label": "Migrating v1 to v2",
         "url": "/docs/migrate-v1-v2"
-      },
-      {
-        "label": "Hosting",
-        "url": "/docs/hosting"
       }
     ]
   }
