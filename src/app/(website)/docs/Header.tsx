@@ -17,12 +17,12 @@ export default function Header() {
     <div className={styles.header}>
       <div className={styles.title}>Documentation</div>
       {links.map(({ url, label }) => {
+        const isSelected = pathname.match(/^\/docs\/(cloud|guides)/)
+          ? pathname.startsWith(url) && url !== '/docs'
+          : pathname.startsWith(url);
+
         return (
-          <Link
-            key={url}
-            href={url}
-            className={classNames(pathname?.endsWith(url) && styles.selected)}
-          >
+          <Link key={url} href={url} className={classNames(isSelected && styles.selected)}>
             {label}
           </Link>
         );
