@@ -59,3 +59,9 @@
 .selected {
   font-weight: bold;
 }
+
+@media screen and (max-width: 992px) {
+  .sidenav {
+    display: none;
+  }
+}
