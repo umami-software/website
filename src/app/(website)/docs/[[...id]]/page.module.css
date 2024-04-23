@@ -1,0 +1,6 @@
+.page {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 200px;
+  position: relative;
+}

@@ -9,6 +9,7 @@
 }
 
 .title {
+  color: var(--base700);
   font-weight: 700;
   height: 40px;
 }

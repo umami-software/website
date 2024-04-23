@@ -14,7 +14,25 @@ export const getFiles = cache(async (folder: string) => {
         const postContent = await fs.readFile(path.resolve(dir, file), 'utf8');
         const { data, content } = matter(postContent);
 
-        return { ...data, id: file.replace('.mdx', ''), body: content } as any;
+        const anchors: { name: string; id: string; size: number }[] = [];
+        const body = content
+          .split('\n')
+          .map(line => {
+            const match = line.match(/(#{2,})\s+(.*)/);
+            if (match) {
+              const [, num, name] = match;
+              const id = name.toLowerCase().replace(/\s+/g, '-');
+              const size = num.length;
+
+              anchors.push({ name, id, size });
+
+              return `<h${size} id="${id}">${name}</h${size}>`;
+            }
+            return line;
+          })
+          .join('\n');
+
+        return { ...data, id: file.replace('.mdx', ''), body, anchors } as any;
       }),
   );
 });
