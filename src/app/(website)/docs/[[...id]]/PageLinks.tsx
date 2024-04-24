@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import styles from './PageLinks.module.css';
 
 export default function PageLinks({ items }) {
-  const [hash, setHash] = useState('');
+  const [hash, setHash] = useState(items[0]?.id);
 
   useEffect(() => {
     const callback = () => {
