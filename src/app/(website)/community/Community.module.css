@@ -48,7 +48,7 @@
   align-self: center;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 768px) {
   .items {
     grid-template-columns: 1fr;
   }
