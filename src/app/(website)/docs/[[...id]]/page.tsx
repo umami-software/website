@@ -27,7 +27,7 @@ export default async function ({ params: { id = [] } }: { params: { id: string[]
       <div className={styles.content}>
         <Markdown>{doc?.body}</Markdown>
       </div>
-      <PageLinks items={doc?.anchors} />
+      <PageLinks items={doc?.anchors} offset={150} />
     </div>
   );
 }
