@@ -9,7 +9,7 @@ import { GITHUB_STARS, GITHUB_URL } from 'lib/constants';
 import GitHub from 'assets/github.svg';
 import styles from './Header.module.css';
 
-const menuItems = [
+const mobileMenuItems = [
   {
     label: 'Home',
     value: '/',
@@ -61,15 +61,6 @@ export default function Header() {
               </div>
               <Popup>{close => <ProductMenu onClose={close} />}</Popup>
             </PopupTrigger>
-            <PopupTrigger action="hover">
-              <div className={styles.dropdown}>
-                <Text>Resources</Text>
-                <Icon>
-                  <Icons.ChevronDown />
-                </Icon>
-              </div>
-              <Popup>{close => <ResourcesMenu onClose={close} />}</Popup>
-            </PopupTrigger>
             <Link href="/blog">Blog</Link>
             <Link href="/docs" prefetch={false}>
               Docs
@@ -99,7 +90,7 @@ export default function Header() {
             </LinkButton>
           </div>
           <div className={styles.hamburger}>
-            <HamburgerButton items={menuItems} />
+            <HamburgerButton items={mobileMenuItems} />
           </div>
         </div>
       </Container>
@@ -119,22 +110,15 @@ const ProductMenu = ({ onClose }) => {
         <Link href="/docs/cloud">Cloud</Link>
       </div>
       <div className={styles.column}>
+        <header>Learn</header>
+        <Link href="/community">Community</Link>
+        <Link href="/developers">Developers</Link>
+      </div>
+      <div className={styles.column}>
         <header>Used by</header>
         <Link href="/product/creators">Creators</Link>
         <Link href="/product/marketers">Marketers</Link>
         <Link href="/product/agencies">Agencies</Link>
-      </div>
-    </nav>
-  );
-};
-
-const ResourcesMenu = ({ onClose }) => {
-  return (
-    <nav className={styles.menu} onClick={onClose}>
-      <div className={styles.column}>
-        <header>Learn</header>
-        <Link href="/community">Community</Link>
-        <Link href="/developers">Developers</Link>
       </div>
     </nav>
   );

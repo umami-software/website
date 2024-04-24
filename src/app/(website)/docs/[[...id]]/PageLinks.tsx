@@ -23,7 +23,7 @@ export default function PageLinks({ items }) {
     };
   }, []);
 
-  if (!items.length) {
+  if (!items?.length) {
     return null;
   }
 

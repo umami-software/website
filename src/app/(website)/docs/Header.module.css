@@ -15,10 +15,19 @@
 }
 
 .header a {
+  color: var(--base700);
   height: 40px;
   border-bottom: 2px solid transparent;
+  margin: 0 0 -2px 0;
 }
 
-a.selected {
+.header a:hover {
+  color: var(--primary400);
+  border-bottom: 2px solid var(--base500);
+}
+
+a.selected,
+a.selected:hover {
+  color: var(--base900);
   border-bottom: 2px solid var(--blue800);
 }

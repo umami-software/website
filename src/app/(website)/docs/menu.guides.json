@@ -1,5 +1,18 @@
 [
   {
+    "label": "How-to",
+    "items": [
+      {
+        "label": "Exclude my visits",
+        "url": "/docs/guides/exclude-visits"
+      },
+      {
+        "label": "Avoiding Ad-block",
+        "url": "/docs/guides/avoiding-ad-block"
+      }
+    ]
+  },
+  {
     "label": "Hosting",
     "items": [
       {
