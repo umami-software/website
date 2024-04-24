@@ -3,12 +3,12 @@
     "label": "How-to",
     "items": [
       {
-        "label": "Exclude my visits",
-        "url": "/docs/guides/exclude-visits"
+        "label": "Exclude my own visits",
+        "url": "/docs/guides/exclude-my-own-visits"
       },
       {
-        "label": "Avoiding Ad-block",
-        "url": "/docs/guides/avoiding-ad-block"
+        "label": "Bypass ad blockers",
+        "url": "/docs/guides/bypass-ad-blockers"
       }
     ]
   },
