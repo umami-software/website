@@ -25,12 +25,17 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         {process.env.NODE_ENV === 'production' && (
-          <script
-            defer
-            data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
-            data-domains="umami.is"
-            src="/a/script.js"
-          />
+          <>
+            <script
+              defer
+              data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
+              data-domains="umami.is"
+              src="/a/script.js"
+            />
+            <script>
+              {`!function(t){if(window.ko)return;window.ko=[],["identify","track","removeListeners","open","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_c271ea7cda36bf4824350411f24fad0e76b7/sdk.js"),(document.body || document.head).appendChild(n)}();`}
+            </script>
+          </>
         )}
       </head>
       <body>
