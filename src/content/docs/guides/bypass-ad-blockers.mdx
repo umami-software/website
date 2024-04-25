@@ -1,0 +1,47 @@
+# Bypass ad blockers
+
+Even though Umami is a privacy-focused product, it may still get blocked by
+certain ad blockers. Ad blockers use blocklists maintained by many different people.
+Some lists can be overly agressive, for example blocking anything with even
+the word `analytics` in it or simply blocking all tracking products regardless
+of how they operate.
+
+Here are few methods you can use to avoid ad blockers.
+
+## Proxying
+
+You can proxy the tracking script itself to hide the actual name and location of
+the original script.
+
+For example, you can have a script on your website that is:
+
+`https://your-website.com/script.js`
+
+That is proxying the file at:
+
+`https://analytics.umami.is/script.js`
+
+So even if the ad blocker blocks the `analytics.umami.is` domain, your own domain would be safe.
+
+Proxying is usually done at the server level. Here are some tutorials you can use:
+
+- [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
+- [Apache](https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html)
+
+If you are using a framework like [Next.js](https://nextjs.org), you can use their [rewrites](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites) feature.
+
+## Using environment variables (self-hosting)
+
+If you are self-hosting Umami, you can configure your instance using [environment variables](/docs/environment-variables).
+
+There are two sources that could potentially be blocked:
+
+1. The tracker script at `https://your-umami.com/script.js`
+2. The stats collection endpoint at `https://your-umami.com/api/send`.
+
+The `TRACKER_SCRIPT_NAME` variable can be used to rename your tracker script to
+something like `/x.js`. You would then change your script source to `https://your-umami.com/x.js`.
+
+The `COLLECT_API_ENDPOINT` variable can be used to rename your endpoint to something
+like `/api/x`. The tracker script will automatically make calls to your custom endpoint name
+instead of `/api/send`.

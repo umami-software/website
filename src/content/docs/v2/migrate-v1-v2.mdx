@@ -41,7 +41,7 @@ To assist with the migration we created a script `@umami/migrate-v1-v2` that wil
 
 There are two ways to run the migration script.
 
-### 1. Running inside the Umami folder
+### Running inside the Umami folder
 
 Use this method if you have terminal access to your application folder.
 Make sure your application is already built. If not run `yarn build` first.
@@ -51,11 +51,11 @@ cd umami
 npx @umami/migrate-v1-v2@latest
 ```
 
-### 2. Running standalone
+### Running standalone
 
 Use this method if you don't have access to your application folder like when deployed to Vercel or Netlify.
 
-### Install
+**Install**
 
 ```sh
 git clone https://github.com/umami-software/migrate-v1-v2.git
@@ -64,7 +64,7 @@ yarn install
 yarn build
 ```
 
-### Configure
+**Configure**
 
 Create an `.env` file with the following variable defined:
 
@@ -72,7 +72,7 @@ Create an `.env` file with the following variable defined:
 DATABASE_URL={connection url}
 ```
 
-### Run
+**Run**
 
 ```sh
 yarn start

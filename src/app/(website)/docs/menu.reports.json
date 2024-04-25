@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Get started",
+    "items": [
+      {
+        "label": "Overview",
+        "url": "/docs/reports"
+      }
+    ]
+  },
+  {
+    "label": "Reports",
+    "items": [
+      {
+        "label": "Insights",
+        "url": "/docs/reports/report-insights"
+      },
+      {
+        "label": "Funnel",
+        "url": "/docs/reports/report-funnel"
+      },
+      {
+        "label": "Retention",
+        "url": "/docs/reports/report-retention"
+      },
+      {
+        "label": "UTM",
+        "url": "/docs/reports/report-utm"
+      }
+    ]
+  }
+]
