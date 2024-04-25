@@ -22,7 +22,6 @@
 }
 
 .item {
-  padding: 4px 20px;
   border-left: 1px solid var(--base300);
 }
 
@@ -33,20 +32,23 @@
 .menu .item a,
 .menu .item a:visited,
 .menu .item a:active {
+  display: block;
   color: var(--base700);
+  padding: 4px 20px;
 }
 
 .menu .item a:hover {
   color: var(--primary400);
+  background: var(--base75);
 }
 
-.item.selected {
+.menu .item.selected {
   font-weight: 600;
-  border-left: 1px solid var(--primary400);
+  border-left: 2px solid var(--primary400);
 }
 
 .menu .item.selected a {
-  color: var(--primary400);
+  color: var(--base900);
 }
 
 .menu::-webkit-scrollbar {
