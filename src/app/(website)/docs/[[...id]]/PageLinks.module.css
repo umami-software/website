@@ -1,0 +1,67 @@
+.sidenav {
+  position: relative;
+}
+
+.nav {
+  font-size: 14px;
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  position: sticky;
+  top: 0;
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.links a {
+  display: block;
+  color: var(--base700);
+}
+
+.links a:hover {
+  color: var(--primary400);
+}
+
+.indent-1 {
+  margin-left: 0;
+}
+
+.indent-2 {
+  margin-left: 0;
+}
+
+.indent-3 {
+  margin-left: 5px;
+}
+
+.indent-4 {
+  margin-left: 10px;
+}
+
+.indent-5 {
+  margin-left: 15px;
+}
+
+.indent-6 {
+  margin-left: 20px;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+  .sidenav {
+    display: none;
+  }
+}

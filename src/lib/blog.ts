@@ -1,4 +1,4 @@
-import getContent from 'lib/content';
+import getFile from 'lib/content';
 
 export interface Post {
   id: string;
@@ -10,5 +10,5 @@ export interface Post {
 }
 
 export async function getPost(id: string) {
-  return getContent(id, 'blog');
+  return getFile(id, 'blog');
 }
