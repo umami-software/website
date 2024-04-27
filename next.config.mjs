@@ -85,7 +85,7 @@ const nextConfig = {
       { source: '/reddit', destination: '/' },
       { source: '/apollo', destination: '/' },
       { source: '/apollo-ga', destination: '/google-analytics' },
-      { source: '/a/:path*', destination: 'https://analytics.umami.is/:path*' },
+      { source: '/a/script.js', destination: 'https://cloud.umami.is/script.js' },
     ];
   },
 };
