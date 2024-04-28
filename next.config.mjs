@@ -1,5 +1,6 @@
 import remarkGfm from 'remark-gfm';
 import createMDX from '@next/mdx';
+import { withAxiom } from 'next-axiom';
 import rehypePrettyCode from 'rehype-pretty-code';
 import path from 'path';
 
@@ -85,9 +86,9 @@ const nextConfig = {
       { source: '/reddit', destination: '/' },
       { source: '/apollo', destination: '/' },
       { source: '/apollo-ga', destination: '/google-analytics' },
-      { source: '/a/script.js', destination: 'https://cloud.umami.is/script.js' },
+      { source: '/a/script.js', destination: 'https://analytics.eu.umami.is/script.js' },
     ];
   },
 };
 
-export default withMDX(nextConfig);
+export default withAxiom(withMDX(nextConfig));

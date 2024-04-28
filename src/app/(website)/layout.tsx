@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Suspense } from 'react';
+import { AxiomWebVitals } from 'next-axiom';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </Suspense>
       </body>
+      <AxiomWebVitals />
     </html>
   );
 }
