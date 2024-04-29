@@ -9,6 +9,10 @@
       {
         "label": "Bypass ad blockers",
         "url": "/docs/guides/bypass-ad-blockers"
+      },
+      {
+        "label": "Measure email campaigns",
+        "url": "/docs/guides/measure-email-campaigns"
       }
     ]
   },
