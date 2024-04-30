@@ -2,6 +2,7 @@ import { cache } from 'react';
 import matter from 'gray-matter';
 import path from 'path';
 import fs from 'fs/promises';
+import { firstBy } from 'thenby';
 
 export const getFiles = cache(async (folder: string) => {
   const dir = path.resolve(`./src/content/${folder}`);
@@ -32,9 +33,14 @@ export const getFiles = cache(async (folder: string) => {
           })
           .join('\n');
 
-        return { ...data, id: file.replace('.mdx', ''), body, anchors } as any;
+        return {
+          ...data,
+          id: file.replace('.mdx', ''),
+          body,
+          anchors,
+        } as any;
       }),
-  );
+  ).then(posts => posts.sort(firstBy('date', 'desc')));
 });
 
 export async function getFile(id: string, folder: string) {

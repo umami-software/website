@@ -17,7 +17,7 @@ export default function Card({
 }) {
   return (
     <div className={styles.card}>
-      <div className={styles.date}>{format(new Date(date), 'PP')}</div>
+      <div className={styles.date}>{date && format(new Date(date), 'PP')}</div>
       <div className={styles.title}>
         <Link href={`/blog/${id}`}> {title}</Link>
       </div>
