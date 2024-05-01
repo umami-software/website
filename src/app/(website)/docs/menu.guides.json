@@ -18,12 +18,7 @@
       {
         "label": "Bypass ad blockers",
         "url": "/docs/guides/bypass-ad-blockers"
-      }
-    ]
-  },
-  {
-    "label": "Marketing",
-    "items": [
+      },
       {
         "label": "Measure campaigns",
         "url": "/docs/guides/measure-campaigns"
