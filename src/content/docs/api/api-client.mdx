@@ -1,8 +1,8 @@
 ---
-title: API Client
+title: API client
 ---
 
-# API Client
+# API client
 
 ## Overview
 
@@ -12,7 +12,7 @@ Umami API Client is built in TypeScript and contains functions to call every API
 
 - [Node.js](https://nodejs.org/) version 18.17 or newer
 
-## Install Yarn
+## Installation
 
 ```sh
 npm install @umami/api-client
@@ -65,61 +65,61 @@ The result will come back in the following format.
 ### Me
 
 ```
-getMe() : GET /me
-updateMyPassword(data) : POST /me/password
-getMyWebsites() : GET /me/websites
+getMe() ⇒ GET /me
+updateMyPassword(data) ⇒ POST /me/password
+getMyWebsites() ⇒ GET /me/websites
 ```
 
 ### Users
 
 ```
-getUsers() : GET /users
-createUser(data) : POST /users
-getUser(id) : GET /users/{id}
-updateUser(id, data) : POST /users/{id}
-deleteUser(id) : DEL /users/{id}
-getUserWebsites(id) : GET /users/{id}/websites
-getUserUsage(id, data) : GET /users/{id}/usage
+getUsers() ⇒ GET /users
+createUser(data) ⇒ POST /users
+getUser(id) ⇒ GET /users/{id}
+updateUser(id, data) ⇒ POST /users/{id}
+deleteUser(id) ⇒ DEL /users/{id}
+getUserWebsites(id) ⇒ GET /users/{id}/websites
+getUserUsage(id, data) ⇒ GET /users/{id}/usage
 ```
 
 ### Teams
 
 ```
-getTeams() : GET /teams
-createTeam(data) : POST /teams
-joinTeam(data) : POST /teams/join
-getTeam(id) : GET /teams/{id}
-updateTeam(id) : POST /teams/{id}
-deleteTeam(id) : DEL /teams/{id}
-getTeamUsers(id) : GET /teams/{id}/users
+getTeams() ⇒ GET /teams
+createTeam(data) ⇒ POST /teams
+joinTeam(data) ⇒ POST /teams/join
+getTeam(id) ⇒ GET /teams/{id}
+updateTeam(id) ⇒ POST /teams/{id}
+deleteTeam(id) ⇒ DEL /teams/{id}
+getTeamUsers(id) ⇒ GET /teams/{id}/users
 deleteTeamUser(teamId, userId): DEL /teams/{teamId}/users/{userId}
-getTeamWebsites(id) : GET /teams/{id}/websites
-createTeamWebsites(id, data) : GET /teams/{id}/websites
-deleteTeamWebsite(teamId, websiteId) : DEL /teams/{teamId}/websites/{websiteId}
+getTeamWebsites(id) ⇒ GET /teams/{id}/websites
+createTeamWebsites(id, data) ⇒ GET /teams/{id}/websites
+deleteTeamWebsite(teamId, websiteId) ⇒ DEL /teams/{teamId}/websites/{websiteId}
 ```
 
 ### Websites
 
 ```
-getWebsites() : GET /websites
-createWebsite(data) : POST /websites
-getWebsite(id) : GET /websites/{id}
-updateWebsite(id, data) : POST /websites/{id}
-deleteWebsite(id) : DEL /websites/{id}
-getWebsiteActive(id) : GET /websites/{id}/active
-getWebsiteEvents(id, data) : GET /websites/{id}/events
-getWebsiteMetrics(id, data) : GET /websites/{id}/metrics
-getWebsitePageviews(id, data) : GET /websites/{id}/pageviews
-resetWebsite(id) : GET /websites/{id}/reset
-getWebsiteStats(id, data) : GET /websites/{id}/stats
+getWebsites() ⇒ GET /websites
+createWebsite(data) ⇒ POST /websites
+getWebsite(id) ⇒ GET /websites/{id}
+updateWebsite(id, data) ⇒ POST /websites/{id}
+deleteWebsite(id) ⇒ DEL /websites/{id}
+getWebsiteActive(id) ⇒ GET /websites/{id}/active
+getWebsiteEvents(id, data) ⇒ GET /websites/{id}/events
+getWebsiteMetrics(id, data) ⇒ GET /websites/{id}/metrics
+getWebsitePageviews(id, data) ⇒ GET /websites/{id}/pageviews
+resetWebsite(id) ⇒ GET /websites/{id}/reset
+getWebsiteStats(id, data) ⇒ GET /websites/{id}/stats
 ```
 
 ### Event Data
 
 ```
-getEventDataEvents(id, data) : GET /event-data/events
-getEventDataFields(id, data) : GET /event-data/fields
-getEventDataStats(id, data) : GET /event-data/stats
+getEventDataEvents(id, data) ⇒ GET /event-data/events
+getEventDataFields(id, data) ⇒ GET /event-data/fields
+getEventDataStats(id, data) ⇒ GET /event-data/stats
 ```
 
 ## Environment Variables

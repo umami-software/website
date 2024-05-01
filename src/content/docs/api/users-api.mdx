@@ -11,16 +11,16 @@ Operations around User management.
 ```
 POST /api/users
 GET /api/users
-POST /api/users/{userId}
-GET /api/users/{userId}
-DELETE /api/users/{userId}
-GET /api/users/{userId}/websites
-GET /api/users/{userId}/teams
+POST /api/users/:userId
+GET /api/users/:userId
+DELETE /api/users/:userId
+GET /api/users/:userId/websites
+GET /api/users/:userId/teams
 ```
 
 ---
 
-## `POST /api/users`
+## POST /api/users
 
 Creates a user.
 
@@ -43,7 +43,7 @@ Creates a user.
 
 ---
 
-## `GET /api/admin/users`
+## GET /api/admin/users
 
 Returns all users. Admin access is required.
 
@@ -66,7 +66,7 @@ None
 
 ---
 
-## `GET /api/users/{userId}`
+## GET /api/users/:userId
 
 Gets a user by ID.
 
@@ -86,7 +86,7 @@ None
 
 ---
 
-## `POST /api/users/{userId}`
+## POST /api/users/:userId
 
 Updates a user.
 
@@ -109,7 +109,7 @@ Updates a user.
 
 ---
 
-## `DELETE /api/users/{userId}`
+## DELETE /api/users/:userId
 
 Deletes a user.
 
@@ -125,7 +125,7 @@ ok
 
 ---
 
-## `GET /api/users/{userId}/websites`
+## GET /api/users/:userId/websites
 
 Gets all websites that belong to a user.
 
@@ -156,7 +156,7 @@ Gets all websites that belong to a user.
 
 ---
 
-## `GET /api/users/{userId}/teams`
+## GET /api/users/:userId/teams
 
 Gets all teams that belong to a user.
 

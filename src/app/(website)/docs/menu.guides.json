@@ -1,5 +1,14 @@
 [
   {
+    "label": "Get started",
+    "items": [
+      {
+        "label": "Overview",
+        "url": "/docs/guides"
+      }
+    ]
+  },
+  {
     "label": "How-to",
     "items": [
       {

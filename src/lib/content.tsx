@@ -27,7 +27,7 @@ export const getFiles = cache(async (folder: string) => {
 
               anchors.push({ name, id, size });
 
-              return `<h${size} id="${id}">${name}</h${size}>`;
+              return `<h${size} id="${id}">${name.replace(/\{|\}/g, '')}</h${size}>`;
             }
             return line;
           })

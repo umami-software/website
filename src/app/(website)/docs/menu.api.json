@@ -36,7 +36,7 @@
         "url": "/docs/api/website-stats"
       },
       {
-        "label": "Event Data",
+        "label": "Event data",
         "url": "/docs/api/event-data"
       }
     ]
@@ -45,11 +45,11 @@
     "label": "Clients",
     "items": [
       {
-        "label": "API Client",
+        "label": "API client",
         "url": "/docs/api/api-client"
       },
       {
-        "label": "Node Client",
+        "label": "Node client",
         "url": "/docs/api/node-client"
       }
     ]

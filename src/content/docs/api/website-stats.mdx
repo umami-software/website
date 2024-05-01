@@ -9,11 +9,11 @@ Operations around Website statistics.
 **Endpoints**
 
 ```
-GET /api/websites/{websiteId}/active
-GET /api/websites/{websiteId}/events
-GET /api/websites/{websiteId}/pageviews
-GET /api/websites/{websiteId}/metrics
-GET /api/websites/{websiteId}/stats
+GET /api/websites/:websiteId/active
+GET /api/websites/:websiteId/events
+GET /api/websites/:websiteId/pageviews
+GET /api/websites/:websiteId/metrics
+GET /api/websites/:websiteId/stats
 ```
 
 **Unit Parameter**
@@ -28,7 +28,7 @@ The unit parameter buckets the data returned. The unit is automatically converte
 
 ---
 
-## `GET /api/websites/{websiteId}/active`
+## GET /api/websites/:websiteId/active
 
 Gets the number of active users on a website.
 
@@ -50,7 +50,7 @@ GET from url: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-1
 
 ---
 
-## `GET /api/websites/{websiteId}/events`
+## GET /api/websites/:websiteId/events
 
 Gets events within a given time range.
 
@@ -82,7 +82,7 @@ URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b
 
 ---
 
-## `GET /api/websites/{websiteId}/pageviews`
+## GET /api/websites/:websiteId/pageviews
 
 Gets pageviews within a given time range.
 
@@ -122,7 +122,7 @@ Gets pageviews within a given time range.
 
 ---
 
-## `GET /api/websites/{websiteId}/stats`
+## GET /api/websites/:websiteId/stats
 
 Gets summarized website statistics.
 
@@ -162,7 +162,7 @@ URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b
 
 ---
 
-## `GET /api/websites/{websiteId}/metrics`
+## GET /api/websites/:websiteId/metrics
 
 Gets metrics for a given time range.
 

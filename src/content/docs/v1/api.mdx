@@ -12,7 +12,7 @@ Any operation you can do through the Umami admin panel is available in the API, 
 
 ## Authentication
 
-## `POST /api/auth/login`
+## POST /api/auth/login
 
 First you need to get a _token_ in order to make API requests. You need to make a
 `POST` request to the `/api/auth/login` endpoint with the following data:
@@ -59,7 +59,7 @@ Cookie: umami.auth=eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
 
 Operations around Websites that Umami is tracking.
 
-## `POST /api/websites`
+## POST /api/websites
 
 Creates a website.
 
@@ -84,7 +84,7 @@ Creates a website.
 }
 ```
 
-## `GET /api/websites`
+## GET /api/websites
 
 Returns all tracked websites.
 
@@ -115,7 +115,7 @@ Prior to v1.39 some fields had a different name. If using an old version, use `w
 There are several endpoints your can call to get stats for your website. All the
 stats endpoints require sending a `GET` request with the `Bearer <token>` (post v1.26.0) or `umami.auth` authentication cookie.
 
-## `GET /api/websites/{websiteUuid}/stats`
+## GET /api/websites/{websiteUuid}/stats
 
 Gets summarized website statistics.
 
@@ -142,7 +142,7 @@ GET (with Authorization header) from url: `https://umami.mydomain.com/api/websit
 - `bounces`: Number of visitors who only visit a single page
 - `totaltime`: Time spent on the website
 
-## `GET /api/websites/{websiteUuid}/pageviews`
+## GET /api/websites/{websiteUuid}/pageviews
 
 Gets pageviews within a given time range.
 
@@ -168,7 +168,7 @@ Gets pageviews within a given time range.
 }
 ```
 
-## `GET /api/websites/{websiteUuid}/events`
+## GET /api/websites/{websiteUuid}/events
 
 Gets events within a given time range.
 
@@ -188,7 +188,7 @@ Gets events within a given time range.
 ];
 ```
 
-## `GET /api/websites/{websiteUuid}/metrics`
+## GET /api/websites/{websiteUuid}/metrics
 
 Gets metrics for a given time range.
 
@@ -210,7 +210,7 @@ Gets metrics for a given time range.
 
 ## Sending stats
 
-## `POST /api/collect`
+## POST /api/collect
 
 To register a `pageview` or `event`, you need to send a `POST` to `/api/collect` with
 the following data:

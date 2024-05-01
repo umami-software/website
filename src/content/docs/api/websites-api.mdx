@@ -11,15 +11,15 @@ Operations around Website management and statistics.
 ```
 GET /api/websites
 POST /api/websites
-GET /api/websites/{websiteId}
-POST /api/websites/{websiteId}
-DELETE /api/websites/{websiteId}
-POST /api/websites/{websiteId}/reset
+GET /api/websites/:websiteId
+POST /api/websites/:websiteId
+DELETE /api/websites/:websiteId
+POST /api/websites/:websiteId/reset
 ```
 
 ---
 
-## `GET /api/websites`
+## GET /api/websites
 
 Returns all tracked websites.
 
@@ -50,7 +50,7 @@ Returns all tracked websites.
 
 ---
 
-## `POST /api/websites`
+## POST /api/websites
 
 Creates a website.
 
@@ -77,7 +77,7 @@ Creates a website.
 
 ---
 
-## `GET /api/websites/{websiteId}`
+## GET /api/websites/:websiteId
 
 Gets a website by ID.
 
@@ -103,7 +103,7 @@ None
 
 ---
 
-## `POST /api/websites/{websiteId}`
+## POST /api/websites/:websiteId
 
 Updates a website.
 
@@ -131,7 +131,7 @@ Updates a website.
 
 ---
 
-## `DELETE /api/websites/{websiteId}`
+## DELETE /api/websites/:websiteId
 
 Deletes a website.
 
@@ -147,7 +147,7 @@ ok
 
 ---
 
-## `POST /api/websites/{websiteId}/reset`
+## POST /api/websites/:websiteId/reset
 
 Resets a website by removing all data related to the website.
 
