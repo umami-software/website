@@ -25,8 +25,8 @@
     "label": "Marketing",
     "items": [
       {
-        "label": "Measure email campaigns",
-        "url": "/docs/guides/measure-email-campaigns"
+        "label": "Measure campaigns",
+        "url": "/docs/guides/measure-campaigns"
       }
     ]
   },
