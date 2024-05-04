@@ -46,9 +46,19 @@
   padding: 20px;
 }
 
+.blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
 @media screen and (max-width: 1200px) {
   .header {
     gap: 60px;
+    grid-template-columns: 1fr;
+  }
+
+  .blocks {
     grid-template-columns: 1fr;
   }
 }

@@ -33,7 +33,17 @@
   max-width: 500px;
 }
 
+.blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
 @media screen and (max-width: 768px) {
+  .blocks {
+    grid-template-columns: 1fr;
+  }
+
   .header img {
     max-width: 70vw;
   }
