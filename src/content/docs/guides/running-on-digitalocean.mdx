@@ -69,6 +69,27 @@ server {
 }
 ```
 
+The following config will allow you to host Umami at a subpath for your domain (eg: website.com/stats).
+This requires setting the enviroment variable `BASE_PATH=/stats` in your `.env` file.
+
+```
+server {
+  ...
+  location /stats/_next/static/ {
+    alias /your_install_location/umami/.next/static/;
+    access_log off;
+    expires max;
+  }
+  location /stats {
+    proxy_pass http://127.0.0.1:3000;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+  ...
+}
+```
+
 ## Adding an SSL certificate (optional)
 
 - [How To Secure Nginx with Let's Encrypt on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04)
