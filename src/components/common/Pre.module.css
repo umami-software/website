@@ -1,0 +1,21 @@
+.container {
+    position: relative;
+}
+
+
+.button {
+    border:0px;
+    color: var(--base900);
+    background: var(--base100);
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    font-size: max(14px, min(2vw, 16px));
+}
+
+.clipboard {
+    color: var(--primary400)
+}
