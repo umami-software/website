@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.content {
+  overflow-x: auto ;
+}
+
 @media screen and (max-width: 992px) {
   .page {
     grid-template-columns: 1fr;

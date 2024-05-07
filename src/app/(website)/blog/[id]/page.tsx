@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getPost } from 'lib/blog';
 import Markdown from 'components/common/Markdown';
 import styles from './page.module.css';
+import { notFound } from 'next/navigation';
 
 type Props = {
   params: { id: string };
@@ -13,6 +14,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   const { id } = params;
 
   const post = await getPost(id);
+  if(!post) return notFound()
 
   return {
     title: {
@@ -26,9 +28,7 @@ export default async function ({ params }: Props) {
   const { id } = params;
   const post = await getPost(id);
 
-  if (!post) {
-    return null;
-  }
+  if(!post) return notFound()
 
   return (
     <article className={styles.blog}>
