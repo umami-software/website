@@ -60,14 +60,6 @@ button {
   cursor: pointer;
 }
 
-pre {
-  background: #000;
-  padding: 1rem;
-  border-radius: 0.4rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
 code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
@@ -78,12 +70,6 @@ code {
   white-space: pre-wrap;
   word-wrap: break-word;
   letter-spacing: 0;
-}
-
-pre code {
-  padding: 0;
-  color: var(--base200);
-  background: transparent;
 }
 
 menu ul {

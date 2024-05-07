@@ -1,37 +1,32 @@
 'use client';
 import { useState, useRef } from 'react';
-import Clipboard from 'assets/clipboard.svg';
+import { Icon, Icons } from 'react-basics';
+import Copy from 'assets/copy.svg';
 import styles from './Pre.module.css';
 
 const Pre = (props: any) => {
   const textInput = useRef<any>(null);
-  const [hovered, setHovered] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const onEnter = () => {
-    setHovered(true);
-  };
-  const onExit = () => {
-    setHovered(false);
-    setCopied(false);
-  };
-  const onCopy = () => {
+  const handleCopy = () => {
     setCopied(true);
-    navigator.clipboard.writeText(textInput?.current?.textContent);
+
+    navigator?.clipboard?.writeText(textInput?.current?.textContent);
+
     setTimeout(() => {
       setCopied(false);
-    }, 2500);
+    }, 1000);
   };
 
   return (
-    <div ref={textInput} onMouseEnter={onEnter} onMouseLeave={onExit} className={styles.container}>
-      {hovered && (
-        <button aria-label="Copy code" className={styles.button} onClick={onCopy}>
-          {copied ? <Clipboard className={styles.clipboard} /> : <Clipboard />}
-        </button>
-      )}
-      <pre>{props.children}</pre>
-    </div>
+    <pre ref={textInput} className={styles.container}>
+      {props.children}
+      <button aria-label="Copy code" className={styles.button} onClick={handleCopy}>
+        <Icon>
+          {copied ? <Icons.Check className={styles.check} /> : <Copy className={styles.copy} />}
+        </Icon>
+      </button>
+    </pre>
   );
 };
 

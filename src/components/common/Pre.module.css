@@ -1,21 +1,36 @@
 .container {
-    position: relative;
+  position: relative;
+  background: #000;
+  padding: 16px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
+.container code {
+  padding: 0;
+}
 
 .button {
-    border:0px;
-    color: var(--base900);
-    background: var(--base100);
-    position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
-    height: 2rem;
-    width: 2rem;
-    cursor: pointer;
-    font-size: max(14px, min(2vw, 16px));
+  border: 0;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--base50);
 }
 
-.clipboard {
-    color: var(--primary400)
+.copy {
+  color: var(--base400);
+}
+
+.copy:hover {
+  color: var(--base100);
+}
+
+.check {
+  color: var(--green400);
 }
