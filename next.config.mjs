@@ -1,20 +1,14 @@
 import remarkGfm from 'remark-gfm';
 import createMDX from '@next/mdx';
 import { withAxiom } from 'next-axiom';
-import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeHighlight from 'rehype-highlight';
 import path from 'path';
-
-/** @type {import('rehype-pretty-code').Options} */
-const options = {
-  theme: 'github-light',
-  keepBackground: false,
-};
 
 const withMDX = createMDX({
   options: {
     extension: /\.mdx?$/,
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [[rehypePrettyCode, options]],
+    rehypePlugins: [rehypeHighlight],
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },

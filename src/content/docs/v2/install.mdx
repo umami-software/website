@@ -13,13 +13,13 @@ title: Installation
 
 ### Install Yarn
 
-```sh
+```shell
 npm install -g yarn
 ```
 
 ### Get the source code and install packages
 
-```sh
+```shell
 git clone https://github.com/umami-software/umami.git
 cd umami
 yarn install
@@ -29,13 +29,13 @@ yarn install
 
 Create an `.env` file with the following
 
-```
+```dotenv
 DATABASE_URL={connection url}
 ```
 
 The connection url is in the following format:
 
-```
+```dotenv
 DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
 
 DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
@@ -43,7 +43,7 @@ DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
 
 ### Build the application
 
-```sh
+```shell
 yarn build
 ```
 
@@ -52,7 +52,7 @@ It will also create a login account with username **admin** and password **umami
 
 ### Start the application
 
-```sh
+```shell
 yarn start
 ```
 
@@ -66,7 +66,7 @@ You can simply run `yarn start` to start Umami, but it's highly recommended you 
 
 To run with PM2:
 
-```sh
+```shell
 yarn global add pm2
 cd umami
 pm2 start yarn --name umami -- start
@@ -80,18 +80,18 @@ Umami ships with a docker compose that contains the application and a PostgreSQL
 
 To build the Docker container and start up with a Postgres database, run:
 
-```sh
+```shell
 docker-compose up -d
 ```
 
 Alternatively, if you want to use prebuilt images, you can pull the Umami Docker image with PostgreSQL support:
 
-```sh
+```shell
 docker pull ghcr.io/umami-software/umami:postgresql-latest
 ```
 
 Or with MySQL support:
 
-```sh
+```shell
 docker pull ghcr.io/umami-software/umami:mysql-latest
 ```

@@ -27,14 +27,14 @@ If you have a Forge Account and a connected server bucket, you can easily set up
    - Click **Install Repository**
 4. Update the deployment script and add the following after the `git pull origin $FORGE_SITE_BRANCH` command.
 
-   ```sh
+   ```shell
    yarn install
    yarn build
    ```
 
    Remove these lines, since we don't have artisan or use php:
 
-   ```sh
+   ```shell
    ( flock -w 10 9 || exit 1
    echo 'Restarting FPM...'; sudo -S service $FORGE_PHP_FPM reload ) 9>/tmp/fpmlock
 
@@ -59,7 +59,7 @@ If you have a Forge Account and a connected server bucket, you can easily set up
 
 7. Perform the initial project setup, via SSH:
 
-   ```sh
+   ```shell
    yarn install
    yarn update-db
    yarn build

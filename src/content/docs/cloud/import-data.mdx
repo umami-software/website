@@ -60,7 +60,7 @@ There will be guides below to import your data from a self-hosted version of Uma
 You will be leveraging PostgreSQL's [\copy](https://www.postgresql.org/docs/current/sql-copy.html) command.
 To use this command, you will need access to the [psql](https://www.postgresql.org/docs/current/app-psql.html) terminal.
 
-```sh
+```shell
 psql -h <hostname or ip address> -p <port number of remote machine> -d <database> -U <username>
 ```
 
@@ -69,7 +69,7 @@ If using a schema other than `public`, you will need to identify the schema in t
 
 **Website Event**
 
-```sh
+```sql
 CREATE VIEW website_event_import AS
 SELECT we.website_id,
     we.session_id,
@@ -102,7 +102,7 @@ SELECT we.website_id,
 You can now use the `\copy` psql command. Replace `website id` and `filepath` in the command below.
 The `website id` can be found by navigating to **Websites** and clicking on the **Edit** button on the self-hosted Umami instance.
 
-```sh
+```shell
 \COPY (SELECT * FROM website_event_import WHERE website_id = '<website id>') TO '<filepath>.csv' WITH (FORMAT CSV, HEADER TRUE, FORCE_QUOTE *)
 ```
 
@@ -110,7 +110,7 @@ The `website id` can be found by navigating to **Websites** and clicking on the 
 
 Same instructions as **Website Event**, but you will need to create its own view.
 
-```sh
+```sql
 CREATE VIEW event_data_import AS
 SELECT we.website_id,
     we.session_id,
@@ -130,7 +130,7 @@ ON we.event_id = ed.website_event_id;
 
 Copy command
 
-```sh
+```shell
 \COPY (SELECT * FROM event_data_import WHERE website_id = '<website id>') TO '<filepath>.csv' WITH (FORMAT CSV, HEADER TRUE, FORCE_QUOTE *)
 ```
 
@@ -139,7 +139,7 @@ Copy command
 You will be leveraging MySQL's [SELECT ... INTO OUTFILE](https://dev.mysql.com/doc/refman/8.0/en/select-into.html) command.
 To use this command, you will need access to the [MySQL](https://dev.mysql.com/doc/refman/8.0/en/connecting.html) client.
 
-```sh
+```shell
 mysql --host=localhost --user=myname --password=password mydb
 ```
 
@@ -150,7 +150,7 @@ mysql --host=localhost --user=myname --password=password mydb
 
 Find the correct directory to place the csv. This will be the `OUTFILE` filepath.
 
-```sh
+```sql
 SHOW VARIABLES LIKE "secure_file_priv";
 ```
 
@@ -158,7 +158,7 @@ If this returned `/var/lib/mysql-files/` your filepath can be `/var/lib/mysql-fi
 
 **Website Event**
 
-```sh
+```sql
 CREATE VIEW website_event_import AS
 SELECT we.website_id,
       we.session_id,
@@ -192,7 +192,7 @@ You can now use the `SELECT ... INTO OUTFILE` MySQL command. Replace `website id
 The `website id` can be found by navigating to **Websites** and clicking on the **Edit** button on the self-hosted Umami instance.
 This command does not support headers, so you will have to hardcode them.
 
-```sh
+```sql
 SELECT 'website_id',
       'session_id',
       'visit_id',
@@ -230,7 +230,7 @@ WHERE website_id = '<website id>'
 
 Same instructions as **Website Event**, but you will need to create its own view.
 
-```sh
+```sql
 CREATE VIEW event_data_import AS
 SELECT we.website_id,
     we.session_id,
@@ -250,7 +250,7 @@ ON we.event_id = ed.website_event_id;
 
 Outfile command
 
-```sh
+```sql
 SELECT 'website_id',
     'session_id',
     'event_id',

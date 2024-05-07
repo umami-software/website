@@ -90,10 +90,10 @@ Allows you to assign a custom name to the tracker script different from the defa
 
 You do not need the `.js` extension. It can be any path you choose, and it won't affect the correct load and execution of the script. However, be sure to use the correct path to fetch your script, to avoid 404 errors. Some examples:
 
-```
-TRACKER_SCRIPT_NAME=           # Unset. By default, the script is fetched from: /script.js
+```dotenv
 TRACKER_SCRIPT_NAME=custom     # Fetched from: /custom
 TRACKER_SCRIPT_NAME=custom.js  # Fetched from: /custom.js
+TRACKER_SCRIPT_NAME=/path/custom.js  # Fetched from: /path/custom.js
 ```
 
 If you are not sure about the correct URL or path to access the script, you can always check the **Tracking code** for your website. You have more information about that in the [Collect data](/docs/collect-data) section in the docs.

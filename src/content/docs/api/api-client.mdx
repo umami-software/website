@@ -14,7 +14,7 @@ Umami API Client is built in TypeScript and contains functions to call every API
 
 ## Installation
 
-```sh
+```shell
 npm install @umami/api-client
 ```
 
@@ -22,7 +22,7 @@ npm install @umami/api-client
 
 The following environment variables are required to call your own API.
 
-```
+```dotenv
 UMAMI_API_CLIENT_USER_ID
 UMAMI_API_CLIENT_SECRET
 UMAMI_API_CLIENT_ENDPOINT
@@ -30,7 +30,7 @@ UMAMI_API_CLIENT_ENDPOINT
 
 To access Umami Cloud, these environment variables are required.
 
-```
+```dotenv
 UMAMI_API_KEY
 UMAMI_API_CLIENT_ENDPOINT
 ```
@@ -51,7 +51,7 @@ const { ok, data, status, error } = await client.getWebsites();
 
 The result will come back in the following format.
 
-```
+```typescript
 {
   ok: boolean;
   status: number;
@@ -64,7 +64,7 @@ The result will come back in the following format.
 
 ### Me
 
-```
+```text
 getMe() ⇒ GET /me
 updateMyPassword(data) ⇒ POST /me/password
 getMyWebsites() ⇒ GET /me/websites
@@ -72,7 +72,7 @@ getMyWebsites() ⇒ GET /me/websites
 
 ### Users
 
-```
+```text
 getUsers() ⇒ GET /users
 createUser(data) ⇒ POST /users
 getUser(id) ⇒ GET /users/{id}
@@ -84,7 +84,7 @@ getUserUsage(id, data) ⇒ GET /users/{id}/usage
 
 ### Teams
 
-```
+```text
 getTeams() ⇒ GET /teams
 createTeam(data) ⇒ POST /teams
 joinTeam(data) ⇒ POST /teams/join
@@ -100,7 +100,7 @@ deleteTeamWebsite(teamId, websiteId) ⇒ DEL /teams/{teamId}/websites/{websiteId
 
 ### Websites
 
-```
+```text
 getWebsites() ⇒ GET /websites
 createWebsite(data) ⇒ POST /websites
 getWebsite(id) ⇒ GET /websites/{id}
@@ -116,7 +116,7 @@ getWebsiteStats(id, data) ⇒ GET /websites/{id}/stats
 
 ### Event Data
 
-```
+```text
 getEventDataEvents(id, data) ⇒ GET /event-data/events
 getEventDataFields(id, data) ⇒ GET /event-data/fields
 getEventDataStats(id, data) ⇒ GET /event-data/stats
@@ -134,7 +134,7 @@ A random string used to generate unique values. This needs to match the `APP_SEC
 
 **UMAMI_API_CLIENT_ENDPOINT = &lt;API endpoint&gt;**
 
-The endpoint of your Umami API. `example: https://{yourserver}/api/`
+The endpoint of your Umami API. Example: `https://{yourserver}/api/`
 
 **UMAMI_API_KEY = &lt;API Key string&gt;**
 

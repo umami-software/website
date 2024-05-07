@@ -26,7 +26,7 @@ Just pass in your API key via a custom header `x-umami-api-key`
 
 For example, with `curl` it would look like this:
 
-```sh
+```shell
 curl https://api.umami.is/v1/websites
    -H "Accept: application/json"
    -H "x-umami-api-key <api-key>"
@@ -36,7 +36,7 @@ curl https://api.umami.is/v1/websites
 
 Set the following requirement variables to have the API client use your API key.
 
-```
+```dotenv
 UMAMI_API_KEY={Your API key}
 UMAMI_API_CLIENT_ENDPOINT=https://api.umami.is/v1
 ```
@@ -51,7 +51,7 @@ Each API key is limited to 50 calls every 15 seconds.
 
 The following API routes are not made available using your API key.
 
-```
+```text
 /me/password
 /users
 /users/*

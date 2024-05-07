@@ -10,13 +10,13 @@ Umami collects only the metrics you care about and respects the privacy of your 
 
 ## Starting the project 👨‍💻
 
-```sh
+```shell
 # using npm
 npm install
 
 npm run dev
 ```
-```sh
+```shell
 # using yarn
 yarn
 
