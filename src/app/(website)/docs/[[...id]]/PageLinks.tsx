@@ -4,9 +4,6 @@ import classNames from 'classnames';
 import styles from './PageLinks.module.css';
 
 export default function PageLinks({ items, offset = 0 }) {
-  if (!items?.length) {
-    return null;
-  }
   const [hash, setHash] = useState(items[0]?.id);
 
   useEffect(() => {
@@ -26,6 +23,9 @@ export default function PageLinks({ items, offset = 0 }) {
     };
   }, []);
 
+  if (!items?.length) {
+    return null;
+  }
 
   return (
     <div className={styles.sidenav}>
