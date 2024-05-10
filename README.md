@@ -25,5 +25,5 @@ yarn dev
 
 ## Contributions
 
-Would be happy to take contributions to improve the website. Help is needed especially in the [**Guides**](https://umami.is/docs/hosting) section.
+Would be happy to take contributions to improve the website. Help is needed especially in the [**Guides**](https://umami.is/docs/guides/hosting) section.
 If you know how to configure or deploy Umami in different environments, please share your knowledge. 
