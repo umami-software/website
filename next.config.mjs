@@ -23,6 +23,10 @@ const headers = [
     key: 'X-Frame-Options',
     value: 'SAMEORIGIN',
   },
+  {
+    key: 'Referrer-Policy',
+    value: 'no-referrer-when-downgrade'
+  }
 ];
 
 /** @type {import('next').NextConfig} */

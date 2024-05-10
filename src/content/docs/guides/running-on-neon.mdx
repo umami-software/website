@@ -14,7 +14,7 @@ title: Running on Neon Postgres
    - You can also get the connection string with Neon CLI: `npx neonctl connection-string --project-id <project-id> --pooled`.
 3. **Important:** add `?pgbouncer=true&connect_timeout=10` to the connection string you just copied.
 4. Add `DATABASE_URL` to your `.env` file:
-   ```
+   ```text
    DATABASE_URL=postgres://user:passwd@endpoint-pooler.region.aws.neon.build/neondb?pgbouncer=true&connect_timeout=10
    ```
 5. You should now be able to check the database connection and update the schema (`yarn run build-db && yarn run update-db`).

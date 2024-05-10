@@ -56,7 +56,7 @@ With Umami now running, you can proxy requests to a domain or subdomain from Ngi
 
 The following config will send all requests from `umami.yourdomain.com` to your local Umami instance.
 
-```
+```nginx
 server {
   server_name umami.yourdomain.com;
 
@@ -72,7 +72,7 @@ server {
 The following config will allow you to host Umami at a subpath for your domain (eg: website.com/stats).
 This requires setting the enviroment variable `BASE_PATH=/stats` in your `.env` file.
 
-```
+```nginx
 server {
   ...
   location /stats/_next/static/ {

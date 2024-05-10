@@ -83,3 +83,8 @@ menu li {
 body button {
   font-family: inherit;
 }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--base400);
+}
