@@ -39,6 +39,10 @@
   max-width: 100%;
 }
 
+.pixel {
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
   .docs {
     grid-template-columns: minmax(120px, 20vw) 1fr;
