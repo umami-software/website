@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import GetStartedBanner from 'components/common/GetStartedBanner';
-import NewsletterSignup from 'components/common/NewsletterSignup';
 import Hero from './Hero';
 import Statements from './Statements';
 import QuickStart from './QuickStart';
@@ -23,7 +22,6 @@ export default function () {
       <OpenSource />
       <Quotes />
       <GetStartedBanner />
-      <NewsletterSignup />
     </article>
   );
 }

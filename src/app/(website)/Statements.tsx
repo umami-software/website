@@ -9,8 +9,9 @@ const statements = [
   {
     title: 'Easy to use',
     description: `
-    Umami is easy to use and understand without needing to run complicated reports.
-    All data is available at a glance.
+    Umami is easy to use and understand without having to go through a complicated setup.
+    Many features are ready out of the box.
+    Get up and running in minutes.
     `,
     image: <Analytics />,
   },
@@ -37,7 +38,7 @@ export default function Statements() {
     <section className={styles.container}>
       <div className={styles.header}>
         <TextBlock align="center" className={styles.block}>
-          <h1>Umami is a simple, fast, privacy-focused alternative to Google Analytics</h1>
+          <h1>Umami is the faster, privacy-focused alternative to Google Analytics</h1>
         </TextBlock>
       </div>
       <div className={styles.items}>
