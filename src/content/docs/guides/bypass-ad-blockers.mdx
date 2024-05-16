@@ -14,7 +14,8 @@ Here are few methods you can use to avoid ad blockers.
 
 ## Proxying
 
-You can proxy the tracking script itself to hide the actual name and location of
+Proxying is done at the server level so you will need access to your web server to make changes.
+With this method, you can proxy the tracking script itself to hide the actual name and location of
 the original script.
 
 For example, you can have a script on your website that is:
@@ -27,12 +28,25 @@ That is proxying the file at:
 
 So even if the ad blocker blocks the `analytics.umami.is` domain, your own domain would be safe.
 
-Proxying is usually done at the server level. Here are some tutorials you can use:
+Here are some tutorials you can use:
 
 - [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
 - [Apache](https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html)
 
 If you are using a framework like [Next.js](https://nextjs.org), you can use their [rewrites](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites) feature.
+
+## Hosting the tracker script
+
+If you don't have access to the web server and are unable to proxy the script, you can simply host the entire
+tracker script on your own domain.
+
+1. Open the the script URL in your browser, `https://analytics.umami.is/script.js`.
+2. Save the file.
+3. Upload the file to your domain.
+4. Set the `data-host-url` attribute to send data to the correct location. See [tracker configuration.](https://umami.is/docs/tracker-configuration)
+
+Note that this method is not as reliable as proxying and if the tracker script were to change, you would need
+to download and update the script again.
 
 ## Using environment variables (self-hosting)
 

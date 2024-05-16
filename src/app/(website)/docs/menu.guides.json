@@ -22,6 +22,10 @@
       {
         "label": "Measure campaigns",
         "url": "/docs/guides/measure-campaigns"
+      },
+      {
+        "label": "Transition from GA4",
+        "url": "/docs/guides/transition-from-ga4"
       }
     ]
   },

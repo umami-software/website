@@ -20,12 +20,14 @@
 }
 
 .blog h2 {
-  font-size: max(18px, min(2vw, 24px));
+  font-size: max(18px, min(2vw, 26px));
   letter-spacing: -0.05em;
 }
 
 .blog h3 {
-  font-size: max(12px, min(2vw, 14px));
+  font-size: max(14px, min(2vw, 20px));
+  letter-spacing: -0.05em;
+  color: var(--base800);
 }
 
 .blog p {
