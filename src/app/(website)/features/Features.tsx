@@ -15,7 +15,6 @@ import Language from 'assets/language.svg';
 import Realtime from 'assets/realtime.svg';
 import Bolt from 'assets/bolt.svg';
 import Data from 'assets/data.svg';
-import Target from 'assets/target.svg';
 import Team from 'assets/team.svg';
 import Graph from 'assets/graph.svg';
 import Magnet from 'assets/magnet.svg';
@@ -23,11 +22,14 @@ import Funnel from 'assets/funnel.svg';
 import Privacy from 'assets/privacy.svg';
 import Anonymous from 'assets/anonymous.svg';
 import Cookie from 'assets/cookie.svg';
-import Property from 'assets/property.svg';
+import Key from 'assets/key.svg';
 import Gear from 'assets/gear.svg';
 import Gauge from 'assets/gauge.svg';
 import Import from 'assets/import.svg';
 import Export from 'assets/export.svg';
+import Lightbulb from 'assets/lightbulb.svg';
+import Tag from 'assets/tag.svg';
+import Target from 'assets/target.svg';
 import styles from './Features.module.css';
 
 const items = [
@@ -64,20 +66,6 @@ const items = [
         icon: <Traffic />,
       },
       {
-        title: 'Sharing',
-        description: [
-          'Easily share your stats with others through a secure, uniquely generated URL.',
-        ],
-        icon: <Share />,
-      },
-      {
-        title: 'Filtering',
-        description: [
-          'Gain further insight into your data by applying filters like country, browser, and URL.',
-        ],
-        icon: <Filter />,
-      },
-      {
         title: 'Location',
         description: [
           'Find out where your visitors are coming from including the city, region and country.',
@@ -99,6 +87,13 @@ const items = [
         icon: <Realtime />,
       },
       {
+        title: 'Teams',
+        description: [
+          'The teams feature allows you to securely share websites access with different team members.',
+        ],
+        icon: <Team />,
+      },
+      {
         title: 'Custom events',
         description: [
           'Track everything that happens on your website like signups and cart checkouts using custom events.',
@@ -115,36 +110,61 @@ const items = [
         description: [
           'Measure the effectiveness of your campaign by analyzing UTM query parameters that are automatically collected.',
         ],
-        icon: <Target />,
+        icon: <Tag />,
       },
 
       {
-        title: 'Teams',
+        title: 'Sharing',
         description: [
-          'The teams feature allows you to securely share websites access with different team members.',
+          'Easily share your stats with others through a secure, uniquely generated URL.',
         ],
-        icon: <Team />,
+        icon: <Share />,
+      },
+      {
+        title: 'Filtering',
+        description: [
+          'Gain further insight into your data by applying filters like country, browser, and URL.',
+        ],
+        icon: <Filter />,
       },
       {
         title: 'Reports',
         description: [
-          'Umami comes with out of the box reporting that enables you to gain insights from all your website data.',
+          'Build reports for specific websites and date ranges to cover all your data needs.',
         ],
         icon: <Graph />,
       },
+    ],
+  },
+  {
+    title: 'Reports',
+    description:
+      'Umami comes with out of the box reporting that enables you to gain deep insights from all your website data.',
+    items: [
       {
-        title: 'Retention',
-        description: [
-          'Measure your website stickiness by tracking how often visitors return with the Retention report.',
-        ],
-        icon: <Magnet />,
+        title: 'Insights',
+        description: ['Dive deeper into your data by using segments and filters.'],
+        icon: <Lightbulb />,
       },
       {
         title: 'Funnels',
-        description: [
-          'Understand the conversion and drop-off rate of visitors with the Funnel report.',
-        ],
+        description: ['Understand the conversion and drop-off rate of users.'],
         icon: <Funnel />,
+      },
+      {
+        title: 'Retention',
+        description: ['Measure your website stickiness by tracking how often users return.'],
+        icon: <Magnet />,
+      },
+      {
+        title: 'Goals',
+        description: ['Track your goals for pageviews or events.'],
+        icon: <Target />,
+      },
+      {
+        title: 'UTM',
+        description: ['Track your campaigns through UTM parameters.'],
+        icon: <Tag />,
       },
     ],
   },
@@ -174,7 +194,7 @@ const items = [
         description: [
           `Data is always in your control with Umami. You can self-host on your own infrastructure or export your data from Umami Cloud.`,
         ],
-        icon: <Property />,
+        icon: <Key />,
       },
     ],
   },
