@@ -30,6 +30,7 @@ import Export from 'assets/export.svg';
 import Lightbulb from 'assets/lightbulb.svg';
 import Tag from 'assets/tag.svg';
 import Target from 'assets/target.svg';
+import Device from 'assets/device.svg';
 import styles from './Features.module.css';
 
 const items = [
@@ -73,11 +74,25 @@ const items = [
         icon: <Location />,
       },
       {
+        title: 'Device',
+        description: [
+          'See the most popular devices used by visitors to help you optimize your pages.',
+        ],
+        icon: <Device />,
+      },
+      {
         title: 'Languages',
         description: [
           'Know which languages are the most popular among your visitors to help you tailor your content.',
         ],
         icon: <Language />,
+      },
+      {
+        title: 'Filtering',
+        description: [
+          'Gain further insight into your data by applying filters like country, browser, and URL.',
+        ],
+        icon: <Filter />,
       },
       {
         title: 'Realtime data',
@@ -121,13 +136,6 @@ const items = [
         icon: <Share />,
       },
       {
-        title: 'Filtering',
-        description: [
-          'Gain further insight into your data by applying filters like country, browser, and URL.',
-        ],
-        icon: <Filter />,
-      },
-      {
         title: 'Reports',
         description: [
           'Build reports for specific websites and date ranges to cover all your data needs.',
@@ -158,7 +166,7 @@ const items = [
       },
       {
         title: 'Goals',
-        description: ['Track your goals for pageviews or events.'],
+        description: ['Track your goals for pageviews and events.'],
         icon: <Target />,
       },
       {
