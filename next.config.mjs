@@ -23,10 +23,6 @@ const headers = [
     key: 'X-Frame-Options',
     value: 'SAMEORIGIN',
   },
-  {
-    key: 'Referrer-Policy',
-    value: 'no-referrer-when-downgrade'
-  }
 ];
 
 /** @type {import('next').NextConfig} */
@@ -76,6 +72,7 @@ const nextConfig = {
   },
   async rewrites() {
     return [
+      { source: '/docs/getting-started', destination: '/docs' },
       { source: '/analytics', destination: '/' },
       { source: '/website-analytics', destination: '/' },
       { source: '/open-source-website-analytics', destination: '/' },
