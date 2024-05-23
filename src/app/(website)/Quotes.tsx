@@ -1,6 +1,6 @@
 'use client';
 import TextBlock from 'components/layout/TextBlock';
-import Twitter from 'assets/twitter.svg';
+import X from 'assets/x.svg';
 import styles from './Quotes.module.css';
 
 const items = [
@@ -76,7 +76,7 @@ export default function Quotes() {
                   <div className={styles.username}>{username}</div>
                 </div>
                 <div className={styles.logo}>
-                  <Twitter />
+                  <X />
                 </div>
               </div>
               <div className={styles.body}>
