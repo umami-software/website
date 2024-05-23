@@ -22,6 +22,10 @@ export default function () {
       <OpenSource />
       <Quotes />
       <GetStartedBanner />
+      <img
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://static.scarf.sh/a.png?x-pxid=4b6ec9d8-17ee-478e-a61a-e29fc6d67a50"
+      />
     </article>
   );
 }

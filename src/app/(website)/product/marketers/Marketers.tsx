@@ -102,6 +102,10 @@ export default function Marketers() {
         </TextBlock>
       </section>
       <GetStartedBanner />
+      <img
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://static.scarf.sh/a.png?x-pxid=b7a0a2bd-d1c6-49f1-b674-d4484d358393"
+      />
     </div>
   );
 }

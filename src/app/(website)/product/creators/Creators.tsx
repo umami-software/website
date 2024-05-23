@@ -81,6 +81,10 @@ export default function Creators() {
         </TextBlock>
       </section>
       <GetStartedBanner />
+      <img
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://static.scarf.sh/a.png?x-pxid=d493e503-6cf2-4868-9664-6105c6f6dcc4"
+      />
     </div>
   );
 }
