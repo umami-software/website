@@ -8,7 +8,7 @@ import Code from 'assets/code.svg';
 
 export const CLOUD_URL = 'https://cloud.umami.is';
 export const GITHUB_URL = 'https://github.com/umami-software/umami';
-export const DISCORD_URL = 'https://discord.gg/4dz4zcXYrQ';
+export const DISCORD_URL = 'https://umami.is/discord';
 export const X_URL = 'https://twitter.com/umami_software';
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/umami-software/';
 export const GITHUB_STARS = '19.8k';
