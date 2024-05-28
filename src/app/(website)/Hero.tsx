@@ -31,7 +31,7 @@ export default function Hero() {
           Get started
         </LinkButton>
         <LinkButton
-          href="https://analytics.umami.is/share/LGazGOecbDtaIwDr/umami.is"
+          href="https://eu.umami.is/share/LGazGOecbDtaIwDr/umami.is"
           data-umami-event="live-demo-button"
           target="_blank"
           rel="noreferrer"
