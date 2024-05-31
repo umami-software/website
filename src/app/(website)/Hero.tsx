@@ -12,13 +12,14 @@ export default function Hero() {
     <div className={styles.hero}>
       <TextBlock size="xl" align="center">
         <h1>
-          Empowering insights.
+          Effortless analytics and
           <br />
-          Preserving privacy.
+          real-time insights.
         </h1>
         <p className={styles.subtitle}>
-          Umami makes it easy to collect, analyze, and understand your web data &mdash; while
-          maintaining <strong>visitor privacy</strong> and <strong>data ownership</strong>.
+          Umami makes it easy to collect, analyze, and understand
+          <br />
+          your data &mdash; so you can focus on <strong>growth</strong>.
         </p>
       </TextBlock>
       <div className={styles.buttons}>
