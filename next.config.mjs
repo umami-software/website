@@ -83,6 +83,7 @@ const nextConfig = {
       { source: '/apollo-ga', destination: '/google-analytics' },
       { source: '/a/script.js', destination: 'https://analytics.eu.umami.is/script.js' },
       { source: '/discord', destination: 'https://discord.gg/4dz4zcXYrQ' },
+      { source: '/lp/:path*', destination: '/' },
     ];
   },
 };
