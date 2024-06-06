@@ -73,17 +73,19 @@ const nextConfig = {
   async rewrites() {
     return [
       { source: '/docs/getting-started', destination: '/docs' },
-      { source: '/analytics', destination: '/' },
-      { source: '/website-analytics', destination: '/' },
-      { source: '/open-source-website-analytics', destination: '/' },
-      { source: '/privacy-analytics', destination: '/' },
-      { source: '/linkedin', destination: '/' },
-      { source: '/reddit', destination: '/' },
-      { source: '/apollo', destination: '/' },
-      { source: '/apollo-ga', destination: '/google-analytics' },
       { source: '/a/script.js', destination: 'https://analytics.eu.umami.is/script.js' },
       { source: '/discord', destination: 'https://discord.gg/4dz4zcXYrQ' },
-      { source: '/lp/:path*', destination: '/' },
+      { source: '/analytics', destination: '/lp/analytics' },
+      { source: '/website-analytics', destination: '/lp/website-analytics' },
+      {
+        source: '/open-source-website-analytics',
+        destination: '/lp/open-source-website-analytics',
+      },
+      { source: '/privacy-analytics', destination: '/lp/privacy-analytics' },
+      { source: '/linkedin', destination: '/lp/linkedin' },
+      { source: '/reddit', destination: '/lp/reddit' },
+      { source: '/apollo', destination: '/lp/apollo' },
+      { source: '/apollo-ga', destination: '/lp/google-analytics' },
     ];
   },
 };
