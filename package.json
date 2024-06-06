@@ -31,6 +31,7 @@
     "@fontsource/jetbrains-mono": "^4.5.12",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^14.0.4",
     "@types/mdx": "^2.0.7",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
