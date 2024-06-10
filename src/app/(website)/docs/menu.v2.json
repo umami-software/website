@@ -78,6 +78,10 @@
     "label": "Reference",
     "items": [
       {
+        "label": "Metric definitions",
+        "url": "/docs/metric-definitions"
+      },
+      {
         "label": "Integrations",
         "url": "/docs/integrations"
       },
