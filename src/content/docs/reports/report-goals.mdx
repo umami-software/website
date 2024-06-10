@@ -1,22 +1,19 @@
 ---
-title: Funnel report
+title: Goals report
 ---
 
-# Funnel
+# Goals
 
-Umami Funnel helps you understand the conversion and drop-off rate of users.
-By analyzing the funnel, users can make informed decisions to optimize the website's user experience and achieve better conversion rates.
+Umami Goals is a crucial tool in providing valuable insights into how well your website is meeting its objectives.
+With clear metrics and visualizations, our goals report translates complex data into actionable insights.
 
-The report works by displaying the counts of users that reach each URL or event and the drop off rate from the previous step.
-The funnel uses specific order criteria, which requires step completion in a required order.
-The user may navigate to other URLs or events in between the funnel steps, but must complete the funnel steps in order to be counted as a conversion.
+The report works by choosing a URL, event, or event data property you want to track and setting a goal to reach across a date range.
 
 ## Parameters
 
 - `Website`: (required) The website you want to run the report on.
 - `Date range`: (required) The date range of the report.
-- `Window`: (required) Amount of minutes a user has between funnel steps to be counted as a conversion.
-- `Steps`: (required) Sequential step conditions used in the funnel. Minimum of two is required to run the report.
+- `Goals`: (required) URL, event name, or event data property and numerical goal value.
 
 ## Create a report
 
@@ -26,29 +23,27 @@ The user may navigate to other URLs or events in between the funnel steps, but m
 
 ### Step 2: Choose a date range
 
-<img src="/images/v2/funnel-date-range.png" />
+<img src="/images/v2/goals-date-range.png" />
 
-### Step 3: Choose a window (minutes)
+### Step 3: Choose your goals
 
-<img src="/images/v2/funnel-window.png" />
+Click the **plus sign**, choose the goal type (URL, Event, or Event data property) and type in the description and click the **Add** button.
 
-### Step 4: Choose your Steps
+<img src="/images/v2/goals-data-type.png" />
 
-Click the **plus sign**, choose the step type (URL or Event) and type in the first step condition on the funnel and click the **Add** button.
+- **URL** : How many users hit a given page. (example: `/docs`)
+- **Event** : How many users fired off a specific event. (example: `live-demo-button`)
+- **Event data** : Count, average, or sum of an event data property (example: `revenue`)
 
-<img src="/images/v2/funnel-url-form.png" />
+<img src="/images/v2/goals-data-value.png" />
 
-Continue to add steps until your desired funnel conditions are completed. Umami supports specific URLs, events, and URL wildcards as steps.
+Event data will have additional forms to fill out the property and aggregation type.
 
-<img src="/images/v2/funnel-url-details.png" />
-
-- **Specific URL** : The user must reach this specific URL. (example: `/`)
-- **Event** : The user must generate this specific event . (example: `live-demo-button`)
-- **URL wildcards** : The user must reach any URL that meets the wildcard criteria. Only `Ends with` search is available. (example: `/docs*`)
+<img src="/images/v2/goals-event-data.png" />
 
 ### Step 5: Run query and save
 
 Click **Run Query** to see your results. In order to save your report, add a title and description and click **Save**.
 The report along with its parameters will be saved for future use.
 
-<img src="/images/v2/funnel-details.png" />
+<img src="/images/v2/goals-details.png" />
