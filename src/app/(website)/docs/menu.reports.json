@@ -26,6 +26,10 @@
       {
         "label": "UTM",
         "url": "/docs/reports/report-utm"
+      },
+      {
+        "label": "Goals",
+        "url": "/docs/reports/report-goals"
       }
     ]
   }
