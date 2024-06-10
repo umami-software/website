@@ -1,36 +1,38 @@
 'use client';
-import classNames from 'classnames';
-import { Text, Icon } from 'react-basics';
-import PageHeader from 'components/layout/PageHeader';
-import GetStartedBanner from 'components/common/GetStartedBanner';
-import TextBlock from 'components/layout/TextBlock';
-import User from 'assets/user.svg';
-import View from 'assets/view.svg';
-import Bounce from 'assets/bounce.svg';
-import Traffic from 'assets/traffic.svg';
-import Share from 'assets/share.svg';
-import Filter from 'assets/filter.svg';
-import Location from 'assets/location.svg';
-import Language from 'assets/language.svg';
-import Realtime from 'assets/realtime.svg';
-import Bolt from 'assets/bolt.svg';
-import Data from 'assets/data.svg';
-import Team from 'assets/team.svg';
-import Graph from 'assets/graph.svg';
-import Magnet from 'assets/magnet.svg';
-import Funnel from 'assets/funnel.svg';
-import Privacy from 'assets/privacy.svg';
 import Anonymous from 'assets/anonymous.svg';
+import Bolt from 'assets/bolt.svg';
+import Bounce from 'assets/bounce.svg';
+import Compare from 'assets/compare.svg';
 import Cookie from 'assets/cookie.svg';
-import Key from 'assets/key.svg';
-import Gear from 'assets/gear.svg';
-import Gauge from 'assets/gauge.svg';
-import Import from 'assets/import.svg';
+import Data from 'assets/data.svg';
+import Device from 'assets/device.svg';
 import Export from 'assets/export.svg';
+import Filter from 'assets/filter.svg';
+import Funnel from 'assets/funnel.svg';
+import Gauge from 'assets/gauge.svg';
+import Gear from 'assets/gear.svg';
+import Graph from 'assets/graph.svg';
+import Import from 'assets/import.svg';
+import Key from 'assets/key.svg';
+import Language from 'assets/language.svg';
 import Lightbulb from 'assets/lightbulb.svg';
+import Location from 'assets/location.svg';
+import Magnet from 'assets/magnet.svg';
+import Privacy from 'assets/privacy.svg';
+import Reports from 'assets/reports.svg';
+import Realtime from 'assets/realtime.svg';
+import Share from 'assets/share.svg';
 import Tag from 'assets/tag.svg';
 import Target from 'assets/target.svg';
-import Device from 'assets/device.svg';
+import Team from 'assets/team.svg';
+import Traffic from 'assets/traffic.svg';
+import User from 'assets/user.svg';
+import View from 'assets/view.svg';
+import classNames from 'classnames';
+import GetStartedBanner from 'components/common/GetStartedBanner';
+import PageHeader from 'components/layout/PageHeader';
+import TextBlock from 'components/layout/TextBlock';
+import { Icon, Text } from 'react-basics';
 import styles from './Features.module.css';
 
 const items = [
@@ -86,6 +88,11 @@ const items = [
           'Know which languages are the most popular among your visitors to help you tailor your content.',
         ],
         icon: <Language />,
+      },
+      {
+        title: 'Compare',
+        description: ['See your metric performance compared against previous date ranges.'],
+        icon: <Compare />,
       },
       {
         title: 'Filtering',
@@ -236,6 +243,13 @@ const items = [
         title: 'Data export ',
         description: [`Don't settle for summarized data. Get a full data export of all your data.`],
         icon: <Export />,
+      },
+      {
+        title: 'Email reports ',
+        description: [
+          `Send scheduled email reports to anyone. Send out website summaries in a compact and digestable email.`,
+        ],
+        icon: <Reports />,
       },
     ],
   },
