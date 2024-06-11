@@ -40,6 +40,10 @@
         "url": "/docs/cloud/teams"
       },
       {
+        "label": "Email Reports",
+        "url": "/docs/cloud/email-reports"
+      },
+      {
         "label": "Delete account",
         "url": "/docs/cloud/delete-account"
       }
