@@ -44,6 +44,10 @@
         "url": "/docs/track-events"
       },
       {
+        "label": "Event data",
+        "url": "/docs/event-data"
+      },
+      {
         "label": "Compare",
         "url": "/docs/compare"
       },
