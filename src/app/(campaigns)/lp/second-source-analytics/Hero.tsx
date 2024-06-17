@@ -3,7 +3,7 @@ import LinkButton from 'components/common/LinkButton';
 import TextBlock from 'components/layout/TextBlock';
 import { CLOUD_URL } from 'lib/constants';
 import useQueryString from 'components/hooks/useQueryString';
-import styles from './Hero.module.css';
+import styles from 'app/(website)/Hero.module.css';
 
 export default function Hero() {
   const query = useQueryString({ ref: 'umami-hero' });
@@ -11,9 +11,11 @@ export default function Hero() {
   return (
     <div className={styles.hero}>
       <TextBlock size="xl" align="center">
-        <h1>Website analytics built for speed and efficiency</h1>
+        <h1>Increase confidence in your website analytics data with a second data source</h1>
         <p className={styles.subtitle}>
-          Umami website analytics provides the data you need to make decisions in real-time.
+          Umami is an unobtrusive website analytics platform that seamlessly runs alongside your
+          existing website analytics to provide a second data source. Compare and confirm important
+          website analytics data with Umami data and increase confidence in your numbers.
         </p>
       </TextBlock>
       <div className={styles.buttons}>
@@ -37,8 +39,8 @@ export default function Hero() {
       </div>
       <div className={styles.features}>
         <div>No cookie banners</div>
-        <div>Streamlined dashboard</div>
-        <div>Effortless setup and use</div>
+        <div>Does Not Interfere w/ Existing Analytics</div>
+        <div>Simple Installation, Simple to Use</div>
       </div>
       <div className={styles.image}>
         <img src="/images/app.jpg" />

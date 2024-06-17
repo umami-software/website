@@ -22,7 +22,7 @@ export const GITHUB_STATS = [
 
 export const Blocks = {
   simpleAnalytics: {
-    title: 'Simple analytics',
+    title: 'Effortless analytics',
     description:
       'Umami measures just the important metrics that you care about and everything is easily accessible at just a glance.',
     image: '/images/preview-website-stats.png',
