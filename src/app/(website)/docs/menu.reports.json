@@ -30,6 +30,10 @@
       {
         "label": "Goals",
         "url": "/docs/reports/report-goals"
+      },
+      {
+        "label": "Journey",
+        "url": "/docs/reports/report-journey"
       }
     ]
   }

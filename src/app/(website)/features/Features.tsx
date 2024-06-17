@@ -18,9 +18,10 @@ import Language from 'assets/language.svg';
 import Lightbulb from 'assets/lightbulb.svg';
 import Location from 'assets/location.svg';
 import Magnet from 'assets/magnet.svg';
+import Path from 'assets/path.svg';
 import Privacy from 'assets/privacy.svg';
-import Reports from 'assets/reports.svg';
 import Realtime from 'assets/realtime.svg';
+import Reports from 'assets/reports.svg';
 import Share from 'assets/share.svg';
 import Tag from 'assets/tag.svg';
 import Target from 'assets/target.svg';
@@ -172,14 +173,19 @@ const items = [
         icon: <Magnet />,
       },
       {
+        title: 'UTM',
+        description: ['Track your campaigns through UTM parameters.'],
+        icon: <Tag />,
+      },
+      {
         title: 'Goals',
         description: ['Track your goals for pageviews and events.'],
         icon: <Target />,
       },
       {
-        title: 'UTM',
-        description: ['Track your campaigns through UTM parameters.'],
-        icon: <Tag />,
+        title: 'Journey',
+        description: ['Understand how users nagivate through your website.'],
+        icon: <Path />,
       },
     ],
   },
