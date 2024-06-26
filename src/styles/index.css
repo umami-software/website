@@ -44,7 +44,7 @@ h2 {
   font-size: 24px;
 }
 h3 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 main {
@@ -82,4 +82,9 @@ menu li {
 
 body button {
   font-family: inherit;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--base400);
 }

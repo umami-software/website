@@ -12,7 +12,6 @@ export default async function () {
     <article>
       <PageHeader>
         <h1>Blog</h1>
-        <p>Welcome to the Umami blog!</p>
       </PageHeader>
       <div className={styles.posts}>
         {posts

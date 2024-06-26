@@ -11,14 +11,9 @@ export default function Hero() {
   return (
     <div className={styles.hero}>
       <TextBlock size="xl" align="center">
-        <h1>
-          Empowering insights.
-          <br />
-          Preserving privacy.
-        </h1>
+        <h1>Website analytics built for speed and efficiency</h1>
         <p className={styles.subtitle}>
-          Umami makes it easy to collect, analyze, and understand your web data &mdash; while
-          maintaining <strong>visitor privacy</strong> and <strong>data ownership</strong>.
+          Umami website analytics provides the data you need to make decisions in real-time.
         </p>
       </TextBlock>
       <div className={styles.buttons}>
@@ -31,7 +26,7 @@ export default function Hero() {
           Get started
         </LinkButton>
         <LinkButton
-          href="https://analytics.umami.is/share/LGazGOecbDtaIwDr/umami.is"
+          href="https://eu.umami.is/share/LGazGOecbDtaIwDr/umami.is"
           data-umami-event="live-demo-button"
           target="_blank"
           rel="noreferrer"
@@ -41,9 +36,9 @@ export default function Hero() {
         </LinkButton>
       </div>
       <div className={styles.features}>
-        <div>No cookies</div>
-        <div>GDPR & CCPA compliant</div>
-        <div>Open source</div>
+        <div>No cookie banners</div>
+        <div>Streamlined dashboard</div>
+        <div>Effortless setup and use</div>
       </div>
       <div className={styles.image}>
         <img src="/images/app.jpg" />

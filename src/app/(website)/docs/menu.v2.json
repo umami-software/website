@@ -44,8 +44,12 @@
         "url": "/docs/track-events"
       },
       {
+        "label": "Compare",
+        "url": "/docs/compare"
+      },
+      {
         "label": "Teams",
-        "url": "/docs/teams-guide"
+        "url": "/docs/teams"
       },
       {
         "label": "Updates",
@@ -77,6 +81,10 @@
   {
     "label": "Reference",
     "items": [
+      {
+        "label": "Metric definitions",
+        "url": "/docs/metric-definitions"
+      },
       {
         "label": "Integrations",
         "url": "/docs/integrations"

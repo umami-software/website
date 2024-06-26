@@ -1,0 +1,137 @@
+---
+title: Metric definitions
+---
+
+# Metric definitions
+
+All default metrics Umami collects along with high level definitions.
+
+---
+
+## Event metrics
+
+Event metrics help identify a unique event for a user. Each event is stored as a unique UUID called an Event ID.
+
+**Website ID**
+
+A unique UUID value to identify your website included in the payload.
+
+**Hostname**
+
+Location [hostname](https://developer.mozilla.org/en-US/docs/Web/API/Location/hostname) property included in the payload.
+
+**URL**
+
+URL [pathname](https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname)
+and [search](https://developer.mozilla.org/en-US/docs/Web/API/URL/search) property combined included in the payload.
+
+**Referrer**
+
+Document [referrer](https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer) property included in the payload. If the referrer
+includes the hostname, the value is replaced by the previous URL.
+
+**Title**
+
+Document [title](https://developer.mozilla.org/en-US/docs/Web/API/Document/title) property included in the payload.
+
+**Query parameters**
+
+[Search](https://developer.mozilla.org/en-US/docs/Web/API/URL/search) property that is extracted from the URL
+after the payload is sent.
+
+---
+
+## Session metrics
+
+Session metrics help identify a unique session for a user. Each session is stored as a unique UUID called a Session ID.
+
+**Browser**
+
+Browser name extracted from the [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent).
+
+`Examples: Chrome, FireFox, iOS, Safari, Edge`
+
+**OS**
+
+Operating system name extracted from the [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent).
+
+`Examples: Windows 10, macOS, Linux, Android, iOS`
+
+**Device**
+
+Device name that is identified from the combination of **OS** and **screen**.
+
+`Examples: Laptop, desktop, mobile, tablet`
+
+**Screen**
+
+[Screen](https://developer.mozilla.org/en-US/docs/Web/API/Screen) width and height property
+included in the payload.
+
+`Examples: 1920x1080, 1280x960`
+
+**Language**
+
+Navigator [language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) property included in the payload.
+
+`Examples: English, Chinese, German, French`
+
+---
+
+## Location metrics
+
+Location metrics come from different sources depending on the headers. The IP address sending the request is used to
+gather these metrics, but is never stored.
+
+- `Cloudflare`: [HTTP request headers](https://developers.cloudflare.com/fundamentals/reference/http-request-headers/#docs-content)
+- `Vercel`: [Geolocation headers](https://vercel.com/guides/geo-ip-headers-geolocation-vercel-functions)
+- `MaxMind`: [Geolite Database](https://dev.maxmind.com/geoip/geolocate-an-ip).
+
+**Country**
+
+Name of country following ISO-3166 standards.
+
+`Examples: United States, China, Germany, France`
+
+**Region**
+
+Name of region (subdivisions) following ISO-3166-2 standards.
+
+`Examples: California, Ontario, Bayern, Île-de-France`
+
+**City**
+
+Name of city.
+
+`Examples: San Francisco, Toronto, Munich, Paris`
+
+---
+
+## Calculated metrics
+
+Calculated metrics are a combination of total and unique aggregates per website.
+
+**Views**
+
+The total number of events that were collected by your visitors.
+
+**Visits**
+
+Unique number of visits. A visit is a more granular range within a user session. A visit is calculated
+using a hash of the session ID and rotating salt that is rotated at the start of every hour. Visits are able
+to span across hourly intervals.
+
+**Visitors**
+
+Unique number of sessions. A session is calculated using a hash of data such as Website ID,
+hostname, User-Agent, etc and a rotating salt that is rotated at the start of every month.
+
+**Bounce rate**
+
+A bounce is defined when a visit has only 1 event. A user will enter the website, initially generating a view, then leaving.
+The bounce rate is calculated by dividing the total number of bounces by unique number of visits.
+
+**Visit duration**
+
+Total time spent on the website divided by unique number of visits. Total time is only calculated for visitors that
+visit more then one page. The difference between the first and last event create time per visit are summed into a duration time.

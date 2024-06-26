@@ -46,13 +46,13 @@ If you have a Forge Account and a connected server bucket, you can easily set up
 5. In Forge, go to your Server page, click **Database** and add a user to the just created database.
 6. Create the database-connection string and add it to your `.env` file:
 
-   ```
+   ```dotenv
    DATABASE_URL=mysql://user:password@localhost:3306/dbname
    ```
 
    The connection url is in the following format:
 
-   ```
+   ```dotenv
    DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
    DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
    ```
@@ -68,7 +68,7 @@ If you have a Forge Account and a connected server bucket, you can easily set up
 8. Go to your Umami-Site and click on **SSL** in the left menu and add an SSL-Certificate.
 9. Click **Edit files** > **Edit Nginx Configuration** and overwrite the following block:
 
-   ```
+   ```nginx
    location / {
      proxy_pass http://localhost:3000;
      proxy_http_version 1.1;

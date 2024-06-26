@@ -8,12 +8,12 @@ import Code from 'assets/code.svg';
 
 export const CLOUD_URL = 'https://cloud.umami.is';
 export const GITHUB_URL = 'https://github.com/umami-software/umami';
-export const DISCORD_URL = 'https://discord.gg/4dz4zcXYrQ';
-export const TWITTER_URL = 'https://twitter.com/umami_software';
+export const DISCORD_URL = 'https://umami.is/discord';
+export const X_URL = 'https://twitter.com/umami_software';
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/umami-software/';
-export const GITHUB_STARS = '19.6k';
+export const GITHUB_STARS = '20k';
 export const GITHUB_CONTRIBUTORS = '200';
-export const GITHUB_DOWNLOADS = '8M';
+export const GITHUB_DOWNLOADS = '10M';
 export const GITHUB_STATS = [
   { label: 'Downloads', value: GITHUB_DOWNLOADS },
   { label: 'GitHub stars', value: GITHUB_STARS },
@@ -22,7 +22,7 @@ export const GITHUB_STATS = [
 
 export const Blocks = {
   simpleAnalytics: {
-    title: 'Simple analytics',
+    title: 'Effortless analytics',
     description:
       'Umami measures just the important metrics that you care about and everything is easily accessible at just a glance.',
     image: '/images/preview-website-stats.png',

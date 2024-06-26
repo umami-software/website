@@ -1,33 +1,39 @@
 'use client';
-import classNames from 'classnames';
-import { Text, Icon } from 'react-basics';
-import PageHeader from 'components/layout/PageHeader';
-import GetStartedBanner from 'components/common/GetStartedBanner';
-import TextBlock from 'components/layout/TextBlock';
-import User from 'assets/user.svg';
-import View from 'assets/view.svg';
-import Bounce from 'assets/bounce.svg';
-import Traffic from 'assets/traffic.svg';
-import Share from 'assets/share.svg';
-import Filter from 'assets/filter.svg';
-import Location from 'assets/location.svg';
-import Language from 'assets/language.svg';
-import Realtime from 'assets/realtime.svg';
+import Anonymous from 'assets/anonymous.svg';
 import Bolt from 'assets/bolt.svg';
+import Bounce from 'assets/bounce.svg';
+import Compare from 'assets/compare.svg';
+import Cookie from 'assets/cookie.svg';
 import Data from 'assets/data.svg';
+import Device from 'assets/device.svg';
+import Export from 'assets/export.svg';
+import Filter from 'assets/filter.svg';
+import Funnel from 'assets/funnel.svg';
+import Gauge from 'assets/gauge.svg';
+import Gear from 'assets/gear.svg';
+import Graph from 'assets/graph.svg';
+import Import from 'assets/import.svg';
+import Key from 'assets/key.svg';
+import Language from 'assets/language.svg';
+import Lightbulb from 'assets/lightbulb.svg';
+import Location from 'assets/location.svg';
+import Magnet from 'assets/magnet.svg';
+import Path from 'assets/path.svg';
+import Privacy from 'assets/privacy.svg';
+import Realtime from 'assets/realtime.svg';
+import Reports from 'assets/reports.svg';
+import Share from 'assets/share.svg';
+import Tag from 'assets/tag.svg';
 import Target from 'assets/target.svg';
 import Team from 'assets/team.svg';
-import Graph from 'assets/graph.svg';
-import Magnet from 'assets/magnet.svg';
-import Funnel from 'assets/funnel.svg';
-import Privacy from 'assets/privacy.svg';
-import Anonymous from 'assets/anonymous.svg';
-import Cookie from 'assets/cookie.svg';
-import Property from 'assets/property.svg';
-import Gear from 'assets/gear.svg';
-import Gauge from 'assets/gauge.svg';
-import Import from 'assets/import.svg';
-import Export from 'assets/export.svg';
+import Traffic from 'assets/traffic.svg';
+import User from 'assets/user.svg';
+import View from 'assets/view.svg';
+import classNames from 'classnames';
+import GetStartedBanner from 'components/common/GetStartedBanner';
+import PageHeader from 'components/layout/PageHeader';
+import TextBlock from 'components/layout/TextBlock';
+import { Icon, Text } from 'react-basics';
 import styles from './Features.module.css';
 
 const items = [
@@ -64,25 +70,18 @@ const items = [
         icon: <Traffic />,
       },
       {
-        title: 'Sharing',
-        description: [
-          'Easily share your stats with others through a secure, uniquely generated URL.',
-        ],
-        icon: <Share />,
-      },
-      {
-        title: 'Filtering',
-        description: [
-          'Gain further insight into your data by applying filters like country, browser, and URL.',
-        ],
-        icon: <Filter />,
-      },
-      {
         title: 'Location',
         description: [
           'Find out where your visitors are coming from including the city, region and country.',
         ],
         icon: <Location />,
+      },
+      {
+        title: 'Device',
+        description: [
+          'See the most popular devices used by visitors to help you optimize your pages.',
+        ],
+        icon: <Device />,
       },
       {
         title: 'Languages',
@@ -92,11 +91,30 @@ const items = [
         icon: <Language />,
       },
       {
+        title: 'Compare',
+        description: ['See your metric performance compared against previous date ranges.'],
+        icon: <Compare />,
+      },
+      {
+        title: 'Filtering',
+        description: [
+          'Gain further insight into your data by applying filters like country, browser, and URL.',
+        ],
+        icon: <Filter />,
+      },
+      {
         title: 'Realtime data',
         description: [
           `Data available in seconds, not days. The data that Umami collects is immediately available on your dashboard`,
         ],
         icon: <Realtime />,
+      },
+      {
+        title: 'Teams',
+        description: [
+          'The teams feature allows you to securely share websites access with different team members.',
+        ],
+        icon: <Team />,
       },
       {
         title: 'Custom events',
@@ -115,36 +133,59 @@ const items = [
         description: [
           'Measure the effectiveness of your campaign by analyzing UTM query parameters that are automatically collected.',
         ],
-        icon: <Target />,
+        icon: <Tag />,
       },
 
       {
-        title: 'Teams',
+        title: 'Sharing',
         description: [
-          'The teams feature allows you to securely share websites access with different team members.',
+          'Easily share your stats with others through a secure, uniquely generated URL.',
         ],
-        icon: <Team />,
+        icon: <Share />,
       },
       {
         title: 'Reports',
         description: [
-          'Umami comes with out of the box reporting that enables you to gain insights from all your website data.',
+          'Build reports for specific websites and date ranges to cover all your data needs.',
         ],
         icon: <Graph />,
       },
+    ],
+  },
+  {
+    title: 'Reports',
+    description:
+      'Umami comes with out of the box reporting that enables you to gain deep insights from all your website data.',
+    items: [
       {
-        title: 'Retention',
-        description: [
-          'Measure your website stickiness by tracking how often visitors return with the Retention report.',
-        ],
-        icon: <Magnet />,
+        title: 'Insights',
+        description: ['Dive deeper into your data by using segments and filters.'],
+        icon: <Lightbulb />,
       },
       {
         title: 'Funnels',
-        description: [
-          'Understand the conversion and drop-off rate of visitors with the Funnel report.',
-        ],
+        description: ['Understand the conversion and drop-off rate of users.'],
         icon: <Funnel />,
+      },
+      {
+        title: 'Retention',
+        description: ['Measure your website stickiness by tracking how often users return.'],
+        icon: <Magnet />,
+      },
+      {
+        title: 'UTM',
+        description: ['Track your campaigns through UTM parameters.'],
+        icon: <Tag />,
+      },
+      {
+        title: 'Goals',
+        description: ['Track your goals for pageviews and events.'],
+        icon: <Target />,
+      },
+      {
+        title: 'Journey',
+        description: ['Understand how users nagivate through your website.'],
+        icon: <Path />,
       },
     ],
   },
@@ -174,7 +215,7 @@ const items = [
         description: [
           `Data is always in your control with Umami. You can self-host on your own infrastructure or export your data from Umami Cloud.`,
         ],
-        icon: <Property />,
+        icon: <Key />,
       },
     ],
   },
@@ -208,6 +249,13 @@ const items = [
         title: 'Data export ',
         description: [`Don't settle for summarized data. Get a full data export of all your data.`],
         icon: <Export />,
+      },
+      {
+        title: 'Email reports ',
+        description: [
+          `Send scheduled email reports to anyone. Send out website summaries in a compact and digestable email.`,
+        ],
+        icon: <Reports />,
       },
     ],
   },

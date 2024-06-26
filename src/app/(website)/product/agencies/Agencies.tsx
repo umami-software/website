@@ -91,6 +91,10 @@ export default function Agencies() {
         </TextBlock>
       </section>
       <GetStartedBanner />
+      <img
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://static.scarf.sh/a.png?x-pxid=fd4f6eea-aab8-4d0a-9768-dd8ea93e5c4b"
+      />
     </div>
   );
 }

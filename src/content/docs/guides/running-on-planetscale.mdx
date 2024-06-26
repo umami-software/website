@@ -12,7 +12,7 @@ title: Running on PlanetScale
 2. Create a database on [PlanetScale](https://app.planetscale.com/) called `umami-db` and copy the `DATABASE_URL` string from "Connect" > "Connect with Prisma" > ".env" tab.
 3. Add the `DATABASE_URL` to your `.env` file:
 
-   ```
+   ```dotenv
    DATABASE_URL=mysql://username:password@host/umami-db?sslaccept=strict
    ```
 
@@ -31,6 +31,6 @@ PrismaClientInitializationError: Can't reach database server at `host.aws-region
 
 You can try add a connection timeout query parameter on your `DATABASE_URL`:
 
-```properties
+```dotenv
 DATABASE_URL=mysql://username:password@host/umami-db?sslaccept=strict&connect_timeout=300
 ```

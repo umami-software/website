@@ -37,7 +37,11 @@
       },
       {
         "label": "Teams",
-        "url": "/docs/cloud/teams-guide"
+        "url": "/docs/cloud/teams"
+      },
+      {
+        "label": "Email Reports",
+        "url": "/docs/cloud/email-reports"
       },
       {
         "label": "Delete account",

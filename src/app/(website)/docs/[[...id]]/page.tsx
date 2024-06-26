@@ -25,6 +25,10 @@ export default async function ({ params: { id = [] } }: { params: { id: string[]
   const doc = await getDoc(id?.join('/'));
   if(!doc) return notFound()
 
+  if (!doc) {
+    return <h1>Page not found</h1>;
+  }
+
   return (
     <div className={styles.page}>
       <div className={styles.content}>
