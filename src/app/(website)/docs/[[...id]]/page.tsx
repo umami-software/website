@@ -3,6 +3,7 @@ import { getDoc } from 'lib/docs';
 import Markdown from 'components/common/Markdown';
 import styles from './page.module.css';
 import PageLinks from 'app/(website)/docs/[[...id]]/PageLinks';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({
   params: { id },
@@ -10,6 +11,7 @@ export async function generateMetadata({
   params: { id: string[] };
 }): Promise<Metadata> {
   const doc = await getDoc(id?.join('/'));
+  if(!doc) return notFound()
 
   return {
     title: {
@@ -21,6 +23,7 @@ export async function generateMetadata({
 
 export default async function ({ params: { id = [] } }: { params: { id: string[] } }) {
   const doc = await getDoc(id?.join('/'));
+  if(!doc) return notFound()
 
   if (!doc) {
     return <h1>Page not found</h1>;

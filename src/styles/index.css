@@ -67,8 +67,8 @@ code {
   background: var(--base100);
   padding: 2px 4px;
   border-radius: 2px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  /* white-space: pre-wrap;
+  word-wrap: break-word; */
   letter-spacing: 0;
 }
 
