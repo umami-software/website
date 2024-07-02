@@ -11,9 +11,13 @@ export default function Hero() {
   return (
     <div className={styles.hero}>
       <TextBlock size="xl" align="center">
-        <h1>Website analytics built for speed and efficiency</h1>
+        <h1>
+          Effortless analytics and
+          <br /> real-time insights.
+        </h1>
         <p className={styles.subtitle}>
-          Umami website analytics provides the data you need to make decisions in real-time.
+          Umami makes it easy to collect, analyze, and understand your data &mdash; so you can focus
+          on <strong>growth</strong>.
         </p>
       </TextBlock>
       <div className={styles.buttons}>

@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import CompanyLogo from 'components/common/CompanyLogo';
 import SocialMedia from 'components/common/SocialMedia';
 import styles from './Footer.module.css';
-import { DISCORD_URL, GITHUB_URL, LINKEDIN_URL, X_URL } from 'lib/constants';
 
 const data = [
   {
@@ -17,31 +16,22 @@ const data = [
     ],
   },
   {
-    title: 'Learn',
+    title: 'Resources',
     items: [
-      { text: 'Docs', href: '/docs' },
+      { text: 'Documentation', href: '/docs' },
       { text: 'Guides', href: '/docs/guides' },
       { text: 'API Reference', href: '/docs/api' },
       { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
-    ],
-  },
-  {
-    title: 'Resources',
-    items: [
-      { text: 'Developers', href: '/developers' },
       { text: 'Community', href: '/community' },
-      { text: 'GitHub', href: GITHUB_URL },
-      { text: 'Discord', href: DISCORD_URL },
-      { text: 'X', href: X_URL },
+      { text: 'Support', href: '/support' },
     ],
   },
   {
-    title: 'About',
+    title: 'Company',
     items: [
-      { text: 'Company', href: '/about' },
+      { text: 'About', href: '/about' },
       { text: 'Blog', href: '/blog' },
-      { text: 'Contact us', href: '/contact' },
-      { text: 'LinkedIn', href: LINKEDIN_URL },
+      { text: 'Contact', href: '/contact' },
       { text: 'Privacy', href: '/privacy' },
       { text: 'Terms', href: '/terms' },
     ],

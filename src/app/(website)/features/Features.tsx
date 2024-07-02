@@ -184,7 +184,7 @@ const items = [
       },
       {
         title: 'Journey',
-        description: ['Understand how users nagivate through your website.'],
+        description: ['Understand how users navigate through your website.'],
         icon: <Path />,
       },
     ],
