@@ -54,7 +54,7 @@ export default function ContactForm() {
       </FormRow>
       <FormRow label="Tell us about your use case">
         <FormInput name="comment" rules={{ required: 'Required' }}>
-          <TextArea name="comment" />
+          <TextArea name="comment" rows={8} />
         </FormInput>
       </FormRow>
       <SubmitButton variant="primary">Submit</SubmitButton>

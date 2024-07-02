@@ -7,17 +7,18 @@ export async function POST(req: NextRequest) {
   sendgrid.setApiKey(process.env.SENDGRID_API_KEY as string);
 
   const msg = {
-    to: 'mike@umami.is',
+    to: 'hello@umami.is',
     from: 'mike@umami.is',
     subject: 'Umami - Contact form',
-    text: `
-      Name: ${name}
-      Email: ${email}
-      Title: ${title}
-      Company: ${company}
-      Company size: ${size}
-      Use case:
-      ${comment}
+    html: `<div>
+      <b>Name:</b> ${name}<br/>
+      <b>Email:</b> ${email}<br/>
+      <b>Title:</b> ${title}<br/>
+      <b>Company:</b> ${company}<br/>
+      <b>Company size:</b> ${size}<br/>
+      <b>Use case:</b>
+      <p>${comment?.replace('\n', '<br/>')}</p>
+      </div>
     `,
   };
 
