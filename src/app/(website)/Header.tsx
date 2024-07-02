@@ -113,7 +113,11 @@ const ProductMenu = ({ onClose }) => {
         <header>Learn</header>
         <Link href="/community">Community</Link>
         <Link href="/developers">Developers</Link>
-        <Link href="https://github.com/umami-software/umami/discussions" target="_blank">
+        <Link
+          href="https://github.com/umami-software/umami/discussions"
+          target="_blank"
+          data-umami-event="github-discussions-link"
+        >
           Discussions
         </Link>
       </div>

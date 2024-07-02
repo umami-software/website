@@ -23,6 +23,7 @@ const data = [
       { text: 'API Reference', href: '/docs/api' },
       { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
       { text: 'Community', href: '/community' },
+      { text: 'Developers', href: '/developers' },
       { text: 'Support', href: '/support' },
     ],
   },

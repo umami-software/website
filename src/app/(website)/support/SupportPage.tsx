@@ -9,7 +9,9 @@ export default function SupportPage() {
         <p>Support services available for Ummai Cloud</p>
       </PageHeader>
       <div style={{ textAlign: 'center' }}>
-        <h2>support@umami.is</h2>
+        <h2>
+          <a href="mailto:support@umami.is">support@umami.is</a>
+        </h2>
       </div>
     </section>
   );

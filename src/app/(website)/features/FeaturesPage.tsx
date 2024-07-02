@@ -34,7 +34,7 @@ import GetStartedBanner from 'components/common/GetStartedBanner';
 import PageHeader from 'components/layout/PageHeader';
 import TextBlock from 'components/layout/TextBlock';
 import { Icon, Text } from 'react-basics';
-import styles from './Features.module.css';
+import styles from './FeaturesPage.module.css';
 
 const items = [
   {
@@ -261,7 +261,7 @@ const items = [
   },
 ];
 
-export default function Features() {
+export default function FeaturesPage() {
   return (
     <article>
       <PageHeader>

@@ -2,7 +2,7 @@
 import PageHeader from 'components/layout/PageHeader';
 import ContactForm from './ContactForm';
 
-export default function Contact() {
+export default function ContactPage() {
   return (
     <>
       <PageHeader>

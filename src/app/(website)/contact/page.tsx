@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
-import Contact from './Contact';
+import ContactPage from './ContactPage';
 
 export default function () {
   return (
     <article>
-      <Contact />
+      <ContactPage />
     </article>
   );
 }

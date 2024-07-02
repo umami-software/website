@@ -2,7 +2,7 @@
 import PageHeader from 'components/layout/PageHeader';
 import TextBlock from 'components/layout/TextBlock';
 
-export default function About() {
+export default function AboutPage() {
   return (
     <>
       <PageHeader>
