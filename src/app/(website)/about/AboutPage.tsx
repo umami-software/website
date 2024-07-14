@@ -2,13 +2,13 @@
 import PageHeader from 'components/layout/PageHeader';
 import TextBlock from 'components/layout/TextBlock';
 
-export default function About() {
+export default function AboutPage() {
   return (
     <>
       <PageHeader>
         <h1>Company</h1>
       </PageHeader>
-      <TextBlock style={{ margin: 'auto' }}>
+      <TextBlock style={{ margin: 'auto', width: 500 }}>
         <p>
           Umami was founded with the belief that users should be empowered by the software they use
           and should not have to give up fundamental rights like privacy and data ownership in

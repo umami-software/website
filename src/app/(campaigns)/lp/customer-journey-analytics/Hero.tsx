@@ -3,7 +3,7 @@ import LinkButton from 'components/common/LinkButton';
 import TextBlock from 'components/layout/TextBlock';
 import { CLOUD_URL } from 'lib/constants';
 import useQueryString from 'components/hooks/useQueryString';
-import styles from './Hero.module.css';
+import styles from 'app/(website)/Hero.module.css';
 
 export default function Hero() {
   const query = useQueryString({ ref: 'umami-hero' });
@@ -11,13 +11,10 @@ export default function Hero() {
   return (
     <div className={styles.hero}>
       <TextBlock size="xl" align="center">
-        <h1>
-          Effortless analytics and
-          <br /> real-time insights.
-        </h1>
+        <h1>Customer Journey Analytics</h1>
         <p className={styles.subtitle}>
-          Umami makes it easy to collect, analyze, and understand your data &mdash; so you can focus
-          on <strong>growth</strong>.
+          {`Understand every step of your user's path with actionable analytics that provide 
+          the blueprint for customer journey optimization.`}
         </p>
       </TextBlock>
       <div className={styles.buttons}>
@@ -45,7 +42,7 @@ export default function Hero() {
         <div>Effortless setup and use</div>
       </div>
       <div className={styles.image}>
-        <img src="/images/app.jpg" />
+        <img src="/images/blog/user-journey.png" />
       </div>
     </div>
   );

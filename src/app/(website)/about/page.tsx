@@ -1,12 +1,12 @@
 import { Suspense } from 'react';
 import { Metadata } from 'next';
-import About from './About';
+import AboutPage from './AboutPage';
 
 export default function () {
   return (
     <article>
       <Suspense>
-        <About />
+        <AboutPage />
       </Suspense>
     </article>
   );

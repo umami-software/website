@@ -6,7 +6,7 @@ import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
 import X from 'assets/x.svg';
 import LinkedIn from 'assets/linkedin.svg';
-import styles from './Community.module.css';
+import styles from './CommunityPage.module.css';
 
 const items = [
   {
@@ -23,8 +23,8 @@ const items = [
     icon: <Discord />,
   },
   {
-    name: 'X',
-    description: 'Follow us on X for the latest news and updates.',
+    name: 'Twitter',
+    description: 'Follow us on Twitter for the latest news and updates.',
     url: X_URL,
     icon: <X />,
   },
@@ -36,7 +36,7 @@ const items = [
   },
 ];
 
-export default function Community() {
+export default function CommunityPage() {
   return (
     <section>
       <PageHeader>
