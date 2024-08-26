@@ -1,17 +1,17 @@
 import { Suspense } from 'react';
 import { Metadata } from 'next';
-import CommunityPage from './CommunityPage';
+import SupportPage from './SupportPage';
 
 export default function () {
   return (
     <article>
       <Suspense>
-        <CommunityPage />
+        <SupportPage />
       </Suspense>
     </article>
   );
 }
 
 export const metadata: Metadata = {
-  title: 'Community',
+  title: 'Support',
 };

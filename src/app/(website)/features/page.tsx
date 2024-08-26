@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
-import Features from './Features';
+import FeaturesPage from './FeaturesPage';
 
 export default function () {
   return (
     <article>
-      <Features />
+      <FeaturesPage />
     </article>
   );
 }

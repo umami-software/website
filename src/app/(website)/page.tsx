@@ -5,7 +5,7 @@ import Statements from './Statements';
 import QuickStart from './QuickStart';
 import Quotes from './Quotes';
 import Features from './Features';
-import Teams from './Teams';
+import Personas from 'app/(website)/Personas';
 import OpenSource from 'app/(website)/OpenSource';
 import Companies from 'app/(website)/Companies';
 import styles from './page.module.css';
@@ -18,7 +18,7 @@ export default function () {
       <Companies />
       <Features />
       <QuickStart />
-      <Teams />
+      <Personas />
       <OpenSource />
       <Quotes />
       <GetStartedBanner />
