@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  gap: 120px;
+  gap: 90px;
   justify-content: center;
 }
 
