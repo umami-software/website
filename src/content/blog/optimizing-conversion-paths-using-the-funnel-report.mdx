@@ -1,0 +1,127 @@
+---
+title: Optimizing Conversion Paths Using the Funnel Report
+description: Understanding conversion paths and user journeys is the first step to optimizing them.
+author: Nick Andrews
+date: 2024-08-15
+---
+
+Understanding conversion paths and user journeys is the first step to optimizing them. If you have already defined those paths, the Umami Funnel report, one report in a suite of product analytics reports, is for you. The Funnel report allows you to analyze users' conversion and drop-off rates at each step of a defined process, surfacing data that can be used to improve user experience, conversion rates, product feature adoption, etc.
+
+If you don’t have those paths defined and are unsure what paths users take to complete an action, the User Journey report, a complementary report to the Funnel report, might make sense as a starting point. Not to go too deep on the Journey report, but you can simply define a starting point, ending point, and the number of steps in between, and the report will show you the user journey. You can adjust the number of steps and re-run the report to expand your view if needed. This report provides a broader view of user interactions, helping you understand users' various paths before they reach a conversion point.
+
+However, this blog post focuses on the Funnel report, which allows teams to visualize and analyze how users move through specific sequences of actions or pages. It identifies where users drop off, thus surfacing opportunities for optimization. Combining this data with insights from other Umami reports gives you a clearer picture of your performance and user behavior.
+
+Let’s jump in.
+
+# Funnel Report Key Features
+
+To effectively use the Umami Funnel report, you really need to have custom events set up on your product or website beforehand. Custom events are specific user actions you define, such as 'product added to cart,'' payment information entered, '' signed up for the newsletter,’ etc. Umami then tracks these events, which can be used to create Funnel reports that can be infinitely nuanced to your specific situation. Before we jump into the use cases, let's look at some key features of the Funnel report:
+
+1. **Flexible Step Definition**: Define specific funnel steps using URLs, events, or URL wildcards.
+
+2. **Time**: Set the time users must complete the funnel steps. This includes both date range (up to 90 days) and time window (amount of minutes a user has between funnel steps to be counted as a conversion).
+
+3. **Ordered Step Completion**: Analyze user progression through steps in a specific order.
+
+4. **Detailed Drop-off Analysis**: This displays the number of users reaching each step and the drop-off rate from the previous step. It also visually shows a progress bar and percent complete for instant analysis.
+
+# Funnel Report Use Cases
+
+This section breaks down a few use cases for the Funnel report to get the ideas rolling. However, there are an infinite number of ways to use the Funnel report to uncover insights about your users and product.
+Use Case Example: Analyzing Sign-up to Activation Process
+
+Product teams need to understand how new users progress from initial sign-up to becoming active users. Here's how you can use the Funnel report for this purpose:
+
+## Setup
+
+1. Define the steps in your sign-up to activation process. The report needs at least two steps. I have tested it with up to 10 steps. If you have more than ten steps, email us and let us know your use case. It sounds really interesting!
+
+2. Create a Funnel report with these steps, using URLs or events to represent each stage.
+
+3. Set an appropriate time window for users to complete the funnel.
+
+## Analysis Approach
+
+Once you've set up the Funnel report, you can analyze the data in several ways:
+
+1. Identify the stages where you're losing the most users, indicating potential areas for improvement.
+
+2. Compare conversion rates between user segments or acquisition channels to understand which sources provide the most valuable users.
+
+3. Analyze how sign-up or onboarding process changes impact conversion rates over time.
+
+4. Use the insights to prioritize product improvements or user education efforts.
+
+Using the Funnel report can help you optimize your sign-up and activation process, improving user retention and product adoption.
+
+# Use Case Example: E-commerce Checkout Optimization
+
+For teams focused on improving e-commerce conversion rates, the Funnel report can be used to understand and optimize the checkout process. Here's how you could approach this:
+
+## Setup
+
+1. Define the stages in your checkout process (e.g., add to cart, enter shipping info, enter payment info, confirm order).
+
+2. Create a Funnel report with these stages as steps.
+
+3. Set an appropriate time window that allows for a typical checkout duration.
+
+## Example Implementation
+
+Let's say you're analyzing the checkout process for an e-commerce website. We might set up the following Funnel report:
+
+- Step 1: 'Add to Cart' button click event
+- Step 2: Checkout page URL
+- Step 3: Shipping information page URL
+- Step 4: Payment information page URL
+- Step 5: 'Order Confirmation' button click event
+
+## Analysis Approach
+
+With this Funnel report in place, we can:
+
+1. Identify the checkout stages with the highest drop-off rates, highlighting areas for immediate improvement.
+
+2. Compare conversion rates across different product categories, user segments, or devices to understand varying user behaviors.
+
+3. Analyze how changes to the checkout process (e.g., adding a guest checkout option) impact overall conversion rates.
+
+4. Use the insights to make data-driven decisions about checkout page design, form simplification, or adding reassurance elements at critical stages.
+
+This analysis can break down how the checkout funnel is flowing and gives you a blue print for optimizing conversion rates. What’s interesting for this example is that you can get really granular and setup this process for an individual product, or use wild cards in your Funnel report to view product categories or all products.
+
+# Use Case Example: Feature Adoption Funnel
+
+For teams looking to increase the adoption of a specific feature, the Funnel report can offer insights into the user journey toward feature engagement. Here's how you can use it:
+
+## Setup
+
+1. Identify the key steps to feature adoption (e.g., feature discovery, initial interaction, repeated use).
+
+2. Create events or use URLs that represent these steps.
+
+3. Set up a Funnel report with these steps, using an appropriate time window for your product's usage patterns.
+
+## Analysis Approach
+
+Suppose you work at a SaaS company and want to increase the adoption of a new feature. You could use the Funnel report to:
+
+1. Analyze the number of users who discover the feature (e.g., through a product tour button click, etc. You might need to setup multiple funnels for different discovery entry points.) and go on to use it for the first time.
+
+2. Identify the drop-off between first use and repeated engagement, highlighting potential usability issues.
+
+3. Compare adoption rates across user segments or onboarding paths to understand what factors contribute to successful adoption.
+
+4. Use the insights to refine feature introduction strategies, improve in-product guidance, or target specific user groups for additional support or encouragement.
+
+This approach can help you make data-driven decisions about feature development, prioritizing your product roadmap, user education, and product design to encourage adoption and engagement.
+
+The Umami Funnel report can enhance your product analytics capabilities by allowing you to visualize and analyze specific user paths through your product. Understanding these conversion funnels will enable you to identify bottlenecks, optimize critical processes, and improve user experience and conversion rates.
+
+The use cases outlined here are just some of the many ways to use the Funnel report for your team. Its flexibility allows it to adapt to the nuances of your product and requirements, ensuring it can be a fit for your analytics needs.
+
+Combining data from the Funnel report with insights from other Umami reports and your broader analytics stack, you can understand your users' behavior and make data-driven decisions to improve your product.
+
+Using Umami, particularly its Funnel report, as a complementary tool alongside your existing analytics stack can enhance your data confidence and insights. By setting up parallel tracking for key conversion funnels and regularly comparing results between Umami and your other analytics platforms, you can validate data accuracy, identify potential blind spots in your tracking, and reinforce the validity of your findings.
+
+The Funnel report comes standard with all Umami plans. If you have any issues with it or have any questions, please contact us at <a href="mailto:support@umami.is">support@umami.is</a>. We're here to help you get the most out of your Umami account!
