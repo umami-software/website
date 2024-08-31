@@ -15,6 +15,8 @@ See [Tracker configuration](/docs/tracker-configuration).
 umami.track([payload]);
 
 umami.track(event_name, [event_data]);
+
+umami.identify([session_data]);
 ```
 
 ## Pageviews
@@ -85,3 +87,11 @@ Event Data can work with any JSON data. There are a few rules in place to mainta
 - Strings have a max length of 500.
 - Arrays are converted to a String, with the same max length of 500.
 - Objects have a max of 50 properties. Arrays are considered 1 property.
+
+## Session Data
+
+Tracks a session with dynamic data. You would call the identity function from the tracker script to save data about the current session.
+
+```js
+umami.identify({ email: 'bob@aol.com' });
+```
