@@ -23,7 +23,7 @@ export default function Card({
       </div>
       <div className={styles.description}>{description}</div>
       <div className={styles.button}>
-        <LinkButton href={`/blog/${id}`} variant="primary">
+        <LinkButton href={`/blog/${id}`} variant="secondary">
           Read more
         </LinkButton>
       </div>
