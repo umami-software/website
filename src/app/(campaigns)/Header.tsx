@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import CompanyLogo from 'components/common/CompanyLogo';
 import LinkButton from 'components/common/LinkButton';
 import useQueryString from 'components/hooks/useQueryString';
@@ -11,6 +12,9 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <CompanyLogo />
+      <nav className={styles.links}>
+        <Link href="/pricing">Pricing</Link>
+      </nav>
       <div className={styles.button} data-umami-event="lp-get-started-button">
         <LinkButton href={`${CLOUD_URL}/signup${query}`} variant="primary">
           Get started

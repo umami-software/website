@@ -9,3 +9,10 @@
   display: block;
   align-self: center;
 }
+
+.links {
+  display: flex;
+  margin: 0 40px;
+  justify-content: flex-end;
+  flex: 1;
+}
