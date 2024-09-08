@@ -1,0 +1,155 @@
+---
+title: Understanding UTM Link Performance with the UTM Report
+description: You can use the Umami UTM report if you’re using UTM parameters on your links.
+author: Nick Andrews
+date: 2024-09-08
+---
+
+You can use the Umami UTM report if you’re using UTM parameters on your links. Umami's tracking script detects and captures UTM parameters from incoming traffic automatically. When a user clicks a UTM link and lands on your website or is navigating your app, Umami:
+
+1. Automatically ingests the UTM parameters in the URL.
+2. Extracts and categorizes each parameter (source, medium, campaign, term, content).
+3. Makes this data available in the UTM Report without any additional setup required.
+
+This automatic ingestion ensures that all your UTM links are tracked and analyzed without extra effort, making getting insights into your efforts easier.
+
+Adding UTM parameters to the end of your links helps you to understand your efforts and answer the question, “Is this working?” From marketing to product to dev, UTMs can be used in a variety of ways. For example, you can determine which campaigns, marketing channels, content, ads, in-product links, and knowledge base articles produce outcomes. These are just a few examples; the use cases for adding UTMs to your links are endless.
+
+# Key Features of the UTM Report
+
+What makes the Umami UTM report stand out:
+
+1. **UTM Parameter Tracking**: The report analyzes all five standard UTM parameters (source, medium, campaign, term, and content) in one place, providing a holistic view of your campaign efforts.
+2. **View-Based Analysis**: By focusing on Views, the report clearly shows how much traffic each campaign and channel drives.
+3. **Flexible Date Range Selection**: Choose a date range for your analysis, allowing you to evaluate campaign performance over time and compare different periods.
+4. **Automatic UTM Parameter Detection**: The report automatically detects and categorizes UTM parameters, ensuring all tagged links are tracked and analyzed without additional setup.
+
+Let's explore how different teams can leverage the Umami UTM report to drive results.
+
+# Use Case: Feature Adoption Tracking
+
+Understanding how marketing efforts translate into feature adoption is important for product teams. Here's a look at how the UTM report can help:
+
+Scenario: Your team has just launched a new feature in your software.
+
+1. Create unique UTM parameters for campaigns promoting this feature (if you don’t know how to generate UTM links, Google has a free tool here).
+2. Use the UTM report to track traffic from these campaigns:
+
+   - Monitor views for each UTM combination
+   - Analyze which email subject lines or content types drive the most traffic
+
+3. Cross-reference this data with feature usage metrics:
+
+   - Use Umami's Journey or Insights report to track user paths after clicking the UTM link
+   - Measure the activation rate of users who came through the UTM link vs. those who didn't
+
+This approach allows product teams to:
+
+- Identify which messaging resonates best with users (e.g., "boost productivity" vs. "streamline communication")
+- Understand which user segments are most responsive to feature announcements
+- Optimize onboarding flows based on the paths of users who successfully adopt the feature
+- Inform future feature development by understanding which aspects of the new feature are most appealing to users
+
+# Use Case: Multi-Channel Campaign Evaluation
+
+For marketing teams, the UTM report is a goldmine of information for evaluating campaign performance across channels.
+
+Scenario: You're running a multi-channel campaign for a seasonal promotion.
+
+1. Set up distinct UTM parameters for each marketing channel. For example:
+
+   - utm_source=facebook, Instagram, Twitter, LinkedIn
+   - utm_medium=social, email, paid_search, display
+   - utm_campaign=fall_sale_2024
+   - utm_content=carousel_ad, story_ad, promotional_email, search_ad
+
+2. Use the UTM report to compare performance:
+
+   - Analyze views and engagement rates for each channel and content type
+   - Compare performance across different social platforms
+   - Evaluate the effectiveness of paid vs. organic traffic
+
+3. Dive deeper into the data:
+
+   - Use Umami's Funnel report to track conversion rates from different UTM sources
+   - Analyze the Journey report to understand user behavior post-click
+
+Benefits for marketing teams include:
+
+- Identifying the most cost-effective channels for driving conversions
+- Optimizing ad spend in real-time during the campaign
+- Refining messaging and content strategy for different platforms based on engagement data
+- Informing future campaign strategies with data-backed insights
+
+# Use Case: A/B Testing Analysis
+
+Developers can leverage the UTM report to analyze the effectiveness of different versions of a feature or page.
+
+Scenario: Your team is testing two different layouts for a new user dashboard.
+
+1. Create unique UTM parameters for each version:
+
+   - utm_source=internal
+   - utm_medium=ab_test
+   - utm_campaign=dashboard_layout
+   - utm_content=version_a, version_b
+
+2. Use the UTM report to track engagement:
+
+   - Monitor views and time spent on each version
+   - Analyze bounce rates and exit pages for each variant
+
+3. Combine UTM data with other metrics:
+
+   - Use Umami's Events tracking to measure specific interactions (e.g., clicks on key dashboard elements)
+   - Cross-reference with user feedback collected through in-app surveys
+
+This approach enables development teams to:
+
+- Quantify the impact of different layouts on user engagement and task completion
+- Make data-driven decisions about which design to roll out based on actual user behavior
+- Identify potential usability issues or confusing elements in each version
+- Iterate on designs more effectively by understanding which elements drive desired user actions
+
+## Use Case: Content Strategy Optimization
+
+Beyond campaign evaluation, marketing teams can use the UTM report to refine their content strategy.
+
+Scenario: Your content team is experimenting with different content formats and topics for your company blog.
+
+1. Assign unique UTM parameters to different content types. For example:
+
+   - utm_source=blog
+   - utm_medium=organic_social, newsletter, internal_link
+   - utm_campaign=content_strategy_2024
+   - utm_content=how_to_guide, case_study, industry_report, video_tutorial
+
+2. Use the UTM report for in-depth analysis:
+
+   - Compare engagement rates across different content formats and topics
+   - Analyze which distribution channels work best for each content type
+   - Evaluate the performance of evergreen vs. timely content
+
+3. Cross-reference with other data:
+   - Use Umami's Retention report to see which content types drive repeat visits
+   - Analyze the Journey report to understand how users navigate between different content pieces
+
+This strategy allows marketing teams to:
+
+- Identify the most effective content formats for different stages of the customer journey
+- Understand which topics and themes resonate best with different audience segments
+- Optimize content creation efforts by focusing on high-performing formats and topics
+- Refine content distribution strategies based on channel performance for each content type
+- Develop a data-driven editorial calendar that balances user interests with business goals
+
+# Accessing and Running the UTM Report
+
+The UTM report is available to all Umami users and you can find it in the Reports section of your Umami dashboard. Running the UTM report is easy:
+
+1. Log into your Umami dashboard
+2. Navigate to the Reports section
+3. Select "UTM Report"
+4. Choose your desired date range for analysis
+5. Click "Run Report"
+
+That's it! You'll have a view of your UTM data in just a few clicks. The simplicity of running the UTM report means that teams can easily incorporate it into their regular workflows. Whether you're doing a quick check on a current campaign or conducting an in-depth analysis of your marketing strategies, the Umami UTM report is just a few clicks away.
