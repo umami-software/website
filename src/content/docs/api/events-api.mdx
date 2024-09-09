@@ -1,0 +1,140 @@
+---
+title: Events
+---
+
+# Events
+
+Operations around Events and Event data.
+
+**Endpoints**
+
+```text
+GET /api/websites/:websiteId/events
+GET /api/websites/:websiteId/event-data/events
+GET /api/websites/:websiteId/event-data/values
+GET /api/websites/:websiteId/event-data/stats
+```
+
+---
+
+## GET /api/websites/:websiteId/events
+
+Gets website event details within a given time range.
+
+**Parameters**
+
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
+- `query`: (optional string) Search text.
+- `page`: (optional number, default 1) Determines page.
+- `pageSize`: (optional string) Determines how many results to return.
+- `orderBy`: (optional string) Order by column name.
+
+**Sample response**
+
+URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/events?startAt=1725580800000&endAt=1725667199999&query=&page=1&pageSize=20`
+
+```json
+{
+  "data": [
+    {
+      "id": "dbcfe5ef-99f4-44e1-ad3f-c157eb102a13",
+      "websiteId": "86d4095c-a2a8-4fc8-9521-103e858e2b41",
+      "sessionId": "970c97c5-2071-540a-be88-098eb730ccac",
+      "createdAt": "2024-09-06T23:36:44Z",
+      "urlPath": "/docs/api/authentication",
+      "urlQuery": "",
+      "referrerPath": "/docs/api",
+      "referrerQuery": "",
+      "referrerDomain": "",
+      "pageTitle": "Overview – Umami",
+      "eventType": 1,
+      "eventName": ""
+    },
+    {
+      "id": "9ba0da36-136b-4fef-afae-a5cdba78017b",
+      "websiteId": "86d4095c-a2a8-4fc8-9521-103e858e2b41",
+      "sessionId": "466cb31d-8cda-5dc3-9dd2-b259f29551a5",
+      "createdAt": "2024-09-06T23:36:33Z",
+      "urlPath": "/",
+      "urlQuery": "utm_source=apollo&utm_medium=outbound-email&utm_campaign=founders",
+      "referrerPath": "",
+      "referrerQuery": "",
+      "referrerDomain": "",
+      "pageTitle": "Umami",
+      "eventType": 1,
+      "eventName": ""
+    }
+  ],
+  "count": 1000,
+  "page": 1,
+  "pageSize": 20
+}
+```
+
+---
+
+## GET /api/websites/:websiteId/event-data/events
+
+Gets event data names, properties, and counts
+
+**Parameters**
+
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
+- `event`: (optional) Event name filter.
+
+**Sample response**
+
+URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/event-data/events?startAt=1692115200000&endAt=169220159999`
+
+```json
+[
+  { "eventName": "button-click", "propertyName": "id", "dataType": 1, "total": 4 },
+  { "eventName": "button-click", "propertyName": "name", "dataType": 1, "total": 4 },
+  { "eventName": "track-product", "propertyName": "price", "dataType": 2, "total": 2 }
+]
+```
+
+---
+
+## GET /api/websites/:websiteId/event-data/values
+
+Gets event data counts for a given event and property
+
+**Parameters**
+
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
+- `eventName`: Event name.
+- `propertyName`: Property name.
+
+**Sample response**
+
+URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/event-data/values?startAt=1717916400000&endAt=1725692399999&eventName=survey&propertyName=gender`
+
+```json
+[
+  { "value": "female", "total": 4 },
+  { "value": "male", "total": 1 }
+]
+```
+
+---
+
+## GET /api/websites/:websiteId/event-data/stats
+
+Gets summarized website events, fields, and records within a given time range.
+
+**Parameters**
+
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
+
+**Sample response**
+
+URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/event-data/stats?startAt=1725580800000&endAt=1725667199999`
+
+```json
+[{ "events": 16, "fields": 13, "records": 26 }]
+```

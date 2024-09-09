@@ -28,16 +28,20 @@
         "url": "/docs/api/teams-api"
       },
       {
+        "label": "Events",
+        "url": "/docs/api/events-api"
+      },
+      {
+        "label": "Sessions",
+        "url": "/docs/api/sessions-api"
+      },
+      {
         "label": "Websites",
         "url": "/docs/api/websites-api"
       },
       {
         "label": "Website stats",
-        "url": "/docs/api/website-stats"
-      },
-      {
-        "label": "Event data",
-        "url": "/docs/api/event-data"
+        "url": "/docs/api/website-stats-api"
       }
     ]
   },
