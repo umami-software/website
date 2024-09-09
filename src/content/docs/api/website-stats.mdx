@@ -50,7 +50,7 @@ GET from url: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-1
 
 ---
 
-## GET /api/websites/:websiteId/events
+## GET /api/websites/:websiteId/events/series
 
 Gets events within a given time range.
 
@@ -61,18 +61,27 @@ Gets events within a given time range.
 - `unit`: Time unit (year | month | hour | day).
 - `timezone`: Timezone (ex. America/Los_Angeles).
 - `url`: (optional) Name of URL.
+- `referrer`: (optional) Name of referrer.
+- `title`: (optional) Name of page title.
+- `host`: (optional) Name of hostname.
+- `os`: (optional) Name of operating system.
+- `browser`: (optional) Name of browser.
+- `device`: (optional) Name of device (ex. Mobile)
+- `country`: (optional) Name of country.
+- `region`: (optional) Name of region/state/province.
+- `city`: (optional) Name of city.
 
 **Sample response**
 
-URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/events?startAt=1683262800000&endAt=1683349199999&unit=hour&timezone=America%2FLos_Angeles`
+URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/events/series?startAt=1683262800000&endAt=1683349199999&unit=hour&timezone=America%2FLos_Angeles`
 
 ```json
 [
-  { "x": "live-demo-button", "t": "2023-04-12 22:00:00", "y": 1 },
-  { "x": "get-started-button", "t": "2023-04-12 22:00:00", "y": 5 },
-  { "x": "get-started-button", "t": "2023-04-12 23:00:00", "y": 4 },
-  { "x": "live-demo-button", "t": "2023-04-12 23:00:00", "y": 4 },
-  { "x": "social-Discord", "t": "2023-04-13 00:00:00", "y": 1 }
+  { "x": "live-demo-button", "t": "2023-04-12T22:00:00Z", "y": 1 },
+  { "x": "get-started-button", "t": "2023-04-12T22:00:00Z", "y": 5 },
+  { "x": "get-started-button", "t": "2023-04-12T23:00:00Z", "y": 4 },
+  { "x": "live-demo-button", "t": "2023-04-12T23:00:00Z", "y": 4 },
+  { "x": "social-Discord", "t": "2023-04-13T00:00:00Z", "y": 1 }
 ]
 ```
 
