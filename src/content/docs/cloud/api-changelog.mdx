@@ -6,6 +6,31 @@ title: API Changelog
 
 This page documents changes made to **api.umami.is**.
 
+## 2024-09-09
+
+**Websites**
+
+- `GET /websites/[id]/pageviews`: Fixed `region` parameter to optional.
+- `GET /websites/[id]/events`: Changed result set to website event details within a given time range.
+- `GET /websites/[id]/events/series`: **New** event metrics endpoint (previously `GET /websites/[id]/events`).
+
+**Event Data**
+
+- `GET /event-data/fields` : **Deprecated**
+- `GET /event-data/events` : **Moved** to `/websites/[id]/event-data/events`.
+- `GET /event-data/stats` : **Moved** to `/websites/[id]/event-data/stats`.
+- `GET /websites/[id]/event-data/values` : **Added**
+
+**Sessions**
+
+- `GET /websites/:websiteId/sessions` : **Added**
+- `GET /websites/:websiteId/sessions/stats` : **Added**
+- `GET /websites/:websiteId/sessions/:sessionId` : **Added**
+- `GET /websites/:websiteId/sessions/:sessionId/activity` : **Added**
+- `GET /websites/:websiteId/sessions/:sessionId/properties` : **Added**
+- `GET /websites/:websiteId/session-data/properties` : **Added**
+- `GET /websites/:websiteId/session-data/values` : **Added**
+
 ## 2024-05-23
 
 **Websites**
@@ -22,13 +47,13 @@ This page documents changes made to **api.umami.is**.
 
 **Websites**
 
-- `POST /websites`: Added teamId as an optional parameter
+- `POST /websites`: Added teamId as an optional parameter.
 
 **Teams**
 
-- `/teams/[id]/websites/[websiteId]`: DEPRECATED
-- `GET /teams/[id]/users/[userId]/index`: Added new `GET` route
+- `/teams/[id]/websites/[websiteId]`: **Deprecated**
+- `GET /teams/[id]/users/[userId]/index`: **Added**
 
 **Reports**
 
-- `GET /reports/index`: Added `websiteId` and `teamId` added as query parameters
+- `GET /reports/index`: Added `websiteId` and `teamId` added as query parameters.
