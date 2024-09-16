@@ -11,6 +11,7 @@ Operations around Events and Event data.
 ```text
 GET /api/websites/:websiteId/events
 GET /api/websites/:websiteId/event-data/events
+GET /api/websites/:websiteId/event-data/fields
 GET /api/websites/:websiteId/event-data/values
 GET /api/websites/:websiteId/event-data/stats
 ```
@@ -93,6 +94,31 @@ URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b
   { "eventName": "button-click", "propertyName": "id", "dataType": 1, "total": 4 },
   { "eventName": "button-click", "propertyName": "name", "dataType": 1, "total": 4 },
   { "eventName": "track-product", "propertyName": "price", "dataType": 2, "total": 2 }
+]
+```
+
+---
+
+## GET /api/websites/:websiteId/event-data/fields
+
+Gets event data property and value counts within a given time range.
+
+**Parameters**
+
+- `websiteId`: (uuid) Website key identifier.
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
+
+**Sample response**
+
+URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/event-data/fields?startAt=1692115200000&endAt=169220159999`
+
+```json
+[
+  { "propertyName": "age", "dataType": 2, "value": "33", "total": 1 },
+  { "propertyName": "age", "dataType": 2, "value": "31", "total": 4 },
+  { "propertyName": "gender", "dataType": 1, "value": "female", "total": 4 },
+  { "propertyName": "gender", "dataType": 1, "value": "male", "total": 1 }
 ]
 ```
 
