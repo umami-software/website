@@ -1,5 +1,9 @@
 .features {
-  padding: 0px 20px;
+  padding: 0 20px;
+}
+
+.block {
+  margin-bottom: 300px;
 }
 
 @media screen and (max-width: 360px) {
