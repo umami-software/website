@@ -5,20 +5,16 @@
   justify-content: center;
 }
 
-.plans ul {
-  margin: 0;
-  padding: 0;
-}
-
 .plans li {
   display: flex;
   align-items: center;
   list-style: none;
 }
 
-.plans strong {
-  font-size: 42px;
-  font-weight: 700;
+.interval {
+  font-size: 16px;
+  color: var(--base700);
+  margin-left: 10px;
 }
 
 .plan {
@@ -26,52 +22,31 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
-  border-radius: 10px;
-  background: var(--base75);
+  border-radius: 5px;
   margin: 0 auto;
-  border: 2px solid var(--primary400);
+  border: 1px solid var(--base400);
   width: 100%;
 }
 
-.plan:first-child {
-  border: 0;
-}
-
-.plan:last-child {
-  color: var(--base50);
-  background: var(--blue800);
-}
-
-.plan:last-child svg {
-  fill: var(--base50);
+.plan:nth-child(2) {
+  border-color: var(--base700);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .title {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
 }
 
-.title svg {
-  opacity: 0.5;
-}
-
-.description {
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-
 .price {
+  font-size: 42px;
+  font-weight: 700;
   line-height: 4rem;
-}
-
-.beta {
-  padding: 30px;
-  margin: 40px auto;
-  border-radius: 10px;
-  background: #eaf4ff;
 }
 
 .button {
@@ -79,10 +54,6 @@
   align-items: center;
   justify-content: center;
   margin-top: 40px;
-}
-
-.button button {
-  font-weight: 700;
 }
 
 .signup {

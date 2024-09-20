@@ -6,8 +6,9 @@ import styles from './Questions.module.css';
 
 const questions = [
   {
-    question: 'Does Umami Cloud have a free tier?',
-    answer: `Yes! Umami Cloud's Hobby plan is completely free. Great for personal projects and low traffic websites.`,
+    question: 'How is usage measured?',
+    answer: `Usage is measured by counting hits to a website and any custom events or custom event properties stored. Each website hit counts as one event. If you save
+    event properties, each data property stored counts as one event.`,
   },
   {
     question: 'How does the free trial work?',
@@ -16,13 +17,8 @@ const questions = [
   },
   {
     question: 'How will I be billed?',
-    answer: `Billing occurs on either a monthly or annual basis. 
-    If you upgraded to a paid plan via a trial, your first invoice will arrive after your trial period ends.`,
-  },
-  {
-    question: 'How is usage measured?',
-    answer: `Usage is measured by counting hits to a website and any custom events or custom event data stored. Each website hit counts as one event. If you save
-    event data, each data property stored counts as one event.`,
+    answer: `Billing occurs on a monthly basis and you can cancel at any time. 
+    If you upgraded to a paid plan via a trial, your first invoice git checkout dwill arrive after your trial period ends.`,
   },
   {
     question: 'Where are your servers located?',
@@ -58,11 +54,11 @@ const Question = ({ question, children }) => {
 
   return (
     <div className={styles.question} onClick={() => setExpanded(state => !state)}>
-      <div>
-        <Icon className={styles.icon} rotate={expanded ? 0 : -90}>
+      <div className={styles.text}>
+        {question}
+        <Icon className={styles.icon} rotate={expanded ? 180 : 0}>
           <Icons.ChevronDown />
         </Icon>
-        {question}
       </div>
       {expanded ? <div className={styles.answer}>{children}</div> : null}
     </div>

@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import PageHeader from 'components/layout/PageHeader';
 import GetStartedBanner from 'components/common/GetStartedBanner';
 import Plans from './Plans';
-import Calculator from './Calculator';
 import Features from './Features';
 import Questions from './Questions';
 
@@ -16,7 +15,6 @@ export default function PricingPage() {
         </p>
       </PageHeader>
       <Plans />
-      <Calculator />
       <Features />
       <Questions />
       <GetStartedBanner />
