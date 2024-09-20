@@ -2,9 +2,9 @@
 import { Button } from 'react-basics';
 import Checkmark from 'assets/checkmark.svg';
 import Link from 'next/link';
-import styles from './Plans.module.css';
 import { CLOUD_URL } from 'lib/constants';
 import useQueryString from 'components/hooks/useQueryString';
+import styles from './Plans.module.css';
 
 export default function Plans() {
   const query = useQueryString({ ref: 'umami-pricing' });
@@ -12,25 +12,26 @@ export default function Plans() {
   const plans = [
     {
       name: 'Hobby',
-      price: (
-        <>
-          <strong>$0</strong> / month
-        </>
-      ),
-      description: 'Up to 10K monthly events',
-      features: ['Up to 3 websites', '1 year data retention', 'Community support'],
+      price: '$0',
+      interval: '/ month',
+      description: 'Get started:',
+      features: [
+        '10K events per month',
+        'Up to 3 websites',
+        '6 month data retention',
+        'Community support',
+      ],
       url: `${CLOUD_URL}/signup${query}&plan=hobby`,
       button: 'Get started',
     },
     {
       name: 'Pro',
-      price: (
-        <>
-          From <strong>$9</strong> / month
-        </>
-      ),
-      description: 'Simple usage based pricing',
+      price: '$20',
+      interval: '/ month',
+      description: 'Everything in Hobby, plus:',
       features: [
+        '1 million events per month',
+        '$0.00002 per additional event',
         'Unlimited websites',
         'Unlimited team members',
         '5 year data retention',
@@ -38,17 +39,18 @@ export default function Plans() {
       ],
       url: `${CLOUD_URL}/signup${query}&plan=pro`,
       button: 'Try 14-day free trial',
+      variant: 'primary',
     },
     {
       name: 'Enterprise',
-      price: <strong>Custom</strong>,
-      description: 'Tailored for your business',
+      price: 'Contact us',
+      description: 'Everything in Pro, plus:',
       features: [
-        'Unlimited websites',
-        'Unlimited team members',
+        'Custom pricing',
         'Custom data retention',
-        'Onboarding support',
-        'Designated support engineer',
+        'Uptime SLA',
+        'Invoice billing',
+        'Enterprise support',
       ],
       url: 'mailto:sales@umami.is?subject=Umami Cloud enterprise pricing',
       button: 'Contact us',
@@ -57,31 +59,36 @@ export default function Plans() {
 
   return (
     <div className={styles.plans}>
-      {plans.map(({ name, price, description, features, url, button }) => {
-        return (
-          <div key={name} className={styles.plan}>
-            <div>
-              <div className={styles.title}>{name}</div>
-              <div className={styles.price}>{price}</div>
-              <div className={styles.description}>{description}</div>
-              <ul>
-                {features.map((feat, index) => {
-                  return (
-                    <li key={index}>
-                      <Checkmark /> {feat}
-                    </li>
-                  );
-                })}
-              </ul>
+      {plans.map(
+        ({ name, price, interval, description, features, url, button, variant = 'secondary' }) => {
+          return (
+            <div key={name} className={styles.plan}>
+              <div>
+                <div className={styles.title}>{name}</div>
+                <div className={styles.price}>
+                  {price}
+                  <span className={styles.interval}>{interval}</span>
+                </div>
+                <div className={styles.description}>{description}</div>
+                <ul>
+                  {features.map((feat, index) => {
+                    return (
+                      <li key={index}>
+                        <Checkmark /> {feat}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              <div className={styles.button}>
+                <Link href={url}>
+                  <Button variant={variant as any}>{button}</Button>
+                </Link>
+              </div>
             </div>
-            <div className={styles.button}>
-              <Link href={url}>
-                <Button variant="secondary">{button}</Button>
-              </Link>
-            </div>
-          </div>
-        );
-      })}
+          );
+        },
+      )}
     </div>
   );
 }

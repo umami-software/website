@@ -11,9 +11,9 @@ export const GITHUB_URL = 'https://github.com/umami-software/umami';
 export const DISCORD_URL = 'https://umami.is/discord';
 export const X_URL = 'https://twitter.com/umami_software';
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/umami-software/';
-export const GITHUB_STARS = '21.8k';
-export const GITHUB_CONTRIBUTORS = '200';
-export const GITHUB_DOWNLOADS = '10M';
+export const GITHUB_STARS = '22k';
+export const GITHUB_CONTRIBUTORS = '260';
+export const GITHUB_DOWNLOADS = '12M';
 export const GITHUB_STATS = [
   { label: 'Downloads', value: GITHUB_DOWNLOADS },
   { label: 'GitHub stars', value: GITHUB_STARS },

@@ -7,16 +7,34 @@ import styles from './Features.module.css';
 const features = [
   {
     label: 'Data',
-    items: [['Ingest (included)', '10K', '100K to 20M', 'Custom']],
+    items: [
+      ['Events (included)', '10 thousand', '1 million', 'Custom'],
+      ['Additional events', false, '$0.00002 per event', 'Custom'],
+      ['Data import', true, true, true],
+      ['Data export', true, true, true],
+    ],
   },
   {
     label: 'Analytics',
     items: [
       ['Websites', 'Up to 3', 'Unlimited', 'Unlimited'],
       ['Teams', false, true, true],
+      ['Team members', false, 'Unlimited', 'Unlimited'],
       ['Custom events', true, true, true],
-      ['Custom data', true, true, true],
-      ['API access', false, true, true],
+      ['Event properties', true, true, true],
+      ['Session properties', true, true, true],
+      ['API access', 'Limited', true, true],
+    ],
+  },
+  {
+    label: 'Reports',
+    items: [
+      ['Insights', true, true, true],
+      ['Funnel Analysis', true, true, true],
+      ['User Retention', true, true, true],
+      ['UTM parameters', true, true, true],
+      ['Goals', true, true, true],
+      ['User Journey', true, true, true],
     ],
   },
   {
@@ -24,7 +42,15 @@ const features = [
     items: [
       ['Realtime events', true, true, true],
       ['Custom dashboards', true, true, true],
-      ['Email alerts', false, false, true],
+      ['Email reports', false, true, true],
+    ],
+  },
+  {
+    label: 'Privacy',
+    items: [
+      ['GDPR compliant', true, true, true],
+      ['CCPR compliant', true, true, true],
+      ['No cookie banners required', false, true, true],
     ],
   },
   {
@@ -32,8 +58,10 @@ const features = [
     items: [
       ['Community support', true, true, true],
       ['Email support', false, true, true],
+      ['Enterprise support', false, false, true],
       ['Uptime SLA', false, false, true],
-      ['Onboarding support', false, false, true],
+      ['Invoice billing', false, false, true],
+      ['Onboarding assistance', false, false, true],
       ['Designated support engineer', false, false, true],
     ],
   },
@@ -56,9 +84,7 @@ export default function Features() {
             return (
               <Fragment key={label}>
                 <tr>
-                  <td className={styles.header}>
-                    <h2>{label}</h2>
-                  </td>
+                  <td className={styles.header}>{label}</td>
                 </tr>
                 {items.map((item, index) => {
                   return (

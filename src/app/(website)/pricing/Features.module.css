@@ -6,7 +6,7 @@
 .features tr {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--base400);
+  border-bottom: 1px solid var(--base300);
 }
 
 .features th,
@@ -25,6 +25,9 @@
 }
 
 .features .header {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
   height: 100px;
   border: 0;
 }
