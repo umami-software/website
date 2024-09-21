@@ -8,7 +8,7 @@ const features = [
   {
     label: 'Data',
     items: [
-      ['Events (included)', '10 thousand', '1 million', 'Custom'],
+      ['Events (included)', '100K', '1 million', 'Custom'],
       ['Additional events', false, '$0.00002 per event', 'Custom'],
       ['Data import', true, true, true],
       ['Data export', true, true, true],

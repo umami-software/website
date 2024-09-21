@@ -16,7 +16,7 @@ export default function Plans() {
       interval: '/ month',
       description: 'Get started:',
       features: [
-        '10K events per month',
+        '100K events per month',
         'Up to 3 websites',
         '6 month data retention',
         'Community support',
