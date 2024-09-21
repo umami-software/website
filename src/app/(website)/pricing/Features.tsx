@@ -50,7 +50,7 @@ const features = [
     items: [
       ['GDPR compliant', true, true, true],
       ['CCPR compliant', true, true, true],
-      ['No cookie banners required', false, true, true],
+      ['No cookie banners required', true, true, true],
     ],
   },
   {
