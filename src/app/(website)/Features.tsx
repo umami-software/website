@@ -3,9 +3,8 @@ import PageHeader from 'components/layout/PageHeader';
 import { Blocks } from 'lib/constants';
 import LinkButton from 'components/common/LinkButton';
 import { Flexbox, Icon, Icons, Text } from 'react-basics';
-import ImageBlock from 'components/layout/ImageBlock';
-import TextBlock from 'components/layout/TextBlock';
 import styles from './Features.module.css';
+import ScrollBlock from 'components/layout/ScrollBlock';
 
 const items: any = [
   Blocks.simpleAnalytics,
@@ -26,18 +25,7 @@ export default function Features() {
           <br /> understand your website traffic.
         </p>
       </PageHeader>
-      {items.map(({ title, description, image, icon: Icon }) => (
-        <ImageBlock key={title} className={styles.block}>
-          <TextBlock>
-            <h1>{title}</h1>
-            <p>{description}</p>
-          </TextBlock>
-          <div className={styles.image}>
-            {image && <img src={image} alt={title} />}
-            {!image && <Icon />}
-          </div>
-        </ImageBlock>
-      ))}
+      <ScrollBlock items={items} />
       <Flexbox justifyContent="center" alignItems="center">
         <LinkButton href="/features" variant="secondary">
           <Text>Explore more features </Text>

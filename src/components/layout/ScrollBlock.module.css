@@ -6,20 +6,9 @@
 }
 
 .block {
-  top: 80px;
   gap: 60px;
   min-height: 700px;
   background-color: var(--base50);
-}
-
-.block:not(:first-child):after {
-  content: '';
-  position: absolute;
-  height: 200px;
-  top: -200px;
-  left: 0;
-  right: 0;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
 }
 
 .image {
