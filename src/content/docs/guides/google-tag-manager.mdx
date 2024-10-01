@@ -1,0 +1,24 @@
+## Using Umami with Google Tag Manager
+
+Normally, you would install the Umami tracker by using the following code:
+
+```html
+<script
+  defer
+  src="http://mywebsite.com/script.js"
+  data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
+></script>
+```
+
+However, Google Tag Manager will strip the attributes from the tracker. So you need to using the following code instead:
+
+```javascript
+<script>
+  (function () {
+  var el = document.createElement('script');
+  el.setAttribute('src', 'http://mywebsite.com/script.js');
+  el.setAttribute('data-website-id', '94db1cb1-74f4-4a40-ad6c-962362670409');
+  document.body.appendChild(el);
+})();
+</script>
+```

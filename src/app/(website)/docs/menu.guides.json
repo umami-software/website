@@ -22,6 +22,10 @@
       {
         "label": "Measure campaigns",
         "url": "/docs/guides/measure-campaigns"
+      },
+      {
+        "label": "Using Google Tag Manager",
+        "url": "/docs/guides/google-tag-manager"
       }
     ]
   },
