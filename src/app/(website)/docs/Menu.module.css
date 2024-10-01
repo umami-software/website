@@ -23,6 +23,7 @@
 
 .item {
   border-left: 1px solid var(--base300);
+  text-wrap: nowrap;
 }
 
 .item:hover {
