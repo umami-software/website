@@ -162,7 +162,7 @@ If this returned `/var/lib/mysql-files/` your filepath can be `/var/lib/mysql-fi
 CREATE VIEW website_event_import AS
 SELECT we.website_id,
       we.session_id,
-      we.visit_id
+      we.visit_id,
       we.event_id,
       COALESCE(s.hostname, '') hostname,
       COALESCE(s.browser, '') browser,
@@ -223,7 +223,7 @@ SELECT *
 INTO OUTFILE '<filepath>.csv'
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n'
 FROM website_event_import
-WHERE website_id = '<website id>'
+WHERE website_id = '<website id>';
 ```
 
 **Event data**
