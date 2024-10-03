@@ -1,0 +1,18 @@
+.banner {
+  color: var(--light50);
+  background: var(--primary400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.banner a,
+.banner a:hover,
+.banner a:active,
+.banner a:visited {
+  color: var(--light50);
+}
