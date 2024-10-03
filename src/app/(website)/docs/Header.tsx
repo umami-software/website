@@ -6,10 +6,10 @@ import styles from './Header.module.css';
 
 const links = [
   { url: '/docs', label: 'Umami' },
-  { url: '/docs/cloud', label: 'Cloud' },
   { url: '/docs/api', label: 'API' },
   { url: '/docs/reports', label: 'Reports' },
   { url: '/docs/guides', label: 'Guides' },
+  { url: '/docs/cloud', label: 'Cloud' },
 ];
 
 export default function Header() {
