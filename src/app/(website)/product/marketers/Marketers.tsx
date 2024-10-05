@@ -27,7 +27,11 @@ export default function Marketers() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <img src="/images/marketers.jpg" alt="" className={styles.image} />
+          <img
+            src="https://content.umami.is/website/images/marketers.jpg"
+            alt=""
+            className={styles.image}
+          />
         </ImageBlock>
       </section>
       <section className={styles.blocks}>

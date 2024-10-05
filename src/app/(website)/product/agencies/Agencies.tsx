@@ -26,7 +26,7 @@ export default function Agencies() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <img src="/images/agencies.jpg" alt="" />
+          <img src="https://content.umami.is/website/images/agencies.jpg" alt="" />
         </ImageBlock>
       </section>
       <section className={styles.blocks}>

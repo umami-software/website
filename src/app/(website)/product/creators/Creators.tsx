@@ -26,7 +26,11 @@ export default function Creators() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <img src="/images/creators.jpg" alt="" className={styles.image} />
+          <img
+            src="https://content.umami.is/website/images/creators.jpg"
+            alt=""
+            className={styles.image}
+          />
         </ImageBlock>
       </section>
 
