@@ -8,19 +8,19 @@ const items = [
   {
     title: 'Creators',
     description: 'Measure everything you need to help improve your website.',
-    image: 'https://content.umami.is/website/images/creators.jpg',
+    image: 'https://static.umami.dev/website/images/creators.jpg',
     url: '/product/creators',
   },
   {
     title: 'Marketers',
     description: 'Easily measure the effectiveness of your campaigns.',
-    image: 'https://content.umami.is/website/images/marketers.jpg',
+    image: 'https://static.umami.dev/website/images/marketers.jpg',
     url: '/product/marketers',
   },
   {
     title: 'Agencies',
     description: 'Bring value to your clients by delivering insights into their data',
-    image: 'https://content.umami.is/website/images/agencies.jpg',
+    image: 'https://static.umami.dev/website/images/agencies.jpg',
     url: '/product/agencies',
   },
 ];

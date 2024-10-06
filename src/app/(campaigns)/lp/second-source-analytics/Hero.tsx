@@ -43,7 +43,7 @@ export default function Hero() {
         <div>Simple Installation, Simple to Use</div>
       </div>
       <div className={styles.image}>
-        <img src="https://content.umami.is/website/images/app.jpg" />
+        <img src="https://static.umami.dev/website/images/app.jpg" />
       </div>
     </div>
   );

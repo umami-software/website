@@ -22,7 +22,7 @@ export default function Companies() {
           return (
             <img
               key={name}
-              src={`https://content.umami.is/website/images/logo-${name}.png`}
+              src={`https://static.umami.dev/website/images/logo-${name}.png`}
               alt={title}
             />
           );

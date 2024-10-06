@@ -3,22 +3,14 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
 import styles from './Header.module.css';
-
-const links = [
-  { url: '/docs', label: 'Umami' },
-  { url: '/docs/api', label: 'API' },
-  { url: '/docs/reports', label: 'Reports' },
-  { url: '/docs/guides', label: 'Guides' },
-  { url: '/docs/cloud', label: 'Cloud' },
-];
+import config from 'content/docs/config.json';
 
 export default function Header() {
   const pathname = usePathname();
 
   return (
     <div className={styles.header}>
-      <div className={styles.title}>Documentation</div>
-      {links.map(({ url, label }) => {
+      {config.tabs.map(({ url, label }) => {
         const isSelected = pathname.match(/^\/docs\/(cloud|guides|api|reports)/)
           ? pathname.startsWith(url) && url !== '/docs'
           : pathname.startsWith(url);

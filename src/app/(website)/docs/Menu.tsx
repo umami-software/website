@@ -2,34 +2,27 @@
 import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import v1 from './menu.v1.json';
-import v2 from './menu.v2.json';
-import cloud from './menu.cloud.json';
-import api from './menu.api.json';
-import reports from './menu.reports.json';
-import guides from './menu.guides.json';
+import config from 'content/docs/config.json';
 import styles from './Menu.module.css';
 
-const menus = { v1, v2, cloud, api, guides, reports };
+const { tabs, navigation } = config;
 
 export default function Menu({ onClick }: { onClick?: () => void }) {
   const pathname = usePathname();
-  let menu = v2;
-  const match = pathname.match(/^\/docs\/(\w+)/);
 
-  if (match) {
-    if (Object.keys(menus).includes(match[1])) {
-      menu = menus[match[1]];
-    }
+  if (!tabs.length) {
   }
+
+  const tab = tabs.find(({ url, name }) => (name !== 'docs' ? pathname.startsWith(url) : false));
+  const menu = navigation[tab?.name || 'docs'];
 
   return (
     <div className={styles.menu} onClick={onClick}>
-      {menu.map(({ label, items }) => {
+      {menu.map(({ group, pages }) => {
         return (
-          <section key={label} className={styles.items}>
-            <header>{label}</header>
-            {items.map(({ label: text, url }) => {
+          <section key={group} className={styles.items}>
+            <header>{group}</header>
+            {pages.map(({ label: text, url }) => {
               return (
                 <div
                   key={url}

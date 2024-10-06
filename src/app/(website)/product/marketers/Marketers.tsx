@@ -28,7 +28,7 @@ export default function Marketers() {
             </LinkButton>
           </TextBlock>
           <img
-            src="https://content.umami.is/website/images/marketers.jpg"
+            src="https://static.umami.dev/website/images/marketers.jpg"
             alt=""
             className={styles.image}
           />

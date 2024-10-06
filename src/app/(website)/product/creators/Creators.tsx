@@ -27,7 +27,7 @@ export default function Creators() {
             </LinkButton>
           </TextBlock>
           <img
-            src="https://content.umami.is/website/images/creators.jpg"
+            src="https://static.umami.dev/website/images/creators.jpg"
             alt=""
             className={styles.image}
           />
