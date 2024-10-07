@@ -6,7 +6,7 @@ import Share from 'assets/share.svg';
 import Lock from 'assets/lock.svg';
 import Code from 'assets/code.svg';
 
-export const CONTENT_URL = 'https://content.umami.is/website';
+export const CONTENT_URL = 'https://static.umami.dev/website';
 export const CLOUD_URL = 'https://cloud.umami.is';
 export const GITHUB_URL = 'https://github.com/umami-software/umami';
 export const DISCORD_URL = 'https://umami.is/discord';

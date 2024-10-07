@@ -42,7 +42,7 @@ export default function Hero() {
         <div>5-minute setup, instant data visibility</div>
       </div>
       <div className={styles.image}>
-        <ContentImage src="https://static.umami.dev/website/images/app.jpg" />
+        <ContentImage src="/images/app.jpg" />
       </div>
     </div>
   );

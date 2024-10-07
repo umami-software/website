@@ -7,18 +7,18 @@ const items = [
     title: 'Startups',
     description:
       'Measure everything you need to help improve your website when you’re just getting your business started.',
-    image: 'https://static.umami.dev/website/images/creators.jpg',
+    image: '/images/creators.jpg',
   },
   {
     title: 'Established',
     description: 'Easily measure the effectiveness of your sales and marketing campaigns.',
-    image: 'https://static.umami.dev/website/images/marketers.jpg',
+    image: '/images/marketers.jpg',
   },
   {
     title: 'Enterprise',
     description:
       'Large corporations and teams of all sizes can run Umami alongside any existing website analytics solution.',
-    image: 'https://static.umami.dev/website/images/agencies.jpg',
+    image: '/images/agencies.jpg',
   },
 ];
 

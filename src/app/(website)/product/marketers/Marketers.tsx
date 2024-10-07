@@ -5,6 +5,7 @@ import GetStartedBanner from '@/components/GetStartedBanner';
 import LinkButton from '@/components/LinkButton';
 import { CLOUD_URL } from 'lib/constants';
 import useQueryString from 'components/hooks/useQueryString';
+import ContentImage from '@/components/ContentImage';
 import styles from './Marketers.module.css';
 
 export default function Marketers() {
@@ -27,11 +28,7 @@ export default function Marketers() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <img
-            src="https://static.umami.dev/website/images/marketers.jpg"
-            alt=""
-            className={styles.image}
-          />
+          <ContentImage src="/images/marketers.jpg" alt="" className={styles.image} />
         </ImageBlock>
       </section>
       <section className={styles.blocks}>
