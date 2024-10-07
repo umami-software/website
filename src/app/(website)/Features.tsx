@@ -1,10 +1,10 @@
 'use client';
-import PageHeader from 'components/layout/PageHeader';
-import { Blocks } from 'lib/constants';
-import LinkButton from 'components/common/LinkButton';
+import PageHeader from '@/components/PageHeader';
+import { Blocks } from '@/lib/constants';
+import LinkButton from '@/components/LinkButton';
 import { Flexbox, Icon, Icons, Text } from 'react-basics';
 import styles from './Features.module.css';
-import ScrollBlock from 'components/layout/ScrollBlock';
+import ScrollBlock from '@/components/ScrollBlock';
 
 const items: any = [
   Blocks.simpleAnalytics,

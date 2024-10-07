@@ -1,4 +1,4 @@
-import getFile from 'lib/content';
+import getFile from '@/lib/content';
 
 export interface Post {
   id: string;

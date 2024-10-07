@@ -1,13 +1,13 @@
 'use client';
-import PageHeader from 'components/layout/PageHeader';
-import TextBlock from 'components/layout/TextBlock';
-import ImageBlock from 'components/layout/ImageBlock';
-import LinkButton from 'components/common/LinkButton';
-import { CLOUD_URL, Blocks } from 'lib/constants';
-import ScrollBlock from 'components/layout/ScrollBlock';
-import GetStartedBanner from 'components/common/GetStartedBanner';
-import SectionHeader from 'components/layout/SectionHeader';
-import useQueryString from 'components/hooks/useQueryString';
+import PageHeader from '@/components/PageHeader';
+import TextBlock from '@/components/TextBlock';
+import ImageBlock from '@/components/ImageBlock';
+import LinkButton from '@/components/LinkButton';
+import { CLOUD_URL, Blocks } from '@/lib/constants';
+import ScrollBlock from '@/components/ScrollBlock';
+import GetStartedBanner from '@/components/GetStartedBanner';
+import SectionHeader from '@/components/SectionHeader';
+import useQueryString from '@/components/hooks/useQueryString';
 import styles from './GoogleAnalytics.module.css';
 
 const items = [

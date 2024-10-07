@@ -1,7 +1,7 @@
 'use client';
-import LinkButton from 'components/common/LinkButton';
-import PageHeader from 'components/layout/PageHeader';
-import { GITHUB_URL, DISCORD_URL, X_URL, LINKEDIN_URL } from 'lib/constants';
+import LinkButton from '@/components/LinkButton';
+import PageHeader from '@/components/PageHeader';
+import { GITHUB_URL, DISCORD_URL, X_URL, LINKEDIN_URL } from '@/lib/constants';
 import GitHub from 'assets/github.svg';
 import Discord from 'assets/discord.svg';
 import X from 'assets/x.svg';

@@ -1,11 +1,11 @@
 'use client';
-import SectionHeader from 'components/layout/SectionHeader';
-import LinkButton from 'components/common/LinkButton';
+import SectionHeader from '@/components/SectionHeader';
+import LinkButton from '@/components/LinkButton';
 import Code from 'assets/code.svg';
 import Cloud from 'assets/cloud.svg';
 import styles from './Deploy.module.css';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
 
 export default function Deploy() {
   const query = useQueryString({ ref: 'umami-developers' });

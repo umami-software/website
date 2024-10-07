@@ -1,9 +1,10 @@
 'use client';
-import LinkButton from 'components/common/LinkButton';
-import TextBlock from 'components/layout/TextBlock';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
-import styles from 'app/(website)/Hero.module.css';
+import LinkButton from '@/components/LinkButton';
+import TextBlock from '@/components/TextBlock';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
+import ContentImage from '@/components/ContentImage';
+import styles from '@/app/(website)/Hero.module.css';
 
 export default function Hero() {
   const query = useQueryString({ ref: 'umami-hero' });
@@ -42,7 +43,7 @@ export default function Hero() {
         <div>Effortless setup and use</div>
       </div>
       <div className={styles.image}>
-        <img src="https://content.umami.is/website/images/blog/user-journey.png" />
+        <ContentImage src="/images/blog/user-journey.png" />
       </div>
     </div>
   );

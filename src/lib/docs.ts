@@ -1,4 +1,4 @@
-import getFile from 'lib/content';
+import getFile from '@/lib/content';
 
 export interface Doc {
   id: string;
@@ -6,7 +6,7 @@ export interface Doc {
   body: string;
 }
 
-export async function getDoc(pathname: string = '') {
+export async function getDoc(pathname = '') {
   const parts = pathname.split('/');
 
   let id = parts[parts.length - 1] || 'index';

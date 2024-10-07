@@ -1,26 +1,27 @@
 'use client';
 import { Icon, Icons, Text } from 'react-basics';
-import TextBlock from 'components/layout/TextBlock';
-import LinkButton from 'components/common/LinkButton';
+import TextBlock from '@/components/TextBlock';
+import LinkButton from '@/components/LinkButton';
+import ContentImage from '@/components/ContentImage';
 import styles from './Personas.module.css';
 
 const items = [
   {
     title: 'Creators',
     description: 'Measure everything you need to help improve your website.',
-    image: 'https://content.umami.is/website/images/creators.jpg',
+    image: '/images/creators.jpg',
     url: '/product/creators',
   },
   {
     title: 'Marketers',
     description: 'Easily measure the effectiveness of your campaigns.',
-    image: 'https://content.umami.is/website/images/marketers.jpg',
+    image: '/images/marketers.jpg',
     url: '/product/marketers',
   },
   {
     title: 'Agencies',
     description: 'Bring value to your clients by delivering insights into their data',
-    image: 'https://content.umami.is/website/images/agencies.jpg',
+    image: '/images/agencies.jpg',
     url: '/product/agencies',
   },
 ];
@@ -36,7 +37,7 @@ export default function Personas() {
           return (
             <div key={title} className={styles.card}>
               <div className={styles.image}>
-                <img src={image} alt="" />
+                <ContentImage src={image} alt="" />
               </div>
               <TextBlock size="sm" align="center">
                 <h1>{title}</h1>

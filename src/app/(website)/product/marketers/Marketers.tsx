@@ -1,10 +1,11 @@
 'use client';
-import ImageBlock from 'components/layout/ImageBlock';
-import TextBlock from 'components/layout/TextBlock';
-import GetStartedBanner from 'components/common/GetStartedBanner';
-import LinkButton from 'components/common/LinkButton';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import ImageBlock from '@/components/ImageBlock';
+import TextBlock from '@/components/TextBlock';
+import GetStartedBanner from '@/components/GetStartedBanner';
+import LinkButton from '@/components/LinkButton';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
+import ContentImage from '@/components/ContentImage';
 import styles from './Marketers.module.css';
 
 export default function Marketers() {
@@ -27,11 +28,7 @@ export default function Marketers() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <img
-            src="https://content.umami.is/website/images/marketers.jpg"
-            alt=""
-            className={styles.image}
-          />
+          <ContentImage src="/images/marketers.jpg" alt="" className={styles.image} />
         </ImageBlock>
       </section>
       <section className={styles.blocks}>
@@ -106,10 +103,6 @@ export default function Marketers() {
         </TextBlock>
       </section>
       <GetStartedBanner />
-      <img
-        referrerPolicy="no-referrer-when-downgrade"
-        src="https://static.scarf.sh/a.png?x-pxid=b7a0a2bd-d1c6-49f1-b674-d4484d358393"
-      />
     </div>
   );
 }

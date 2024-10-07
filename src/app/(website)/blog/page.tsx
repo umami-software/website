@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import type { Post } from 'lib/blog';
-import PageHeader from 'components/layout/PageHeader';
-import Card from 'app/(website)/blog/Card';
+import type { Post } from '@/lib/blog';
+import PageHeader from '@/components/PageHeader';
+import Card from '@/app/(website)/blog/Card';
 import styles from './page.module.css';
-import { getFiles } from 'lib/content';
+import { getFiles } from '@/lib/content';
 
 export default async function () {
   const posts = await getFiles('blog');

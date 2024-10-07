@@ -1,5 +1,5 @@
 'use client';
-import TextBlock, { TextBlockProps } from 'components/layout/TextBlock';
+import TextBlock, { TextBlockProps } from '@/components/TextBlock';
 import classNames from 'classnames';
 import styles from './PageHeader.module.css';
 

@@ -1,5 +1,5 @@
 'use client';
-import TextBlock from 'components/layout/TextBlock';
+import TextBlock from '@/components/TextBlock';
 import styles from './Teams.module.css';
 
 export default function Teams() {

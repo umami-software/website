@@ -1,5 +1,5 @@
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { useMDXComponents } from 'mdx-components';
+import { useMDXComponents } from '@/mdx-components';
 import rehypeHighlight from 'rehype-highlight';
 
 const options = {

@@ -1,5 +1,5 @@
 'use client';
-import PageHeader from 'components/layout/PageHeader';
+import PageHeader from '@/components/PageHeader';
 import ContactForm from './ContactForm';
 
 export default function ContactPage() {

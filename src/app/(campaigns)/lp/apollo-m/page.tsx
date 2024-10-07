@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
-import GetStartedBanner from 'components/common/GetStartedBanner';
+import GetStartedBanner from '@/components/GetStartedBanner';
 import Hero from './Hero';
 import Personas from './Personas';
 import Statements from './Statements';
-import QuickStart from 'app/(website)/QuickStart';
-import Quotes from 'app/(website)/Quotes';
-import Companies from 'app/(website)/Companies';
-import styles from 'app/(website)/page.module.css';
-import OpenSource from 'app/(website)/OpenSource';
-import TextBlock from 'components/layout/TextBlock';
+import QuickStart from '@/app/(website)/QuickStart';
+import Quotes from '@/app/(website)/Quotes';
+import Companies from '@/app/(website)/Companies';
+import styles from '@/app/(website)/page.module.css';
+import OpenSource from '@/app/(website)/OpenSource';
+import TextBlock from '@/components/TextBlock';
 
 export default function () {
   return (

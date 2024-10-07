@@ -1,8 +1,8 @@
 'use client';
-import { GITHUB_URL } from 'lib/constants';
-import SectionHeader from 'components/layout/SectionHeader';
-import LinkButton from 'components/common/LinkButton';
-import GitHubStats from 'app/(website)/GitHubStats';
+import { GITHUB_URL } from '@/lib/constants';
+import SectionHeader from '@/components/SectionHeader';
+import LinkButton from '@/components/LinkButton';
+import GitHubStats from '@/app/(website)/GitHubStats';
 import styles from './Join.module.css';
 
 export default function Join() {

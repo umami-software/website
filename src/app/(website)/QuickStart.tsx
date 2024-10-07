@@ -1,10 +1,10 @@
 'use client';
-import TextBlock from 'components/layout/TextBlock';
+import TextBlock from '@/components/TextBlock';
 import Link from 'next/link';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
 import styles from './QuickStart.module.css';
-import LinkButton from 'components/common/LinkButton';
+import LinkButton from '@/components/LinkButton';
 
 export default function QuickStart() {
   const query = useQueryString({ ref: 'umami-quickstart' });

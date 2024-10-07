@@ -1,6 +1,7 @@
 'use client';
-import ImageBlock from 'components/layout/ImageBlock';
-import TextBlock from 'components/layout/TextBlock';
+import ImageBlock from '@/components/ImageBlock';
+import TextBlock from '@/components/TextBlock';
+import ContentImage from '@/components/ContentImage';
 import styles from './ScrollBlock.module.css';
 
 export default function ScrollBlock({ items }) {
@@ -13,7 +14,7 @@ export default function ScrollBlock({ items }) {
             <p>{description}</p>
           </TextBlock>
           <div className={styles.image}>
-            {image && <img src={image} alt={title} />}
+            {image && <ContentImage src={image} alt={title} />}
             {!image && <Icon />}
           </div>
         </ImageBlock>

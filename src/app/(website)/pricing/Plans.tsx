@@ -2,8 +2,8 @@
 import { Button } from 'react-basics';
 import Checkmark from 'assets/checkmark.svg';
 import Link from 'next/link';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
 import styles from './Plans.module.css';
 
 export default function Plans() {

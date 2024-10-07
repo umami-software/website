@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from 'react';
 import classNames from 'classnames';
-import TextBlock from 'components/layout/TextBlock';
+import TextBlock from '@/components/TextBlock';
 import styles from './SectionHeader.module.css';
 
 export default function SectionHeader({

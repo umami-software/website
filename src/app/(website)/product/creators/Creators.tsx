@@ -1,10 +1,11 @@
 'use client';
-import ImageBlock from 'components/layout/ImageBlock';
-import TextBlock from 'components/layout/TextBlock';
-import GetStartedBanner from 'components/common/GetStartedBanner';
-import LinkButton from 'components/common/LinkButton';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import ImageBlock from '@/components/ImageBlock';
+import TextBlock from '@/components/TextBlock';
+import GetStartedBanner from '@/components/GetStartedBanner';
+import LinkButton from '@/components/LinkButton';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
+import ContentImage from '@/components/ContentImage';
 import styles from './Creators.module.css';
 
 export default function Creators() {
@@ -26,11 +27,7 @@ export default function Creators() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <img
-            src="https://content.umami.is/website/images/creators.jpg"
-            alt=""
-            className={styles.image}
-          />
+          <ContentImage src="/images/creators.jpg" alt="" className={styles.image} />
         </ImageBlock>
       </section>
 
@@ -85,10 +82,6 @@ export default function Creators() {
         </TextBlock>
       </section>
       <GetStartedBanner />
-      <img
-        referrerPolicy="no-referrer-when-downgrade"
-        src="https://static.scarf.sh/a.png?x-pxid=d493e503-6cf2-4868-9664-6105c6f6dcc4"
-      />
     </div>
   );
 }

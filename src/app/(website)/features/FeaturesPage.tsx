@@ -30,9 +30,9 @@ import Traffic from 'assets/traffic.svg';
 import User from 'assets/user.svg';
 import View from 'assets/view.svg';
 import classNames from 'classnames';
-import GetStartedBanner from 'components/common/GetStartedBanner';
-import PageHeader from 'components/layout/PageHeader';
-import TextBlock from 'components/layout/TextBlock';
+import GetStartedBanner from '@/components/GetStartedBanner';
+import PageHeader from '@/components/PageHeader';
+import TextBlock from '@/components/TextBlock';
 import { Icon, Text } from 'react-basics';
 import styles from './FeaturesPage.module.css';
 

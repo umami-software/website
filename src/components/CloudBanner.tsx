@@ -1,7 +1,7 @@
 'use client';
 import styles from './CloudBanner.module.css';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
 
 export default function CloudBanner() {
   const query = useQueryString({ ref: 'umami-docs' });

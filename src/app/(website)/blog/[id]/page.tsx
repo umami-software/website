@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import { format } from 'date-fns';
 import Link from 'next/link';
-import { getPost } from 'lib/blog';
-import Markdown from 'components/common/Markdown';
+import { getPost } from '@/lib/blog';
+import Markdown from '@/components/Markdown';
 import styles from './page.module.css';
 
 type Props = {

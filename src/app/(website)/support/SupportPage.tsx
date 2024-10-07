@@ -1,5 +1,5 @@
 'use client';
-import PageHeader from 'components/layout/PageHeader';
+import PageHeader from '@/components/PageHeader';
 
 export default function SupportPage() {
   return (

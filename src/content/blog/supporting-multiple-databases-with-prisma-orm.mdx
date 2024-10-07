@@ -23,14 +23,14 @@ A connection string for MySQL will start with `mysql://` and PostgreSQL will sta
 All of our migrations are stored in a DB folder. We copy the relevant `migrations` and `schema` files into the `/prisma` folder,
 and deploy the migrations all in our `build` command using the `npm-run-all` package.
 
-<img src="https://content.umami.is/website/images/prisma-migration-folder.png" />
+![image](/images/prisma-migration-folder.png)
 
 At the end of the day, PostgreSQL and MySQL are relational databases that use the same database design. As a result, we can use
 Prisma queries to perform most of our CRUD operations.
 
 The following Prisma query finds a website by ID and will work with both databases out of the box.
 
-<img src="https://content.umami.is/website/images/prisma-find-website.png" />
+![image](/images/prisma-find-website.png)
 
 # Raw SQL
 
@@ -38,7 +38,7 @@ But there are times when you need to just write your own SQL to get the job done
 The following is a custom query for getting Website stats, which calculates the total views, visitors, bounce rate,
 and average visitor time.
 
-<img src="https://content.umami.is/website/images/prisma-query-example.png" />
+![image](/images/prisma-query-example.png)
 
 Notice the functions `getAddIntervalQuery`, `getTimestampDiffQuery`, and `getDateQuery`. While the method of querying
 the data between databases is very similar, the syntax of how to arrive to those dates differs.
@@ -46,7 +46,7 @@ the data between databases is very similar, the syntax of how to arrive to those
 Using the same method to determine which database type is being used, we can can write functions to inject the
 appropriate SQL before running the query.
 
-<img src="https://content.umami.is/website/images/prisma-function-example.png" />
+![image](/images/prisma-function-example.png)
 
 # Challenges
 

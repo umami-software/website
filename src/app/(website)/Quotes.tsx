@@ -1,5 +1,6 @@
 'use client';
-import TextBlock from 'components/layout/TextBlock';
+import TextBlock from '@/components/TextBlock';
+import ContentImage from '@/components/ContentImage';
 import X from 'assets/x.svg';
 import styles from './Quotes.module.css';
 
@@ -68,7 +69,7 @@ export default function Quotes() {
           return (
             <div key={name} className={styles.card}>
               <div className={styles.pic}>
-                <img src={`/images/${username}.jpg`} alt="" />
+                <ContentImage src={`/images/${username}.jpg`} alt="" />
               </div>
               <div className={styles.header}>
                 <div className={styles.user}>

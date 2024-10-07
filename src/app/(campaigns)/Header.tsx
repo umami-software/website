@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
-import CompanyLogo from 'components/common/CompanyLogo';
-import LinkButton from 'components/common/LinkButton';
-import useQueryString from 'components/hooks/useQueryString';
-import { CLOUD_URL } from 'lib/constants';
+import CompanyLogo from '@/components/CompanyLogo';
+import LinkButton from '@/components/LinkButton';
+import useQueryString from '@/components/hooks/useQueryString';
+import { CLOUD_URL } from '@/lib/constants';
 import styles from './Header.module.css';
 
 export default function Header() {

@@ -2,8 +2,8 @@
 import { Container } from 'react-basics';
 import Link from 'next/link';
 import classNames from 'classnames';
-import CompanyLogo from 'components/common/CompanyLogo';
-import SocialMedia from 'components/common/SocialMedia';
+import CompanyLogo from '@/components/CompanyLogo';
+import SocialMedia from '@/components/SocialMedia';
 import styles from './Footer.module.css';
 
 const data = [

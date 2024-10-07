@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Icon, Icons } from 'react-basics';
-import SectionHeader from 'components/layout/SectionHeader';
+import SectionHeader from '@/components/SectionHeader';
 import styles from './Questions.module.css';
 
 const questions = [

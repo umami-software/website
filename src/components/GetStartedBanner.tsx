@@ -1,8 +1,8 @@
 'use client';
 import styles from './GetStartedBanner.module.css';
-import LinkButton from 'components/common/LinkButton';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import LinkButton from '@/components/LinkButton';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
 
 export default function GetStartedBanner() {
   const query = useQueryString({ ref: 'umami-get-started-banner' });

@@ -2,8 +2,8 @@
 import Block from 'assets/block.svg';
 import Code from 'assets/code.svg';
 import Analytics from 'assets/analytics.svg';
-import TextBlock from 'components/layout/TextBlock';
-import styles from 'app/(website)/Statements.module.css';
+import TextBlock from '@/components/TextBlock';
+import styles from '@/app/(website)/Statements.module.css';
 
 const statements = [
   {

@@ -1,6 +1,6 @@
 'use client';
 import { format } from 'date-fns';
-import LinkButton from 'components/common/LinkButton';
+import LinkButton from '@/components/LinkButton';
 import Link from 'next/link';
 import styles from './Card.module.css';
 

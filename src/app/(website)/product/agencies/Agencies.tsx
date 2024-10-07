@@ -1,10 +1,11 @@
 'use client';
-import ImageBlock from 'components/layout/ImageBlock';
-import TextBlock from 'components/layout/TextBlock';
-import GetStartedBanner from 'components/common/GetStartedBanner';
-import LinkButton from 'components/common/LinkButton';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import ImageBlock from '@/components/ImageBlock';
+import TextBlock from '@/components/TextBlock';
+import GetStartedBanner from '@/components/GetStartedBanner';
+import LinkButton from '@/components/LinkButton';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
+import ContentImage from '@/components/ContentImage';
 import styles from './Agencies.module.css';
 
 export default function Agencies() {
@@ -26,7 +27,7 @@ export default function Agencies() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <img src="https://content.umami.is/website/images/agencies.jpg" alt="" />
+          <ContentImage src="/images/agencies.jpg" alt="" />
         </ImageBlock>
       </section>
       <section className={styles.blocks}>
@@ -91,10 +92,6 @@ export default function Agencies() {
         </TextBlock>
       </section>
       <GetStartedBanner />
-      <img
-        referrerPolicy="no-referrer-when-downgrade"
-        src="https://static.scarf.sh/a.png?x-pxid=fd4f6eea-aab8-4d0a-9768-dd8ea93e5c4b"
-      />
     </div>
   );
 }

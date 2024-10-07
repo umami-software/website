@@ -1,5 +1,5 @@
-import PageHeader from 'components/layout/PageHeader';
-import GitHubStats from 'app/(website)/GitHubStats';
+import PageHeader from '@/components/PageHeader';
+import GitHubStats from '@/app/(website)/GitHubStats';
 
 export default function OpenSource() {
   return (

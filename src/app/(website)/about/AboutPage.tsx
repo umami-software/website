@@ -1,6 +1,6 @@
 'use client';
-import PageHeader from 'components/layout/PageHeader';
-import TextBlock from 'components/layout/TextBlock';
+import PageHeader from '@/components/PageHeader';
+import TextBlock from '@/components/TextBlock';
 
 export default function AboutPage() {
   return (

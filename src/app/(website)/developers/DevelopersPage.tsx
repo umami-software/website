@@ -1,5 +1,5 @@
 'use client';
-import PageHeader from 'components/layout/PageHeader';
+import PageHeader from '@/components/PageHeader';
 import Deploy from './Deploy';
 import Join from './Join';
 import styles from './DevelopersPage.module.css';

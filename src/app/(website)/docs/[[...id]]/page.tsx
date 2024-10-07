@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import { getDoc } from 'lib/docs';
-import Markdown from 'components/common/Markdown';
+import PageLinks from '@/app/(website)/docs/[[...id]]/PageLinks';
+import { getDoc } from '@/lib/docs';
+import Markdown from '@/components/Markdown';
 import styles from './page.module.css';
-import PageLinks from 'app/(website)/docs/[[...id]]/PageLinks';
 
 export async function generateMetadata({
   params: { id },

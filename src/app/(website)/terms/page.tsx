@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import PageHeader from 'components/layout/PageHeader';
+import PageHeader from '@/components/PageHeader';
 import Terms from './terms-of-service.mdx';
 
 export default function TermsPage() {
