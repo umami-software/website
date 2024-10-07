@@ -23,7 +23,7 @@ Umami automatically understands links with UTM parameters and lets you view and 
   {
     title: 'No Cookie Banners',
     description: `
-All data is anonymized with Umami, and no personal information is ever collected on your website's users. You can track your website's performance without needing opt-in cookie banners, providing your users with a better and more trusted experience. Umami is GDRP and CCPA compliant by default.
+All data is anonymized with Umami, and no personal information is ever collected on your website's users. You can track your website's performance without needing opt-in cookie banners, providing your users with a better and more trusted experience. Umami is GDPR and CCPA compliant by default.
     `,
     image: <Block />,
   },
