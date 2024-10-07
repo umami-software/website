@@ -1,9 +1,8 @@
 'use client';
 import LinkButton from '@/components/LinkButton';
 import TextBlock from '@/components/TextBlock';
-import { CLOUD_URL } from '@/lib/constants';
-import useQueryString from '@/components/hooks/useQueryString';
-import ContentImage from '@/components/ContentImage';
+import { CLOUD_URL } from 'lib/constants';
+import useQueryString from 'components/hooks/useQueryString';
 import styles from '@/app/(website)/Hero.module.css';
 
 export default function Hero() {
@@ -43,7 +42,7 @@ export default function Hero() {
         <div>Effortless setup and use</div>
       </div>
       <div className={styles.image}>
-        <ContentImage src="/images/blog/user-journey.png" />
+        <img src="https://static.umami.dev/website/images/blog/user-journey.png" />
       </div>
     </div>
   );

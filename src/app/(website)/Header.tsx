@@ -53,7 +53,7 @@ export default function Header() {
           target="_blank"
           data-umami-event="webinar-signup"
         >
-          What`s new with Umami? Join our webinar on Oct. 16th!
+          What&apos;s new with Umami? Join our webinar on Oct. 16th!
         </a>
       </AnnouncementBanner>
       <Container>

@@ -3,9 +3,8 @@ import ImageBlock from '@/components/ImageBlock';
 import TextBlock from '@/components/TextBlock';
 import GetStartedBanner from '@/components/GetStartedBanner';
 import LinkButton from '@/components/LinkButton';
-import { CLOUD_URL } from '@/lib/constants';
-import useQueryString from '@/components/hooks/useQueryString';
-import ContentImage from '@/components/ContentImage';
+import { CLOUD_URL } from 'lib/constants';
+import useQueryString from 'components/hooks/useQueryString';
 import styles from './Marketers.module.css';
 
 export default function Marketers() {
@@ -28,7 +27,11 @@ export default function Marketers() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <ContentImage src="/images/marketers.jpg" alt="" className={styles.image} />
+          <img
+            src="https://static.umami.dev/website/images/marketers.jpg"
+            alt=""
+            className={styles.image}
+          />
         </ImageBlock>
       </section>
       <section className={styles.blocks}>

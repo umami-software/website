@@ -1,6 +1,5 @@
 'use client';
 import TextBlock from '@/components/TextBlock';
-import ContentImage from '@/components/ContentImage';
 import styles from './Companies.module.css';
 
 const items = [
@@ -20,7 +19,13 @@ export default function Companies() {
       <h1>Trusted by thousands of companies</h1>
       <div className={styles.logos}>
         {items.map(({ name, title }) => {
-          return <ContentImage key={name} src={`/images/logo-${name}.png`} alt={title} />;
+          return (
+            <img
+              key={name}
+              src={`https://static.umami.dev/website/images/logo-${name}.png`}
+              alt={title}
+            />
+          );
         })}
       </div>
     </TextBlock>

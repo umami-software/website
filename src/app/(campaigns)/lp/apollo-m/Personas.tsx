@@ -1,26 +1,25 @@
 'use client';
 import TextBlock from '@/components/TextBlock';
 import styles from '@/app/(website)/Personas.module.css';
-import ContentImage from '@/components/ContentImage';
 
 const items = [
   {
     title: 'Content Marketing',
     description:
       'Measure content performance, track engagement metrics, and optimize your content strategy.',
-    image: '/images/creators.jpg',
+    image: 'https://static.umami.dev/website/images/creators.jpg',
   },
   {
     title: 'Performance Marketing',
     description:
       'Analyze campaign effectiveness, track conversions, and optimize marketing ROI across various channels.',
-    image: '/images/marketers.jpg',
+    image: 'https://static.umami.dev/website/images/marketers.jpg',
   },
   {
     title: 'Product Marketing',
     description:
       'Gain insights into feature adoption, user behavior, and customer journey to inform your product positioning and go-to-market strategies.',
-    image: '/images/agencies.jpg',
+    image: 'https://static.umami.dev/website/images/agencies.jpg',
   },
 ];
 
@@ -35,7 +34,7 @@ export default function Personas() {
           return (
             <div key={title} className={styles.card}>
               <div className={styles.image}>
-                <ContentImage src={image} alt="" />
+                <img src={image} alt="" />
               </div>
               <TextBlock size="sm" align="center">
                 <h1>{title}</h1>

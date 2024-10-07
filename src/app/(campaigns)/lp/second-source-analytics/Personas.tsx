@@ -1,6 +1,5 @@
 'use client';
 import TextBlock from '@/components/TextBlock';
-import ContentImage from '@/components/ContentImage';
 import styles from '@/app/(website)/Personas.module.css';
 
 const items = [
@@ -8,18 +7,18 @@ const items = [
     title: 'Startups',
     description:
       'Measure everything you need to help improve your website when you’re just getting your business started.',
-    image: '/images/creators.jpg',
+    image: 'https://static.umami.dev/website/images/creators.jpg',
   },
   {
     title: 'Established',
     description: 'Easily measure the effectiveness of your sales and marketing campaigns.',
-    image: '/images/marketers.jpg',
+    image: 'https://static.umami.dev/website/images/marketers.jpg',
   },
   {
     title: 'Enterprise',
     description:
       'Large corporations and teams of all sizes can run Umami alongside any existing website analytics solution.',
-    image: '/images/agencies.jpg',
+    image: 'https://static.umami.dev/website/images/agencies.jpg',
   },
 ];
 
@@ -34,7 +33,7 @@ export default function Personas() {
           return (
             <div key={title} className={styles.card}>
               <div className={styles.image}>
-                <ContentImage src={image} alt="" />
+                <img src={image} alt="" />
               </div>
               <TextBlock size="sm" align="center">
                 <h1>{title}</h1>
