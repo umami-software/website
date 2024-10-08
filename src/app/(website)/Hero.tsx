@@ -1,8 +1,9 @@
 'use client';
 import LinkButton from '@/components/LinkButton';
 import TextBlock from '@/components/TextBlock';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
+import ContentImage from '@/components/ContentImage';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -45,7 +46,7 @@ export default function Hero() {
         <div>Effortless setup and use</div>
       </div>
       <div className={styles.image}>
-        <img src="/images/app.jpg" />
+        <ContentImage src="/images/app.jpg" />
       </div>
     </div>
   );

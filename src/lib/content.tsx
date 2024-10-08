@@ -16,7 +16,7 @@ export const getFiles = cache(async (folder: string) => {
         const postContent = await fs.readFile(file, 'utf8');
         const { data, content } = matter(postContent);
 
-        const id = file.replace('.mdx', '').replace(`${dir}/`, '');
+        const id = file.replace('.mdx', '').replace(dir, '').replace(/\\/g, '/').replace(/^\//, '');
         const anchors: { name: string; id: string; size: number }[] = [];
         const body = content
           .split('\n')

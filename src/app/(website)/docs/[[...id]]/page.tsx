@@ -42,8 +42,6 @@ export default async function ({ params: { id = [] } }: { params: { id: string[]
     return group;
   });
 
-  console.log('GROUPPP', name, group);
-
   return (
     <div className={styles.page}>
       <div className={styles.content}>
