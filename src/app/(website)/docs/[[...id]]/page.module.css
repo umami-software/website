@@ -5,6 +5,17 @@
   position: relative;
 }
 
+.group {
+  font-size: 16px;
+  color: var(--primary400);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
 @media screen and (max-width: 992px) {
   .page {
     grid-template-columns: 1fr;

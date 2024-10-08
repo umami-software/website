@@ -414,7 +414,7 @@
     "v1": [
       {
         "label": "Basics",
-        "items": [
+        "pages": [
           {
             "label": "About",
             "url": "/docs/v1/about"
@@ -471,7 +471,7 @@
       },
       {
         "label": "Advanced",
-        "items": [
+        "pages": [
           {
             "label": "Tracker configuration",
             "url": "/docs/v1/tracker-configuration"
@@ -492,7 +492,7 @@
       },
       {
         "label": "Guides",
-        "items": [
+        "pages": [
           {
             "label": "Hosting",
             "url": "/docs/v1/hosting"
