@@ -10,5 +10,5 @@ export interface Post {
 }
 
 export async function getPost(id: string) {
-  return getFile(id, 'blog');
+  return getFile(id, './src/docs/content/blog');
 }

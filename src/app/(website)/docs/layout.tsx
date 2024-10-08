@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import Nav from './Nav';
+import Nav from './components/Nav';
+import Tabs from './components/Tabs';
 import styles from './layout.module.css';
-import Header from './Header';
 
 export const metadata: Metadata = {
   title: 'Docs',
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function DocsLayout({ children }) {
   return (
     <>
-      <Header />
+      <Tabs />
       <section className={styles.docs}>
         <Nav />
         <article className={styles.content}>{children}</article>

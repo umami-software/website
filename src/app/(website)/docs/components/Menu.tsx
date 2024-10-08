@@ -2,14 +2,13 @@
 import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import config from '@/content/docs/config.json';
+import config from '../config.json';
 import styles from './Menu.module.css';
 
 const { tabs, navigation } = config;
 
 export default function Menu({ onClick }: { onClick?: () => void }) {
   const pathname = usePathname();
-
   const tab = tabs.find(({ url, name }) => (name !== 'docs' ? pathname.startsWith(url) : false));
   const menu = navigation[tab?.name || 'docs'];
 

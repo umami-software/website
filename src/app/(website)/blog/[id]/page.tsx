@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import { format } from 'date-fns';
 import Link from 'next/link';
-import { getPost } from '@/lib/blog';
+import { getFile } from '@/lib/content';
 import Markdown from '@/components/Markdown';
 import styles from './page.module.css';
+
+const FOLDER = 'src/content/blog';
 
 type Props = {
   params: { id: string };
@@ -12,7 +14,7 @@ type Props = {
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = params;
 
-  const post = await getPost(id);
+  const post = await getFile(id, FOLDER);
 
   return {
     title: {
@@ -24,7 +26,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
 export default async function ({ params }: Props) {
   const { id } = params;
-  const post = await getPost(id);
+  const post = await getFile(id, FOLDER);
 
   if (!post) {
     return null;

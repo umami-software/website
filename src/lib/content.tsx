@@ -1,20 +1,22 @@
 import { cache } from 'react';
 import matter from 'gray-matter';
+import recursive from 'recursive-readdir';
 import path from 'path';
 import fs from 'fs/promises';
 import { firstBy } from 'thenby';
 
 export const getFiles = cache(async (folder: string) => {
-  const dir = path.resolve(`./src/content/${folder}`);
-  const posts = await fs.readdir(dir);
+  const dir = path.resolve(folder);
+  const files = await recursive(dir);
 
   return Promise.all(
-    posts
+    files
       .filter(file => path.extname(file) === '.mdx')
       .map(async file => {
-        const postContent = await fs.readFile(path.resolve(dir, file), 'utf8');
+        const postContent = await fs.readFile(file, 'utf8');
         const { data, content } = matter(postContent);
 
+        const id = file.replace('.mdx', '').replace(`${dir}/`, '');
         const anchors: { name: string; id: string; size: number }[] = [];
         const body = content
           .split('\n')
@@ -35,7 +37,7 @@ export const getFiles = cache(async (folder: string) => {
 
         return {
           ...data,
-          id: file.replace('.mdx', ''),
+          id,
           body,
           anchors,
         } as any;
@@ -45,6 +47,8 @@ export const getFiles = cache(async (folder: string) => {
 
 export async function getFile(id: string, folder: string) {
   const files = await getFiles(folder);
+
+  console.log({ id, folder, ids: files.map(file => file.id) });
 
   return files.find(file => file?.id === id);
 }

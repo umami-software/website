@@ -1,15 +1,18 @@
 import { Metadata } from 'next';
-import PageLinks from '@/app/(website)/docs/[[...id]]/PageLinks';
-import { getDoc } from '@/lib/docs';
+import { getFile } from '@/lib/content';
 import Markdown from '@/components/Markdown';
+import PageLinks from '../components/PageLinks';
 import styles from './page.module.css';
+
+const FOLDER = 'src/content/docs';
 
 export async function generateMetadata({
   params: { id },
 }: {
   params: { id: string[] };
 }): Promise<Metadata> {
-  const doc = await getDoc(id?.join('/'));
+  const name = id?.length ? id.join('/') : 'index';
+  const doc = await getFile(name, FOLDER);
 
   return {
     title: {
@@ -20,7 +23,8 @@ export async function generateMetadata({
 }
 
 export default async function ({ params: { id = [] } }: { params: { id: string[] } }) {
-  const doc = await getDoc(id?.join('/'));
+  const name = id?.length ? id.join('/') : 'index';
+  const doc = await getFile(name, FOLDER);
 
   if (!doc) {
     return <h1>Page not found</h1>;
