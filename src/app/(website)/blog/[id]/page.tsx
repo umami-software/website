@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
+import path from 'node:path';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import { getFile } from '@/lib/content';
 import Markdown from '@/components/Markdown';
 import styles from './page.module.css';
 
-const FOLDER = 'src/content/blog';
+const FOLDER = path.resolve(process.cwd(), './src/content/blog');
 
 type Props = {
   params: { id: string };

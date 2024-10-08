@@ -48,8 +48,6 @@ export const getFiles = cache(async (folder: string) => {
 export async function getFile(id: string, folder: string) {
   const files = await getFiles(folder);
 
-  console.log({ id, folder, ids: files.map(file => file.id) });
-
   return files.find(file => file?.id === id);
 }
 

@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
+import path from 'node:path';
 import { getFile } from '@/lib/content';
 import Markdown from '@/components/Markdown';
 import PageLinks from '../components/PageLinks';
 import styles from './page.module.css';
 
-const FOLDER = 'src/content/docs';
+const FOLDER = path.resolve(process.cwd(), './src/content/docs');
 
 export async function generateMetadata({
   params: { id },
