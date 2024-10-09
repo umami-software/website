@@ -10,13 +10,18 @@
 .docs h1 {
   font-size: 32px;
   font-weight: 800;
-  letter-spacing: -2px;
+  letter-spacing: -0.025em;
   margin: 0 0 20px 0;
 }
 
 .docs h2 {
-  font-weight: 800;
-  letter-spacing: -1px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.docs h3 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 .docs img {

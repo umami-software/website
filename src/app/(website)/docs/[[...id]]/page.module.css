@@ -16,6 +16,10 @@
   letter-spacing: -0.025em;
 }
 
+.description {
+  color: var(--font-color300);
+}
+
 @media screen and (max-width: 992px) {
   .page {
     grid-template-columns: 1fr;

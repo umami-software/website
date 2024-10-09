@@ -124,6 +124,10 @@
         "group": "Contributing",
         "pages": [
           {
+            "label": "Code of conduct",
+            "url": "/docs/code-of-conduct"
+          },
+          {
             "label": "Languages",
             "url": "/docs/languages"
           }
