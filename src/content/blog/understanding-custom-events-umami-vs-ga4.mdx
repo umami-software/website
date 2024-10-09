@@ -1,0 +1,126 @@
+---
+title: Understanding Custom Events - Umami vs. Google Analytics 4
+description: Data can drive improvements in user experience, inform product development roadmaps, and ultimately contribute to business growth.
+author: Nick Andrews
+date: 2024-10-04
+---
+
+Custom events such as button clicks, form submissions, video plays, purchases, or any other user action you can think of,
+is critical data to track so you can gain insight into how users engage with your website or application. This data can
+drive improvements in user experience, inform product development roadmaps, and ultimately contribute to business growth.
+
+This piece compares the custom event tracking capabilities of Umami and Google Analytics (GA4), explores how each platform
+approaches custom event tracking, the setup processes, data analysis tools, and more.
+
+# Understanding Custom Events
+
+Let's clarify what we mean by custom events. In the context of web analytics, and what we will be referring to in this blog post, custom events are user interactions that you specifically define and track. Unlike standard events (such as page views) that are automatically tracked by most analytics platforms (including both GA4 and Umami), custom events require you to set up tracking for specific actions that are important to your business.
+
+Note that GA4 does automatically collect certain events beyond pageviews that fall into what most would consider a custom event category such as button clicks, video views, form submits, etc. However, GA4 does not do a perfect job here, and explicitly creating your own custom events is recommended. For example, form submissions can be processed in a million different ways, and GA4 might not capture them correctly via its automatic events capture. Do a Google search for “ga4 form submission automatic events does not work,” and you’ll find a lot of complaints. The point is it’s not perfect, so don’t leave it to chance and manually configure it. You can review their documentation for more information on GA4’s automatically collected events.
+
+# Setting Up Custom Event Tracking
+
+## Umami
+
+Once you've installed the Umami script on your site, you can start tracking custom events in two ways: using the data attributes property or using JavaScript. Umami's approach is simple, flexible, and you can track any type of custom event this way.
+
+Even without a technical background, setting up custom events in Umami is easy so long as you have access to the code portion of your website. Refer to our [event tracking documentation](https://umami.is/docs/track-events) for detailed instructions on setting up custom events using Umami.
+
+## GA4
+
+GA4 also allows for custom event tracking, but the setup process is a bit more involved. You might get lucky and have some of your custom events captured automatically. Alternatively, you can implement a custom event in GA4 a few different ways, depending on how you set up your website or app. The options include gtag.js (for websites), Tag Manager (for websites), or Google Analytics for Firebase (for mobile apps).
+
+The implementation details for custom events in GA4 are different depending on how you set up your website or app and will need to refer to the developer documentation for more details. Without a technical background, this can get confusing.
+
+# Analyzing Custom Event Data
+
+## Umami
+
+You can access a summary of all your custom events from the Umami dashboard using the Events screen. You can see event counts broken out by event for a timeframe that you define. In addition to the Events screen, many of Umami’s custom reporting tools have the ability to report on custom events. For example, the Goals report can incorporate custom event data into its reporting so you can set custom goal tracking reports for specific custom events. The Journey and Funnel reports can also integrate custom event data, allowing you to slice your data through the lens of custom events.
+
+Jumping back to the Events Screen, if you scroll down a little from the main Events chart, you will see a feature called Activity. Activity is a stream of all real-time custom events being triggered and page views happening on your website or app. You can click on the user's profile picture associated with the custom event to learn more about that user and their session that triggered the event.
+
+## GA4
+
+After implementing a custom event in GA4, you can use the Events report in the Reports section to view your data. This report displays the event frequency and other relevant information within your specified date range.
+
+You can select an event name to access a detailed report. This expanded view provides parameter specifics, demographic data about users who triggered the event, and metrics on how many users activated each event and its associated parameters.
+
+# Data Sampling
+
+What exactly is data sampling? Data sampling is a technique that analyzes a subset of data to make inferences about the entire dataset. In regards to website analytics, analytics tools can use data sampling (GA4 in some cases) in order to save memory and resources. So, what you see in GA4 in some cases might only be an inference based on a subset of your data, which might not provide 100% accurate results.
+
+## Umami
+
+Umami does not use data sampling for custom events. This means that when you're looking at your reports, you're seeing 100% of your custom event data, not just a sample.
+
+## GA4
+
+While GA4 doesn't use sampling for most standard reports, it does use sampling for more complex queries in tools like Exploration. This means that for advanced analyses, you might be working with only a subset of your data.
+
+In their own words, “In Google Analytics, data sampling may occur when the number of events used to create a report, exploration, or request exceeds the quota limit for your property. When this happens, Analytics uses a portion of the data and then scales up to provide directionally accurate results that are representative of all your data.”
+
+# Privacy Considerations
+
+Privacy has become an important consideration in web analytics and in business in general. This is particularly true when implementing custom event tracking, as you may be collecting detailed information about user behavior.
+
+## Umami
+
+Umami takes a privacy-first approach to analytics. Umami doesn't use cookies to track users, which means you don't need to show a cookie consent banner. By default, Umami doesn't collect any personal data about your users. Umami offers the option to self-host, giving you complete control over your data. With Umami, you own your data entirely. It's not used for any other purposes or shared with third parties. This approach can be good if you're operating in regions with strict data protection laws, such as areas covered by GDPR or CCPA.
+
+## GA4
+
+GA4, while making improvements in privacy compared to Universal Analytics (the old version of Google Analytics), still collects more data by default. GA4 uses first-party cookies to track users across sessions. GA4 collects IP addresses by default, although this can be disabled. By default, GA4 shares data with Google to improve their services, although this can be adjusted in the settings. Data is stored on Google's servers, which may have implications for data ownership and compliance with certain privacy regulations. These factors may require more careful consideration and potentially more complex setup to ensure compliance with privacy regulations.
+
+# Custom Event Tracking for Startups: Umami vs GA4
+
+For startups, choosing the right analytics platform is crucial. You need a solution that provides valuable insights without overwhelming your team or your budget. Let's compare how startups might use Umami and GA4 for custom event tracking, and why Umami often emerges as the better choice.
+
+# Ease of Implementation
+
+Umami's setup process is straightforward. Once you've added the Umami script to your site, you can start tracking custom events immediately. The syntax for tracking events is simple and intuitive, requiring minimal or no time from a developer. If you have access to the code portion of your website, you can use the documentation to guide you on how set up custom events. There's no need for additional configuration in a separate interface to make use of custom event parameters (i.e., having to set up Google Tag Manager).
+
+GA4, on the other hand, has a steeper learning curve with a lot of documentation aimed at developers. While basic event tracking is relatively simple, making full use of custom parameters requires additional setup in the GA4 interface. The more complex features of GA4 often require significant time investment to understand and implement effectively. For a startup looking to quickly implement meaningful analytics, Umami's simplicity can be a significant advantage.
+
+# Flexibility and Scalability
+
+Startups often pivot and evolve rapidly, and their analytics needs can change just as quickly. Umami offers great flexibility. There are no limits on the types of custom events you can track. As your startup grows, you can easily expand your event tracking without worrying about hitting limits or incurring additional costs.
+
+GA4 has some limitations that could become problematic as a startup scales. The limit of [500 distinct events per property](https://support.google.com/analytics/answer/9267744?sjid=6324832446679205096-NA) could become restrictive as your tracking needs grow more complex. GA4 also has [limitations on character counts for naming events](https://support.google.com/analytics/answer/9267744?hl=en) with which you will want to familiarize yourself with.
+
+# Data Accuracy and Completeness
+
+Umami provides 100% data collection without sampling, ensuring you have complete data for analysis. It also offers real-time data, allowing for immediate insights and quick response to trends. You can also use the Events screen to instantly analyze your custom events in real-time or for a given time period that you define.
+
+GA4's approach may pose challenges. Data sampling in more complex analyses could lead to incomplete insights, especially problematic when dealing with smaller data sets typical of many startups.
+
+# Privacy and Data Ownership
+
+Umami's privacy-first approach offers several advantages. There's no need for cookie consent banners, simplifying your user experience. Umami offers full data ownership and the option for self-hosting, which can be appealing to privacy-conscious users and investors. It also allows for simpler compliance with privacy regulations like GDPR and CCPA, as Umami is compliant by default.
+
+GA4's data practices may present challenges. The need for cookie consent could impact user experience and potentially conversion rates. Data sharing with Google might be a concern for some users or in certain industries. Compliance with strict privacy regulations may require more complex setup and management.
+
+# Cost Considerations
+
+For cash-conscious startups, the cost of analytics can be a significant factor. Umami is open-source and can be self-hosted for free, and it also offers a free tier for its Cloud version allowing you to just sign up on the website and get started. Even Umami's paid cloud offering is often more cost-effective than equivalent services, with predictable pricing as you scale.
+
+GA4, while free to start with, may incur costs as you grow. While the basic GA4 is free, more advanced features and higher data volumes may require upgrading to paid Google Analytics solutions. The potential need for a data analytics specialist to make full use of GA4's advanced features could present large costs such as hiring a data people and accruing technical debt.
+
+# Why Umami is Often the Better Choice for Startups
+
+We might be biased, but we hope you also see why Umami can be a better choice for startups in regards to custom-event tracking. So many default to Google Analytics because it is what is known, but that doesn’t mean it’s the best choice and can frequently lead to getting bogged down due to its many over-complexities.
+
+We have additional resource that startups can explore that touch on different aspects of Umami:
+
+- [Analytics for Startups - Why GA4 is not ideal](https://umami.is/blog/analytics-for-startups)
+- [Umami for Startup Performance Marketing](https://umami.is/blog/umami-for-startup-performance-marketing)
+- [Analytics Needs at Different Startup Stages](https://umami.is/blog/analytics-needs-at-different-startup-stages)
+- [The Lean Startup Approach to Website Analytics](https://umami.is/blog/the-lean-startup-approach-to-website-analytics)
+
+The best analytics tool is the one that you'll actually use effectively. Whether you choose Umami, GA4, or another platform, the key is to implement custom event tracking that provides actionable insights for your organization.
+
+Are you ready to get started with Umami? You can try it free to get a feel for the user interface and set up custom events. Umami can run alongside your existing website analytics tool without disruption, allowing you to test.
+
+If you have any questions about Umami, please contact our support team at support@umami.is
+
+
