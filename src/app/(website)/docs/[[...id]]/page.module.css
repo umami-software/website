@@ -7,6 +7,7 @@
 
 .group {
   font-size: 16px;
+  font-weight: 600;
   color: var(--primary400);
 }
 
@@ -18,6 +19,14 @@
 
 .description {
   color: var(--font-color300);
+}
+
+.content a {
+  color: var(--primary400);
+}
+
+.content a:hover {
+  color: var(--primary600);
 }
 
 @media screen and (max-width: 992px) {

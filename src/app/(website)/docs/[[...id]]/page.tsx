@@ -3,8 +3,8 @@ import path from 'node:path';
 import { getFile } from '@/lib/content';
 import Markdown from '@/components/Markdown';
 import PageLinks from '../components/PageLinks';
-import styles from './page.module.css';
 import config from '../config.json';
+import styles from './page.module.css';
 
 const FOLDER = path.resolve(process.cwd(), './src/content/docs');
 

@@ -23,12 +23,13 @@
   gap: 5px;
 }
 
-.links a {
+.nav .links a {
   display: block;
   color: var(--base700);
+  text-wrap: nowrap;
 }
 
-.links a:hover {
+.nav .links a:hover {
   color: var(--primary400);
 }
 
@@ -41,19 +42,19 @@
 }
 
 .indent-3 {
-  margin-left: 5px;
-}
-
-.indent-4 {
   margin-left: 10px;
 }
 
+.indent-4 {
+  margin-left: 20px;
+}
+
 .indent-5 {
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
 .indent-6 {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .selected {
