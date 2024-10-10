@@ -1,9 +1,20 @@
 import type { Metadata } from 'next';
-import type { Post } from '@/lib/blog';
 import PageHeader from '@/components/PageHeader';
 import Card from './components/Card';
 import styles from './page.module.css';
 import { getFiles } from '@/lib/content';
+import { firstBy } from 'thenby';
+
+interface Post {
+  id: string;
+  meta: {
+    title: string;
+    description: string;
+    date: string;
+    author: string;
+    body: string;
+  };
+}
 
 export default async function () {
   const posts = await getFiles('src/content/blog');
@@ -15,9 +26,19 @@ export default async function () {
       </PageHeader>
       <div className={styles.posts}>
         {posts
-          ?.filter(n => n)
-          ?.map(({ id, title, description, date }: Post) => {
-            return <Card key={id} id={id} title={title} description={description} date={date} />;
+          ?.filter((n: Post) => n)
+          ?.sort(firstBy((v1: Post, v2: Post) => +new Date(v2.meta.date) - +new Date(v1.meta.date)))
+          ?.map((post: Post) => {
+            const { title, description, date } = post.meta;
+            return (
+              <Card
+                key={post.id}
+                id={post.id}
+                title={title}
+                description={description}
+                date={date}
+              />
+            );
           })}
       </div>
     </article>
