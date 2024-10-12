@@ -8,10 +8,11 @@ import '@fontsource/inter/400.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
 import '@fontsource/jetbrains-mono/400.css';
-import 'react-basics/dist/styles.css';
 import 'styles/github-dark.css';
 import 'styles/variables.css';
 import 'styles/index.css';
+import '@umami/react-zen/dist/zen.css';
+import '@umami/react-zen/dist/styles.css';
 
 export default function RootLayout({ children }) {
   return (
@@ -26,11 +27,6 @@ export default function RootLayout({ children }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-        <script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="712938ae-f6ba-4575-9b23-8aaa99aeb121"
-        ></script>
         {process.env.NODE_ENV === 'production' && (
           <script
             defer
