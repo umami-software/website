@@ -1,34 +1,34 @@
-.text > h1 {
+.text > *:first-child {
   font-size: max(32px, min(5vw, 48px));
   font-weight: 800;
   letter-spacing: -0.05em;
-  line-height: 1.2;
+  margin: 4rem;
 }
 
-.text.xl > h1 {
+.text.xl > *:first-child {
   font-size: max(48px, min(5vw, 76px));
 }
 
-.text.lg > h1 {
+.text.lg > *:first-child {
   font-size: max(48px, min(5vw, 64px));
 }
 
-.text.md > h1 {
+.text.md > *:first-child {
   font-size: max(32px, min(5vw, 48px));
 }
 
-.text.sm > h1 {
+.text.sm > *:first-child {
   font-size: max(18px, min(2vw, 24px));
 }
 
-.text > h2 {
+.text > *:nth-child(1) {
   font-size: max(18px, min(2vw, 24px));
   letter-spacing: -0.05em;
 }
 
-.text > p {
-  color: var(--base700);
-  font-size: max(14px, min(2vw, 16px));
+.text > *:nth-child(2) {
+  color: var(--font-muted-color);
+  font-size: max(16px, min(2vw, 20px));
   font-weight: 400;
 
   @media (max-width: 600px) {
@@ -38,11 +38,11 @@
   }
 }
 
-.text.xl > p {
+.text.xl > *:nth-child(2) {
   font-size: max(18px, min(2vw, 22px));
 }
 
-.text.lg > p {
+.text.lg > *:nth-child(2) {
   font-size: max(16px, min(2vw, 18px));
 }
 

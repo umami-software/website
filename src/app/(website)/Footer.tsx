@@ -1,7 +1,7 @@
 'use client';
-import { Container } from 'react-basics';
 import Link from 'next/link';
 import classNames from 'classnames';
+import Container from '@/components/Container';
 import CompanyLogo from '@/components/CompanyLogo';
 import SocialMedia from '@/components/SocialMedia';
 import styles from './Footer.module.css';

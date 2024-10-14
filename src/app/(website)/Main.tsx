@@ -1,5 +1,5 @@
 'use client';
-import { Container } from 'react-basics';
+import Container from '@/components/Container';
 import styles from './Main.module.css';
 
 export default function Main({ children }) {

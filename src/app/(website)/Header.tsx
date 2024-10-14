@@ -1,14 +1,16 @@
 'use client';
-import { Container, Popup, PopupTrigger, Text, useScroll, Icon, Icons } from 'react-basics';
+import { Dialog, Button, Text, Icon, Icons, Row } from '@umami/react-zen';
 import Link from 'next/link';
 import AnnouncementBanner from './AnnouncementBanner';
 import CompanyLogo from '@/components/CompanyLogo';
 import HamburgerButton from '@/components/HamburgerButton';
-import LinkButton from '@/components/LinkButton';
 import useQueryString from '@/components/hooks/useQueryString';
 import { GITHUB_STARS, GITHUB_URL } from '@/lib/constants';
-import GitHub from 'assets/github.svg';
+import useScroll from '@/components/hooks/useScroll';
+import Container from '@/components/Container';
+import GitHub from '@/assets/github.svg';
 import styles from './Header.module.css';
+import { useState } from 'react';
 
 const mobileMenuItems = [
   {
@@ -42,7 +44,6 @@ const mobileMenuItems = [
 ];
 
 export default function Header() {
-  const query = useQueryString({ ref: 'umami-nav-header' });
   useScroll();
 
   return (
@@ -57,60 +58,81 @@ export default function Header() {
         </a>
       </AnnouncementBanner>
       <Container>
-        <div className={styles.row}>
-          <div className={styles.title}>
-            <CompanyLogo />
-          </div>
-          <nav className={styles.links}>
-            <PopupTrigger action="hover">
-              <div className={styles.dropdown}>
-                <Text>Product</Text>
-                <Icon>
-                  <Icons.ChevronDown />
-                </Icon>
-              </div>
-              <Popup>{close => <ProductMenu onClose={close} />}</Popup>
-            </PopupTrigger>
-            <Link href="/blog">Blog</Link>
-            <Link href="/docs" prefetch={false}>
-              Docs
-            </Link>
-            <Link href="/pricing">Pricing</Link>
-          </nav>
-          <div className={styles.buttons}>
-            <Link href={GITHUB_URL} target="_blank" className={styles.github}>
-              <Icon size="lg">
-                <GitHub />
-              </Icon>
-              <Text>{GITHUB_STARS}</Text>
-            </Link>
-            <Link
-              href={`https://cloud.umami.is/login${query}`}
-              className={styles.login}
-              data-umami-event="login-button-header"
-            >
-              Log in
-            </Link>
-            <LinkButton
-              href={`https://cloud.umami.is/signup${query}`}
-              variant="primary"
-              data-umami-event="signup-button-header"
-            >
-              Sign up
-            </LinkButton>
-          </div>
-          <div className={styles.hamburger}>
-            <HamburgerButton items={mobileMenuItems} />
-          </div>
-        </div>
+        <Row justifyContent="space-between">
+          <CompanyLogo />
+          <NavLinks />
+          <ActionLinks />
+        </Row>
       </Container>
     </header>
   );
 }
 
-const ProductMenu = ({ onClose }) => {
+const NavLinks = () => {
+  const [show, setShow] = useState(false);
+
   return (
-    <nav className={styles.menu} onClick={onClose}>
+    <Row alignItems="center" gap="lg">
+      <Row
+        gap="md"
+        onMouseEnter={() => setShow(true)}
+        onMouseLeave={() => setTimeout(() => setShow(false), 300)}
+      >
+        <Text>Product</Text>
+        <Icon rotate={90} size="xs">
+          <Icons.Chevron />
+        </Icon>
+        {show && (
+          <Dialog className={styles.dialog}>
+            <ProductMenu />
+          </Dialog>
+        )}
+      </Row>
+      <Link href="/blog">Blog</Link>
+      <Link href="/docs" prefetch={false}>
+        Docs
+      </Link>
+      <Link href="/pricing">Pricing</Link>
+    </Row>
+  );
+};
+
+const ActionLinks = () => {
+  const query = useQueryString({ ref: 'umami-nav-header' });
+
+  return (
+    <Row alignItems="center" gap="md">
+      <Link href={GITHUB_URL} target="_blank">
+        <Row alignItems="center" gap="md">
+          <Icon size="md">
+            <GitHub />
+          </Icon>
+          <Text>{GITHUB_STARS}</Text>
+        </Row>
+      </Link>
+      <Button variant="quiet" asChild>
+        <Link href={`https://cloud.umami.is/login${query}`} data-umami-event="login-button-header">
+          Log in
+        </Link>
+      </Button>
+      <Button variant="primary" asChild>
+        <Link
+          href={`https://cloud.umami.is/signup${query}`}
+          data-umami-event="signup-button-header"
+        >
+          Sign up
+        </Link>
+      </Button>
+      <div className={styles.hamburger}>
+        <HamburgerButton items={mobileMenuItems} />
+      </div>
+    </Row>
+  );
+};
+
+const ProductMenu = () => {
+  return (
+    <nav className={styles.menu}>
       <div className={styles.column}>
         <header>Analytics</header>
         <Link href="/features">Features</Link>

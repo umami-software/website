@@ -18,6 +18,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  scrollbar-gutter: stable;
 }
 
 *,
