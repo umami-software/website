@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
   return {
     title: {
-      absolute: `${post?.title} – Umami`,
+      absolute: `${post?.meta?.title} – Umami`,
       default: 'Blog – Umami',
     },
   };
@@ -33,14 +33,14 @@ export default async function ({ params }: Props) {
     return null;
   }
 
+  const { title, date, author } = post.meta || {};
+
   return (
     <article className={styles.blog}>
-      <div className={styles.title}>{post?.title}</div>
+      <div className={styles.title}>{title}</div>
       <div className={styles.info}>
-        <div className={styles.date}>
-          {post?.date && format(new Date(post?.date as string), 'PP')}
-        </div>
-        <div className={styles.author}>Posted by {post?.author}</div>
+        <div className={styles.date}>{post?.date && format(new Date(date as string), 'PP')}</div>
+        <div className={styles.author}>Posted by {author}</div>
       </div>
       <Markdown>{post?.body}</Markdown>
       <Link href="/blog" className={styles.back}>

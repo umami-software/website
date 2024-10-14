@@ -29,14 +29,14 @@
   "navigation": {
     "docs": [
       {
-        "group": "Get started",
+        "group": "Getting started",
         "pages": [
           {
             "label": "Overview",
             "url": "/docs"
           },
           {
-            "label": "Install",
+            "label": "Installation",
             "url": "/docs/install"
           },
           {
@@ -136,7 +136,7 @@
     ],
     "api": [
       {
-        "group": "Get started",
+        "group": "Getting started",
         "pages": [
           {
             "label": "Overview",
@@ -197,7 +197,7 @@
     ],
     "reports": [
       {
-        "group": "Get started",
+        "group": "Getting started",
         "pages": [
           {
             "label": "Overview",
@@ -237,7 +237,7 @@
     ],
     "guides": [
       {
-        "group": "Get started",
+        "group": "Getting started",
         "pages": [
           {
             "label": "Overview",
@@ -330,7 +330,7 @@
     ],
     "cloud": [
       {
-        "group": "Get started",
+        "group": "Getting started",
         "pages": [
           {
             "label": "Overview",
@@ -428,7 +428,7 @@
             "url": "/docs/v1/getting-started"
           },
           {
-            "label": "Install",
+            "label": "Installation",
             "url": "/docs/v1/install"
           },
           {

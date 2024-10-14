@@ -3,8 +3,8 @@ import path from 'node:path';
 import { getFile } from '@/lib/content';
 import Markdown from '@/components/Markdown';
 import PageLinks from '../components/PageLinks';
-import styles from './page.module.css';
 import config from '../config.json';
+import styles from './page.module.css';
 
 const FOLDER = path.resolve(process.cwd(), './src/content/docs');
 
@@ -18,7 +18,7 @@ export async function generateMetadata({
 
   return {
     title: {
-      absolute: `${doc?.title} – Umami`,
+      absolute: `${doc?.meta?.title} – Umami`,
       default: 'Umami',
     },
   };
@@ -46,8 +46,8 @@ export default async function ({ params: { id = [] } }: { params: { id: string[]
     <div className={styles.page}>
       <div className={styles.content}>
         <div className={styles.group}>{group?.group}</div>
-        <h1>{doc?.title}</h1>
-        <p className={styles.description}>{doc?.description}</p>
+        <h1>{doc?.meta?.title}</h1>
+        <p className={styles.description}>{doc?.meta?.description}</p>
         <Markdown>{doc?.body}</Markdown>
       </div>
       <PageLinks items={doc?.anchors} offset={150} />

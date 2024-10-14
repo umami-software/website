@@ -11,8 +11,8 @@ export const getFiles = cache(async (folder: string) => {
 
   return Promise.all(
     files
-      .filter(file => path.extname(file) === '.mdx')
-      .map(async file => {
+      .filter((file: string) => path.extname(file) === '.mdx')
+      .map(async (file: string) => {
         const postContent = await fs.readFile(file, 'utf8');
         const { data, content } = matter(postContent);
 
@@ -36,7 +36,7 @@ export const getFiles = cache(async (folder: string) => {
           .join('\n');
 
         return {
-          ...data,
+          meta: data,
           id,
           body,
           anchors,
