@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: var(--base-color-50);
 }
 
 .toggle {
@@ -14,7 +13,7 @@
   align-items: center;
   justify-content: space-around;
   font-size: 14px;
-  background: var(--base-color-50);
+  background: var(--background-color);
   border-radius: 5px;
   padding: 5px 0;
   border: 1px solid var(--base-color-300);
@@ -28,7 +27,7 @@
 
 .toggle a.active {
   color: var(--base-color-900);
-  background: var(--base-color-50);
+  background: var(--background-color);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -67,7 +66,7 @@
 
   .menu.show {
     display: grid;
-    background: var(--base-color-50);
+    background: var(--background-color);
     z-index: 100;
   }
 }

@@ -30,7 +30,7 @@
 }
 
 .nav .links a:hover {
-  color: var(--primary400);
+  color: var(--primary-bg-color);
 }
 
 .indent-1 {

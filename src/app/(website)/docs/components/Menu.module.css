@@ -34,18 +34,17 @@
 .menu .item a:visited,
 .menu .item a:active {
   display: block;
-  color: var(--base-color-700);
+  color: var(--font-muted-color);
   padding: 4px 20px;
 }
 
 .menu .item a:hover {
-  color: var(--primary400);
-  background: var(--base-color-50);
+  color: var(--primary-bg-color);
 }
 
 .menu .item.selected {
   font-weight: 600;
-  border-left: 2px solid var(--primary400);
+  border-left: 2px solid var(--primary-bg-color);
 }
 
 .menu .item.selected a {
@@ -54,7 +53,7 @@
 
 .menu::-webkit-scrollbar {
   width: 15px;
-  background: var(--base-color-50);
+  background: var(--background-color);
   display: none;
 }
 

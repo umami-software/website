@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
+import { firstBy } from 'thenby';
 import PageHeader from '@/components/PageHeader';
 import Card from './components/Card';
-import styles from './page.module.css';
 import { getFiles } from '@/lib/content';
-import { firstBy } from 'thenby';
+import styles from './page.module.css';
 
 interface Post {
   id: string;
@@ -22,7 +22,7 @@ export default async function () {
   return (
     <article>
       <PageHeader>
-        <h1>Blog</h1>
+        <div>Blog</div>
       </PageHeader>
       <div className={styles.posts}>
         {posts

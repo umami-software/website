@@ -16,6 +16,14 @@
   justify-content: center;
 }
 
+.header a:hover {
+  color: var(--base-color-950);
+}
+
+.header .signup:hover {
+  color: var(--primary-fg-color);
+}
+
 .links a:hover {
   text-decoration: underline solid var(--base-color-500);
   text-underline-offset: var(--spacing-3);

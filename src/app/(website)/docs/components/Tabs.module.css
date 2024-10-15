@@ -23,14 +23,14 @@
 }
 
 .header a:hover {
-  color: var(--primary400);
-  border-bottom: 2px solid var(--base-color-500);
+  color: var(--primary-bg-color);
+  border-bottom: 2px solid var(--base-color-400);
 }
 
 a.selected,
 a.selected:hover {
   color: var(--base-color-900);
-  border-bottom: 2px solid var(--blue800);
+  border-bottom: 2px solid var(--primary-bg-color);
   font-weight: 700;
 }
 

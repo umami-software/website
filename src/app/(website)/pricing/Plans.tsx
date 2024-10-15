@@ -1,5 +1,5 @@
 'use client';
-import { Button } from 'react-basics';
+import { Button } from '@umami/react-zen';
 import Checkmark from 'assets/checkmark.svg';
 import Link from 'next/link';
 import { CLOUD_URL } from '@/lib/constants';
@@ -60,7 +60,7 @@ export default function Plans() {
   return (
     <div className={styles.plans}>
       {plans.map(
-        ({ name, price, interval, description, features, url, button, variant = 'secondary' }) => {
+        ({ name, price, interval, description, features, url, button, variant = 'outline' }) => {
           return (
             <div key={name} className={styles.plan}>
               <div>

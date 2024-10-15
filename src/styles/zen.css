@@ -1,6 +1,5 @@
 :root {
   /* Base values */
-
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
   --spacing-3: 1rem;
@@ -14,11 +13,21 @@
   --spacing-11: 7.5rem;
   --spacing-12: 10rem;
 
+  --gap-xs: 1px;
+  --gap-sm: 0.5rem;
+  --gap-md: 1rem;
+  --gap-lg: 4rem;
+  --gap-xl: 12rem;
+
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  --border-thin: 1px;
+  --border-medium: 2px;
+  --border-thick: 4px;
 
   --border-radius-sm: 0.125rem;
   --border-radius-md: 0.25rem;
@@ -59,7 +68,7 @@
   --inactive-bg-color: var(--base-color-400);
   --inactive-fg-color: var(--base-color-900);
 
-  /* Default settings */
+  /* Settings */
 
   --font-size: 14px;
 
@@ -76,14 +85,14 @@
 
   /* Theme settings */
 
-  --font-color: var(--base-color-900);
+  --font-color: var(--base-color-950);
   --font-muted-color: var(--base-color-500);
   --font-faded-color: var(--base-color-400);
 
   --background-color: #fff;
 
   --border-color: var(--base-color-300);
-  --border: 1px solid var(--border-color);
+  --border: var(--border-thin) solid var(--border-color);
 
   --primary-fg-color: var(--base-color-50);
   --primary-bg-color: var(--base-color-900);

@@ -3,6 +3,7 @@
   padding: 30px;
   border: 1px solid var(--base-color-300);
   border-radius: 8px;
+  gap: 10px;
 }
 
 .title {
@@ -10,19 +11,21 @@
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 1.5;
+  min-height: 90px;
 }
 
 .description {
-  color: var(--base-color-700);
+  color: var(--font-muted-color);
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
-  margin: 30px 0;
+  min-height: 160px;
 }
 
-.button {
+.link {
   justify-self: start;
 }
 
 .date {
-  font-size: var(--font-size-sm);
+  color: var(--font-muted-color);
+  line-height: 28px;
 }

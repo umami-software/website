@@ -5,11 +5,11 @@ import Logo from 'assets/logo.svg';
 
 export default function CompanyLogo() {
   return (
-    <Row alignItems="center" gap="sm">
+    <Row alignItems="center" gap="md">
       <Icon size="sm">
         <Logo />
       </Icon>
-      <Text size="xl" weight="bold">
+      <Text size="lg" weight="bold">
         <Link href="/">umami</Link>
       </Text>
     </Row>
