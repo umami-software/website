@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  border-bottom: 1px solid var(--base50);
+  border-bottom: 1px solid transparent;
   backdrop-filter: saturate(180%) blur(12px);
   background: rgba(255, 255, 255, 0.75);
   z-index: 1000;
@@ -16,6 +16,11 @@
   justify-content: center;
 }
 
+.links a:hover {
+  text-decoration: underline solid var(--base-color-500);
+  text-underline-offset: var(--spacing-3);
+}
+
 .hamburger {
   position: absolute;
   right: 0;
@@ -24,34 +29,9 @@
   align-items: center;
 }
 
-.menu a {
-  padding: 8px 16px;
-}
-
-.menu a:hover {
-  color: var(--base900);
-  background: var(--base75);
-  border-radius: var(--border-radius);
-}
-
-.dialog {
-  position: absolute;
-  margin: auto;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  font-weight: 400;
-  min-width: 200px;
-}
-
 html:not([data-scroll='0']) .header {
   transition: all linear 0.6s;
-  border-bottom: 1px solid var(--base300);
+  border-bottom: 1px solid var(--base-color-300);
 }
 
 @media screen and (max-width: 1200px) {
@@ -71,12 +51,8 @@ html:not([data-scroll='0']) .header {
 }
 
 @media screen and (max-width: 768px) {
-  .row {
-    justify-content: space-between;
-  }
-
   .links,
-  .buttons {
+  .signup {
     display: none;
   }
 

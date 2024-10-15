@@ -6,7 +6,7 @@
 .features tr {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--base300);
+  border-bottom: 1px solid var(--base-color-300);
 }
 
 .features th,

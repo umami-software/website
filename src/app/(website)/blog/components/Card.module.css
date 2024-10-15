@@ -1,7 +1,7 @@
 .card {
   display: grid;
   padding: 30px;
-  border: 1px solid var(--base300);
+  border: 1px solid var(--base-color-300);
   border-radius: 8px;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .description {
-  color: var(--base700);
+  color: var(--base-color-700);
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
   margin: 30px 0;

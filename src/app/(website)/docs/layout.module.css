@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 240px 1fr;
   column-gap: 30px;
-  color: var(--base800);
+  color: var(--base-color-800);
   max-width: 100vw;
   position: relative;
 }

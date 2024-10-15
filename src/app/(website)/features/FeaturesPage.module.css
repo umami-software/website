@@ -10,7 +10,7 @@
 }
 
 .item {
-  background: var(--base75);
+  background: var(--base-color-50);
   border-radius: 8px;
   padding: 10px 20px;
 }
@@ -25,7 +25,7 @@
 }
 
 .cloud .item {
-  border: 1px solid var(--base400);
+  border: 1px solid var(--base-color-400);
 }
 
 @media screen and (max-width: 360px) {

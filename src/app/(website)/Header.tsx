@@ -1,5 +1,5 @@
 'use client';
-import { Dialog, Button, Text, Icon, Icons, Row } from '@umami/react-zen';
+import { Button, Text, Icon, Row } from '@umami/react-zen';
 import Link from 'next/link';
 import AnnouncementBanner from './AnnouncementBanner';
 import CompanyLogo from '@/components/CompanyLogo';
@@ -10,7 +10,6 @@ import useScroll from '@/components/hooks/useScroll';
 import Container from '@/components/Container';
 import GitHub from '@/assets/github.svg';
 import styles from './Header.module.css';
-import { useState } from 'react';
 
 const mobileMenuItems = [
   {
@@ -69,25 +68,9 @@ export default function Header() {
 }
 
 const NavLinks = () => {
-  const [show, setShow] = useState(false);
-
   return (
-    <Row alignItems="center" gap="lg">
-      <Row
-        gap="md"
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setTimeout(() => setShow(false), 300)}
-      >
-        <Text>Product</Text>
-        <Icon rotate={90} size="xs">
-          <Icons.Chevron />
-        </Icon>
-        {show && (
-          <Dialog className={styles.dialog}>
-            <ProductMenu />
-          </Dialog>
-        )}
-      </Row>
+    <Row className={styles.links} alignItems="center" gap="lg">
+      <Link href="/features">Features</Link>
       <Link href="/blog">Blog</Link>
       <Link href="/docs" prefetch={false}>
         Docs
@@ -102,7 +85,7 @@ const ActionLinks = () => {
 
   return (
     <Row alignItems="center" gap="md">
-      <Link href={GITHUB_URL} target="_blank">
+      <Link className={styles.github} href={GITHUB_URL} target="_blank">
         <Row alignItems="center" gap="md">
           <Icon size="md">
             <GitHub />
@@ -110,12 +93,12 @@ const ActionLinks = () => {
           <Text>{GITHUB_STARS}</Text>
         </Row>
       </Link>
-      <Button variant="quiet" asChild>
+      <Button className={styles.login} variant="quiet" asChild>
         <Link href={`https://cloud.umami.is/login${query}`} data-umami-event="login-button-header">
           Log in
         </Link>
       </Button>
-      <Button variant="primary" asChild>
+      <Button className={styles.signup} variant="primary" asChild>
         <Link
           href={`https://cloud.umami.is/signup${query}`}
           data-umami-event="signup-button-header"
@@ -127,38 +110,5 @@ const ActionLinks = () => {
         <HamburgerButton items={mobileMenuItems} />
       </div>
     </Row>
-  );
-};
-
-const ProductMenu = () => {
-  return (
-    <nav className={styles.menu}>
-      <div className={styles.column}>
-        <header>Analytics</header>
-        <Link href="/features">Features</Link>
-        <Link href="/docs" prefetch={false}>
-          Self-hosting
-        </Link>
-        <Link href="/docs/cloud">Cloud</Link>
-      </div>
-      <div className={styles.column}>
-        <header>Learn</header>
-        <Link href="/community">Community</Link>
-        <Link href="/developers">Developers</Link>
-        <Link
-          href="https://github.com/umami-software/umami/discussions"
-          target="_blank"
-          data-umami-event="github-discussions-link"
-        >
-          Discussions
-        </Link>
-      </div>
-      <div className={styles.column}>
-        <header>Used by</header>
-        <Link href="/product/creators">Creators</Link>
-        <Link href="/product/marketers">Marketers</Link>
-        <Link href="/product/agencies">Agencies</Link>
-      </div>
-    </nav>
   );
 };

@@ -12,9 +12,9 @@
   text-align: center;
   gap: 20px;
   padding: 40px 30px;
-  border: 1px solid var(--base300);
+  border: 1px solid var(--base-color-300);
   border-radius: 10px;
-  background: var(--base75);
+  background: var(--base-color-50);
 }
 
 .item header {
@@ -23,7 +23,7 @@
 }
 
 .item p {
-  color: var(--base700);
+  color: var(--base-color-700);
 }
 
 .item a {

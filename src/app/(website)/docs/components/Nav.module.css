@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: var(--base50);
+  background: var(--base-color-50);
 }
 
 .toggle {
@@ -14,21 +14,21 @@
   align-items: center;
   justify-content: space-around;
   font-size: 14px;
-  background: var(--base75);
+  background: var(--base-color-50);
   border-radius: 5px;
   padding: 5px 0;
-  border: 1px solid var(--base300);
+  border: 1px solid var(--base-color-300);
 }
 
 .nav .toggle a {
-  color: var(--base700);
+  color: var(--base-color-700);
   padding: 8px 16px;
   border-radius: 5px;
 }
 
 .toggle a.active {
-  color: var(--base900);
-  background: var(--base50);
+  color: var(--base-color-900);
+  background: var(--base-color-50);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -67,7 +67,7 @@
 
   .menu.show {
     display: grid;
-    background: var(--base50);
+    background: var(--base-color-50);
     z-index: 100;
   }
 }

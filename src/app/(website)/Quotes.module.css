@@ -12,11 +12,11 @@
   grid-template-columns: 60px 1fr;
   grid-template-rows: 40px 1fr;
   padding: 20px;
-  background: var(--base50);
-  border: 1px solid var(--base400);
+  background: var(--base-color-50);
+  border: 1px solid var(--base-color-400);
   border-radius: 10px;
   align-self: start;
-  box-shadow: 5px 5px 0 var(--base100);
+  box-shadow: 5px 5px 0 var(--base-color-100);
 }
 
 .pic {
@@ -50,7 +50,7 @@
 }
 
 .username {
-  color: var(--base600);
+  color: var(--base-color-600);
 }
 
 .logo {

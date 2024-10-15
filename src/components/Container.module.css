@@ -4,7 +4,7 @@
   flex: 1;
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--size600);
+  padding: 0 var(--spacing-6);
 }
 
 .container.fluid {

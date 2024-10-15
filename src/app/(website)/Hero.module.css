@@ -31,11 +31,11 @@
 }
 
 .features > div {
-  color: var(--base700);
+  color: var(--base-color-700);
   font-size: max(12px, min(2vw, 14px));
   font-weight: 600;
   text-align: center;
-  border: 1px solid var(--base300);
+  border: 1px solid var(--base-color-300);
   padding: 8px 16px;
   border-radius: 4px;
 }
@@ -48,11 +48,11 @@
 
 .image {
   display: block;
-  border: 10px solid var(--base100);
+  border: 10px solid var(--base-color-100);
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 20px;
-  box-shadow: 1px 1px 10px var(--base300);
+  box-shadow: 1px 1px 10px var(--base-color-300);
 }
 
 .image img {
