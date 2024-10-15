@@ -2,18 +2,59 @@
 title: Revenue Report
 ---
 
-Umami Revenue allows you to view your data in a variety of ways.
-Explore your data more extensively through the utilization of segments and filters.
+Umami Revenue allows you to helps track financial performance, measure ROI, and identify which pages or products
+generate the most income. It provides insights into customer behavior, helping optimize revenue sources
+and improve conversion rates. By linking revenue data with traffic and user behavior,
+businesses can make informed decisions to boost profitability and plan for future growth.
 
-The report works be segmenting your data into two main metrics **Visitors** and **Views**.
+The report works by aggregating **Revenue** and **Currency** data across a specified time period.
+
+## Configuring Revenue
+
+To start collecting revenue data, you will be leveraging tracking an event with dynamic data. This can be done through [tracker functions](https://umami.is/docs/tracker-functions#event-data)
+or [data attributes](https://umami.is/docs/track-events#using-data-attributes). The tracked event must be passed along with the two dynamic data
+properties `revenue` and `currency`. If a currency code (ISO 4217) is not recognized, the report will default to `USD`.
+
+### Tracker function
+
+```js
+umami.track('checkout-cart', { revenue: 19.99, currency: 'USD' });
+```
+
+When tracking events, the default properties are included in the payload.
+This is equivalent to running:
+
+```js
+umami.track(props => ({
+  ...props,
+  name: 'checkout-cart',
+  data: {
+    revenue: 19.99,
+    currency: 'USD',
+  },
+}));
+```
+
+### Data attributes
+
+Please note that revenue must be wrapped in quotes while using this method.
+
+```html
+<button
+  id="signup-button"
+  data-umami-event="checkout-cart"
+  data-umami-event-revenue="19.99"
+  data-umami-event-currency="USD"
+>
+  Checkout
+</button>
+```
 
 ## Parameters
 
 - `Website`: (required) The website you want to run the report on.
 - `Date range`: (required) The date range of the report.
-- `Event`: (required) The event name of the data to be aggregated.
-- `Revenue Property`: (required) The property name of the number field to be aggregated.
-- `User Property`: The property name of to uniquely identify the user.
+- `Currency`: (required) The currency of the data to be aggregated.
 
 ## Create a report
 
@@ -25,21 +66,13 @@ The report works be segmenting your data into two main metrics **Visitors** and 
 
 ![image](/images/docs/v2/revenue-date.png)
 
-### Step 3: Enter the name of your event
+### Step 3: Choose a currency
 
-![image](/images/docs/v2/revenue-event.png)
-
-### Step 4: Enter the name of your revenue property
-
-![image](/images/docs/v2/revenue-property.png)
-
-Optionally enter the name of your user property
-
-![image](/images/docs/v2/revenue-user.png)
+![image](/images/docs/v2/revenue-currency.png)
 
 ### Step 5: Run query and save
 
 Click **Run Query** to see your results. In order to save your report, add a title and description and click **Save**.
 The report along with its parameters will be saved for future use.
 
-![image](/images/docs/v2/revenue-report.png)
+![image](/images/docs/v2/revenue-details.png)
