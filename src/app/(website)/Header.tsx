@@ -1,7 +1,6 @@
 'use client';
 import { Container, Popup, PopupTrigger, Text, useScroll, Icon, Icons } from 'react-basics';
 import Link from 'next/link';
-import AnnouncementBanner from './AnnouncementBanner';
 import CompanyLogo from '@/components/CompanyLogo';
 import HamburgerButton from '@/components/HamburgerButton';
 import LinkButton from '@/components/LinkButton';
@@ -47,15 +46,6 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <AnnouncementBanner name="webinar_signup_oct_2024">
-        <a
-          href="https://us06web.zoom.us/webinar/register/7317266823230/WN_gqPPuXNvScexi8-Dwg0fSw"
-          target="_blank"
-          data-umami-event="webinar-signup"
-        >
-          What&apos;s new with Umami? Join our webinar on Oct. 16th!
-        </a>
-      </AnnouncementBanner>
       <Container>
         <div className={styles.row}>
           <div className={styles.title}>
