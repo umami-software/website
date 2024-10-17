@@ -6,7 +6,7 @@ export default function SupportPage() {
     <section>
       <PageHeader>
         <h1>Support</h1>
-        <p>Support services available for Ummai Cloud</p>
+        <p>Support services available for Umami Cloud</p>
       </PageHeader>
       <div style={{ textAlign: 'center' }}>
         <h2>

@@ -2,11 +2,11 @@
   font-size: max(32px, min(5vw, 48px));
   font-weight: 800;
   letter-spacing: -0.05em;
-  margin: 4rem;
 }
 
 .text.xl > *:first-child {
   font-size: max(48px, min(5vw, 76px));
+  line-height: 1em;
 }
 
 .text.lg > *:first-child {
@@ -14,7 +14,7 @@
 }
 
 .text.md > *:first-child {
-  font-size: max(32px, min(5vw, 48px));
+  font-size: max(24px, min(5vw, 32px));
 }
 
 .text.sm > *:first-child {
@@ -28,7 +28,7 @@
 
 .text > *:nth-child(2) {
   color: var(--font-muted-color);
-  font-size: max(16px, min(2vw, 20px));
+  font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
 
   @media (max-width: 600px) {
@@ -48,6 +48,7 @@
 
 .start {
   text-align: start;
+  margin-left: 0;
 }
 
 .center {
@@ -56,6 +57,7 @@
 
 .end {
   text-align: end;
+  margin-right: 0;
 }
 
 .text strong {

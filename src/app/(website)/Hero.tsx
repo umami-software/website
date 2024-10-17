@@ -11,7 +11,7 @@ export default function Hero() {
   const query = useQueryString({ ref: 'umami-hero' });
 
   return (
-    <Column gap="lg">
+    <Column gap="lg" className={styles.hero}>
       <TextBlock size="xl" align="center">
         <div>
           Effortless analytics and

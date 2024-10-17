@@ -1,6 +1,6 @@
 'use client';
+import { Button } from '@umami/react-zen';
 import SectionHeader from '@/components/SectionHeader';
-import LinkButton from '@/components/LinkButton';
 import Code from 'assets/code.svg';
 import Cloud from 'assets/cloud.svg';
 import styles from './Deploy.module.css';
@@ -21,17 +21,17 @@ export default function Deploy() {
           <Code />
           <header>Open-source Umami</header>
           <p>Self-host Umami on your own servers. Free forever.</p>
-          <LinkButton href="/docs/getting-started" variant="secondary">
-            Download Umami
-          </LinkButton>
+          <Button variant="secondary">
+            <a href="/docs/getting-started">Download Umami</a>
+          </Button>
         </div>
         <div className={styles.item}>
           <Cloud />
           <header>Umami Cloud</header>
           <p>High performance, fully managed Umami service.</p>
-          <LinkButton href={`${CLOUD_URL}/signup${query}`} variant="primary">
-            Start free trial
-          </LinkButton>
+          <Button variant="primary">
+            <a href={`${CLOUD_URL}/signup${query}`}>Start free trial</a>
+          </Button>
         </div>
       </div>
     </section>

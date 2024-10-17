@@ -24,10 +24,6 @@
   margin: 10px 0;
 }
 
-.cloud .item {
-  border: 1px solid var(--base-color-400);
-}
-
 @media screen and (max-width: 360px) {
   .items {
     grid-template-columns: 1fr;

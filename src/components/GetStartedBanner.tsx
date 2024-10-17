@@ -1,6 +1,6 @@
 'use client';
+import { Button } from '@umami/react-zen';
 import styles from './GetStartedBanner.module.css';
-import LinkButton from '@/components/LinkButton';
 import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
 
@@ -11,14 +11,11 @@ export default function GetStartedBanner() {
     <div className={styles.banner}>
       <div className={styles.text}>Are you ready for better analytics?</div>
       <div className={styles.buttons}>
-        <LinkButton
-          href={`${CLOUD_URL}/signup${query}`}
-          data-umami-event="get-started-banner-button"
-          variant="primary"
-          size="lg"
-        >
-          Try 14-day free trial
-        </LinkButton>
+        <Button variant="primary" size="lg" asChild>
+          <a href={`${CLOUD_URL}/signup${query}`} data-umami-event="get-started-banner-button">
+            Try 14-day free trial
+          </a>
+        </Button>
       </div>
     </div>
   );

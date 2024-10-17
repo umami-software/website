@@ -8,7 +8,6 @@
 .block {
   gap: 60px;
   min-height: 700px;
-  background-color: var(--base-color-50);
 }
 
 .image {
