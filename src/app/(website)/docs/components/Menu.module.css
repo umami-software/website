@@ -4,7 +4,7 @@
   scrollbar-gutter: stable;
   overflow-y: scroll;
   font-size: 14px;
-  color: var(--base800);
+  color: var(--base-color-800);
   display: flex;
   flex-direction: column;
   padding-bottom: 60px;
@@ -22,39 +22,38 @@
 }
 
 .item {
-  border-left: 1px solid var(--base300);
+  border-left: 1px solid var(--base-color-300);
   text-wrap: nowrap;
 }
 
 .item:hover {
-  border-left: 1px solid var(--base600);
+  border-left: 1px solid var(--base-color-600);
 }
 
 .menu .item a,
 .menu .item a:visited,
 .menu .item a:active {
   display: block;
-  color: var(--base700);
+  color: var(--font-muted-color);
   padding: 4px 20px;
 }
 
 .menu .item a:hover {
-  color: var(--primary400);
-  background: var(--base75);
+  color: var(--primary-bg-color);
 }
 
 .menu .item.selected {
   font-weight: 600;
-  border-left: 2px solid var(--primary400);
+  border-left: 2px solid var(--primary-bg-color);
 }
 
 .menu .item.selected a {
-  color: var(--base900);
+  color: var(--base-color-900);
 }
 
 .menu::-webkit-scrollbar {
   width: 15px;
-  background: var(--base50);
+  background: var(--background-color);
   display: none;
 }
 
@@ -64,19 +63,19 @@
 
 .menu::-webkit-scrollbar-track {
   border: 7px solid rgba(0, 0, 0, 0);
-  background-color: var(--base300);
+  background-color: var(--base-color-300);
   background-clip: padding-box;
 }
 
 .menu::-webkit-scrollbar-thumb {
   border: 7px solid rgba(0, 0, 0, 0);
-  background-color: var(--base600);
+  background-color: var(--base-color-600);
   background-clip: padding-box;
 }
 
 .menu::-webkit-scrollbar-thumb:hover {
   border: 4px solid rgba(0, 0, 0, 0);
-  background-color: var(--base800);
+  background-color: var(--base-color-800);
   background-clip: padding-box;
 }
 

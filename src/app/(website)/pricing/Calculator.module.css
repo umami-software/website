@@ -28,7 +28,7 @@
 }
 
 .calculator strong {
-  color: var(--base900);
+  color: var(--base-color-900);
   font-size: 36px;
   font-weight: 700;
 }
@@ -70,7 +70,7 @@
 }
 
 .strike {
-  color: var(--base600);
+  color: var(--base-color-600);
   font-size: 36px;
   font-weight: 700;
   text-decoration: line-through rgba(255, 0, 0, 0.5);
@@ -84,13 +84,13 @@
 }
 
 .price {
-  color: var(--base700);
+  color: var(--base-color-700);
   font-weight: 600;
   text-align: right;
 }
 
 .events {
-  color: var(--base700);
+  color: var(--base-color-700);
   font-weight: 600;
 }
 

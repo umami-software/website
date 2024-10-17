@@ -62,8 +62,10 @@ const items = [
 
 export default function Quotes() {
   return (
-    <TextBlock className={styles.container} size="lg" align="center">
-      <h1>People love Umami</h1>
+    <div className={styles.container}>
+      <TextBlock size="lg" align="center">
+        <div>People love Umami</div>
+      </TextBlock>
       <div className={styles.list}>
         {items.map(({ name, username, quote }) => {
           return (
@@ -89,6 +91,6 @@ export default function Quotes() {
           );
         })}
       </div>
-    </TextBlock>
+    </div>
   );
 }

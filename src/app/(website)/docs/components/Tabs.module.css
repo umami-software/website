@@ -6,31 +6,31 @@
   margin: 40px 0 20px;
   height: 40px;
   max-width: 100vw;
-  border-bottom: 2px solid var(--base200);
+  border-bottom: 2px solid var(--base-color-200);
 }
 
 .title {
-  color: var(--base700);
+  color: var(--base-color-700);
   font-weight: 700;
   height: 40px;
 }
 
 .header a {
-  color: var(--base700);
+  color: var(--base-color-700);
   height: 40px;
   border-bottom: 2px solid transparent;
   margin: 0 0 -2px 0;
 }
 
 .header a:hover {
-  color: var(--primary400);
-  border-bottom: 2px solid var(--base500);
+  color: var(--primary-bg-color);
+  border-bottom: 2px solid var(--base-color-400);
 }
 
 a.selected,
 a.selected:hover {
-  color: var(--base900);
-  border-bottom: 2px solid var(--blue800);
+  color: var(--base-color-900);
+  border-bottom: 2px solid var(--primary-bg-color);
   font-weight: 700;
 }
 

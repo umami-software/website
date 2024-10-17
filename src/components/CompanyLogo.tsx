@@ -1,18 +1,17 @@
 'use client';
-import classNames from 'classnames';
+import { Row, Icon, Text } from '@umami/react-zen';
 import Link from 'next/link';
 import Logo from 'assets/logo.svg';
-import styles from './CompanyLogo.module.css';
 
-interface Props {
-  className?: string;
-}
-
-export default function CompanyLogo({ className }: Props) {
+export default function CompanyLogo() {
   return (
-    <div className={classNames(styles.logo, className)}>
-      <Logo />
-      <Link href="/">umami</Link>
-    </div>
+    <Row alignItems="center" gap="md">
+      <Icon size="sm">
+        <Logo />
+      </Icon>
+      <Text size="lg" weight="bold">
+        <Link href="/">umami</Link>
+      </Text>
+    </Row>
   );
 }

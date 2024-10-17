@@ -13,11 +13,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--base75);
+  background-color: var(--base-color-50);
   padding: 30px;
   gap: 20px;
   border-radius: 10px;
-  border: 1px solid var(--base300);
+  border: 1px solid var(--base-color-300);
   font-size: 18px;
   font-weight: 400;
   height: 100%;
@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: var(--base800);
+  color: var(--base-color-800);
   font-size: 24px;
   font-weight: 700;
 }
@@ -36,11 +36,11 @@
 .item header svg {
   width: 24px;
   height: 24px;
-  fill: var(--base800);
+  fill: var(--base-color-800);
 }
 
 .item p {
-  color: var(--base700);
+  color: var(--base-color-700);
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
 }

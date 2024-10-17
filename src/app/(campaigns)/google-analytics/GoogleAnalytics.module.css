@@ -15,17 +15,17 @@
 }
 
 .features div {
-  border: 1px solid var(--base600);
+  border: 1px solid var(--base-color-600);
   border-radius: 10px;
   padding: 20px 0;
 }
 
 .features div:first-child {
-  box-shadow: 4px 4px var(--base300);
+  box-shadow: 4px 4px var(--base-color-300);
 }
 
 .features div:last-child {
-  background: var(--base75);
+  background: var(--base-color-50);
 }
 
 .features header {

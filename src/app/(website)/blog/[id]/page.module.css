@@ -27,17 +27,17 @@
 .blog h3 {
   font-size: max(14px, min(2vw, 20px));
   letter-spacing: -0.05em;
-  color: var(--base800);
+  color: var(--base-color-800);
 }
 
 .blog p {
-  color: var(--base800);
+  color: var(--base-color-800);
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
 }
 
 .blog a {
-  color: var(--blue800);
+  color: var(--primary-bg-color);
 }
 
 .blog img {
@@ -62,11 +62,11 @@
 }
 
 .date {
-  color: var(--base700);
+  color: var(--base-color-700);
 }
 
 .author {
-  color: var(--base700);
+  color: var(--base-color-700);
 }
 
 @media screen and (max-width: 360px) {

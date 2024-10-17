@@ -1,6 +1,6 @@
 'use client';
+import { Icon, Icons, Text, Row } from '@umami/react-zen';
 import { format } from 'date-fns';
-import LinkButton from '@/components/LinkButton';
 import Link from 'next/link';
 import styles from './Card.module.css';
 
@@ -22,10 +22,15 @@ export default function Card({
         <Link href={`/blog/${id}`}> {title}</Link>
       </div>
       <div className={styles.description}>{description}</div>
-      <div className={styles.button}>
-        <LinkButton href={`/blog/${id}`} variant="secondary">
-          Read more
-        </LinkButton>
+      <div className={styles.link}>
+        <Link href={`/blog/${id}`}>
+          <Row gap="sm">
+            <Text weight="bold">Read more</Text>
+            <Icon>
+              <Icons.Arrow />
+            </Icon>
+          </Row>
+        </Link>
       </div>
     </div>
   );

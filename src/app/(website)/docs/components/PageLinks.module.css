@@ -25,12 +25,12 @@
 
 .nav .links a {
   display: block;
-  color: var(--base700);
+  color: var(--base-color-700);
   text-wrap: nowrap;
 }
 
 .nav .links a:hover {
-  color: var(--primary400);
+  color: var(--primary-bg-color);
 }
 
 .indent-1 {

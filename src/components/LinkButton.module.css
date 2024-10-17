@@ -6,8 +6,8 @@
   white-space: nowrap;
   gap: 200px;
   font-family: inherit;
-  color: var(--base900);
-  background: var(--base100);
+  color: var(--base-color-900);
+  background: var(--base-color-100);
   border: 1px solid transparent;
   border-radius: var(--border-radius);
   min-height: var(--base-height);
@@ -18,21 +18,21 @@
 }
 
 .button:hover {
-  color: var(--base900);
-  background: var(--base200);
+  color: var(--base-color-900);
+  background: var(--base-color-200);
 }
 
 .button:active {
-  background: var(--base300);
+  background: var(--base-color-300);
 }
 
 .button:visited {
-  color: var(--base900);
+  color: var(--base-color-900);
 }
 
 .primary {
   color: var(--light50);
-  background: var(--primary400);
+  background: var(--primary-bg-color);
 }
 
 .button.primary:visited {
@@ -46,15 +46,15 @@
 
 .button.secondary {
   border: 1px solid var(--border-color);
-  background: var(--base50);
+  background: var(--base-color-50);
 }
 
 .button.secondary:hover {
-  background: var(--base75);
+  background: var(--base-color-50);
 }
 
 .button.secondary:active {
-  background: var(--base100);
+  background: var(--base-color-100);
 }
 
 .button.lg {

@@ -6,16 +6,18 @@ body {
     BlinkMacSystemFont,
     sans-serif;
   font-size: 14px;
+  line-height: 1.8;
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  color: var(--base900);
-  background: var(--base50);
+  color: var(--base-color-900);
+  background: var(--background-color);
   position: relative;
   display: flex;
   flex-direction: column;
+  scrollbar-gutter: stable;
 }
 
 *,
@@ -27,12 +29,12 @@ body {
 a,
 a:active,
 a:visited {
-  color: var(--base900);
+  color: var(--base-color-900);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--primary400);
+  color: var(--primary-bg-color);
 }
 
 h1 {
@@ -62,7 +64,7 @@ code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   font-weight: 400;
-  background: var(--base100);
+  background: var(--base-color-100);
   padding: 2px 4px;
   border-radius: 2px;
   white-space: pre-wrap;
@@ -84,5 +86,5 @@ body button {
 
 hr {
   border: 0;
-  border-top: 1px solid var(--base400);
+  border-top: 1px solid var(--base-color-400);
 }

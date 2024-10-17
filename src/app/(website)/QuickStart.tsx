@@ -1,42 +1,44 @@
 'use client';
-import TextBlock from '@/components/TextBlock';
+import { Button, Text } from '@umami/react-zen';
 import Link from 'next/link';
+import TextBlock from '@/components/TextBlock';
 import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
 import styles from './QuickStart.module.css';
-import LinkButton from '@/components/LinkButton';
 
 export default function QuickStart() {
   const query = useQueryString({ ref: 'umami-quickstart' });
   const url = `${CLOUD_URL}/signup${query}`;
 
   return (
-    <TextBlock align="center" className={styles.container}>
-      <h1>Get up and running in minutes</h1>
+    <div className={styles.container}>
+      <TextBlock align="center" className={styles.title}>
+        <div>Get up and running in minutes</div>
+      </TextBlock>
       <div className={styles.steps}>
         <div className={styles.step}>
           <div>1</div>
-          <h3>Sign up</h3>
-          <p>
+          <div>Sign up</div>
+          <div>
             Create a <Link href={url}>free</Link> account on Umami Cloud.
-          </p>
+          </div>
         </div>
         <div className={styles.step}>
           <div>2</div>
-          <h3>Install tracking code</h3>
-          <p>Add our privacy-friendly tracking code to your website.</p>
+          <div>Install tracking code</div>
+          <div>Add our privacy-friendly tracking code to your website.</div>
         </div>
         <div className={styles.step}>
           <div>3</div>
-          <h3>View your data</h3>
-          <p>Data will start appearing on your dashboard immediately. It&apos;s that easy.</p>
+          <div>View your data</div>
+          <div>Data will start appearing on your dashboard immediately. It&apos;s that easy.</div>
         </div>
       </div>
       <div className={styles.action}>
-        <LinkButton href={url} variant="primary">
-          Get started
-        </LinkButton>
+        <Button variant="primary" size="lg" asChild>
+          <a href={url}>Get started</a>
+        </Button>
       </div>
-    </TextBlock>
+    </div>
   );
 }

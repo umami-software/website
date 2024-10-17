@@ -229,8 +229,12 @@
             "url": "/docs/reports/report-goals"
           },
           {
-            "group": "Journey",
+            "label": "Journey",
             "url": "/docs/reports/report-journey"
+          },
+          {
+            "label": "Revenue",
+            "url": "/docs/reports/report-revenue"
           }
         ]
       }

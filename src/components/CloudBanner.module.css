@@ -20,7 +20,7 @@
 .banner a,
 .banner a:active,
 .banner a:visited {
-  color: var(--primary400);
+  color: var(--primary-bg-color);
 }
 
 .banner a:hover {

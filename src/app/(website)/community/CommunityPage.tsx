@@ -1,5 +1,5 @@
 'use client';
-import LinkButton from '@/components/LinkButton';
+import { Button } from '@umami/react-zen';
 import PageHeader from '@/components/PageHeader';
 import { GITHUB_URL, DISCORD_URL, X_URL, LINKEDIN_URL } from '@/lib/constants';
 import GitHub from 'assets/github.svg';
@@ -50,14 +50,11 @@ export default function CommunityPage() {
               {icon} {name}
             </header>
             <p>{description}</p>
-            <LinkButton
-              href={url}
-              target="_blank"
-              variant="secondary"
-              data-umami-event={`community-${name}`}
-            >
-              Explore
-            </LinkButton>
+            <Button variant="secondary">
+              <a href={url} target="_blank" data-umami-event={`community-${name}`}>
+                Explore
+              </a>
+            </Button>
           </div>
         ))}
       </div>

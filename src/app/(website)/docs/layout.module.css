@@ -2,13 +2,16 @@
   display: grid;
   grid-template-columns: 240px 1fr;
   column-gap: 30px;
-  color: var(--base800);
+  color: var(--base-color-800);
   max-width: 100vw;
   position: relative;
+  font-size: 16px;
+  line-height: 30px;
 }
 
 .docs h1 {
   font-size: 32px;
+  line-height: 48px;
   font-weight: 800;
   letter-spacing: -0.025em;
   margin: 0 0 20px 0;
@@ -50,31 +53,6 @@
 @media screen and (max-width: 768px) {
   .docs {
     grid-template-columns: 160px 1fr;
-  }
-
-  .docs h1 {
-    font-size: 30px;
-    margin: 0 0 10px 0;
-  }
-
-  .docs h2 {
-    font-weight: 600;
-    letter-spacing: -1px;
-  }
-
-  .content {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .docs h1 {
-    font-size: 24px;
-    margin: 0 0 10px 0;
-  }
-
-  .docs h2 {
-    font-size: 20px;
   }
 }
 

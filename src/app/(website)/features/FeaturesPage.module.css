@@ -10,7 +10,7 @@
 }
 
 .item {
-  background: var(--base75);
+  background: var(--base-color-50);
   border-radius: 8px;
   padding: 10px 20px;
 }
@@ -22,10 +22,6 @@
   font-size: 18px;
   font-weight: 900;
   margin: 10px 0;
-}
-
-.cloud .item {
-  border: 1px solid var(--base400);
 }
 
 @media screen and (max-width: 360px) {

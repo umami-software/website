@@ -21,15 +21,15 @@
   width: 16px;
   cursor: pointer;
   background: transparent;
-  color: var(--base50);
+  color: var(--base-color-50);
 }
 
 .copy {
-  color: var(--base400);
+  color: var(--base-color-400);
 }
 
 .copy:hover {
-  color: var(--base100);
+  color: var(--base-color-100);
 }
 
 .check {

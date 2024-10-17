@@ -13,7 +13,7 @@
 
 .interval {
   font-size: 16px;
-  color: var(--base700);
+  color: var(--base-color-700);
   margin-left: 10px;
 }
 
@@ -24,12 +24,12 @@
   padding: 30px;
   border-radius: 5px;
   margin: 0 auto;
-  border: 1px solid var(--base400);
+  border: 1px solid var(--base-color-400);
   width: 100%;
 }
 
 .plan:nth-child(2) {
-  border-color: var(--base700);
+  border-color: var(--base-color-700);
   box-shadow:
     0 10px 15px -3px rgb(0 0 0 / 0.1),
     0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -58,10 +58,10 @@
 
 .signup {
   margin: 30px auto;
-  border: 1px solid var(--base300);
+  border: 1px solid var(--base-color-300);
   border-radius: 10px;
   padding: 30px;
-  box-shadow: 4px 4px 4px var(--base300);
+  box-shadow: 4px 4px 4px var(--base-color-300);
 }
 
 @media screen and (max-width: 768px) {

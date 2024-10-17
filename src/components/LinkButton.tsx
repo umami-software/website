@@ -1,16 +1,14 @@
 import { ReactElement, ReactNode } from 'react';
-import classNames from 'classnames';
 import Link from 'next/link';
-import { Icon, Text } from 'react-basics';
-import styles from './LinkButton.module.css';
+import { Button, Icon, Text } from '@umami/react-zen';
 
 export interface LinkButtonProps {
   href: string;
   icon?: ReactElement;
   target?: string;
   rel?: string;
-  variant?: 'primary' | 'secondary' | 'none';
-  size?: 'lg' | 'none';
+  variant?: string;
+  size?: string;
   className?: string;
   children: ReactNode;
 }
@@ -27,19 +25,12 @@ export function LinkButton({
   ...props
 }: LinkButtonProps) {
   return (
-    <Link
-      {...props}
-      className={classNames(styles.button, className, {
-        [styles[variant]]: true,
-        [styles[size]]: true,
-      })}
-      href={href}
-      target={target}
-      rel={rel}
-    >
-      {icon && <Icon>{icon}</Icon>}
-      <Text>{children}</Text>
-    </Link>
+    <Button variant={variant as any} size={size as any} asChild>
+      <Link {...props} className={className} href={href} target={target} rel={rel}>
+        {icon && <Icon>{icon}</Icon>}
+        <Text>{children}</Text>
+      </Link>
+    </Button>
   );
 }
 

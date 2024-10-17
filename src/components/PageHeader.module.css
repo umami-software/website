@@ -15,7 +15,7 @@
 }
 
 .header p {
-  color: var(--base700);
+  color: var(--base-color-700);
   font-size: max(16px, min(2vw, 18px)) !important;
   font-weight: 400;
   margin: 20px auto;
@@ -24,5 +24,5 @@
 }
 
 .header p strong {
-  color: var(--base900);
+  color: var(--base-color-900);
 }

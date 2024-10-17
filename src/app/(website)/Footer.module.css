@@ -1,8 +1,8 @@
 .footer {
   font-size: 14px;
   padding: 40px 0;
-  border-top: 1px solid var(--base300);
-  background: var(--base75);
+  border-top: 1px solid var(--base-color-300);
+  background: var(--base-color-50);
   margin-top: 60px;
   max-width: 100vw;
 }

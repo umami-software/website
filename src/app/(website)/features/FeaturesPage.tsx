@@ -1,4 +1,8 @@
 'use client';
+import { Icon, Text } from '@umami/react-zen';
+import GetStartedBanner from '@/components/GetStartedBanner';
+import PageHeader from '@/components/PageHeader';
+import TextBlock from '@/components/TextBlock';
 import Anonymous from 'assets/anonymous.svg';
 import Bolt from 'assets/bolt.svg';
 import Bounce from 'assets/bounce.svg';
@@ -29,11 +33,6 @@ import Team from 'assets/team.svg';
 import Traffic from 'assets/traffic.svg';
 import User from 'assets/user.svg';
 import View from 'assets/view.svg';
-import classNames from 'classnames';
-import GetStartedBanner from '@/components/GetStartedBanner';
-import PageHeader from '@/components/PageHeader';
-import TextBlock from '@/components/TextBlock';
-import { Icon, Text } from 'react-basics';
 import styles from './FeaturesPage.module.css';
 
 const items = [
@@ -222,12 +221,11 @@ const items = [
   {
     title: 'Cloud',
     description: `Umami Cloud is a reliable, high-performance hosted solution.`,
-    cloud: true,
     items: [
       {
         title: 'Fully managed',
         description: [
-          `Leave the upgrades, database tuning, and management of backups to us while you focus on your website.`,
+          `Leave the upgrades, backups and performance tuning to us while you focus on your results.`,
         ],
         icon: <Gear />,
       },
@@ -265,15 +263,17 @@ export default function FeaturesPage() {
   return (
     <article>
       <PageHeader>
-        <h1>Features</h1>
-        <p>An overview of all the core features Umami provides.</p>
+        <div>Features</div>
+        <div>An overview of all the core features Umami provides.</div>
       </PageHeader>
       <div className={styles.features}>
-        {items.map(({ title, description, items, cloud }) => {
+        {items.map(({ title, description, items }) => {
           return (
-            <TextBlock key={title} className={classNames({ [styles.cloud]: cloud })}>
-              <h1>{title}</h1>
-              <p>{description}</p>
+            <div key={title}>
+              <TextBlock size="md">
+                <div>{title}</div>
+                <div>{description}</div>
+              </TextBlock>
               <div className={styles.items}>
                 {items.map((item, index) => (
                   <div key={index} className={styles.item}>
@@ -287,7 +287,7 @@ export default function FeaturesPage() {
                   </div>
                 ))}
               </div>
-            </TextBlock>
+            </div>
           );
         })}
       </div>

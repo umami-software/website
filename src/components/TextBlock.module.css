@@ -1,33 +1,33 @@
-.text > h1 {
+.text > *:first-child {
   font-size: max(32px, min(5vw, 48px));
   font-weight: 800;
   letter-spacing: -0.05em;
-  line-height: 1.2;
 }
 
-.text.xl > h1 {
+.text.xl > *:first-child {
   font-size: max(48px, min(5vw, 76px));
+  line-height: 1em;
 }
 
-.text.lg > h1 {
+.text.lg > *:first-child {
   font-size: max(48px, min(5vw, 64px));
 }
 
-.text.md > h1 {
-  font-size: max(32px, min(5vw, 48px));
+.text.md > *:first-child {
+  font-size: max(24px, min(5vw, 32px));
 }
 
-.text.sm > h1 {
+.text.sm > *:first-child {
   font-size: max(18px, min(2vw, 24px));
 }
 
-.text > h2 {
+.text > *:nth-child(1) {
   font-size: max(18px, min(2vw, 24px));
   letter-spacing: -0.05em;
 }
 
-.text > p {
-  color: var(--base700);
+.text > *:nth-child(2) {
+  color: var(--font-muted-color);
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
 
@@ -38,16 +38,17 @@
   }
 }
 
-.text.xl > p {
+.text.xl > *:nth-child(2) {
   font-size: max(18px, min(2vw, 22px));
 }
 
-.text.lg > p {
+.text.lg > *:nth-child(2) {
   font-size: max(16px, min(2vw, 18px));
 }
 
 .start {
   text-align: start;
+  margin-left: 0;
 }
 
 .center {
@@ -56,8 +57,9 @@
 
 .end {
   text-align: end;
+  margin-right: 0;
 }
 
 .text strong {
-  color: var(--base900);
+  color: var(--base-color-900);
 }

@@ -1,8 +1,7 @@
 'use client';
+import { Button, Flexbox, Icon, Icons, Text } from '@umami/react-zen';
 import PageHeader from '@/components/PageHeader';
 import { Blocks } from '@/lib/constants';
-import LinkButton from '@/components/LinkButton';
-import { Flexbox, Icon, Icons, Text } from 'react-basics';
 import styles from './Features.module.css';
 import ScrollBlock from '@/components/ScrollBlock';
 
@@ -27,12 +26,14 @@ export default function Features() {
       </PageHeader>
       <ScrollBlock items={items} />
       <Flexbox justifyContent="center" alignItems="center">
-        <LinkButton href="/features" variant="secondary">
-          <Text>Explore more features </Text>
-          <Icon>
-            <Icons.ArrowRight />
-          </Icon>
-        </LinkButton>
+        <Button variant="secondary" asChild>
+          <a href="/features">
+            <Text>Explore more features </Text>
+            <Icon size="sm">
+              <Icons.Arrow />
+            </Icon>
+          </a>
+        </Button>
       </Flexbox>
     </section>
   );
