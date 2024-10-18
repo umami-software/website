@@ -6,9 +6,8 @@ const items = ['Less than 20', '20-49', '50-499', '500+'];
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
   const handleSubmit = async (data: any) => {
-    //await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
-    console.log({ data });
-    //setSent(true);
+    await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
+    setSent(true);
   };
 
   if (sent) {
@@ -33,7 +32,11 @@ export default function ContactForm() {
         <Select label="Company size" placeholder="Select a value" items={items} />
       </FormField>
       <FormField name="comment" rules={{ required: 'Required' }}>
-        <TextArea label="Tell us about your use case" name="comment" rows={8} />
+        <TextArea
+          label="Tell us about your use case"
+          name="comment"
+          style={{ resize: 'vertical', height: 200 }}
+        />
       </FormField>
       <FormSubmitButton variant="primary">Submit</FormSubmitButton>
     </Form>

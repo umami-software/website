@@ -4098,10 +4098,10 @@
     "@typescript-eslint/types" "6.14.0"
     eslint-visitor-keys "^3.4.1"
 
-"@umami/react-zen@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.7.0.tgz#b31ce6db963bdff24f73508b7cddef51990ca001"
-  integrity sha512-sqDMLBplhDQJybvfJV45Vggstr87oUa33rRa7rqqqhMdJeh4SNEoQcqQxv2W9z0TybctC9lalr9K0+eCh4QiuA==
+"@umami/react-zen@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.8.0.tgz#925ac0a7cadcd6927959c08ae858e4c60a3bca83"
+  integrity sha512-dU9BC9eVIPzfV3Q66qM9SkY2lk01LfRViapCL3H3hVqKYndSbKzB+ccXlsR+sXVDBl2PmqTCRJ3gCJCB/kr87A==
   dependencies:
     "@fontsource/jetbrains-mono" "^5.0.18"
     "@mdx-js/loader" "^3.0.0"
