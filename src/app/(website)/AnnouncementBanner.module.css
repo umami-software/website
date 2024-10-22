@@ -1,6 +1,6 @@
 .banner {
   color: var(--light50);
-  background: var(--primary-bg-color);
+  background: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;

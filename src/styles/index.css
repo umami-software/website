@@ -34,7 +34,7 @@ a:visited {
 }
 
 a:hover {
-  color: var(--primary-bg-color);
+  color: var(--primary-color);
 }
 
 h1 {

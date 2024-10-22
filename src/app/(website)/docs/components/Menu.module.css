@@ -39,12 +39,12 @@
 }
 
 .menu .item a:hover {
-  color: var(--primary-bg-color);
+  color: var(--primary-color);
 }
 
 .menu .item.selected {
   font-weight: 600;
-  border-left: 2px solid var(--primary-bg-color);
+  border-left: 2px solid var(--primary-color);
 }
 
 .menu .item.selected a {
@@ -63,19 +63,13 @@
 
 .menu::-webkit-scrollbar-track {
   border: 7px solid rgba(0, 0, 0, 0);
-  background-color: var(--base-color-300);
+  background-color: var(--base-color-200);
   background-clip: padding-box;
 }
 
 .menu::-webkit-scrollbar-thumb {
   border: 7px solid rgba(0, 0, 0, 0);
-  background-color: var(--base-color-600);
-  background-clip: padding-box;
-}
-
-.menu::-webkit-scrollbar-thumb:hover {
-  border: 4px solid rgba(0, 0, 0, 0);
-  background-color: var(--base-color-800);
+  background-color: var(--base-color-400);
   background-clip: padding-box;
 }
 

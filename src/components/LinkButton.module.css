@@ -32,7 +32,7 @@
 
 .primary {
   color: var(--light50);
-  background: var(--primary-bg-color);
+  background: var(--primary-color);
 }
 
 .button.primary:visited {
