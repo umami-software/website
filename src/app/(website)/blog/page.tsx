@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { firstBy } from 'thenby';
 import PageHeader from '@/components/PageHeader';
 import Card from './components/Card';
-import { getFiles } from '@/lib/content';
+import { getFiles } from 'lib/content';
 import styles from './page.module.css';
 
 interface Post {

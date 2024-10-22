@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import path from 'node:path';
-import { getFile } from '@/lib/content';
+import { getFile } from 'lib/content';
 import Markdown from '@/components/Markdown';
 import PageLinks from '../components/PageLinks';
 import config from '../config.json';

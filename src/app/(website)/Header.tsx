@@ -39,6 +39,10 @@ const mobileMenuItems = [
     label: 'Developers',
     value: '/developers',
   },
+  {
+    label: 'Contact',
+    value: '/contact',
+  },
 ];
 
 export default function Header() {
@@ -66,6 +70,7 @@ const NavLinks = () => {
         Docs
       </Link>
       <Link href="/pricing">Pricing</Link>
+      <Link href="/contact">Contact</Link>
     </Row>
   );
 };

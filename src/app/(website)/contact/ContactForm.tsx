@@ -16,27 +16,27 @@ export default function ContactForm() {
 
   return (
     <Form onSubmit={handleSubmit} style={{ width: 500, margin: 'auto' }}>
-      <FormField name="name" rules={{ required: 'Required' }}>
-        <TextField label="Full name" name="name" placeholder="John Smith" />
+      <FormField label="Full name" name="name" rules={{ required: 'Required' }}>
+        <TextField placeholder="John Smith" />
       </FormField>
-      <FormField name="email" rules={{ required: 'Required' }}>
-        <TextField label="Work email" name="email" placeholder="john@company.com" />
+      <FormField label="Work email" name="email" rules={{ required: 'Required' }}>
+        <TextField placeholder="john@company.com" />
       </FormField>
-      <FormField name="title">
-        <TextField label="Title" name="title" placeholder="Software Engineer" />
+      <FormField label="Title" name="title">
+        <TextField placeholder="Software Engineer" />
       </FormField>
-      <FormField name="company">
-        <TextField label="Company" name="company" placeholder="Company, Inc." />
+      <FormField label="Company" name="company">
+        <TextField placeholder="Company, Inc." />
       </FormField>
-      <FormField name="size">
-        <Select label="Company size" placeholder="Select a value" items={items} />
+      <FormField label="Company size" name="size">
+        <Select placeholder="Select a value" items={items} />
       </FormField>
-      <FormField name="comment" rules={{ required: 'Required' }}>
-        <TextArea
-          label="Tell us about your use case"
-          name="comment"
-          style={{ resize: 'vertical', height: 200 }}
-        />
+      <FormField
+        label="Tell us about your use case"
+        name="comment"
+        rules={{ required: 'Required' }}
+      >
+        <TextArea resize="vertical" />
       </FormField>
       <FormSubmitButton variant="primary">Submit</FormSubmitButton>
     </Form>
