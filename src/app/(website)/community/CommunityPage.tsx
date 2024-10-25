@@ -2,10 +2,10 @@
 import { Button } from '@umami/react-zen';
 import PageHeader from '@/components/PageHeader';
 import { GITHUB_URL, DISCORD_URL, X_URL, LINKEDIN_URL } from '@/lib/constants';
-import GitHub from 'assets/github.svg';
-import Discord from 'assets/discord.svg';
-import X from 'assets/x.svg';
-import LinkedIn from 'assets/linkedin.svg';
+import GitHub from '@/assets/github.svg';
+import Discord from '@/assets/discord.svg';
+import X from '@/assets/x.svg';
+import LinkedIn from '@/assets/linkedin.svg';
 import styles from './CommunityPage.module.css';
 
 const items = [

@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
 import { Icon, Icons } from '@umami/react-zen';
-import SectionHeader from '@/components/SectionHeader';
 import styles from './Questions.module.css';
+import TextBlock from '@/components/TextBlock';
 
 const questions = [
   {
@@ -33,9 +33,9 @@ const questions = [
 export default function Questions() {
   return (
     <>
-      <SectionHeader>
+      <TextBlock>
         <h2>Frequently asked questions</h2>
-      </SectionHeader>
+      </TextBlock>
       <div className={styles.questions}>
         {questions.map(({ question, answer }) => {
           return (

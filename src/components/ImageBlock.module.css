@@ -1,19 +1,16 @@
-.block {
+.image {
   display: flex;
   align-items: center;
-  position: sticky;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  border-radius: 20px;
+  background: var(--base-color-50);
+  overflow: hidden;
 }
 
-.block > * {
-  flex-basis: 50%;
-}
-
-@media screen and (max-width: 992px) {
-  .block {
-    flex-wrap: wrap;
-  }
-
-  .block > * {
-    flex-basis: 100%;
-  }
+.image img {
+  max-width: 90%;
+  box-shadow: var(--box-shadow-3);
+  border-radius: 10px;
 }

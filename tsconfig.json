@@ -24,12 +24,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "assets/*": ["./src/assets/*"],
-      "components/*": ["./src/components/*"],
-      "lib/*": ["./src/lib/*"],
-      "queries/*": ["./src/queries/*"],
-      "store/*": ["./src/store/*"],
-      "styles/*": ["./src/styles/*"]
     },
     "plugins": [
       {

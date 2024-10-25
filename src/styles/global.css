@@ -93,7 +93,8 @@ body button {
 
 hr {
   border: 0;
-  border-top: 1px solid var(--base-color-400);
+  border-top: 1px solid var(--base-color-300);
+  margin: 30px 0;
 }
 
 .mdx, .blog {

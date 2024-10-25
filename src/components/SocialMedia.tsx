@@ -1,10 +1,10 @@
 'use client';
 import { Icon } from '@umami/react-zen';
 import Link from 'next/link';
-import GitHub from 'assets/github.svg';
-import X from 'assets/x.svg';
-import Discord from 'assets/discord.svg';
-import LinkedIn from 'assets/linkedin.svg';
+import GitHub from '@/assets/github.svg';
+import X from '@/assets/x.svg';
+import Discord from '@/assets/discord.svg';
+import LinkedIn from '@/assets/linkedin.svg';
 import styles from './SocialMedia.module.css';
 import { GITHUB_URL, DISCORD_URL, X_URL, LINKEDIN_URL } from '@/lib/constants';
 

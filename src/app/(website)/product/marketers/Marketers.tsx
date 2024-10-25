@@ -3,8 +3,8 @@ import ImageBlock from '@/components/ImageBlock';
 import TextBlock from '@/components/TextBlock';
 import GetStartedBanner from '@/components/GetStartedBanner';
 import LinkButton from '@/components/LinkButton';
-import { CLOUD_URL } from 'lib/constants';
-import useQueryString from 'components/hooks/useQueryString';
+import { CLOUD_URL } from '@/lib/constants';
+import useQueryString from '@/components/hooks/useQueryString';
 import ContentImage from '@/components/ContentImage';
 import styles from './Marketers.module.css';
 
@@ -15,7 +15,7 @@ export default function Marketers() {
     <div className={styles.container}>
       <section>
         <ImageBlock className={styles.header}>
-          <TextBlock size="xl" align="center">
+          <TextBlock size="lg" align="center">
             <h1>
               For <span className={styles.highlight}>marketers</span> who don’t have time but still
               need data instantly.

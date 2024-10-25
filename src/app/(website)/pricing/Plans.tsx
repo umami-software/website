@@ -1,6 +1,6 @@
 'use client';
 import { Button } from '@umami/react-zen';
-import Checkmark from 'assets/checkmark.svg';
+import Checkmark from '@/assets/checkmark.svg';
 import Link from 'next/link';
 import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';

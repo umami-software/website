@@ -15,7 +15,7 @@ export default function Creators() {
     <div className={styles.container}>
       <section>
         <ImageBlock className={styles.header}>
-          <TextBlock size="xl" align="center">
+          <TextBlock size="lg" align="center">
             <h1>
               Get quick, easy insights that <span className={styles.highlight}>creators</span> need.
             </h1>

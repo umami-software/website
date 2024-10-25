@@ -17,11 +17,8 @@
   position: absolute;
   right: 20px;
   top: 16px;
-  height: 16px;
-  width: 16px;
   cursor: pointer;
   background: transparent;
-  color: var(--base-color-50);
 }
 
 .copy {
@@ -29,9 +26,9 @@
 }
 
 .copy:hover {
-  color: var(--base-color-100);
+  color: var(--base-color-50);
 }
 
 .check {
-  color: var(--green400);
+  color: var(--success-color);
 }

@@ -2,7 +2,7 @@ import { Column, Row } from '@umami/react-zen';
 import GitHubStats from '@/app/(website)/GitHubStats';
 import TextBlock from '@/components/TextBlock';
 import LinkButton from '@/components/LinkButton';
-import { GITHUB_URL } from 'lib/constants';
+import { GITHUB_URL } from '@/lib/constants';
 
 export default function OpenSource() {
   return (
@@ -11,8 +11,8 @@ export default function OpenSource() {
         <header>Contribute</header>
         <h2>Powered by Open Source</h2>
         <p>
-          Umami is proudly open source. We build our products openly and share our code with
-          everyone.
+          Umami is proudly open source. Thousands of developers worldwide can share and contribute
+          to the Umami experience.
         </p>
       </TextBlock>
       <Row alignItems="center" justifyContent="center" gap="md">

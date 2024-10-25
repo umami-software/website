@@ -1,10 +1,10 @@
-import Infinite from 'assets/infinity.svg';
-import Teams from 'assets/teams.svg';
-import Block from 'assets/block.svg';
-import Feather from 'assets/feather.svg';
-import Share from 'assets/share.svg';
-import Lock from 'assets/lock.svg';
-import Code from 'assets/code.svg';
+import Infinite from '@/assets/infinity.svg';
+import Teams from '@/assets/teams.svg';
+import Block from '@/assets/block.svg';
+import Feather from '@/assets/feather.svg';
+import Share from '@/assets/share.svg';
+import Lock from '@/assets/lock.svg';
+import Code from '@/assets/code.svg';
 
 export const CONTENT_URL = 'https://static.umami.dev/website';
 export const CLOUD_URL = 'https://cloud.umami.is';

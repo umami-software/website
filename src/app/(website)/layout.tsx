@@ -9,9 +9,9 @@ import '@fontsource/inter/400.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
 import '@fontsource/jetbrains-mono/400.css';
-import 'styles/github-dark.css';
-import 'styles/variables.css';
-import 'styles/global.css';
+import '@/styles/github-dark.css';
+import '@/styles/variables.css';
+import '@/styles/global.css';
 import '@umami/react-zen/dist/zen.css';
 import '@umami/react-zen/dist/index.css';
 

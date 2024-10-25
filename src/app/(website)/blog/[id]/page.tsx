@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import path from 'node:path';
 import { format } from 'date-fns';
 import Link from 'next/link';
-import { getFile } from 'lib/content';
+import { getFile } from '@/lib/content';
 import Markdown from '@/components/Markdown';
 import styles from './page.module.css';
 

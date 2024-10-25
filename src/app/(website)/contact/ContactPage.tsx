@@ -2,8 +2,8 @@
 import Link from 'next/link';
 import { Column, Row, Button } from '@umami/react-zen';
 import PageHeader from '@/components/PageHeader';
+import SocialMedia from '@/components/SocialMedia';
 import ContactForm from './ContactForm';
-import SocialMedia from 'components/SocialMedia';
 
 export default function ContactPage() {
   return (

@@ -15,7 +15,7 @@ export default function Agencies() {
     <div className={styles.container}>
       <section>
         <ImageBlock className={styles.header}>
-          <TextBlock size="xl" align="center">
+          <TextBlock size="lg" align="center">
             <h1>
               Analytics for results-driven <span className={styles.highlight}>agencies</span>.
             </h1>

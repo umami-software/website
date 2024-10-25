@@ -1,7 +1,7 @@
 'use client';
 import { Fragment } from 'react';
 import { Icon } from 'react-basics';
-import Checkmark from 'assets/checkmark.svg';
+import Checkmark from '@/assets/checkmark.svg';
 import styles from './FeaturesChart.module.css';
 
 const featuresChart = [

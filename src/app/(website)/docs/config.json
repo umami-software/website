@@ -104,6 +104,23 @@
         ]
       },
       {
+        "group": "How-to",
+        "pages": [
+          {
+            "label": "Exclude my own visits",
+            "url": "/docs/exclude-my-own-visits"
+          },
+          {
+            "label": "Bypass ad blockers",
+            "url": "/docs/bypass-ad-blockers"
+          },
+          {
+            "label": "Use Google Tag Manager",
+            "url": "/docs/google-tag-manager"
+          }
+        ]
+      },
+      {
         "group": "Reference",
         "pages": [
           {
@@ -250,23 +267,11 @@
         ]
       },
       {
-        "group": "How-to",
+        "group": "Marketing",
         "pages": [
-          {
-            "label": "Exclude my own visits",
-            "url": "/docs/guides/exclude-my-own-visits"
-          },
-          {
-            "label": "Bypass ad blockers",
-            "url": "/docs/guides/bypass-ad-blockers"
-          },
           {
             "label": "Measure campaigns",
             "url": "/docs/guides/measure-campaigns"
-          },
-          {
-            "label": "Use Google Tag Manager",
-            "url": "/docs/guides/google-tag-manager"
           }
         ]
       },

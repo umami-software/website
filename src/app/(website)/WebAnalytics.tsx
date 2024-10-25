@@ -2,10 +2,11 @@
 import { ReactNode, CSSProperties } from 'react';
 import Link from 'next/link';
 import { Button, Flexbox, Icon, Icons, Text, Column } from '@umami/react-zen';
-import TextBlock from 'components/TextBlock';
-import styles from './Features.module.css';
+import TextBlock from '@/components/TextBlock';
+import ImageBlock from '@/components/ImageBlock';
+import styles from './WebAnalytics.module.css';
 
-export default function Features() {
+export default function WebAnalytics() {
   return (
     <Column gap="lg">
       <TextBlock size="lg">
@@ -48,7 +49,7 @@ export default function Features() {
         <Feature
           title="Realtime data"
           image="/images/feature-realtime.png"
-          style={{ marginTop: 180, marginLeft: 180 }}
+          style={{ marginTop: 240, marginLeft: 180 }}
         >
           Get a realtime view of your current website traffic. See the exact pages where your
           visitors are landing.
@@ -60,7 +61,7 @@ export default function Features() {
       </div>
       <Flexbox justifyContent="center" alignItems="center">
         <Button variant="secondary" asChild>
-          <Link href="/features">
+          <Link href="/src/app/(website)/WebAnalytics">
             <Text>Explore more features </Text>
             <Icon size="sm">
               <Icons.Arrow />
@@ -86,9 +87,9 @@ const Feature = ({
   return (
     <div className={styles.item}>
       <TextBlock>
-        <div className={styles.image}>
-          <img src={image} style={style} />
-        </div>
+        <ImageBlock className={styles.image}>
+          <img src={image} style={style} alt={title} />
+        </ImageBlock>
         <h3>{title}</h3>
         <p>{children}</p>
       </TextBlock>

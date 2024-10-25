@@ -2,9 +2,9 @@
 import { Row } from '@umami/react-zen';
 import TextBlock from '@/components/TextBlock';
 import ContentImage from '@/components/ContentImage';
-import X from 'assets/x.svg';
+import X from '@/assets/x.svg';
 import styles from './Quotes.module.css';
-import SocialMedia from 'components/SocialMedia';
+import SocialMedia from '@/components/SocialMedia';
 
 const items = [
   {
