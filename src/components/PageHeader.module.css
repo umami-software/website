@@ -5,24 +5,3 @@
   justify-content: center;
   margin: 40px 0;
 }
-
-.header h1 {
-  font-size: max(48px, min(5vw, 64px));
-  font-weight: 800;
-  letter-spacing: -0.05em;
-  line-height: 1;
-  text-align: center;
-}
-
-.header p {
-  color: var(--base-color-700);
-  font-size: max(16px, min(2vw, 18px)) !important;
-  font-weight: 400;
-  margin: 20px auto;
-  text-align: center;
-  max-width: 700px;
-}
-
-.header p strong {
-  color: var(--base-color-900);
-}

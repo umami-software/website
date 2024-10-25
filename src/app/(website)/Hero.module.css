@@ -1,76 +1,24 @@
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 60px;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  padding: 0 20px;
-}
-
-.subtitle {
-  margin: 20px auto;
-  max-width: 700px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 24px 0;
-}
-
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  margin: 60px 0;
-}
-
-.features > div {
-  color: var(--base-color-700);
-  font-size: max(12px, min(2vw, 14px));
-  font-weight: 600;
-  text-align: center;
-  border: 1px solid var(--base-color-300);
-  padding: 8px 16px;
-  border-radius: 4px;
-}
-
-.features > div:before {
-  content: '✔';
-  color: var(--font-color100);
-  margin-right: 10px;
+  margin-top: 100px;
 }
 
 .image {
-  display: block;
-  border: 10px solid var(--base-color-100);
-  border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  box-shadow: 1px 1px 10px var(--base-color-300);
+  max-width: 800px;
+  margin: 0 auto;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  text-align: center;
+  padding-top: 40px;
 }
 
 .image img {
-  max-width: 100%;
+  border-radius: 10px;
+  width: 100%;
   height: auto;
-}
-
-@media screen and (max-width: 992px) {
-  .features {
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .hero {
-    max-width: 100vw;
-    margin: 0 auto;
-  }
+  align-self: center;
+  transform: rotateX(35deg) rotateY(-20deg) rotateZ(5deg) translateZ(120px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform-origin: center;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }

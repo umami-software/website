@@ -20,9 +20,9 @@ export default async function () {
   const posts = await getFiles('src/content/blog');
 
   return (
-    <article>
+    <>
       <PageHeader>
-        <div>Blog</div>
+        <h1>Blog</h1>
       </PageHeader>
       <div className={styles.posts}>
         {posts
@@ -41,7 +41,7 @@ export default async function () {
             );
           })}
       </div>
-    </article>
+    </>
   );
 }
 

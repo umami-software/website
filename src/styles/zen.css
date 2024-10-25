@@ -16,8 +16,8 @@
   --gap-xs: 1px;
   --gap-sm: 0.5rem;
   --gap-md: 1rem;
-  --gap-lg: 4rem;
-  --gap-xl: 12rem;
+  --gap-lg: 2rem;
+  --gap-xl: 8rem;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -25,9 +25,9 @@
   --font-size-lg: 1.25rem;
   --font-size-xl: 1.5rem;
 
-  --border-thin: 1px;
-  --border-medium: 2px;
-  --border-thick: 4px;
+  --border-sm: 1px;
+  --border-md: 2px;
+  --border-lg: 4px;
 
   --border-radius-sm: 0.125rem;
   --border-radius-md: 0.25rem;
@@ -53,20 +53,20 @@
   --base-color-900: #171717;
   --base-color-950: #0a0a0a;
 
-  --success-bg-color: #22c55e;
-  --success-fg-color: var(--base-color-50);
+  --success-color: #22c55e;
+  --success-font-color: var(--base-color-50);
 
-  --danger-bg-color: #ef4444;
-  --danger-fg-color: var(--base-color-50);
+  --danger-color: #ef4444;
+  --danger-font-color: var(--base-color-50);
 
-  --warning-bg-color: #f97316;
-  --warning-fg-color: var(--base-color-50);
+  --warning-color: #f97316;
+  --warning-font-color: var(--base-color-50);
 
-  --active-bg-color: #3b82f6;
-  --active-fg-color: var(--base-color-50);
+  --active-color: #3b82f6;
+  --active-font-color: var(--base-color-50);
 
-  --inactive-bg-color: var(--base-color-400);
-  --inactive-fg-color: var(--base-color-900);
+  --inactive-color: var(--base-color-400);
+  --inactive-font-color: var(--base-color-900);
 
   /* Settings */
 
@@ -78,54 +78,65 @@
 
   --padding: var(--spacing-2) var(--spacing-3);
 
-  --box-shadow-: var(--box-shadow-1);
+  --box-shadow: var(--box-shadow-1);
 
   --light-color: var(--base-color-50);
+
   --dark-color: var(--base-color-950);
 
   /* Theme settings */
+
+  --background-color: #fff;
 
   --font-color: var(--base-color-950);
   --font-muted-color: var(--base-color-500);
   --font-faded-color: var(--base-color-400);
 
-  --background-color: #fff;
-
   --border-color: var(--base-color-300);
-  --border: var(--border-thin) solid var(--border-color);
+  --border: var(--border-sm) solid var(--border-color);
 
-  --primary-fg-color: var(--base-color-50);
+  --outline-color: var(--base-color-400);
+  --outline: var(--border-sm) solid var(--outline-color);
+
   --primary-color: var(--base-color-900);
+  --primary-font-color: var(--base-color-50);
 
-  --secondary-fg-color: var(--font-color);
-  --secondary-bg-color: var(--base-color-100);
+  --secondary-color: var(--base-color-100);
+  --secondary-font-color: var(--font-color);
 
-  --highlight-fg-color: var(--font-color);
-  --highlight-bg-color: var(--base-color-50);
+  --highlight-color: var(--base-color-50);
+  --highlight-font-color: var(--font-color);
 
-  --input-bg-color: var(--base-color-200);
+  --input-background-color: var(--base-color-200);
   --input-disabled-color: var(--base-color-100);
 
   [data-theme='dark'] {
-    --font-color: var(--base-color-100);
+    --background-color: var(--base-color-950);
+
+    --font-color: var(--base-color-200);
     --font-muted-color: var(--base-color-400);
     --font-faded-color: var(--base-color-500);
 
-    --background-color: var(--base-color-950);
-
     --border-color: var(--base-color-700);
-    --border: 1px solid var(--border-color);
+    --border: var(--border-sm) solid var(--border-color);
+
+    --outline-color: var(--base-color-600);
+    --outline: var(--border-sm) solid var(--outline-color);
 
     --primary-color: var(--base-color-50);
-    --primary-fg-color: var(--base-color-900);
+    --primary-font-color: var(--base-color-900);
 
-    --secondary-bg-color: var(--base-color-800);
-    --secondary-fg-color: var(--font-color);
+    --secondary-color: var(--base-color-800);
+    --secondary-font-color: var(--font-color);
 
-    --highlight-bg-color: var(--base-color-800);
-    --highlight-fg-color: var(--font-color);
+    --highlight-color: var(--base-color-800);
+    --highlight-font-color: var(--font-color);
 
-    --input-bg-color: var(--base-color-700);
+    --input-background-color: var(--base-color-700);
     --input-disabled-color: var(--base-color-800);
+  }
+
+  :where(input, textarea, select) {
+    min-width: 240px;
   }
 }

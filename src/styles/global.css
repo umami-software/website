@@ -5,8 +5,8 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.5;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -28,23 +28,30 @@ body {
 
 a,
 a:active,
-a:visited {
-  color: var(--base-color-900);
+a:visited,
+a:hover {
+  color: currentColor;
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--primary-color);
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.05em;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: max(48px, min(5vw, 64px));
 }
 h2 {
-  font-size: 24px;
+  font-size: max(24px, min(5vw, 32px));
 }
 h3 {
-  font-size: 20px;
+  font-size: max(16px, min(2vw, 18px));
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 main {
@@ -87,4 +94,10 @@ body button {
 hr {
   border: 0;
   border-top: 1px solid var(--base-color-400);
+}
+
+.mdx, .blog {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+  }
 }

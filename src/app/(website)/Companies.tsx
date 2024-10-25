@@ -1,14 +1,14 @@
 'use client';
-import TextBlock from '@/components/TextBlock';
-import ContentImage from '@/components/ContentImage';
+import { Text, Column } from '@umami/react-zen';
 import styles from './Companies.module.css';
 
 const items = [
   { name: 'amd', title: 'AMD' },
   { name: 'accenture', title: 'Accenture' },
-  //{ name: 'bp', title: 'bp' },
+  { name: 'gm', title: 'GM' },
   { name: 'espn', title: 'ESPN' },
   { name: 'siemens', title: 'Siemens' },
+  { name: 'intel', title: 'Intel' },
   { name: 'hulu', title: 'Hulu' },
   { name: 'vsp', title: 'VSP' },
   //{ name: 'huawei', title: 'Huawei' },
@@ -16,13 +16,22 @@ const items = [
 
 export default function Companies() {
   return (
-    <TextBlock align="center">
-      <h1>Trusted by thousands of companies</h1>
+    <Column gap="md">
+      <Text type="muted" align="center">
+        Trusted by thousands of companies
+      </Text>
       <div className={styles.logos}>
-        {items.map(({ name, title }) => {
-          return <ContentImage key={name} src={`/images/logo-${name}.png`} alt={title} />;
-        })}
+        <div className={styles.scroll}>
+          {items.map(({ name, title }) => {
+            return <img key={name} src={`/images/logo-${name}.png`} alt={title} />;
+          })}
+        </div>
+        <div className={styles.scroll} style={{ left: 1600 }}>
+          {items.map(({ name, title }) => {
+            return <img key={name} src={`/images/logo-${name}.png`} alt={title} />;
+          })}
+        </div>
       </div>
-    </TextBlock>
+    </Column>
   );
 }

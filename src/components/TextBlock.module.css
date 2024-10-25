@@ -1,65 +1,40 @@
-.text > *:first-child {
-  font-size: max(32px, min(5vw, 48px));
-  font-weight: 800;
-  letter-spacing: -0.05em;
-}
-
-.text.xl > *:first-child {
-  font-size: max(48px, min(5vw, 76px));
-  line-height: 1em;
-}
-
-.text.lg > *:first-child {
-  font-size: max(48px, min(5vw, 64px));
-}
-
-.text.md > *:first-child {
-  font-size: max(24px, min(5vw, 32px));
-}
-
-.text.sm > *:first-child {
-  font-size: max(18px, min(2vw, 24px));
-}
-
-.text > *:nth-child(1) {
-  font-size: max(18px, min(2vw, 24px));
-  letter-spacing: -0.05em;
-}
-
-.text > *:nth-child(2) {
+.text p {
   color: var(--font-muted-color);
-  font-size: max(14px, min(2vw, 16px));
-  font-weight: 400;
-
-  @media (max-width: 600px) {
-    width: 100%;
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
 }
 
-.text.xl > *:nth-child(2) {
-  font-size: max(18px, min(2vw, 22px));
+.text header {
+  color: var(--primary-color);
+  font-size: var(--font-size-md);
+  font-weight: 700;
 }
 
-.text.lg > *:nth-child(2) {
-  font-size: max(16px, min(2vw, 18px));
+.text strong {
+  color: var(--font-color);
 }
 
-.start {
+.size-lg {
+  font-size: 18px;
+}
+
+.size-md {
+  font-size: 16px;
+}
+
+.size-sm {
+  font-size: 14px;
+}
+
+.align-start {
   text-align: start;
   margin-left: 0;
 }
 
-.center {
+.align-center {
   text-align: center;
 }
 
-.end {
+.align-end {
   text-align: end;
   margin-right: 0;
 }
 
-.text strong {
-  color: var(--base-color-900);
-}

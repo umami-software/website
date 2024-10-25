@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Suspense } from 'react';
+import Script from 'next/script';
 import { AxiomWebVitals } from 'next-axiom';
 import Header from './Header';
 import Main from './Main';
@@ -10,7 +11,7 @@ import '@fontsource/inter/800.css';
 import '@fontsource/jetbrains-mono/400.css';
 import 'styles/github-dark.css';
 import 'styles/variables.css';
-import 'styles/index.css';
+import 'styles/global.css';
 import '@umami/react-zen/dist/zen.css';
 import '@umami/react-zen/dist/index.css';
 
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         {process.env.NODE_ENV === 'production' && (
-          <script
+          <Script
             defer
             data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
             data-domains="umami.is"

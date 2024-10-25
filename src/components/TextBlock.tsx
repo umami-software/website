@@ -5,7 +5,7 @@ import styles from './TextBlock.module.css';
 export interface TextBlockProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   className?: string;
-  size?: 'xl' | 'lg' | 'md' | 'sm';
+  size?: 'sm' | 'md' | 'lg';
   align?: 'start' | 'center' | 'end';
 }
 
@@ -19,10 +19,12 @@ export default function TextBlock({
   return (
     <div
       {...props}
-      className={classNames(styles.text, className, {
-        [styles[size]]: true,
-        [styles[align]]: true,
-      })}
+      className={classNames(
+        styles.text,
+        className,
+        size && styles[`size-${size}`],
+        align && styles[`align-${align}`],
+      )}
     >
       {children}
     </div>

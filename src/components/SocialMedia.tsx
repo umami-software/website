@@ -15,7 +15,7 @@ const links = [
   { name: 'LinkedIn', url: LINKEDIN_URL, icon: <LinkedIn /> },
 ];
 
-export default function SocialMedia({ size = 'md' }: { size: 'sm' | 'md' | 'lg' | 'xl' }) {
+export default function SocialMedia({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' | 'xl' }) {
   return (
     <div className={styles.links}>
       {links.map(({ name, url, icon }) => (

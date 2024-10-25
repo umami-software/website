@@ -6,7 +6,7 @@ import '@fontsource/inter/800.css';
 import '@fontsource/jetbrains-mono/400.css';
 import 'react-basics/dist/styles.css';
 import 'styles/variables.css';
-import 'styles/index.css';
+import 'styles/global.css';
 import React, { Suspense } from 'react';
 import Header from '@/app/(campaigns)/Header';
 import Footer from '@/app/(campaigns)/Footer';

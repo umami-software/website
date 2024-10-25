@@ -15,26 +15,15 @@
   margin: 60px 0;
 }
 
-.blog h1 {
-  font-size: max(24px, min(2vw, 30px));
-  letter-spacing: -0.05em;
-}
-
-.blog h2 {
-  font-size: max(18px, min(2vw, 26px));
-  letter-spacing: -0.05em;
-}
-
-.blog h3 {
-  font-size: max(14px, min(2vw, 20px));
-  letter-spacing: -0.05em;
-  color: var(--base-color-800);
-}
-
 .blog p {
-  color: var(--base-color-800);
+  color: var(--base-color-700);
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
+  line-height: 1.8;
+}
+
+.blog li {
+  line-height: 2.4;
 }
 
 .blog a {

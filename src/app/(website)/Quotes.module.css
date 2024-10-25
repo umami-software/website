@@ -2,18 +2,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
-  padding: 30px;
-  border-radius: 12px;
-  margin-top: 60px;
+  border-radius: 8px;
 }
 
 .card {
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  grid-template-rows: 40px 1fr;
   padding: 20px;
-  background: var(--base-color-50);
-  border: 1px solid var(--base-color-400);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   align-self: start;
   box-shadow: 5px 5px 0 var(--base-color-100);
@@ -42,7 +36,8 @@
 
 .user {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  flex: 1;
 }
 
 .name {
@@ -64,8 +59,7 @@
 }
 
 .body {
-  grid-column: 2/3;
-  grid-row: 2/3;
+  color: var(--font-muted-color);
   text-align: left;
   font-size: 14px;
 }
@@ -90,8 +84,6 @@
   }
 
   .body {
-    grid-column: 1/3;
-    grid-row: 2/3;
     justify-content: center;
     text-align: left;
   }

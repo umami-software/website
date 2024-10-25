@@ -4,7 +4,7 @@ import Terms from './terms-of-service.mdx';
 
 export default function TermsPage() {
   return (
-    <article>
+    <article className="mdx">
       <PageHeader>
         <h1>Terms of Service</h1>
       </PageHeader>

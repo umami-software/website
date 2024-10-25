@@ -12,14 +12,14 @@
 }
 
 .value {
-  font-size: max(48px, min(5vw, 64px));
+  font-size: 64px;
   font-weight: 900;
   text-shadow: 5px 5px 1px #a8ccf7;
 }
 
 .label {
-  color: var(--base-color-700);
-  font-size: max(16px, min(2vw, 24px));
+  color: var(--font-muted-color);
+  font-size: 16px;
 }
 
 .buttons {

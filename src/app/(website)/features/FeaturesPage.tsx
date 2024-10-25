@@ -41,18 +41,18 @@ const items = [
     description: `Umami collects all the metrics you care about to help you make better decisions.`,
     items: [
       {
-        title: 'Visitor info',
-        description: [
-          'Get detailed information about your visitors like their device, browser, OS and location.',
-        ],
-        icon: <User />,
-      },
-      {
         title: 'Page views',
         description: [
           'Knowing which of your pages gets the most traffic is essential to improving your website content.',
         ],
         icon: <View />,
+      },
+      {
+        title: 'Visitors',
+        description: [
+          'Get detailed information about your visitors like their device, browser, OS and location.',
+        ],
+        icon: <User />,
       },
       {
         title: 'Bounce rate',
@@ -76,7 +76,7 @@ const items = [
         icon: <Location />,
       },
       {
-        title: 'Device',
+        title: 'Devices',
         description: [
           'See the most popular devices used by visitors to help you optimize your pages.',
         ],
@@ -261,28 +261,30 @@ const items = [
 
 export default function FeaturesPage() {
   return (
-    <article>
+    <>
       <PageHeader>
-        <div>Features</div>
-        <div>An overview of all the core features Umami provides.</div>
+        <h1>Features</h1>
+        <p>An overview of all the core features Umami provides.</p>
       </PageHeader>
       <div className={styles.features}>
         {items.map(({ title, description, items }) => {
           return (
             <div key={title}>
-              <TextBlock size="md">
-                <div>{title}</div>
-                <div>{description}</div>
+              <TextBlock size="md" className={styles.section}>
+                <h2>{title}</h2>
+                <p>{description}</p>
               </TextBlock>
               <div className={styles.items}>
                 {items.map((item, index) => (
                   <div key={index} className={styles.item}>
                     <header className={styles.header}>
-                      <Icon size="lg">{item.icon}</Icon>
+                      <Icon size="md">{item.icon}</Icon>
                       <Text>{item.title}</Text>
                     </header>
                     {item.description.map((text, index) => (
-                      <p key={index}>{text}</p>
+                      <p key={index} className={styles.text}>
+                        {text}
+                      </p>
                     ))}
                   </div>
                 ))}
@@ -294,6 +296,6 @@ export default function FeaturesPage() {
       <section>
         <GetStartedBanner />
       </section>
-    </article>
+    </>
   );
 }

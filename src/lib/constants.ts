@@ -30,7 +30,7 @@ export const Blocks = {
   },
   visitorInsights: {
     title: 'Visitor insights',
-    description: `Get detailed breakdowns about your visitors including what browser, OS and device they used.`,
+    description: `Get detailed breakdowns about your visitors including where they are located to what device they used.`,
     image: '/images/preview-session-stats.png',
   },
   customEvents: {

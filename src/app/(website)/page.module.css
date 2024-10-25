@@ -1,11 +1,11 @@
 .container {
   display: grid;
-  gap: 90px;
+  gap: 120px;
   justify-content: center;
 }
 
 @media screen and (max-width: 992px) {
   .container {
-    gap: 60px;
+    gap: 80px;
   }
 }

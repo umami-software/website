@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import PageHeader from '@/components/PageHeader';
 import GetStartedBanner from '@/components/GetStartedBanner';
 import Plans from './Plans';
-import Features from './Features';
+import Features from './FeaturesChart';
 import Questions from './Questions';
 
 export default function PricingPage() {

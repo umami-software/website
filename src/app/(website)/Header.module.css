@@ -8,7 +8,6 @@
   background: rgba(255, 255, 255, 0.75);
   z-index: 1000;
   max-width: 100vw;
-  font-weight: 700;
   height: 70px;
   display: flex;
   flex-direction: row;
@@ -21,12 +20,20 @@
 }
 
 .header .signup:hover {
-  color: var(--primary-fg-color);
+  color: var(--primary-font-color);
+}
+
+.links {
+  color: var(--font-color);
+  margin: 0 auto;
 }
 
 .links a:hover {
-  text-decoration: underline solid var(--base-color-500);
-  text-underline-offset: var(--spacing-3);
+  color: var(--primary-color);
+}
+
+.header .actions > a {
+  font-size: 14px;
 }
 
 .hamburger {
