@@ -66,6 +66,7 @@ export default function Quotes() {
   return (
     <div className={styles.container}>
       <TextBlock size="lg" align="center">
+        <header>Connect</header>
         <h2>Join our community</h2>
         <p>Come share your Umami experience with our vibrant community of users and developers.</p>
       </TextBlock>

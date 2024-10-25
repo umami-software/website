@@ -8,8 +8,12 @@ export default function OpenSource() {
   return (
     <Column gap="lg">
       <TextBlock size="lg" align="center">
+        <header>Contribute</header>
         <h2>Powered by Open Source</h2>
-        <p>Umami is proudly open source.</p>
+        <p>
+          Umami is proudly open source. We build our products openly and share our code with
+          everyone.
+        </p>
       </TextBlock>
       <Row alignItems="center" justifyContent="center" gap="md">
         <LinkButton href="/docs" variant="outline">
