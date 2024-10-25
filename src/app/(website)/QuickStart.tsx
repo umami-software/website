@@ -13,6 +13,7 @@ export default function QuickStart() {
   return (
     <div className={styles.container}>
       <TextBlock align="center" size="lg">
+        <header>Easy setup</header>
         <h2>Get up and running in minutes</h2>
       </TextBlock>
       <div className={styles.steps}>
