@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import '@fontsource/inter/400.css';
@@ -5,9 +6,8 @@ import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
 import '@fontsource/jetbrains-mono/400.css';
 import 'react-basics/dist/styles.css';
-import 'styles/variables.css';
-import 'styles/global.css';
-import React, { Suspense } from 'react';
+import '@/styles/variables.css';
+import '@/styles/global.css';
 import Header from '@/app/(campaigns)/Header';
 import Footer from '@/app/(campaigns)/Footer';
 import styles from './layout.module.css';
