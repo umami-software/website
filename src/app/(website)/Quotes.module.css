@@ -64,12 +64,6 @@
   font-size: 14px;
 }
 
-@media screen and (max-width: 768px) {
-  .list {
-    padding: 20px;
-  }
-}
-
 @media screen and (max-width: 360px) {
   .list {
     grid-template-columns: 1fr;

@@ -1,10 +1,15 @@
+.container {
+  max-width: 100%;
+}
+
 .items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 60px 40px;
 }
 
 .image {
+  max-width: 375px;
   height: 200px;
   margin-bottom: 30px;
 }

@@ -25,3 +25,9 @@
   transform: translateY(0);
   transition: all ease-in-out 500ms;
 }
+
+@media (max-width: 576px) {
+  .block {
+    display: none;
+  }
+}

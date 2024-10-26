@@ -8,7 +8,7 @@ import styles from './WebAnalytics.module.css';
 
 export default function WebAnalytics() {
   return (
-    <Column gap="lg">
+    <Column gap="lg" className={styles.container}>
       <TextBlock size="lg">
         <header>Web Analytics</header>
         <h2>A complete analytics solution with all the features you need.</h2>
@@ -85,14 +85,12 @@ const Feature = ({
   children: ReactNode;
 }) => {
   return (
-    <div className={styles.item}>
-      <TextBlock>
-        <ImageBlock className={styles.image}>
-          <img src={image} style={style} alt={title} />
-        </ImageBlock>
-        <h3>{title}</h3>
-        <p>{children}</p>
-      </TextBlock>
-    </div>
+    <TextBlock className={styles.item}>
+      <ImageBlock className={styles.image}>
+        <img src={image} style={style} alt={title} />
+      </ImageBlock>
+      <h3>{title}</h3>
+      <p>{children}</p>
+    </TextBlock>
   );
 };

@@ -30,7 +30,7 @@ export default function ProductAnalytics() {
   }, []);
 
   return (
-    <Row gap="lg">
+    <Row gap="lg" className={styles.row}>
       <ImageBlock className={styles.block}>
         {images.map((src, index) => {
           return (
