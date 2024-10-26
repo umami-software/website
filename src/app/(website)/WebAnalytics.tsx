@@ -33,7 +33,7 @@ export default function WebAnalytics() {
         <Feature
           title="Powerful filters"
           image="/images/feature-filters.png"
-          style={{ left: 50, top: 50 }}
+          style={{ left: 70, top: 50 }}
         >
           Dive deeper into your data using easy to apply filters. Segment your users by any metric
           such as browser, OS, and country.

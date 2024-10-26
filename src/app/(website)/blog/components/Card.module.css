@@ -14,6 +14,10 @@
   min-height: 90px;
 }
 
+.title:hover {
+  color: var(--primary-color);
+}
+
 .description {
   color: var(--font-muted-color);
   font-size: max(14px, min(2vw, 16px));
@@ -23,6 +27,10 @@
 
 .link {
   justify-self: start;
+}
+
+.link:hover {
+  color: var(--primary-color);
 }
 
 .date {
