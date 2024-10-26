@@ -19,6 +19,7 @@
 }
 
 .answer {
+  color: var(--font-muted-color);
   font-size: 16px;
   font-weight: 400;
   padding: 20px;

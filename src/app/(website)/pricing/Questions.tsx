@@ -7,7 +7,8 @@ import TextBlock from '@/components/TextBlock';
 const questions = [
   {
     question: 'How is usage measured?',
-    answer: `Usage is measured by counting hits to a website and any custom events or custom event properties stored. Each website hit counts as one event. If you save
+    answer: `Usage is measured by counting pageviews to a website plus any custom events or custom event properties stored. 
+    Each website pageview counts as one event. If you save
     event properties, each data property stored counts as one event.`,
   },
   {
@@ -33,7 +34,7 @@ const questions = [
 export default function Questions() {
   return (
     <>
-      <TextBlock>
+      <TextBlock align="center">
         <h2>Frequently asked questions</h2>
       </TextBlock>
       <div className={styles.questions}>
