@@ -3,14 +3,13 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  max-width: 375px;
   border-radius: 20px;
   background: var(--base-color-50);
   overflow: hidden;
 }
 
 .image img {
-  width: 100%;
+  position: absolute;
   max-width: 90%;
   box-shadow: var(--box-shadow-3);
   border-radius: 10px;

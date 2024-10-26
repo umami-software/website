@@ -8,7 +8,7 @@ import styles from './WebAnalytics.module.css';
 
 export default function WebAnalytics() {
   return (
-    <Column gap="lg" className={styles.container}>
+    <Column gap="lg">
       <TextBlock size="lg">
         <header>Web Analytics</header>
         <h2>A complete analytics solution with all the features you need.</h2>
@@ -22,35 +22,23 @@ export default function WebAnalytics() {
           Get insights into your traffic so you optimize for growth. Easily see all your metrics at
           a glance.
         </Feature>
-        <Feature
-          title="Visitor analysis"
-          image="/images/feature-visitors.png"
-          style={{ marginTop: 140 }}
-        >
+        <Feature title="Visitor analysis" image="/images/feature-visitors.png" style={{ top: 30 }}>
           Get detailed breakdowns about your visitors including where they are located and what
           device they used.
         </Feature>
-        <Feature
-          title="Custom events"
-          image="/images/feature-events.png"
-          style={{ marginBottom: 160, marginLeft: -40 }}
-        >
+        <Feature title="Custom events" image="/images/feature-events.png" style={{ bottom: 30 }}>
           Track more than just pageviews. Capture any event on your website like button clicks and
           form entries.
         </Feature>
         <Feature
           title="Powerful filters"
           image="/images/feature-filters.png"
-          style={{ marginLeft: 50, marginTop: 55 }}
+          style={{ left: 50, top: 50 }}
         >
           Dive deeper into your data using easy to apply filters. Segment your users by any metric
           such as browser, OS, and country.
         </Feature>
-        <Feature
-          title="Realtime data"
-          image="/images/feature-realtime.png"
-          style={{ marginTop: 240, marginLeft: 180 }}
-        >
+        <Feature title="Realtime data" image="/images/feature-realtime.png" style={{ top: 40 }}>
           Get a realtime view of your current website traffic. See the exact pages where your
           visitors are landing.
         </Feature>
