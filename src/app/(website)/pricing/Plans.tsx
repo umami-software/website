@@ -81,7 +81,7 @@ export default function Plans() {
                 </ul>
               </div>
               <div className={styles.button}>
-                <Button variant={variant as any} size="lg" asChild>
+                <Button variant={variant as any} asChild>
                   <Link href={url}>{button}</Link>
                 </Button>
               </div>
