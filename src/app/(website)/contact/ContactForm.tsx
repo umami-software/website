@@ -36,7 +36,7 @@ export default function ContactForm() {
         name="comment"
         rules={{ required: 'Required' }}
       >
-        <TextArea resize="vertical" />
+        <TextArea resize="vertical" style={{ height: 300 }} />
       </FormField>
       <FormSubmitButton variant="primary">Submit</FormSubmitButton>
     </Form>
