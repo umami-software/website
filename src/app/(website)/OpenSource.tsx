@@ -9,7 +9,7 @@ export default function OpenSource() {
     <Column gap="lg">
       <TextBlock size="lg" align="center">
         <header>Contribute</header>
-        <h2>Powered by Open Source</h2>
+        <h2>Powered by open source</h2>
         <p>
           Umami is proudly open source. Thousands of developers worldwide can share and contribute
           to the Umami experience.

@@ -1,9 +1,9 @@
 import { cache } from 'react';
 import matter from 'gray-matter';
 import recursive from 'recursive-readdir';
-import path from 'path';
-import fs from 'fs/promises';
 import { firstBy } from 'thenby';
+import fs from 'node:fs/promises';
+import path from 'node:path';
 
 export const getFiles = cache(async (folder: string) => {
   const dir = path.resolve(folder);
