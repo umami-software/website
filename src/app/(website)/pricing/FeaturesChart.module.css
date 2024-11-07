@@ -6,7 +6,7 @@
 .features tr {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--base-color-300);
+  border-bottom: 1px solid var(--base-color-200);
 }
 
 .features th,
@@ -16,6 +16,10 @@
   justify-content: center;
   flex-basis: 25%;
   min-height: 50px;
+}
+
+.features td {
+  color: var(--font-muted-color);
 }
 
 .features td:first-child {
@@ -30,6 +34,7 @@
   letter-spacing: -0.025em;
   height: 100px;
   border: 0;
+  color: var(--font-color);
 }
 
 @media screen and (max-width: 768px) {
