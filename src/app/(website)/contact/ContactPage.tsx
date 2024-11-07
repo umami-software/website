@@ -12,11 +12,10 @@ export default function ContactPage() {
         <h1>Contact</h1>
         <p>We would love to hear from you!</p>
       </PageHeader>
-      <Row>
+      <Row wrap="wrap">
         <ContactForm />
-        <Row alignItems="center">
-          <Column alignItems="center" grow={1}></Column>
-          <Column alignItems="center" grow={1} gap="xl">
+        <Row alignItems="center" justifyContent="center" grow={1}>
+          <Column alignItems="center" grow={1} gap="xl" style={{ marginTop: '3rem' }}>
             <Column alignItems="center" gap="lg">
               <h3>Interested in learning more?</h3>
               <Button variant="primary" asChild>
