@@ -73,7 +73,7 @@ const nextConfig = {
   async rewrites() {
     return [
       { source: '/docs/getting-started', destination: '/docs' },
-      { source: '/a/script.js', destination: 'https://analytics.eu.umami.is/script.js' },
+      { source: '/a/script.js', destination: 'https://tracker-script.umami.dev/' },
       { source: '/discord', destination: 'https://discord.gg/4dz4zcXYrQ' },
       { source: '/analytics', destination: '/lp/analytics' },
       { source: '/website-analytics', destination: '/lp/website-analytics' },
