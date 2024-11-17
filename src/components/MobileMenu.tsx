@@ -1,8 +1,8 @@
 'use client';
-import { createPortal } from 'react-dom';
+import { Button, Icon, Icons } from '@umami/react-zen';
 import classNames from 'classnames';
 import Link from 'next/link';
-import { Button, Icon, Icons } from '@umami/react-zen';
+import { createPortal } from 'react-dom';
 import styles from './MobileMenu.module.css';
 
 interface Props {
@@ -23,7 +23,7 @@ export default function MobileMenu({ items = [], onClose }: Props) {
       </Button>
       <div className={styles.items}>
         {items.map(({ label, value }) => (
-          <Link key={value} href={value} className={styles.item}>
+          <Link key={value} href={value} className={styles.item} onClick={onClose} prefetch>
             {label}
           </Link>
         ))}
