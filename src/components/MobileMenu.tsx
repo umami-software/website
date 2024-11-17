@@ -1,8 +1,8 @@
 'use client';
-import { Button, Icon, Icons } from '@umami/react-zen';
+import { createPortal } from 'react-dom';
 import classNames from 'classnames';
 import Link from 'next/link';
-import { createPortal } from 'react-dom';
+import { Button, Icon, Icons } from '@umami/react-zen';
 import styles from './MobileMenu.module.css';
 
 interface Props {
