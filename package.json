@@ -38,6 +38,7 @@
     "@typescript-eslint/parser": "^5.39.0",
     "@umami/react-zen": "^0.18.0",
     "classnames": "^2.2.6",
+    "date-fns": "^4.1.0",
     "fast-glob": "^3.3.2",
     "glob": "^10.3.10",
     "gray-matter": "^4.0.3",
