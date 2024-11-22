@@ -50,6 +50,10 @@
   margin-right: 10px;
 }
 
+.docs ol {
+  list-style: decimal;
+}
+
 .content {
   min-height: calc(100vh - 70px);
   max-width: 100%;
