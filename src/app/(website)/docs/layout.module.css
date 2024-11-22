@@ -14,21 +14,21 @@
   line-height: 48px;
   font-weight: 800;
   letter-spacing: -0.025em;
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .docs h2 {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.025em;
-  margin: 0 0 20px 0;
+  margin: 20px 0;
 }
 
 .docs h3 {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.025em;
-  margin: 0 0 20px 0;
+  margin: 20px 0;
 }
 
 .docs img {
@@ -36,6 +36,18 @@
   max-width: 100%;
   margin: 4rem auto;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.docs ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.docs ul li::before {
+  content: '— ';
+  color: var(--base-color-500);
+  margin-right: 10px;
 }
 
 .content {

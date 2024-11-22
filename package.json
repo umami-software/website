@@ -36,7 +36,7 @@
     "@types/mdx": "^2.0.7",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
-    "@umami/react-zen": "^0.15.0",
+    "@umami/react-zen": "^0.18.0",
     "classnames": "^2.2.6",
     "fast-glob": "^3.3.2",
     "glob": "^10.3.10",

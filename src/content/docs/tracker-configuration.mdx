@@ -65,20 +65,3 @@ Usage:
   data-tag="umami-eu"
 ></script>
 ```
-
-### Google Tag Manager
-
-Google Tag Manager will strip the attributes from the tracker, so you can bypass this by using the format below.
-
-Usage:
-
-```html
-<script>
-  (function () {
-    var el = document.createElement('script');
-    el.setAttribute('src', 'http://mywebsite.com/umami.js');
-    el.setAttribute('data-website-id', '94db1cb1-74f4-4a40-ad6c-962362670409');
-    document.body.appendChild(el);
-  })();
-</script>
-```
