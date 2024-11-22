@@ -37,6 +37,7 @@ There will be guides below to import your data from a self-hosted version of Uma
 - `page_title`: (string)(optional) Name of page title.
 - `event_type`: (int) 1.Pageview 2.Custom event.
 - `event_name`: (string)(optional) Name of event.
+- `tag`: (string)(optional) Name of tag.
 - `created_at`: (datetime) Timestamp of created date in UTC.
 
 **Event data**
@@ -91,6 +92,7 @@ SELECT we.website_id,
     we.page_title,
     we.event_type,
     we.event_name,
+    we.tag,
     TO_CHAR(we.created_at, 'YYYY-MM-DD HH24:MI:SS') created_at
  FROM website_event we
  JOIN session s
@@ -180,6 +182,7 @@ SELECT we.website_id,
       COALESCE(we.page_title, '') page_title,
       we.event_type,
       COALESCE(we.event_name, '') event_name,
+      COALESCE(we.tag, '') tag,
       DATE_FORMAT(we.created_at, '%Y-%m-%d %T') created_at
 FROM website_event we
 JOIN session s
@@ -213,6 +216,7 @@ SELECT 'website_id',
       'page_title',
       'event_type',
       'event_name',
+      'tag',
       'created_at'
 
 UNION

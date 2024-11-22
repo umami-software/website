@@ -1,0 +1,44 @@
+---
+title: Tags
+---
+
+Use Umami tags to group events under a single website, gather data, and enable various functionalities.
+
+## Use Cases
+
+- A/B Testing: Test different versions of a webpage or campaign to see which performs better.
+- Group events to allow filtering and insights under a single website overview.
+
+## Usage
+
+Add the **data-tag** property to the tracking script. This will include the **tag** column in the payload.
+
+```html
+<script
+  defer
+  src="http://mywebsite.com/umami.js"
+  data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
+  data-tag="homepage-layout-a"
+></script>
+```
+
+You can reuse the tracking script for different parts of your website, introducing additional tags.
+
+```html
+<script
+  defer
+  src="http://mywebsite.com/umami.js"
+  data-website-id="94db1cb1-74f4-4a40-ad6c-962362670409"
+  data-tag="homepage-layout-b"
+></script>
+```
+
+## Filtering
+
+From the website **Overview** you can filter on specific tags.
+
+![image](/images/docs/v2/tag-filters.png)
+
+A pageview breakdown can also be seen by clicking **More** from any of the metric cards.
+
+![image](/images/docs/v2/tag-details.png)

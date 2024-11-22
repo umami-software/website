@@ -77,6 +77,10 @@
             "url": "/docs/compare"
           },
           {
+            "label": "Tags",
+            "url": "/docs/tags"
+          },
+          {
             "label": "Teams",
             "url": "/docs/teams"
           },
