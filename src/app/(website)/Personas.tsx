@@ -1,5 +1,5 @@
 'use client';
-import { Icon, Icons, Text } from 'react-basics';
+import { Icon, Icons, Text } from '@umami/react-zen';
 import TextBlock from '@/components/TextBlock';
 import LinkButton from '@/components/LinkButton';
 import styles from './Personas.module.css';
@@ -46,7 +46,7 @@ export default function Personas() {
                 <LinkButton href={url} variant="secondary">
                   <Text>Learn more </Text>
                   <Icon>
-                    <Icons.ArrowRight />
+                    <Icons.Arrow />
                   </Icon>
                 </LinkButton>
               </div>
