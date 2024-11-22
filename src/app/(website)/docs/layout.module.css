@@ -39,15 +39,7 @@
 }
 
 .docs ul {
-  list-style: none;
-  padding: 0;
-  margin-left: 10px;
-}
-
-.docs ul li::before {
-  content: '— ';
-  color: var(--base-color-500);
-  margin-right: 10px;
+  list-style: disc;
 }
 
 .docs ol {
