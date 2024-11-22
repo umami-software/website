@@ -12,8 +12,7 @@ import '@fontsource/jetbrains-mono/400.css';
 import '@/styles/github-dark.css';
 import '@/styles/variables.css';
 import '@/styles/global.css';
-import '@umami/react-zen/dist/zen.css';
-import '@umami/react-zen/dist/index.css';
+import '@umami/react-zen/dist/styles.css';
 
 export default function RootLayout({ children }) {
   return (

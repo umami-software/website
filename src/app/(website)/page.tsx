@@ -10,7 +10,7 @@ import ProductAnalytics from './ProductAnalytics';
 
 export default function () {
   return (
-    <Column gap="xl">
+    <Column gap="12">
       <Hero />
       <WebAnalytics />
       <ProductAnalytics />

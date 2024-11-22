@@ -16,7 +16,7 @@ const items = [
 
 export default function Companies() {
   return (
-    <Column gap="md">
+    <Column gap="3">
       <Text type="muted" align="center">
         Trusted by thousands of companies
       </Text>

@@ -55,7 +55,7 @@ export default function Header() {
 
 const NavLinks = () => {
   return (
-    <Row className={styles.links} alignItems="center" gap="lg">
+    <Row className={styles.links} alignItems="center" gap="6">
       <Link href="/features">Features</Link>
       <Link href="/blog">Blog</Link>
       <Link href="/docs" prefetch={false}>
@@ -71,14 +71,16 @@ const ActionLinks = () => {
   const query = useQueryString({ ref: 'umami-nav-header' });
 
   return (
-    <Row className={styles.actions} alignItems="center" gap="sm">
+    <Row className={styles.actions} alignItems="center" gap="3">
       <Button variant="quiet" asChild>
         <Link className={styles.github} href={GITHUB_URL} target="_blank">
-          <Row alignItems="center" gap="sm">
+          <Row alignItems="center" gap="2">
             <Icon size="sm">
               <GitHub />
             </Icon>
-            <Text weight="bold">{GITHUB_STARS}</Text>
+            <div>
+              <Text weight="bold">{GITHUB_STARS}</Text>
+            </div>
           </Row>
         </Link>
       </Button>

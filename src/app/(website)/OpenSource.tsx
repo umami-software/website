@@ -6,7 +6,7 @@ import { GITHUB_URL } from '@/lib/constants';
 
 export default function OpenSource() {
   return (
-    <Column gap="lg">
+    <Column gap="6">
       <TextBlock size="lg" align="center">
         <header>Contribute</header>
         <h2>Powered by open source</h2>
@@ -15,7 +15,7 @@ export default function OpenSource() {
           to the Umami experience.
         </p>
       </TextBlock>
-      <Row alignItems="center" justifyContent="center" gap="md">
+      <Row alignItems="center" justifyContent="center" gap="3">
         <LinkButton href="/docs" variant="outline">
           Read documentation
         </LinkButton>

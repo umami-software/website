@@ -30,7 +30,7 @@ export default function ProductAnalytics() {
   }, []);
 
   return (
-    <Row gap="lg" className={styles.row}>
+    <Row gap="6" className={styles.row}>
       <ImageBlock className={styles.block}>
         {images.map((src, index) => {
           return (
@@ -43,7 +43,7 @@ export default function ProductAnalytics() {
           );
         })}
       </ImageBlock>
-      <Column gap="lg">
+      <Column gap="6">
         <TextBlock align="center" size="lg">
           <header>Product analytics</header>
           <h2>Turn user behavior into insights</h2>
@@ -52,7 +52,7 @@ export default function ProductAnalytics() {
             conversion paths.
           </p>
         </TextBlock>
-        <Column gap="md">
+        <Column gap="3">
           {items.map(({ name, description }, index) => {
             return (
               <TextBlock

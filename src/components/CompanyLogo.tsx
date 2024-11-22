@@ -5,7 +5,7 @@ import Logo from '@/assets/logo.svg';
 
 export default function CompanyLogo() {
   return (
-    <Row alignItems="center" gap="md">
+    <Row alignItems="center" gap="2">
       <Icon size="sm">
         <Logo />
       </Icon>

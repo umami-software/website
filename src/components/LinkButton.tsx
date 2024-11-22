@@ -1,8 +1,8 @@
-import { ReactElement, ReactNode } from 'react';
+import { HTMLAttributes, ReactElement, ReactNode } from 'react';
 import Link from 'next/link';
 import { Button, Icon, Text } from '@umami/react-zen';
 
-export interface LinkButtonProps {
+export interface LinkButtonProps extends HTMLAttributes<HTMLAnchorElement> {
   href: string;
   icon?: ReactElement;
   target?: string;
@@ -27,8 +27,8 @@ export function LinkButton({
   return (
     <Button variant={variant as any} size={size as any} asChild>
       <Link {...props} className={className} href={href} target={target} rel={rel}>
-        {icon && <Icon>{icon}</Icon>}
-        <Text>{children}</Text>
+        {icon && <Icon>{icon as any}</Icon>}
+        <Text>{children as any}</Text>
       </Link>
     </Button>
   );

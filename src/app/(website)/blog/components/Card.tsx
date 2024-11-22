@@ -24,7 +24,7 @@ export default function Card({
       <div className={styles.description}>{description}</div>
       <div className={styles.link}>
         <Link href={`/blog/${id}`}>
-          <Row gap="sm">
+          <Row gap="3">
             <Text weight="bold">Read more</Text>
             <Icon>
               <Icons.Arrow />

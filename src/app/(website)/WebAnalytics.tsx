@@ -8,7 +8,7 @@ import styles from './WebAnalytics.module.css';
 
 export default function WebAnalytics() {
   return (
-    <Column gap="lg">
+    <Column gap="6">
       <TextBlock size="lg">
         <header>Web Analytics</header>
         <h2>A complete analytics solution with all the features you need.</h2>

@@ -14,9 +14,9 @@ export default function ContactPage() {
       </PageHeader>
       <Row wrap="wrap">
         <ContactForm />
-        <Row alignItems="center" justifyContent="center" grow={1}>
-          <Column alignItems="center" grow={1} gap="xl" style={{ marginTop: '3rem' }}>
-            <Column alignItems="center" gap="lg">
+        <Row alignItems="center" justifyContent="center">
+          <Column alignItems="center" gap="12" style={{ marginTop: '3rem' }}>
+            <Column alignItems="center" gap="6">
               <h3>Interested in learning more?</h3>
               <Button variant="primary" asChild>
                 <Link href="https://calendly.com/mikecao/umami-demo" target="_blank">
@@ -24,7 +24,7 @@ export default function ContactPage() {
                 </Link>
               </Button>
             </Column>
-            <Column alignItems="center" gap="lg">
+            <Column alignItems="center" gap="6">
               <h3>Connect with us</h3>
               <SocialMedia size="lg" />
             </Column>

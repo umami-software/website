@@ -70,7 +70,7 @@ export default function Quotes() {
         <h2>Join our community</h2>
         <p>Come share your Umami experience with our vibrant community of users and developers.</p>
       </TextBlock>
-      <Row justifyContent="center" padding={6}>
+      <Row justifyContent="center" padding="6">
         <SocialMedia size="lg" />
       </Row>
       <div className={styles.list}>
