@@ -8,7 +8,7 @@ track this behavior.
 
 To track outbound links, you need to add data attributes to the anchor tag containing the external link.
 When the tag is clicked, the event will be triggered. In this example, we are sending
-an event named `outbound-link-click`.
+an event named `outbound-link-click` with the value of `url` set to the external URL.
 
 ```html
 <a href="https://www.external-website.com"
@@ -20,7 +20,7 @@ an event named `outbound-link-click`.
 ```
 
 If you don't want to manually update all you anchor tags, you can use this script to automatically add the
-event attribute to all your outbound tags. You can place the following script at the bottom of your HTML body.
+event attributes to all your outbound tags. You can place the following script at the bottom of your HTML body.
 
 ```html
 <script type="text/javascript">
