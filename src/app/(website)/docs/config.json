@@ -119,6 +119,10 @@
             "url": "/docs/bypass-ad-blockers"
           },
           {
+            "label": "Track outbound links",
+            "url": "/docs/track-outbound-links"
+          },
+          {
             "label": "Use Google Tag Manager",
             "url": "/docs/google-tag-manager"
           }
