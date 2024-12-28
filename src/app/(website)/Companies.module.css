@@ -4,6 +4,7 @@
   filter: grayscale(1);
   opacity: 0.5;
   height: 100px;
+  width: 100%;
   mask-image: linear-gradient(to right, rgba(255, 255, 255, 0), white 20%, white 80%, rgba(255, 255, 255, 0));
 }
 

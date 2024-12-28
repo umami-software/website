@@ -7,7 +7,7 @@ import useQueryString from '@/components/hooks/useQueryString';
 import { GITHUB_STARS, GITHUB_URL } from '@/lib/constants';
 import useScroll from '@/components/hooks/useScroll';
 import Container from '@/components/Container';
-import GitHub from '@/assets/github.svg';
+import { Github } from '@/components/icons';
 import styles from './Header.module.css';
 
 const mobileMenuItems = [
@@ -71,16 +71,14 @@ const ActionLinks = () => {
   const query = useQueryString({ ref: 'umami-nav-header' });
 
   return (
-    <Row className={styles.actions} alignItems="center" gap="3">
+    <Row className={styles.actions} alignItems="center" gap="2">
       <Button variant="quiet" asChild>
         <Link className={styles.github} href={GITHUB_URL} target="_blank">
           <Row alignItems="center" gap="2">
             <Icon size="sm">
-              <GitHub />
+              <Github />
             </Icon>
-            <div>
-              <Text weight="bold">{GITHUB_STARS}</Text>
-            </div>
+            <Text weight="bold">{GITHUB_STARS}</Text>
           </Row>
         </Link>
       </Button>

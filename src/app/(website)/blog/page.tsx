@@ -21,9 +21,7 @@ export default async function () {
 
   return (
     <>
-      <PageHeader>
-        <h1>Blog</h1>
-      </PageHeader>
+      <PageHeader title="Blog" />
       <div className={styles.posts}>
         {posts
           ?.filter((n: Post) => n)

@@ -1,1 +1,1 @@
-declare module 'recursive-readdir';
+declare module '*.svg';

@@ -8,12 +8,7 @@ import Questions from './Questions';
 export default function PricingPage() {
   return (
     <article>
-      <PageHeader>
-        <h1>Pricing</h1>
-        <p>
-          <strong>Umami Cloud</strong> is a reliable, high-performance hosted solution
-        </p>
-      </PageHeader>
+      <PageHeader title="Pricing" description="Simple usage based pricing" />
       <Plans />
       <Features />
       <Questions />

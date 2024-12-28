@@ -1,7 +1,7 @@
 'use client';
 import { Fragment } from 'react';
 import { Icon } from '@umami/react-zen';
-import Checkmark from '@/assets/checkmark.svg';
+import { Checkmark } from '@/components/icons';
 import styles from './FeaturesChart.module.css';
 
 const featuresChart = [

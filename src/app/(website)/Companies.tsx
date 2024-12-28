@@ -16,8 +16,8 @@ const items = [
 
 export default function Companies() {
   return (
-    <Column gap="3">
-      <Text type="muted" align="center">
+    <Column gap="3" width="100%">
+      <Text color="muted" align="center">
         Trusted by thousands of companies
       </Text>
       <div className={styles.logos}>

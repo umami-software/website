@@ -1,23 +1,23 @@
-'use client';
-import TextBlock, { TextBlockProps } from '@/components/TextBlock';
-import classNames from 'classnames';
-import styles from './PageHeader.module.css';
+import { Column, Heading, Text } from '@umami/react-zen';
+import { ReactNode } from 'react';
 
 export default function PageHeader({
-  children,
-  className,
-  size = 'lg',
-  align = 'center',
-  ...props
-}: TextBlockProps) {
+  title,
+  description,
+}: {
+  title: string;
+  description?: ReactNode;
+}) {
   return (
-    <TextBlock
-      {...props}
-      className={classNames(styles.header, className)}
-      size={size}
-      align={align}
-    >
-      {children}
-    </TextBlock>
+    <Column gap="4" alignItems="center" paddingTop="6" paddingBottom="8">
+      <Heading size="1" as="h1">
+        {title}
+      </Heading>
+      {description && (
+        <Text size="3" color="muted">
+          {description}
+        </Text>
+      )}
+    </Column>
   );
 }

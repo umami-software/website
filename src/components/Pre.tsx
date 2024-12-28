@@ -1,7 +1,7 @@
 'use client';
 import { useState, useRef } from 'react';
 import { Icon, Icons } from '@umami/react-zen';
-import Copy from '@/assets/copy.svg';
+import { Copy } from '@/components/icons';
 import styles from './Pre.module.css';
 
 const Pre = (props: any) => {

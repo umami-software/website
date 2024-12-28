@@ -12,6 +12,10 @@
   color: var(--font-color);
 }
 
+.size-xl {
+  font-size: 36px;
+}
+
 .size-lg {
   font-size: 18px;
 }

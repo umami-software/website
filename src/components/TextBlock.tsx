@@ -5,7 +5,7 @@ import styles from './TextBlock.module.css';
 export interface TextBlockProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   className?: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   align?: 'start' | 'center' | 'end';
 }
 

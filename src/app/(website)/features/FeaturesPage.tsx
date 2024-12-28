@@ -1,39 +1,39 @@
 'use client';
-import { Icon, Text } from '@umami/react-zen';
+import { Box, Column, Grid, Heading, Icon, Text, Row } from '@umami/react-zen';
 import GetStartedBanner from '@/components/GetStartedBanner';
 import PageHeader from '@/components/PageHeader';
-import TextBlock from '@/components/TextBlock';
-import Anonymous from '@/assets/anonymous.svg';
-import Bolt from '@/assets/bolt.svg';
-import Bounce from '@/assets/bounce.svg';
-import Compare from '@/assets/compare.svg';
-import Cookie from '@/assets/cookie.svg';
-import Data from '@/assets/data.svg';
-import Device from '@/assets/device.svg';
-import Export from '@/assets/export.svg';
-import Filter from '@/assets/filter.svg';
-import Funnel from '@/assets/funnel.svg';
-import Gauge from '@/assets/gauge.svg';
-import Gear from '@/assets/gear.svg';
-import Graph from '@/assets/graph.svg';
-import Import from '@/assets/import.svg';
-import Key from '@/assets/key.svg';
-import Language from '@/assets/language.svg';
-import Lightbulb from '@/assets/lightbulb.svg';
-import Location from '@/assets/location.svg';
-import Magnet from '@/assets/magnet.svg';
-import Path from '@/assets/path.svg';
-import Privacy from '@/assets/privacy.svg';
-import Realtime from '@/assets/realtime.svg';
-import Reports from '@/assets/reports.svg';
-import Share from '@/assets/share.svg';
-import Tag from '@/assets/tag.svg';
-import Target from '@/assets/target.svg';
-import Team from '@/assets/team.svg';
-import Traffic from '@/assets/traffic.svg';
-import User from '@/assets/user.svg';
-import View from '@/assets/view.svg';
-import styles from './FeaturesPage.module.css';
+import {
+  Anonymous,
+  Bolt,
+  Bounce,
+  Compare,
+  Cookie,
+  Data,
+  Device,
+  Export,
+  Filter,
+  Funnel,
+  Gauge,
+  Gear,
+  Graph,
+  Import,
+  Key,
+  Language,
+  Lightbulb,
+  Location,
+  Magnet,
+  Path,
+  Privacy,
+  Realtime,
+  Reports,
+  Share,
+  Tag,
+  Target,
+  Team,
+  Traffic,
+  User,
+  View,
+} from '@/components/icons';
 
 const items = [
   {
@@ -262,40 +262,42 @@ const items = [
 export default function FeaturesPage() {
   return (
     <>
-      <PageHeader>
-        <h1>Features</h1>
-        <p>An overview of all the core features Umami provides.</p>
-      </PageHeader>
-      <div className={styles.features}>
+      <PageHeader
+        title="Features"
+        description="An overview of all the core features Umami provides."
+      />
+      <Column gap="6">
         {items.map(({ title, description, items }) => {
           return (
-            <div key={title}>
-              <TextBlock size="md" className={styles.section}>
-                <h2>{title}</h2>
-                <p>{description}</p>
-              </TextBlock>
-              <div className={styles.items}>
+            <Box key={title}>
+              <Heading size="3">{title}</Heading>
+              <Box paddingY="6" maxWidth="600px">
+                <Text color="muted" size="3">
+                  {description}
+                </Text>
+              </Box>
+              <Grid columns="repeat(auto-fit, minmax(300px, 1fr))" gap="4">
                 {items.map((item, index) => (
-                  <div key={index} className={styles.item}>
-                    <header className={styles.header}>
+                  <Box key={index} borderRadius="2" padding="4" backgroundColor="50">
+                    <Row gap="3" alignItems="center">
                       <Icon size="md">{item.icon}</Icon>
-                      <Text>{item.title}</Text>
-                    </header>
+                      <Text weight="bold">{item.title}</Text>
+                    </Row>
                     {item.description.map((text, index) => (
-                      <p key={index} className={styles.text}>
+                      <Text key={index} as="p" color="muted">
                         {text}
-                      </p>
+                      </Text>
                     ))}
-                  </div>
+                  </Box>
                 ))}
-              </div>
-            </div>
+              </Grid>
+            </Box>
           );
         })}
-      </div>
-      <section>
-        <GetStartedBanner />
-      </section>
+        <section>
+          <GetStartedBanner />
+        </section>
+      </Column>
     </>
   );
 }

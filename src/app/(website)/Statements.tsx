@@ -1,7 +1,5 @@
 'use client';
-import Block from '@/assets/block.svg';
-import Code from '@/assets/code.svg';
-import Analytics from '@/assets/analytics.svg';
+import { Block, Code, Analytics } from '@/components/icons';
 import TextBlock from '@/components/TextBlock';
 import styles from './Statements.module.css';
 

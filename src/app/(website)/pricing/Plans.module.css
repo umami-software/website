@@ -1,5 +1,6 @@
 .plans {
   display: grid;
+  font-size: 16px;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   justify-content: center;
@@ -7,6 +8,7 @@
 
 .plans li {
   display: flex;
+  font-size: 16px;
   align-items: center;
   list-style: none;
 }

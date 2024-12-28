@@ -2,10 +2,7 @@
 import { Button } from '@umami/react-zen';
 import PageHeader from '@/components/PageHeader';
 import { GITHUB_URL, DISCORD_URL, X_URL, LINKEDIN_URL } from '@/lib/constants';
-import GitHub from '@/assets/github.svg';
-import Discord from '@/assets/discord.svg';
-import X from '@/assets/x.svg';
-import LinkedIn from '@/assets/linkedin.svg';
+import { Github, Discord, X, Linkedin } from '@/components/icons';
 import styles from './CommunityPage.module.css';
 
 const items = [
@@ -14,7 +11,7 @@ const items = [
     description:
       'Check out the Umami source code, report issues, request features and join discussions.',
     url: GITHUB_URL,
-    icon: <GitHub />,
+    icon: <Github />,
   },
   {
     name: 'Discord',
@@ -32,7 +29,7 @@ const items = [
     name: 'LinkedIn',
     description: 'Learn about our company.',
     url: LINKEDIN_URL,
-    icon: <LinkedIn />,
+    icon: <Linkedin />,
   },
 ];
 

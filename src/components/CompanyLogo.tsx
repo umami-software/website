@@ -1,7 +1,6 @@
-'use client';
 import { Row, Icon, Text } from '@umami/react-zen';
 import Link from 'next/link';
-import Logo from '@/assets/logo.svg';
+import { Logo } from '@/components/icons';
 
 export default function CompanyLogo() {
   return (
@@ -9,7 +8,7 @@ export default function CompanyLogo() {
       <Icon size="sm">
         <Logo />
       </Icon>
-      <Text size="lg" weight="bold">
+      <Text size="4" weight="bold">
         <Link href="/">umami</Link>
       </Text>
     </Row>

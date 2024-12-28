@@ -1,6 +1,6 @@
 'use client';
-import { Button } from '@umami/react-zen';
-import Checkmark from '@/assets/checkmark.svg';
+import { Button, Icon, Text, Box, Column, Row, Heading, Grid } from '@umami/react-zen';
+import { Checkmark } from '@/components/icons';
 import Link from 'next/link';
 import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
@@ -58,37 +58,48 @@ export default function Plans() {
   ];
 
   return (
-    <div className={styles.plans}>
+    <Grid
+      gap="4"
+      width="100%"
+      columns="repeat(auto-fill, minmax(320px, 1fr))"
+      alignItems="center"
+      justifyContent="center"
+    >
       {plans.map(
         ({ name, price, interval, description, features, url, button, variant = 'outline' }) => {
           return (
-            <div key={name} className={styles.plan}>
-              <div>
-                <div className={styles.title}>{name}</div>
-                <div className={styles.price}>
+            <Column key={name} gap="3" borderSize="1" shadow="3" padding="6" borderRadius="2">
+              <Heading size="4">{name}</Heading>
+              <Row alignItems="center" gap="2">
+                <Text weight="bold" size="8">
                   {price}
-                  <span className={styles.interval}>{interval}</span>
-                </div>
-                <div className={styles.description}>{description}</div>
-                <ul>
-                  {features.map((feat, index) => {
-                    return (
-                      <li key={index}>
-                        <Checkmark /> {feat}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
+                </Text>
+                <Text color="muted">{interval}</Text>
+              </Row>
+              <Text>{description}</Text>
+              <Box as="ul">
+                {features.map((feat, index) => {
+                  return (
+                    <Row key={index} as="li" alignItems="center" gap="2">
+                      <Row color="primary" alignItems="center">
+                        <Icon size="lg">
+                          <Checkmark />
+                        </Icon>
+                      </Row>
+                      <Text size="2">{feat}</Text>
+                    </Row>
+                  );
+                })}
+              </Box>
               <div className={styles.button}>
                 <Button variant={variant as any} asChild>
                   <Link href={url}>{button}</Link>
                 </Button>
               </div>
-            </div>
+            </Column>
           );
         },
       )}
-    </div>
+    </Grid>
   );
 }

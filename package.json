@@ -14,7 +14,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --quiet",
-    "stylelint": "stylelint --fix"
+    "stylelint": "stylelint --fix",
+    "icons": "svgr ./src/assets --out-dir ./src/components/icons --typescript"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
@@ -36,17 +37,18 @@
     "@types/mdx": "^2.0.7",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
-    "@umami/react-zen": "^0.18.0",
+    "@umami/react-zen": "^0.33.0",
+    "@umami/shiso": "^0.17.0",
     "classnames": "^2.2.6",
     "date-fns": "^4.1.0",
     "fast-glob": "^3.3.2",
     "glob": "^10.3.10",
     "gray-matter": "^4.0.3",
-    "next": "^14.1.1",
+    "next": "^15.1.2",
     "next-axiom": "^1.1.1",
     "next-mdx-remote": "^4.4.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-scroll-parallax": "^3.2.0",
     "react-spring": "^8.0.27",
     "recursive-readdir": "^2.2.3",
