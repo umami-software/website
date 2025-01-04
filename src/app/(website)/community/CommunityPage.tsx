@@ -36,10 +36,10 @@ const items = [
 export default function CommunityPage() {
   return (
     <section>
-      <PageHeader>
-        <h1>Community</h1>
-        <p>Get help with issues, discuss ideas and share your feedback.</p>
-      </PageHeader>
+      <PageHeader
+        title="Community"
+        description="Get help with issues, discuss ideas and share your feedback."
+      />
       <div className={styles.items}>
         {items.map(({ name, description, url, icon }) => (
           <div key={name} className={styles.item}>

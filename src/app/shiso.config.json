@@ -1,6 +1,8 @@
 {
   "contentDir": "./src/content",
   "docs": {
+    "title": "Docs - Umami",
+    "top": "100px",
     "tabs": [
       {
         "id": "docs",
@@ -31,7 +33,7 @@
     "navigation": {
       "docs": [
         {
-          "group": "Getting started",
+          "section": "Getting started",
           "pages": [
             {
               "label": "Overview",
@@ -48,7 +50,7 @@
           ]
         },
         {
-          "group": "Basics",
+          "section": "Basics",
           "pages": [
             {
               "label": "Login",
@@ -97,7 +99,7 @@
           ]
         },
         {
-          "group": "Configuration",
+          "section": "Configuration",
           "pages": [
             {
               "label": "Tracker configuration",
@@ -110,7 +112,7 @@
           ]
         },
         {
-          "group": "How-to",
+          "section": "How-to",
           "pages": [
             {
               "label": "Exclude my own visits",
@@ -131,7 +133,7 @@
           ]
         },
         {
-          "group": "Reference",
+          "section": "Reference",
           "pages": [
             {
               "label": "Metric definitions",
@@ -148,7 +150,7 @@
           ]
         },
         {
-          "group": "Contributing",
+          "section": "Contributing",
           "pages": [
             {
               "label": "Code of conduct",
@@ -163,7 +165,7 @@
       ],
       "api": [
         {
-          "group": "Getting started",
+          "section": "Getting started",
           "pages": [
             {
               "label": "Overview",
@@ -180,7 +182,7 @@
           ]
         },
         {
-          "group": "Endpoints",
+          "section": "Endpoints",
           "pages": [
             {
               "label": "Users",
@@ -209,7 +211,7 @@
           ]
         },
         {
-          "group": "Clients",
+          "section": "Clients",
           "pages": [
             {
               "label": "API client",
@@ -224,7 +226,7 @@
       ],
       "reports": [
         {
-          "group": "Getting started",
+          "section": "Getting started",
           "pages": [
             {
               "label": "Overview",
@@ -233,7 +235,7 @@
           ]
         },
         {
-          "group": "Reports",
+          "section": "Reports",
           "pages": [
             {
               "label": "Insights",
@@ -268,7 +270,7 @@
       ],
       "guides": [
         {
-          "group": "Getting started",
+          "section": "Getting started",
           "pages": [
             {
               "label": "Overview",
@@ -277,7 +279,7 @@
           ]
         },
         {
-          "group": "Marketing",
+          "section": "Marketing",
           "pages": [
             {
               "label": "Measure campaigns",
@@ -286,7 +288,7 @@
           ]
         },
         {
-          "group": "Hosting",
+          "section": "Hosting",
           "pages": [
             {
               "label": "Overview",
@@ -349,7 +351,7 @@
       ],
       "cloud": [
         {
-          "group": "Getting started",
+          "section": "Getting started",
           "pages": [
             {
               "label": "Overview",
@@ -362,7 +364,7 @@
           ]
         },
         {
-          "group": "Basics",
+          "section": "Basics",
           "pages": [
             {
               "label": "Login",
@@ -395,7 +397,7 @@
           ]
         },
         {
-          "group": "Billing",
+          "section": "Billing",
           "pages": [
             {
               "label": "Subscription",
@@ -408,7 +410,7 @@
           ]
         },
         {
-          "group": "API",
+          "section": "API",
           "pages": [
             {
               "label": "API key",
@@ -421,7 +423,7 @@
           ]
         },
         {
-          "group": "Data",
+          "section": "Data",
           "pages": [
             {
               "label": "Export data",

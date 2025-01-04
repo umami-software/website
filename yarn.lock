@@ -1648,6 +1648,11 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-15.1.2.tgz#fa36e47bbaa33b9ecac228aa786bb05bbc15351c"
   integrity sha512-Hm3jIGsoUl6RLB1vzY+dZeqb+/kWPZ+h34yiWxW0dV87l8Im/eMOwpOA+a0L78U0HM04syEjXuRlCozqpwuojQ==
 
+"@next/env@15.1.3":
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-15.1.3.tgz#bc747e041cd105170d4cae07cc802e20b4a0c153"
+  integrity sha512-Q1tXwQCGWyA3ehMph3VO+E6xFPHDKdHFYosadt0F78EObYxPio0S09H9UGYznDe6Wc8eLKLG89GqcFJJDiK5xw==
+
 "@next/eslint-plugin-next@14.0.4":
   version "14.0.4"
   resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-14.0.4.tgz#474fd88d92209270021186043513fbdc4203f5ec"
@@ -1679,6 +1684,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-15.1.2.tgz#822265999fc76f828f4c671a5ef861b8e2c5213e"
   integrity sha512-b9TN7q+j5/7+rGLhFAVZiKJGIASuo8tWvInGfAd8wsULjB1uNGRCj1z1WZwwPWzVQbIKWFYqc+9L7W09qwt52w==
 
+"@next/swc-darwin-arm64@15.1.3":
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-15.1.3.tgz#cac0dc4a1086a33767cc5fb8d11c97391216ca7c"
+  integrity sha512-aZtmIh8jU89DZahXQt1La0f2EMPt/i7W+rG1sLtYJERsP7GRnNFghsciFpQcKHcGh4dUiyTB5C1X3Dde/Gw8gg==
+
 "@next/swc-darwin-x64@15.1.0":
   version "15.1.0"
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-x64/-/swc-darwin-x64-15.1.0.tgz#c24c4f5d1016dd161da32049305b0ddddfc80951"
@@ -1688,6 +1698,11 @@
   version "15.1.2"
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-x64/-/swc-darwin-x64-15.1.2.tgz#78d277bce3d35c6e8d9ad423b6f5b0031aa9a1e2"
   integrity sha512-caR62jNDUCU+qobStO6YJ05p9E+LR0EoXh1EEmyU69cYydsAy7drMcOlUlRtQihM6K6QfvNwJuLhsHcCzNpqtA==
+
+"@next/swc-darwin-x64@15.1.3":
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-darwin-x64/-/swc-darwin-x64-15.1.3.tgz#7ebfe9abd7db5abbd28e699d234517f63259ff53"
+  integrity sha512-aw8901rjkVBK5mbq5oV32IqkJg+CQa6aULNlN8zyCWSsePzEG3kpDkAFkkTOh3eJ0p95KbkLyWBzslQKamXsLA==
 
 "@next/swc-linux-arm64-gnu@15.1.0":
   version "15.1.0"
@@ -1699,6 +1714,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-15.1.2.tgz#4d48c8c37da869b0fdbb51f3f3f71df7a3b6b1bb"
   integrity sha512-fHHXBusURjBmN6VBUtu6/5s7cCeEkuGAb/ZZiGHBLVBXMBy4D5QpM8P33Or8JD1nlOjm/ZT9sEE5HouQ0F+hUA==
 
+"@next/swc-linux-arm64-gnu@15.1.3":
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-15.1.3.tgz#a6773ea8df2838e8aea1d638176f40849af1ed06"
+  integrity sha512-YbdaYjyHa4fPK4GR4k2XgXV0p8vbU1SZh7vv6El4bl9N+ZSiMfbmqCuCuNU1Z4ebJMumafaz6UCC2zaJCsdzjw==
+
 "@next/swc-linux-arm64-musl@15.1.0":
   version "15.1.0"
   resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-15.1.0.tgz#dfddbd40087d018266aa92515ec5b3e251efa6dd"
@@ -1708,6 +1728,11 @@
   version "15.1.2"
   resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-15.1.2.tgz#0efbaffc2bc3fad4a6458c91b1655b0c3d509577"
   integrity sha512-9CF1Pnivij7+M3G74lxr+e9h6o2YNIe7QtExWq1KUK4hsOLTBv6FJikEwCaC3NeYTflzrm69E5UfwEAbV2U9/g==
+
+"@next/swc-linux-arm64-musl@15.1.3":
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-15.1.3.tgz#309f60d4218511d152876e7f6cc624b7e6a44f6c"
+  integrity sha512-qgH/aRj2xcr4BouwKG3XdqNu33SDadqbkqB6KaZZkozar857upxKakbRllpqZgWl/NDeSCBYPmUAZPBHZpbA0w==
 
 "@next/swc-linux-x64-gnu@15.1.0":
   version "15.1.0"
@@ -1719,6 +1744,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.1.2.tgz#fcdb19e2a7602f85f103190539d0cf42eca7f217"
   integrity sha512-tINV7WmcTUf4oM/eN3Yuu/f8jQ5C6AkueZPKeALs/qfdfX57eNv4Ij7rt0SA6iZ8+fMobVfcFVv664Op0caCCg==
 
+"@next/swc-linux-x64-gnu@15.1.3":
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.1.3.tgz#c9ac936eee265da738cde4758d95af4562bbd38b"
+  integrity sha512-uzafnTFwZCPN499fNVnS2xFME8WLC9y7PLRs/yqz5lz1X/ySoxfaK2Hbz74zYUdEg+iDZPd8KlsWaw9HKkLEVw==
+
 "@next/swc-linux-x64-musl@15.1.0":
   version "15.1.0"
   resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-15.1.0.tgz#b82a29903ee2f12d8b64163ddf208ac519869550"
@@ -1728,6 +1758,11 @@
   version "15.1.2"
   resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-15.1.2.tgz#06b09f1712498dd5c61fac10c56a09535469b4c4"
   integrity sha512-jf2IseC4WRsGkzeUw/cK3wci9pxR53GlLAt30+y+B+2qAQxMw6WAC3QrANIKxkcoPU3JFh/10uFfmoMDF9JXKg==
+
+"@next/swc-linux-x64-musl@15.1.3":
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-15.1.3.tgz#2fe0c262b379f3c5b39cab2fa0ba3d9108c8e440"
+  integrity sha512-el6GUFi4SiDYnMTTlJJFMU+GHvw0UIFnffP1qhurrN1qJV3BqaSRUjkDUgVV44T6zpw1Lc6u+yn0puDKHs+Sbw==
 
 "@next/swc-win32-arm64-msvc@15.1.0":
   version "15.1.0"
@@ -1739,6 +1774,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-15.1.2.tgz#63159223241ff45e8df76b24fc979bbb933c74df"
   integrity sha512-wvg7MlfnaociP7k8lxLX4s2iBJm4BrNiNFhVUY+Yur5yhAJHfkS8qPPeDEUH8rQiY0PX3u/P7Q/wcg6Mv6GSAA==
 
+"@next/swc-win32-arm64-msvc@15.1.3":
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-15.1.3.tgz#67252289babfa38712497af646744ffc758aa3dc"
+  integrity sha512-6RxKjvnvVMM89giYGI1qye9ODsBQpHSHVo8vqA8xGhmRPZHDQUE4jcDbhBwK0GnFMqBnu+XMg3nYukNkmLOLWw==
+
 "@next/swc-win32-x64-msvc@15.1.0":
   version "15.1.0"
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-15.1.0.tgz#4b04a6a667c41fecdc63db57dd71ca7e84d0946b"
@@ -1748,6 +1788,11 @@
   version "15.1.2"
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-15.1.2.tgz#6e6b33b1d725c0e98fa76773fe437fb02ad6540b"
   integrity sha512-D3cNA8NoT3aWISWmo7HF5Eyko/0OdOO+VagkoJuiTk7pyX3P/b+n8XA/MYvyR+xSVcbKn68B1rY9fgqjNISqzQ==
+
+"@next/swc-win32-x64-msvc@15.1.3":
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-15.1.3.tgz#99f8e4cc2b6c469155e75c4e8fdeb5d08254b27c"
+  integrity sha512-VId/f5blObG7IodwC5Grf+aYP0O8Saz1/aeU3YcWqNdIUAmFQY3VEPKPaIzfv32F/clvanOb2K2BR5DtDs6XyQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -3617,6 +3662,27 @@
     thenby "^1.3.4"
     zustand "^5.0.2"
 
+"@umami/react-zen@^0.32.0":
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.32.0.tgz#7fe377d35d8c65863147e9ac9ee1eb1a07c8b36e"
+  integrity sha512-wvSojWDFUsC2LPb8ZgMO3ZWkb+Vhe+HMzsPuhPoAUcE6SN5JZEQtQ/BBBfd2P82ly4kGeQSMwDZh251cOHPS9Q==
+  dependencies:
+    "@fontsource/jetbrains-mono" "^5.0.18"
+    "@react-spring/web" "^9.7.5"
+    "@umami/esbuild-plugin-css-modules" "0.2.0"
+    "@umami/shiso" "^0.17.0"
+    classnames "^2.5.1"
+    dts-bundle "^0.7.3"
+    glob "^10.3.10"
+    next "15.1.2"
+    react "^19.0.0"
+    react-aria-components "^1.5.0"
+    react-dom "^19.0.0"
+    react-hook-form "^7.54.2"
+    react-icons "^5.4.0"
+    thenby "^1.3.4"
+    zustand "^5.0.2"
+
 "@umami/react-zen@^0.33.0":
   version "0.33.0"
   resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.33.0.tgz#954013be211149192fa779f97f7ce086ffa721af"
@@ -3626,6 +3692,90 @@
     "@react-spring/web" "^9.7.5"
     "@umami/esbuild-plugin-css-modules" "0.2.0"
     "@umami/shiso" "^0.17.0"
+    classnames "^2.5.1"
+    dts-bundle "^0.7.3"
+    glob "^10.3.10"
+    next "15.1.2"
+    react "^19.0.0"
+    react-aria-components "^1.5.0"
+    react-dom "^19.0.0"
+    react-hook-form "^7.54.2"
+    react-icons "^5.4.0"
+    thenby "^1.3.4"
+    zustand "^5.0.2"
+
+"@umami/react-zen@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.34.0.tgz#47d32365c9d1ff1abe016b2cd8cd3cee3de00a8e"
+  integrity sha512-SAiSiitOdyooQs7JSz+0Q8omNi201IBOOwcX3MbphBni64ESPt4EP89LlryJoRkQZhWXZqKOErgmb8sUD0nLhw==
+  dependencies:
+    "@fontsource/jetbrains-mono" "^5.0.18"
+    "@react-spring/web" "^9.7.5"
+    "@umami/esbuild-plugin-css-modules" "0.2.0"
+    "@umami/shiso" "^0.20.0"
+    classnames "^2.5.1"
+    dts-bundle "^0.7.3"
+    glob "^10.3.10"
+    next "15.1.2"
+    react "^19.0.0"
+    react-aria-components "^1.5.0"
+    react-dom "^19.0.0"
+    react-hook-form "^7.54.2"
+    react-icons "^5.4.0"
+    thenby "^1.3.4"
+    zustand "^5.0.2"
+
+"@umami/react-zen@^0.36.0":
+  version "0.36.0"
+  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.36.0.tgz#42c4dcf29188a6abd0fdf76712274658cb8c07b9"
+  integrity sha512-TXjeckSZC0r1XJnsQr4c7jqqCdyx4J0K49oXa3ljexzhTQFCD+iZ9DDM6AK8C6ly4bBo5dYV+2TNkMBIaBUfqg==
+  dependencies:
+    "@fontsource/jetbrains-mono" "^5.0.18"
+    "@react-spring/web" "^9.7.5"
+    "@umami/esbuild-plugin-css-modules" "0.2.0"
+    "@umami/shiso" "^0.21.0"
+    classnames "^2.5.1"
+    dts-bundle "^0.7.3"
+    glob "^10.3.10"
+    next "15.1.2"
+    react "^19.0.0"
+    react-aria-components "^1.5.0"
+    react-dom "^19.0.0"
+    react-hook-form "^7.54.2"
+    react-icons "^5.4.0"
+    thenby "^1.3.4"
+    zustand "^5.0.2"
+
+"@umami/react-zen@^0.39.0":
+  version "0.39.0"
+  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.39.0.tgz#c5dfe335a3920bb5c6f97da8fbab31370e48f894"
+  integrity sha512-DjF+agGxUNefjhxb40Gr2Wm7AvlevLDKuw5Ex9BgMMBcCJGfcO/cJD8AP6CccB/0d7b32EgBlNfSyzAlfNTOLQ==
+  dependencies:
+    "@fontsource/jetbrains-mono" "^5.0.18"
+    "@react-spring/web" "^9.7.5"
+    "@umami/esbuild-plugin-css-modules" "0.2.0"
+    "@umami/shiso" "^0.22.0"
+    classnames "^2.5.1"
+    dts-bundle "^0.7.3"
+    glob "^10.3.10"
+    next "15.1.2"
+    react "^19.0.0"
+    react-aria-components "^1.5.0"
+    react-dom "^19.0.0"
+    react-hook-form "^7.54.2"
+    react-icons "^5.4.0"
+    thenby "^1.3.4"
+    zustand "^5.0.2"
+
+"@umami/react-zen@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.41.0.tgz#44d997d456fc1e0e8c61b651ff2d007a7683d25c"
+  integrity sha512-IE+5W54Le8jMBWt2zPC+V6dz4ICSNlWsxKEbsphRdcnMVRxUdiEyYlSvRPn5TEeqWmU2VsPfEhwma2ENAOmijQ==
+  dependencies:
+    "@fontsource/jetbrains-mono" "^5.0.18"
+    "@react-spring/web" "^9.7.5"
+    "@umami/esbuild-plugin-css-modules" "0.2.0"
+    "@umami/shiso" "^0.26.0"
     classnames "^2.5.1"
     dts-bundle "^0.7.3"
     glob "^10.3.10"
@@ -3697,6 +3847,116 @@
     gray-matter "^4.0.3"
     highlight.js "^11.11.0"
     next "15.1.2"
+    next-mdx-remote "^5.0.0"
+    react "^19.0.0"
+    react-dom "^19.0.0"
+    recursive-readdir "^2.2.3"
+    rehype-highlight "^7.0.1"
+    remark-gfm "^4.0.0"
+    thenby "^1.3.4"
+
+"@umami/shiso@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.20.0.tgz#519b6926a8061917758013ef20969cf652841489"
+  integrity sha512-QcZHSzLcdpAUbRoZcVcfXS2dTvPfDmQP2ZM1QFCgkzy1a80Aqd8UZS5t+DIHwqe+S1cO7n/TmFdV4pZY9pKzrQ==
+  dependencies:
+    "@mdx-js/loader" "^3.0.0"
+    "@mdx-js/mdx" "^3.1.0"
+    "@mdx-js/react" "^3.0.0"
+    "@umami/react-zen" "^0.32.0"
+    classnames "^2.5.1"
+    glob "^10.3.10"
+    gray-matter "^4.0.3"
+    highlight.js "^11.11.0"
+    next "15.1.2"
+    next-mdx-remote "^5.0.0"
+    react "^19.0.0"
+    react-dom "^19.0.0"
+    recursive-readdir "^2.2.3"
+    rehype-highlight "^7.0.1"
+    remark-gfm "^4.0.0"
+    thenby "^1.3.4"
+
+"@umami/shiso@^0.21.0":
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.21.0.tgz#2bbba1c0387eca40d1a67c612bd29981e91378d5"
+  integrity sha512-AIn4MdiX4zr677eIlTqvW9VcT0Q2ssvli1RMcay6dgY5s10idTzT0HejS9kxdu/j8uFBqGKFFlOX9pIc1do5fQ==
+  dependencies:
+    "@mdx-js/loader" "^3.0.0"
+    "@mdx-js/mdx" "^3.1.0"
+    "@mdx-js/react" "^3.0.0"
+    "@umami/react-zen" "^0.34.0"
+    classnames "^2.5.1"
+    glob "^10.3.10"
+    gray-matter "^4.0.3"
+    highlight.js "^11.11.0"
+    next "15.1.2"
+    next-mdx-remote "^5.0.0"
+    react "^19.0.0"
+    react-dom "^19.0.0"
+    recursive-readdir "^2.2.3"
+    rehype-highlight "^7.0.1"
+    remark-gfm "^4.0.0"
+    thenby "^1.3.4"
+
+"@umami/shiso@^0.22.0":
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.22.0.tgz#187dc90d0d4eb15cd6c751cd20291cb10b664393"
+  integrity sha512-rUTwQS8mcWA824Hq4jHq8PGYIAALyMTN+hJsEv2MYRpz5CSUMpJOdo/9blYw5BLA1ckf1Iann6u+XAw+agQKyw==
+  dependencies:
+    "@mdx-js/loader" "^3.0.0"
+    "@mdx-js/mdx" "^3.1.0"
+    "@mdx-js/react" "^3.0.0"
+    "@umami/react-zen" "^0.36.0"
+    classnames "^2.5.1"
+    glob "^10.3.10"
+    gray-matter "^4.0.3"
+    highlight.js "^11.11.0"
+    next "15.1.2"
+    next-mdx-remote "^5.0.0"
+    react "^19.0.0"
+    react-dom "^19.0.0"
+    recursive-readdir "^2.2.3"
+    rehype-highlight "^7.0.1"
+    remark-gfm "^4.0.0"
+    thenby "^1.3.4"
+
+"@umami/shiso@^0.26.0":
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.26.0.tgz#89ded22bc73e21d64e4ed791b9282e8786623552"
+  integrity sha512-DCuAJXrkRnkpDHEoYRCUe8Aj78VxNkScvgI38a0UebqLzsq7OCCeAVE5g2ub9u8BXrwDwDtp8xC4+40aRLfXHQ==
+  dependencies:
+    "@mdx-js/loader" "^3.0.0"
+    "@mdx-js/mdx" "^3.1.0"
+    "@mdx-js/react" "^3.0.0"
+    "@umami/react-zen" "^0.39.0"
+    classnames "^2.5.1"
+    glob "^10.3.10"
+    gray-matter "^4.0.3"
+    highlight.js "^11.11.0"
+    next "15.1.2"
+    next-mdx-remote "^5.0.0"
+    react "^19.0.0"
+    react-dom "^19.0.0"
+    recursive-readdir "^2.2.3"
+    rehype-highlight "^7.0.1"
+    remark-gfm "^4.0.0"
+    thenby "^1.3.4"
+
+"@umami/shiso@^0.29.0":
+  version "0.29.0"
+  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.29.0.tgz#69100019f0ec0f7376a1d6fba6833b6df6507768"
+  integrity sha512-zlHO6aKu/k2943i5ok64Wf1sTj4TGstmGjkODha9W/zkwUJN6k3YNSpnlNkHvtt/BIJw8lfAtaq7Yw17rC9fCg==
+  dependencies:
+    "@mdx-js/loader" "^3.0.0"
+    "@mdx-js/mdx" "^3.1.0"
+    "@mdx-js/react" "^3.0.0"
+    "@umami/react-zen" "^0.41.0"
+    classnames "^2.5.1"
+    glob "^10.3.10"
+    gray-matter "^4.0.3"
+    highlight.js "^11.11.1"
+    next "15.1.3"
     next-mdx-remote "^5.0.0"
     react "^19.0.0"
     react-dom "^19.0.0"
@@ -6096,6 +6356,11 @@ highlight.js@^11.11.0, highlight.js@~11.11.0:
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.11.0.tgz#91b15082ca8cdbe22424e0a000449d7d8a5c74c6"
   integrity sha512-6ErL7JlGu2CNFHyRQEuDogOyGPNiqcuWdt4iSSFUPyferNTGlNTPFqeV36Y/XwA4V/TJ8l0sxp6FTnxud/mf8g==
 
+highlight.js@^11.11.1:
+  version "11.11.1"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.11.1.tgz#fca06fa0e5aeecf6c4d437239135fabc15213585"
+  integrity sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==
+
 hosted-git-info@^4.0.1:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-4.1.0.tgz#827b82867e9ff1c8d0c4d9d53880397d2c86d224"
@@ -8339,6 +8604,29 @@ next@15.1.2, next@^15.1.2:
     "@next/swc-linux-x64-musl" "15.1.2"
     "@next/swc-win32-arm64-msvc" "15.1.2"
     "@next/swc-win32-x64-msvc" "15.1.2"
+    sharp "^0.33.5"
+
+next@15.1.3:
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/next/-/next-15.1.3.tgz#49c45f884660dfaf07f53e70585d109a3283100e"
+  integrity sha512-5igmb8N8AEhWDYzogcJvtcRDU6n4cMGtBklxKD4biYv4LXN8+awc/bbQ2IM2NQHdVPgJ6XumYXfo3hBtErg1DA==
+  dependencies:
+    "@next/env" "15.1.3"
+    "@swc/counter" "0.1.3"
+    "@swc/helpers" "0.5.15"
+    busboy "1.6.0"
+    caniuse-lite "^1.0.30001579"
+    postcss "8.4.31"
+    styled-jsx "5.1.6"
+  optionalDependencies:
+    "@next/swc-darwin-arm64" "15.1.3"
+    "@next/swc-darwin-x64" "15.1.3"
+    "@next/swc-linux-arm64-gnu" "15.1.3"
+    "@next/swc-linux-arm64-musl" "15.1.3"
+    "@next/swc-linux-x64-gnu" "15.1.3"
+    "@next/swc-linux-x64-musl" "15.1.3"
+    "@next/swc-win32-arm64-msvc" "15.1.3"
+    "@next/swc-win32-x64-msvc" "15.1.3"
     sharp "^0.33.5"
 
 no-case@^3.0.4:
