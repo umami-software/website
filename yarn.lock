@@ -3594,6 +3594,14 @@
     postcss "^8.4.49"
     postcss-modules "^6.0.1"
 
+"@umami/esbuild-plugin-css-modules@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@umami/esbuild-plugin-css-modules/-/esbuild-plugin-css-modules-0.4.0.tgz#55ec59adf689cc15752a55e7ad68c0af3238b9be"
+  integrity sha512-OcFbipBJZCmMnJ52/eHkZxpXGQT8Q5bAePgkhpxlreT4zP98grZ6iLzaIkDPFqURQwM/llDhPyNEFRzkSfVYFw==
+  dependencies:
+    postcss "^8.4.49"
+    postcss-modules "^6.0.1"
+
 "@umami/react-zen@^0.27.0":
   version "0.27.0"
   resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.27.0.tgz#cf2b376683e54b225214693fbc070e846690fc66"
@@ -3788,6 +3796,27 @@
     thenby "^1.3.4"
     zustand "^5.0.2"
 
+"@umami/react-zen@^0.42.0":
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.42.0.tgz#0722fd33c2cd3478da1f998392bb182251333066"
+  integrity sha512-hOoHjpTQk9LVJIdoG133QIz2qaittG2P+csIMWgnIpGiZeTD6wq8KLl+dbALIPMlMr5AhspFDoAToj0J7Jdqmg==
+  dependencies:
+    "@fontsource/jetbrains-mono" "^5.0.18"
+    "@react-spring/web" "^9.7.5"
+    "@umami/esbuild-plugin-css-modules" "0.4.0"
+    "@umami/shiso" "^0.30.0"
+    classnames "^2.5.1"
+    dts-bundle "^0.7.3"
+    glob "^10.3.10"
+    next "15.1.3"
+    react "^19.0.0"
+    react-aria-components "^1.5.0"
+    react-dom "^19.0.0"
+    react-hook-form "^7.54.2"
+    react-icons "^5.4.0"
+    thenby "^1.3.4"
+    zustand "^5.0.2"
+
 "@umami/shiso@^0.10.0":
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.10.0.tgz#197a64ad7d67403c8437d462f4f9e7bb8cff68ce"
@@ -3943,10 +3972,10 @@
     remark-gfm "^4.0.0"
     thenby "^1.3.4"
 
-"@umami/shiso@^0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.29.0.tgz#69100019f0ec0f7376a1d6fba6833b6df6507768"
-  integrity sha512-zlHO6aKu/k2943i5ok64Wf1sTj4TGstmGjkODha9W/zkwUJN6k3YNSpnlNkHvtt/BIJw8lfAtaq7Yw17rC9fCg==
+"@umami/shiso@^0.30.0":
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.30.0.tgz#7b059f55222075000fda74825a739c168dcc2747"
+  integrity sha512-KAhCFWOzdA4Nu8Dk/E9Df8yiaNm0ELH5qNQnfIXEMM/dUxsV0yzS74GLrbe+/y1aHI8oI6ydyt5C1ZmyiBG1Eg==
   dependencies:
     "@mdx-js/loader" "^3.0.0"
     "@mdx-js/mdx" "^3.1.0"
@@ -3962,6 +3991,30 @@
     react-dom "^19.0.0"
     recursive-readdir "^2.2.3"
     rehype-highlight "^7.0.1"
+    remark-gfm "^4.0.0"
+    thenby "^1.3.4"
+
+"@umami/shiso@^0.35.0":
+  version "0.35.0"
+  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.35.0.tgz#987112e6222d249c705b348522beb816323cd9b2"
+  integrity sha512-Qv/e6V6tz64g0Aw//Mz/UUNQxFRAhgxZLS8a5K/vMXN8YT34E5s/DZPLgksw/ciLldxbwArBv9rfbZ3ZXyIuyA==
+  dependencies:
+    "@mdx-js/loader" "^3.0.0"
+    "@mdx-js/mdx" "^3.1.0"
+    "@mdx-js/react" "^3.0.0"
+    "@umami/react-zen" "^0.42.0"
+    classnames "^2.5.1"
+    date-fns "^4.1.0"
+    glob "^10.3.10"
+    gray-matter "^4.0.3"
+    highlight.js "^11.11.1"
+    next "15.1.3"
+    next-mdx-remote "^5.0.0"
+    react "^19.0.0"
+    react-dom "^19.0.0"
+    recursive-readdir "^2.2.3"
+    rehype-highlight "^7.0.1"
+    rehype-slug "^6.0.0"
     remark-gfm "^4.0.0"
     thenby "^1.3.4"
 
@@ -5912,6 +5965,11 @@ get-tsconfig@^4.5.0:
   dependencies:
     resolve-pkg-maps "^1.0.0"
 
+github-slugger@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-2.0.0.tgz#52cf2f9279a21eb6c59dd385b410f0c0adda8f1a"
+  integrity sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==
+
 glob-parent@^5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
@@ -6156,6 +6214,13 @@ hast-util-from-parse5@^8.0.0:
     vfile-location "^5.0.0"
     web-namespaces "^2.0.0"
 
+hast-util-heading-rank@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/hast-util-heading-rank/-/hast-util-heading-rank-3.0.0.tgz#2d5c6f2807a7af5c45f74e623498dd6054d2aba8"
+  integrity sha512-EJKb8oMUXVHcWZTDepnr+WNbfnXKFNf9duMesmr4S8SXTJBJ9M4Yok08pu9vxdJwdlGRhVumk9mEhkEvKGifwA==
+  dependencies:
+    "@types/hast" "^3.0.0"
+
 hast-util-is-element@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/hast-util-is-element/-/hast-util-is-element-3.0.0.tgz#6e31a6532c217e5b533848c7e52c9d9369ca0932"
@@ -6306,6 +6371,13 @@ hast-util-to-string@^2.0.0:
   integrity sha512-02AQ3vLhuH3FisaMM+i/9sm4OXGSq1UhOOCpTLLQtHdL3tZt7qil69r8M8iDkZYyC0HCFylcYoP+8IO7ddta1A==
   dependencies:
     "@types/hast" "^2.0.0"
+
+hast-util-to-string@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/hast-util-to-string/-/hast-util-to-string-3.0.1.tgz#a4f15e682849326dd211c97129c94b0c3e76527c"
+  integrity sha512-XelQVTDWvqcl3axRfI0xSeoVKzyIFPwsAGSLIsKdJKQMXDYJS4WYrBNF/8J7RdhIcFI2BOHgAifggsvsxp/3+A==
+  dependencies:
+    "@types/hast" "^3.0.0"
 
 hast-util-to-text@^4.0.0:
   version "4.0.2"
@@ -9804,6 +9876,17 @@ rehype-recma@^1.0.0:
     "@types/estree" "^1.0.0"
     "@types/hast" "^3.0.0"
     hast-util-to-estree "^3.0.0"
+
+rehype-slug@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/rehype-slug/-/rehype-slug-6.0.0.tgz#1d21cf7fc8a83ef874d873c15e6adaee6344eaf1"
+  integrity sha512-lWyvf/jwu+oS5+hL5eClVd3hNdmwM1kAC0BUvEGD19pajQMIzcNUd/k9GsfQ+FfECvX+JE+e9/btsKH0EjJT6A==
+  dependencies:
+    "@types/hast" "^3.0.0"
+    github-slugger "^2.0.0"
+    hast-util-heading-rank "^3.0.0"
+    hast-util-to-string "^3.0.0"
+    unist-util-visit "^5.0.0"
 
 remark-frontmatter@^5.0.0:
   version "5.0.0"

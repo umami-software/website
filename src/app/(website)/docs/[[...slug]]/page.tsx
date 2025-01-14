@@ -7,5 +7,9 @@ const { generateMetadata, generateStaticParams, renderPage } = next('docs', conf
 export { generateMetadata, generateStaticParams };
 
 export default renderPage(props => {
-  return <Shiso {...props} />;
+  return (
+    <main className="docs">
+      <Shiso {...props} className="docs" />
+    </main>
+  );
 });

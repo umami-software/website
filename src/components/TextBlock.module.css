@@ -1,10 +1,9 @@
 .text p {
-  color: var(--font-muted-color);
+  color: var(--font-color-muted);
 }
 
 .text header {
   color: var(--primary-color);
-  font-size: var(--font-size-md);
   font-weight: 700;
 }
 
@@ -13,7 +12,7 @@
 }
 
 .size-xl {
-  font-size: 36px;
+  font-size: 24px;
 }
 
 .size-lg {
@@ -41,4 +40,3 @@
   text-align: end;
   margin-right: 0;
 }
-

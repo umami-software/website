@@ -55,7 +55,7 @@ const Question = ({ question, children }) => {
 
   return (
     <div className={styles.question} onClick={() => setExpanded(state => !state)}>
-      <div className={styles.text}>
+      <div className={styles.text} data-umami-event="faq-question-click">
         {question}
         <Icon className={styles.icon} rotate={expanded ? 90 : 0} size="sm">
           <Icons.Chevron />

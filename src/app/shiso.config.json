@@ -570,5 +570,9 @@
         }
       ]
     }
+  },
+  "blog": {
+    "title": "Blog - Umami",
+    "top": "100px"
   }
 }

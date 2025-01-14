@@ -68,7 +68,17 @@ export default function Plans() {
       {plans.map(
         ({ name, price, interval, description, features, url, button, variant = 'outline' }) => {
           return (
-            <Column key={name} gap="3" borderSize="1" shadow="3" padding="6" borderRadius="2">
+            <Column
+              key={name}
+              gap="3"
+              borderSize="1"
+              shadow="3"
+              padding="6"
+              borderRadius="3"
+              style={
+                name === 'Pro' ? { borderColor: 'var(--primary-color)', borderWidth: 2 } : null
+              }
+            >
               <Heading size="4">{name}</Heading>
               <Row alignItems="center" gap="2">
                 <Text weight="bold" size="8">
