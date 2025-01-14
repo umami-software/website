@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
           </Grid>
         </Suspense>
         {process.env.NODE_ENV === 'production' && (
-          <Script>
+          <Script id="koala">
             {`!function(t){if(window.ko)return;window.ko=[],["identify","track","removeListeners","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_c271ea7cda36bf4824350411f24fad0e76b7/sdk.js"),(document.body || document.head).appendChild(n)}();`}
           </Script>
         )}
