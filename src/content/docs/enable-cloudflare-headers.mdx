@@ -1,0 +1,18 @@
+---
+title: Enable Cloudflare headers
+---
+
+If you are using Cloudflare for your website, Umami will use the headers Cloudflare sends
+to determine the visitor's location information. However, by default Cloudflare only sends
+data for the country. If you also want region and city information, then you will need to
+configure Cloudflare to send additional headers.
+
+## Steps
+
+1. Log in to the Cloudflare dashboard and select your account and website.
+
+2.  Go to Rules > Transform Rules.
+
+3.  Go to the Managed Transforms tab.
+
+4. Enable the **Add visitor location headers** setting.
