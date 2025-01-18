@@ -3586,14 +3586,6 @@
     postcss "^8.4.49"
     postcss-modules "^6.0.1"
 
-"@umami/esbuild-plugin-css-modules@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@umami/esbuild-plugin-css-modules/-/esbuild-plugin-css-modules-0.4.0.tgz#55ec59adf689cc15752a55e7ad68c0af3238b9be"
-  integrity sha512-OcFbipBJZCmMnJ52/eHkZxpXGQT8Q5bAePgkhpxlreT4zP98grZ6iLzaIkDPFqURQwM/llDhPyNEFRzkSfVYFw==
-  dependencies:
-    postcss "^8.4.49"
-    postcss-modules "^6.0.1"
-
 "@umami/react-zen@^0.27.0":
   version "0.27.0"
   resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.27.0.tgz#cf2b376683e54b225214693fbc070e846690fc66"
@@ -3662,27 +3654,6 @@
     thenby "^1.3.4"
     zustand "^5.0.2"
 
-"@umami/react-zen@^0.32.0":
-  version "0.32.0"
-  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.32.0.tgz#7fe377d35d8c65863147e9ac9ee1eb1a07c8b36e"
-  integrity sha512-wvSojWDFUsC2LPb8ZgMO3ZWkb+Vhe+HMzsPuhPoAUcE6SN5JZEQtQ/BBBfd2P82ly4kGeQSMwDZh251cOHPS9Q==
-  dependencies:
-    "@fontsource/jetbrains-mono" "^5.0.18"
-    "@react-spring/web" "^9.7.5"
-    "@umami/esbuild-plugin-css-modules" "0.2.0"
-    "@umami/shiso" "^0.17.0"
-    classnames "^2.5.1"
-    dts-bundle "^0.7.3"
-    glob "^10.3.10"
-    next "15.1.2"
-    react "^19.0.0"
-    react-aria-components "^1.5.0"
-    react-dom "^19.0.0"
-    react-hook-form "^7.54.2"
-    react-icons "^5.4.0"
-    thenby "^1.3.4"
-    zustand "^5.0.2"
-
 "@umami/react-zen@^0.33.0":
   version "0.33.0"
   resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.33.0.tgz#954013be211149192fa779f97f7ce086ffa721af"
@@ -3704,120 +3675,13 @@
     thenby "^1.3.4"
     zustand "^5.0.2"
 
-"@umami/react-zen@^0.34.0":
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.34.0.tgz#47d32365c9d1ff1abe016b2cd8cd3cee3de00a8e"
-  integrity sha512-SAiSiitOdyooQs7JSz+0Q8omNi201IBOOwcX3MbphBni64ESPt4EP89LlryJoRkQZhWXZqKOErgmb8sUD0nLhw==
+"@umami/react-zen@^0.45.0":
+  version "0.45.0"
+  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.45.0.tgz#c2c2c6d1cd55d25a2e54ad45671a2ef6fe00d6dc"
+  integrity sha512-zz+0P9YTVWDedkaH9ZjrzO1WaK7FsP4JqIwZ4TOw3YKyBTQm0Y4iyLV50Lg6puj4rThRm2B+3Q0JM33VlxZ5Pg==
   dependencies:
     "@fontsource/jetbrains-mono" "^5.0.18"
     "@react-spring/web" "^9.7.5"
-    "@umami/esbuild-plugin-css-modules" "0.2.0"
-    "@umami/shiso" "^0.20.0"
-    classnames "^2.5.1"
-    dts-bundle "^0.7.3"
-    glob "^10.3.10"
-    next "15.1.2"
-    react "^19.0.0"
-    react-aria-components "^1.5.0"
-    react-dom "^19.0.0"
-    react-hook-form "^7.54.2"
-    react-icons "^5.4.0"
-    thenby "^1.3.4"
-    zustand "^5.0.2"
-
-"@umami/react-zen@^0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.36.0.tgz#42c4dcf29188a6abd0fdf76712274658cb8c07b9"
-  integrity sha512-TXjeckSZC0r1XJnsQr4c7jqqCdyx4J0K49oXa3ljexzhTQFCD+iZ9DDM6AK8C6ly4bBo5dYV+2TNkMBIaBUfqg==
-  dependencies:
-    "@fontsource/jetbrains-mono" "^5.0.18"
-    "@react-spring/web" "^9.7.5"
-    "@umami/esbuild-plugin-css-modules" "0.2.0"
-    "@umami/shiso" "^0.21.0"
-    classnames "^2.5.1"
-    dts-bundle "^0.7.3"
-    glob "^10.3.10"
-    next "15.1.2"
-    react "^19.0.0"
-    react-aria-components "^1.5.0"
-    react-dom "^19.0.0"
-    react-hook-form "^7.54.2"
-    react-icons "^5.4.0"
-    thenby "^1.3.4"
-    zustand "^5.0.2"
-
-"@umami/react-zen@^0.39.0":
-  version "0.39.0"
-  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.39.0.tgz#c5dfe335a3920bb5c6f97da8fbab31370e48f894"
-  integrity sha512-DjF+agGxUNefjhxb40Gr2Wm7AvlevLDKuw5Ex9BgMMBcCJGfcO/cJD8AP6CccB/0d7b32EgBlNfSyzAlfNTOLQ==
-  dependencies:
-    "@fontsource/jetbrains-mono" "^5.0.18"
-    "@react-spring/web" "^9.7.5"
-    "@umami/esbuild-plugin-css-modules" "0.2.0"
-    "@umami/shiso" "^0.22.0"
-    classnames "^2.5.1"
-    dts-bundle "^0.7.3"
-    glob "^10.3.10"
-    next "15.1.2"
-    react "^19.0.0"
-    react-aria-components "^1.5.0"
-    react-dom "^19.0.0"
-    react-hook-form "^7.54.2"
-    react-icons "^5.4.0"
-    thenby "^1.3.4"
-    zustand "^5.0.2"
-
-"@umami/react-zen@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.41.0.tgz#44d997d456fc1e0e8c61b651ff2d007a7683d25c"
-  integrity sha512-IE+5W54Le8jMBWt2zPC+V6dz4ICSNlWsxKEbsphRdcnMVRxUdiEyYlSvRPn5TEeqWmU2VsPfEhwma2ENAOmijQ==
-  dependencies:
-    "@fontsource/jetbrains-mono" "^5.0.18"
-    "@react-spring/web" "^9.7.5"
-    "@umami/esbuild-plugin-css-modules" "0.2.0"
-    "@umami/shiso" "^0.26.0"
-    classnames "^2.5.1"
-    dts-bundle "^0.7.3"
-    glob "^10.3.10"
-    next "15.1.2"
-    react "^19.0.0"
-    react-aria-components "^1.5.0"
-    react-dom "^19.0.0"
-    react-hook-form "^7.54.2"
-    react-icons "^5.4.0"
-    thenby "^1.3.4"
-    zustand "^5.0.2"
-
-"@umami/react-zen@^0.42.0":
-  version "0.42.0"
-  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.42.0.tgz#0722fd33c2cd3478da1f998392bb182251333066"
-  integrity sha512-hOoHjpTQk9LVJIdoG133QIz2qaittG2P+csIMWgnIpGiZeTD6wq8KLl+dbALIPMlMr5AhspFDoAToj0J7Jdqmg==
-  dependencies:
-    "@fontsource/jetbrains-mono" "^5.0.18"
-    "@react-spring/web" "^9.7.5"
-    "@umami/esbuild-plugin-css-modules" "0.4.0"
-    "@umami/shiso" "^0.30.0"
-    classnames "^2.5.1"
-    dts-bundle "^0.7.3"
-    glob "^10.3.10"
-    next "15.1.3"
-    react "^19.0.0"
-    react-aria-components "^1.5.0"
-    react-dom "^19.0.0"
-    react-hook-form "^7.54.2"
-    react-icons "^5.4.0"
-    thenby "^1.3.4"
-    zustand "^5.0.2"
-
-"@umami/react-zen@^0.43.0":
-  version "0.43.0"
-  resolved "https://registry.yarnpkg.com/@umami/react-zen/-/react-zen-0.43.0.tgz#130f99269f9f4739f246979205338a20698fa1dc"
-  integrity sha512-Nw0C22gQNbS0nqk+TlCKnngTyMCpkpuepOCC3t0kSbk4qjCs1bCxPcOm30L+df4KPaxhNEzjgM+gHAjJx3b7TA==
-  dependencies:
-    "@fontsource/jetbrains-mono" "^5.0.18"
-    "@react-spring/web" "^9.7.5"
-    "@umami/esbuild-plugin-css-modules" "0.4.0"
-    "@umami/shiso" "^0.36.0"
     classnames "^2.5.1"
     dts-bundle "^0.7.3"
     glob "^10.3.10"
@@ -3897,149 +3761,15 @@
     remark-gfm "^4.0.0"
     thenby "^1.3.4"
 
-"@umami/shiso@^0.20.0":
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.20.0.tgz#519b6926a8061917758013ef20969cf652841489"
-  integrity sha512-QcZHSzLcdpAUbRoZcVcfXS2dTvPfDmQP2ZM1QFCgkzy1a80Aqd8UZS5t+DIHwqe+S1cO7n/TmFdV4pZY9pKzrQ==
+"@umami/shiso@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.38.0.tgz#5d21ed05733bc51fa5a9fcf615ff902914ce4554"
+  integrity sha512-Jm3DcoIEVkHfiHQHvfaNT1NvUgbO/xEJcWfBqKpvnddmkb27enbkAH1BlZhOVV8okGPhLVu6y6047c0jQjzIkA==
   dependencies:
     "@mdx-js/loader" "^3.0.0"
     "@mdx-js/mdx" "^3.1.0"
     "@mdx-js/react" "^3.0.0"
-    "@umami/react-zen" "^0.32.0"
-    classnames "^2.5.1"
-    glob "^10.3.10"
-    gray-matter "^4.0.3"
-    highlight.js "^11.11.0"
-    next "15.1.2"
-    next-mdx-remote "^5.0.0"
-    react "^19.0.0"
-    react-dom "^19.0.0"
-    recursive-readdir "^2.2.3"
-    rehype-highlight "^7.0.1"
-    remark-gfm "^4.0.0"
-    thenby "^1.3.4"
-
-"@umami/shiso@^0.21.0":
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.21.0.tgz#2bbba1c0387eca40d1a67c612bd29981e91378d5"
-  integrity sha512-AIn4MdiX4zr677eIlTqvW9VcT0Q2ssvli1RMcay6dgY5s10idTzT0HejS9kxdu/j8uFBqGKFFlOX9pIc1do5fQ==
-  dependencies:
-    "@mdx-js/loader" "^3.0.0"
-    "@mdx-js/mdx" "^3.1.0"
-    "@mdx-js/react" "^3.0.0"
-    "@umami/react-zen" "^0.34.0"
-    classnames "^2.5.1"
-    glob "^10.3.10"
-    gray-matter "^4.0.3"
-    highlight.js "^11.11.0"
-    next "15.1.2"
-    next-mdx-remote "^5.0.0"
-    react "^19.0.0"
-    react-dom "^19.0.0"
-    recursive-readdir "^2.2.3"
-    rehype-highlight "^7.0.1"
-    remark-gfm "^4.0.0"
-    thenby "^1.3.4"
-
-"@umami/shiso@^0.22.0":
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.22.0.tgz#187dc90d0d4eb15cd6c751cd20291cb10b664393"
-  integrity sha512-rUTwQS8mcWA824Hq4jHq8PGYIAALyMTN+hJsEv2MYRpz5CSUMpJOdo/9blYw5BLA1ckf1Iann6u+XAw+agQKyw==
-  dependencies:
-    "@mdx-js/loader" "^3.0.0"
-    "@mdx-js/mdx" "^3.1.0"
-    "@mdx-js/react" "^3.0.0"
-    "@umami/react-zen" "^0.36.0"
-    classnames "^2.5.1"
-    glob "^10.3.10"
-    gray-matter "^4.0.3"
-    highlight.js "^11.11.0"
-    next "15.1.2"
-    next-mdx-remote "^5.0.0"
-    react "^19.0.0"
-    react-dom "^19.0.0"
-    recursive-readdir "^2.2.3"
-    rehype-highlight "^7.0.1"
-    remark-gfm "^4.0.0"
-    thenby "^1.3.4"
-
-"@umami/shiso@^0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.26.0.tgz#89ded22bc73e21d64e4ed791b9282e8786623552"
-  integrity sha512-DCuAJXrkRnkpDHEoYRCUe8Aj78VxNkScvgI38a0UebqLzsq7OCCeAVE5g2ub9u8BXrwDwDtp8xC4+40aRLfXHQ==
-  dependencies:
-    "@mdx-js/loader" "^3.0.0"
-    "@mdx-js/mdx" "^3.1.0"
-    "@mdx-js/react" "^3.0.0"
-    "@umami/react-zen" "^0.39.0"
-    classnames "^2.5.1"
-    glob "^10.3.10"
-    gray-matter "^4.0.3"
-    highlight.js "^11.11.0"
-    next "15.1.2"
-    next-mdx-remote "^5.0.0"
-    react "^19.0.0"
-    react-dom "^19.0.0"
-    recursive-readdir "^2.2.3"
-    rehype-highlight "^7.0.1"
-    remark-gfm "^4.0.0"
-    thenby "^1.3.4"
-
-"@umami/shiso@^0.30.0":
-  version "0.30.0"
-  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.30.0.tgz#7b059f55222075000fda74825a739c168dcc2747"
-  integrity sha512-KAhCFWOzdA4Nu8Dk/E9Df8yiaNm0ELH5qNQnfIXEMM/dUxsV0yzS74GLrbe+/y1aHI8oI6ydyt5C1ZmyiBG1Eg==
-  dependencies:
-    "@mdx-js/loader" "^3.0.0"
-    "@mdx-js/mdx" "^3.1.0"
-    "@mdx-js/react" "^3.0.0"
-    "@umami/react-zen" "^0.41.0"
-    classnames "^2.5.1"
-    glob "^10.3.10"
-    gray-matter "^4.0.3"
-    highlight.js "^11.11.1"
-    next "15.1.3"
-    next-mdx-remote "^5.0.0"
-    react "^19.0.0"
-    react-dom "^19.0.0"
-    recursive-readdir "^2.2.3"
-    rehype-highlight "^7.0.1"
-    remark-gfm "^4.0.0"
-    thenby "^1.3.4"
-
-"@umami/shiso@^0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.36.0.tgz#2668571a365fb086ce18ad21562264d501a7e4b5"
-  integrity sha512-IIQwfKwVL4KWXkPiYeRdB9mHthkKp6wBPrOvFYtv0zKBbyJMW130l+adfyK53F29NqetMyVBbtYwl21i2GYdJQ==
-  dependencies:
-    "@mdx-js/loader" "^3.0.0"
-    "@mdx-js/mdx" "^3.1.0"
-    "@mdx-js/react" "^3.0.0"
-    "@umami/react-zen" "^0.42.0"
-    classnames "^2.5.1"
-    date-fns "^4.1.0"
-    glob "^10.3.10"
-    gray-matter "^4.0.3"
-    highlight.js "^11.11.1"
-    next "15.1.3"
-    next-mdx-remote "^5.0.0"
-    react "^19.0.0"
-    react-dom "^19.0.0"
-    recursive-readdir "^2.2.3"
-    rehype-highlight "^7.0.1"
-    rehype-slug "^6.0.0"
-    remark-gfm "^4.0.0"
-    thenby "^1.3.4"
-
-"@umami/shiso@^0.37.0":
-  version "0.37.0"
-  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.37.0.tgz#ea5d2ea1f7646825e0b72fe35573db6caba318f4"
-  integrity sha512-VepMXo/EUKXmW7Wk6lk/njqt5UsWxoNlQNOZwaKFaVy8FJ2OLrsCgPAb+aKs+9gi4OKY2SBST+zmtTM8gpMRcA==
-  dependencies:
-    "@mdx-js/loader" "^3.0.0"
-    "@mdx-js/mdx" "^3.1.0"
-    "@mdx-js/react" "^3.0.0"
-    "@umami/react-zen" "^0.43.0"
+    "@umami/react-zen" "^0.45.0"
     classnames "^2.5.1"
     date-fns "^4.1.0"
     glob "^10.3.10"
