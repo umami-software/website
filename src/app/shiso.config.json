@@ -108,6 +108,10 @@
             {
               "label": "Environment variables",
               "url": "/docs/environment-variables"
+            },
+            {
+              "label": "Enable Redis",
+              "url": "/docs/enable-redis"
             }
           ]
         },
