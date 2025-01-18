@@ -3761,10 +3761,10 @@
     remark-gfm "^4.0.0"
     thenby "^1.3.4"
 
-"@umami/shiso@^0.38.0":
-  version "0.38.0"
-  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.38.0.tgz#5d21ed05733bc51fa5a9fcf615ff902914ce4554"
-  integrity sha512-Jm3DcoIEVkHfiHQHvfaNT1NvUgbO/xEJcWfBqKpvnddmkb27enbkAH1BlZhOVV8okGPhLVu6y6047c0jQjzIkA==
+"@umami/shiso@^0.39.0":
+  version "0.39.0"
+  resolved "https://registry.yarnpkg.com/@umami/shiso/-/shiso-0.39.0.tgz#5dee418a64e1cb9169394229ff9e5400e61a49ff"
+  integrity sha512-HLcmOORp6TbjUQyvuFaJh04kb86xYXeAiHA6gjg4vajbMrHuIyvmP8jugP3ZYrIXK60H7Ff474u1oL55yWBBdg==
   dependencies:
     "@mdx-js/loader" "^3.0.0"
     "@mdx-js/mdx" "^3.1.0"
