@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   const msg = {
     to: 'hello@umami.is',
     from: 'mike@umami.is',
-    subject: `Umami - Contact form ${new Date().toString()}`,
+    subject: `Umami Contact Form - ${name} (${email})`,
     html: `<div>
       <b>Name:</b> ${name}<br/>
       <b>Email:</b> ${email}<br/>
