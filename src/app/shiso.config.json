@@ -133,6 +133,10 @@
             {
               "label": "Use Google Tag Manager",
               "url": "/docs/google-tag-manager"
+            },
+            {
+              "label": "Enable Cloudflare headers",
+              "url": "/docs/enable-cloudflare-headers"
             }
           ]
         },
