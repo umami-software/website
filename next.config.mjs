@@ -50,7 +50,7 @@ const nextConfig = {
     return [
       { source: '/docs', destination: '/docs/index' },
       { source: '/docs/getting-started', destination: '/docs/index' },
-      { source: '/a/script.js', destination: 'https://tracker-script.umami.dev/' },
+      { source: '/a/script.js', destination: 'https://cloud.umami.is/script.js' },
       { source: '/discord', destination: 'https://discord.gg/4dz4zcXYrQ' },
       { source: '/analytics', destination: '/lp/analytics' },
       { source: '/website-analytics', destination: '/lp/website-analytics' },
