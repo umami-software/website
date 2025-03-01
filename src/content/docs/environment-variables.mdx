@@ -111,3 +111,7 @@ This will send a HTTP `Strict-Transport-Security` response header with all reque
 **SKIP_DB_CHECK = 1**
 
 Skips the `check-db` step in the build process. Used for Docker builds.
+
+**SKIP_DB_MIGRATION = 1**
+
+Skips the Prisma migration step in the build process. Setting `SKIP_DB_CHECK` also skips this step.
