@@ -8,7 +8,6 @@ Operations around Team management.
 
 ```text
 POST /api/teams
-GET /api/teams
 POST /api/teams/join
 POST /api/teams/:teamId
 GET /api/teams/:teamId
@@ -49,43 +48,6 @@ Creates a team.
     "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
     "updatedAt": null,
     "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
-  }
-]
-```
-
----
-
-## GET /api/teams
-
-Returns all teams.
-
-**Parameters**
-
-- `query`: (optional string) Search text.
-- `page`: (optional number, default 1) Determines page.
-- `pageSize`: (optional string) Determines how many results to return.
-- `orderBy`: (optional string, default `name`) Order by column name.
-
-**Sample response**
-
-```json
-[
-  {
-    "accessCode": "xxwtoY8pzKjDIUQi",
-    "createdAt": "2023-04-13T20:22:55.756Z",
-    "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-    "name": "My Team",
-    "teamUser": [
-      {
-        "createdAt": "2023-04-13T20:22:55.756Z",
-        "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
-        "role": "team-owner",
-        "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-        "updatedAt": null,
-        "user": { "id": "1a457e1a-121a-11ee-be56-0242ac120002", "username": "admin" },
-        "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
-      }
-    ]
   }
 ]
 ```
@@ -138,11 +100,23 @@ None
 
 ```json
 {
-  "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-  "name": "My Team2",
-  "accessCode": "LCh5C6SyoHCFcxaJ",
-  "createdAt": "2023-04-13T20:22:55.756Z",
-  "updatedAt": "2023-04-13T20:59:10.335Z"
+  "id": "a1645e87-6107-4dcf-96a4-1583c5a4d5cf",
+  "name": "My Team",
+  "accessCode": "team_cVQf0mYPriZlPAgK",
+  "logoUrl": null,
+  "createdAt": "2025-03-10T17:59:42.325Z",
+  "updatedAt": "2025-03-10T17:59:42.325Z",
+  "deletedAt": null,
+  "teamUser": [
+    {
+      "id": "9bd52350-e1d4-457c-8181-45b2128b8810",
+      "teamId": "a1645e87-6107-4dcf-96a4-1583c5a4d5cf",
+      "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+      "role": "team-owner",
+      "createdAt": "2025-03-10T17:59:42.325Z",
+      "updatedAt": "2025-03-10T17:59:42.325Z"
+    }
+  ]
 }
 ```
 
@@ -201,20 +175,22 @@ Get all users that belong to a team.
 **Sample response**
 
 ```json
-[
-  {
-    "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
-    "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-    "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
-    "role": "team-owner",
-    "createdAt": "2023-04-13T20:22:55.756Z",
-    "updatedAt": null,
-    "user": {
-      "id": "1a457e1a-121a-11ee-be56-0242ac120002",
-      "username": "admin"
+{
+  "data": [
+    {
+      "id": "cbb58c3d-4f84-47c7-a394-b6efd3997c22",
+      "teamId": "f5f787dc-4cee-415c-a266-16fcab6520e5",
+      "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+      "role": "team-owner",
+      "createdAt": "2025-03-10T18:20:13.333Z",
+      "updatedAt": "2025-03-10T18:20:13.333Z",
+      "user": { "id": "41e2b680-648e-4b09-bcd7-3e2b10c06264", "username": "admin" }
     }
-  }
-]
+  ],
+  "count": 1,
+  "page": 1,
+  "pageSize": 10
+}
 ```
 
 ---
@@ -226,18 +202,18 @@ Add a user to a team.
 **Parameters**
 
 - `userId`: ID of user to be added.
-- `role`: Role user will be added as (`member` or `view-only`).
+- `role`: Role user will be added as (`team-member/team-view-only/team-manager`).
 
 **Sample response**
 
 ```json
 {
-  "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
-  "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-  "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
-  "role": "team-owner",
-  "createdAt": "2023-04-13T20:22:55.756Z",
-  "updatedAt": null
+  "id": "dcf462b4-0eb3-4ad9-8c5d-9b18bc7825e2",
+  "teamId": "f5f787dc-4cee-415c-a266-16fcab6520e5",
+  "userId": "6858ce93-22d9-48e3-8b33-fb355d63b6b4",
+  "role": "team-member",
+  "createdAt": "2025-03-10T19:31:21.773Z",
+  "updatedAt": "2025-03-10T19:31:21.773Z"
 }
 ```
 
@@ -348,10 +324,7 @@ Get all websites that belong to a team.
         }
       }
     ],
-    "user": {
-      "id": "a36560ed-e21c-4ed9-84aa-c86654460cae",
-      "username": "admin@website.com"
-    }
+    "user": { "id": "a36560ed-e21c-4ed9-84aa-c86654460cae", "username": "admin@website.com" }
   }
 ]
 ```

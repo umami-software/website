@@ -12,9 +12,9 @@ import '@fontsource/inter/700.css';
 import '@fontsource/jetbrains-mono/400.css';
 import '@umami/react-zen/styles.css';
 import '@umami/shiso/styles.css';
+import 'highlight.js/styles/github-dark.css';
 import '@/styles/variables.css';
 import '@/styles/global.css';
-import 'highlight.js/styles/github-dark.css';
 
 export default function RootLayout({ children }) {
   return (
