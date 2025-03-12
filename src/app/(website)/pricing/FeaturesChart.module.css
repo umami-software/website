@@ -6,7 +6,7 @@
 .features tr {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--base-color-200);
+  border-bottom: 1px solid var(--base-color-2);
 }
 
 .features th,
@@ -19,7 +19,7 @@
 }
 
 .features td {
-  color: var(--font-muted-color);
+  color: var(--font-color-muted);
 }
 
 .features td:first-child {

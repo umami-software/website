@@ -18,10 +18,10 @@
 }
 
 .num {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   border-radius: 100%;
-  background: var(--base-color-100);
+  background: var(--base-color-2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,5 +37,5 @@
 }
 
 .description {
-  color: var(--font-muted-color);
+  color: var(--font-color-muted);
 }

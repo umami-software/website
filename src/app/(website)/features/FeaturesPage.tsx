@@ -278,7 +278,7 @@ export default function FeaturesPage() {
               </Box>
               <Grid columns="repeat(auto-fit, minmax(300px, 1fr))" gap="4">
                 {items.map((item, index) => (
-                  <Box key={index} borderRadius="2" padding="4" backgroundColor="50">
+                  <Box key={index} borderRadius="2" padding="4" backgroundColor="2">
                     <Row gap="3" alignItems="center">
                       <Icon size="md">{item.icon}</Icon>
                       <Text weight="bold">{item.title}</Text>

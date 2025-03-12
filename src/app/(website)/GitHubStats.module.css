@@ -3,7 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 40px;
-  background-color: var(--base-color-50);
+  background-color: var(--base-color-1);
   border-radius: 10px;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .label {
-  color: var(--font-muted-color);
+  color: var(--font-color-muted);
   font-size: 16px;
 }
 

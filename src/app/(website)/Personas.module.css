@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  background: var(--base-color-50);
+  background: var(--base-color-1);
   overflow: hidden;
   padding: 0px 20px 60px 20px;
   border-radius: 20px;

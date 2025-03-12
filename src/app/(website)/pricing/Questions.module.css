@@ -19,12 +19,12 @@
 }
 
 .answer {
-  color: var(--font-muted-color);
+  color: var(--font-color-muted);
   font-size: 16px;
   font-weight: 400;
   padding: 20px;
   border-radius: 4px;
-  background: var(--base-color-50);
+  background: var(--base-color-1);
   line-height: 1.6rem;
 }
 

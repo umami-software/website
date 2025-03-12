@@ -6,11 +6,13 @@
 }
 
 .card {
+  color: var(--base-color-1);
+  background-color: var(--base-color-12);
   padding: 20px;
   border: 1px solid var(--border-color);
   border-radius: 10px;
   align-self: start;
-  box-shadow: 5px 5px 0 var(--base-color-100);
+  box-shadow: 5px 5px 0 var(--base-color-3);
 }
 
 .pic {
@@ -45,7 +47,7 @@
 }
 
 .username {
-  color: var(--base-color-600);
+  color: var(--base-color-6);
 }
 
 .logo {
@@ -59,7 +61,7 @@
 }
 
 .body {
-  color: var(--font-muted-color);
+  color: var(--font-color-muted);
   text-align: left;
   font-size: 14px;
 }

@@ -22,11 +22,11 @@
 }
 
 .copy {
-  color: var(--base-color-400);
+  color: var(--base-color-4);
 }
 
 .copy:hover {
-  color: var(--base-color-50);
+  color: var(--base-color-1);
 }
 
 .check {

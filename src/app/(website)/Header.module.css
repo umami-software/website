@@ -16,7 +16,7 @@
 }
 
 .header a:hover {
-  color: var(--base-color-950);
+  color: var(--base-color-12);
 }
 
 .header .signup:hover {
@@ -46,7 +46,7 @@
 
 html:not([data-scroll='0']) .header {
   transition: all linear 0.6s;
-  border-bottom: 1px solid var(--base-color-300);
+  border-bottom: 1px solid var(--base-color-3);
 }
 
 @media screen and (max-width: 1200px) {

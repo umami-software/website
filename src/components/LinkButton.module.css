@@ -6,55 +6,54 @@
   white-space: nowrap;
   gap: 200px;
   font-family: inherit;
-  color: var(--base-color-900);
-  background: var(--base-color-100);
+  color: var(--base-color-11);
+  background: var(--base-color-2);
   border: 1px solid transparent;
   border-radius: var(--border-radius);
-  min-height: var(--base-height);
-  padding: 0 var(--size600);
+  padding: 0 var(--padding-y);
   position: relative;
   cursor: pointer;
   font-size: max(14px, min(2vw, 16px));
 }
 
 .button:hover {
-  color: var(--base-color-900);
-  background: var(--base-color-200);
+  color: var(--base-color-10);
+  background: var(--base-color-2);
 }
 
 .button:active {
-  background: var(--base-color-300);
+  background: var(--base-color-3);
 }
 
 .button:visited {
-  color: var(--base-color-900);
+  color: var(--base-color-9);
 }
 
 .primary {
-  color: var(--light50);
+  color: var(--primary-font-color);
   background: var(--primary-color);
 }
 
 .button.primary:visited {
-  color: var(--light50);
+  color: var(--primary-font-color);
 }
 
 .primary:hover {
-  color: var(--light50);
-  background: var(--primary500);
+  color: var(--primary-font-color);
+  background: var(--primary-color);
 }
 
 .button.secondary {
   border: 1px solid var(--border-color);
-  background: var(--base-color-50);
+  background: var(--base-color-1);
 }
 
 .button.secondary:hover {
-  background: var(--base-color-50);
+  background: var(--base-color-1);
 }
 
 .button.secondary:active {
-  background: var(--base-color-100);
+  background: var(--base-color-2);
 }
 
 .button.lg {
