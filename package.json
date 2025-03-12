@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@umami/react-zen": "^0.62.0",
-    "@umami/shiso": "^0.44.0",
+    "@umami/shiso": "^0.48.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "fast-glob": "^3.3.3",
