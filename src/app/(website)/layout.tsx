@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
           />
         )}
       </head>
-      <body suppressHydrationWarning>
+      <body>
         <Suspense>
           <Grid rows="auto 1fr auto" height="100vh">
             <Header />

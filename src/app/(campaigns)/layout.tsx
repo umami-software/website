@@ -32,7 +32,7 @@ export default function CampaignLayout({ children }) {
           />
         )}
       </head>
-      <body className={styles.body} suppressHydrationWarning>
+      <body className={styles.body}>
         <Suspense>
           <Header />
           <main>{children}</main>
