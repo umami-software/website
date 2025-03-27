@@ -62,4 +62,7 @@ export const metadata: Metadata = {
     template: '%s – Umami',
     default: 'Umami',
   },
+  openGraph: {
+    description: 'Umami is a simple, fast, privacy-friendly alternative to Google Analytics.',
+  }
 };
