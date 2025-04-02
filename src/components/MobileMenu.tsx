@@ -23,7 +23,7 @@ export default function MobileMenu({ items = [], onClose }: Props) {
       </Button>
       <div className={styles.items}>
         {items.map(({ label, value }) => (
-          <Link key={value} href={value} className={styles.item}>
+          <Link key={value} href={value} className={styles.item} onClick={onClose} prefetch>
             {label}
           </Link>
         ))}
