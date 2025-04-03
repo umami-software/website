@@ -23,30 +23,30 @@
   height: 100%;
 }
 
-.item header {
+.item h2 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
-  color: var(--base-color-8);
   font-size: 24px;
   font-weight: 700;
 }
 
-.item header svg {
+.item h2 svg {
   width: 24px;
   height: 24px;
-  fill: var(--base-color-8);
 }
 
 .item p {
-  color: var(--base-color-7);
+  flex-grow: 1;
   font-size: max(14px, min(2vw, 16px));
   font-weight: 400;
+  text-align: center;
+  text-wrap: balance;
 }
 
-.item a {
-  align-self: center;
+.item div {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
