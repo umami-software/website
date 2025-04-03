@@ -1,0 +1,38 @@
+---
+title: Umami v2.17.0
+description: Batch processing, payload overrides, a do not track feature and more.
+author: Mike Cao
+date: 2025-03-08T00:00:00-08:00
+---
+
+In this release of Umami, we are introducing batch processing, payload overrides, a do not track feature and more!
+
+## Features
+
+### Batch send
+
+You can now send data in batches, for example when trying to import a lot of data through the API. Instead of sending a single payload object, you would send an array of objects. It will be processed by the same logic from `/api/send`. To use this feature, you would make a `POST` request to `/api/batch`.
+
+### Payload overrides
+
+When you send a request to `/api/send`, Umami pulls data from the request such as user-agent and IP address. Now you can provide your own values in the payload. This is useful when you're sending from a server or mobile environment where you are not using a web browser. The values you can provide are:
+
+- **ip**: IP address. Note that when you send a custom IP address, the normal geo headers from hosts like Vercel and Cloudflare are ignored and a local lookup will be made to get the country and city data.
+- **userAgent**: User agent string. Note this must be in a valid format or your request might be flagged as a bot.
+- **timestamp**: UNIX timestamp in seconds. If passed in, Umami will record the data with the given timestamp instead of the current time.
+
+### Do Not Track
+
+You can respect users DNT setting by adding the parameter `data-do-not-track=true` on your tracker script.
+
+## Fixes
+- Error when filtering using referrer [#3255](https://github.com/umami-software/umami/issues/3255)
+- CORS headers missing from custom endpoints. [#3281](https://github.com/umami-software/umami/issues/3281)
+- Journey report regression [#3268](https://github.com/umami-software/umami/issues/3268)
+- Hostname is not allowed 127.0.0.1 [#3279](https://github.com/umami-software/umami/issues/3279)
+- Grouped referrers shows incorrect values [#3257](https://github.com/umami-software/umami/issues/3257)
+
+## Updates
+- Improved paid ad channel detection [#3270](https://github.com/umami-software/umami/issues/3270)
+
+See the full [release notes](https://github.com/umami-software/umami/releases/tag/v2.17.0).
