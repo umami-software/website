@@ -5,6 +5,11 @@ title: Track events
 Besides pageviews, Umami is also able to track events that occur on your website. There are two ways to record
 events in Umami, using the **data attributes** property or using **JavaScript**.
 
+## Limits
+
+- Event names are limited to 50 characters.
+- Event data cannot be sent without an event name.
+
 ## Using data attributes
 
 To enable events, simply add a special data property to the element you want to track.
@@ -38,8 +43,6 @@ data-umami-event-id="123"
 ```
 
 The additional properties will result in `{ email: 'bob@aol.com', id: '123' }` being recorded with the `Signup button` name.
-
-Event data cannot be sent without an event name.
 
 ### Notes
 
