@@ -10,6 +10,7 @@ export async function POST(req: NextRequest) {
     to: 'hello@umami.is',
     from: 'mike@umami.is',
     subject: `Umami Contact Form - ${name} (${email})`,
+    replyTo: email,
     html: `<div>
       <b>Name:</b> ${name}<br/>
       <b>Email:</b> ${email}<br/>

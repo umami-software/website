@@ -35,6 +35,7 @@ const featuresChart = [
       ['UTM parameters', true, true, true],
       ['Goals', true, true, true],
       ['User Journey', true, true, true],
+      ['Revenue', true, true, true],
     ],
   },
   {
@@ -60,7 +61,6 @@ const featuresChart = [
       ['Email support', false, true, true],
       ['Enterprise support', false, false, true],
       ['Uptime SLA', false, false, true],
-      ['Invoice billing', false, false, true],
       ['Onboarding assistance', false, false, true],
       ['Designated support engineer', false, false, true],
     ],
