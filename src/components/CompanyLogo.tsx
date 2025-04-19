@@ -1,6 +1,6 @@
 import { Row, Icon, Text } from '@umami/react-zen';
 import Link from 'next/link';
-import { Logo } from '@/components/icons';
+import { Logo } from 'src/components/svg';
 
 export default function CompanyLogo() {
   return (

@@ -1,9 +1,0 @@
-.links {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.links svg:hover {
-  fill: #2680eb;
-}

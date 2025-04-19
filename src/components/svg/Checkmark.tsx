@@ -7,7 +7,6 @@ const SvgCheckmark = (props: SVGProps<SVGSVGElement>) => (
       style={{
         textIndent: 0,
         textTransform: 'none',
-        blockProgression: 'tb',
       }}
     />
   </svg>

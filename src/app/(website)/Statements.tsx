@@ -1,5 +1,5 @@
 'use client';
-import { Block, Code, Analytics } from '@/components/icons';
+import { Block, Code, Analytics } from 'src/components/svg';
 import TextBlock from '@/components/TextBlock';
 import styles from './Statements.module.css';
 

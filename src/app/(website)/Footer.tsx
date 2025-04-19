@@ -1,10 +1,8 @@
 'use client';
+import { Grid, Row, Column, Heading, Text, Container } from '@umami/react-zen';
 import Link from 'next/link';
-import classNames from 'classnames';
-import Container from '@/components/Container';
 import CompanyLogo from '@/components/CompanyLogo';
 import SocialMedia from '@/components/SocialMedia';
-import styles from './Footer.module.css';
 
 const data = [
   {
@@ -40,15 +38,19 @@ const data = [
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <Row as="footer" backgroundColor="2" paddingY="8">
       <Container>
-        <div className={styles.columns}>
-          <div className={classNames(styles.col, styles.logo)}>
+        <Grid
+          columns={{ xs: '1fr', md: '1fr minmax(auto, 200px) minmax(auto, 200px) auto' }}
+          gap="6"
+          marginBottom="6"
+        >
+          <Column>
             <CompanyLogo />
-          </div>
+          </Column>
           {data.map(({ title, items }) => (
-            <div key={title} className={classNames(styles.col, styles.links)}>
-              <header>{title}</header>
+            <Column key={title} gap>
+              <Heading size="5">{title}</Heading>
               {items.map(({ text, href }) => (
                 <Link
                   key={text}
@@ -58,16 +60,14 @@ export default function Footer() {
                   {text}
                 </Link>
               ))}
-            </div>
+            </Column>
           ))}
-        </div>
-        <div className={styles.bottom}>
+        </Grid>
+        <Row justifyContent="space-between">
           <SocialMedia />
-          <div className={styles.copy}>
-            <div>&copy; {new Date().getFullYear()} Umami Software, Inc.</div>
-          </div>
-        </div>
+          <Text size="2">&copy; {new Date().getFullYear()} Umami Software, Inc.</Text>
+        </Row>
       </Container>
-    </footer>
+    </Row>
   );
 }

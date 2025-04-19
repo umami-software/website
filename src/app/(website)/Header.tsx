@@ -1,13 +1,12 @@
 'use client';
-import { Button, Text, Icon, Row } from '@umami/react-zen';
+import { Button, Text, Icon, Row, Container } from '@umami/react-zen';
 import Link from 'next/link';
 import CompanyLogo from '@/components/CompanyLogo';
 import HamburgerButton from '@/components/HamburgerButton';
 import useQueryString from '@/components/hooks/useQueryString';
 import { GITHUB_STARS, GITHUB_URL } from '@/lib/constants';
 import useScroll from '@/components/hooks/useScroll';
-import Container from '@/components/Container';
-import { Github } from '@/components/icons';
+import { Github } from 'src/components/svg';
 import styles from './Header.module.css';
 
 const mobileMenuItems = [

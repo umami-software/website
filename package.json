@@ -10,12 +10,12 @@
     "url": "https://github.com/umami-software/website.git"
   },
   "scripts": {
-    "dev": "next dev -p 5001 --turbo",
+    "dev": "next dev -p 5001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --quiet",
     "stylelint": "stylelint --fix",
-    "icons": "svgr ./src/assets --out-dir ./src/components/icons --typescript"
+    "icons": "svgr ./src/assets --out-dir src/components/svg --typescript"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
@@ -35,7 +35,7 @@
     "@types/mdx": "^2.0.13",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "@umami/react-zen": "^0.62.0",
+    "@umami/react-zen": "^0.83.0",
     "@umami/shiso": "^0.50.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
@@ -56,7 +56,6 @@
     "remark": "^12.0.1",
     "remark-gfm": "^3.0.1",
     "remark-html": "^16.0.1",
-    "shiki": "^0.14.7",
     "thenby": "^1.3.4",
     "typescript": "^5.8.3"
   },

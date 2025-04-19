@@ -1,8 +1,17 @@
 'use client';
 import { Fragment } from 'react';
-import { Icon } from '@umami/react-zen';
-import { Checkmark } from '@/components/icons';
-import styles from './FeaturesChart.module.css';
+import {
+  Icon,
+  Column,
+  Text,
+  Table,
+  TableRow,
+  TableColumn,
+  TableCell,
+  TableHeader,
+  Icons,
+  TableBody,
+} from '@umami/react-zen';
 
 const featuresChart = [
   {
@@ -10,8 +19,8 @@ const featuresChart = [
     items: [
       ['Events (included)', '100K', '1 million', 'Custom'],
       ['Additional events', false, '$0.00002 per event', 'Custom'],
-      ['Data import', true, true, true],
       ['Data export', true, true, true],
+      ['Data import', false, true, true],
     ],
   },
   {
@@ -69,47 +78,61 @@ const featuresChart = [
 
 export default function Features() {
   return (
-    <div className={styles.features}>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Hobby</th>
-            <th>Pro</th>
-            <th>Enterprise</th>
-          </tr>
-        </thead>
-        <tbody>
+    <Column>
+      <Table>
+        <TableHeader>
+          <TableColumn align="center"></TableColumn>
+          <TableColumn align="center">
+            <Text weight="bold" size="5">
+              Hobby
+            </Text>
+          </TableColumn>
+          <TableColumn align="center">
+            <Text weight="bold" size="5">
+              Pro
+            </Text>
+          </TableColumn>
+          <TableColumn align="center">
+            <Text weight="bold" size="5">
+              Enterprise
+            </Text>
+          </TableColumn>
+        </TableHeader>
+        <TableBody>
           {featuresChart.map(({ label, items }) => {
             return (
               <Fragment key={label}>
-                <tr>
-                  <td className={styles.header}>{label}</td>
-                </tr>
+                <TableRow>
+                  <TableCell colSpan={4}>
+                    <Text weight="bold" size="5">
+                      {label}
+                    </Text>
+                  </TableCell>
+                </TableRow>
                 {items.map((item, index) => {
                   return (
-                    <tr key={index}>
-                      {item.map((data, x) => {
+                    <TableRow key={index}>
+                      {item.map((data, i) => {
                         return (
-                          <td key={x}>
+                          <TableCell key={i} align={i > 0 ? 'center' : 'start'}>
                             {data === true ? (
-                              <Icon size="xl">
-                                <Checkmark />
+                              <Icon>
+                                <Icons.Check />
                               </Icon>
                             ) : (
                               data
                             )}
-                          </td>
+                          </TableCell>
                         );
                       })}
-                    </tr>
+                    </TableRow>
                   );
                 })}
               </Fragment>
             );
           })}
-        </tbody>
-      </table>
-    </div>
+        </TableBody>
+      </Table>
+    </Column>
   );
 }
