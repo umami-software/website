@@ -35,7 +35,7 @@ import {
   Traffic,
   User,
   View,
-} from '@/components/icons';
+} from 'src/components/svg';
 
 const items = [
   {

@@ -40,9 +40,11 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Suspense>
-          <Grid rows="auto 1fr auto" height="100vh">
+          <Grid rows="1fr auto" height="100vh">
             <Header />
-            <Container style={{ marginTop: '70px', maxWidth: '1320px' }}>{children}</Container>
+            <Container as="main" style={{ marginTop: '70px', marginBottom: '70px' }}>
+              {children}
+            </Container>
             <Footer />
           </Grid>
         </Suspense>
@@ -64,5 +66,5 @@ export const metadata: Metadata = {
   },
   openGraph: {
     description: 'Umami is a simple, fast, privacy-friendly alternative to Google Analytics.',
-  }
+  },
 };

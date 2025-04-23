@@ -1,6 +1,5 @@
 'use client';
-import { Button, Icon, Text, Box, Column, Row, Heading, Grid } from '@umami/react-zen';
-import { Checkmark } from '@/components/icons';
+import { Button, Icon, Text, Box, Column, Row, Heading, Grid, Icons } from '@umami/react-zen';
 import Link from 'next/link';
 import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
@@ -55,7 +54,7 @@ export default function Plans() {
     <Grid
       gap="4"
       width="100%"
-      columns="repeat(auto-fill, minmax(320px, 1fr))"
+      columns="repeat(auto-fit, minmax(240px, 1fr))"
       alignItems="center"
       justifyContent="center"
     >
@@ -65,7 +64,7 @@ export default function Plans() {
             <Column
               key={name}
               gap="3"
-              borderSize="1"
+              border
               shadow="3"
               padding="6"
               borderRadius="3"
@@ -86,8 +85,8 @@ export default function Plans() {
                   return (
                     <Row key={index} as="li" alignItems="center" gap="2">
                       <Row color="primary" alignItems="center">
-                        <Icon size="lg">
-                          <Checkmark />
+                        <Icon size="sm">
+                          <Icons.Check />
                         </Icon>
                       </Row>
                       <Text size="2">{feat}</Text>

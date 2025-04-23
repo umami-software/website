@@ -17,26 +17,26 @@ export default function ContactForm() {
   return (
     <Form onSubmit={handleSubmit} style={{ width: 500, margin: 'auto' }}>
       <FormField label="Full name" name="name" rules={{ required: 'Required' }}>
-        <TextField placeholder="John Smith" />
+        <TextField placeholder="John Smith" style={{ width: '100%' }} />
       </FormField>
       <FormField label="Work email" name="email" rules={{ required: 'Required' }}>
-        <TextField placeholder="john@company.com" />
+        <TextField placeholder="john@company.com" style={{ width: '100%' }} />
       </FormField>
       <FormField label="Title" name="title">
-        <TextField placeholder="Software Engineer" />
+        <TextField placeholder="Software Engineer" style={{ width: '100%' }} />
       </FormField>
       <FormField label="Company" name="company">
-        <TextField placeholder="Company, Inc." />
+        <TextField placeholder="Company, Inc." style={{ width: '100%' }} />
       </FormField>
       <FormField label="Company size" name="size">
-        <Select placeholder="Select a value" items={items} />
+        <Select placeholder="Select a value" items={items} style={{ width: '100%' }} />
       </FormField>
       <FormField
         label="Tell us about your use case"
         name="comment"
         rules={{ required: 'Required' }}
       >
-        <TextArea resize="vertical" style={{ height: 300 }} />
+        <TextArea style={{ height: 300, width: 500 }} />
       </FormField>
       <FormSubmitButton variant="primary">Submit</FormSubmitButton>
     </Form>

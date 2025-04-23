@@ -2,7 +2,7 @@
 import { Row } from '@umami/react-zen';
 import TextBlock from '@/components/TextBlock';
 import ContentImage from '@/components/ContentImage';
-import { X } from '@/components/icons';
+import { X } from 'src/components/svg';
 import styles from './Quotes.module.css';
 import SocialMedia from '@/components/SocialMedia';
 

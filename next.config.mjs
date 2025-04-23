@@ -1,15 +1,9 @@
-import remarkGfm from 'remark-gfm';
 import createMDX from '@next/mdx';
 import { withAxiom } from 'next-axiom';
-import rehypeHighlight from 'rehype-highlight';
 
 const withMDX = createMDX({
   options: {
     extension: /\.mdx?$/,
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeHighlight],
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
   },
 });
 
@@ -26,9 +20,6 @@ const headers = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    mdxRs: false,
-  },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: false,
   output: 'standalone',
