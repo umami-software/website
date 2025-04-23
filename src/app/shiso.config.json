@@ -272,6 +272,10 @@
             {
               "label": "Revenue",
               "url": "/docs/reports/report-revenue"
+            },
+            {
+              "label": "Attribution",
+              "url": "/docs/reports/report-attribution"
             }
           ]
         }

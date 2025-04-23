@@ -36,6 +36,7 @@ const featuresChart = [
       ['Goals', true, true, true],
       ['User Journey', true, true, true],
       ['Revenue', true, true, true],
+      ['Attribution', true, true, true],
     ],
   },
   {

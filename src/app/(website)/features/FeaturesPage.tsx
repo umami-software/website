@@ -22,6 +22,8 @@ import {
   Lightbulb,
   Location,
   Magnet,
+  Money,
+  Network,
   Path,
   Privacy,
   Realtime,
@@ -183,8 +185,18 @@ const items = [
       },
       {
         title: 'Journey',
-        description: ['Understand how users navigate through your website.'],
+        description: ['Look into your revenue data and how users are spending.'],
         icon: <Path />,
+      },
+      {
+        title: 'Revenue',
+        description: ['Understand how users navigate through your website.'],
+        icon: <Money />,
+      },
+      {
+        title: 'Attribution',
+        description: ['See how users engage with your marketing and what drives conversions.'],
+        icon: <Network />,
       },
     ],
   },
