@@ -10,16 +10,31 @@ See [Tracker configuration](/docs/tracker-configuration).
 ## Functions
 
 ```js
+// Tracks the current page
+umami.track();
+
+// Custom payload
 umami.track(payload: object);
 
-umami.track(event_name: string, event_data: object);
+// Custom event
+umami.track(event_name: string);
 
-umami.identify(session_data: object);
+// Custom event with data
+umami.track(event_name: string, data: object);
+
+// Assign ID to current session
+umami.identify(unique_id: string);
+
+// Session data
+umami.identify(unique_id: string, data: object);
+
+// Session data without ID
+umami.identify(data: object);
 ```
 
 ## Pageviews
 
-Tracks a page view.
+Track a page view.
 
 ```js
 umami.track();
@@ -49,7 +64,7 @@ umami.track(props => ({ ...props, url: '/home', title: 'Home page' }));
 
 ## Events
 
-Tracks an event with a given name.
+Track an event with a given name.
 
 ```js
 umami.track('signup-button');
@@ -57,7 +72,7 @@ umami.track('signup-button');
 
 ## Event Data
 
-Tracks an event with dynamic data.
+Track an event with dynamic data.
 
 ```js
 umami.track('signup-button', { name: 'newsletter', id: 123 });
@@ -86,10 +101,24 @@ Event Data can work with any JSON data. There are a few rules in place to mainta
 - Arrays are converted to a String, with the same max length of 500.
 - Objects have a max of 50 properties. Arrays are considered 1 property.
 
-## Session Data
+## Sessions
 
-Tracks a session with dynamic data. You would call the `identify` function from the tracker script to save data about the current session.
+Pass in your own ID to identify a user.
 
 ```js
-umami.identify({ email: 'bob@aol.com' });
+umami.identify('unique_id');
+```
+
+## Session Data
+
+Save data about the current session.
+
+```js
+umami.identify('unique_id', { name: 'Bob', email: 'bob@aol.com' });
+```
+
+To save data without a unique ID, pass in only a JSON object.
+
+```js
+umami.identify({ name: 'Bob', email: 'bob@aol.com' });
 ```

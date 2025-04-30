@@ -65,7 +65,7 @@ export default function Footer() {
         </Grid>
         <Row justifyContent="space-between">
           <SocialMedia />
-          <Text size="2">&copy; {new Date().getFullYear()} Umami Software, Inc.</Text>
+          <Text size="1">&copy; {new Date().getFullYear()} Umami Software, Inc.</Text>
         </Row>
       </Container>
     </Row>

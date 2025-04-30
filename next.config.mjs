@@ -22,7 +22,7 @@ const headers = [
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: false,
-  output: 'standalone',
+  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
