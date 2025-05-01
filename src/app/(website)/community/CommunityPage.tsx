@@ -1,8 +1,9 @@
 'use client';
-import { Grid, Row, Icon, Column, Heading, Text, Button } from '@umami/react-zen';
+import { Grid, Row, Icon, Column, Heading, Text } from '@umami/react-zen';
 import PageHeader from '@/components/PageHeader';
 import { GITHUB_URL, DISCORD_URL, X_URL, LINKEDIN_URL } from '@/lib/constants';
 import { Github, Discord, X, Linkedin } from 'src/components/svg';
+import LinkButton from '@/components/LinkButton';
 
 const items = [
   {
@@ -39,7 +40,7 @@ export default function CommunityPage() {
         title="Community"
         description="Get help with issues, discuss ideas and share your feedback."
       />
-      <Grid columns={{ xs: '1fr', md: '1fr 1fr' }} gap="6">
+      <Grid columns={{ xs: '1fr', md: '1fr 1fr' }} gap="3">
         {items.map(({ name, description, url, icon }) => (
           <Column
             key={name}
@@ -55,11 +56,9 @@ export default function CommunityPage() {
               <Heading>{name}</Heading>
             </Row>
             <Text>{description}</Text>
-            <Button variant="secondary">
-              <a href={url} target="_blank" data-umami-event={`community-${name}`}>
-                Explore
-              </a>
-            </Button>
+            <LinkButton href={url} target="_blank" data-umami-event={`community-${name}`}>
+              Explore
+            </LinkButton>
           </Column>
         ))}
       </Grid>
