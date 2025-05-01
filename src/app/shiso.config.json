@@ -81,6 +81,10 @@
               "url": "/docs/compare"
             },
             {
+              "label": "Distinct IDs",
+              "url": "/docs/distinct-ids"
+            },
+            {
               "label": "Tags",
               "url": "/docs/tags"
             },
