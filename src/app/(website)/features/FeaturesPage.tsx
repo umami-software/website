@@ -282,7 +282,7 @@ export default function FeaturesPage() {
         {items.map(({ title, description, items }) => {
           return (
             <Box key={title}>
-              <Heading size="3">{title}</Heading>
+              <Heading size="4">{title}</Heading>
               <Box paddingY="6" maxWidth="600px">
                 <Text color="muted" size="3">
                   {description}

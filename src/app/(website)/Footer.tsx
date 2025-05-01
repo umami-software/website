@@ -32,6 +32,7 @@ const data = [
       { text: 'Contact', href: '/contact' },
       { text: 'Privacy', href: '/privacy' },
       { text: 'Terms', href: '/terms' },
+      { text: 'DPA', href: '/umami-dpa.pdf', target: '_blank' },
     ],
   },
 ];
@@ -50,12 +51,12 @@ export default function Footer() {
           </Column>
           {data.map(({ title, items }) => (
             <Column key={title} gap>
-              <Heading size="5">{title}</Heading>
-              {items.map(({ text, href }) => (
+              <Heading size="1">{title}</Heading>
+              {items.map(({ text, href, target }) => (
                 <Link
                   key={text}
                   href={href}
-                  target={href.startsWith('http') ? '_blank' : undefined}
+                  target={target || href.startsWith('http') ? '_blank' : undefined}
                 >
                   {text}
                 </Link>

@@ -10,7 +10,7 @@ export default function PageHeader({
 }) {
   return (
     <Column gap="4" alignItems="center" paddingTop="6" paddingBottom="8">
-      <Heading size="1" as="h1">
+      <Heading size="6" as="h1">
         {title}
       </Heading>
       {description && (
