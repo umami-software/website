@@ -11,11 +11,11 @@ export default function ContactForm() {
   };
 
   if (sent) {
-    return <h2 style={{ width: 500, margin: 'auto' }}>Thank you! We will get in touch shortly.</h2>;
+    return <h2 style={{ width: 400, margin: 'auto' }}>Thank you! We will get in touch shortly.</h2>;
   }
 
   return (
-    <Form onSubmit={handleSubmit} style={{ width: 500, margin: 'auto' }}>
+    <Form onSubmit={handleSubmit} style={{ width: 400, margin: 'auto' }}>
       <FormField label="Full name" name="name" rules={{ required: 'Required' }}>
         <TextField placeholder="John Smith" style={{ width: '100%' }} />
       </FormField>
@@ -36,7 +36,7 @@ export default function ContactForm() {
         name="comment"
         rules={{ required: 'Required' }}
       >
-        <TextArea style={{ height: 300, width: 500 }} />
+        <TextArea style={{ height: 300, width: 400 }} />
       </FormField>
       <FormSubmitButton variant="primary">Submit</FormSubmitButton>
     </Form>

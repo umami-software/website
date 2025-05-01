@@ -39,7 +39,7 @@ export default function CommunityPage() {
         title="Community"
         description="Get help with issues, discuss ideas and share your feedback."
       />
-      <Grid columns="1fr 1fr" gap="6">
+      <Grid columns={{ xs: '1fr', md: '1fr 1fr' }} gap="6">
         {items.map(({ name, description, url, icon }) => (
           <Column
             key={name}
