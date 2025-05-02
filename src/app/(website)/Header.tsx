@@ -2,7 +2,7 @@
 import { Button, Text, Icon, Row, Container } from '@umami/react-zen';
 import Link from 'next/link';
 import CompanyLogo from '@/components/CompanyLogo';
-import HamburgerButton from '@/components/HamburgerButton';
+import MobileMenu from '@/components/MobileMenu';
 import useQueryString from '@/components/hooks/useQueryString';
 import { GITHUB_STARS, GITHUB_URL } from '@/lib/constants';
 import useScroll from '@/components/hooks/useScroll';
@@ -95,7 +95,7 @@ const ActionLinks = () => {
         </Link>
       </Button>
       <div className={styles.hamburger}>
-        <HamburgerButton items={mobileMenuItems} />
+        <MobileMenu items={mobileMenuItems} />
       </div>
     </Row>
   );

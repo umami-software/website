@@ -1,12 +1,11 @@
 'use client';
 import { Button, Icon, Icons, DialogTrigger, Modal, Dialog, Column, Text } from '@umami/react-zen';
-import styles from './HamburgerButton.module.css';
 import Link from 'next/link';
 
-export default function HamburgerButton({ items }) {
+export default function MobileMenu({ items }) {
   return (
     <DialogTrigger>
-      <Button variant="quiet" className={styles.button}>
+      <Button variant="quiet">
         <Icon>
           <Icons.Menu />
         </Icon>
@@ -17,8 +16,8 @@ export default function HamburgerButton({ items }) {
             return (
               <Column gap="6" padding="6" onClick={close}>
                 {items.map(({ label, value }) => (
-                  <Link key={value} href={value} className={styles.item}>
-                    <Text size="8">{label}</Text>
+                  <Link key={value} href={value}>
+                    <Text size="4">{label}</Text>
                   </Link>
                 ))}
               </Column>
