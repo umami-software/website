@@ -311,6 +311,10 @@
               "url": "/docs/guides/hosting"
             },
             {
+              "label": "Running on Nodion",
+              "url": "/docs/guides/running-on-nodion"
+            },
+            {
               "label": "Running on DigitalOcean",
               "url": "/docs/guides/running-on-digitalocean"
             },
