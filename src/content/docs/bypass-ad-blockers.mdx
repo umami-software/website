@@ -31,6 +31,22 @@ Here are some tutorials you can use:
 - [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
 - [Apache](https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html)
 
+To implement this using server-side, what you can do is make a separate endpoint.
+For instance, in [Express.js](https://expressjs.com):
+
+```js
+app.get("/stats.js", async (req, res) => {
+    const scriptText = await fetch("https://cloud.umami.is/script.js");
+    res.send(await scriptText.text())
+});
+```
+
+Then in your html head tag:
+```html
+<script defer src="/stats.js" data-website-id="..."></script>
+```
+
+
 If you are using a framework like [Next.js](https://nextjs.org), you can use their [rewrites](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites) feature.
 
 ## Hosting the tracker script
