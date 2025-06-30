@@ -26,16 +26,25 @@ Creates a user.
 
 - `username`: (string) The user's username.
 - `password`: (string) The user's password.
-- `role`: (string) Determines user access, `admin/user/view-only`.
+- `role`: (string) Choose from `admin` | `user` | `view-only`.
+
+**Request body**
+
+```json
+{
+  "username": "admin",
+  "password": "umami",
+  "role": "admin"
+}
+```
 
 **Sample response**
 
 ```json
 {
-  "id": "1a457e1a-121a-11ee-be56-0242ac120002",
-  "username": "umami",
-  "role": "admin",
-  "createdAt": "2023-04-13T20:22:55.756Z"
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "username": "demo",
+    "role": "user"
 }
 ```
 
@@ -43,21 +52,17 @@ Creates a user.
 
 ## GET /api/admin/users
 
-Returns all users. Admin access is required.
-
-**Parameters**
-
-None
+Returns all users. **Admin access is required.**
 
 **Sample response**
 
 ```json
 [
   {
-    "id:" "1a457e1a-121a-11ee-be56-0242ac120002",
-    "username": "umami",
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "username": "admin",
     "role": "admin",
-    "createdAt": "2023-04-13T20:22:55.756Z"
+    "createdAt": "0000-00-00T00:00:00.000Z"
   }
 ]
 ```
@@ -68,17 +73,14 @@ None
 
 Gets a user by ID.
 
-**Parameters**
-
-None
-
 **Sample response**
 
 ```json
 {
-  "id": "1a457e1a-121a-11ee-be56-0242ac120002",
-  "username": "umami",
-  "role": "admin"
+  "username" : "xxxxxxxxxxx",
+  "id" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "role" : "user",
+  "createdAt" : "0000-00-00T00:00:00.000Z"
 }
 ```
 
@@ -92,16 +94,26 @@ Updates a user.
 
 - `username`: (optional string) The user's username.
 - `password`: (optional string) The user's password.
-- `role`: (optional string) Determines user access, `admin` or `user`.
+- `role`: (optional string) Select from  `admin`, `user`, `view-only`.
+
+**Request body**
+
+```json
+{
+  "username": "admin",
+  "password": "umami",
+  "role": "admin"
+}
+```
 
 **Sample response**
 
 ```json
 {
-  "id": "1a457e1a-121a-11ee-be56-0242ac120002",
-  "username": "umami",
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "username": "admin",
   "role": "admin",
-  "createdAt": "2023-04-13T20:22:55.756Z"
+  "createdAt": "0000-00-00T00:00:00.000Z"
 }
 ```
 
@@ -111,13 +123,9 @@ Updates a user.
 
 Deletes a user.
 
-**Parameters**
-
-None
-
 **Sample response**
 
-```
+```text
 ok
 ```
 
@@ -137,19 +145,31 @@ Gets all websites that belong to a user.
 **Sample response**
 
 ```json
-[
-  {
-    "id": "02d89813-7a72-41e1-87f0-8d668f85008b",
-    "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
-    "domain": "mywebsite.com",
-    "name": "My Website",
-    "shareId": null,
-    "createdAt": "2023-04-10T23:06:44.250Z",
-    "deletedAt": null,
-    "resetAt": null,
-    "updatedAt": null
-  }
-]
+{
+  "data": [
+    {
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "updatedAt": "0000-00-00T00:00:00.00Z",
+      "user": {
+        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "username": "xxxxx"
+      },
+      "domain": "xxxxxxx",
+      "teamId": null,
+      "resetAt": null,
+      "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "shareId": "xxxxxxxxxxxxx",
+      "createdAt": "0000-00-00T00:00:00.00Z",
+      "name": "xxxxx",
+      "deletedAt": null
+    }
+  ],
+  "orderBy": "name",
+  "count": 3,
+  "pageSize": 10,
+  "page": 1
+}
 ```
 
 ---
@@ -160,21 +180,46 @@ Gets all teams that belong to a user.
 
 **Parameters**
 
-- `query`: (optional string) Search text.
-- `page`: (optional number, default 1) Determines page.
-- `pageSize`: (optional string) Determines how many results to return.
-- `orderBy`: (optional string, default `name`) Order by column name.
+- `query`: (string | optional) Search text.
+- `page`: (number | optional, default 1) Determines page.
+- `pageSize`: (string | optional) Determines how many results to return.
+- `orderBy`: (string | optional, default `name`) Order by column name.
 
 **Sample response**
 
 ```json
-[
-  {
-    "id": "02d89813-7a72-41e1-87f0-8d668f85008b",
-    "name": "My Team",
-    "createdAt": "2023-04-10T23:06:44.250Z",
-    "deletedAt": null,
-    "updatedAt": null
-  }
-]
+{
+  "data": [
+    {
+      "_count": {
+        "website": 0,
+        "teamUser": 1
+      },
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "logoUrl": null,
+      "deletedAt": null,
+      "teamUser": [
+        {
+          "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "role": "team-owner",
+          "updatedAt": "0000-00-00T00:00:00.00Z",
+          "createdAt": "0000-00-00T00:00:00.00Z",
+          "user": {
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "username": "xxxxx"
+          }
+        }
+      ],
+      "accessCode": "team_xxxxxxxxxxx",
+      "createdAt": "0000-00-00T00:00:00.00Z",
+      "updatedAt": "0000-00-00T00:00:00.00Z",
+      "name": "xxxxxx"
+    }
+  ],
+  "count": 8,
+  "pageSize": 10,
+  "page": 1
+}
 ```
