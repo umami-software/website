@@ -1,0 +1,37 @@
+---
+title: Running on Sevalla
+---
+
+[Sevalla](https://sevalla.com) is a developer-focused PaaS that offers [one-click templates](https://docs.sevalla.com/templates/overview), managed databases, and global deployments powered by GKE and Cloudflare, without dealing with complex infrastructure.
+
+Sevalla supports Git-based deployments, Dockerfiles, container images, and most popular frameworks out of the box. This guide walks you through deploying Umami on Sevalla using their one-click template or by deploying manually with your own GitHub repository.
+
+To get started, [create a Sevalla account](https://sevalla.com), and you’ll receive **$50 in free usage credits** to try things out.
+
+## Method 1: One-click deployment (recommended)
+
+Sevalla provides an official Umami template that provisions an Umami app and a PostgreSQL database with a single click.
+
+[![Deploy on Sevalla](https://sevalla.com//deploy-on-sevalla.svg)](https://app.sevalla.com/template/umami)
+
+Click the button above to get started easily. Your app will be live within a few minutes. Then click the **Visit App** button and log in using the [default credentials](https://umami.is/docs/login).
+
+## Method 2: Manual deployment
+
+If you prefer more control, you can manually deploy from your own GitHub repo or from the public Umami repo.
+
+### Set up Sevalla project
+
+1. Go to **Applications** \> **New Application**
+2. Choose **GitHub repo** (if you’ve forked [Umami](https://github.com/umami-software/umami)), or **Public repo** and paste: `https://github.com/umami-software/umami`
+3. Set the branch to `master`, enter an app name, choose a region (same as your database), and select a pod size based on your needs.
+4. Click **Create**, but skip the deploy step for now, so it does not fail since we have not added the database.
+
+### Database and deploy
+
+1. Go to **Databases** \> **Add database**
+2. Choose **PostgreSQL** (recommended), select the **same region** as your app, pick a size, and click **Create**.
+3. Once created, scroll to **Connected Applications**, click **Add Connection**, select your Umami app, and enable **“Add environment variables”.**
+4. Set the variable name as `DATABASE_URL` (It may be prefilled as `DB_URL`, change it to `DATABASE_URL`)
+5. Click **Add connection.** This links your app and DB with the correct environment variable.
+6. Go back to your application and click **Deploy**. Once the build is complete, visit your app’s URL and log in using the [default credentials](https://umami.is/docs/login).
