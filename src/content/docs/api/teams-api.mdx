@@ -30,24 +30,33 @@ Creates a team.
 
 - `name`: (string) The team's name.
 
+**Request body**
+```json
+{
+  "name": "marketing"
+}
+```
+
 **Sample response**
 
 ```json
 [
   {
-    "accessCode": "xxwtoY8pzKjDIUQi",
-    "createdAt": "2023-04-13T20:22:55.756Z",
-    "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-    "name": "My Team",
-    "updatedAt": null
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "name": "marketing",
+    "accessCode": "team_KBmjrm5KcDZSArah",
+    "logoUrl": null,
+    "createdAt": "0000-00-00T00:00:00.000Z",
+    "updatedAt": "0000-00-00T00:00:00.000Z",
+    "deletedAt": null
   },
   {
-    "createdAt": "2023-04-13T20:22:55.756Z",
-    "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
+    "id": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy",
+    "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "userId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
     "role": "team-owner",
-    "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-    "updatedAt": null,
-    "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
+    "createdAt": "0000-00-00T00:00:00.000Z",
+    "updatedAt": "0000-00-00T00:00:00.000Z",
   }
 ]
 ```
@@ -62,28 +71,25 @@ Join a team.
 
 - `accessCode`: (string) The team's access code.
 
+**Request body**
+
+```json
+{
+  "accessCode": "xxwtoY8pzKjDIUQi"
+}
+```
+
 **Sample response**
 
 ```json
-[
-  {
-    "accessCode": "xxwtoY8pzKjDIUQi",
-    "createdAt": "2023-04-13T20:22:55.756Z",
-    "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-    "name": "My Team",
-    "teamUser": [
-      {
-        "createdAt": "2023-04-13T20:22:55.756Z",
-        "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
-        "role": "team-owner",
-        "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-        "updatedAt": null,
-        "user": { "id": "1a457e1a-121a-11ee-be56-0242ac120002", "username": "admin" },
-        "userId": "1a457e1a-121a-11ee-be56-0242ac120002"
-      }
-    ]
-  }
-]
+{
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "role": "team-member",
+    "createdAt": "0000-00-00T00:00:00.000Z",
+    "updatedAt": "0000-00-00T00:00:00.000Z"
+}
 ```
 
 ---
@@ -92,29 +98,25 @@ Join a team.
 
 Get a team.
 
-**Parameters**
-
-None
-
 **Sample response**
 
 ```json
 {
-  "id": "a1645e87-6107-4dcf-96a4-1583c5a4d5cf",
-  "name": "My Team",
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "name": "marketing",
   "accessCode": "team_cVQf0mYPriZlPAgK",
   "logoUrl": null,
-  "createdAt": "2025-03-10T17:59:42.325Z",
-  "updatedAt": "2025-03-10T17:59:42.325Z",
+  "createdAt": "0000-00-00T00:00:00.000Z",
+  "updatedAt": "0000-00-00T00:00:00.000Z",
   "deletedAt": null,
   "teamUser": [
     {
-      "id": "9bd52350-e1d4-457c-8181-45b2128b8810",
-      "teamId": "a1645e87-6107-4dcf-96a4-1583c5a4d5cf",
-      "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+      "id": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy",
+      "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "userId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
       "role": "team-owner",
-      "createdAt": "2025-03-10T17:59:42.325Z",
-      "updatedAt": "2025-03-10T17:59:42.325Z"
+      "createdAt": "0000-00-00T00:00:00.000Z",
+      "updatedAt": "0000-00-00T00:00:00.000Z"
     }
   ]
 }
@@ -128,18 +130,28 @@ Update a team.
 
 **Parameters**
 
-- `name`: (optional string) The team's name.
-- `accessCode`: (optional string) The team's access code.
+- `name`: (string | optional) The team's name.
+- `accessCode`: (string | optional) The team's access code.
+
+**Request body**
+
+```json
+{
+  "accessCode": "marketing"
+}
+```
 
 **Sample response**
 
 ```json
 {
-  "accessCode": "xxwtoY8pzKjDIUQi",
-  "createdAt": "2023-04-13T20:22:55.756Z",
-  "id": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-  "name": "My Team",
-  "updatedAt": null
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "name": "marketing",
+    "accessCode": "marketing",
+    "logoUrl": null,
+    "createdAt": "0000-00-00T00:00:00.000Z",
+    "updatedAt": "0000-00-00T00:00:00.000Z",
+    "deletedAt": null
 }
 ```
 
@@ -149,13 +161,9 @@ Update a team.
 
 Delete a team.
 
-**Parameters**
-
-None
-
 **Sample response**
 
-```
+```text
 ok
 ```
 
@@ -167,29 +175,32 @@ Get all users that belong to a team.
 
 **Parameters**
 
-- `query`: (optional string) Search text.
-- `page`: (optional number, default 1) Determines page.
-- `pageSize`: (optional string) Determines how many results to return.
-- `orderBy`: (optional string, default `name`) Order by column name.
+- `query`: (string | optional) Search text.
+- `page`: (number | optional, default 1) Determines page.
+- `pageSize`: (string | optional) Determines how many results to return.
+- `orderBy`: (string | optional, default `name`) Order by column name.
 
 **Sample response**
 
 ```json
 {
-  "data": [
-    {
-      "id": "cbb58c3d-4f84-47c7-a394-b6efd3997c22",
-      "teamId": "f5f787dc-4cee-415c-a266-16fcab6520e5",
-      "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
-      "role": "team-owner",
-      "createdAt": "2025-03-10T18:20:13.333Z",
-      "updatedAt": "2025-03-10T18:20:13.333Z",
-      "user": { "id": "41e2b680-648e-4b09-bcd7-3e2b10c06264", "username": "admin" }
-    }
-  ],
-  "count": 1,
-  "page": 1,
-  "pageSize": 10
+    "data": [
+        {
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "role": "team-owner",
+            "createdAt": "0000-00-00T00:00:00.000Z",
+            "updatedAt": "0000-00-00T00:00:00.000Z",
+            "user": {
+                "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                "username": "admin"
+            }
+        }
+    ],
+    "count": 1,
+    "page": 1,
+    "pageSize": 10
 }
 ```
 
@@ -202,18 +213,27 @@ Add a user to a team.
 **Parameters**
 
 - `userId`: ID of user to be added.
-- `role`: Role user will be added as (`team-member/team-view-only/team-manager`).
+- `role`: Role for user permission `team-member`| `team-view-only` | `team-manager`.
+
+**Request body**
+
+```json
+{
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "role": "team-member"
+}
+```
 
 **Sample response**
 
 ```json
 {
-  "id": "dcf462b4-0eb3-4ad9-8c5d-9b18bc7825e2",
-  "teamId": "f5f787dc-4cee-415c-a266-16fcab6520e5",
-  "userId": "6858ce93-22d9-48e3-8b33-fb355d63b6b4",
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "role": "team-member",
-  "createdAt": "2025-03-10T19:31:21.773Z",
-  "updatedAt": "2025-03-10T19:31:21.773Z"
+  "createdAt": "0000-00-00T00:00:00.000Z",
+  "updatedAt": "0000-00-00T00:00:00.000Z",
 }
 ```
 
@@ -223,20 +243,16 @@ Add a user to a team.
 
 Get a user belonging to a team.
 
-**Parameters**
-
-None
-
 **Sample response**
 
 ```json
 {
-  "id": "a9b1fbbc-ac22-4422-aa74-b2a2751ad87d",
-  "teamId": "ae09865c-ff82-4c43-acba-dd1e6540cda5",
-  "userId": "1a457e1a-121a-11ee-be56-0242ac120002",
-  "role": "team-owner",
-  "createdAt": "2023-04-13T20:22:55.756Z",
-  "updatedAt": null
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "role": "team-owner",
+    "createdAt": "0000-00-00T00:00:00.000Z",
+    "updatedAt": "0000-00-00T00:00:00.000Z"
 }
 ```
 
@@ -248,12 +264,27 @@ Update a user's role on a team.
 
 **Parameters**
 
-- `role`: Role user will be added as (`member` or `view-only`).
+- `role`: Role for user access `member` | `view-only` | `team-manager`.
+
+**Request body**
+
+```json
+{
+  "role":"team-member"
+}
+```
 
 **Sample response**
 
-```text
-ok
+```json
+{
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "role": "team-member",
+    "createdAt": "0000-00-00T00:00:00.000Z",
+    "updatedAt": "0000-00-00T00:00:00.000Z"
+}
 ```
 
 ---
@@ -261,10 +292,6 @@ ok
 ## DELETE /api/teams/:teamId/users/:userId
 
 Remove a user from a team.
-
-**Parameters**
-
-None
 
 **Sample response**
 
@@ -288,43 +315,28 @@ Get all websites that belong to a team.
 **Sample response**
 
 ```json
-[
-  {
-    "id": "40743097-fb48-411c-98bb-efb2aa7d3946",
-    "name": "website",
-    "domain": "website.com",
-    "shareId": "C36MKJqBlRT9UQgq",
-    "resetAt": "2023-10-25T17:29:44.340Z",
-    "userId": "a36560ed-e21c-4ed9-84aa-c86654460cae",
-    "createdAt": "2022-10-07T18:58:52.435Z",
-    "updatedAt": "2022-10-25T17:29:44.410Z",
-    "deletedAt": null,
-    "teamWebsite": [
-      {
-        "id": "40743097-fb48-411c-98bb-efb2aa7d3946",
-        "teamId": "66c8f57c-dec0-46d1-b267-886833d78982",
-        "websiteId": "40723097-fb48-411c-98bb-efb2ca7d3946",
-        "createdAt": "2022-10-15T16:51:44.711Z",
-        "team": {
-          "id": "66c8f87c-dec0-46d1-b267-886833d78982",
-          "name": "Caoboys",
-          "accessCode": "4bwY3JoHUXcKUiMP",
-          "createdAt": "2022-04-03T05:50:28.601Z",
-          "updatedAt": "2022-09-06T17:08:25.585Z",
-          "teamUser": [
-            {
-              "id": "3509ece6-3f7d-4a45-8842-2c070f1138e3",
-              "teamId": "66c8f87c-dec0-46d1-b267-886833d78982",
-              "userId": "a36560ed-e21c-4ed9-84aa-c86654460cae",
-              "role": "team-owner",
-              "createdAt": "2022-04-03T05:50:28.601Z",
-              "updatedAt": null
+{
+    "data": [
+        {
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "name": "Example",
+            "domain": "example.com",
+            "shareId": null,
+            "resetAt": null,
+            "userId": null,
+            "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "createdAt": "0000-00-00T00:00:00.000Z",
+            "updatedAt": "0000-00-00T00:00:00.000Z",
+            "deletedAt": null,
+            "createUser": {
+                "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                "username": "user"
             }
-          ]
         }
-      }
     ],
-    "user": { "id": "a36560ed-e21c-4ed9-84aa-c86654460cae", "username": "admin@website.com" }
-  }
-]
+    "count": 1,
+    "page": 1,
+    "pageSize": 10
+}
 ```

@@ -14,6 +14,7 @@ GET /api/websites/:websiteId/sessions/:sessionId/activity
 GET /api/websites/:websiteId/sessions/:sessionId/properties
 GET /api/websites/:websiteId/session-data/properties
 GET /api/websites/:websiteId/session-data/values
+GET /api/websites/:websiteId/sessions/weekly
 ```
 
 ---
@@ -33,51 +34,31 @@ Gets website session details within a given time range.
 
 **Sample response**
 
-URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/sessions?page=1&startAt=1725865200000&endAt=1725951599999&pageSize=20`
-
 ```json
 {
   "data": [
     {
-      "id": "5a45d799-e6f5-56ac-9893-fde6f769c36a",
-      "websiteId": "86d4095c-a2a8-4fc8-9521-103e858e2b41",
-      "hostname": "umami.is",
-      "browser": "chrome",
-      "os": "Windows 10",
-      "device": "laptop",
-      "screen": "1536x960",
-      "language": "en-US",
-      "country": "US",
-      "subdivision1": "US-CA",
-      "city": "Roseville",
-      "firstAt": "2024-09-09T17:44:35Z",
-      "lastAt": "2024-09-09T17:44:35Z",
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "createdAt": "0000-00-00T00:00:00Z",
+      "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "lastAt": "0000-00-00T00:00:00Z",
+      "screen": "1920x1080",
+      "hostname": "example.com",
       "visits": 1,
-      "views": 1,
-      "createdAt": "2024-09-09T17:44:35Z"
-    },
-    {
-      "id": "753ce23b-0dab-5a33-badc-4d2239528dd9",
-      "websiteId": "86d4095c-a2a8-4fc8-9521-103e858e2b41",
-      "hostname": "umami.is",
-      "browser": "chrome",
-      "os": "Windows 10",
+      "os": "xxxxx",
+      "browser": "xxxxxx",
+      "language": "xx-xx",
+      "region": "xx-xx",
+      "city": "xxxx",
+      "firstAt": "0000-00-00T00:00:00Z",
       "device": "desktop",
-      "screen": "2560x1440",
-      "language": "de-DE",
-      "country": "DE",
-      "subdivision1": "DE-BY",
-      "city": "Munich",
-      "firstAt": "2024-09-09T08:54:18Z",
-      "lastAt": "2024-09-09T17:44:29Z",
-      "visits": 5,
-      "views": 66,
-      "createdAt": "2024-09-09T17:44:29Z"
+      "country": "US",
+      "views": 0
     }
   ],
-  "count": 1000,
-  "page": 1,
-  "pageSize": 20
+  "count": 11,
+  "pageSize": 10,
+  "page": 1
 }
 ```
 
@@ -106,15 +87,23 @@ Gets summarized website session statistics.
 
 **Sample response**
 
-URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/sessions/stats?startAt=1656679719687&endAt=1656766119687`
-
 ```json
 {
-  "pageviews": { "value": 3018 },
-  "visitors": { "value": 847 },
-  "visits": { "value": 984 },
-  "countries": { "value": 537 },
-  "events": { "value": 150492 }
+  "pageviews" : {
+    "value" : 0
+  },
+  "visitors" : {
+    "value" : 11
+  },
+  "visits" : {
+    "value" : 12
+  },
+  "countries" : {
+    "value" : 2
+  },
+  "events" : {
+    "value" : 12
+  }
 }
 ```
 
@@ -140,8 +129,8 @@ URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b
 
 ```json
 {
-  "id": "a35fe227-2fe9-5147-85a0-15f0fd48faed",
-  "websiteId": "86d4095c-a2a8-4fc8-9521-103e858e2b41",
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "hostname": "umami.is",
   "browser": "ios",
   "os": "iOS",
@@ -173,29 +162,27 @@ Gets session activity for a individual session
 
 **Sample response**
 
-URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/sessions/a35fe227-2fe9-5147-85a0-15f0fd48faed/activity?startAt=1725905521000&endAt=1725905528000`
-
 ```json
 [
   {
-    "createdAt": "2024-09-09T18:12:08Z",
-    "urlPath": "/websites/fd4bdd56-2135-4c42-9518-55e72669f23c",
-    "urlQuery": "",
-    "referrerDomain": "",
-    "eventId": "a154aebc-10cf-4a26-8187-c541ef0d2929",
-    "eventType": 1,
-    "eventName": "",
-    "visitId": "609a5116-b139-5c6d-9293-fbea9b8a3b61"
+    "eventType" : 1,
+    "urlQuery" : "",
+    "urlPath" : "/",
+    "eventName" : "",
+    "createdAt" : "0000-00-00T00:00:00Z",
+    "referrerDomain" : "",
+    "eventId" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "visitId" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   },
   {
-    "createdAt": "2024-09-09T18:12:01Z",
-    "urlPath": "/settings/websites",
-    "urlQuery": "",
-    "referrerDomain": "",
-    "eventId": "92246b7b-e3e2-4c9d-b61e-fab69d993ad7",
-    "eventType": 1,
-    "eventName": "",
-    "visitId": "609a5116-b139-5c6d-9293-fbea9b8a3b61"
+    "eventType" : 1,
+    "urlQuery" : "",
+    "urlPath" : "/",
+    "eventName" : "",
+    "createdAt" : "0000-00-00T00:00:00Z",
+    "referrerDomain" : "",
+    "eventId" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "visitId" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   }
 ]
 ```
@@ -206,10 +193,6 @@ URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b
 
 Gets session properties for a individual session
 
-**Parameters**
-
-None
-
 **Sample response**
 
 URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/sessions/a35fe227-2fe9-5147-85a0-15f0fd48faed/properties`
@@ -217,24 +200,24 @@ URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b
 ```json
 [
   {
-    "websiteId": "1ccddccf-7d34-432b-84e6-e46903b2acf3",
-    "sessionId": "a35fe227-2fe9-5147-85a0-15f0fd48faed",
+    "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "sessionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "dataKey": "email",
     "dataType": 1,
-    "stringValue": "johndoe@gmail.com",
+    "stringValue": "xxxx@xxxx.xxx",
     "numberValue": null,
     "dateValue": null,
-    "createdAt": "2024-09-09T18:12:01Z"
+    "createdAt": "0000-00-00T00:00:00Z"
   },
   {
-    "websiteId": "1ccddccf-7d34-432b-84e6-e46903b2acf3",
-    "sessionId": "a35fe227-2fe9-5147-85a0-15f0fd48faed",
+    "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "sessionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "dataKey": "name",
     "dataType": 1,
-    "stringValue": "John Doe",
+    "stringValue": "xxxx xxxxx",
     "numberValue": null,
     "dateValue": null,
-    "createdAt": "2024-09-09T18:12:01Z"
+    "createdAt": "0000-00-00T00:00:00Z"
   }
 ]
 ```
@@ -249,8 +232,6 @@ Gets session data counts by property name
 - `endAt`: Timestamp (in ms) of end date.
 
 **Sample response**
-
-URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/session-data/properties?startAt=1717916400000&endAt=1725692399999`
 
 ```json
 [
@@ -287,11 +268,35 @@ Gets session data counts for a given property
 
 **Sample response**
 
-URL: `https://umami.mydomain.com/api/websites/86d4095c-a2a8-4fc8-9521-103e858e2b41/session-data/values?startAt=1717916400000&endAt=1725692399999&propertyName=region`
-
 ```json
 [
   { "value": "EU", "total": 609 },
   { "value": "US", "total": 431 }
+]
+```
+
+---
+
+## GET /api/websites/:websiteId/sessions/weekly
+
+Get collected count of sessions by hour of weekday.
+
+**Parameters**
+
+- `startAt`: (number) Timestamp (in ms) of start date.
+- `endAt`: (number) Timestamp (in ms) of end date.
+- `timezone`: (string) Timezone.
+
+**Sample response**
+
+```json
+[
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 ```

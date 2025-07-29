@@ -188,6 +188,10 @@
               "url": "/docs/api/authentication"
             },
             {
+              "label": "Me",
+              "url": "/docs/api/me-api"
+            },
+            {
               "label": "Sending stats",
               "url": "/docs/api/sending-stats"
             }
@@ -219,6 +223,14 @@
             {
               "label": "Website stats",
               "url": "/docs/api/website-stats-api"
+            },
+            {
+              "label": "Realtime",
+              "url": "/docs/api/realtime-api"
+            },
+            {
+              "label": "Reports",
+              "url": "/docs/api/reports-api"
             }
           ]
         },
@@ -309,6 +321,10 @@
             {
               "label": "Overview",
               "url": "/docs/guides/hosting"
+            },
+            {
+              "label": "Running on Sevalla",
+              "url": "/docs/guides/running-on-sevalla"
             },
             {
               "label": "Running on Nodion",
