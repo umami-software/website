@@ -159,29 +159,20 @@ Track your campaigns through UTM parameters.
 **Sample response**
 
 ```json
-{
-    "utm_source" : {
-        "test" : 1
+[
+    {
+        "url_query": "ref%3Dumami-email-header&sourcegmail&ust",
+        "num": 1
     },
-    "utm_content" : {
-        "email-newsletter-1" : 1124
+    {
+        "url_query": "utm_campaign=xxxxxxx&utm_medium=email&utm_source=xxxxxxx",
+        "num": 1
     },
-    "utm_term" : {
-        "software" : 4
+    {
+        "url_query": "utm_source=xxxxxx&utm_medium=outbound-email&utm_campaign=website&utm_content=website-email",
+        "num": 6
     },
-    "utm_medium" : {
-        "test" : 1
-    },
-    "utm_campaign" : {
-        "test" : 1
-    },
-    "utm_agid" : {
-        "12345" : 5
-    },
-    "utm_banner" : {
-        "12345" : 1
-    }
-}
+]
 ```
 
 ---
