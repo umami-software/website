@@ -323,6 +323,10 @@
               "url": "/docs/guides/hosting"
             },
             {
+              "label": "Running on Sevalla",
+              "url": "/docs/guides/running-on-sevalla"
+            },
+            {
               "label": "Running on Nodion",
               "url": "/docs/guides/running-on-nodion"
             },
