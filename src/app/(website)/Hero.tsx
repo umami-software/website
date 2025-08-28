@@ -8,7 +8,7 @@ import Companies from './Companies';
 import styles from './Hero.module.css';
 
 export default function Hero() {
-  const query = useQueryString({ ref: 'umami-hero' });
+  const query = useQueryString({ ref: 'oravo-hero' });
 
   return (
     <Column gap="6" className={styles.hero} alignItems="center">
@@ -17,7 +17,7 @@ export default function Hero() {
         <br /> for effortless insights.
       </Heading>
       <Text color="muted" size="4" as="p">
-        Umami makes it easy to collect, analyze, and understand your website data &mdash; so you can
+        Oravo makes it easy to collect, analyze, and understand your website data &mdash; so you can
         focus on <strong>growth</strong>
       </Text>
       <Row justifyContent="center" gap="3" style={{ zIndex: 1 }}>
@@ -28,7 +28,7 @@ export default function Hero() {
         </Button>
         <Button size="lg" asChild>
           <a
-            href="https://eu.umami.is/share/LGazGOecbDtaIwDr/umami.is"
+            href="https://analytics.imoogleai.xyz/share/demo"
             data-umami-event="live-demo-button"
             target="_blank"
             rel="noreferrer"

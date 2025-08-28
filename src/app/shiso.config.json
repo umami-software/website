@@ -1,12 +1,12 @@
 {
   "contentDir": "./src/content",
   "docs": {
-    "title": "Docs - Umami",
+    "title": "Docs - Oravo",
     "top": "100px",
     "tabs": [
       {
         "id": "docs",
-        "label": "Umami",
+        "label": "Oravo",
         "url": "/docs"
       },
       {

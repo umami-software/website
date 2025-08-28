@@ -15,18 +15,6 @@ const mobileMenuItems = [
     value: '/features',
   },
   {
-    label: 'Pricing',
-    value: '/pricing',
-  },
-  {
-    label: 'Docs',
-    value: '/docs',
-  },
-  {
-    label: 'Blog',
-    value: '/blog',
-  },
-  {
     label: 'Community',
     value: '/community',
   },
@@ -56,18 +44,13 @@ const NavLinks = () => {
   return (
     <Row className={styles.links} alignItems="center" gap="6">
       <Link href="/features">Features</Link>
-      <Link href="/blog">Blog</Link>
-      <Link href="/docs" prefetch={false}>
-        Docs
-      </Link>
-      <Link href="/pricing">Pricing</Link>
       <Link href="/contact">Contact</Link>
     </Row>
   );
 };
 
 const ActionLinks = () => {
-  const query = useQueryString({ ref: 'umami-nav-header' });
+  const query = useQueryString({ ref: 'oravo-nav-header' });
 
   return (
     <Row className={styles.actions} alignItems="center" gap="2">
@@ -82,13 +65,13 @@ const ActionLinks = () => {
         </Link>
       </Button>
       <Button className={styles.login} variant="quiet" asChild>
-        <Link href={`https://cloud.umami.is/login${query}`} data-umami-event="login-button-header">
+        <Link href={`https://analytics.imoogleai.xyz/login${query}`} data-umami-event="login-button-header">
           Log in
         </Link>
       </Button>
       <Button className={styles.signup} variant="primary" asChild>
         <Link
-          href={`https://cloud.umami.is/signup${query}`}
+          href={`https://analytics.imoogleai.xyz/signup${query}`}
           data-umami-event="signup-button-header"
         >
           Sign up

@@ -5,7 +5,7 @@ import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
 
 export default function GetStartedBanner() {
-  const query = useQueryString({ ref: 'umami-get-started-banner' });
+  const query = useQueryString({ ref: 'oravo-get-started-banner' });
 
   return (
     <div className={styles.banner}>
