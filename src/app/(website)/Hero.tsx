@@ -17,19 +17,18 @@ export default function Hero() {
         <br /> for effortless insights.
       </Heading>
       <Text color="muted" size="4" as="p">
-        Oravo makes it easy to collect, analyze, and understand your website data &mdash; so you can
-        focus on <strong>growth</strong>
+        Oravo makes it easy to collect, analyze, and understand your website data &mdash; completely free. Focus on <strong>growth</strong>, not costs.
       </Text>
       <Row justifyContent="center" gap="3" style={{ zIndex: 1 }} className={styles.buttonRow}>
         <Button variant="primary" size="lg" asChild>
-          <Link href={`${CLOUD_URL}/signup${query}`} data-umami-event="get-started-button">
+          <Link href={`${CLOUD_URL}/signup${query}`} data-oravo-event="get-started-button">
             Get started
           </Link>
         </Button>
         <Button size="lg" asChild>
           <a
             href="https://analytics.imoogleai.xyz/share/demo"
-            data-umami-event="live-demo-button"
+            data-oravo-event="live-demo-button"
             target="_blank"
             rel="noreferrer"
           >
