@@ -25,7 +25,7 @@ export default function Marketers() {
               critical data you need to make decisions is a click away.
             </p>
             <LinkButton href={`${CLOUD_URL}/signup${query}`} size="lg" variant="primary">
-              Start free trial
+              Get started
             </LinkButton>
           </TextBlock>
           <ContentImage src="/images/marketers.jpg" alt="" className={styles.image} />

@@ -15,7 +15,6 @@ const data = [
   {
     title: 'Resources',
     items: [
-      { text: 'Community', href: '/community' },
       { text: 'Support', href: '/support' },
     ],
   },
@@ -35,7 +34,7 @@ export default function Footer() {
     <Row as="footer" backgroundColor="2" paddingY="8">
       <Container>
         <Grid
-          columns={{ xs: '1fr', md: '1fr minmax(auto, 200px) minmax(auto, 200px) auto' }}
+          columns={{ xs: '1fr', sm: 'repeat(2, 1fr)', md: '1fr minmax(auto, 200px) minmax(auto, 200px) auto' }}
           gap="6"
           marginBottom="6"
         >
@@ -57,9 +56,12 @@ export default function Footer() {
             </Column>
           ))}
         </Grid>
-        <Row justifyContent="space-between">
+        <Row justifyContent="space-between" style={{ flexWrap: 'wrap', gap: '1rem' }}>
           <SocialMedia />
-          <Text size="1">&copy; {new Date().getFullYear()} Oravo Analytics, Inc.</Text>
+          <Column alignItems={{ xs: 'center', md: 'flex-end' }} style={{ textAlign: 'center' }}>
+            <Text size="1">&copy; {new Date().getFullYear()} Oravo Analytics, Inc.</Text>
+            <Text size="1" style={{ marginTop: '0.25rem' }}>by Imoogle Technology</Text>
+          </Column>
         </Row>
       </Container>
     </Row>

@@ -9,18 +9,10 @@ export default function ContactPage() {
   return (
     <>
       <PageHeader title="Contact" description="We would love to hear from you!" />
-      <Row justifyContent="center">
-        <Grid columns={{ xs: '1fr', md: '1fr 1fr' }} maxWidth="800px">
+      <Row justifyContent="center" style={{ padding: '0 20px' }}>
+        <Grid columns={{ xs: '1fr', md: '1fr 1fr' }} maxWidth="800px" gap="4">
           <ContactForm />
           <Column alignItems="center" gap="12" style={{ marginTop: '3rem' }}>
-            <Column alignItems="center" gap="6">
-              <h3>Interested in learning more?</h3>
-              <Button variant="primary" asChild>
-                <Link href="https://calendly.com/mikecao/umami-demo" target="_blank">
-                  Book a demo meeting
-                </Link>
-              </Button>
-            </Column>
             <Column alignItems="center" gap="6">
               <h3>Connect with us</h3>
               <SocialMedia size="lg" />

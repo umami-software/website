@@ -1,5 +1,25 @@
 .hero {
   margin-top: 100px;
+  padding: 0 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero .buttonRow {
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .image {
@@ -9,6 +29,8 @@
   transform-style: preserve-3d;
   text-align: center;
   padding-top: 40px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .image img {
@@ -21,4 +43,42 @@
   transform-origin: center;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .hero {
+    margin-top: 80px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .hero .buttonRow {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .hero .buttonRow > * {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+  
+  .image {
+    padding-top: 20px;
+    margin: 20px auto 0;
+  }
+  
+  .image img {
+    transform: rotateX(25deg) rotateY(-15deg) rotateZ(3deg) translateZ(60px);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero .buttonRow {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
 }

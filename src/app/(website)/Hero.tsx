@@ -20,7 +20,7 @@ export default function Hero() {
         Oravo makes it easy to collect, analyze, and understand your website data &mdash; so you can
         focus on <strong>growth</strong>
       </Text>
-      <Row justifyContent="center" gap="3" style={{ zIndex: 1 }}>
+      <Row justifyContent="center" gap="3" style={{ zIndex: 1 }} className={styles.buttonRow}>
         <Button variant="primary" size="lg" asChild>
           <Link href={`${CLOUD_URL}/signup${query}`} data-umami-event="get-started-button">
             Get started

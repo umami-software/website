@@ -10,6 +10,18 @@
   gap: 20px;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+  
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
 .step {
   display: flex;
   flex-direction: column;

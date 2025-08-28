@@ -24,8 +24,14 @@
 }
 
 .links {
-  color: var(--font-color);
+  color: #000000;
   margin: 0 auto;
+}
+
+.links a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .links a:hover {

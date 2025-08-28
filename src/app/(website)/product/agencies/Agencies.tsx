@@ -24,7 +24,7 @@ export default function Agencies() {
               dashboard.
             </p>
             <LinkButton href={`${CLOUD_URL}/signup${query}`} size="lg" variant="primary">
-              Start free trial
+              Get started
             </LinkButton>
           </TextBlock>
           <ContentImage src="/images/agencies.jpg" alt="" />

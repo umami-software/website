@@ -13,7 +13,7 @@ export default function GetStartedBanner() {
       <div className={styles.buttons}>
         <Button variant="primary" size="lg" asChild>
           <a href={`${CLOUD_URL}/signup${query}`} data-umami-event="get-started-banner-button">
-            Try 14-day free trial
+            Get started
           </a>
         </Button>
       </div>

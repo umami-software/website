@@ -26,8 +26,19 @@
   transition: all ease-in-out 500ms;
 }
 
+@media (max-width: 768px) {
+  .item {
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 576px) {
   .block {
     display: none;
+  }
+  
+  .item {
+    padding-left: 10px;
   }
 }

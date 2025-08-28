@@ -1,22 +1,16 @@
 'use client';
-import { Button, Text, Icon, Row, Container } from '@umami/react-zen';
+import { Button, Row, Container } from '@umami/react-zen';
 import Link from 'next/link';
 import CompanyLogo from '@/components/CompanyLogo';
 import MobileMenu from '@/components/MobileMenu';
 import useQueryString from '@/components/hooks/useQueryString';
-import { GITHUB_STARS, GITHUB_URL } from '@/lib/constants';
 import useScroll from '@/components/hooks/useScroll';
-import { Github } from 'src/components/svg';
 import styles from './Header.module.css';
 
 const mobileMenuItems = [
   {
     label: 'Features',
     value: '/features',
-  },
-  {
-    label: 'Community',
-    value: '/community',
   },
   {
     label: 'Contact',
@@ -54,16 +48,6 @@ const ActionLinks = () => {
 
   return (
     <Row className={styles.actions} alignItems="center" gap="2">
-      <Button variant="quiet" asChild>
-        <Link className={styles.github} href={GITHUB_URL} target="_blank">
-          <Row alignItems="center" gap="2">
-            <Icon size="sm">
-              <Github />
-            </Icon>
-            <Text weight="bold">{GITHUB_STARS}</Text>
-          </Row>
-        </Link>
-      </Button>
       <Button className={styles.login} variant="quiet" asChild>
         <Link href={`https://analytics.imoogleai.xyz/login${query}`} data-umami-event="login-button-header">
           Log in
