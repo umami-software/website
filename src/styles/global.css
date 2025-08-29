@@ -41,3 +41,7 @@ body {
   margin: 4rem auto;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
 }
+
+.hero h1 {
+    font-size: 2rem; /* Larger on tablets+ */
+  }
