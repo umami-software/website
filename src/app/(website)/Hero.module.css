@@ -22,6 +22,43 @@
   max-width: 400px;
 }
 
+.heroHeading {
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  max-width: 90% !important;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .heroHeading {
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+    padding: 0 1rem;
+    max-width: 95% !important;
+  }
+  
+  .buttonRow {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .buttonRow button,
+  .buttonRow a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroHeading {
+    font-size: 1.25rem !important;
+    line-height: 1.2 !important;
+    padding: 0 0.5rem;
+  }
+}
+
 .image {
   max-width: 800px;
   margin: 0 auto;
