@@ -27,7 +27,7 @@ export default function Hero() {
         </Button>
         <Button size="lg" asChild>
           <a
-            href="https://analytics.imoogleai.xyz/share/demo"
+            href="https://analytics.imoogleai.xyz/share/QAJ0QBCu6mQkMuQ1/quizstack.qzz.io"
             data-oravo-event="live-demo-button"
             target="_blank"
             rel="noreferrer"
