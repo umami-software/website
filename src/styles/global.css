@@ -26,6 +26,7 @@ body {
   h1, h2, h3, h4, h5, h6 {
     word-wrap: break-word;
     hyphens: auto;
+    font-size: 1.5rem;
   }
   
   /* Improve tap targets for mobile */
@@ -42,6 +43,3 @@ body {
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
 }
 
-.hero h1 {
-    font-size: 2rem; /* Larger on tablets+ */
-  }
