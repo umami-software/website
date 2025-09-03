@@ -8,10 +8,11 @@ export default function AboutPage() {
       <PageHeader title="Company" />
       <Box style={{ margin: 'auto', width: 500 }}>
         <p>
-          Umami was founded with the belief that users should be empowered by the software they use.
+          Oravo Analytics was founded on the belief that software should be effortless, 
+          empowering users without the hassle of signups complexity.
         </p>
         <p>
-          Our mission is to bring high quality, open-source solutions to as many people as possible.
+          Our mission is to bring high-quality, free solutions to as many people as possible.
         </p>
       </Box>
     </>

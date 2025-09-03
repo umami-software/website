@@ -1,6 +1,6 @@
 .items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 60px 40px;
 }
 
@@ -9,8 +9,23 @@
   margin-bottom: 30px;
 }
 
+@media (max-width: 768px) {
+  .items {
+    grid-template-columns: 1fr;
+    gap: 40px 20px;
+    padding: 0 20px;
+  }
+  
+  .image {
+    height: 150px;
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 576px) {
   .items {
     grid-template-columns: 1fr;
+    gap: 30px 15px;
+    padding: 0 15px;
   }
 }

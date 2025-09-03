@@ -9,18 +9,12 @@ const data = [
     title: 'Product',
     items: [
       { text: 'Features', href: '/features' },
-      { text: 'Pricing', href: '/pricing' },
-      { text: 'Cloud', href: 'https://cloud.umami.is/?ref=umami-nav-footer' },
+      { text: 'Analytics', href: 'https://analytics.imoogleai.xyz/?ref=oravo-nav-footer' },
     ],
   },
   {
     title: 'Resources',
     items: [
-      { text: 'Documentation', href: '/docs' },
-      { text: 'Guides', href: '/docs/guides' },
-      { text: 'API Reference', href: '/docs/api' },
-      { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
-      { text: 'Community', href: '/community' },
       { text: 'Support', href: '/support' },
     ],
   },
@@ -28,11 +22,9 @@ const data = [
     title: 'Company',
     items: [
       { text: 'About', href: '/about' },
-      { text: 'Blog', href: '/blog' },
       { text: 'Contact', href: '/contact' },
       { text: 'Privacy', href: '/privacy' },
       { text: 'Terms', href: '/terms' },
-      { text: 'DPA', href: '/umami-dpa.pdf', target: '_blank' },
     ],
   },
 ];
@@ -42,7 +34,7 @@ export default function Footer() {
     <Row as="footer" backgroundColor="2" paddingY="8">
       <Container>
         <Grid
-          columns={{ xs: '1fr', md: '1fr minmax(auto, 200px) minmax(auto, 200px) auto' }}
+          columns={{ xs: '1fr', sm: 'repeat(2, 1fr)', md: '1fr minmax(auto, 200px) minmax(auto, 200px) auto' }}
           gap="6"
           marginBottom="6"
         >
@@ -64,9 +56,12 @@ export default function Footer() {
             </Column>
           ))}
         </Grid>
-        <Row justifyContent="space-between">
+        <Row justifyContent="space-between" style={{ flexWrap: 'wrap', gap: '1rem' }}>
           <SocialMedia />
-          <Text size="1">&copy; {new Date().getFullYear()} Umami Software, Inc.</Text>
+          <Column alignItems={{ xs: 'center', md: 'flex-end' }} style={{ textAlign: 'center' }}>
+            <Text size="1">&copy; {new Date().getFullYear()} Oravo Analytics, Inc.</Text>
+            <Text size="1" style={{ marginTop: '0.25rem' }}>by Imoogle Technology</Text>
+          </Column>
         </Row>
       </Container>
     </Row>

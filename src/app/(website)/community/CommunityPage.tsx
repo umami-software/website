@@ -56,7 +56,7 @@ export default function CommunityPage() {
               <Heading>{name}</Heading>
             </Row>
             <Text>{description}</Text>
-            <LinkButton href={url} target="_blank" data-umami-event={`community-${name}`}>
+            <LinkButton href={url} target="_blank" data-oravo-event={`community-${name}`}>
               Explore
             </LinkButton>
           </Column>

@@ -43,7 +43,7 @@
 }
 
 .image svg:nth-child(2) {
-  fill: #a8ccf7;
+  fill: #000000;
   margin: 10px 0 0 10px;
   position: absolute;
   z-index: 0;
