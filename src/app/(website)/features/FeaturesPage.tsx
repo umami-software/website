@@ -159,7 +159,7 @@ const items = [
       'Umami comes with out of the box reporting that enables you to gain deep insights from all your website data.',
     items: [
       {
-        title: 'Insights',
+        title: 'Breakdown',
         description: ['Dive deeper into your data by using segments and filters.'],
         icon: <Lightbulb />,
       },

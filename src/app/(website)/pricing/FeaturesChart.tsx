@@ -38,7 +38,7 @@ const featuresChart = [
   {
     label: 'Reports',
     items: [
-      ['Insights', true, true, true],
+      ['Breakdown', true, true, true],
       ['Funnel Analysis', true, true, true],
       ['User Retention', true, true, true],
       ['UTM parameters', true, true, true],

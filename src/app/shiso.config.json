@@ -15,11 +15,6 @@
         "url": "/docs/api"
       },
       {
-        "id": "reports",
-        "label": "Reports",
-        "url": "/docs/reports"
-      },
-      {
         "id": "guides",
         "label": "Guides",
         "url": "/docs/guides"
@@ -99,6 +94,47 @@
             {
               "label": "Tracker functions",
               "url": "/docs/tracker-functions"
+            }
+          ]
+        },
+        {
+          "section": "Reports",
+          "pages": [
+            {
+              "label": "Overview",
+              "url": "/docs/reports"
+            },
+            {
+              "label": "Breakdown",
+              "url": "/docs/report-breakdown"
+            },
+            {
+              "label": "Funnel",
+              "url": "/docs/report-funnel"
+            },
+            {
+              "label": "Retention",
+              "url": "/docs/report-retention"
+            },
+            {
+              "label": "UTM",
+              "url": "/docs/report-utm"
+            },
+            {
+              "label": "Goals",
+              "url": "/docs/report-goals"
+            },
+            {
+              "label": "Journey",
+              "url": "/docs/report-journey"
+            },
+            {
+              "label": "Revenue",
+              "url": "/docs/report-revenue"
+            },
+            {
+              "label": "Attribution",
+              "url": "/docs/report-attribution"
             }
           ]
         },
@@ -244,54 +280,6 @@
             {
               "label": "Node client",
               "url": "/docs/api/node-client"
-            }
-          ]
-        }
-      ],
-      "reports": [
-        {
-          "section": "Getting started",
-          "pages": [
-            {
-              "label": "Overview",
-              "url": "/docs/reports"
-            }
-          ]
-        },
-        {
-          "section": "Reports",
-          "pages": [
-            {
-              "label": "Insights",
-              "url": "/docs/reports/report-insights"
-            },
-            {
-              "label": "Funnel",
-              "url": "/docs/reports/report-funnel"
-            },
-            {
-              "label": "Retention",
-              "url": "/docs/reports/report-retention"
-            },
-            {
-              "label": "UTM",
-              "url": "/docs/reports/report-utm"
-            },
-            {
-              "label": "Goals",
-              "url": "/docs/reports/report-goals"
-            },
-            {
-              "label": "Journey",
-              "url": "/docs/reports/report-journey"
-            },
-            {
-              "label": "Revenue",
-              "url": "/docs/reports/report-revenue"
-            },
-            {
-              "label": "Attribution",
-              "url": "/docs/reports/report-attribution"
             }
           ]
         }
@@ -601,6 +589,191 @@
             {
               "label": "Running on Forge",
               "url": "/docs/v1/running-on-forge"
+            }
+          ]
+        }
+      ],
+      "v2": [
+        {
+          "section": "Getting started",
+          "pages": [
+            {
+              "label": "Overview",
+              "url": "/docs"
+            },
+            {
+              "label": "Installation",
+              "url": "/docs/install"
+            },
+            {
+              "label": "Updates",
+              "url": "/docs/updates"
+            }
+          ]
+        },
+        {
+          "section": "Basics",
+          "pages": [
+            {
+              "label": "Login",
+              "url": "/docs/login"
+            },
+            {
+              "label": "Add a website",
+              "url": "/docs/add-a-website"
+            },
+            {
+              "label": "Collect data",
+              "url": "/docs/collect-data"
+            },
+            {
+              "label": "Enable share URL",
+              "url": "/docs/enable-share-url"
+            },
+            {
+              "label": "Track events",
+              "url": "/docs/track-events"
+            },
+            {
+              "label": "Sessions",
+              "url": "/docs/sessions"
+            },
+            {
+              "label": "Compare",
+              "url": "/docs/compare"
+            },
+            {
+              "label": "Distinct IDs",
+              "url": "/docs/distinct-ids"
+            },
+            {
+              "label": "Tags",
+              "url": "/docs/tags"
+            },
+            {
+              "label": "Teams",
+              "url": "/docs/teams"
+            },
+            {
+              "label": "Add a user",
+              "url": "/docs/add-a-user"
+            },
+            {
+              "label": "Tracker functions",
+              "url": "/docs/tracker-functions"
+            }
+          ]
+        },
+        {
+          "section": "Reports",
+          "pages": [
+            {
+              "label": "Overview",
+              "url": "/docs/reports"
+            },
+            {
+              "label": "Breakdown",
+              "url": "/docs/report-breakdown"
+            },
+            {
+              "label": "Funnel",
+              "url": "/docs/report-funnel"
+            },
+            {
+              "label": "Retention",
+              "url": "/docs/report-retention"
+            },
+            {
+              "label": "UTM",
+              "url": "/docs/report-utm"
+            },
+            {
+              "label": "Goals",
+              "url": "/docs/report-goals"
+            },
+            {
+              "label": "Journey",
+              "url": "/docs/report-journey"
+            },
+            {
+              "label": "Revenue",
+              "url": "/docs/report-revenue"
+            },
+            {
+              "label": "Attribution",
+              "url": "/docs/report-attribution"
+            }
+          ]
+        },
+        {
+          "section": "Configuration",
+          "pages": [
+            {
+              "label": "Tracker configuration",
+              "url": "/docs/tracker-configuration"
+            },
+            {
+              "label": "Environment variables",
+              "url": "/docs/environment-variables"
+            },
+            {
+              "label": "Enable Redis",
+              "url": "/docs/enable-redis"
+            }
+          ]
+        },
+        {
+          "section": "How-to",
+          "pages": [
+            {
+              "label": "Exclude my own visits",
+              "url": "/docs/exclude-my-own-visits"
+            },
+            {
+              "label": "Bypass ad blockers",
+              "url": "/docs/bypass-ad-blockers"
+            },
+            {
+              "label": "Track outbound links",
+              "url": "/docs/track-outbound-links"
+            },
+            {
+              "label": "Use Google Tag Manager",
+              "url": "/docs/google-tag-manager"
+            },
+            {
+              "label": "Enable Cloudflare headers",
+              "url": "/docs/enable-cloudflare-headers"
+            }
+          ]
+        },
+        {
+          "section": "Reference",
+          "pages": [
+            {
+              "label": "Metric definitions",
+              "url": "/docs/metric-definitions"
+            },
+            {
+              "label": "Integrations",
+              "url": "/docs/integrations"
+            },
+            {
+              "label": "Migrating v1 to v2",
+              "url": "/docs/migrate-v1-v2"
+            }
+          ]
+        },
+        {
+          "section": "Contributing",
+          "pages": [
+            {
+              "label": "Code of conduct",
+              "url": "/docs/code-of-conduct"
+            },
+            {
+              "label": "Languages",
+              "url": "/docs/languages"
             }
           ]
         }

@@ -70,10 +70,12 @@ function beforeSendHandler(type, payload) {
 Then pass the name of the function using the `data-before-send` attribute.
 
 ```html
-<script defer
+<script
+  defer
   src="/script.js"
   data-website-id="7801d46c-afd2-424c-8680-4ea713b2002a"
-  data-before-send="beforeSendHandler"></script>
+  data-before-send="beforeSendHandler"
+></script>
 ```
 
 ## Events chart filtering
@@ -93,32 +95,31 @@ Some alternatives you can use:
 `https://www.google.com/s2/favicons?domain={{domain}}`
 `https://logo.clearbit.com/{{domain}}`
 
-
 # Migrations
 
 This release includes some database migrations that add new columns for handling UTM parameters. The migrations will
 automatically run during the build process.
 
-The migrations will only apply the new schema but not do any migration of old data.  The reason for this is we didn't
+The migrations will only apply the new schema but not do any migration of old data. The reason for this is we didn't
 want to hang up the build process for users with lots of data. Instead we will be providing scripts that you can run to migrate your
 data separately.
 
 To migrate your data for this release, use the SQL for your database from [here](https://raw.githubusercontent.com/umami-software/umami/master/scripts/data-migrations/convert-utm-clid-columns.sql)
 
-
 # Fixes
+
 - Empty event search [#3329](https://github.com/umami-software/umami/issues/3329)
 - Realtime activity details not listed from newest to oldest [#3330](https://github.com/umami-software/umami/issues/3330)
 - POST /api/auth/very Method not allowed | Outdated documentation? [#3339](https://github.com/umami-software/umami/issues/3339)
-- Null region breaks Insights Report [#3344](https://github.com/umami-software/umami/issues/3344)
+- Null region breaks Breakdown Report [#3344](https://github.com/umami-software/umami/issues/3344)
 - Docker middleware [#3357](https://github.com/umami-software/umami/issues/3357)
 - CORS errors in Docker [#3307](https://github.com/umami-software/umami/issues/3307)
 - API requests are ignored if User-Agent is empty [#3337](https://github.com/umami-software/umami/issues/3337)
 - Referrer data displayed in every table [#3284](https://github.com/umami-software/umami/issues/3284)
 - Realtime View Graph and Activity are not in sync [#3244](https://github.com/umami-software/umami/issues/3244)
 
-
 # Updates
+
 - Upgraded Next to `15.3.1`
 - Upgraded Prisma to `6.7.0`
 

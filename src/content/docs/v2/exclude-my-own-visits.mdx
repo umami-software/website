@@ -1,0 +1,23 @@
+---
+title: Exclude my own visits
+---
+
+You want to visit your own website, but you don't want your visits to appear in
+your stats. To accomplish this, you need to add a setting to your browser.
+
+Bring up the developer console in your browser: `Settings -> More tools -> Developer tools`
+
+In the console, enter the following code and hit `Enter`:
+
+```javascript
+localStorage.setItem('umami.disabled', 1);
+```
+
+This setting applies **per website**, so you will need to do this for each website
+you want to be excluded from.
+
+To remove the setting, enter the following code and hit `Enter`:
+
+```javascript
+localStorage.removeItem('umami.disabled');
+```

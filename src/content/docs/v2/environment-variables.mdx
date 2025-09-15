@@ -1,0 +1,232 @@
+---
+title: Environment variables
+---
+
+You can configure Umami with the use of environment variables. They go into the same `.env` file as your `DATABASE_URL`.
+
+---
+
+## Runtime variables
+
+Runtime variables are recognized when Umami is running. You can set your environment variables prior to starting the application.
+
+### APP_SECRET
+
+A unique value for your installation.
+
+```
+APP_SECRET = "random string"
+```
+
+
+### CLIENT_IP_HEADER
+
+HTTP header to check for the client's IP address. This is useful when you're
+behind a proxy that uses non-standard headers.
+
+```
+CLIENT_IP_HEADER = "header name"
+```
+
+### CLOUD_MODE
+
+Disables `users`, `teams`, and `websites` settings page.
+
+```
+CLOUD_MODE = 1
+```
+
+### COLLECT_API_ENDPOINT
+
+Allows you to send metrics to a location different than the default `/api/send`. This is to help you avoid some [ad blockers](/docs/bypass-ad-blockers).
+
+```
+COLLECT_API_ENDPOINT = "/my-custom-route"
+```
+
+### CORS_MAX_AGE
+
+How many seconds a CORS preflight should last. Default is 24 hours.
+
+```
+CORS_MAX_AGE = 86400
+```
+
+### DATABASE_URL
+
+```
+DATABASE_URL = "connection string"
+```
+
+Connection string for your database. This is the only required variable.
+
+### DEBUG
+
+Console logging for specific areas of the application. Values include `umami:auth`, `umami:clickhouse`, `umami:kafka`, `umami:middleware`, and `umami:prisma`.
+
+```
+DEBUG = "umami:*"
+```
+
+### DISABLE_BOT_CHECK
+
+By default bots are excluded from statistics. This disables checking for bots.
+
+```
+DISABLE_BOT_CHECK = 1
+```
+
+### DISABLE_LOGIN
+
+Disables the login page for the application.
+
+```
+DISABLE_LOGIN = 1
+```
+
+### DISABLE_UPDATES
+
+Disables the check for new versions of Umami.
+
+```
+DISABLE_UPDATES = 1
+```
+
+### DISABLE_TELEMETRY
+
+Umami collects completely anonymous telemetry data in order help improve the application. You can choose to disable this if you don't want to participate.
+
+```
+DISABLE_TELEMETRY = 1
+```
+
+### ENABLE_TEST_CONSOLE
+
+Enables the internal test page, `{host}/console`. Admin access is required. Users can manually fire pageviews and events to their websites.
+
+```
+ENABLE_TEST_CONSOLE = 1
+```
+
+### FAVICON_URL
+
+The URL of the service for displaying website icons.
+
+```
+FAVICON_URL = "service URL"
+```
+
+The default is `icons.duckduckgo.com`:
+
+- https://icons.duckduckgo.com/ip3/{{domain}}.ico
+
+Some alternatives you can use:
+
+- https://www.google.com/s2/favicons?domain={{domain}}
+- https://logo.clearbit.com/{{domain}}
+
+### HOSTNAME / PORT
+
+If you are running on an environment which requires you to bind to a specific hostname or port, such as Heroku, you can add
+these variables and start your app with `npm run start-env` instead of `npm start`.
+
+```
+HOSTNAME = "my.hostname.com"
+PORT = 3000
+```
+
+### IGNORE_IP
+
+You can provide a comma-delimited list of IP addresses and ranges to exclude from data collection.
+
+```
+IGNORE_IP = "IP addresses or ranges"
+```
+
+### LOG_QUERY
+
+If you are running in development mode, this will log database queries to the console for debugging.
+
+```
+LOG_QUERY = 1
+```
+
+### PRIVATE_MODE
+
+Disables all external network calls. Note, this will also disable all website icons since they come from duckduckgo.com.
+
+```
+PRIVATE_MODE = 1
+```
+
+### REMOVE_TRAILING_SLASH
+
+Removes the trailing slash from all incoming urls.
+
+```
+REMOVE_TRAILING_SLASH = 1
+```
+
+### TRACKER_SCRIPT_NAME
+
+Allows you to assign a custom name to the tracker script different from the default `script.js`. This is to help you avoid some [ad blockers](/docs/bypass-ad-blockers).
+
+The `.js` extension is not required. The value can also be any path you choose, for example `/path/to/tracker`.
+
+```
+TRACKER_SCRIPT_NAME = "custom-script-name.js"
+```
+
+---
+
+## Build time variables
+
+Build time variables are only recognized during the build process. This also includes building custom Docker images. You need to set your environment variables prior to building the application.
+
+### ALLOWED_FRAME_URLS
+
+A space-delimited list of urls allowed to host the application in an iframe.
+
+```
+ALLOWED_FRAME_URLS = "URLs"
+```
+
+### BASE_PATH
+
+If you want to host Umami under a subdirectory. You may need to update your reverse proxy settings to correctly handle the BASE_PATH prefix.
+
+```
+BASE_PATH = "/custom"
+```
+
+### DATABASE_TYPE
+
+```
+DATABASE_TYPE = "postgresql | mysql"
+```
+
+The type of DB to be used. This is only required for the Docker build.
+
+### FORCE_SSL
+
+This will send a HTTP `Strict-Transport-Security` response header with all requests. See [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security).
+
+```
+FORCE_SSL = 1
+```
+
+### SKIP_DB_CHECK
+
+Skips the `check-db` step in the build process. Used for Docker builds.
+
+```
+SKIP_DB_CHECK = 1
+```
+
+### SKIP_DB_MIGRATION
+
+Skips the Prisma migration step in the build process. Setting `SKIP_DB_CHECK` also skips this step.
+
+```
+SKIP_DB_MIGRATION = 1
+```
