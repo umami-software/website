@@ -190,10 +190,6 @@
             {
               "label": "Integrations",
               "url": "/docs/integrations"
-            },
-            {
-              "label": "Migrating v1 to v2",
-              "url": "/docs/migrate-v1-v2"
             }
           ]
         },
@@ -672,8 +668,8 @@
               "url": "/docs/reports"
             },
             {
-              "label": "Breakdown",
-              "url": "/docs/report-breakdown"
+              "label": "Insights",
+              "url": "/docs/report-insights"
             },
             {
               "label": "Funnel",
