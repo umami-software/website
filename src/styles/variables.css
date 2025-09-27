@@ -1,3 +1,22 @@
 html body {
   --primary-color: #000000;
+  
+  /* Clean black and white theme with subtle enhancements */
+  --color-accent: #000000;
+  --color-text: #000000;
+  --color-text-muted: #666666;
+  --color-background: #ffffff;
+  
+  /* Subtle glass effects with neutral colors */
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  
+  /* Refined shadows for depth */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.12);
+  
+  /* Subtle hover effects */
+  --hover-bg: rgba(0, 0, 0, 0.04);
+  --hover-border: rgba(0, 0, 0, 0.12);
 }

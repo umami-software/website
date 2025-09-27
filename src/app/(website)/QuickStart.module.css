@@ -27,27 +27,63 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 30px 25px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #000000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.step:hover::before {
+  transform: scaleX(1);
 }
 
 .num {
-  font-size: 20px;
-  font-weight: 700;
-  border-radius: 100%;
-  background: var(--base-color-2);
+  font-size: 22px;
+  font-weight: 800;
+  border-radius: 50%;
+  background: #000000;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   align-self: center;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 20px;
 }
 
 .action {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  margin: var(--spacing-6) 0;
+  margin: 15px 0;
+  color: #000000;
 }
 
 .description {
-  color: var(--font-color-muted);
+  color: #666;
+  line-height: 1.6;
+  font-size: 15px;
 }
