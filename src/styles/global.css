@@ -5,10 +5,36 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
+  background: var(--bg-pattern);
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-secondary);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--color-accent);
+  color: white;
 }
 
 /* Mobile responsive improvements */

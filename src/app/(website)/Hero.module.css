@@ -1,25 +1,124 @@
 .hero {
   margin-top: 100px;
   padding: 0 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+  animation: float 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
 }
 
 .hero h1 {
-  font-size: clamp(1.5rem, 4vw, 3.5rem);
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: var(--color-text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero p {
-  font-size: clamp(1rem, 3vw, 1.25rem);
-  max-width: 600px;
-  margin: 0 auto 2rem;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  color: #666;
+  line-height: 1.6;
+  animation: slideInUp 0.8s ease-out 0.2s both;
 }
 
 .hero .buttonRow {
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+.hero .buttonRow a,
+.hero .buttonRow button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+}
+
+.hero .buttonRow a:first-child {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.hero .buttonRow a:first-child:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow), var(--shadow-medium);
+}
+
+.hero .buttonRow a:last-child {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  color: #333;
+}
+
+.hero .buttonRow a:last-child:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.hero .buttonRow a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.hero .buttonRow a:hover::before {
+  left: 100%;
 }
 
 .heroHeading {
@@ -60,26 +159,53 @@
 }
 
 .image {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 60px auto 0;
   perspective: 2000px;
   transform-style: preserve-3d;
   text-align: center;
-  padding-top: 40px;
   width: 100%;
   overflow: hidden;
+  animation: slideInUp 0.8s ease-out 0.6s both;
 }
 
 .image img {
-  border-radius: 10px;
+  border-radius: 20px;
   width: 100%;
   height: auto;
   align-self: center;
   transform: rotateX(35deg) rotateY(-20deg) rotateZ(5deg) translateZ(120px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transform-origin: center;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.image img:hover {
+  transform: rotateX(30deg) rotateY(-15deg) rotateZ(3deg) translateZ(140px);
+}
+
+.image::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
 }
 
 /* Mobile responsiveness */
