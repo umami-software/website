@@ -12,7 +12,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, transparent 70%);
   animation: float 20s ease-in-out infinite;
   z-index: -1;
 }
@@ -27,10 +27,7 @@
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  background: var(--color-text-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
   font-weight: 800;
   letter-spacing: -0.02em;
   animation: slideInUp 0.8s ease-out;
@@ -83,25 +80,26 @@
 }
 
 .hero .buttonRow a:first-child {
-  background: var(--gradient-primary);
+  background: #000000;
   color: white;
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-medium);
 }
 
 .hero .buttonRow a:first-child:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-glow), var(--shadow-medium);
+  box-shadow: var(--shadow-strong);
+  background: #333333;
 }
 
 .hero .buttonRow a:last-child {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  color: #333;
+  background: transparent;
+  border: 2px solid #000000;
+  color: #000000;
 }
 
 .hero .buttonRow a:last-child:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #000000;
+  color: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
 }

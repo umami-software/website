@@ -50,7 +50,7 @@
 }
 
 .header .actions > a:last-child {
-  background: var(--gradient-primary);
+  background: #000000;
   color: white;
   box-shadow: var(--shadow-soft);
 }
@@ -58,11 +58,12 @@
 .header .actions > a:last-child:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow-medium);
+  background: #333333;
 }
 
 .header .actions > a:first-child:hover {
-  background: rgba(102, 126, 234, 0.1);
-  color: var(--color-accent);
+  background: rgba(0, 0, 0, 0.05);
+  color: #000000;
 }
 
 .hamburger {

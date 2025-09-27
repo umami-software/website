@@ -5,7 +5,7 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-  background: var(--bg-pattern);
+  background: #ffffff;
   scroll-behavior: smooth;
 }
 
@@ -13,22 +13,22 @@ body {
   box-sizing: border-box;
 }
 
-/* Modern scrollbar */
+/* Clean scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--gradient-primary);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gradient-secondary);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* Selection styling */

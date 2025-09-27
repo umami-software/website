@@ -44,7 +44,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--gradient-accent);
+  background: #000000;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -52,7 +52,7 @@
 .step:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-medium);
-  border-color: rgba(79, 172, 254, 0.3);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .step:hover::before {
@@ -63,7 +63,7 @@
   font-size: 22px;
   font-weight: 800;
   border-radius: 50%;
-  background: var(--gradient-accent);
+  background: #000000;
   color: white;
   display: flex;
   align-items: center;
@@ -79,10 +79,7 @@
   font-size: 20px;
   font-weight: 700;
   margin: 15px 0;
-  background: var(--color-text-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
 }
 
 .description {

@@ -10,7 +10,7 @@
   z-index: 1;
   position: relative;
   overflow: hidden;
-  background: var(--gradient-primary);
+  background: #000000;
   box-shadow: var(--shadow-strong);
   margin: 40px 20px;
 }
@@ -60,7 +60,7 @@
 
 .buttons a {
   background: white !important;
-  color: var(--color-accent) !important;
+  color: #000000 !important;
   border: none !important;
   padding: 16px 32px !important;
   border-radius: 12px !important;

@@ -19,7 +19,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: var(--gradient-primary);
+  background: #000000;
   transform: scaleY(0);
   transition: transform 0.3s ease;
 }
@@ -27,7 +27,7 @@
 .item:hover {
   transform: translateX(5px);
   box-shadow: var(--shadow-medium);
-  border-color: rgba(102, 126, 234, 0.2);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .item:hover::before {
@@ -35,10 +35,10 @@
 }
 
 .item.selected {
-  background: rgba(102, 126, 234, 0.1);
-  border-color: rgba(102, 126, 234, 0.3);
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
   transform: translateX(8px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-strong);
 }
 
 .item.selected::before {

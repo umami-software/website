@@ -23,7 +23,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--gradient-primary);
+  background: #000000;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -31,7 +31,7 @@
 .items > div:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-strong);
-  border-color: rgba(102, 126, 234, 0.3);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .items > div:hover::before {
