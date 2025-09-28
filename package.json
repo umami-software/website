@@ -30,6 +30,7 @@
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
     "@fontsource/jetbrains-mono": "^4.5.12",
+    "@intercom/messenger-js-sdk": "^0.0.18",
     "@next/mdx": "^14.2.28",
     "@sendgrid/mail": "^8.1.5",
     "@types/mdx": "^2.0.13",
