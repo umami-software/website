@@ -17,14 +17,6 @@ const mobileMenuItems = [
     value: '/pricing',
   },
   {
-    label: 'Docs',
-    value: '/docs',
-  },
-  {
-    label: 'Blog',
-    value: '/blog',
-  },
-  {
     label: 'Contact',
     value: '/contact',
   },
@@ -50,10 +42,6 @@ const NavLinks = () => {
   return (
     <Row className={styles.links} alignItems="center" gap="6">
       <Link href="/features">Features</Link>
-      <Link href="/blog">Blog</Link>
-      <Link href="/docs" prefetch={false}>
-        Docs
-      </Link>
       <Link href="/pricing">Pricing</Link>
       <Link href="/contact">Contact</Link>
     </Row>

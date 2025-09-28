@@ -14,14 +14,6 @@ export default function ContactPage() {
           <ContactForm />
           <Column alignItems="center" gap="12" style={{ marginTop: '3rem' }}>
             <Column alignItems="center" gap="6">
-              <h3>Interested in learning more?</h3>
-              <Button variant="primary" asChild>
-                <Link href="https://calendly.com/mikecao/oravo-demo" target="_blank">
-                  Book a demo meeting
-                </Link>
-              </Button>
-            </Column>
-            <Column alignItems="center" gap="6">
               <h3>Connect with us</h3>
               <SocialMedia size="lg" />
             </Column>

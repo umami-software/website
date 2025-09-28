@@ -6,28 +6,24 @@ import TextBlock from '@/components/TextBlock';
 
 const questions = [
   {
-    question: 'How is usage measured?',
-    answer: `Usage is measured by counting pageviews to a website plus any custom events or custom event properties stored. 
-    Each website pageview counts as one event. If you save
-    event properties, each data property stored counts as one event.`,
+    question: 'Is Oravo really free?',
+    answer: `Yes! Oravo is completely free with no hidden costs, no subscription fees, and no usage limits. You get unlimited events, websites, team members, and data retention at no cost.`,
   },
   {
-    question: 'How does the free trial work?',
-    answer: `Oravo Cloud's free trial will last for 14 days from the purchase date. The trial gives you full access to all features in that plan.
-      At the end of the trial, you will be billed the regular amount. You can cancel your trial at any time within the trial period for no cost.`,
+    question: 'Do I need to provide a credit card?',
+    answer: `No credit card required! Simply sign up with your email and start using Oravo immediately. There are no payment details needed since the service is completely free.`,
   },
   {
-    question: 'How will I be billed?',
-    answer: `Billing occurs on a monthly basis and you can cancel at any time. 
-    If you upgraded to a paid plan via a trial, your first invoice git checkout will arrive after your trial period ends.`,
+    question: 'Are there any usage limits?',
+    answer: `No, there are no usage limits. You can track unlimited pageviews, custom events, websites, and have unlimited team members. All features are included in the free plan.`,
   },
   {
     question: 'Where are your servers located?',
-    answer: `Oravo Cloud servers are located in the US and EU and adhere to GDPR and CCPA regulations.`,
+    answer: `Oravo Cloud servers are located in the US and EU and adhere to GDPR and CCPA regulations for maximum privacy and compliance.`,
   },
   {
     question: 'Can I export my data?',
-    answer: `Yes, all of your data can be exported from Oravo Cloud.`,
+    answer: `Yes, all of your data can be exported from Oravo Cloud at any time. Your data belongs to you and you have full control over it.`,
   },
 ];
 
