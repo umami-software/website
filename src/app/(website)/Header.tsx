@@ -54,13 +54,13 @@ const ActionLinks = () => {
   return (
     <Row className={styles.actions} alignItems="center" gap="2">
       <Button className={styles.login} variant="quiet" asChild>
-        <Link href={`https://cloud.oravo.is/login${query}`} data-oravo-event="login-button-header">
+        <Link href={`https://analytics.imoogleai.xyz/login${query}`} data-oravo-event="login-button-header">
           Log in
         </Link>
       </Button>
       <Button className={styles.signup} variant="primary" asChild>
         <Link
-          href={`https://cloud.oravo.is/signup${query}`}
+          href={`https://analytics.imoogleai.xyz/signup${query}`}
           data-oravo-event="signup-button-header"
         >
           Sign up for free

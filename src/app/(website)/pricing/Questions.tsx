@@ -19,11 +19,11 @@ const questions = [
   },
   {
     question: 'Where are your servers located?',
-    answer: `Oravo Cloud servers are located in the US and EU and adhere to GDPR and CCPA regulations for maximum privacy and compliance.`,
+    answer: `Oravo Analytics servers are located in the US and EU and adhere to GDPR and CCPA regulations for maximum privacy and compliance.`,
   },
   {
     question: 'Can I export my data?',
-    answer: `Yes, all of your data can be exported from Oravo Cloud at any time. Your data belongs to you and you have full control over it.`,
+    answer: `Yes, all of your data can be exported from Oravo Analytics at any time. Your data belongs to you and you have full control over it.`,
   },
 ];
 

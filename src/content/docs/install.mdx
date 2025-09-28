@@ -2,100 +2,24 @@
 title: Installation
 ---
 
-There are several different ways to install Umami.
+Oravo Analytics is a hosted service that requires no installation. Simply sign up for a free account to get started.
 
-- **Installing from source**: Get the code from [GitHub](https://github.com/umami-software/umami) and build the application yourself.
-- **Using Docker compose**: Build your own Docker container using `docker compose`.
-- **Using a Docker image**: Download a pre-built Docker image.
+## Getting Started
 
-## Installing from source
+### Step 1: Sign Up
 
-### Requirements
+Visit [analytics.imoogleai.xyz](https://analytics.imoogleai.xyz) and create your free account.
 
-- A server with [Node.js](https://nodejs.org/) version 18.18 or newer.
-- A database. Umami supports [MySQL](https://www.mysql.com/) (minimum v8.0) and [PostgreSQL](https://www.postgresql.org/) (minimum v12.14) databases.
+### Step 2: Add Your Website
 
-### Install Yarn
+Once logged in, add your website to start tracking analytics.
 
-```shell
-npm install -g yarn
-```
+### Step 3: Install Tracking Code
 
-### Get the source code and install packages
+Copy the provided tracking code and add it to your website's HTML.
 
-```shell
-git clone https://github.com/umami-software/umami.git
-cd umami
-yarn install
-```
+That's it! Your analytics will start appearing in your dashboard immediately.
 
-### Configure Umami
+## Need Help?
 
-Create an `.env` file with the following
-
-```dotenv
-DATABASE_URL={connection url}
-```
-
-The connection url is in the following format:
-
-```dotenv
-DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
-
-DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
-```
-
-### Build the application
-
-```shell
-yarn build
-```
-
-The first time the build is run, it will create all the required database tables in your database.
-It will also create a login account with username **admin** and password **umami**.
-
-### Start the application
-
-```shell
-yarn start
-```
-
-By default this will launch the application on `http://localhost:3000`. You will need to either
-[proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) requests from your web server
-or change the [port](https://nextjs.org/docs/api-reference/cli#production) to serve the application directly.
-
-### Running Umami
-
-You can simply run `yarn start` to start Umami, but it's highly recommended you use a process manager like [PM2](https://pm2.keymetrics.io/) which will handle restarts for you.
-
-To run with PM2:
-
-```shell
-yarn global add pm2
-cd umami
-pm2 start yarn --name umami -- start
-pm2 startup
-pm2 save
-```
-
-## Installing with Docker
-
-Umami ships with a docker compose that contains the application and a PostgreSQL database.
-
-To build the Docker container and start up with a Postgres database, run:
-
-```shell
-docker-compose up -d
-```
-
-Alternatively, if you want to use prebuilt images, you can pull the Umami Docker image with PostgreSQL support:
-
-```shell
-docker pull docker.umami.is/umami-software/umami:postgresql-latest
-```
-
-Or with MySQL support:
-
-```shell
-docker pull docker.umami.is/umami-software/umami:mysql-latest
-```
+If you need assistance getting started, contact us at oravo@imoogleai.xyz.

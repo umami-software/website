@@ -10,7 +10,7 @@ const data = [
     items: [
       { text: 'Features', href: '/features' },
       { text: 'Pricing', href: '/pricing' },
-      { text: 'Cloud', href: 'https://cloud.oravo.is/?ref=oravo-nav-footer' },
+      { text: 'Analytics', href: 'https://analytics.imoogleai.xyz/?ref=oravo-nav-footer' },
     ],
   },
   {

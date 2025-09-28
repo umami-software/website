@@ -11,7 +11,7 @@ const items = [
     name: 'khoi',
     username: '@khoiuna',
     quote: [
-      'Just set up my oravo.is self-hosted analytics page. It took me less than 10 min to set up! Super simple!',
+      'Just set up my oravo.imoogleai.xyz self-hosted analytics page. It took me less than 10 min to set up! Super simple!',
       'Great Google Analytics alternative from @oravo_software!',
     ],
   },
@@ -56,7 +56,7 @@ const items = [
     name: 'Stefan Judis',
     username: '@stefanjudis',
     quote: [
-      `On the weekend I set up oravo.is to enable tracking that is not based on Google Analytics. It took only an hour. 👏`,
+      `On the weekend I set up oravo.imoogleai.xyz to enable tracking that is not based on Google Analytics. It took only an hour. 👏`,
       `Thanks @oravo_software for building it! 🙇‍♂️`,
     ],
   },

@@ -5,7 +5,7 @@ import PageHeader from '@/components/PageHeader';
 export default function SupportPage() {
   return (
     <section>
-      <PageHeader title="Support" description="Support services available for Oravo Cloud" />
+      <PageHeader title="Support" description="Support services available for Oravo Analytics" />
       <Column justifyContent="center">
         <Heading align="center">
           <a href="mailto:oravo@imoogleai.xyz">oravo@imoogleai.xyz</a>

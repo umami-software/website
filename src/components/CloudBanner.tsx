@@ -8,14 +8,14 @@ export default function CloudBanner() {
 
   return (
     <div className={styles.banner}>
-      <h1>Oravo Cloud</h1>
+      <h1>Oravo Analytics</h1>
       <p>
-        Get up and running right away by using the <strong>Oravo Cloud</strong> platform.
+        Get up and running right away by using the <strong>Oravo Analytics</strong> platform.
       </p>
       <p>
         <span>Sign up for free at </span>
         <a href={`${CLOUD_URL}/signup${query}`}>
-          <strong>cloud.oravo.is</strong>
+          <strong>analytics.imoogleai.xyz</strong>
         </a>
         .
       </p>

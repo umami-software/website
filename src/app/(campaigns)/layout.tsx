@@ -27,7 +27,7 @@ export default function CampaignLayout({ children }) {
           <Script
             defer
             data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
-            data-domains="oravo.is"
+            data-domains="oravo.imoogleai.xyz"
             src="/a/script.js"
           />
         )}

@@ -21,7 +21,7 @@ export default function QuickStart() {
           <div className={styles.num}>1</div>
           <div className={styles.action}>Sign up</div>
           <div className={styles.description}>
-            Create a <Link href={url}>free</Link> account on Oravo Cloud.
+            Create a <Link href={url}>free</Link> account on Oravo Analytics.
           </div>
         </div>
         <div className={styles.step}>

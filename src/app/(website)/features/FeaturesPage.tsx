@@ -224,15 +224,15 @@ const items = [
       {
         title: 'Data ownership ',
         description: [
-          `Data is always in your control with Oravo. You can self-host on your own infrastructure or export your data from Oravo Cloud.`,
+          `Data is always in your control with Oravo. You can self-host on your own infrastructure or export your data from Oravo Analytics.`,
         ],
         icon: <Key />,
       },
     ],
   },
   {
-    title: 'Cloud',
-    description: `Oravo Cloud is a reliable, high-performance hosted solution.`,
+    title: 'Analytics',
+    description: `Oravo Analytics is a reliable, high-performance hosted solution.`,
     items: [
       {
         title: 'Fully managed',
