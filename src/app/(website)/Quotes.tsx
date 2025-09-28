@@ -48,7 +48,7 @@ const items = [
     username: '@filipatstudio',
     quote: [
       `Installed @umami_software on my server today for studio.dev and rectangles.dev`,
-      `Easy-peasy installation. Love the interface! 💅`,
+      `Easy-peasy installation. Love the docs! 💅`,
       `Nice and beautiful software fitting my needs 🤝`,
     ],
   },
