@@ -16,8 +16,8 @@ export default function OpenSource() {
         </p>
       </TextBlock>
       <Row alignItems="center" justifyContent="center" gap="3">
-        <LinkButton href="/features" variant="outline">
-          View Features
+        <LinkButton href="/docs" variant="outline">
+          Read documentation
         </LinkButton>
         <LinkButton href={GITHUB_URL} variant="outline" target="_blank">
           View code repository

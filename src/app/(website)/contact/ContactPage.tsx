@@ -63,13 +63,13 @@ export default function ContactPage() {
                   <h4 style={{ fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: 'var(--color-text-muted)' }}>
                     EMAIL
                   </h4>
-                  <a href="mailto:oravo@imoogleai.xyz" style={{ 
+                  <a href="mailto:info@quizstack.qzz.io" style={{ 
                     color: 'var(--color-text)', 
                     textDecoration: 'none',
                     fontSize: '1rem',
                     fontWeight: '500'
                   }}>
-                    oravo@imoogleai.xyz
+                    info@quizstack.qzz.io
                   </a>
                 </div>
                 <div>
@@ -126,7 +126,7 @@ export default function ContactPage() {
                   fontWeight: '500',
                   transition: 'all 0.15s ease'
                 }}>
-                  💬 Get Support
+                  📚 Documentation & Guides
                 </a>
                 <a href="/features" style={{
                   display: 'block',

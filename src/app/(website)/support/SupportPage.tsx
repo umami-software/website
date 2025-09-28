@@ -160,12 +160,12 @@ export default function SupportPage() {
             transition: 'all 0.15s ease',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💡</div>
+            <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📚</div>
             <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.75rem', color: '#000' }}>
-              Getting Started
+              Documentation
             </h3>
             <p style={{ color: '#555', fontSize: '0.95rem', lineHeight: 1.5 }}>
-              Quick setup guide and basic usage tips
+              Comprehensive guides and API reference
             </p>
           </div>
 

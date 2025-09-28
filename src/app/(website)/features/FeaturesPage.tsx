@@ -297,16 +297,16 @@ export default function FeaturesPage() {
       <Column gap="8" style={{ padding: '0 20px' }}>
         {items.map(({ title, description, items }, sectionIndex) => {
           return (
-            <div key={title} style={{ maxWidth: '1400px', margin: '0 auto', width: '100%', padding: '0 1rem' }}>
+            <div key={title} style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
               
               {/* Section Header */}
               <div style={{ 
                 textAlign: 'center', 
                 marginBottom: '3rem',
-                padding: '3rem 2rem',
+                padding: '2rem',
                 background: 'var(--glass-bg)',
                 border: '1px solid var(--glass-border)',
-                borderRadius: '20px',
+                borderRadius: '16px',
                 backdropFilter: 'blur(10px)',
                 boxShadow: 'var(--shadow-medium)'
               }}>
@@ -331,8 +331,8 @@ export default function FeaturesPage() {
 
               {/* Features Grid */}
               <Grid 
-                columns={{ xs: '1fr', md: 'repeat(2, 1fr)' }} 
-                gap="3"
+                columns={{ xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} 
+                gap="4"
                 style={{ marginBottom: sectionIndex < items.length - 1 ? '4rem' : '2rem' }}
               >
                 {items.map((item, index) => (
@@ -341,15 +341,12 @@ export default function FeaturesPage() {
                     style={{
                       background: 'var(--glass-bg)',
                       border: '1px solid var(--glass-border)',
-                      borderRadius: '16px',
-                      padding: '2rem',
+                      borderRadius: '12px',
+                      padding: '1.5rem',
                       backdropFilter: 'blur(10px)',
                       boxShadow: 'var(--shadow-soft)',
                       transition: 'all 0.15s ease',
-                      cursor: 'pointer',
-                      height: '100%',
-                      display: 'flex',
-                      flexDirection: 'column'
+                      cursor: 'pointer'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-2px)';
@@ -360,41 +357,36 @@ export default function FeaturesPage() {
                       e.currentTarget.style.boxShadow = 'var(--shadow-soft)';
                     }}
                   >
-                    <Row gap="4" alignItems="center" style={{ marginBottom: '1.5rem' }}>
+                    <Row gap="3" alignItems="center" style={{ marginBottom: '1rem' }}>
                       <div style={{
-                        padding: '1rem',
-                        background: 'var(--color-accent)',
-                        borderRadius: '12px',
+                        padding: '0.5rem',
+                        background: 'var(--hover-bg)',
+                        borderRadius: '8px',
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center',
-                        minWidth: '56px',
-                        minHeight: '56px'
+                        justifyContent: 'center'
                       }}>
-                        <Icon size="lg" style={{ color: 'white' }}>{item.icon}</Icon>
+                        <Icon size="md">{item.icon}</Icon>
                       </div>
                       <h3 style={{ 
-                        fontSize: '1.3rem', 
-                        fontWeight: '700', 
+                        fontSize: '1.1rem', 
+                        fontWeight: '600', 
                         margin: 0,
-                        color: 'var(--color-text)',
-                        flex: 1
+                        color: 'var(--color-text)'
                       }}>
                         {item.title}
                       </h3>
                     </Row>
-                    <div style={{ flex: 1 }}>
-                      {item.description.map((text, textIndex) => (
-                        <p key={textIndex} style={{ 
-                          color: 'var(--color-text-muted)', 
-                          fontSize: '1rem',
-                          lineHeight: '1.6',
-                          margin: textIndex === 0 ? '0' : '0.75rem 0 0 0'
-                        }}>
-                          {text}
-                        </p>
-                      ))}
-                    </div>
+                    {item.description.map((text, textIndex) => (
+                      <p key={textIndex} style={{ 
+                        color: 'var(--color-text-muted)', 
+                        fontSize: '0.95rem',
+                        lineHeight: '1.5',
+                        margin: textIndex === 0 ? '0' : '0.5rem 0 0 0'
+                      }}>
+                        {text}
+                      </p>
+                    ))}
                   </div>
                 ))}
               </Grid>
@@ -457,9 +449,7 @@ export default function FeaturesPage() {
               Get Started Today
             </a>
             <a 
-              href="https://analytics.imoogleai.xyz/share/QAJ0QBCu6mQkMuQ1/quizstack.qzz.io" 
-              target="_blank"
-              rel="noreferrer"
+              href="/support" 
               style={{
                 display: 'inline-block',
                 padding: '0.75rem 2rem',
@@ -481,7 +471,7 @@ export default function FeaturesPage() {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              View Live Demo
+              View Documentation
             </a>
           </Row>
         </div>
