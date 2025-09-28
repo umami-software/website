@@ -10,7 +10,7 @@ export default function PricingPage() {
   return (
     <article>
       <Column gap="8">
-        <PageHeader title="Pricing" description="Simple usage based pricing" />
+        <PageHeader title="Pricing" description="Always free, no subscription required" />
         <Plans />
         <Features />
         <Questions />

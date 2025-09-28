@@ -11,15 +11,15 @@ const items = [
     name: 'khoi',
     username: '@khoiuna',
     quote: [
-      'Just set up my umami.is self-hosted analytics page. It took me less than 10 min to set up! Super simple!',
-      'Great Google Analytics alternative from @umami_software!',
+      'Just set up my oravo.is self-hosted analytics page. It took me less than 10 min to set up! Super simple!',
+      'Great Google Analytics alternative from @oravo_software!',
     ],
   },
   {
     name: 'Sylvain',
     username: '@_maoosi',
     quote: [
-      `Umami (@umami_software) is my new go-to platform for analytics!`,
+      `Oravo (@oravo_software) is my new go-to platform for analytics!`,
       `Fantastic open source product, privacy-focused, and they just released the most attractive pricing model out there for hosted analytics!`,
     ],
   },
@@ -27,7 +27,7 @@ const items = [
     name: 'Pauline AI',
     username: '@Pauline_Cx',
     quote: [
-      `Umami should deserve more visibility`,
+      `Oravo should deserve more visibility`,
       `It's open source, GDPR compliant, and better than Google Analytics`,
 
       `Install it on @vercel, host database on @supabase and you have a complete analytics solution for your apps, for FREE.`,
@@ -37,17 +37,17 @@ const items = [
     name: 'Abdullah Bashir',
     username: '@digitaldrreamer',
     quote: [
-      `Tried Umami today for a change. The simplicity is addictive 🙃. Good enough for me. Can't wait to integrate into my project.`,
+      `Tried Oravo today for a change. The simplicity is addictive 🙃. Good enough for me. Can't wait to integrate into my project.`,
       `Oh, and the API is as simple as the UI.
       Bye bye 46kb Google analytics script 😤🏃🏃
-      @umami_software 🤟🤟`,
+      @oravo_software 🤟🤟`,
     ],
   },
   {
     name: 'Filip @ Studio',
     username: '@filipatstudio',
     quote: [
-      `Installed @umami_software on my server today for studio.dev and rectangles.dev`,
+      `Installed @oravo_software on my server today for studio.dev and rectangles.dev`,
       `Easy-peasy installation. Love the docs! 💅`,
       `Nice and beautiful software fitting my needs 🤝`,
     ],
@@ -56,8 +56,8 @@ const items = [
     name: 'Stefan Judis',
     username: '@stefanjudis',
     quote: [
-      `On the weekend I set up umami.is to enable tracking that is not based on Google Analytics. It took only an hour. 👏`,
-      `Thanks @umami_software for building it! 🙇‍♂️`,
+      `On the weekend I set up oravo.is to enable tracking that is not based on Google Analytics. It took only an hour. 👏`,
+      `Thanks @oravo_software for building it! 🙇‍♂️`,
     ],
   },
 ];
@@ -68,7 +68,7 @@ export default function Quotes() {
       <TextBlock size="lg" align="center">
         <header>Connect</header>
         <h2>Join our community</h2>
-        <p>Come share your Umami experience with our vibrant community of users and developers.</p>
+        <p>Come share your Oravo experience with our vibrant community of users and developers.</p>
       </TextBlock>
       <Row justifyContent="center" padding="6">
         <SocialMedia size="lg" />

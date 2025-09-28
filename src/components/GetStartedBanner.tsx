@@ -5,15 +5,15 @@ import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
 
 export default function GetStartedBanner() {
-  const query = useQueryString({ ref: 'umami-get-started-banner' });
+  const query = useQueryString({ ref: 'oravo-get-started-banner' });
 
   return (
     <div className={styles.banner}>
-      <div className={styles.text}>Are you ready for better analytics?</div>
+      <div className={styles.text}>Ready to get started with free analytics?</div>
       <div className={styles.buttons}>
         <Button variant="primary" size="lg" asChild>
-          <a href={`${CLOUD_URL}/signup${query}`} data-umami-event="get-started-banner-button">
-            Try 14-day free trial
+          <a href={`${CLOUD_URL}/signup${query}`} data-oravo-event="get-started-banner-button">
+            Get started for free
           </a>
         </Button>
       </div>

@@ -40,7 +40,7 @@ import {
 const items = [
   {
     title: 'Analytics',
-    description: `Umami collects all the metrics you care about to help you make better decisions.`,
+    description: `Oravo collects all the metrics you care about to help you make better decisions.`,
     items: [
       {
         title: 'Page views',
@@ -106,7 +106,7 @@ const items = [
       {
         title: 'Realtime data',
         description: [
-          `Data available in seconds, not days. The data that Umami collects is immediately available on your dashboard`,
+          `Data available in seconds, not days. The data that Oravo collects is immediately available on your dashboard`,
         ],
         icon: <Realtime />,
       },
@@ -156,7 +156,7 @@ const items = [
   {
     title: 'Reports',
     description:
-      'Umami comes with out of the box reporting that enables you to gain deep insights from all your website data.',
+      'Oravo comes with out of the box reporting that enables you to gain deep insights from all your website data.',
     items: [
       {
         title: 'Insights',
@@ -202,12 +202,12 @@ const items = [
   },
   {
     title: 'Privacy',
-    description: `Umami is private by default and helps you stay compliant with data privacy laws.`,
+    description: `Oravo is private by default and helps you stay compliant with data privacy laws.`,
     items: [
       {
         title: 'GDPR & CCPA',
         description: [
-          'Umami never collects any personal information from your visitors so it is fully compliant with GDPR and CCPA.',
+          'Oravo never collects any personal information from your visitors so it is fully compliant with GDPR and CCPA.',
         ],
         icon: <Privacy />,
       },
@@ -218,13 +218,13 @@ const items = [
       },
       {
         title: 'No cookies ',
-        description: [`Umami does not use any cookies so no annoying cookie banner is required.`],
+        description: [`Oravo does not use any cookies so no annoying cookie banner is required.`],
         icon: <Cookie />,
       },
       {
         title: 'Data ownership ',
         description: [
-          `Data is always in your control with Umami. You can self-host on your own infrastructure or export your data from Umami Cloud.`,
+          `Data is always in your control with Oravo. You can self-host on your own infrastructure or export your data from Oravo Cloud.`,
         ],
         icon: <Key />,
       },
@@ -232,7 +232,7 @@ const items = [
   },
   {
     title: 'Cloud',
-    description: `Umami Cloud is a reliable, high-performance hosted solution.`,
+    description: `Oravo Cloud is a reliable, high-performance hosted solution.`,
     items: [
       {
         title: 'Fully managed',
@@ -251,7 +251,7 @@ const items = [
       {
         title: 'Data import',
         description: [
-          `Want to migrate your existing data to Umami? Just use our built-in import tool.`,
+          `Want to migrate your existing data to Oravo? Just use our built-in import tool.`,
         ],
         icon: <Import />,
       },
@@ -276,7 +276,7 @@ export default function FeaturesPage() {
     <>
       <PageHeader
         title="Features"
-        description="An overview of all the core features Umami provides."
+        description="An overview of all the core features Oravo provides."
       />
       <Column gap="6">
         {items.map(({ title, description, items }) => {

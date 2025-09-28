@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           <Script
             defer
             data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
-            data-domains="umami.is"
+            data-domains="oravo.is"
             src="/a/script.js"
           />
         )}
@@ -61,10 +61,10 @@ export default function RootLayout({ children }) {
 
 export const metadata: Metadata = {
   title: {
-    template: '%s – Umami',
-    default: 'Umami',
+    template: '%s – Oravo',
+    default: 'Oravo',
   },
   openGraph: {
-    description: 'Umami is a simple, fast, privacy-friendly alternative to Google Analytics.',
+    description: 'Oravo is a simple, fast, privacy-friendly alternative to Google Analytics.',
   },
 };

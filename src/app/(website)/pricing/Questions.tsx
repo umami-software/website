@@ -13,7 +13,7 @@ const questions = [
   },
   {
     question: 'How does the free trial work?',
-    answer: `Umami Cloud's free trial will last for 14 days from the purchase date. The trial gives you full access to all features in that plan.
+    answer: `Oravo Cloud's free trial will last for 14 days from the purchase date. The trial gives you full access to all features in that plan.
       At the end of the trial, you will be billed the regular amount. You can cancel your trial at any time within the trial period for no cost.`,
   },
   {
@@ -23,11 +23,11 @@ const questions = [
   },
   {
     question: 'Where are your servers located?',
-    answer: `Umami Cloud servers are located in the US and EU and adhere to GDPR and CCPA regulations.`,
+    answer: `Oravo Cloud servers are located in the US and EU and adhere to GDPR and CCPA regulations.`,
   },
   {
     question: 'Can I export my data?',
-    answer: `Yes, all of your data can be exported from Umami Cloud.`,
+    answer: `Yes, all of your data can be exported from Oravo Cloud.`,
   },
 ];
 
@@ -55,7 +55,7 @@ const Question = ({ question, children }) => {
 
   return (
     <div className={styles.question} onClick={() => setExpanded(state => !state)}>
-      <div className={styles.text} data-umami-event="faq-question-click">
+      <div className={styles.text} data-oravo-event="faq-question-click">
         {question}
         <Icon className={styles.icon} rotate={expanded ? 90 : 0} size="sm">
           <Icons.Chevron />

@@ -13,7 +13,7 @@ export default function WebAnalytics() {
         <header>Web Analytics</header>
         <h2>A complete analytics solution with all the features you need.</h2>
         <p>
-          Umami is packed with amazing features that enable you to better understand your website
+          Oravo is packed with amazing features that enable you to better understand your website
           traffic.
         </p>
       </TextBlock>

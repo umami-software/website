@@ -1,13 +1,13 @@
 {
-  "name": "umami.is",
+  "name": "oravo.is",
   "version": "1.0.0",
-  "description": "umami.is website",
-  "author": "Umami Software, Inc. <hello@umami.is>",
+  "description": "oravo.is website",
+  "author": "Oravo Software, Inc. <oravo@imoogleai.xyz>",
   "license": "MIT",
-  "homepage": "https://umami.is",
+  "homepage": "https://oravo.is",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umami-software/website.git"
+    "url": "https://github.com/oravo-software/website.git"
   },
   "scripts": {
     "dev": "next dev -p 5001",

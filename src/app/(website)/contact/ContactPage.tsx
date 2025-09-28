@@ -16,7 +16,7 @@ export default function ContactPage() {
             <Column alignItems="center" gap="6">
               <h3>Interested in learning more?</h3>
               <Button variant="primary" asChild>
-                <Link href="https://calendly.com/mikecao/umami-demo" target="_blank">
+                <Link href="https://calendly.com/mikecao/oravo-demo" target="_blank">
                   Book a demo meeting
                 </Link>
               </Button>

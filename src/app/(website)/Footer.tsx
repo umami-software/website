@@ -10,7 +10,7 @@ const data = [
     items: [
       { text: 'Features', href: '/features' },
       { text: 'Pricing', href: '/pricing' },
-      { text: 'Cloud', href: 'https://cloud.umami.is/?ref=umami-nav-footer' },
+      { text: 'Cloud', href: 'https://cloud.oravo.is/?ref=oravo-nav-footer' },
     ],
   },
   {
@@ -19,7 +19,7 @@ const data = [
       { text: 'Documentation', href: '/docs' },
       { text: 'Guides', href: '/docs/guides' },
       { text: 'API Reference', href: '/docs/api' },
-      { text: 'Release Notes', href: 'https://github.com/umami-software/umami/releases' },
+      { text: 'Release Notes', href: 'https://github.com/oravo-software/oravo/releases' },
       { text: 'Community', href: '/community' },
       { text: 'Support', href: '/support' },
     ],
@@ -32,7 +32,7 @@ const data = [
       { text: 'Contact', href: '/contact' },
       { text: 'Privacy', href: '/privacy' },
       { text: 'Terms', href: '/terms' },
-      { text: 'DPA', href: '/umami-dpa.pdf', target: '_blank' },
+      { text: 'DPA', href: '/oravo-dpa.pdf', target: '_blank' },
     ],
   },
 ];
@@ -66,7 +66,7 @@ export default function Footer() {
         </Grid>
         <Row justifyContent="space-between">
           <SocialMedia />
-          <Text size="1">&copy; {new Date().getFullYear()} Umami Software, Inc.</Text>
+          <Text size="1">&copy; {new Date().getFullYear()} Oravo Software, Inc.</Text>
         </Row>
       </Container>
     </Row>

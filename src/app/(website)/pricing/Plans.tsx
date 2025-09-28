@@ -6,47 +6,27 @@ import useQueryString from '@/components/hooks/useQueryString';
 import styles from './Plans.module.css';
 
 export default function Plans() {
-  const query = useQueryString({ ref: 'umami-pricing' });
+  const query = useQueryString({ ref: 'oravo-pricing' });
 
   const plans = [
     {
-      name: 'Hobby',
-      price: '$0',
-      interval: '/ month',
-      description: 'Get started:',
+      name: 'Always Free',
+      price: 'FREE',
+      interval: 'forever',
+      description: 'Everything you need:',
       features: [
-        '100K events per month',
-        'Up to 3 websites',
-        '6 month data retention',
-        'Community support',
-      ],
-      url: `${CLOUD_URL}/signup${query}&plan=hobby`,
-      button: 'Get started',
-    },
-    {
-      name: 'Pro',
-      price: '$20',
-      interval: '/ month',
-      description: 'Everything in Hobby, plus:',
-      features: [
-        '1 million events per month',
-        '$0.00002 per additional event',
+        'Unlimited events',
         'Unlimited websites',
         'Unlimited team members',
-        '5 year data retention',
+        'Unlimited data retention',
+        'Full analytics features',
         'Email support',
+        'No subscription required',
+        'No hidden costs',
       ],
-      url: `${CLOUD_URL}/signup${query}&plan=pro`,
-      button: 'Try 14-day free trial',
+      url: `${CLOUD_URL}/signup${query}`,
+      button: 'Get started for free',
       variant: 'primary',
-    },
-    {
-      name: 'Enterprise',
-      price: 'Contact us',
-      description: 'Everything in Pro, plus:',
-      features: ['Custom pricing', 'Custom data retention', 'Uptime SLA', 'Enterprise support'],
-      url: 'mailto:sales@umami.is?subject=Umami Cloud enterprise pricing',
-      button: 'Contact us',
     },
   ];
 

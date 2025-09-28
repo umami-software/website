@@ -9,7 +9,7 @@ export default function CompanyLogo() {
         <Logo />
       </Icon>
       <Text size="4" weight="bold">
-        <Link href="/">umami</Link>
+        <Link href="/">oravo</Link>
       </Text>
     </Row>
   );

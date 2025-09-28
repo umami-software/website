@@ -7,7 +7,7 @@ import useQueryString from '@/components/hooks/useQueryString';
 import styles from './QuickStart.module.css';
 
 export default function QuickStart() {
-  const query = useQueryString({ ref: 'umami-quickstart' });
+  const query = useQueryString({ ref: 'oravo-quickstart' });
   const url = `${CLOUD_URL}/signup${query}`;
 
   return (
@@ -21,7 +21,7 @@ export default function QuickStart() {
           <div className={styles.num}>1</div>
           <div className={styles.action}>Sign up</div>
           <div className={styles.description}>
-            Create a <Link href={url}>free</Link> account on Umami Cloud.
+            Create a <Link href={url}>free</Link> account on Oravo Cloud.
           </div>
         </div>
         <div className={styles.step}>

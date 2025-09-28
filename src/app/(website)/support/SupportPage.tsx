@@ -5,10 +5,10 @@ import PageHeader from '@/components/PageHeader';
 export default function SupportPage() {
   return (
     <section>
-      <PageHeader title="Support" description="Support services available for Umami Cloud" />
+      <PageHeader title="Support" description="Support services available for Oravo Cloud" />
       <Column justifyContent="center">
         <Heading align="center">
-          <a href="mailto:support@umami.is">support@umami.is</a>
+          <a href="mailto:oravo@imoogleai.xyz">oravo@imoogleai.xyz</a>
         </Heading>
       </Column>
     </section>
