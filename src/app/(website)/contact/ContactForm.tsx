@@ -55,7 +55,27 @@ export default function ContactForm() {
       >
         <TextArea style={{ height: 300, width: '100%', maxWidth: 400 }} />
       </FormField>
-      <FormSubmitButton variant="primary">Submit</FormSubmitButton>
+      <FormSubmitButton 
+        variant="primary" 
+        style={{
+          background: '#000',
+          color: 'white',
+          border: 'none',
+          padding: '0.75rem 2rem',
+          borderRadius: '8px',
+          fontWeight: '600',
+          cursor: 'pointer',
+          transition: 'all 0.15s ease'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = '#333';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = '#000';
+        }}
+      >
+        Submit
+      </FormSubmitButton>
     </Form>
   );
 }

@@ -15,8 +15,8 @@ const values = [
   },
   {
     icon: '🌍',
-    title: 'Open Source',
-    description: 'Transparency through open source. Our code is available for everyone to inspect, contribute to, and trust.'
+    title: 'Free to Use',
+    description: 'Completely free analytics platform. Get powerful insights without any cost or hidden fees.'
   },
   {
     icon: '🎯',
@@ -37,28 +37,16 @@ const values = [
 
 const team = [
   {
-    name: 'Alex Johnson',
+    name: 'Tariq',
     role: 'Founder & CEO',
-    description: 'Former Google Analytics engineer with 10+ years in data analytics and privacy technology.',
+    description: 'Visionary leader driving innovation in privacy-first analytics and user experience.',
     image: '👨‍💻'
   },
   {
-    name: 'Sarah Chen',
-    role: 'CTO',
-    description: 'Full-stack developer and privacy advocate. Previously led engineering teams at privacy-focused startups.',
-    image: '👩‍💻'
-  },
-  {
-    name: 'Marcus Rodriguez',
-    role: 'Head of Product',
-    description: 'Product strategist with expertise in user experience and analytics tools. Former PM at major SaaS companies.',
-    image: '👨‍🎨'
-  },
-  {
-    name: 'Emma Thompson',
-    role: 'Head of Growth',
-    description: 'Marketing and growth expert focused on ethical, privacy-respecting user acquisition strategies.',
-    image: '👩‍💼'
+    name: 'Emmanuel',
+    role: 'Manager',
+    description: 'Operations and strategy expert ensuring smooth delivery of analytics solutions.',
+    image: '👨‍💼'
   }
 ];
 
@@ -70,8 +58,8 @@ const milestones = [
   },
   {
     year: '2022',
-    title: 'Open Source',
-    description: 'Released our core analytics engine as open source, gaining community trust and contributions.'
+    title: 'Free Platform',
+    description: 'Launched our completely free analytics platform, making privacy-first analytics accessible to everyone.'
   },
   {
     year: '2023',
