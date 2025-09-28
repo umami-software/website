@@ -1,0 +1,62 @@
+/* Reduced Animation Styles for Oravo Website */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Global subtle hover effects */
+.subtle-hover {
+  transition: all 0.15s ease;
+}
+
+.subtle-hover:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* Card hover effects - more subtle */
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Button hover effects - minimal */
+.button-hover {
+  transition: all 0.15s ease;
+}
+
+.button-hover:hover {
+  transform: translateY(-0.5px);
+  opacity: 0.95;
+}
+
+/* Reduce all existing transform animations */
+[style*="translateY(-4px)"] {
+  transform: translateY(-2px) !important;
+}
+
+[style*="translateY(-3px)"] {
+  transform: translateY(-1px) !important;
+}
+
+/* Slower, more subtle transitions */
+.glass-card {
+  transition: all 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}

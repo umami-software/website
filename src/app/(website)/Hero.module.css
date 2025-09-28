@@ -12,15 +12,15 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, transparent 70%);
-  animation: float 20s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.01) 0%, transparent 70%);
+  animation: float 60s ease-in-out infinite;
   z-index: -1;
 }
 
 @keyframes float {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(30px, -30px) rotate(120deg); }
-  66% { transform: translate(-20px, 20px) rotate(240deg); }
+  33% { transform: translate(15px, -15px) rotate(60deg); }
+  66% { transform: translate(-10px, 10px) rotate(120deg); }
 }
 
 .hero h1 {
@@ -65,7 +65,7 @@
 .hero .buttonRow button {
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   border-radius: 12px;
   font-weight: 600;
   padding: 16px 32px;
@@ -86,8 +86,8 @@
 }
 
 .hero .buttonRow a:first-child:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
   background: #333333;
 }
 
@@ -100,8 +100,8 @@
 .hero .buttonRow a:last-child:hover {
   background: #000000;
   color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
 }
 
 .hero .buttonRow a::before {
@@ -202,8 +202,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
-  50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.05); }
 }
 
 /* Mobile responsiveness */

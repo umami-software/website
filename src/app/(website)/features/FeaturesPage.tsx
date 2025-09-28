@@ -275,40 +275,206 @@ export default function FeaturesPage() {
   return (
     <>
       <PageHeader
-        title="Features"
-        description="An overview of all the core features Oravo provides."
+        title="Powerful Features"
+        description="Everything you need for privacy-first analytics that drives results."
       />
-      <Column gap="6">
-        {items.map(({ title, description, items }) => {
+      
+      {/* Hero Section */}
+      <Row justifyContent="center" style={{ padding: '0 20px', marginBottom: '4rem' }}>
+        <div style={{ maxWidth: '800px', textAlign: 'center' }}>
+          <p style={{ 
+            fontSize: '1.2rem', 
+            color: 'var(--color-text-muted)', 
+            lineHeight: '1.6',
+            margin: '0 0 2rem 0'
+          }}>
+            Discover how Oravo combines powerful analytics capabilities with uncompromising privacy protection. 
+            Built for modern teams who value both insights and user trust.
+          </p>
+        </div>
+      </Row>
+
+      <Column gap="8" style={{ padding: '0 20px' }}>
+        {items.map(({ title, description, items }, sectionIndex) => {
           return (
-            <Box key={title}>
-              <Heading size="4">{title}</Heading>
-              <Box paddingY="6" maxWidth="600px">
-                <Text color="muted" size="3">
+            <div key={title} style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+              
+              {/* Section Header */}
+              <div style={{ 
+                textAlign: 'center', 
+                marginBottom: '3rem',
+                padding: '2rem',
+                background: 'var(--glass-bg)',
+                border: '1px solid var(--glass-border)',
+                borderRadius: '16px',
+                backdropFilter: 'blur(10px)',
+                boxShadow: 'var(--shadow-medium)'
+              }}>
+                <h2 style={{ 
+                  fontSize: '2rem', 
+                  fontWeight: '700', 
+                  marginBottom: '1rem',
+                  color: 'var(--color-text)'
+                }}>
+                  {title}
+                </h2>
+                <p style={{ 
+                  fontSize: '1.1rem', 
+                  color: 'var(--color-text-muted)', 
+                  lineHeight: '1.6',
+                  maxWidth: '600px',
+                  margin: '0 auto'
+                }}>
                   {description}
-                </Text>
-              </Box>
-              <Grid columns="repeat(auto-fit, minmax(300px, 1fr))" gap="4">
+                </p>
+              </div>
+
+              {/* Features Grid */}
+              <Grid 
+                columns={{ xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} 
+                gap="4"
+                style={{ marginBottom: sectionIndex < items.length - 1 ? '4rem' : '2rem' }}
+              >
                 {items.map((item, index) => (
-                  <Box key={index} borderRadius="2" padding="4" backgroundColor="2">
-                    <Row gap="3" alignItems="center">
-                      <Icon size="md">{item.icon}</Icon>
-                      <Text weight="bold">{item.title}</Text>
+                  <div 
+                    key={index} 
+                    style={{
+                      background: 'var(--glass-bg)',
+                      border: '1px solid var(--glass-border)',
+                      borderRadius: '12px',
+                      padding: '1.5rem',
+                      backdropFilter: 'blur(10px)',
+                      boxShadow: 'var(--shadow-soft)',
+                      transition: 'all 0.15s ease',
+                      cursor: 'pointer'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.boxShadow = 'var(--shadow-medium)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'var(--shadow-soft)';
+                    }}
+                  >
+                    <Row gap="3" alignItems="center" style={{ marginBottom: '1rem' }}>
+                      <div style={{
+                        padding: '0.5rem',
+                        background: 'var(--hover-bg)',
+                        borderRadius: '8px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}>
+                        <Icon size="md">{item.icon}</Icon>
+                      </div>
+                      <h3 style={{ 
+                        fontSize: '1.1rem', 
+                        fontWeight: '600', 
+                        margin: 0,
+                        color: 'var(--color-text)'
+                      }}>
+                        {item.title}
+                      </h3>
                     </Row>
-                    {item.description.map((text, index) => (
-                      <Text key={index} as="p" color="muted">
+                    {item.description.map((text, textIndex) => (
+                      <p key={textIndex} style={{ 
+                        color: 'var(--color-text-muted)', 
+                        fontSize: '0.95rem',
+                        lineHeight: '1.5',
+                        margin: textIndex === 0 ? '0' : '0.5rem 0 0 0'
+                      }}>
                         {text}
-                      </Text>
+                      </p>
                     ))}
-                  </Box>
+                  </div>
                 ))}
               </Grid>
-            </Box>
+            </div>
           );
         })}
-        <section>
-          <GetStartedBanner />
-        </section>
+        
+        {/* Call to Action */}
+        <div style={{ 
+          textAlign: 'center', 
+          padding: '3rem 2rem',
+          background: 'var(--glass-bg)',
+          border: '1px solid var(--glass-border)',
+          borderRadius: '16px',
+          backdropFilter: 'blur(10px)',
+          boxShadow: 'var(--shadow-medium)',
+          maxWidth: '800px',
+          margin: '2rem auto 0'
+        }}>
+          <h2 style={{ 
+            fontSize: '1.8rem', 
+            fontWeight: '600', 
+            marginBottom: '1rem',
+            color: 'var(--color-text)'
+          }}>
+            Ready to Get Started?
+          </h2>
+          <p style={{ 
+            fontSize: '1.1rem', 
+            color: 'var(--color-text-muted)', 
+            marginBottom: '2rem',
+            lineHeight: '1.6'
+          }}>
+            Join thousands of websites already using Oravo for privacy-first analytics.
+          </p>
+          <Row justifyContent="center" gap="3">
+            <a 
+              href="/contact" 
+              style={{
+                display: 'inline-block',
+                padding: '0.75rem 2rem',
+                background: 'var(--color-accent)',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '8px',
+                fontWeight: '600',
+                fontSize: '1rem',
+                transition: 'all 0.15s ease',
+                border: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-1px)';
+                e.currentTarget.style.boxShadow = 'var(--shadow-medium)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              Get Started Today
+            </a>
+            <a 
+              href="/support" 
+              style={{
+                display: 'inline-block',
+                padding: '0.75rem 2rem',
+                background: 'transparent',
+                color: 'var(--color-text)',
+                textDecoration: 'none',
+                borderRadius: '8px',
+                fontWeight: '600',
+                fontSize: '1rem',
+                border: '1px solid var(--glass-border)',
+                transition: 'all 0.15s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--hover-bg)';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              View Documentation
+            </a>
+          </Row>
+        </div>
       </Column>
     </>
   );
