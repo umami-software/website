@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { AxiomWebVitals } from 'next-axiom';
 import Header from './Header';
 import Footer from './Footer';
+import IntercomChat from '@/components/IntercomChat';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
@@ -15,6 +16,7 @@ import '@umami/shiso/styles.css';
 import 'highlight.js/styles/github-dark.css';
 import '@/styles/variables.css';
 import '@/styles/global.css';
+import '@/styles/reduced-animations.css';
 
 export default function RootLayout({ children }) {
   return (
@@ -47,6 +49,7 @@ export default function RootLayout({ children }) {
             </Container>
             <Footer />
           </Grid>
+          <IntercomChat />
         </Suspense>
         {process.env.NODE_ENV === 'production' && (
           <Script id="koala">

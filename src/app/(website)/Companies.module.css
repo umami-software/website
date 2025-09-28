@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   gap: 100px;
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 @keyframes scroll {

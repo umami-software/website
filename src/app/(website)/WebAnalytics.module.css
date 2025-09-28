@@ -11,7 +11,7 @@
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 30px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
 }

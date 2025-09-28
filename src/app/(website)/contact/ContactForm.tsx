@@ -11,11 +11,28 @@ export default function ContactForm() {
   };
 
   if (sent) {
-    return <h2 style={{ maxWidth: 400, width: '100%', margin: 'auto', padding: '0 20px', textAlign: 'center' }}>Thank you! We will get in touch shortly.</h2>;
+    return (
+      <div style={{ 
+        textAlign: 'center', 
+        padding: '3rem 1rem',
+        background: 'var(--glass-bg)',
+        border: '1px solid var(--glass-border)',
+        borderRadius: '12px',
+        boxShadow: 'var(--shadow-soft)'
+      }}>
+        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✅</div>
+        <h2 style={{ marginBottom: '1rem', fontSize: '1.5rem', fontWeight: '600' }}>
+          Message Sent Successfully!
+        </h2>
+        <p style={{ color: 'var(--color-text-muted)', fontSize: '1rem', margin: 0 }}>
+          Thank you for reaching out. We'll get back to you within 24 hours.
+        </p>
+      </div>
+    );
   }
 
   return (
-    <Form onSubmit={handleSubmit} style={{ maxWidth: 400, width: '100%', margin: 'auto', padding: '0 20px' }}>
+    <Form onSubmit={handleSubmit} style={{ width: '100%' }}>
       <FormField label="Full name" name="name" rules={{ required: 'Required' }}>
         <TextField placeholder="John Smith" style={{ width: '100%' }} />
       </FormField>
