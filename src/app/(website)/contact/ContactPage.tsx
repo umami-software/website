@@ -126,7 +126,7 @@ export default function ContactPage() {
                   fontWeight: '500',
                   transition: 'all 0.15s ease'
                 }}>
-                  📚 Documentation & Guides
+                  💬 Get Support
                 </a>
                 <a href="/features" style={{
                   display: 'block',
