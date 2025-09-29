@@ -5,43 +5,38 @@ title: Goals report
 Umami Goals is a crucial tool in providing valuable insights into how well your website is meeting its objectives.
 With clear metrics and visualizations, our goals report translates complex data into actionable insights.
 
-The report works by choosing a URL, event, or event data property you want to track and setting a goal to reach across a date range.
+The report works by choosing a Viewed page or Triggered event you want to track. The report will the show conversion rate
+of users that hit that action out of the total number of users within that date range.
 
 ## Parameters
 
-- `Website`: (required) The website you want to run the report on.
-- `Date range`: (required) The date range of the report.
-- `Goals`: (required) URL, event name, or event data property and numerical goal value.
+- `Action`: (required) Viewed page or Triggered event user must hit to count as a conversion.
 
 ## Create a report
 
-### Step 1: Choose a website
+### Step 1: Click on the add Goal button
 
-![image](/images/docs/v3/goals-website.png)
+![image](/images/docs/v3/goal-add.png)
 
-### Step 2: Choose a date range
+### Step 2: Fill out the form details and click the **Save** button.
 
-![image](/images/docs/v3/goals-date-range.png)
+![image](/images/docs/v3/goal-add-form.png)
 
-### Step 3: Choose your goals
+### Choose your action
 
-Click the **plus sign**, choose the goal type (URL, Event, or Event data property) and type in the description and click the **Add** button.
+Choose the action type (Viewed page or Triggered event) and type in the step condition on the goal.
 
-![image](/images/docs/v3/goals-data-type.png)
+![image](/images/docs/v3/goal-action.png)
 
-- **URL**: How many users hit a given page. (example: `/docs`)
-- **Event**: How many users fired off a specific event. (example: `live-demo-button`)
-- **Event data**: Count, average, or sum of an event data property (example: `revenue`)
+Umami supports specific URLs and events.
 
-![image](/images/docs/v3/goals-data-value.png)
+- **Viewed page** : The user visited this specific URL. (example: `/pricing`)
+- **Triggered event** : The user must generate this specific event . (example: `live-demo-button`)
 
-Event data will have additional forms to fill out the property and aggregation type.
+### Step 3: Run report
 
-![image](/images/docs/v3/goals-event-data.png)
+![image](/images/docs/v3/goal-details.png)
 
-### Step 4: Run query and save
+To Edit or Delete a goal click on the ellipsis for that specific goal.
 
-Click **Run Query** to see your results. In order to save your report, add a title and description and click **Save**.
-The report along with its parameters will be saved for future use.
-
-![image](/images/docs/v3/goals-details.png)
+![image](/images/docs/v3/goal-edit.png)
