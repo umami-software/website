@@ -411,6 +411,10 @@
               "url": "/docs/cloud/email-reports"
             },
             {
+              "label": "Notifications",
+              "url": "/docs/cloud/notifications"
+            },
+            {
               "label": "Delete account",
               "url": "/docs/cloud/delete-account"
             }
