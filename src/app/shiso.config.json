@@ -98,6 +98,23 @@
           ]
         },
         {
+          "section": "Filtering",
+          "pages": [
+            {
+              "label": "Overview",
+              "url": "/docs/filter"
+            },
+            {
+              "label": "Segments",
+              "url": "/docs/segment"
+            },
+            {
+              "label": "Cohorts",
+              "url": "/docs/cohort"
+            }
+          ]
+        },
+        {
           "section": "Reports",
           "pages": [
             {
