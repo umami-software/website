@@ -48,7 +48,7 @@ export default function ProductAnalytics() {
           <header>Product analytics</header>
           <h2>Turn user behavior into insights</h2>
           <p>
-            Umami helps you understand why your users do what they do, so you can optimize your
+            Oravo helps you understand why your users do what they do, so you can optimize your
             conversion paths.
           </p>
         </TextBlock>

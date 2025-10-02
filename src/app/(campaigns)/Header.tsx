@@ -7,7 +7,7 @@ import { CLOUD_URL } from '@/lib/constants';
 import styles from './Header.module.css';
 
 export default function Header() {
-  const query = useQueryString({ ref: 'umami-landing-page' });
+  const query = useQueryString({ ref: 'oravo-landing-page' });
 
   return (
     <header className={styles.header}>
@@ -15,7 +15,7 @@ export default function Header() {
       <nav className={styles.links}>
         <Link href="/pricing">Pricing</Link>
       </nav>
-      <div className={styles.button} data-umami-event="lp-get-started-button">
+      <div className={styles.button} data-oravo-event="lp-get-started-button">
         <LinkButton href={`${CLOUD_URL}/signup${query}`} variant="primary">
           Get started
         </LinkButton>

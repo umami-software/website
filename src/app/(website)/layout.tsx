@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { AxiomWebVitals } from 'next-axiom';
 import Header from './Header';
 import Footer from './Footer';
+import IntercomChat from '@/components/IntercomChat';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
           <Script
             defer
             data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
-            data-domains="umami.is"
+            data-domains="oravo.imoogleai.xyz"
             src="/a/script.js"
           />
         )}
@@ -53,6 +54,7 @@ export default function RootLayout({ children }) {
             {`!function(t){if(window.ko)return;window.ko=[],["identify","track","removeListeners","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_c271ea7cda36bf4824350411f24fad0e76b7/sdk.js"),(document.body || document.head).appendChild(n)}();`}
           </Script>
         )}
+        <IntercomChat />
       </body>
       <AxiomWebVitals />
     </html>
@@ -61,10 +63,10 @@ export default function RootLayout({ children }) {
 
 export const metadata: Metadata = {
   title: {
-    template: '%s – Umami',
-    default: 'Umami',
+    template: '%s – Oravo',
+    default: 'Oravo',
   },
   openGraph: {
-    description: 'Umami is a simple, fast, privacy-friendly alternative to Google Analytics.',
+    description: 'Oravo is a simple, fast, privacy-friendly alternative to Google Analytics.',
   },
 };

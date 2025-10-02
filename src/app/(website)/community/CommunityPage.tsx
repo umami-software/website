@@ -1,21 +1,15 @@
 'use client';
 import { Grid, Row, Icon, Column, Heading, Text } from '@umami/react-zen';
 import PageHeader from '@/components/PageHeader';
-import { GITHUB_URL, DISCORD_URL, X_URL, LINKEDIN_URL } from '@/lib/constants';
-import { Github, Discord, X, Linkedin } from 'src/components/svg';
+import { DISCORD_URL, X_URL, LINKEDIN_URL } from '@/lib/constants';
+import { Discord, X, Linkedin } from 'src/components/svg';
 import LinkButton from '@/components/LinkButton';
 
 const items = [
-  {
-    name: 'GitHub',
-    description:
-      'Check out the Umami source code, report issues, request features and join discussions.',
-    url: GITHUB_URL,
-    icon: <Github />,
-  },
+
   {
     name: 'Discord',
-    description: "Chat directly with developers and other users in Umami's Discord channel.",
+    description: "Chat directly with developers and other users in Oravo's Discord channel.",
     url: DISCORD_URL,
     icon: <Discord />,
   },
@@ -56,7 +50,7 @@ export default function CommunityPage() {
               <Heading>{name}</Heading>
             </Row>
             <Text>{description}</Text>
-            <LinkButton href={url} target="_blank" data-umami-event={`community-${name}`}>
+            <LinkButton href={url} target="_blank" data-oravo-event={`community-${name}`}>
               Explore
             </LinkButton>
           </Column>

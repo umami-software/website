@@ -9,7 +9,7 @@ import ContentImage from '@/components/ContentImage';
 import styles from './Creators.module.css';
 
 export default function Creators() {
-  const query = useQueryString({ ref: 'umami-creators' });
+  const query = useQueryString({ ref: 'oravo-creators' });
 
   return (
     <div className={styles.container}>
@@ -44,7 +44,7 @@ export default function Creators() {
           <h2>Effortless analytics</h2>
           <p>
             Stop getting lost by clicking through an endless menu drop-down and sub-menus labyrinth.
-            By default, your Umami analytics dashboard provides a single view of everything you need
+            By default, your Oravo analytics dashboard provides a single view of everything you need
             to know.
           </p>
         </TextBlock>
@@ -52,7 +52,7 @@ export default function Creators() {
           <h2>Visitor insights</h2>
           <p>
             Know all the things you need to know about your audience when they visit your website,
-            including geography, browser, device, and more. Best of all, Umami doesn’t use cookies,
+            including geography, browser, device, and more. Best of all, Oravo doesn’t use cookies,
             so your audience will feel good knowing their privacy is respected when you visit your
             website.
           </p>
@@ -60,7 +60,7 @@ export default function Creators() {
         <TextBlock>
           <h2>No annoying cookie banners</h2>
           <p>
-            Your followers will love not having to opt-in to a Cookie banner. Umami respects your
+            Your followers will love not having to opt-in to a Cookie banner. Oravo respects your
             followers&apos; privacy when they land on your website. It gathers the data you need
             while respecting the privacy of your users. All data is anonymized, and no personal data
             is ever collected.
@@ -69,14 +69,14 @@ export default function Creators() {
         <TextBlock>
           <h2>Track all your websites</h2>
           <p>
-            Quickly and easily add all of your websites to Umami. You can add both main domains and
+            Quickly and easily add all of your websites to Oravo. You can add both main domains and
             sub-domains.
           </p>
         </TextBlock>
         <TextBlock>
           <h2>Mobile-friendly</h2>
           <p>
-            Your Umami dashboarde is optimized for mobile so that, so you can view your website
+            Your Oravo dashboarde is optimized for mobile so that, so you can view your website
             stats from anywhere.
           </p>
         </TextBlock>

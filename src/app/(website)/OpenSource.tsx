@@ -11,8 +11,8 @@ export default function OpenSource() {
         <header>Contribute</header>
         <h2>Powered by open source</h2>
         <p>
-          Umami is proudly open source. Thousands of developers worldwide can share and contribute
-          to the Umami experience.
+          Oravo is proudly open source. Thousands of developers worldwide can share and contribute
+          to the Oravo experience.
         </p>
       </TextBlock>
       <Row alignItems="center" justifyContent="center" gap="3">

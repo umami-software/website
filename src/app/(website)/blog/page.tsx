@@ -12,7 +12,7 @@ export default renderCollection(props => {
     <>
       <PageHeader
         title="Blog"
-        description="Sharing our thoughts on analytics, marketing and open source"
+        description="Sharing our thoughts on analytics and marketing"
       />
       <Shiso {...props} />
     </>

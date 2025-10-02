@@ -6,23 +6,23 @@
 }
 
 .heading.xl {
-  font-size: max(48px, min(5vw, 76px));
+  font-size: max(36px, min(4vw, 56px));
 }
 
 .heading.lg {
-  font-size: max(48px, min(5vw, 64px));
+  font-size: max(32px, min(4vw, 48px));
 }
 
 .heading.md {
-  font-size: max(32px, min(5vw, 48px));
+  font-size: max(28px, min(3vw, 40px));
 }
 
 .heading.sm {
-  font-size: max(24px, min(2vw, 32px));
+  font-size: max(20px, min(2vw, 28px));
 }
 
 .heading.xs {
-  font-size: max(18px, min(2vw, 24px));
+  font-size: max(16px, min(2vw, 20px));
 }
 
 .heading.start {

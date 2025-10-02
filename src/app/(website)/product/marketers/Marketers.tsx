@@ -9,7 +9,7 @@ import ContentImage from '@/components/ContentImage';
 import styles from './Marketers.module.css';
 
 export default function Marketers() {
-  const query = useQueryString({ ref: 'umami-marketers' });
+  const query = useQueryString({ ref: 'oravo-marketers' });
 
   return (
     <div className={styles.container}>
@@ -21,7 +21,7 @@ export default function Marketers() {
               need data instantly.
             </h1>
             <p>
-              With real-time data instantly loading into your Umami web analytics dashboard, the
+              With real-time data instantly loading into your Oravo web analytics dashboard, the
               critical data you need to make decisions is a click away.
             </p>
             <LinkButton href={`${CLOUD_URL}/signup${query}`} size="lg" variant="primary">
@@ -37,15 +37,15 @@ export default function Marketers() {
           <p>
             Instantly understand how your marketing campaigns are performing from a single window.
             No need to endlessly navigate drop-down menus for the report you’re looking for. With
-            Umami, the data you need to understand how your marketing campaigns are performing are
+            Oravo, the data you need to understand how your marketing campaigns are performing are
             all right there with no data lag.
           </p>
         </TextBlock>
         <TextBlock>
           <h2>UTM links welcome</h2>
           <p>
-            Marketers love links with UTM parameters, and so does Umami. If you use UTM links in
-            your marketing campaigns, Umami reports on those UTM parameters. You can view which UTMs
+            Marketers love links with UTM parameters, and so does Oravo. If you use UTM links in
+            your marketing campaigns, Oravo reports on those UTM parameters. You can view which UTMs
             are being clicked in a simple report, or filter other reports using UTM parameters to
             get an even deeper understanding of how your marketing campaigns are performing.
           </p>
@@ -53,7 +53,7 @@ export default function Marketers() {
         <TextBlock>
           <h2>Seriously simple installation and custom events</h2>
           <p>
-            Installing Umami for your clients is as easy as placing a single line of code in the
+            Installing Oravo for your clients is as easy as placing a single line of code in the
             &lt;head&gt; section of your HTML. No complicated, lengthy setups or data streams to
             configure. Just install, and you’re collecting data. Also, add a single code snippet to
             elements on the page you want to track as events for the easiest conversion tracking
@@ -71,7 +71,7 @@ export default function Marketers() {
         <TextBlock>
           <h2>No annoying cookie banners</h2>
           <p>
-            Marketers rejoice! With Umami, you can get rid of the opt-in cookie banner because Umami
+            Marketers rejoice! With Oravo, you can get rid of the opt-in cookie banner because Oravo
             does not use cookies.
           </p>
         </TextBlock>
@@ -79,8 +79,8 @@ export default function Marketers() {
           <h2>Invite the whole team</h2>
           <p>
             Provide managers and executives with a clickable link to view website analytics in their
-            browser without logging in. Or, create a Team within your Umami dashboard and invite
-            your fellow marketing practitioners to log into the Umami admin to set up additional
+            browser without logging in. Or, create a Team within your Oravo dashboard and invite
+            your fellow marketing practitioners to log into the Oravo admin to set up additional
             websites, create custom reports, and more.No messy access controls.
           </p>
         </TextBlock>
