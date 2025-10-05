@@ -1,5 +1,5 @@
 ---
-title: Revenue Report
+title: Revenue
 ---
 
 Umami Revenue allows you to helps track financial performance, measure ROI, and identify which pages or products
@@ -7,13 +7,13 @@ generate the most income. It provides insights into customer behavior, helping o
 and improve conversion rates. By linking revenue data with traffic and user behavior,
 businesses can make informed decisions to boost profitability and plan for future growth.
 
-The report works by aggregating **Revenue** and **Currency** data across a specified time period.
+The insight works by aggregating **Revenue** and **Currency** data across a specified time period.
 
 ## Configuring Revenue
 
 To start collecting revenue data, you will be leveraging tracking an event with dynamic data. This can be done through [tracker functions](https://umami.is/docs/tracker-functions#event-data)
 or [data attributes](https://umami.is/docs/track-events#using-data-attributes). The tracked event must be passed along with the two dynamic data
-properties `revenue` and `currency`. If a currency code (ISO 4217) is not recognized, the report will default to `USD`.
+properties `revenue` and `currency`. If a currency code (ISO 4217) is not recognized, the insight will default to `USD`.
 
 ### Tracker function
 
@@ -54,12 +54,12 @@ Please note that revenue must be passed as a string while using this method.
 
 - `Currency`: (required) The currency of the data to be aggregated.
 
-## Create a report
+## Create a insight
 
 ### Step 1: Choose a currency
 
 ![image](/images/docs/v3/revenue-currency.png)
 
-### Step 2: Run report
+### Step 2: Run insight
 
 ![image](/images/docs/v3/revenue-details.png)

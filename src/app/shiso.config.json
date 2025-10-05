@@ -68,32 +68,8 @@
               "url": "/docs/track-events"
             },
             {
-              "label": "Sessions",
-              "url": "/docs/sessions"
-            },
-            {
-              "label": "Compare",
-              "url": "/docs/compare"
-            },
-            {
-              "label": "Distinct IDs",
-              "url": "/docs/distinct-ids"
-            },
-            {
-              "label": "Tags",
-              "url": "/docs/tags"
-            },
-            {
-              "label": "Teams",
-              "url": "/docs/teams"
-            },
-            {
               "label": "Add a user",
               "url": "/docs/add-a-user"
-            },
-            {
-              "label": "Tracker functions",
-              "url": "/docs/tracker-functions"
             }
           ]
         },
@@ -115,49 +91,100 @@
           ]
         },
         {
-          "section": "Reports",
+          "section": "Identify",
+          "pages": [
+            {
+              "label": "Sessions",
+              "url": "/docs/sessions"
+            },
+            {
+              "label": "Distinct IDs",
+              "url": "/docs/distinct-ids"
+            },
+            {
+              "label": "Tags",
+              "url": "/docs/tags"
+            }
+          ]
+        },
+        {
+          "section": "External Tracking",
+          "pages": [
+            {
+              "label": "Links",
+              "url": "/docs/links"
+            },
+            {
+              "label": "Pixels",
+              "url": "/docs/pixels"
+            }
+          ]
+        },
+        {
+          "section": "Teams",
           "pages": [
             {
               "label": "Overview",
-              "url": "/docs/reports"
+              "url": "/docs/teams"
+            },
+            {
+              "label": "Add a team",
+              "url": "/docs/pixels"
+            }
+          ]
+        },
+        {
+          "section": "Insights",
+          "pages": [
+            {
+              "label": "Overview",
+              "url": "/docs/insights"
+            },
+            {
+              "label": "Compare",
+              "url": "/docs/compare"
             },
             {
               "label": "Breakdown",
-              "url": "/docs/report-breakdown"
+              "url": "/docs/breakdown"
             },
             {
               "label": "Funnel",
-              "url": "/docs/report-funnel"
+              "url": "/docs/funnel"
             },
             {
               "label": "Retention",
-              "url": "/docs/report-retention"
+              "url": "/docs/retention"
             },
             {
               "label": "UTM",
-              "url": "/docs/report-utm"
+              "url": "/docs/utm"
             },
             {
               "label": "Goals",
-              "url": "/docs/report-goals"
+              "url": "/docs/goals"
             },
             {
               "label": "Journey",
-              "url": "/docs/report-journey"
+              "url": "/docs/journey"
             },
             {
               "label": "Revenue",
-              "url": "/docs/report-revenue"
+              "url": "/docs/revenue"
             },
             {
               "label": "Attribution",
-              "url": "/docs/report-attribution"
+              "url": "/docs/attribution"
             }
           ]
         },
         {
           "section": "Configuration",
           "pages": [
+            {
+              "label": "Tracker functions",
+              "url": "/docs/tracker-functions"
+            },
             {
               "label": "Tracker configuration",
               "url": "/docs/tracker-configuration"
@@ -406,18 +433,6 @@
             {
               "label": "Login",
               "url": "/docs/cloud/login"
-            },
-            {
-              "label": "Add a website",
-              "url": "/docs/cloud/add-a-website"
-            },
-            {
-              "label": "Collect data",
-              "url": "/docs/cloud/collect-data"
-            },
-            {
-              "label": "Enable share URL",
-              "url": "/docs/cloud/enable-share-url"
             },
             {
               "label": "Teams",

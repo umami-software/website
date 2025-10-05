@@ -29,11 +29,6 @@ export default function RootLayout({ children }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-        <script
-          defer
-          src="https://postgresql.umami.dev/script.js"
-          data-website-id="8881b177-d76d-415a-a13b-7f7b2d98d02d"
-        ></script>
         {process.env.NODE_ENV === 'production' && (
           <Script
             defer
