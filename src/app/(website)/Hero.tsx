@@ -28,7 +28,7 @@ export default function Hero() {
         </Button>
         <Button size="lg" asChild>
           <a
-            href="https://eu.umami.is/share/LGazGOecbDtaIwDr/umami.is"
+            href="https://cloud.umami.is/share/LGazGOecbDtaIwDr"
             data-umami-event="live-demo-button"
             target="_blank"
             rel="noreferrer"
