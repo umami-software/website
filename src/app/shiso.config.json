@@ -129,7 +129,15 @@
             },
             {
               "label": "Add a team",
-              "url": "/docs/pixels"
+              "url": "/docs/teams-add"
+            },
+            {
+              "label": "Join a team",
+              "url": "/docs/teams-join"
+            },
+            {
+              "label": "Manage a team",
+              "url": "/docs/teams-manage"
             }
           ]
         },
