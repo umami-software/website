@@ -1,7 +1,8 @@
 'use client';
-import { Box, Column, Grid, Heading, Icon, Text, Row } from '@umami/react-zen';
 import GetStartedBanner from '@/components/GetStartedBanner';
 import PageHeader from '@/components/PageHeader';
+import { Box, Column, Grid, Heading, Icon, Row, Text } from '@umami/react-zen';
+import { ChartPie, Grid2x2, LinkIcon, UserPlus } from 'lucide-react';
 import {
   Anonymous,
   Bolt,
@@ -92,11 +93,6 @@ const items = [
         icon: <Language />,
       },
       {
-        title: 'Compare',
-        description: ['See your metric performance compared against previous date ranges.'],
-        icon: <Compare />,
-      },
-      {
         title: 'Filtering',
         description: [
           'Gain further insight into your data by applying filters like country, browser, and URL.',
@@ -145,19 +141,50 @@ const items = [
         icon: <Share />,
       },
       {
-        title: 'Reports',
+        title: 'Insights',
         description: [
-          'Build reports for specific websites and date ranges to cover all your data needs.',
+          'Build insights for specific websites and date ranges to cover all your data needs.',
         ],
         icon: <Graph />,
+      },
+      {
+        title: 'Segments',
+        description: [
+          'Save commonly used filters, so you can quickly reapply them without setting criteria each time',
+        ],
+        icon: <ChartPie />,
+      },
+      {
+        title: 'Cohorts',
+        description: [
+          'Group your users based on specific actions, helping you uncover trends and measure engagement more effectively',
+        ],
+        icon: <UserPlus />,
+      },
+      {
+        title: 'Links',
+        description: [
+          'Monitor and record clicks on URLs to show where visitors come from and how they interact with your links.',
+        ],
+        icon: <LinkIcon />,
+      },
+      {
+        title: 'Pixels',
+        description: ['Embed a tracking pixel anywhere to start collecting data.'],
+        icon: <Grid2x2 />,
       },
     ],
   },
   {
-    title: 'Reports',
+    title: 'Insights',
     description:
-      'Umami comes with out of the box reporting that enables you to gain deep insights from all your website data.',
+      'Umami comes with out of the box insights that enables you to gain deep understanding of all your website data.',
     items: [
+      {
+        title: 'Compare',
+        description: ['See your metric performance compared against previous date ranges.'],
+        icon: <Compare />,
+      },
       {
         title: 'Breakdown',
         description: ['Dive deeper into your data by using segments and filters.'],

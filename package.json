@@ -43,6 +43,7 @@
     "glob": "^10.4.5",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
+    "lucide-react": "^0.543.0",
     "next": "^15.3.3",
     "next-axiom": "^1.9.1",
     "next-mdx-remote": "^4.4.1",
