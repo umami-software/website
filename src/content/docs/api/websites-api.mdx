@@ -19,45 +19,42 @@ POST /api/websites/:websiteId/reset
 
 ## GET /api/websites
 
-Returns all tracked websites.
+Returns all user websites.
 
 **Parameters**
 
-- `query`: (optional string) Search text.
+- `includeTeams`: (boolean) Set to true if you want to include websites where you are the team owner.
+- `search`: (optional string) Search text.
 - `page`: (optional number, default 1) Determines page.
 - `pageSize`: (optional string) Determines how many results to return.
-- `orderBy`: (optional string, default `name`) Order by column name.
 
 **Sample response**
 
 ```json
 {
-    "data": [
-        {
-            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-            "name": "Example",
-            "domain": "example.com",
-            "shareId": null,
-            "resetAt": null,
-            "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-            "teamId": null,
-            "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-            "createdAt": "0000-00-00T00:00:00.000Z",
-            "updatedAt": "0000-00-00T00:00:00.000Z",
-            "deletedAt": null,
-            "user": {
-                "username": "xxxxxxx@xxxx.xxxx",
-                "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-            }
-        }
-    ],
-    "count": 2,
-    "page": 1,
-    "pageSize": 10,
-    "orderBy": "name"
+  "data": [
+    {
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "name": "Example",
+      "domain": "example.com",
+      "shareId": null,
+      "resetAt": null,
+      "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "teamId": null,
+      "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "createdAt": "0000-00-00T00:00:00.000Z",
+      "updatedAt": "0000-00-00T00:00:00.000Z",
+      "deletedAt": null,
+      "user": {
+        "username": "bob@aol.com",
+        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      }
+    }
+  ],
+  "count": 1,
+  "page": 1,
+  "pageSize": 10
 }
-
-
 ```
 
 ---
@@ -68,18 +65,18 @@ Creates a website.
 
 **Parameters**
 
-- `domain`: (string) The full domain of the tracked website.
 - `name`: (string) The name of the website in Umami.
+- `domain`: (string) The full domain of the tracked website.
 - `shareId`: (string | optional) A unique string to enable a share url. Set `null` to unshare.
 - `teamId`: (string | optional) The ID of the team the website will be created under.
-
+- `id`: (string | optional) Force a UUID assignment to the website.
 
 **Request body**
 
-```json 
+```json
 {
-    "name": "Test",
-    "domain": "example.com"
+  "name": "Test",
+  "domain": "example.com"
 }
 ```
 
@@ -87,17 +84,17 @@ Creates a website.
 
 ```json
 {
-    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "name": "Test",
-    "domain": "example.com",
-    "shareId": null,
-    "resetAt": null,
-    "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "teamId": null,
-    "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "createdAt": "0000-00-00T00:00:00.000Z",
-    "updatedAt": "0000-00-00T00:00:00.000Z",
-    "deletedAt": null
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "name": "Test",
+  "domain": "example.com",
+  "shareId": null,
+  "resetAt": null,
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "teamId": null,
+  "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "createdAt": "0000-00-00T00:00:00.000Z",
+  "updatedAt": "0000-00-00T00:00:00.000Z",
+  "deletedAt": null
 }
 ```
 
@@ -117,8 +114,10 @@ Gets a website by ID.
   "shareId": null,
   "resetAt": null,
   "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "createdAt": "0000-00-00T00:00:00.000Z",
-  "updatedAt": null,
+  "teamId": null,
+  "createdBy": "133660ed-e51c-4ed9-84aa-c86654460cae",
+  "createdAt": "2025-10-10T22:01:06.201Z",
+  "updatedAt": "2025-10-10T22:02:02.220Z",
   "deletedAt": null
 }
 ```
@@ -139,8 +138,8 @@ Updates a website.
 
 ```json
 {
-    "name": "Test",
-    "domain": "domain.com"
+  "name": "Test",
+  "domain": "domain.com"
 }
 ```
 
@@ -148,17 +147,17 @@ Updates a website.
 
 ```json
 {
-    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "name": "Test",
-    "domain": "domain.com",
-    "shareId": null,
-    "resetAt": null,
-    "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "teamId": null,
-    "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "createdAt": "0000-00-00T00:00:00.000Z",
-    "updatedAt": "0000-00-00T00:00:00.000Z",
-    "deletedAt": null
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "name": "Example",
+  "domain": "example.com",
+  "shareId": null,
+  "resetAt": null,
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "teamId": null,
+  "createdBy": "133660ed-e51c-4ed9-84aa-c86654460cae",
+  "createdAt": "2025-10-10T22:01:06.201Z",
+  "updatedAt": "2025-10-10T22:02:02.220Z",
+  "deletedAt": null
 }
 ```
 
@@ -170,8 +169,10 @@ Deletes a website.
 
 **Sample response**
 
-```text
-ok
+```json
+{
+  "ok": true
+}
 ```
 
 ---
@@ -182,6 +183,8 @@ Resets a website by removing all data related to the website.
 
 **Sample response**
 
-```text
-ok
+```json
+{
+  "ok": true
+}
 ```

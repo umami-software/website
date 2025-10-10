@@ -14,11 +14,13 @@ For **Umami Cloud** send a POST to `https://cloud.umami.is/api/send`.
 `payload`
 
 - `hostname`: (string) Name of host.
-- `language`: (string) Language of visitor (ex. "en-US")
-- `referrer`: (string) Referrer URL.
 - `screen`: (string) Screen resolution (ex. "1920x1080")
-- `title`: (string) Page title.
+- `language`: (string) Language of visitor (ex. "en-US")
 - `url`: (string) Page URL.
+- `referrer`: (string) Referrer URL.
+- `title`: (string) Page title.
+- `tag`: (string) Additional tag description.
+- `id`: (string) Session identifier.
 - `website`: (string) Website ID.
 - `name`: (string) Name of the event.
 - `data`: (object | optional) Additional data for the event.
@@ -57,8 +59,8 @@ your request won't be registered.
 ```json
 {
   "cache": "xxxxxxxxxxxxxxx",
-  "sessionId": "a0a1cf53-a031-5990-ad95-466df4491110",
-  "visitId": "b294a78b-d93a-503b-b9e1-1e615945eef5"
+  "sessionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "visitId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
 ```
 

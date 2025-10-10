@@ -285,6 +285,10 @@
           "section": "Endpoints",
           "pages": [
             {
+              "label": "Admin",
+              "url": "/docs/api/admin-api"
+            },
+            {
               "label": "Users",
               "url": "/docs/api/users-api"
             },

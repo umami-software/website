@@ -26,7 +26,7 @@ Get informations based on your auth token.
   "authKey": "auth:xxxxxxxxxxxxxxx",
   "shareToken": null,
   "user": {
-    "id": "7c78d7e8-cb8e-4c96-9bfc-708379297dda",
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "username": "member",
     "role": "user",
     "createdAt": "2025-10-08T18:03:19.823Z",
@@ -47,23 +47,23 @@ Get all your teams.
 {
   "data": [
     {
-      "id": "8d974959-7a5e-46e3-8443-59946351bef7",
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "name": "Umami Software, Inc",
-      "accessCode": "team_qunhu7q6NVZDu6Cg",
+      "accessCode": "xxxxxxxx",
       "logoUrl": null,
       "createdAt": "2025-09-24T22:08:35.259Z",
       "updatedAt": "2025-09-24T22:08:35.259Z",
       "deletedAt": null,
       "members": [
         {
-          "id": "ab928e9d-4b05-472b-bcba-dbf87404cebf",
-          "teamId": "8d974959-7a5e-46e3-8443-59946351bef7",
-          "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+          "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
           "role": "team-owner",
           "createdAt": "2025-09-24T22:08:35.302Z",
           "updatedAt": "2025-09-24T22:08:35.302Z",
           "user": {
-            "id": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             "username": "admin"
           }
         }
@@ -86,26 +86,30 @@ Get all your teams.
 
 Get all your websites.
 
+**Parameters**
+
+- `includeTeams`: (boolean) Set to true if you want to include websites where you are the team owner.
+
 **Sample response**
 
 ```json
 {
   "data": [
     {
-      "id": "41720b1e-1462-4f98-8f2f-6e7671fba7a8",
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "name": "My Website",
       "domain": "mywebsite.com",
       "shareId": null,
       "resetAt": null,
-      "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+      "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "teamId": null,
-      "createdBy": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+      "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "createdAt": "2025-09-16T19:59:32.957Z",
       "updatedAt": "2025-09-16T19:59:32.957Z",
       "deletedAt": null,
       "user": {
         "username": "admin",
-        "id": "41e2b680-648e-4b09-bcd7-3e2b10c06264"
+        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
       }
     }
   ],

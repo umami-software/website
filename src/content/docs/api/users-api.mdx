@@ -4,13 +4,14 @@ title: Users
 
 Operations around User management.
 
+These endpoints are only available for self-hosted instances for **admin** users and not **Umami Cloud**.
+
 **Endpoints**
 
 ```text
 POST /api/users
-GET /api/admin/users
-POST /api/users/:userId
 GET /api/users/:userId
+POST /api/users/:userId
 DELETE /api/users/:userId
 GET /api/users/:userId/websites
 GET /api/users/:userId/teams
@@ -27,14 +28,15 @@ Creates a user.
 - `username`: (string) The user's username.
 - `password`: (string) The user's password.
 - `role`: (string) Choose from `admin` | `user` | `view-only`.
+- `id`: (string | optional) Force a UUID assignment to the user.
 
 **Request body**
 
 ```json
 {
-  "username": "admin",
+  "username": "member",
   "password": "umami",
-  "role": "admin"
+  "role": "user"
 }
 ```
 
@@ -42,29 +44,10 @@ Creates a user.
 
 ```json
 {
-    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "username": "demo",
-    "role": "user"
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "username": "member",
+  "role": "user"
 }
-```
-
----
-
-## GET /api/admin/users
-
-Returns all users. **Admin access is required.**
-
-**Sample response**
-
-```json
-[
-  {
-    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "username": "admin",
-    "role": "admin",
-    "createdAt": "0000-00-00T00:00:00.000Z"
-  }
-]
 ```
 
 ---
@@ -77,10 +60,10 @@ Gets a user by ID.
 
 ```json
 {
-  "username" : "xxxxxxxxxxx",
-  "id" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "role" : "user",
-  "createdAt" : "0000-00-00T00:00:00.000Z"
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "username": "member",
+  "role": "user",
+  "createdAt": "2025-10-10T23:09:16.524Z"
 }
 ```
 
@@ -94,7 +77,7 @@ Updates a user.
 
 - `username`: (optional string) The user's username.
 - `password`: (optional string) The user's password.
-- `role`: (optional string) Select from  `admin`, `user`, `view-only`.
+- `role`: (optional string) Select from `admin`, `user`, `view-only`.
 
 **Request body**
 
@@ -125,8 +108,10 @@ Deletes a user.
 
 **Sample response**
 
-```text
-ok
+```json
+{
+  "ok": true
+}
 ```
 
 ---
@@ -137,10 +122,10 @@ Gets all websites that belong to a user.
 
 **Parameters**
 
-- `query`: (optional string) Search text.
+- `includeTeams`: (boolean) Set to true if you want to include websites where you are the team owner.
+- `search`: (optional string) Search text.
 - `page`: (optional number, default 1) Determines page.
 - `pageSize`: (optional string) Determines how many results to return.
-- `orderBy`: (optional string, default `name`) Order by column name.
 
 **Sample response**
 
@@ -149,26 +134,25 @@ Gets all websites that belong to a user.
   "data": [
     {
       "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "updatedAt": "0000-00-00T00:00:00.00Z",
-      "user": {
-        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "username": "xxxxx"
-      },
-      "domain": "xxxxxxx",
-      "teamId": null,
+      "name": "My Website",
+      "domain": "mywebsite.com",
+      "shareId": null,
       "resetAt": null,
       "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "teamId": null,
       "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "shareId": "xxxxxxxxxxxxx",
-      "createdAt": "0000-00-00T00:00:00.00Z",
-      "name": "xxxxx",
-      "deletedAt": null
+      "createdAt": "2025-09-16T19:59:32.957Z",
+      "updatedAt": "2025-09-16T19:59:32.957Z",
+      "deletedAt": null,
+      "user": {
+        "username": "admin",
+        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      }
     }
   ],
-  "orderBy": "name",
-  "count": 3,
-  "pageSize": 10,
-  "page": 1
+  "count": 1,
+  "page": 1,
+  "pageSize": 20
 }
 ```
 
@@ -180,10 +164,8 @@ Gets all teams that belong to a user.
 
 **Parameters**
 
-- `query`: (string | optional) Search text.
 - `page`: (number | optional, default 1) Determines page.
 - `pageSize`: (string | optional) Determines how many results to return.
-- `orderBy`: (string | optional, default `name`) Order by column name.
 
 **Sample response**
 
@@ -191,35 +173,35 @@ Gets all teams that belong to a user.
 {
   "data": [
     {
-      "_count": {
-        "website": 0,
-        "teamUser": 1
-      },
       "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "name": "Umami Software, Inc",
+      "accessCode": "team_qunhu7q6NVZDu6Cg",
       "logoUrl": null,
+      "createdAt": "2025-09-24T22:08:35.259Z",
+      "updatedAt": "2025-09-24T22:08:35.259Z",
       "deletedAt": null,
-      "teamUser": [
+      "members": [
         {
+          "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
           "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
           "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-          "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
           "role": "team-owner",
-          "updatedAt": "0000-00-00T00:00:00.00Z",
-          "createdAt": "0000-00-00T00:00:00.00Z",
+          "createdAt": "2025-09-24T22:08:35.302Z",
+          "updatedAt": "2025-09-24T22:08:35.302Z",
           "user": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-            "username": "xxxxx"
+            "username": "admin"
           }
         }
       ],
-      "accessCode": "team_xxxxxxxxxxx",
-      "createdAt": "0000-00-00T00:00:00.00Z",
-      "updatedAt": "0000-00-00T00:00:00.00Z",
-      "name": "xxxxxx"
+      "_count": {
+        "websites": 0,
+        "members": 1
+      }
     }
   ],
-  "count": 8,
-  "pageSize": 10,
-  "page": 1
+  "count": 1,
+  "page": 1,
+  "pageSize": 20
 }
 ```
