@@ -22,20 +22,20 @@ Get informations based on your auth token.
 
 ```json
 {
-    "user": {
-        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "username": "xxxxxxxxxx@xxxxxx.xxxx",
-        "role": "xxxx",
-        "createdAt": "0000-00-00T00:00:00.000Z",
-        "isAdmin": false
-    },
-    "grant": [],
-    "token": "xxxxxxxxxxxxxxx",
-    "shareToken": null
+  "token": "xxxxxxxxxxxxxxx",
+  "authKey": "auth:xxxxxxxxxxxxxxx",
+  "shareToken": null,
+  "user": {
+    "id": "7c78d7e8-cb8e-4c96-9bfc-708379297dda",
+    "username": "member",
+    "role": "user",
+    "createdAt": "2025-10-08T18:03:19.823Z",
+    "isAdmin": false
+  }
 }
 ```
 
----
+---S
 
 ## GET /api/me/teams
 
@@ -45,38 +45,38 @@ Get all your teams.
 
 ```json
 {
-    "data": [
+  "data": [
+    {
+      "id": "8d974959-7a5e-46e3-8443-59946351bef7",
+      "name": "Umami Software, Inc",
+      "accessCode": "team_qunhu7q6NVZDu6Cg",
+      "logoUrl": null,
+      "createdAt": "2025-09-24T22:08:35.259Z",
+      "updatedAt": "2025-09-24T22:08:35.259Z",
+      "deletedAt": null,
+      "members": [
         {
-            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-            "name": "Marketing",
-            "accessCode": "team_dGKtGX56FbAcWb1i",
-            "logoUrl": null,
-            "createdAt": "0000-00-00T00:00:00.000Z",
-            "updatedAt": "0000-00-00T00:00:00.000Z",
-            "deletedAt": null,
-            "teamUser": [
-                {
-                    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-                    "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-                    "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-                    "role": "team-owner",
-                    "createdAt": "0000-00-00T00:00:00.000Z",
-                    "updatedAt": "0000-00-00T00:00:00.000Z",
-                    "user": {
-                        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-                        "username": "admin"
-                    }
-                }
-            ],
-            "_count": {
-                "website": 5,
-                "teamUser": 1
-            }
+          "id": "ab928e9d-4b05-472b-bcba-dbf87404cebf",
+          "teamId": "8d974959-7a5e-46e3-8443-59946351bef7",
+          "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+          "role": "team-owner",
+          "createdAt": "2025-09-24T22:08:35.302Z",
+          "updatedAt": "2025-09-24T22:08:35.302Z",
+          "user": {
+            "id": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+            "username": "admin"
+          }
         }
-    ],
-    "count": 8,
-    "page": 1,
-    "pageSize": 10
+      ],
+      "_count": {
+        "websites": 0,
+        "members": 1
+      }
+    }
+  ],
+  "count": 1,
+  "page": 1,
+  "pageSize": 20
 }
 ```
 
@@ -90,28 +90,27 @@ Get all your websites.
 
 ```json
 {
-    "data": [
-        {
-            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-            "name": "xxxx",
-            "domain": "xxxx.xxxx",
-            "shareId": "adfa90w3rlasdf",
-            "resetAt": null,
-            "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-            "teamId": null,
-            "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-            "createdAt": "0000-00-00T00:00:00.000Z",
-            "updatedAt": "0000-00-00T00:00:00.000Z",
-            "deletedAt": null,
-            "user": {
-                "username": "xxxxx@xxxxx.xxx",
-                "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx"
-            }
-        }
-    ],
-    "count": 3,
-    "page": 1,
-    "pageSize": 10,
-    "orderBy": "name"
+  "data": [
+    {
+      "id": "41720b1e-1462-4f98-8f2f-6e7671fba7a8",
+      "name": "My Website",
+      "domain": "mywebsite.com",
+      "shareId": null,
+      "resetAt": null,
+      "userId": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+      "teamId": null,
+      "createdBy": "41e2b680-648e-4b09-bcd7-3e2b10c06264",
+      "createdAt": "2025-09-16T19:59:32.957Z",
+      "updatedAt": "2025-09-16T19:59:32.957Z",
+      "deletedAt": null,
+      "user": {
+        "username": "admin",
+        "id": "41e2b680-648e-4b09-bcd7-3e2b10c06264"
+      }
+    }
+  ],
+  "count": 1,
+  "page": 1,
+  "pageSize": 20
 }
 ```

@@ -4,9 +4,37 @@ title: API changelog
 
 This page documents changes made to **api.umami.is**.
 
-## 2025-08-07
+## 2025-10-07
 
-- `GET /websites/[id]/metrics`: The parameter `url` has been changed to `path`.
+**Filters**
+
+- Changed filter `url` to `path`.
+- Changed filter `host` to `hostname`
+
+**Websites**
+
+- `GET /websites/[id]/metrics`: The `type` parameter `url` has been changed to `path`.
+- `GET /websites/[id]/stats`: The reponse data structure has changed.
+
+```json
+{
+  "pageviews": 34210,
+  "visitors": 9401,
+  "visits": 12726,
+  "bounces": 7918,
+  "totaltime": 5214477,
+  "comparison": {
+    "pageviews": 30818,
+    "visitors": 8776,
+    "visits": 11756,
+    "bounces": 7396,
+    "totaltime": 1704355
+  }
+}
+```
+
+**Reports**
+
 - `POST /reports`: The `insights` report has been changed to `breakdown`.
 
 ## 2024-09-09
