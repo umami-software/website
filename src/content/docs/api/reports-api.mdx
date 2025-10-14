@@ -8,51 +8,114 @@ Using reports throught the api.
 
 ```text
 GET /api/reports
+POST /api/reports
 GET /api/reports/:reportId
-GET /api/reports/revenue
-POST /api/reports/utm
-POST /api/reports/revenue
+POST /api/reports/:reportId
+DELETE /api/reports/:reportId
+POST /api/reports/attribution
+POST /api/reports/breakdown
+POST /api/reports/funnel
+POST /api/reports/goals
 POST /api/reports/journey
 POST /api/reports/retention
-POST /api/reports/insights
-POST /api/reports/goals
-POST /api/reports/funnel
-POST /api/reports/attribution
-DELETE /api/reports/:reportId
+POST /api/reports/revenue
+POST /api/reports/utm
 ```
 
 ---
 
 ## GET /api/reports
 
-Get all reports your personal reports.
+Get all reports by website ID.
 
 **Parameters**
-- `websiteId` : (string | optional) Filter for website.
+
+- `websiteId` : (string) Your website id.
+- `type`: (string | optional) Report type `attribution` | `breakdown` | `funnel` | `goal` | `journey` | `retention` | `revenue` | `utm`.
+- `page`: (optional number, default 1) Determines page.
+- `pageSize`: (optional string) Determines how many results to return.
 
 **Sample response**
 
 ```json
 {
-  "data" : [
+  "data": [
     {
-      "userId" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "parameters" : "{\"fields\":[{\"name\":\"url\",\"type\":\"string\",\"label\":\"URL\"}],\"filters\":[],\"websiteId\":\"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"dateRange\":{\"startDate\":\"0000-00-00T00:00:00.000Z\",\"endDate\":\"0000-00-00T00:00:00.000Z\",\"unit\":\"day\",\"offset\":0,\"num\":90,\"value\":\"90day\"}}",
-      "createdAt" : "0000-00-00T00:00:00.000Z",
-      "id" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "website" : {
-        "domain" : "example.com"
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "type": "goal",
+      "name": "Visited /pricing",
+      "description": "Test",
+      "parameters": {
+        "type": "path",
+        "value": "/pricing"
       },
-      "updatedAt" : "0000-00-00T00:00:00.000Z",
-      "type" : "breakdown",
-      "websiteId" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "name" : "Breakdown",
-      "description" : ""
+      "createdAt": "2025-07-23T17:28:55.192Z",
+      "updatedAt": "2025-10-07T07:46:57.918Z"
+    },
+    {
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "type": "goal",
+      "name": "Triggered live-demo-button",
+      "description": "",
+      "parameters": {
+        "type": "event",
+        "value": "live-demo-button"
+      },
+      "createdAt": "2025-10-07T07:46:24.120Z",
+      "updatedAt": "2025-10-07T07:46:24.120Z"
     }
   ],
-  "count" : 1,
-  "pageSize" : 10,
-  "page" : 1
+  "count": 2,
+  "page": 1,
+  "pageSize": 20
+}
+```
+
+---
+
+## POST /api/reports
+
+Creates a report.
+
+**Parameters**
+
+- `websiteId` : (string) Your website id.
+- `type`: (string) Report type `attribution` | `breakdown` | `funnel` | `goal` | `journey` | `retention` | `revenue` | `utm`.
+- `name`: (string) Name of report.
+- `description`: (string | optional) Description of report.
+- `parameters`: (object) Parameters for report.
+
+**Request body**
+
+```json
+{
+  "name": "Triggered Login-button ",
+  "parameters": { "type": "event", "value": "login-button-header" },
+  "type": "goal",
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+}
+```
+
+**Sample response**
+
+```json
+{
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "type": "goal",
+  "name": "Triggered Login-button ",
+  "description": "",
+  "parameters": {
+    "type": "event",
+    "value": "login-button-header"
+  },
+  "createdAt": "2025-10-14T00:12:33.203Z",
+  "updatedAt": "2025-10-14T00:12:33.203Z"
 }
 ```
 
@@ -60,99 +123,49 @@ Get all reports your personal reports.
 
 ## GET /api/reports/:reportId
 
-Get report details by id
+Gets a report by ID.
 
 **Sample response**
 
 ```json
 {
-  "userId" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "parameters" : {
-    "fields" : [
-      {
-        "name" : "url",
-        "type" : "string",
-        "label" : "URL"
-      }
-    ],
-    "dateRange" : {
-      "num" : 90,
-      "value" : "90day",
-      "startDate" : "0000-00-00T00:00:00.000Z",
-      "endDate" : "0000-00-00T00:00:00.000Z",
-      "unit" : "day",
-      "offset" : 0
-    },
-    "filters" : [
-
-    ],
-    "websiteId" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "type": "goal",
+  "name": "Triggered Login-button ",
+  "description": "",
+  "parameters": {
+    "type": "event",
+    "value": "login-button-header"
   },
-  "createdAt" : "0000-00-00T00:00:00.000Z",
-  "id" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "updatedAt" : "0000-00-00T00:00:00.000Z",
-  "type" : "breakdown",
-  "websiteId" : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "name" : "Breakdown",
-  "description" : ""
+  "createdAt": "2025-10-14T00:12:33.203Z",
+  "updatedAt": "2025-10-14T00:12:33.203Z"
 }
 ```
 
 ---
 
-## GET /api/reports/revenue
+## POST /api/reports/:reportId
 
-Get currency for given range. Needed for Revenue and optional in Attribution reports.
-
-**Parameters**
-
-- `websiteId` : (string) Your website id 
-- `startDate` : (string) Start date formatted  (`Thu Mar 27 2025 00:00:00 GMT+0100 (Central European Standard Time)`)
-- `endDate` : (string) End date formatted (`Tue Jun 24 2025 23:59:59 GMT+0200 (Central European Summer Time)`)
-
-**Sample response**
-
-```json
-[
-    { "currency": "EUR" },
-    {  "currency": "FR" }, 
-    { "currency": "USD" }
-]
-
-```
-
----
-
-## POST /api/reports/utm
-
-Track your campaigns through UTM parameters.
+Updates a report.
 
 **Parameters**
 
-- `dateRange`
-    - `startDate` : (number) Date (in ms) of start date
-    - `endDate` : (number) Date (in ms) of end date
-    - `num` : (number)
-    - `offset` : (number)
-    - `unit` : (string)
-    - `value` : (string)
-- `timezone` : (string) Timezone
-- `websiteId` (string) Your website id
+- `websiteId` : (string) Your website id.
+- `type`: (string) Report type `attribution` | `breakdown` | `funnel` | `goal` | `journey` | `retention` | `revenue` | `utm`.
+- `name`: (string) Name of report.
+- `description`: (string | optional) Description of report.
+- `parameters`: (object) Parameters for report.
 
 **Request body**
 
 ```json
 {
-    "websiteId":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "dateRange":{
-        "startDate":"2025-05-17T22:00:00.000Z",
-        "endDate":"2025-05-24T21:59:59.999Z",
-        "unit":"day",
-        "offset":0,
-        "num":1,
-        "value":"0week"
-    },
-    "timezone":"Europe/Berlin"
+  "name": "Triggered Login-button ",
+  "parameters": { "type": "event", "value": "login-button-header" },
+  "type": "goal",
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
 ```
 
@@ -160,173 +173,52 @@ Track your campaigns through UTM parameters.
 
 ```json
 {
-    "utm_source" : {
-        "test" : 1
-    },
-    "utm_content" : {
-        "email-newsletter-1" : 1124
-    },
-    "utm_term" : {
-        "software" : 4
-    },
-    "utm_medium" : {
-        "test" : 1
-    },
-    "utm_campaign" : {
-        "test" : 1
-    },
-    "utm_agid" : {
-        "12345" : 5
-    },
-    "utm_banner" : {
-        "12345" : 1
-    }
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "type": "goal",
+  "name": "Triggered Login-button ",
+  "description": "",
+  "parameters": {
+    "type": "event",
+    "value": "login-button-header"
+  },
+  "createdAt": "2025-10-14T00:12:33.203Z",
+  "updatedAt": "2025-10-14T00:12:33.203Z"
 }
 ```
 
 ---
 
-## POST /api/reports/revenue
+## DELETE /api/reports/:reportId
 
-Look into your revenue data and how users are spending.
-
-**Parameters**
-
-- `dateRange`
-    - `startDate` : (number) Date (in ms) of start date
-    - `endDate` : (number) Date (in ms) of end date
-    - `num` : (number)
-    - `offset` : (number)
-    - `unit` : (string)
-    - `value` : (string)
-- `timezone` : (string) Timezone
-- `websiteId` : (string) Your website id
-- `currency` : (string)
-
-**Request body**
-
-```json
-{
-    "websiteId":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "dateRange":{
-        "startDate":"2025-05-19T14:00:00.000Z",
-        "endDate":"2025-05-20T13:59:59.999Z",
-        "offset":0,
-        "num":24,
-        "unit":"hour",
-        "value":"24hour"
-    },
-    "currency":"USD",
-    "timezone":"Europe/Berlin"
-}
-```
+Deletes a report.
 
 **Sample response**
 
 ```json
 {
-    "chart": [
-        {
-            "x": "",
-            "t": "2025-05-19T15:00:00Z",
-            "y": 289.94
-        }
-    ],
-    "country": [
-        {
-            "name": "DE",
-            "value": 289.94
-        }
-    ],
-    "total": {
-        "sum": 289.94,
-        "count": 6,
-        "unique_count": 1
-    },
-    "table": [
-        {
-            "currency": "USD",
-            "sum": 289.94,
-            "count": 6,
-            "unique_count": 1
-        }
-    ]
+  "ok": true
 }
 ```
 
 ---
 
-## POST /api/reports/journey
+## POST /api/reports/attribution
 
-Understand how users nagivate through your website.
-
-**Parameters**
-
-- `dateRange`
-    - `startDate` : (number) Date (in ms) of start date
-    - `endDate` : (number) Date (in ms) of end date
-    - `num` : (number)
-    - `offset` : (number)
-    - `unit` : (string)
-    - `value` : (string)
-- `steps`: (number) Number of steps from 3 to 7
-- `timezone` : (string) Timezone
-- `websiteId` : (string) Your website id
-- `startStep` : (string | optional)
-- `endStep` : (string | optional)
-
-**Request body**
-
-```json
-{
-    "steps": 5,
-    "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "dateRange": {
-        "startDate": "2025-05-17T22:00:00.000Z",
-        "endDate": "2025-05-24T21:59:59.999Z",
-        "unit": "day",
-        "offset": 0,
-        "num": 1,
-        "value": "0week"
-    },
-    "timezone": "Europe/Berlin"
-}
-```
-
-**Sample response**
-
-```json
-[
-    {
-        "items": ["index.html", "outbound-link-click", null, null],
-        "count": 1
-    },
-    {
-        "items": ["/", null],
-        "count": 1
-    },
-    {
-        "items": ["index.html", "open-app-store", null],
-        "count": 1
-    }
-]
-```
-
----
-
-## POST /api/reports/retention
-
-Measure your website stickiness by tracking how often users return.
+See how users engage with your marketing and what drives conversions.
 
 **Parameters**
 
 - `dateRange`
-    - `startDate` : (number) Date (in ms) of start date
-    - `endDate` : (number) Date (in ms) of end date
-    - `num` : (number)
-    - `offset` : (number)
-    - `unit` : (string)
-    - `value` : (string)
+  - `startDate` : (number) Date (in ms) of start date
+  - `endDate` : (number) Date (in ms) of end date
+  - `num` : (number)
+  - `offset` : (number)
+  - `unit` : (string)
+  - `value` : (string)
+- `model` : (string) Choose between `firstClick` and `lastClick`
+- `steps` : (array) Only one step.
 - `timezone` : (string) Timezone
 - `websiteId` : (string) Your website id
 
@@ -334,54 +226,95 @@ Measure your website stickiness by tracking how often users return.
 
 ```json
 {
-    "dateRange":{
-        "startDate":"2025-04-30T22:00:00.000Z",
-        "endDate":"2025-05-31T21:59:59.999Z",
-        "value":"range:1746050400000:1748728799999",
-        "offset":0,
-        "unit":"day"
-    },
-    "websiteId":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "timezone":"Europe/Berlin"
+  "model": "firstClick",
+  "steps": [
+    {
+      "type": "event",
+      "value": "/"
+    }
+  ],
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "dateRange": {
+    "startDate": "2025-05-13T22:00:00.000Z",
+    "endDate": "2025-05-20T21:59:59.999Z",
+    "unit": "day",
+    "offset": 0,
+    "num": 7,
+    "value": "7day"
+  },
+  "timezone": "Europe/Berlin"
 }
 ```
 
 **Sample response**
 
 ```json
-[
+{
+  "paidAds": [
     {
-        "date": "2025-05-18T22:00:00Z",
-        "day": 0,
-        "visitors": 1,
-        "returnVisitors": 1,
-        "percentage": 100
-    }, 
-    {
-        "date": "2025-05-19T22:00:00Z",
-        "day": 0,
-        "visitors": 1,
-        "returnVisitors": 1,
-        "percentage": 100
+      "name": "Google",
+      "value": 129
     }
-]
+  ],
+  "referrer": [
+    {
+      "name": "google.com",
+      "value": 21273
+    }
+  ],
+  "utm_source": [
+    {
+      "name": "yahoo.de",
+      "value": 671
+    }
+  ],
+  "utm_content": [
+    {
+      "name": "info-email-3",
+      "value": 24
+    }
+  ],
+  "utm_medium": [
+    {
+      "name": "outbound-email",
+      "value": 150
+    }
+  ],
+  "utm_campaign": [
+    {
+      "name": "analytics",
+      "value": 69
+    }
+  ],
+  "utm_term": [
+    {
+      "name": "software",
+      "value": 2
+    }
+  ],
+  "total": {
+    "visitors": 79106,
+    "visits": 105066,
+    "pageviews": 136971
+  }
+}
 ```
 
 ---
 
-## POST /api/reports/insights
+## POST /api/reports/breakdown
 
 Dive deeper into your data by using segments and filters.
 
 **Parameters**
 
 - `dateRange`
-    - `startDate` : (number) Date (in ms) of start date
-    - `endDate` : (number) Date (in ms) of end date
-    - `num` : (number)
-    - `offset` : (number)
-    - `unit` : (string)
-    - `value` : (string)
+  - `startDate` : (number) Date (in ms) of start date
+  - `endDate` : (number) Date (in ms) of end date
+  - `num` : (number)
+  - `offset` : (number)
+  - `unit` : (string)
+  - `value` : (string)
 - `fields` : (array) Minumum one is required.
 - `filters` : (array)
 - `timezone` : (string) Timezone
@@ -417,70 +350,14 @@ Dive deeper into your data by using segments and filters.
 
 ```json
 [
-    {
-        "views": 8,
-        "visitors": 3,
-        "visits": 3,
-        "bounces": 1,
-        "totaltime": 242,
-        "country": "US"
-    }
-]
-```
-
----
-
-## POST /api/reports/goals
-
-Track your goals for pageviews and events.
-
-**Parameters**
-
-- `dateRange`
-    - `startDate` : (number) Date (in ms) of start date
-    - `endDate` : (number) Date (in ms) of end date
-    - `num` : (number)
-    - `offset` : (number)
-    - `unit` : (string)
-    - `value` : (string)
-- `goals` : (array) Minumum two required.
-- `timezone` : (string) Timezone
-- `websiteId` : (string) Your website id
-
-**Request body**
-
-```json
-{
-    "goals":[
-        {
-            "type":"url",
-            "value":"/",
-            "goal":10
-        }
-    ],
-    "websiteId":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "dateRange":{
-        "startDate":"2025-05-17T22:00:00.000Z",
-        "endDate":"2025-05-24T21:59:59.999Z",
-        "unit":"day",
-        "offset":0,
-        "num":1,
-        "value":"0week"
-    },
-    "timezone":"Europe/Berlin"
-}
-```
-
-**Sample response**
-
-```json
-[
-    {
-        "type": "url",
-        "value": "/",
-        "goal": 10,
-        "result": 10
-    }
+  {
+    "views": 8,
+    "visitors": 3,
+    "visits": 3,
+    "bounces": 1,
+    "totaltime": 242,
+    "country": "US"
+  }
 ]
 ```
 
@@ -493,42 +370,42 @@ Understand the conversion and drop-off rate of users.
 **Parameters**
 
 - `dateRange`
-    - `startDate` : (number) Date (in ms) of start date
-    - `endDate` : (number) Date (in ms) of end date
-    - `num` : (number)
-    - `offset` : (number)
-    - `unit` : (string)
-    - `value` : (string)
+  - `startDate` : (number) Date (in ms) of start date
+  - `endDate` : (number) Date (in ms) of end date
+  - `num` : (number)
+  - `offset` : (number)
+  - `unit` : (string)
+  - `value` : (string)
 - `steps` : (array) Minumum two required.
 - `timezone` : (string) Timezone
 - `websiteId` : (string) Your website id
-- `window` : (number) 
+- `window` : (number)
 
 **Request body**
 
 ```json
 {
-    "window":60,
-    "steps":[
-        {
-            "type":"url",
-            "value":"/"
-        },
-        {
-            "type":"url",
-            "value":"/contact"
-        }
-    ],
-    "websiteId":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "dateRange":{
-        "startDate":"2025-05-13T22:00:00.000Z",
-        "endDate":"2025-05-20T21:59:59.999Z",
-        "unit":"day",
-        "offset":0,
-        "num":7,
-        "value":"7day"
+  "window": 60,
+  "steps": [
+    {
+      "type": "url",
+      "value": "/"
     },
-    "timezone":"Europe/Berlin"
+    {
+      "type": "url",
+      "value": "/contact"
+    }
+  ],
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "dateRange": {
+    "startDate": "2025-05-13T22:00:00.000Z",
+    "endDate": "2025-05-20T21:59:59.999Z",
+    "unit": "day",
+    "offset": 0,
+    "num": 7,
+    "value": "7day"
+  },
+  "timezone": "Europe/Berlin"
 }
 ```
 
@@ -536,35 +413,34 @@ Understand the conversion and drop-off rate of users.
 
 ```json
 [
-    {
-        "type": "url",
-        "value": "/",
-        "visitors": 1,
-        "previous": 0,
-        "dropped": 0,
-        "dropoff": null,
-        "remaining": 1
-    }
+  {
+    "type": "url",
+    "value": "/",
+    "visitors": 1,
+    "previous": 0,
+    "dropped": 0,
+    "dropoff": null,
+    "remaining": 1
+  }
 ]
 ```
 
 ---
 
-## POST /api/reports/attribution
+## POST /api/reports/goals
 
-See how users engage with your marketing and what drives conversions.
+Track your goals for pageviews and events.
 
 **Parameters**
 
 - `dateRange`
-    - `startDate` : (number) Date (in ms) of start date
-    - `endDate` : (number) Date (in ms) of end date
-    - `num` : (number)
-    - `offset` : (number)
-    - `unit` : (string)
-    - `value` : (string)
-- `model` : (string) Choose between `firstClick` and `lastClick`
-- `steps` : (array) Only one step.
+  - `startDate` : (number) Date (in ms) of start date
+  - `endDate` : (number) Date (in ms) of end date
+  - `num` : (number)
+  - `offset` : (number)
+  - `unit` : (string)
+  - `value` : (string)
+- `goals` : (array) Minumum two required.
 - `timezone` : (string) Timezone
 - `websiteId` : (string) Your website id
 
@@ -572,23 +448,204 @@ See how users engage with your marketing and what drives conversions.
 
 ```json
 {
-    "model":"firstClick",
-    "steps":[
-        {
-            "type":"event",
-            "value":"/"
-        }
-    ],
-    "websiteId":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "dateRange":{
-        "startDate":"2025-05-13T22:00:00.000Z",
-        "endDate":"2025-05-20T21:59:59.999Z",
-        "unit":"day",
-        "offset":0,
-        "num":7,
-        "value":"7day"
-    },
-    "timezone":"Europe/Berlin"
+  "goals": [
+    {
+      "type": "url",
+      "value": "/",
+      "goal": 10
+    }
+  ],
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "dateRange": {
+    "startDate": "2025-05-17T22:00:00.000Z",
+    "endDate": "2025-05-24T21:59:59.999Z",
+    "unit": "day",
+    "offset": 0,
+    "num": 1,
+    "value": "0week"
+  },
+  "timezone": "Europe/Berlin"
+}
+```
+
+**Sample response**
+
+```json
+[
+  {
+    "type": "url",
+    "value": "/",
+    "goal": 10,
+    "result": 10
+  }
+]
+```
+
+---
+
+## POST /api/reports/journey
+
+Understand how users nagivate through your website.
+
+**Parameters**
+
+- `dateRange`
+  - `startDate` : (number) Date (in ms) of start date
+  - `endDate` : (number) Date (in ms) of end date
+  - `num` : (number)
+  - `offset` : (number)
+  - `unit` : (string)
+  - `value` : (string)
+- `steps`: (number) Number of steps from 3 to 7
+- `timezone` : (string) Timezone
+- `websiteId` : (string) Your website id
+- `startStep` : (string | optional)
+- `endStep` : (string | optional)
+
+**Request body**
+
+```json
+{
+  "steps": 5,
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "dateRange": {
+    "startDate": "2025-05-17T22:00:00.000Z",
+    "endDate": "2025-05-24T21:59:59.999Z",
+    "unit": "day",
+    "offset": 0,
+    "num": 1,
+    "value": "0week"
+  },
+  "timezone": "Europe/Berlin"
+}
+```
+
+**Sample response**
+
+```json
+[
+  {
+    "items": ["index.html", "outbound-link-click", null, null],
+    "count": 1
+  },
+  {
+    "items": ["/", null],
+    "count": 1
+  },
+  {
+    "items": ["index.html", "open-app-store", null],
+    "count": 1
+  }
+]
+```
+
+---
+
+## GET /api/reports/revenue
+
+Get currency for given range. Needed for Revenue and optional in Attribution reports.
+
+**Parameters**
+
+- `websiteId` : (string) Your website id.
+- `startDate` : (string) Start date formatted (`Thu Mar 27 2025 00:00:00 GMT+0100 (Central European Standard Time)`)
+- `endDate` : (string) End date formatted (`Tue Jun 24 2025 23:59:59 GMT+0200 (Central European Summer Time)`)
+
+**Sample response**
+
+```json
+[{ "currency": "EUR" }, { "currency": "FR" }, { "currency": "USD" }]
+```
+
+---
+
+## POST /api/reports/retention
+
+Measure your website stickiness by tracking how often users return.
+
+**Parameters**
+
+- `dateRange`
+  - `startDate` : (number) Date (in ms) of start date
+  - `endDate` : (number) Date (in ms) of end date
+  - `num` : (number)
+  - `offset` : (number)
+  - `unit` : (string)
+  - `value` : (string)
+- `timezone` : (string) Timezone
+- `websiteId` : (string) Your website id
+
+**Request body**
+
+```json
+{
+  "dateRange": {
+    "startDate": "2025-04-30T22:00:00.000Z",
+    "endDate": "2025-05-31T21:59:59.999Z",
+    "value": "range:1746050400000:1748728799999",
+    "offset": 0,
+    "unit": "day"
+  },
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "timezone": "Europe/Berlin"
+}
+```
+
+**Sample response**
+
+```json
+[
+  {
+    "date": "2025-05-18T22:00:00Z",
+    "day": 0,
+    "visitors": 1,
+    "returnVisitors": 1,
+    "percentage": 100
+  },
+  {
+    "date": "2025-05-19T22:00:00Z",
+    "day": 0,
+    "visitors": 1,
+    "returnVisitors": 1,
+    "percentage": 100
+  }
+]
+```
+
+---
+
+## POST /api/reports/revenue
+
+Look into your revenue data and how users are spending.
+
+**Parameters**
+
+- `dateRange`
+  - `startDate` : (number) Date (in ms) of start date
+  - `endDate` : (number) Date (in ms) of end date
+  - `num` : (number)
+  - `offset` : (number)
+  - `unit` : (string)
+  - `value` : (string)
+- `timezone` : (string) Timezone
+- `websiteId` : (string) Your website id
+- `currency` : (string)
+
+**Request body**
+
+```json
+{
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "dateRange": {
+    "startDate": "2025-05-19T14:00:00.000Z",
+    "endDate": "2025-05-20T13:59:59.999Z",
+    "offset": 0,
+    "num": 24,
+    "unit": "hour",
+    "value": "24hour"
+  },
+  "currency": "USD",
+  "timezone": "Europe/Berlin"
 }
 ```
 
@@ -596,64 +653,94 @@ See how users engage with your marketing and what drives conversions.
 
 ```json
 {
-    "paidAds" : [
-        {
-            "name" : "Google",
-            "value" : 129
-        }
-    ],
-    "referrer" : [
-        {
-            "name" : "google.com",
-            "value" : 21273
-        }
-    ],
-    "utm_source" : [
-        {
-            "name" : "yahoo.de",
-            "value" : 671
-        }
-    ],
-    "utm_content" : [
-        {
-            "name" : "info-email-3",
-            "value" : 24
-        }
-    ],
-    "utm_medium" : [
-        {
-            "name" : "outbound-email",
-            "value" : 150
-        }
-    ],
-    "utm_campaign" : [
-        {
-            "name" : "analytics",
-            "value" : 69
-        }
-    ],
-    "utm_term" : [
-        {
-            "name" : "software",
-            "value" : 2
-        }
-    ],
-    "total" : {
-        "visitors" : 79106,
-        "visits" : 105066,
-        "pageviews" : 136971
+  "chart": [
+    {
+      "x": "",
+      "t": "2025-05-19T15:00:00Z",
+      "y": 289.94
     }
+  ],
+  "country": [
+    {
+      "name": "DE",
+      "value": 289.94
+    }
+  ],
+  "total": {
+    "sum": 289.94,
+    "count": 6,
+    "unique_count": 1
+  },
+  "table": [
+    {
+      "currency": "USD",
+      "sum": 289.94,
+      "count": 6,
+      "unique_count": 1
+    }
+  ]
 }
 ```
 
 ---
 
-## DELETE /api/reports/:reportId
+## POST /api/reports/utm
 
-Delete report with given id.
+Track your campaigns through UTM parameters.
+
+**Parameters**
+
+- `dateRange`
+  - `startDate` : (number) Date (in ms) of start date
+  - `endDate` : (number) Date (in ms) of end date
+  - `num` : (number)
+  - `offset` : (number)
+  - `unit` : (string)
+  - `value` : (string)
+- `timezone` : (string) Timezone
+- `websiteId` (string) Your website id
+
+**Request body**
+
+```json
+{
+  "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "dateRange": {
+    "startDate": "2025-05-17T22:00:00.000Z",
+    "endDate": "2025-05-24T21:59:59.999Z",
+    "unit": "day",
+    "offset": 0,
+    "num": 1,
+    "value": "0week"
+  },
+  "timezone": "Europe/Berlin"
+}
+```
 
 **Sample response**
 
-```text
-ok
+```json
+{
+  "utm_source": {
+    "test": 1
+  },
+  "utm_content": {
+    "email-newsletter-1": 1124
+  },
+  "utm_term": {
+    "software": 4
+  },
+  "utm_medium": {
+    "test": 1
+  },
+  "utm_campaign": {
+    "test": 1
+  },
+  "utm_agid": {
+    "12345": 5
+  },
+  "utm_banner": {
+    "12345": 1
+  }
+}
 ```
