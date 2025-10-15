@@ -8,13 +8,35 @@ Operations around Events and Event data.
 
 ```text
 GET /api/websites/:websiteId/events
+GET /api/websites/:websiteId/event-data/:eventId
 GET /api/websites/:websiteId/event-data/events
 GET /api/websites/:websiteId/event-data/fields
+GET /api/websites/:websiteId/event-data/properties
 GET /api/websites/:websiteId/event-data/values
 GET /api/websites/:websiteId/event-data/stats
 ```
 
 ---
+
+## Filters
+
+All Endpoints marked with `filters` can now be filtered with the parameters below.
+
+**Parameters**
+
+- `path`: (string | optional) Name of URL.
+- `referrer`: (string | optional) Name of referrer.
+- `title`: (string | optional) Name of page title.
+- `browser`: (string | optional) Name of browser.
+- `os`: (string | optional) Name of operating system.
+- `device`: (string | optional) Name of device (ex. Mobile)
+- `country`: (string | optional) Name of country.
+- `region`: (string | optional) Name of region/state/province.
+- `city`: (string | optional) Name of city.
+- `hostname`: (string | optional) Name of hostname.
+- `tag`: (string | optional) Name of tag.
+- `segment`: (uuid | optional) UUID of segment.
+- `cohort`: (uuid | optional) UUID of cohort.
 
 ## GET /api/websites/:websiteId/events
 
@@ -24,10 +46,10 @@ Gets website event details within a given time range.
 
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
-- `query`: (string | string) Search text.
-- `page`: (number | optional, default 1) Determines page.
-- `pageSize`: (string | optional) Determines how many results to return.
-- `orderBy`: (string | optional) Order by column name.
+- `search`: (string | optional) Search text.
+- `page`: (optional number, default 1) Determines page.
+- `pageSize`: (number | optional, default 20) Determines how many results to return.
+- `filters`: Can accept filter parameters.
 
 **Sample response**
 
@@ -38,35 +60,88 @@ Gets website event details within a given time range.
       "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "sessionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "createdAt": "0000-00-00T00:00:00Z",
-      "urlPath": "/docs/api/authentication",
+      "createdAt": "2025-10-15T16:26:28Z",
+      "hostname": "umami.is",
+      "urlPath": "/docs/api",
       "urlQuery": "",
-      "referrerPath": "/docs/api",
+      "referrerPath": "",
       "referrerQuery": "",
       "referrerDomain": "",
-      "pageTitle": "Overview – Umami",
+      "country": "US",
+      "city": "Scott",
+      "device": "desktop",
+      "os": "Mac OS",
+      "browser": "chrome",
+      "pageTitle": "API – Docs - Umami",
       "eventType": 1,
-      "eventName": ""
+      "eventName": "",
+      "hasData": 0
     },
     {
       "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "sessionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "createdAt": "0000-00-00T00:00:00Z",
-      "urlPath": "/",
-      "urlQuery": "utm_source=apollo&utm_medium=outbound-email&utm_campaign=founders",
-      "referrerPath": "",
+      "createdAt": "2025-10-15T16:26:23Z",
+      "hostname": "umami.is",
+      "urlPath": "/docs/sessions",
+      "urlQuery": "",
+      "referrerPath": "/docs/distinct-ids",
       "referrerQuery": "",
-      "referrerDomain": "",
-      "pageTitle": "Umami",
-      "eventType": 1,
-      "eventName": ""
+      "referrerDomain": "umami.is",
+      "country": "PL",
+      "city": "Warsaw",
+      "device": "desktop",
+      "os": "Mac OS",
+      "browser": "chrome",
+      "pageTitle": "Sessions – Docs - Umami",
+      "eventType": 2,
+      "eventName": "login-button-header",
+      "hasData": 0
     }
   ],
-  "count": 1000,
+  "count": 2,
   "page": 1,
   "pageSize": 20
 }
+```
+
+---
+
+## GET /api/websites/:websiteId/event-data/:eventId
+
+Gets event-data for a individual event
+
+**Sample response**
+
+```json
+[
+  {
+    "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "sessionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "eventId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "urlPath": "/",
+    "eventName": "revenue-demo",
+    "dataKey": "currency",
+    "stringValue": "USD",
+    "numberValue": null,
+    "dateValue": null,
+    "dataType": 1,
+    "createdAt": "2025-10-10T12:31:03Z"
+  },
+  {
+    "websiteId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "sessionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "eventId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "urlPath": "/",
+    "eventName": "revenue-demo",
+    "dataKey": "revenue",
+    "stringValue": "40.0000",
+    "numberValue": 40,
+    "dateValue": null,
+    "dataType": 2,
+    "createdAt": "2025-10-10T12:31:03Z"
+  }
+]
 ```
 
 ---
@@ -79,7 +154,8 @@ Gets event data names, properties, and counts
 
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
-- `event`: (optional) Event name filter.
+- `event`: (string | optional) Event name filter.
+- `filters`: Can accept filter parameters.
 
 **Sample response**
 
@@ -114,9 +190,9 @@ Gets event data property and value counts within a given time range.
 
 **Parameters**
 
-- `websiteId`: (uuid) Website key identifier.
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
+- `filters`: Can accept filter parameters.
 
 **Sample response**
 
@@ -151,6 +227,35 @@ Gets event data property and value counts within a given time range.
 
 ---
 
+## GET /api/websites/:websiteId/event-data/properties
+
+Gets event name and property counts for a website.
+
+**Parameters**
+
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
+- `filters`: Can accept filter parameters.
+
+**Sample response**
+
+```json
+[
+  {
+    "eventName": "revenue-demo",
+    "propertyName": "revenue",
+    "total": 122
+  },
+  {
+    "eventName": "revenue-demo",
+    "propertyName": "currency",
+    "total": 122
+  }
+]
+```
+
+---
+
 ## GET /api/websites/:websiteId/event-data/values
 
 Gets event data counts for a given event and property
@@ -159,15 +264,22 @@ Gets event data counts for a given event and property
 
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
-- `eventName`: Event name.
-- `propertyName`: Property name.
+- `eventName`: (string) Event name.
+- `propertyName`: (string) Property name.
+- `filters`: Can accept filter parameters.
 
 **Sample response**
 
 ```json
 [
-  { "value": "female", "total": 4 },
-  { "value": "male", "total": 1 }
+  {
+    "value": "Male",
+    "total": 28
+  },
+  {
+    "value": "Female",
+    "total": 26
+  }
 ]
 ```
 
@@ -175,12 +287,13 @@ Gets event data counts for a given event and property
 
 ## GET /api/websites/:websiteId/event-data/stats
 
-Gets summarized website events, fields, and records within a given time range.
+Gets aggregated website events, properties, and records within a given time range.
 
 **Parameters**
 
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
+- `filters`: Can accept filter parameters.
 
 **Sample response**
 
@@ -188,7 +301,7 @@ Gets summarized website events, fields, and records within a given time range.
 [
   {
     "events": 16,
-    "fields": 13,
+    "properties": 13,
     "records": 26
   }
 ]
