@@ -32,10 +32,10 @@ If successful you should get a response like the following:
 }
 ```
 
-Save the token value and send an `Authorization` header with all your data requests with the value `Bearer <token>`. Your request header should look something like this:
+Save the token value and send a `x-umami-api-key: <token>` header along with all your data requests. Your request header should look something like this:
 
 ```http request
-Authorization: Bearer api_eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
+Ax-umami-api-key: api_eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
 ```
 
 For example, with `curl` it would look like this:
@@ -43,7 +43,7 @@ For example, with `curl` it would look like this:
 ```shell
 curl https://{yourserver}/api/websites
    -H "Accept: application/json"
-   -H "Authorization: Bearer <token>"
+   -H "x-umami-api-key: <token>"
 ```
 
 The authorization token is expected with every API call that requires permissions.
