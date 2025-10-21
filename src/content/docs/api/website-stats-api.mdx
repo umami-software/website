@@ -8,11 +8,36 @@ Operations around Website statistics.
 
 ```text
 GET /api/websites/:websiteId/active
-GET /api/websites/:websiteId/events
-GET /api/websites/:websiteId/pageviews
+GET /api/websites/:websiteId/events/series
 GET /api/websites/:websiteId/metrics
+GET /api/websites/:websiteId/pageviews
 GET /api/websites/:websiteId/stats
 ```
+
+---
+
+## Filters
+
+All Endpoints marked with `filters` can now be filtered with the parameters below.
+
+**Parameters**
+
+- `path`: (string | optional) Name of URL.
+- `referrer`: (string | optional) Name of referrer.
+- `title`: (string | optional) Name of page title.
+- `query`: (string | optional) Name of query parameter.
+- `browser`: (string | optional) Name of browser.
+- `os`: (string | optional) Name of operating system.
+- `device`: (string | optional) Name of device (ex. Mobile)
+- `country`: (string | optional) Name of country.
+- `region`: (string | optional) Name of region/state/province.
+- `city`: (string | optional) Name of city.
+- `hostname`: (string | optional) Name of hostname.
+- `tag`: (string | optional) Name of tag.
+- `segment`: (uuid | optional) UUID of segment.
+- `cohort`: (uuid | optional) UUID of cohort.
+
+---
 
 **Unit Parameter**
 
@@ -50,47 +75,38 @@ Gets events within a given time range.
 
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
-- `unit`: Time unit (year | month | hour | day).
+- `unit`: Time unit (`year` | `month` | `hour` | `day`).
 - `timezone`: Timezone (ex. America/Los_Angeles).
-- `url`: (optional) Name of URL.
-- `referrer`: (optional) Name of referrer.
-- `title`: (optional) Name of page title.
-- `host`: (optional) Name of hostname.
-- `os`: (optional) Name of operating system.
-- `browser`: (optional) Name of browser.
-- `device`: (optional) Name of device (ex. Mobile)
-- `country`: (optional) Name of country.
-- `region`: (optional) Name of region/state/province.
-- `city`: (optional) Name of city.
+- `filters`: Can accept filter parameters.
 
 **Sample response**
 
 ```json
 [
-  { 
-    "x": "live-demo-button", 
-    "t": "2023-04-12T22:00:00Z", 
-    "y": 1 
+  {
+    "x": "live-demo-button",
+    "t": "2023-04-12T22:00:00Z",
+    "y": 1
   },
   {
-    "x": "get-started-button", 
-    "t": "2023-04-12T22:00:00Z", 
-    "y": 5 
+    "x": "get-started-button",
+    "t": "2023-04-12T22:00:00Z",
+    "y": 5
   },
-  { 
-    "x": "get-started-button", 
+  {
+    "x": "get-started-button",
     "t": "2023-04-12T23:00:00Z",
-    "y": 4 
+    "y": 4
   },
   {
-    "x": "live-demo-button", 
-    "t": "2023-04-12T23:00:00Z", 
-    "y": 4 
+    "x": "live-demo-button",
+    "t": "2023-04-12T23:00:00Z",
+    "y": 4
   },
-  { 
-    "x": "social-Discord", 
-    "t": "2023-04-13T00:00:00Z", 
-    "y": 1 
+  {
+    "x": "social-Discord",
+    "t": "2023-04-13T00:00:00Z",
+    "y": 1
   }
 ]
 ```
@@ -98,6 +114,65 @@ Gets events within a given time range.
 - `x`: Event name.
 - `t`: Timestamp.
 - `y`: Number of events.
+
+---
+
+## GET /api/websites/:websiteId/metrics
+
+Gets metrics for a given time range.
+
+**Parameters**
+
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
+- `unit`: Time unit (year | month | hour | day).
+- `timezone`: Timezone (ex. America/Los_Angeles).
+- `type`: Metrics type.
+- `filters`: Can accept filter parameters.
+- `limit`: (optional, default 500) Number of rows returned.
+- `offset`: (optional, default 0) Number of ows to skip.
+
+**Available Types**
+
+`path` | `entry` | `exit` | `title` | `query` | `referrer` | `channel` | `domain` | `country` | `region` | `region` | `city` | `browser` | `os` | `device` | `language` | `screen` | `event` | `hostname` | `tag`
+
+**Sample response**
+
+```json
+[
+  {
+    "x": "Mac OS",
+    "y": 1918
+  },
+  {
+    "x": "Windows 10",
+    "y": 1413
+  },
+  {
+    "x": "iOS",
+    "y": 464
+  },
+  {
+    "x": "Android OS",
+    "y": 301
+  },
+  {
+    "x": "Linux",
+    "y": 296
+  },
+  {
+    "x": "Windows 7",
+    "y": 29
+  },
+  {
+    "x": "Chrome OS",
+    "y": 12
+  }
+]
+```
+
+- `x`: Unique value, depending on metric type.
+- `y`: Number of visitors.
 
 ---
 
@@ -111,46 +186,46 @@ Gets pageviews within a given time range.
 - `endAt`: Timestamp (in ms) of end date.
 - `unit`: Time unit (year | month | hour | day).
 - `timezone`: Timezone (ex. America/Los_Angeles).
-- `url`: (optional) Name of URL.
-- `referrer`: (optional) Name of referrer.
-- `title`: (optional) Name of page title.
-- `host`: (optional) Name of hostname.
-- `os`: (optional) Name of operating system.
-- `browser`: (optional) Name of browser.
-- `device`: (optional) Name of device (ex. Mobile)
-- `country`: (optional) Name of country.
-- `region`: (optional) Name of region/state/province.
-- `city`: (optional) Name of city.
+- `compare`: (string | optional) Comparison value `prev`| `yoy`.
+- `filters`: Can accept filter parameters.
 
 **Sample response**
 
 ```json
 {
   "pageviews": [
-    { 
-      "x": "2020-04-20 01:00:00", 
-      "y": 3 
+    {
+      "x": "2025-10-19T07:00:00Z",
+      "y": 4129
     },
-    { 
-      "x": "2020-04-20 02:00:00", 
-      "y": 7 
+    {
+      "x": "2025-10-20T07:00:00Z",
+      "y": 6105
+    },
+    {
+      "x": "2025-10-21T07:00:00Z",
+      "y": 4936
     }
   ],
   "sessions": [
-    { 
-      "x": "2020-04-20 01:00:00", 
-      "y": 2
+    {
+      "x": "2025-10-19T07:00:00Z",
+      "y": 1397
     },
-    { 
-      "x": "2020-04-20 02:00:00", 
-      "y": 4 
+    {
+      "x": "2025-10-20T07:00:00Z",
+      "y": 1880
+    },
+    {
+      "x": "2025-10-21T07:00:00Z",
+      "y": 1469
     }
   ]
 }
 ```
 
 - `x`: Timestamp.
-- `y`: Number of visitors.
+- `y`: Number of pageviews or visitors.
 
 ---
 
@@ -162,96 +237,31 @@ Gets summarized website statistics.
 
 - `startAt`: Timestamp (in ms) of starting date.
 - `endAt`: Timestamp (in ms) of end date.
-- `url`: (optional) Name of URL.
-- `referrer`: (optional) Name of referrer.
-- `title`: (optional) Name of page title.
-- `query`: (optional) Name of query.
-- `event`: (optional) Name of event.
-- `host`: (optional) Name of hostname.
-- `os`: (optional) Name of operating system.
-- `browser`: (optional) Name of browser.
-- `device`: (optional) Name of device (ex. Mobile)
-- `country`: (optional) Name of country.
-- `region`: (optional) Name of region/state/province.
-- `city`: (optional) Name of city.
+- `unit`: Time unit (year | month | hour | day).
+- `timezone`: Timezone (ex. America/Los_Angeles).
+- `filters`: Can accept filter parameters.
 
 **Sample response**
 
 ```json
 {
-  "pageviews": { 
-    "value": 3018, 
-    "prev": 3508 
-  },
-  "visitors": {
-    "value": 847, 
-    "prev": 910 
-  },
-  "visits": { 
-    "value": 984, 
-    "prev": 1080 
-  },
-  "bounces": {
-    "value": 537, 
-    "prev": 628 
-  },
-  "totaltime": { 
-    "value": 150492, 
-    "prev": 164713 
+  "pageviews": 15171,
+  "visitors": 4415,
+  "visits": 5680,
+  "bounces": 3567,
+  "totaltime": 809968,
+  "comparison": {
+    "pageviews": 38675,
+    "visitors": 10568,
+    "visits": 14595,
+    "bounces": 9364,
+    "totaltime": 2182387
   }
 }
 ```
 
 - `pageviews`: Pages hits
 - `visitors`: Number of unique visitors
-- `visits`: Number of sessions
+- `visits`: Number of unique visits
 - `bounces`: Number of visitors who only visit a single page
 - `totaltime`: Time spent on the website
-
----
-
-## GET /api/websites/:websiteId/metrics
-
-Gets metrics for a given time range.
-
-**Parameters**
-
-- `startAt`: Timestamp (in ms) of starting date.
-- `endAt`: Timestamp (in ms) of end date.
-- `type`: Metrics type (url | referrer | browser | os | device | country | event).
-- `url`: (optional) Name of URL.
-- `referrer`: (optional) Name of referrer.
-- `title`: (optional) Name of page title.
-- `query`: (optional) Name of query.
-- `host`: (optional) Name of hostname.
-- `os`: (optional) Name of operating system.
-- `browser`: (optional) Name of browser.
-- `device`: (optional) Name of device (ex. Mobile)
-- `country`: (optional) Name of country.
-- `region`: (optional) Name of region/state/province.
-- `city`: (optional) Name of city.
-- `language`: (optional) Name of language.
-- `event`: (optional) Name of event.
-- `limit`: (optional, default 500) Number of events returned.
-
-**Sample response**
-
-```json
-[
-  { 
-    "x": "/", 
-    "y": 46 
-  },
-  { 
-    "x": "/docs", 
-    "y": 17 
-  },
-  { 
-    "x": "/download", 
-    "y": 14 
-  }
-]
-```
-
-- `x`: Unique value, depending on metric type (url | referrer | browser | os | device | country | event).
-- `y`: Number of visitors.

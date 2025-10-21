@@ -13,8 +13,8 @@ POST /api/teams/join
 GET /api/teams/:teamId
 POST /api/teams/:teamId
 DELETE /api/teams/:teamId
-POST /api/teams/:teamId/users
 GET /api/teams/:teamId/users
+POST /api/teams/:teamId/users
 GET /api/teams/:teamId/users/:userId
 POST /api/teams/:teamId/users/:userId
 DELETE /api/teams/:teamId/users/:userId
@@ -298,7 +298,7 @@ Add a user to a team.
 **Parameters**
 
 - `userId`: ID of user to be added.
-- `role`: Role for user permission `team-member`| `team-view-only` | `team-manager`.
+- `role`: Team role for user (`team-member`| `team-view-only` | `team-manager`).
 
 **Request body**
 
@@ -349,7 +349,7 @@ Update a user's role on a team.
 
 **Parameters**
 
-- `role`: Role for user access `member` | `view-only` | `team-manager`.
+- `role`: Team role for user (`team-member`| `team-view-only` | `team-manager`).
 
 **Request body**
 
@@ -380,8 +380,10 @@ Remove a user from a team.
 
 **Sample response**
 
-```text
-ok
+```json
+{
+  "ok": true
+}
 ```
 
 ---
@@ -392,10 +394,9 @@ Get all websites that belong to a team.
 
 **Parameters**
 
-- `query`: (optional string) Search text.
+- `search`: (optional string) Search text.
 - `page`: (optional number, default 1) Determines page.
 - `pageSize`: (optional string) Determines how many results to return.
-- `orderBy`: (optional string, default `name`) Order by column name.
 
 **Sample response**
 
@@ -404,15 +405,15 @@ Get all websites that belong to a team.
   "data": [
     {
       "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "name": "Example",
-      "domain": "example.com",
-      "shareId": null,
+      "name": "aol",
+      "domain": "aol.com",
+      "shareId": "xxxxxxxxxxxx",
       "resetAt": null,
       "userId": null,
       "teamId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "createdAt": "0000-00-00T00:00:00.000Z",
-      "updatedAt": "0000-00-00T00:00:00.000Z",
+      "createdAt": "2020-07-19T06:53:33.482Z",
+      "updatedAt": "2024-06-24T05:00:00.279Z",
       "deletedAt": null,
       "createUser": {
         "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
@@ -422,6 +423,6 @@ Get all websites that belong to a team.
   ],
   "count": 1,
   "page": 1,
-  "pageSize": 10
+  "pageSize": 20
 }
 ```
