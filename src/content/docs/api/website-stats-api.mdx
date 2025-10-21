@@ -10,6 +10,7 @@ Operations around Website statistics.
 GET /api/websites/:websiteId/active
 GET /api/websites/:websiteId/events/series
 GET /api/websites/:websiteId/metrics
+GET /api/websites/:websiteId/metrics/expanded
 GET /api/websites/:websiteId/pageviews
 GET /api/websites/:websiteId/stats
 ```
@@ -173,6 +174,79 @@ Gets metrics for a given time range.
 
 - `x`: Unique value, depending on metric type.
 - `y`: Number of visitors.
+
+## GET /api/websites/:websiteId/metrics/expanded
+
+Gets expanded metrics for a given time range.
+
+**Parameters**
+
+- `startAt`: Timestamp (in ms) of starting date.
+- `endAt`: Timestamp (in ms) of end date.
+- `unit`: Time unit (year | month | hour | day).
+- `timezone`: Timezone (ex. America/Los_Angeles).
+- `type`: Metrics type.
+- `filters`: Can accept filter parameters.
+- `limit`: (optional, default 500) Number of rows returned.
+- `offset`: (optional, default 0) Number of ows to skip.
+
+**Available Types**
+
+`path` | `entry` | `exit` | `title` | `query` | `referrer` | `channel` | `domain` | `country` | `region` | `region` | `city` | `browser` | `os` | `device` | `language` | `screen` | `event` | `hostname` | `tag`
+
+**Sample response**
+
+```json
+[
+  {
+    "name": "Mac OS",
+    "pageviews": 74020,
+    "visitors": 16982,
+    "visits": 24770,
+    "bounces": 15033,
+    "totaltime": 149156302
+  },
+  {
+    "name": "Windows 10",
+    "pageviews": 52252,
+    "visitors": 12858,
+    "visits": 20089,
+    "bounces": 12720,
+    "totaltime": 137208105
+  },
+  {
+    "name": "iOS",
+    "pageviews": 10029,
+    "visitors": 4364,
+    "visits": 5139,
+    "bounces": 3578,
+    "totaltime": 23482267
+  },
+  {
+    "name": "Android OS",
+    "pageviews": 8147,
+    "visitors": 3122,
+    "visits": 3854,
+    "bounces": 2610,
+    "totaltime": 20347972
+  },
+  {
+    "name": "Linux",
+    "pageviews": 12462,
+    "visitors": 3000,
+    "visits": 4278,
+    "bounces": 2630,
+    "totaltime": 26331069
+  }
+]
+```
+
+- `name`: Unique value, depending on metric type.
+- `pageviews`: Pages hits
+- `visitors`: Number of unique visitors
+- `visits`: Number of unique visits
+- `bounces`: Number of visitors who only visit a single page
+- `totaltime`: Time spent on the website
 
 ---
 
