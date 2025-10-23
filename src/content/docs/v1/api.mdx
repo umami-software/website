@@ -30,10 +30,10 @@ If successful you should get a response like the following:
 }
 ```
 
-Save the token value and send an `Authorization` header with all your data requests with the value `Bearer <token>`. Your request header should look something like this:
+Save the token value and send a `x-umami-api-key: <token>` header along with all your data requests. Your request header should look something like this:
 
 ```http request
-Authorization: Bearer eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
+x-umami-api-key: api_eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
 ```
 
 For example, with `curl` it would look like this:
@@ -41,7 +41,7 @@ For example, with `curl` it would look like this:
 ```shell
 curl https://yoursever/api/websites
    -H "Accept: application/json"
-   -H "Authorization: Bearer <token>"
+   -H "x-umami-api-key: <token>"
 ```
 
 Prior to v1.26.0, Umami used cookies. If using an older version, you would do the following instead:
@@ -50,7 +50,7 @@ Save the token value and pass it as a _cookie_ with all your data requests.
 The cookie name is `umami.auth`. Your request header should look something like this:
 
 ```http request
-Cookie: umami.auth=eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
+Cookie: umami.auth=api_eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
 ```
 
 ## Websites
@@ -111,7 +111,7 @@ Prior to v1.39 some fields had a different name. If using an old version, use `w
 ## Getting stats
 
 There are several endpoints your can call to get stats for your website. All the
-stats endpoints require sending a `GET` request with the `Bearer <token>` (post v1.26.0) or `umami.auth` authentication cookie.
+stats endpoints require sending a `GET` request with the `x-umami-api-key: <token>` header (post v1.26.0) or `umami.auth` authentication cookie.
 
 ## GET /api/websites/{websiteUuid}/stats
 
