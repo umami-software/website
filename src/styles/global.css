@@ -13,3 +13,7 @@ body {
   margin: 4rem auto;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
 }
+
+.docs {
+  padding-top: 2rem;
+}
