@@ -24,29 +24,30 @@ npm install -g yarn
 ### Get the source code and install packages
 
 ```shell
-git clone https://github.com/umami-software/umami.git
-cd umami
-yarn install
+git init
+git pull https://github.com/umami-software/umami.git
+yarn
 ```
 
 ### Configure Umami
 
-Create an `.env` file with the following
+Create an `.env` file with the following:
 
 ```dotenv
-DATABASE_URL={connection url}
-```
-
-The connection url is in the following format:
-
-```dotenv
-DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
-
+# For MySQL/MariaDB
 DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
+# For PostgreSQL
+DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
 ```
 
 ### Build the application
 
+If you use MySQL/MariaDB, run this:
+```shell
+yarn prisma migrate resolve --applied "05_add_visit_id"
+```
+
+Building:
 ```shell
 yarn build
 ```
