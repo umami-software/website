@@ -1,0 +1,122 @@
+---
+title: Links
+---
+
+Operations around Links management.
+
+**Endpoints**
+
+```text
+GET /api/links
+GET /api/links/:linkId
+POST /api/links/:linkId
+DELETE /api/links/:linkId
+```
+
+---
+
+## POST /api/links
+
+Returns all user links.
+
+**Parameters**
+
+- `search`: (optional string) Search text.
+- `page`: (optional number, default 1) Determines page.
+- `pageSize`: (optional string) Determines how many results to return.
+
+**Sample response**
+
+```json
+{
+  "data": [
+    {
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "name": "umami",
+      "url": "https://www.umami.is",
+      "slug": "xxxxxxxx",
+      "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "teamId": null,
+      "createdAt": "2025-10-27T18:49:39.383Z",
+      "updatedAt": "2025-10-27T18:49:39.383Z",
+      "deletedAt": null
+    }
+  ],
+  "count": 1,
+  "page": 1,
+  "pageSize": 20
+}
+```
+
+---
+
+## GET /api/links/:linkId
+
+Gets a link by ID.
+
+**Sample response**
+
+```json
+{
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "name": "umami",
+  "url": "https://www.umami.is",
+  "slug": "xxxxxxxx",
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "teamId": null,
+  "createdAt": "2025-10-27T18:49:39.383Z",
+  "updatedAt": "2025-10-27T18:49:39.383Z",
+  "deletedAt": null
+}
+```
+
+---
+
+## POST /api/links/:linkId
+
+Updates a link.
+
+**Parameters**
+
+- `name`: (optional string) The link's name.
+- `url`: (optional string) The link's destination URL.
+- `slug`: (optional string | minimum 8 char) The link's URL slug.
+
+**Request body**
+
+```json
+{
+  "name": "umami",
+  "url": "https://www.umami.is"
+}
+```
+
+**Sample response**
+
+```json
+{
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "name": "umami",
+  "url": "https://www.umami.is",
+  "slug": "xxxxxxxx",
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "teamId": null,
+  "createdAt": "2025-10-27T18:49:39.383Z",
+  "updatedAt": "2025-10-30T23:06:01.824Z",
+  "deletedAt": null
+}
+```
+
+---
+
+## DELETE /api/links/:linkId
+
+Deletes a link.
+
+**Sample response**
+
+```json
+{
+  "ok": true
+}
+```

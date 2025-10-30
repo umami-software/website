@@ -319,6 +319,14 @@
             {
               "label": "Reports",
               "url": "/docs/api/reports-api"
+            },
+            {
+              "label": "Links",
+              "url": "/docs/api/links-api"
+            },
+            {
+              "label": "Pixels",
+              "url": "/docs/api/pixels-api"
             }
           ]
         },

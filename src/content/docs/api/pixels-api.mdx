@@ -1,0 +1,118 @@
+---
+title: Pixels
+---
+
+Operations around Pixels management.
+
+**Endpoints**
+
+```text
+GET /api/pixels
+GET /api/pixels/:pixelId
+POST /api/pixels/:pixelId
+DELETE /api/pixels/:pixelId
+```
+
+---
+
+## POST /api/pixels
+
+Returns all user pixels.
+
+**Parameters**
+
+- `search`: (optional string) Search text.
+- `page`: (optional number, default 1) Determines page.
+- `pageSize`: (optional string) Determines how many results to return.
+
+**Sample response**
+
+```json
+{
+  "data": [
+    {
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "name": "Umami Pixel",
+      "slug": "xxxxxxxx",
+      "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "teamId": null,
+      "createdAt": "2025-10-27T18:50:54.079Z",
+      "updatedAt": "2025-10-27T18:50:54.079Z",
+      "deletedAt": null
+    }
+  ],
+  "count": 1,
+  "page": 1,
+  "pageSize": 20
+}
+```
+
+---
+
+## GET /api/pixels/:pixelId
+
+Gets a pixel by ID.
+
+**Sample response**
+
+```json
+{
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "name": "Umami Pixel",
+  "slug": "xxxxxxxx",
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "teamId": null,
+  "createdAt": "2025-10-27T18:50:54.079Z",
+  "updatedAt": "2025-10-27T18:50:54.079Z",
+  "deletedAt": null
+}
+```
+
+---
+
+## POST /api/pixels/:pixelId
+
+Updates a pixel.
+
+**Parameters**
+
+- `name`: (optional string) The pixel's name.
+- `slug`: (optional string | minimum 8 char) The link's URL slug.
+
+**Request body**
+
+```json
+{
+  "name": "Umami Pixel",
+  "slug": "abcde123"
+}
+```
+
+**Sample response**
+
+```json
+{
+  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "name": "Umami Pixel",
+  "slug": "abcde123",
+  "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "teamId": null,
+  "createdAt": "2025-10-27T18:50:54.079Z",
+  "updatedAt": "2025-10-30T23:11:18.627Z",
+  "deletedAt": null
+}
+```
+
+---
+
+## DELETE /api/pixels/:pixelId
+
+Deletes a pixel.
+
+**Sample response**
+
+```json
+{
+  "ok": true
+}
+```
