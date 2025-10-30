@@ -4,7 +4,7 @@ import sendgrid from '@sendgrid/mail';
 export async function POST(request: NextRequest) {
   const { name, email, title, company, size, comment } = await request.json();
 
-  if (/\w{18,}/.test(name)) {
+  if (/\w{16,}/.test(name) || /\w{16,}/.test(comment)) {
     return new NextResponse('Forbidden', { status: 403 });
   }
 
