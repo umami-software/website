@@ -21,7 +21,7 @@ If successful you should get a response like the following:
 
 ```json
 {
-  "token": "eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A",
+  "token": "api_eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A",
   "user": {
     "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "username": "admin",
@@ -35,7 +35,7 @@ If successful you should get a response like the following:
 Save the token value and send an `Authorization` header with all your data requests with the value `Bearer <token>`. Your request header should look something like this:
 
 ```http request
-Authorization: Bearer eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
+Authorization: Bearer api_eyTMjU2IiwiY...4Q0JDLUhWxnIjoiUE_A
 ```
 
 For example, with `curl` it would look like this:
