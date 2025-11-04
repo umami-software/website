@@ -1,0 +1,11 @@
+.formField {
+  width: 100% !important;
+}
+
+.formField > div {
+  width: 100% !important;
+}
+
+.textArea {
+  width: 100% !important;
+}
