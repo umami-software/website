@@ -8,6 +8,7 @@
   background: rgba(255, 255, 255, 0.75);
   z-index: 1000;
   max-width: 100vw;
+  width: 100%;
   height: 70px;
   display: flex;
   flex-direction: row;
@@ -66,7 +67,7 @@ html:not([data-scroll='0']) .header {
 @media screen and (max-width: 768px) {
   .links,
   .signup {
-    display: none;
+    display: none !important;
   }
 
   .hamburger {
