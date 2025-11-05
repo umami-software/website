@@ -13,12 +13,12 @@ There are several different ways to install Umami.
 ### Requirements
 
 - A server with [Node.js](https://nodejs.org/) version 18.18 or newer.
-- A database. Umami supports [MySQL](https://www.mysql.com/) (minimum v8.0) and [PostgreSQL](https://www.postgresql.org/) (minimum v12.14) databases.
+- A database. Umami supports [PostgreSQL](https://www.postgresql.org/) (minimum v12.14) databases.
 
-### Install Yarn
+### Install Pnpm
 
 ```shell
-npm install -g yarn
+npm install -g pnpm
 ```
 
 ### Get the source code and install packages
@@ -26,7 +26,7 @@ npm install -g yarn
 ```shell
 git clone https://github.com/umami-software/umami.git
 cd umami
-yarn install
+pnpm install
 ```
 
 ### Configure Umami
@@ -41,14 +41,12 @@ The connection url is in the following format:
 
 ```dotenv
 DATABASE_URL=postgresql://username:mypassword@localhost:5432/mydb
-
-DATABASE_URL=mysql://username:mypassword@localhost:3306/mydb
 ```
 
 ### Build the application
 
 ```shell
-yarn build
+pnpm build
 ```
 
 The first time the build is run, it will create all the required database tables in your database.
@@ -57,7 +55,7 @@ It will also create a login account with username **admin** and password **umami
 ### Start the application
 
 ```shell
-yarn start
+pnpm start
 ```
 
 By default this will launch the application on `http://localhost:3000`. You will need to either
@@ -66,14 +64,14 @@ or change the [port](https://nextjs.org/docs/api-reference/cli#production) to se
 
 ### Running Umami
 
-You can simply run `yarn start` to start Umami, but it's highly recommended you use a process manager like [PM2](https://pm2.keymetrics.io/) which will handle restarts for you.
+You can simply run `pnpm start` to start Umami, but it's highly recommended you use a process manager like [PM2](https://pm2.keymetrics.io/) which will handle restarts for you.
 
 To run with PM2:
 
 ```shell
-yarn global add pm2
+pnpm global add pm2
 cd umami
-pm2 start yarn --name umami -- start
+pm2 start pnpm --name umami -- start
 pm2 startup
 pm2 save
 ```
@@ -92,10 +90,4 @@ Alternatively, if you want to use prebuilt images, you can pull the Umami Docker
 
 ```shell
 docker pull docker.umami.is/umami-software/umami:postgresql-latest
-```
-
-Or with MySQL support:
-
-```shell
-docker pull docker.umami.is/umami-software/umami:mysql-latest
 ```

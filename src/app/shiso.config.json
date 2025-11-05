@@ -355,6 +355,19 @@
           ]
         },
         {
+          "section": "How-to",
+          "pages": [
+            {
+              "label": "Migrate v1 to v2",
+              "url": "/docs/guides/migrate-v1-v2"
+            },
+            {
+              "label": "Migrate MySQL to PostgreSQL",
+              "url": "/docs/guides/migrate-mysql-postgresql"
+            }
+          ]
+        },
+        {
           "section": "Marketing",
           "pages": [
             {
