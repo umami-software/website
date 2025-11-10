@@ -6,7 +6,14 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader title="Company" />
-      <Box style={{ margin: 'auto', width: 500 }}>
+      <Box
+        style={{
+          margin: 'auto',
+          maxWidth: '500px',
+          width: '100%',
+          padding: '0 1rem',
+        }}
+      >
         <p>
           Umami was founded with the belief that users should be empowered by the software they use.
         </p>
