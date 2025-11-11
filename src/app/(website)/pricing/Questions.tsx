@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Icon, Icons } from '@umami/react-zen';
 import styles from './Questions.module.css';
 import TextBlock from '@/components/TextBlock';
@@ -38,30 +38,46 @@ export default function Questions() {
         <h2>Frequently asked questions</h2>
       </TextBlock>
       <div className={styles.questions}>
-        {questions.map(({ question, answer }) => {
-          return (
-            <Question key={question} question={question}>
-              {answer}
-            </Question>
-          );
-        })}
+        {questions.map(({ question, answer }) => (
+          <AccordionItem key={question} question={question} answer={answer} />
+        ))}
       </div>
     </>
   );
 }
 
-const Question = ({ question, children }) => {
+const AccordionItem = ({ question, answer }: { question: string; answer: string }) => {
   const [expanded, setExpanded] = useState(false);
+  const [height, setHeight] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(expanded ? contentRef.current.scrollHeight : 0);
+    }
+  }, [expanded]);
+
+  const toggle = () => setExpanded(prev => !prev);
 
   return (
-    <div className={styles.question} onClick={() => setExpanded(state => !state)}>
-      <div className={styles.text} data-umami-event="faq-question-click">
-        {question}
-        <Icon className={styles.icon} rotate={expanded ? 90 : 0} size="sm">
+    <div
+      className={styles.item}
+      onClick={toggle}
+      role="button"
+      tabIndex={0}
+      aria-expanded={expanded}
+    >
+      <div className={styles.header}>
+        <span className={styles.question}>{question}</span>
+        <Icon className={`${styles.icon} ${expanded ? styles.rotated : ''}`} size="sm">
           <Icons.Chevron />
         </Icon>
       </div>
-      {expanded ? <div className={styles.answer}>{children}</div> : null}
+      <div className={styles.content} style={{ height }} aria-hidden={!expanded}>
+        <div ref={contentRef} className={styles.answer}>
+          {answer}
+        </div>
+      </div>
     </div>
   );
 };
