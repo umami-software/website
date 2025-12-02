@@ -2,9 +2,7 @@ import createMDX from '@next/mdx';
 import { withAxiom } from 'next-axiom';
 
 const withMDX = createMDX({
-  options: {
-    extension: /\.mdx?$/,
-  },
+  extension: /\.mdx?$/,
 });
 
 const headers = [
@@ -22,12 +20,6 @@ const headers = [
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: false,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   async headers() {
     return [
       {
