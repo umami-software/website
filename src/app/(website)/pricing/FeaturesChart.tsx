@@ -12,6 +12,7 @@ import {
   Icons,
   TableBody,
 } from '@umami/react-zen';
+import styles from './FeaturesChart.module.css';
 
 const featuresChart = [
   {
@@ -81,7 +82,7 @@ export default function Features() {
   return (
     <Column>
       <Table>
-        <TableHeader>
+        <TableHeader className={styles.stickyHeader}>
           <TableColumn align="center"></TableColumn>
           <TableColumn align="center">
             <Text weight="bold" size="5">
@@ -103,7 +104,7 @@ export default function Features() {
           {featuresChart.map(({ label, items }) => {
             return (
               <Fragment key={label}>
-                <TableRow>
+                <TableRow className={styles.sectionHeaderRow}>
                   <TableCell colSpan={4}>
                     <Text weight="bold" size="5">
                       {label}
