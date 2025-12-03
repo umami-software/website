@@ -13,18 +13,12 @@
     "dev": "next dev -p 5001 --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "stylelint": "stylelint --fix",
     "icons": "svgr ./src/assets --out-dir src/components/svg --typescript"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint"
-    ],
-    "**/*.css": [
-      "stylelint --fix",
-      "prettier --write"
+    "**/*.{js,jsx,ts,tsx,json,css}": [
+      "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
     ]
   },
   "dependencies": {
@@ -40,7 +34,6 @@
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "fast-glob": "^3.3.3",
-    "glob": "^10.4.5",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
     "lucide-react": "^0.543.0",
@@ -61,6 +54,7 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.3.8",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^18.19.86",
     "@types/react": "^19.2.7",
