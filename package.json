@@ -37,7 +37,7 @@
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
     "lucide-react": "^0.543.0",
-    "next": "^16.0.5",
+    "next": "^16.0.7",
     "next-axiom": "^1.9.1",
     "next-mdx-remote": "^4.4.1",
     "react": "^19.2.0",
@@ -60,33 +60,10 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "cross-env": "^7.0.3",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^16.0.5",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-mdx": "^2.3.4",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-mdx": "^2.3.4",
-    "eslint-plugin-prettier": "^5.2.6",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.1.0",
-    "postcss-preset-env": "^7.8.3",
-    "prettier": "^3.5.3",
-    "prettier-eslint": "^13.0.0",
-    "stylelint": "^15.11.0",
-    "stylelint-config-css-modules": "^4.4.0",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-recommended": "^9.0.0"
-  },
-  "resolutions": {
-    "strip-ansi": "6.0.1",
-    "string-width": "4.2.2",
-    "wrap-ansi": "7.0.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp"
-    ]
+    "postcss-preset-env": "^7.8.3"
   }
 }
