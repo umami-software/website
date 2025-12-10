@@ -1,4 +1,5 @@
 'use client';
+import { useEffect, useRef, useState } from 'react';
 import GetStartedBanner from '@/components/GetStartedBanner';
 import PageHeader from '@/components/PageHeader';
 import { Box, Column, Grid, Heading, Icon, Row, Text } from '@umami/react-zen';
@@ -132,7 +133,6 @@ const items = [
         ],
         icon: <Tag />,
       },
-
       {
         title: 'Sharing',
         description: [
@@ -298,6 +298,74 @@ const items = [
   },
 ];
 
+// Feature section with grouped animation
+function FeatureSection({ title, description, items: featureItems }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.05,
+        rootMargin: '0px 0px -80px 0px',
+      },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <Box key={title}>
+      <div ref={sectionRef}>
+        <Heading size="4">{title}</Heading>
+        <Box paddingY="6" maxWidth="600px">
+          <Text color="muted" size="3">
+            {description}
+          </Text>
+        </Box>
+        <Grid columns="repeat(auto-fit, minmax(300px, 1fr))" gap="4">
+          {featureItems.map((item, index) => (
+            <Box
+              key={index}
+              borderRadius="2"
+              padding="4"
+              backgroundColor="2"
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0)' : 'translateY(15px)',
+                transition: `opacity 0.3s ease-out ${index * 30}ms, transform 0.3s ease-out ${index * 30}ms`,
+              }}
+            >
+              <Row gap="3" alignItems="center">
+                <Icon size="md">{item.icon}</Icon>
+                <Text weight="bold">{item.title}</Text>
+              </Row>
+              {item.description.map((text, idx) => (
+                <Text key={idx} as="p" color="muted">
+                  {text}
+                </Text>
+              ))}
+            </Box>
+          ))}
+        </Grid>
+      </div>
+    </Box>
+  );
+}
+
 export default function FeaturesPage() {
   return (
     <>
@@ -306,33 +374,9 @@ export default function FeaturesPage() {
         description="An overview of all the core features Umami provides."
       />
       <Column gap="6">
-        {items.map(({ title, description, items }) => {
-          return (
-            <Box key={title}>
-              <Heading size="4">{title}</Heading>
-              <Box paddingY="6" maxWidth="600px">
-                <Text color="muted" size="3">
-                  {description}
-                </Text>
-              </Box>
-              <Grid columns="repeat(auto-fit, minmax(300px, 1fr))" gap="4">
-                {items.map((item, index) => (
-                  <Box key={index} borderRadius="2" padding="4" backgroundColor="2">
-                    <Row gap="3" alignItems="center">
-                      <Icon size="md">{item.icon}</Icon>
-                      <Text weight="bold">{item.title}</Text>
-                    </Row>
-                    {item.description.map((text, index) => (
-                      <Text key={index} as="p" color="muted">
-                        {text}
-                      </Text>
-                    ))}
-                  </Box>
-                ))}
-              </Grid>
-            </Box>
-          );
-        })}
+        {items.map(({ title, description, items }) => (
+          <FeatureSection key={title} title={title} description={description} items={items} />
+        ))}
         <section>
           <GetStartedBanner />
         </section>
