@@ -1,9 +1,9 @@
 'use client';
+import { Button, Column, Heading, Row, Text } from '@umami/react-zen';
 import Link from 'next/link';
-import { Button, Row, Column, Heading, Text } from '@umami/react-zen';
-import { CLOUD_URL } from '@/lib/constants';
-import useQueryString from '@/components/hooks/useQueryString';
 import ContentImage from '@/components/ContentImage';
+import useQueryString from '@/components/hooks/useQueryString';
+import { CLOUD_URL } from '@/lib/constants';
 import Companies from './Companies';
 import styles from './Hero.module.css';
 
@@ -25,16 +25,6 @@ export default function Hero() {
           <Link href={`${CLOUD_URL}/signup${query}`} data-umami-event="get-started-button">
             Get started
           </Link>
-        </Button>
-        <Button size="lg" asChild>
-          <a
-            href="https://cloud.umami.is/share/LGazGOecbDtaIwDr"
-            data-umami-event="live-demo-button"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View demo
-          </a>
         </Button>
       </Row>
       <div className={styles.image}>
