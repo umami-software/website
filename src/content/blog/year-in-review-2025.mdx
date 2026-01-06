@@ -1,0 +1,60 @@
+---
+title: A Year in Review 2025
+description: What we built, what we learned, and what's next
+author: Mike Cao
+date: 2026-01-05T00:00:00-08:00
+image: /images/blog/banner-12.png
+---
+
+Over the past year, we spent a lot time building and improving Umami. It was a defining year
+with lots of milestones. This post is a reflection on what we accomplished, what we learned from what we shipped,
+and where we are headed next.
+
+## What we built
+
+We started 2025 with Umami v2.16.0 and ended with the release of the long awaited Umami v3.
+With v3, we wanted to introduce a more streamlined experience with fewer screens to navigate, fewer clicks,
+and easier access to data. You can read more about our changes in our [Umami v3](/blog/umami-v3) blog post.
+
+At the end of 2025, we had made 13 official [releases](https://github.com/umami-software/umami/releases),
+closed over 350 [issues](https://github.com/umami-software/umami/issues), and merged over 200 [PRs](https://github.com/umami-software/umami/pulls).
+Many changes came from the community and the list of open source contributors keeps growing.
+
+Additionally we made changes to [Umami Cloud](https://cloud.umami.is) to increase performance, reliability and security.
+One significant change we made was to redesign our data collection system to be more fault tolerant so that we would
+never lose data.
+
+We have also completely revamped our [documention](https://umami.is/docs) to make it easier to read and navigate. We also split out
+the legacy [v2 documention](https://v2.umami.is/docs) onto it's own separate site.
+
+## What we learned
+
+### Being an open source company is hard.
+
+You need to balance the needs of the community along with the company.
+But our approach has always been to create the best analytics product possible and have it accessible to as
+many people as possible. Which is why we've never focused on gating certain features for Umami Cloud only. All the major features
+we've released have been available for self-hosting.
+
+### Listen to your users.
+
+One of the greatest benefits of open source is that you are exposed to many different use cases that you may
+not have discovered on your own. For example, users wanted more insights into revenue and channels,
+or do additional checks before sending data, or send data in batches, or export their data in the UI.
+These use cases were all community driven.
+
+### Move fast, fix things
+
+In late 2025, there was a very serious [React vulnerability](https://nextjs.org/blog/CVE-2025-66478) discovered that affected
+many Next.js applications, like Umami. We quickly patched all our releases and secured our systems.
+
+There were also a couple significant [outages](https://blog.cloudflare.com/18-november-2025-outage/) in 2025 from Cloudflare, one of the services we use.
+This forced us to rethink our tech stack and to add additional resiliency to our systems.
+
+## What's coming next
+
+With the release of Umami v3, we now have a solid foundation for quickly adding new features. The next major feature is **Boards**, which will give users
+the ability to customize the display of data however they like.
+
+In 2026, we’re committed to continuing to build in the open.
+If you’re using the product, contributing to the open source, or just following along, we thank you. Your feedback directly shapes what we build next.
