@@ -80,7 +80,7 @@ const ActionLinks = () => {
         </Link>
       </Button>
       <Button className={styles.login} variant="quiet" asChild>
-        <Link href={`https://cloud.umami.is/login${query}`} data-umami-event="login-button-header">
+        <Link href={`https://cloud.umami.is/{query}`} data-umami-event="login-button-header">
           Log in
         </Link>
       </Button>
