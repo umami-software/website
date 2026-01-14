@@ -33,7 +33,7 @@ const nextConfig = {
       { source: '/docs', destination: 'https://docs.umami.is/docs' },
       { source: '/docs/:path*', destination: 'https://docs.umami.is/docs/:path*' },
       { source: '/api/search', destination: 'https://docs.umami.is/api/search' },
-      { source: '/a/script.js', destination: 'https://cloud.umami.is/script.js' },
+      { source: '/u.js', destination: 'https://cloud.umami.is/script.js' },
       { source: '/discord', destination: 'https://discord.gg/4dz4zcXYrQ' },
       { source: '/analytics', destination: '/lp/analytics' },
       { source: '/website-analytics', destination: '/lp/website-analytics' },

@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import { Suspense } from 'react';
 import { Container, Grid } from '@umami/react-zen';
+import type { Metadata } from 'next';
 import Script from 'next/script';
 import { AxiomWebVitals } from 'next-axiom';
-import Header from './Header';
+import { Suspense } from 'react';
 import Footer from './Footer';
+import Header from './Header';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             defer
             data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
             data-domains="umami.is"
-            src="/a/script.js"
+            src="/u.js"
           />
         )}
       </head>
