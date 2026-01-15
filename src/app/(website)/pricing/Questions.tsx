@@ -19,7 +19,7 @@ const questions = [
   {
     question: 'How will I be billed?',
     answer: `Billing occurs on a monthly basis and you can cancel at any time. 
-    If you upgraded to a paid plan via a trial, your first invoice git checkout will arrive after your trial period ends.`,
+    If you upgraded to a paid plan via a trial, your first invoice will arrive after your trial period ends.`,
   },
   {
     question: 'Where are your servers located?',
