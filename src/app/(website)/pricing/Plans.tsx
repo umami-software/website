@@ -3,7 +3,6 @@ import { Button, Icon, Text, Box, Column, Row, Heading, Grid, Icons } from '@uma
 import Link from 'next/link';
 import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
-import styles from './Plans.module.css';
 
 export default function Plans() {
   const query = useQueryString({ ref: 'umami-pricing' });
@@ -94,7 +93,7 @@ export default function Plans() {
                   );
                 })}
               </Box>
-              <div className={styles.button}>
+              <div className="flex items-center justify-center mt-10">
                 <Button variant={variant as any} asChild>
                   <Link href={url}>{button}</Link>
                 </Button>

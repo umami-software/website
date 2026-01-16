@@ -6,18 +6,17 @@ import LinkButton from '@/components/LinkButton';
 import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
 import ContentImage from '@/components/ContentImage';
-import styles from './Marketers.module.css';
 
 export default function Marketers() {
   const query = useQueryString({ ref: 'umami-marketers' });
 
   return (
-    <div className={styles.container}>
+    <div className="grid gap-20 justify-center">
       <section>
-        <ImageBlock className={styles.header}>
+        <ImageBlock className="mt-[60px] gap-[60px] [&_img]:rounded-[20px] [&_img]:max-w-[400px] [&_img]:mx-auto [&_img]:[transform:rotate(-6deg)] max-md:[&_img]:max-w-[70vw] [&_a]:inline-block">
           <TextBlock size="lg" align="center">
             <h1>
-              For <span className={styles.highlight}>marketers</span> who don’t have time but still
+              For <span className="text-[#2680eb]">marketers</span> who don't have time but still
               need data instantly.
             </h1>
             <p>
@@ -28,15 +27,15 @@ export default function Marketers() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <ContentImage src="/images/marketers.jpg" alt="" className={styles.image} />
+          <ContentImage src="/images/marketers.jpg" alt="" />
         </ImageBlock>
       </section>
-      <section className={styles.blocks}>
+      <section className="grid grid-cols-[1fr_1fr] gap-[60px] max-md:grid-cols-1">
         <TextBlock>
           <h2>Effortless analytics</h2>
           <p>
             Instantly understand how your marketing campaigns are performing from a single window.
-            No need to endlessly navigate drop-down menus for the report you’re looking for. With
+            No need to endlessly navigate drop-down menus for the report you're looking for. With
             Umami, the data you need to understand how your marketing campaigns are performing are
             all right there with no data lag.
           </p>
@@ -55,9 +54,9 @@ export default function Marketers() {
           <p>
             Installing Umami for your clients is as easy as placing a single line of code in the
             &lt;head&gt; section of your HTML. No complicated, lengthy setups or data streams to
-            configure. Just install, and you’re collecting data. Also, add a single code snippet to
+            configure. Just install, and you're collecting data. Also, add a single code snippet to
             elements on the page you want to track as events for the easiest conversion tracking
-            setup you’ve ever experienced.
+            setup you've ever experienced.
           </p>
         </TextBlock>
         <TextBlock>

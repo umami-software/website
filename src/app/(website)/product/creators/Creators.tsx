@@ -6,18 +6,17 @@ import LinkButton from '@/components/LinkButton';
 import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
 import ContentImage from '@/components/ContentImage';
-import styles from './Creators.module.css';
 
 export default function Creators() {
   const query = useQueryString({ ref: 'umami-creators' });
 
   return (
-    <div className={styles.container}>
+    <div className="grid gap-20 justify-center">
       <section>
-        <ImageBlock className={styles.header}>
+        <ImageBlock className="mt-[60px] gap-[30px] [&_img]:rounded-[20px] [&_img]:max-w-[400px] [&_img]:mx-auto [&_img]:[transform:rotate(4deg)] max-md:[&_img]:max-w-[70vw] [&_a]:inline-block">
           <TextBlock size="lg" align="center">
             <h1>
-              Get quick, easy insights that <span className={styles.highlight}>creators</span> need.
+              Get quick, easy insights that <span className="text-[#df46cd]">creators</span> need.
             </h1>
             <p>
               Discover how your followers engage with your content, track their journey to your
@@ -27,15 +26,15 @@ export default function Creators() {
               Start free trial
             </LinkButton>
           </TextBlock>
-          <ContentImage src="/images/creators.jpg" alt="" className={styles.image} />
+          <ContentImage src="/images/creators.jpg" alt="" />
         </ImageBlock>
       </section>
 
-      <section className={styles.blocks}>
+      <section className="grid grid-cols-[1fr_1fr] gap-[60px] max-md:grid-cols-1">
         <TextBlock>
           <h2>Realtime data ready for live streaming</h2>
           <p>
-            When you’re live (or at any other time, for that matter!), you can see your website
+            When you're live (or at any other time, for that matter!), you can see your website
             traffic in real time to see exactly how your followers engage with your content when
             they land on your website.
           </p>
@@ -52,7 +51,7 @@ export default function Creators() {
           <h2>Visitor insights</h2>
           <p>
             Know all the things you need to know about your audience when they visit your website,
-            including geography, browser, device, and more. Best of all, Umami doesn’t use cookies,
+            including geography, browser, device, and more. Best of all, Umami doesn't use cookies,
             so your audience will feel good knowing their privacy is respected when you visit your
             website.
           </p>

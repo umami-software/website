@@ -4,18 +4,17 @@ import CompanyLogo from '@/components/CompanyLogo';
 import LinkButton from '@/components/LinkButton';
 import useQueryString from '@/components/hooks/useQueryString';
 import { CLOUD_URL } from '@/lib/constants';
-import styles from './Header.module.css';
 
 export default function Header() {
   const query = useQueryString({ ref: 'umami-landing-page' });
 
   return (
-    <header className={styles.header}>
+    <header className="flex min-h-[100px] items-center justify-between">
       <CompanyLogo />
-      <nav className={styles.links}>
+      <nav className="flex mx-10 justify-end flex-1">
         <Link href="/pricing">Pricing</Link>
       </nav>
-      <div className={styles.button} data-umami-event="lp-get-started-button">
+      <div className="block self-center" data-umami-event="lp-get-started-button">
         <LinkButton href={`${CLOUD_URL}/signup${query}`} variant="primary">
           Get started
         </LinkButton>

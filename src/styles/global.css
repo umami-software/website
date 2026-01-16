@@ -1,3 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary-color);
+  --color-primary-font: var(--primary-font-color);
+  --color-font: var(--font-color);
+  --color-font-muted: var(--font-color-muted);
+  --color-border: var(--border-color);
+  --color-base-1: var(--base-color-1);
+  --color-base-2: var(--base-color-2);
+  --color-base-3: var(--base-color-3);
+  --color-base-4: var(--base-color-4);
+  --color-base-5: var(--base-color-5);
+  --color-base-6: var(--base-color-6);
+  --color-base-7: var(--base-color-7);
+  --color-base-8: var(--base-color-8);
+  --color-base-9: var(--base-color-9);
+  --color-base-10: var(--base-color-10);
+  --color-base-11: var(--base-color-11);
+  --color-base-12: var(--base-color-12);
+}
+
 html,
 body {
   font-family:
@@ -12,4 +34,29 @@ body {
   max-width: 100%;
   margin: 4rem auto;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.docs {
+  padding-top: 2rem;
+}
+
+/* Animation keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1600px);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -3,7 +3,6 @@ import { Row } from '@umami/react-zen';
 import TextBlock from '@/components/TextBlock';
 import ContentImage from '@/components/ContentImage';
 import { X } from 'src/components/svg';
-import styles from './Quotes.module.css';
 import SocialMedia from '@/components/SocialMedia';
 
 const items = [
@@ -64,7 +63,7 @@ const items = [
 
 export default function Quotes() {
   return (
-    <div className={styles.container}>
+    <div>
       <TextBlock size="lg" align="center">
         <header>Connect</header>
         <h2>Join our community</h2>
@@ -73,23 +72,26 @@ export default function Quotes() {
       <Row justifyContent="center" padding="6">
         <SocialMedia size="lg" />
       </Row>
-      <div className={styles.list}>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5 rounded-lg auto-rows-fr max-sm:grid-cols-1 max-sm:justify-center max-sm:max-w-[100vw] max-sm:mx-auto">
         {items.map(({ name, username, quote }) => {
           return (
-            <div key={name} className={styles.card}>
-              <div className={styles.header}>
-                <div className={styles.pic}>
+            <div
+              key={name}
+              className="text-base-1 bg-base-12 p-5 border border-border rounded-[10px] shadow-[5px_5px_0_var(--base-color-3)] flex flex-col max-sm:justify-center max-sm:max-w-[90vw] max-sm:text-xs"
+            >
+              <div className="flex items-center justify-between text-left gap-[10px] mb-4">
+                <div className="w-10 h-10 rounded-full overflow-hidden row-[1/2] [&_img]:max-w-full [&_img]:max-h-full">
                   <ContentImage src={`/images/${username}.jpg`} alt="" />
                 </div>
-                <div className={styles.user}>
-                  <div className={styles.name}>{name}</div>
-                  <div className={styles.username}>{username}</div>
+                <div className="flex flex-col flex-1 gap-0.5">
+                  <div className="font-bold leading-[1.2]">{name}</div>
+                  <div className="text-base-6 text-sm leading-[1.2]">{username}</div>
                 </div>
-                <div className={styles.logo}>
+                <div className="flex items-center justify-center [&_svg]:w-4 [&_svg]:h-4">
                   <X />
                 </div>
               </div>
-              <div className={styles.body}>
+              <div className="text-font-muted text-left text-sm flex-1 max-sm:justify-center max-sm:text-left">
                 {quote.map((text, index) => (
                   <p key={index}>{text}</p>
                 ))}

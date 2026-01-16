@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Button, Flexbox, Icon, Icons, Text, Column } from '@umami/react-zen';
 import TextBlock from '@/components/TextBlock';
 import ImageBlock from '@/components/ImageBlock';
-import styles from './WebAnalytics.module.css';
 
 export default function WebAnalytics() {
   return (
@@ -17,7 +16,7 @@ export default function WebAnalytics() {
           traffic.
         </p>
       </TextBlock>
-      <div className={styles.items}>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-[60px_40px] max-sm:grid-cols-1">
         <Feature title="Traffic analysis" image="/images/feature-stats.png">
           Get insights into your traffic so you optimize for growth. Easily see all your metrics at
           a glance.
@@ -73,8 +72,8 @@ const Feature = ({
   children: ReactNode;
 }) => {
   return (
-    <TextBlock className={styles.item}>
-      <ImageBlock className={styles.image}>
+    <TextBlock>
+      <ImageBlock className="h-[200px] mb-[30px]">
         <img src={image} style={style} alt={title} />
       </ImageBlock>
       <h3>{title}</h3>

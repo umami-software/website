@@ -1,6 +1,5 @@
 'use client';
 import { Text, Column } from '@umami/react-zen';
-import styles from './Companies.module.css';
 
 const items = [
   { name: 'amd', title: 'AMD' },
@@ -20,13 +19,16 @@ export default function Companies() {
       <Text color="muted" align="center">
         Trusted by thousands of companies
       </Text>
-      <div className={styles.logos}>
-        <div className={styles.scroll}>
+      <div className="relative overflow-hidden grayscale opacity-50 h-[100px] w-full [mask-image:linear-gradient(to_right,rgba(255,255,255,0),white_20%,white_80%,rgba(255,255,255,0))] [&_img]:max-w-[100px] [&_img]:max-h-[100px] [&_img]:h-auto [&_img]:m-auto">
+        <div className="absolute flex items-center gap-[100px] animate-[scroll_20s_linear_infinite]">
           {items.map(({ name, title }) => {
             return <img key={name} src={`/images/logo-${name}.png`} alt={title} />;
           })}
         </div>
-        <div className={styles.scroll} style={{ left: 1600 }}>
+        <div
+          className="absolute flex items-center gap-[100px] animate-[scroll_20s_linear_infinite]"
+          style={{ left: 1600 }}
+        >
           {items.map(({ name, title }) => {
             return <img key={name} src={`/images/logo-${name}.png`} alt={title} />;
           })}

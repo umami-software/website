@@ -5,13 +5,12 @@ import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
 import ContentImage from '@/components/ContentImage';
 import Companies from './Companies';
-import styles from './Hero.module.css';
 
 export default function Hero() {
   const query = useQueryString({ ref: 'umami-hero' });
 
   return (
-    <Column gap="6" className={styles.hero} alignItems="center">
+    <Column gap="6" className="mt-[100px]" alignItems="center">
       <Heading size="6" align="center">
         The modern analytics platform
         <br /> for effortless insights.
@@ -37,7 +36,7 @@ export default function Hero() {
           </a>
         </Button>
       </Row>
-      <div className={styles.image}>
+      <div className="max-w-[800px] mx-auto perspective-[2000px] preserve-3d text-center pt-10 [&_img]:rounded-[10px] [&_img]:w-full [&_img]:h-auto [&_img]:self-center [&_img]:[transform:rotateX(35deg)_rotateY(-20deg)_rotateZ(5deg)_translateZ(120px)] [&_img]:shadow-[0_10px_20px_rgba(0,0,0,0.3)] [&_img]:origin-center [&_img]:[mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_70%,rgba(0,0,0,0))] [&_img]:border [&_img]:border-black/20">
         <ContentImage src="/images/app.jpg" />
       </div>
       <Companies />

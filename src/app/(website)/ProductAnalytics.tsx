@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import { Column, Row } from '@umami/react-zen';
 import TextBlock from '@/components/TextBlock';
 import ImageBlock from '@/components/ImageBlock';
-import styles from './ProductAnalytics.module.css';
 
 const images = [
   `/images/feature-user-journeys.png`,
@@ -25,20 +24,23 @@ export default function ProductAnalytics() {
   const [num, setNum] = useState<number>(0);
 
   useEffect(() => {
-    const timeout = setInterval(() => setNum(num => num + 1), 3000);
+    const timeout = setInterval(() => setNum((num) => num + 1), 3000);
     return () => clearInterval(timeout);
   }, []);
 
   return (
-    <Row gap="6" className={styles.row}>
-      <ImageBlock className={styles.block}>
+    <Row gap="6">
+      <ImageBlock className="relative w-full max-sm:hidden">
         {images.map((src, index) => {
           return (
             <img
               key={src}
               src={src}
               alt="screenshot"
-              className={classNames(styles.image, num % 3 === index && styles.selected)}
+              className={classNames(
+                'absolute opacity-0 -translate-y-5',
+                num % 3 === index && 'opacity-100 translate-y-0 transition-all duration-500 ease-in-out',
+              )}
             />
           );
         })}
@@ -57,7 +59,10 @@ export default function ProductAnalytics() {
             return (
               <TextBlock
                 key={name}
-                className={classNames(styles.item, num % 3 === index && styles.selected)}
+                className={classNames(
+                  'pl-5 cursor-pointer border-l-2 border-border',
+                  num % 3 === index && 'border-primary transition-[border-color] duration-500 ease-in-out',
+                )}
                 onClick={() => setNum(index)}
               >
                 <h3>{name}</h3>

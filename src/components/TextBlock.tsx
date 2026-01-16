@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import { HTMLAttributes, ReactNode } from 'react';
-import styles from './TextBlock.module.css';
 
 export interface TextBlockProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
@@ -8,6 +7,19 @@ export interface TextBlockProps extends HTMLAttributes<HTMLDivElement> {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   align?: 'start' | 'center' | 'end';
 }
+
+const sizeClasses = {
+  xl: 'text-2xl',
+  lg: 'text-lg',
+  md: 'text-base',
+  sm: 'text-sm',
+};
+
+const alignClasses = {
+  start: 'text-start ml-0',
+  center: 'text-center',
+  end: 'text-end mr-0',
+};
 
 export default function TextBlock({
   children,
@@ -20,10 +32,10 @@ export default function TextBlock({
     <div
       {...props}
       className={classNames(
-        styles.text,
+        '[&_p]:text-font-muted [&_header]:text-primary [&_header]:font-bold [&_strong]:text-font',
+        size && sizeClasses[size],
+        align && alignClasses[align],
         className,
-        size && styles[`size-${size}`],
-        align && styles[`align-${align}`],
       )}
     >
       {children}

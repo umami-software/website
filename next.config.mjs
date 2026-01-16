@@ -22,8 +22,13 @@ const headers = [
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: false,
-  eslint: {
-    ignoreDuringBuilds: true,
+  turbopack: {
+    rules: {
+      '*.mdx': {
+        loaders: ['@mdx-js/loader'],
+        as: '*.js',
+      },
+    },
   },
   typescript: {
     ignoreBuildErrors: true,

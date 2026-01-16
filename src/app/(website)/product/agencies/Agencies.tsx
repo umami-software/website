@@ -6,18 +6,17 @@ import LinkButton from '@/components/LinkButton';
 import { CLOUD_URL } from '@/lib/constants';
 import useQueryString from '@/components/hooks/useQueryString';
 import ContentImage from '@/components/ContentImage';
-import styles from './Agencies.module.css';
 
 export default function Agencies() {
   const query = useQueryString({ ref: 'umami-agencies' });
 
   return (
-    <div className={styles.container}>
+    <div className="grid gap-20 justify-center">
       <section>
-        <ImageBlock className={styles.header}>
+        <ImageBlock className="grid grid-cols-[repeat(2,1fr)] gap-[30px] max-[1200px]:gap-[60px] max-[1200px]:grid-cols-1 [&_img]:rounded-[20px] [&_img]:max-w-[400px] [&_img]:mx-auto [&_img]:[transform:rotate(6deg)] max-md:[&_img]:max-w-[70vw] [&_a]:inline-block">
           <TextBlock size="lg" align="center">
             <h1>
-              Analytics for results-driven <span className={styles.highlight}>agencies</span>.
+              Analytics for results-driven <span className="!text-[rebeccapurple]">agencies</span>.
             </h1>
             <p>
               Manage your clients&apos; website analytics from a secure and easy-to-use central
@@ -30,7 +29,7 @@ export default function Agencies() {
           <ContentImage src="/images/agencies.jpg" alt="" />
         </ImageBlock>
       </section>
-      <section className={styles.blocks}>
+      <section className="grid grid-cols-[1fr_1fr] gap-[60px] max-[1200px]:grid-cols-1">
         <TextBlock>
           <h2>Manage client access</h2>
           <p>
@@ -54,16 +53,16 @@ export default function Agencies() {
           <p>
             Installing Umami for your clients is as easy as placing a single line of code in the
             &lt;head&gt; section of your HTML. No complicated, lengthy setups or data streams to
-            configure. Just install, and you’re collecting data. Also, add a single code snippet to
+            configure. Just install, and you're collecting data. Also, add a single code snippet to
             elements on the page you want to track as events for the easiest conversion tracking
-            setup you’ve ever experienced.
+            setup you've ever experienced.
           </p>
         </TextBlock>
         <TextBlock>
           <h2>No annoying cookie banners</h2>
           <p>
-            Your clients will love you when you tell them, “With Umami, we can get rid of the opt-in
-            cookie banner” because Umami does not use cookies.
+            Your clients will love you when you tell them, "With Umami, we can get rid of the opt-in
+            cookie banner" because Umami does not use cookies.
           </p>
         </TextBlock>
         <TextBlock>

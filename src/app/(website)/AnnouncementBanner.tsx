@@ -1,6 +1,5 @@
 'use client';
 import { Icon, Icons } from '@umami/react-zen';
-import styles from './AnnouncementBanner.module.css';
 import { useEffect, useState } from 'react';
 
 export default function AnnouncementBanner({ name = 'accouncement', children }) {
@@ -17,9 +16,9 @@ export default function AnnouncementBanner({ name = 'accouncement', children }) 
   };
 
   return show ? (
-    <div className={styles.banner}>
+    <div className="text-[var(--light50)] bg-primary flex items-center justify-center gap-[60px] py-2 text-sm font-bold [&_a]:text-[var(--light50)] [&_a:hover]:text-[var(--light50)] [&_a:active]:text-[var(--light50)] [&_a:visited]:text-[var(--light50)]">
       {children}
-      <Icon className={styles.close} onClick={handleClick}>
+      <Icon onClick={handleClick}>
         <Icons.Close />
       </Icon>
     </div>

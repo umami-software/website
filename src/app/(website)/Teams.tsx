@@ -1,6 +1,5 @@
 'use client';
 import TextBlock from '@/components/TextBlock';
-import styles from './Teams.module.css';
 
 export default function Teams() {
   return (
@@ -8,7 +7,7 @@ export default function Teams() {
       <TextBlock size="md" align="center">
         <h1>Umami works for companies and teams of all sizes</h1>
       </TextBlock>
-      <div className={styles.row}>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
         <TextBlock size="md">
           <h2>Startup to Enterprise</h2>
           <p>
