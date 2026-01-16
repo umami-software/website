@@ -285,6 +285,10 @@
           "section": "Endpoints",
           "pages": [
             {
+              "label": "Admin",
+              "url": "/docs/api/admin-api"
+            },
+            {
               "label": "Users",
               "url": "/docs/api/users-api"
             },
@@ -315,6 +319,14 @@
             {
               "label": "Reports",
               "url": "/docs/api/reports-api"
+            },
+            {
+              "label": "Links",
+              "url": "/docs/api/links-api"
+            },
+            {
+              "label": "Pixels",
+              "url": "/docs/api/pixels-api"
             }
           ]
         },
@@ -339,6 +351,19 @@
             {
               "label": "Overview",
               "url": "/docs/guides"
+            }
+          ]
+        },
+        {
+          "section": "How-to",
+          "pages": [
+            {
+              "label": "Migrate v1 to v2",
+              "url": "/docs/guides/migrate-v1-v2"
+            },
+            {
+              "label": "Migrate MySQL to PostgreSQL",
+              "url": "/docs/guides/migrate-mysql-postgresql"
             }
           ]
         },

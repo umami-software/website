@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   border-radius: 8px;
+  grid-auto-rows: 1fr;
 }
 
 .card {
@@ -11,8 +12,9 @@
   padding: 20px;
   border: 1px solid var(--border-color);
   border-radius: 10px;
-  align-self: start;
   box-shadow: 5px 5px 0 var(--base-color-3);
+  display: flex;
+  flex-direction: column;
 }
 
 .pic {
@@ -34,25 +36,31 @@
   justify-content: space-between;
   text-align: left;
   gap: 10px;
+  margin-bottom: 16px;
 }
 
 .user {
   display: flex;
   flex-direction: column;
   flex: 1;
+  gap: 2px;
 }
 
 .name {
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .username {
   color: var(--base-color-6);
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 .logo {
-  justify-self: flex-end;
-  align-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo svg {
@@ -64,6 +72,7 @@
   color: var(--font-color-muted);
   text-align: left;
   font-size: 14px;
+  flex: 1;
 }
 
 @media screen and (max-width: 360px) {

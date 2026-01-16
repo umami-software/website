@@ -1,14 +1,14 @@
-import React, { Suspense } from 'react';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Script from 'next/script';
+import React, { Suspense } from 'react';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
 import '@fontsource/jetbrains-mono/400.css';
 import '@/styles/variables.css';
 import '@/styles/global.css';
-import Header from '@/app/(campaigns)/Header';
 import Footer from '@/app/(campaigns)/Footer';
+import Header from '@/app/(campaigns)/Header';
 import styles from './layout.module.css';
 
 export default function CampaignLayout({ children }) {
@@ -28,7 +28,7 @@ export default function CampaignLayout({ children }) {
             defer
             data-website-id="86d4095c-a2a8-4fc8-9521-103e858e2b41"
             data-domains="umami.is"
-            src="/a/script.js"
+            src="/u.js"
           />
         )}
       </head>
