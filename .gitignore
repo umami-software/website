@@ -19,6 +19,7 @@
 .DS_Store
 .idea
 *.iml
+.claude
 
 # debug
 npm-debug.log*

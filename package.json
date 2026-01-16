@@ -17,6 +17,11 @@
     "stylelint": "stylelint --fix",
     "icons": "svgr ./src/assets --out-dir src/components/svg --typescript"
   },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,css}": [
+      "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
+    ]
+  },
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
     "@fontsource/jetbrains-mono": "^4.5.12",
